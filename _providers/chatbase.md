@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -73,9 +79,6 @@ apis:
 artifact_total: 20
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Chatbase Chat API
   slug: open-chatbase-chat-api
 - collection_type: open
@@ -99,32 +102,32 @@ common:
   type: Pricing
   url: https://www.chatbase.co/pricing
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chatbase/refs/heads/main/capabilities/chatbase-capability-edges.yml
+  href: https://artifacts.apis.io/chatbase/capabilities/chatbase-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/chatbase-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chatbase/refs/heads/main/agentic-access/chatbase-agentic-access.yml
+  href: https://artifacts.apis.io/chatbase/agentic-access/chatbase-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/chatbase-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chatbase/refs/heads/main/security/chatbase-trust-center.yml
+  href: https://artifacts.apis.io/chatbase/security/chatbase-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/chatbase-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chatbase/refs/heads/main/security/chatbase-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/chatbase/security/chatbase-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/chatbase-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chatbase/refs/heads/main/security/chatbase-domain-security.yml
+  href: https://artifacts.apis.io/chatbase/security/chatbase-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chatbase-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chatbase/refs/heads/main/authentication/chatbase-authentication.yml
+  href: https://artifacts.apis.io/chatbase/authentication/chatbase-authentication.yml
   title: ''
   type: Authentication
   url: authentication/chatbase-authentication.yml
@@ -145,17 +148,17 @@ common:
   type: Documentation
   url: https://www.chatbase.co/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chatbase/refs/heads/main/plans/chatbase-plans-pricing.yml
+  href: https://artifacts.apis.io/chatbase/plans/chatbase-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/chatbase-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/chatbase/refs/heads/main/rate-limits/chatbase-rate-limits.yml
+  href: https://artifacts.apis.io/chatbase/rate-limits/chatbase-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/chatbase-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chatbase/refs/heads/main/finops/chatbase-finops.yml
+  href: https://artifacts.apis.io/chatbase/finops/chatbase-finops.yml
   title: ''
   type: FinOps
   url: finops/chatbase-finops.yml
@@ -182,35 +185,51 @@ network: true
 overview: 'Chatbase publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Chat API, Chatbots API, Contacts API, and 2 more. Tagged areas include Artificial Intelligence, Chatbots, AI Agents, Customer Service, and Conversational AI.
 
 
+  The Chatbase catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Chatbase''s developer surface includes pricing, authentication, documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Chatbase Plans Pricing
   plan_count: 8
   slug: chatbase-plans-pricing
-random_paper: 13
+random_paper: 11
 rate_limits:
 - limit_count: 4
   name: Chatbase Rate Limits
   slug: chatbase-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Chatbase API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: chatbase-rules
 score:
   band: thin
-  composite: 35.3
+  composite: 37.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 52.0
+    artifact_dirs: 17
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.8
+  delta: -1.1
   facets:
-    access_clarity: 50.0
-    contract_governance: 0.0
+    access_clarity: 44.7
+    contract_governance: 13.6
     contract_quality: 50.2
     developer_ergonomics: 25.0
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 37.1
+    operational_transparency: 21.1
+  previous_composite: 38.3
   provenance:
     agentic_access: derived
     contracts:
@@ -224,13 +243,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 20.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/chatbase/refs/heads/main/screenshots/chatbase-2026-06-20T174234.png
+screenshot: https://apis.io/screenshots/chatbase/chatbase-2026-06-20T174234.png
 security:
 - kind: authentication
   name: Chatbase Authentication

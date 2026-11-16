@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.1
-  scored_at: '2026-10-17'
+  score: 17.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -57,11 +61,8 @@ apis:
   description: Circulating and total CADC supply, overall and per chain.
   name: Loon Finance Supply API
   slug: loon-finance-supply-api
-artifact_total: 10
+artifact_total: 11
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Loon CADC Transparency Attestations API
   slug: open-loon-finance-attestations-api
@@ -73,17 +74,17 @@ collections:
   slug: open-loon-finance-supply-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/overlays/loon-finance-transparency-overlay.yaml
+  href: https://artifacts.apis.io/loon-finance/overlays/loon-finance-transparency-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/loon-finance-transparency-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/agentic-access/loon-finance-agentic-access.yml
+  href: https://artifacts.apis.io/loon-finance/agentic-access/loon-finance-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/loon-finance-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/security/loon-finance-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/loon-finance/security/loon-finance-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/loon-finance-vulnerability-disclosure.yml
@@ -92,7 +93,7 @@ common:
   type: Security
   url: https://loon.finance/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/security/loon-finance-domain-security.yml
+  href: https://artifacts.apis.io/loon-finance/security/loon-finance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/loon-finance-domain-security.yml
@@ -129,37 +130,37 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/loonfinance/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/llms/loon-finance-llms.txt
+  href: https://artifacts.apis.io/loon-finance/llms/loon-finance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/loon-finance-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/well-known/loon-finance-well-known.yml
+  href: https://artifacts.apis.io/loon-finance/well-known/loon-finance-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/loon-finance-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/well-known/loon-finance-security.txt
+  href: https://artifacts.apis.io/loon-finance/well-known/loon-finance-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/loon-finance-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/mcp/loon-finance-mcp.yml
+  href: https://artifacts.apis.io/loon-finance/mcp/loon-finance-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/loon-finance-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/conventions/loon-finance-conventions.yml
+  href: https://artifacts.apis.io/loon-finance/conventions/loon-finance-conventions.yml
   title: ''
   type: Conventions
   url: conventions/loon-finance-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/data-model/loon-finance-data-model.yml
+  href: https://artifacts.apis.io/loon-finance/data-model/loon-finance-data-model.yml
   title: ''
   type: DataModel
   url: data-model/loon-finance-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/conformance/loon-finance-conformance.yml
+  href: https://artifacts.apis.io/loon-finance/conformance/loon-finance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/loon-finance-conformance.yml
@@ -168,7 +169,7 @@ common:
   type: Compliance
   url: https://loon.finance/transparency
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/loon-finance/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -183,22 +184,38 @@ network: true
 overview: 'Loon Finance publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Attestations API, Issuances API, and Supply API. Tagged areas include Company, Fintech, Stablecoins, Cryptocurrency, and Payments.
 
 
+  The Loon Finance catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Loon Finance''s developer surface includes documentation, engineering blog, support, and 19 more developer resources.'
-random_paper: 21
+random_paper: 9
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Loon Finance API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: loon-finance-rules
 score:
   band: developing
-  composite: 41.2
+  composite: 42.8
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 32.0
+    artifact_dirs: 18
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 68.0
+    catalog_gap: 63.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 78.6
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 45.5
     developer_ergonomics: 18.5
     discoverability: 64.3
@@ -210,7 +227,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 41.2
+  previous_composite: 42.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -227,14 +244,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 26.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/loon-finance/refs/heads/main/screenshots/loon-finance-2026-07-25T225523.png
+screenshot: https://apis.io/screenshots/loon-finance/loon-finance-2026-07-25T225523.png
 security:
 - kind: domain-security
   name: Loon Finance Domain Security
@@ -244,6 +261,10 @@ security:
   name: Loon Finance Vulnerability Disclosure
   slug: loon-finance-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 1
+skills:
+- name: Check CADC supply and reserve backing
+  slug: loon-finance-check-cadc-reserves
 slug: loon-finance
 tags:
 - Company

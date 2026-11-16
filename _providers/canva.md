@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,11 +11,13 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
-  band_gated_from: agent-native
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: true
@@ -25,17 +30,20 @@ agent_readiness:
     dynamic_client_registration: true
     error_semantics: verified
     event_surface_described: true
-    idempotency: false
+    idempotency: verified
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 63.3
-  scored_at: '2026-10-17'
+  score: 71.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 1
@@ -43,7 +51,7 @@ agentic_access:
   operation_count: 81
   slug: canva-agentic-access
   summary_line: 81 operations · 33 acting · 1 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - description: Build apps that extend Canva's editor with custom functionality, content, and integrations.
   name: Canva Apps SDK
@@ -478,7 +486,22 @@ apis:
     question: How do I revoke a user's token when they disconnect my integration?
   phrasing_ops: 3
   slug: canva-oauth-api
-artifact_total: 259
+- baseURL: https://api.canva.com/rest
+  baseurl_source: declared
+  description: The design_generation API from Canva — 2 operation(s) for design_generation.
+  name: Canva Design Generation API
+  slug: canva-design-generation-api
+- baseURL: https://api.canva.com/rest
+  baseurl_source: declared
+  description: The image_generation API from Canva — 2 operation(s) for image_generation.
+  name: Canva Image Generation API
+  slug: canva-image-generation-api
+- baseURL: https://api.canva.com/rest
+  baseurl_source: declared
+  description: The image_transformation API from Canva — 2 operation(s) for image_transformation.
+  name: Canva Image Transformation API
+  slug: canva-image-transformation-api
+artifact_total: 262
 asyncapis:
 - description: ''
   name: Canva Webhooks
@@ -512,9 +535,6 @@ collections:
   name: Canva Connect Assets Users API
   slug: postman-canva-users-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Canva Connect Assets API
   slug: open-canva-assets-api
 - collection_type: open
@@ -545,6 +565,11 @@ collections:
   name: Canva Connect Assets Users API
   slug: open-canva-users-api
 common:
+- group: other
+  href: https://artifacts.apis.io/canva/capabilities/canva-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/canva-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -554,32 +579,32 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/canva/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/agentic-access/canva-agentic-access.yml
+  href: https://artifacts.apis.io/canva/agentic-access/canva-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/canva-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/security/canva-trust-center.yml
+  href: https://artifacts.apis.io/canva/security/canva-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/canva-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/security/canva-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/canva/security/canva-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/canva-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/security/canva-domain-security.yml
+  href: https://artifacts.apis.io/canva/security/canva-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/canva-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/authentication/canva-authentication.yml
+  href: https://artifacts.apis.io/canva/authentication/canva-authentication.yml
   title: ''
   type: Authentication
   url: authentication/canva-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/scopes/canva-scopes.yml
+  href: https://artifacts.apis.io/canva/scopes/canva-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/canva-scopes.yml
@@ -696,7 +721,7 @@ common:
   type: CLI
   url: https://www.npmjs.com/package/@canva/cli
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/rules/canva-spectral-rules.yml
+  href: https://artifacts.apis.io/canva/rules/canva-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/canva-spectral-rules.yml
@@ -705,77 +730,77 @@ common:
   type: AgentSkills
   url: https://github.com/canva-sdks/canva-claude-skills
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/packages/canva-packages.yml
+  href: https://artifacts.apis.io/canva/packages/canva-packages.yml
   title: ''
   type: Packages
   url: packages/canva-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/packages/canva-packages.yml
+  href: https://artifacts.apis.io/canva/packages/canva-packages.yml
   title: ''
   type: SDKs
   url: packages/canva-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/well-known/canva-well-known.yml
+  href: https://artifacts.apis.io/canva/well-known/canva-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/canva-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/well-known/canva-security.txt
+  href: https://artifacts.apis.io/canva/well-known/canva-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/canva-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/security/canva-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/canva/security/canva-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/canva-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/security/canva-trust-center.yml
+  href: https://artifacts.apis.io/canva/security/canva-trust-center.yml
   title: ''
   type: Compliance
   url: security/canva-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/conformance/canva-conformance.yml
+  href: https://artifacts.apis.io/canva/conformance/canva-conformance.yml
   title: ''
   type: Conformance
   url: conformance/canva-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/mcp/canva-mcp.yml
+  href: https://artifacts.apis.io/canva/mcp/canva-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/canva-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/mcp/canva-tool-crosswalk.yml
+  href: https://artifacts.apis.io/canva/mcp/canva-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/canva-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/canva/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/llms/canva-llms.txt
+  href: https://artifacts.apis.io/canva/llms/canva-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/canva-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/conventions/canva-conventions.yml
+  href: https://artifacts.apis.io/canva/conventions/canva-conventions.yml
   title: ''
   type: Conventions
   url: conventions/canva-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/errors/canva-problem-types.yml
+  href: https://artifacts.apis.io/canva/errors/canva-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/canva-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/lifecycle/canva-lifecycle.yml
+  href: https://artifacts.apis.io/canva/lifecycle/canva-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/canva-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/lifecycle/canva-lifecycle.yml
+  href: https://artifacts.apis.io/canva/lifecycle/canva-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/canva-lifecycle.yml
@@ -784,47 +809,47 @@ common:
   type: StatusPage
   url: https://www.canvastatus.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/changelog/canva-changelog.yml
+  href: https://artifacts.apis.io/canva/changelog/canva-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/canva-changelog.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/rate-limits/canva-rate-limits.yml
+  href: https://artifacts.apis.io/canva/rate-limits/canva-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/canva-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/plans/canva-plans-pricing.yml
+  href: https://artifacts.apis.io/canva/plans/canva-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/canva-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/finops/canva-finops.yml
+  href: https://artifacts.apis.io/canva/finops/canva-finops.yml
   title: ''
   type: FinOps
   url: finops/canva-finops.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/cli/canva-cli.yml
+  href: https://artifacts.apis.io/canva/cli/canva-cli.yml
   title: ''
   type: CLI
   url: cli/canva-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/components/canva-components.yml
+  href: https://artifacts.apis.io/canva/components/canva-components.yml
   title: ''
   type: Components
   url: components/canva-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/data-model/canva-data-model.yml
+  href: https://artifacts.apis.io/canva/data-model/canva-data-model.yml
   title: ''
   type: DataModel
   url: data-model/canva-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/asyncapi/canva-webhooks.yml
+  href: https://artifacts.apis.io/canva/asyncapi/canva-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/canva-webhooks.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/overlays/canva-connect-api-overlay.yaml
+  href: https://artifacts.apis.io/canva/overlays/canva-connect-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/canva-connect-api-overlay.yaml
@@ -1039,10 +1064,10 @@ features:
   name: Apps SDK
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Canva Finops
-  primary_unit: ''
-  service_category: Design SaaS
+  primary_unit: person
+  service_category: ''
   slug: canva-finops
   template: false
 image: https://www.canva.com/favicon.ico
@@ -1412,18 +1437,21 @@ modified: '2026-09-16'
 name: Canva
 nav: Providers
 network: true
-overview: 'Canva publishes 30 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Autofills API, Brand Templates API, and 27 more. Tagged areas include Application, Automation, Brand Management, Collaboration, and Design.
+overview: 'Canva publishes 33 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Autofills API, Brand Templates API, and 30 more. Tagged areas include Application, Automation, Brand Management, Collaboration, and Design.
 
 
   The Canva catalog on APIs.io includes 1 event-driven AsyncAPI specification, 2 JSON-LD contexts, and 2 Spectral governance rulesets.
 
 
-  Canva''s developer surface includes authentication, support, documentation, engineering blog, changelog, legal docs, FAQ, and 61 more developer resources.'
+  Canva''s developer surface includes authentication, support, documentation, engineering blog, changelog, legal docs, FAQ, and 62 more developer resources.'
 plans:
 - name: Canva Plans Pricing
-  plan_count: 0
+  plan_count: 4
   slug: canva-plans-pricing
-random_paper: 15
+- name: Canva Price Estimates
+  plan_count: 0
+  slug: canva-price-estimates
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Canva Rate Limits
@@ -1459,19 +1487,19 @@ scopes:
   summary_line: 18 scopes · authorizationCode
 score:
   band: exemplar
-  composite: 69.4
+  composite: 79.9
   coverage:
-    artifact_dirs: 35
-    catalog_earned: 54.9
-    catalog_earned_first_party: 0.0
-    catalog_gap: 60.1
+    artifact_dirs: 38
+    catalog_earned: 69.9
+    catalog_earned_first_party: 12.0
+    catalog_gap: 45.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: -0.5
   facets:
-    access_clarity: 47.4
+    access_clarity: 86.8
     contract_governance: 31.8
-    contract_quality: 77.0
+    contract_quality: 76.1
     developer_ergonomics: 79.8
     discoverability: 81.7
     operational_transparency: 60.5
@@ -1482,7 +1510,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 70.9
+  previous_composite: 80.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -1490,7 +1518,7 @@ score:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 25
+      total: 41
     mcp: first-party
     skills: first-party
   regulatory:
@@ -1499,13 +1527,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/canva/refs/heads/main/screenshots/canva-2026-06-20T173931.png
+    score: 38.9
+screenshot: https://apis.io/screenshots/canva/canva-2026-06-20T173931.png
 security:
 - kind: authentication
   name: Canva Authentication

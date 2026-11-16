@@ -1,10 +1,21 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
     consent_identity: false
@@ -15,20 +26,32 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 16.9
+  scored_at: '2026-11-06'
+agentic_access:
+- acting_count: 6
+  human_in_the_loop: 0
+  name: Channelape Agentic Access
+  operation_count: 8
+  slug: channelape-agentic-access
+  summary_line: 8 operations · 6 acting
 api_count: 7
 apis:
-- description: API for ChannelApe inventory intelligence platform
+- baseURL: https://api.channelape.io
+  baseurl_source: spec
+  description: API for ChannelApe inventory intelligence platform
   name: ChannelApe API
-  slug: channelape-api-2
+  slug: channelape-api
 - baseURL: https://api.channelape.io
   baseurl_source: declared
   description: The 0B2D6F2B 4676 40B4 9588 2A4C93F6B250 API from ChannelApe — 1 operation(s) for 0b2d6f2b 4676 40b4 9588 2a4c93f6b250.
@@ -59,70 +82,80 @@ apis:
   description: The Suppliers API from ChannelApe — 1 operation(s) for suppliers.
   name: ChannelApe Suppliers API
   slug: channelape-suppliers-api
-artifact_total: 16
+artifact_total: 18
 common:
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/rules/channelape-rules.yml
+- group: agent
+  href: https://artifacts.apis.io/channelape/agentic-access/channelape-agentic-access.yml
   title: ''
-  type: Spectral
-  url: rules/channelape-rules.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/json-ld/channelape-context.jsonld
-  title: ''
-  type: JSONLD
-  url: json-ld/channelape-context.jsonld
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/vocabulary/channelape-vocabulary.yml
-  title: ''
-  type: Vocabulary
-  url: vocabulary/channelape-vocabulary.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/data-model/channelape-data-model.yml
-  title: ''
-  type: DataModel
-  url: data-model/channelape-data-model.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/conformance/channelape-conformance.yml
-  title: ''
-  type: Conformance
-  url: conformance/channelape-conformance.yml
+  type: AgenticAccess
+  url: agentic-access/channelape-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/well-known/channelape-channelape-security.txt
+  href: https://artifacts.apis.io/channelape/well-known/channelape-channelape-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/channelape-channelape-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/well-known/channelape-apis-security.txt
+  href: https://artifacts.apis.io/channelape/authentication/channelape-authentication.yml
+  title: ''
+  type: Authentication
+  url: authentication/channelape-authentication.yml
+- group: design
+  href: https://artifacts.apis.io/channelape/rules/channelape-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/channelape-rules.yml
+- group: design
+  href: https://artifacts.apis.io/channelape/json-ld/channelape-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/channelape-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/channelape/vocabulary/channelape-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/channelape-vocabulary.yml
+- group: design
+  href: https://artifacts.apis.io/channelape/data-model/channelape-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/channelape-data-model.yml
+- group: design
+  href: https://artifacts.apis.io/channelape/conformance/channelape-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/channelape-conformance.yml
+- group: auth
+  href: https://artifacts.apis.io/channelape/well-known/channelape-apis-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/channelape-apis-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/well-known/channelape-api-security.txt
+  href: https://artifacts.apis.io/channelape/well-known/channelape-api-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/channelape-api-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/well-known/channelape-well-known.yml
+  href: https://artifacts.apis.io/channelape/well-known/channelape-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/channelape-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/hosts/channelape-hosts.yml
+  href: https://artifacts.apis.io/channelape/hosts/channelape-hosts.yml
   title: ''
   type: Hosts
   url: hosts/channelape-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/vendors/channelape-vendors.yml
+  href: https://artifacts.apis.io/channelape/vendors/channelape-vendors.yml
   title: ''
   type: Vendors
   url: vendors/channelape-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/packages/channelape-packages.yml
+  href: https://artifacts.apis.io/channelape/packages/channelape-packages.yml
   title: ''
   type: SDKs
   url: packages/channelape-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/packages/channelape-packages.yml
+  href: https://artifacts.apis.io/channelape/packages/channelape-packages.yml
   title: ''
   type: Packages
   url: packages/channelape-packages.yml
@@ -131,7 +164,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/ChannelApe
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/channelape/refs/heads/main/security/channelape-domain-security.yml
+  href: https://artifacts.apis.io/channelape/security/channelape-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/channelape-domain-security.yml
@@ -215,48 +248,51 @@ modified: '2026-10-08'
 name: ChannelApe
 nav: Providers
 network: true
-overview: 'ChannelApe is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including 0B2D6F2B 4676 40B4 9588 2A4C93F6B250 API, 6F7402B4 E75C 4573 B3B4 3139Dc1B733D API, ChannelApe API, and 4 more. Tagged areas include Inventory, Wholesale, and Retail.
+overview: 'ChannelApe is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including 0B2D6F2B 4676 40B4 9588 2A4C93F6B250 API, 6F7402B4 E75C 4573 B3B4 3139Dc1B733D API, and 5 more. Tagged areas include Inventory, Wholesale, and Retail.
 
 
   The ChannelApe catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  ChannelApe''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, and 20 more developer resources.'
-random_paper: 5
+  ChannelApe''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, and 21 more developer resources.'
+random_paper: 7
 rules:
 - authorship: generated
-  effective_rule_count: 52
+  effective_rule_count: 88
   extends:
   - spectral:oas
   name: ChannelApe API Rules
-  rule_count: 11
+  rule_count: 47
   severity_counts:
-    error: 9
+    error: 45
     hint: 0
     info: 1
     warn: 1
   slug: channelape-rules
 score:
   band: thin
-  composite: 31.8
+  composite: 27.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 21
     catalog_earned: 55.8
     catalog_earned_first_party: 0.0
     catalog_gap: 59.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.4
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
-    contract_quality: 26.2
-    developer_ergonomics: 52.4
+    contract_quality: 25.3
+    developer_ergonomics: 41.7
     discoverability: 53.6
     operational_transparency: 21.1
+  previous_composite: 33.0
   provenance:
+    agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 7
       marker_coverage: 100.0
       total: 7
@@ -266,13 +302,19 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/channelape/channelape-2026-11-03T123835.png
 security:
+- kind: authentication
+  name: Channelape Authentication
+  slug: channelape-authentication
+  summary_line: apiKey · 1 scheme
 - kind: domain-security
   name: Channelape Domain Security
   slug: channelape-domain-security

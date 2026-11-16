@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pepper/refs/heads/main/plans/pepper-plans-pricing.yml
+  href: https://artifacts.apis.io/pepper/plans/pepper-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pepper-plans-pricing.yml
@@ -78,7 +83,7 @@ common:
   type: Compliance
   url: https://www.usepepper.com/solutions/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pepper/refs/heads/main/conformance/pepper-conformance.yml
+  href: https://artifacts.apis.io/pepper/conformance/pepper-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pepper-conformance.yml
@@ -87,12 +92,12 @@ common:
   type: TrustCenter
   url: https://trust.usepepper.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pepper/refs/heads/main/security/pepper-domain-security.yml
+  href: https://artifacts.apis.io/pepper/security/pepper-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pepper-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pepper/refs/heads/main/llms/pepper-llms.txt
+  href: https://artifacts.apis.io/pepper/llms/pepper-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pepper-llms.txt
@@ -112,18 +117,18 @@ plans:
 - name: Pepper Plans Pricing
   plan_count: 1
   slug: pepper-plans-pricing
-random_paper: 14
+random_paper: 4
 score:
   band: emerging
   composite: 24.9
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.2
+  delta: 0.0
   facets:
     access_clarity: 67.1
     contract_governance: 18.2
@@ -131,7 +136,7 @@ score:
     developer_ergonomics: 7.1
     discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 20.7
+  previous_composite: 24.9
   provenance:
     conformance: first-party
   regulatory:
@@ -140,14 +145,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/pepper/refs/heads/main/screenshots/pepper-2026-09-02T151021.png
+screenshot: https://apis.io/screenshots/pepper/pepper-2026-09-02T151021.png
 security:
 - kind: domain-security
   name: Pepper Domain Security

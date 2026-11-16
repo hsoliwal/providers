@@ -1,12 +1,14 @@
 ---
 access_model:
   confidence: medium
-  label: Enterprise
+  label: Paid
   onboarding: unknown
-  pricing: enterprise
+  pricing: paid
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.9
-  scored_at: '2026-10-17'
+  score: 33.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 59
   human_in_the_loop: 15
@@ -158,65 +163,65 @@ apis:
   description: The Refunds API from Lemonway — 2 operation(s) for refunds.
   name: Lemonway Refunds API
   slug: lemonway-refunds-api
-artifact_total: 44
+artifact_total: 45
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/agentic-access/lemonway-agentic-access.yml
+  href: https://artifacts.apis.io/lemonway/agentic-access/lemonway-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/lemonway-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/rules/lemonway-rules.yml
+  href: https://artifacts.apis.io/lemonway/rules/lemonway-rules.yml
   title: ''
   type: Spectral
   url: rules/lemonway-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/json-ld/lemonway-context.jsonld
+  href: https://artifacts.apis.io/lemonway/json-ld/lemonway-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/lemonway-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/vocabulary/lemonway-vocabulary.yml
+  href: https://artifacts.apis.io/lemonway/vocabulary/lemonway-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/lemonway-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/data-model/lemonway-data-model.yml
+  href: https://artifacts.apis.io/lemonway/data-model/lemonway-data-model.yml
   title: ''
   type: DataModel
   url: data-model/lemonway-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/security/lemonway-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/lemonway/security/lemonway-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/lemonway-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/errors/lemonway-problem-types.yml
+  href: https://artifacts.apis.io/lemonway/errors/lemonway-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/lemonway-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/conformance/lemonway-conformance.yml
+  href: https://artifacts.apis.io/lemonway/conformance/lemonway-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lemonway-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/llms/lemonway-llms.txt
+  href: https://artifacts.apis.io/lemonway/llms/lemonway-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lemonway-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/well-known/lemonway-well-known.yml
+  href: https://artifacts.apis.io/lemonway/well-known/lemonway-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lemonway-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/hosts/lemonway-hosts.yml
+  href: https://artifacts.apis.io/lemonway/hosts/lemonway-hosts.yml
   title: ''
   type: Hosts
   url: hosts/lemonway-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/vendors/lemonway-vendors.yml
+  href: https://artifacts.apis.io/lemonway/vendors/lemonway-vendors.yml
   title: ''
   type: Vendors
   url: vendors/lemonway-vendors.yml
@@ -233,32 +238,32 @@ common:
   type: DeveloperPortal
   url: https://portal.lemonway.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/authentication/lemonway-authentication.yml
+  href: https://artifacts.apis.io/lemonway/authentication/lemonway-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lemonway-authentication.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/lemonway/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/lemonway/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/lemonway/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/security/lemonway-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/lemonway/security/lemonway-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/lemonway-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/security/lemonway-domain-security.yml
+  href: https://artifacts.apis.io/lemonway/security/lemonway-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lemonway-domain-security.yml
@@ -313,13 +318,13 @@ common:
 created: '2026-06-13'
 description: Lemonway is a European payment institution regulated by the French ACPR (registration 16568) since 2012, providing REST APIs for marketplace payments including IBAN wallet creation, bank transfers, card payments, KYC/KYB verification, P2P transfers, and crowdfunding platform payment flows. Trusted by over 1,400 marketplaces across Europe.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Finops
-  primary_unit: ''
+  primary_unit: transaction
   service_category: ''
   slug: finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lemonway.png
 json_schemas:
 - name: CreateAccountResponse
@@ -376,10 +381,13 @@ overview: 'Lemonway publishes 23 API contracts indexed on the [APIs.io](https://
 
   Lemonway''s developer surface includes authentication, documentation, pricing, status page, changelog, support, engineering blog, and 26 more developer resources.'
 plans:
+- name: Lemonway Price Estimates
+  plan_count: 0
+  slug: lemonway-price-estimates
 - name: Plans
-  plan_count: 2
+  plan_count: 14
   slug: plans
-random_paper: 18
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -399,28 +407,28 @@ rules:
   slug: lemonway-rules
 score:
   band: developing
-  composite: 46.2
+  composite: 48.6
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 61.8
+    artifact_dirs: 25
+    catalog_earned: 62.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 53.3
+    catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 14.1
+  delta: 1.9
   facets:
-    access_clarity: 36.8
+    access_clarity: 39.5
     contract_governance: 22.0
-    contract_quality: 56.5
-    developer_ergonomics: 41.7
-    discoverability: 80.4
+    contract_quality: 61.7
+    developer_ergonomics: 45.2
+    discoverability: 79.5
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 32.1
+  previous_composite: 46.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -436,13 +444,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 27.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/lemonway/refs/heads/main/screenshots/lemonway-2026-06-20T184419.png
+screenshot: https://apis.io/screenshots/lemonway/lemonway-2026-06-20T184419.png
 security:
 - kind: authentication
   name: Lemonway Authentication

@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 17.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -64,9 +68,6 @@ apis:
 artifact_total: 14
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: USDA NRCS Soil Data Access Query API
   slug: open-natural-resources-conservation-service-query-api
 - collection_type: open
@@ -80,27 +81,27 @@ collections:
   slug: open-natural-resources-conservation-service
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/natural-resources-conservation-service/refs/heads/main/plans/natural-resources-conservation-service-plans-pricing.yml
+  href: https://artifacts.apis.io/natural-resources-conservation-service/plans/natural-resources-conservation-service-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/natural-resources-conservation-service-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/natural-resources-conservation-service/refs/heads/main/rate-limits/natural-resources-conservation-service-rate-limits.yml
+  href: https://artifacts.apis.io/natural-resources-conservation-service/rate-limits/natural-resources-conservation-service-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/natural-resources-conservation-service-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/natural-resources-conservation-service/refs/heads/main/finops/natural-resources-conservation-service-finops.yml
+  href: https://artifacts.apis.io/natural-resources-conservation-service/finops/natural-resources-conservation-service-finops.yml
   title: ''
   type: FinOps
   url: finops/natural-resources-conservation-service-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/natural-resources-conservation-service/refs/heads/main/agentic-access/natural-resources-conservation-service-agentic-access.yml
+  href: https://artifacts.apis.io/natural-resources-conservation-service/agentic-access/natural-resources-conservation-service-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/natural-resources-conservation-service-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/natural-resources-conservation-service/refs/heads/main/security/natural-resources-conservation-service-domain-security.yml
+  href: https://artifacts.apis.io/natural-resources-conservation-service/security/natural-resources-conservation-service-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/natural-resources-conservation-service-domain-security.yml
@@ -130,7 +131,7 @@ finops:
 - has_sources: false
   method: generated
   name: Natural Resources Conservation Service Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: natural-resources-conservation-service-finops
   template: true
@@ -143,30 +144,46 @@ network: true
 overview: 'Natural Resources Conservation Service publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Query API, SOAP API, Spatial API, and 1 more. Tagged areas include Federal Government, Agriculture, Conservation, Soil, and Natural Resources.
 
 
+  The Natural Resources Conservation Service catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Natural Resources Conservation Service''s developer surface includes documentation and 9 more developer resources.'
 plans:
 - name: Natural Resources Conservation Service Plans Pricing
   plan_count: 3
   slug: natural-resources-conservation-service-plans-pricing
-random_paper: 3
+random_paper: 5
 rate_limits:
 - limit_count: 5
   name: Natural Resources Conservation Service Rate Limits
   slug: natural-resources-conservation-service-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 83
+  extends:
+  - spectral:oas
+  name: Natural Resources Conservation Service API Rules
+  rule_count: 42
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 1
+    warn: 1
+  slug: natural-resources-conservation-service-rules
 score:
   band: emerging
-  composite: 22.5
+  composite: 24.1
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 43.0
+    artifact_dirs: 13
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.5
     developer_ergonomics: 16.7
     discoverability: 66.1
@@ -190,13 +207,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/natural-resources-conservation-service/refs/heads/main/screenshots/natural-resources-conservation-service-2026-06-20T190054.png
+screenshot: https://apis.io/screenshots/natural-resources-conservation-service/natural-resources-conservation-service-2026-06-20T190054.png
 security:
 - kind: domain-security
   name: Natural Resources Conservation Service Domain Security

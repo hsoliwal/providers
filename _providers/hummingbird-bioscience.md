@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbird-bioscience/refs/heads/main/security/hummingbird-bioscience-domain-security.yml
+  href: https://artifacts.apis.io/hummingbird-bioscience/security/hummingbird-bioscience-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hummingbird-bioscience-domain-security.yml
@@ -103,12 +106,12 @@ common:
   type: SecondaryMarketListing
   url: https://forgeglobal.com/hummingbird-bioscience_stock/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbird-bioscience/refs/heads/main/packages/hummingbird-bioscience-packages.yml
+  href: https://artifacts.apis.io/hummingbird-bioscience/packages/hummingbird-bioscience-packages.yml
   title: ''
   type: Packages
   url: packages/hummingbird-bioscience-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbird-bioscience/refs/heads/main/llms/hummingbird-bioscience-llms.txt
+  href: https://artifacts.apis.io/hummingbird-bioscience/llms/hummingbird-bioscience-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hummingbird-bioscience-llms.txt
@@ -140,18 +143,18 @@ overview: 'Hummingbird Bioscience is profiled on the [APIs.io](https://apis.io/)
 
 
   Hummingbird Bioscience''s developer surface includes product news, YouTube channel, and 16 more developer resources.'
-random_paper: 19
+random_paper: 7
 score:
   band: minimal
   composite: 4.9
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -166,21 +169,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 4.8
+  previous_composite: 4.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hummingbird-bioscience/refs/heads/main/screenshots/hummingbird-bioscience-2026-09-02T145755.png
+screenshot: https://apis.io/screenshots/hummingbird-bioscience/hummingbird-bioscience-2026-09-02T145755.png
 security:
 - kind: domain-security
   name: Hummingbird Bioscience Domain Security

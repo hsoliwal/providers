@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -102,15 +106,12 @@ apis:
   description: User identity (UnionID) lookups.
   name: WeChat User Information API
   slug: wechat-user-information-api
-artifact_total: 42
+artifact_total: 41
 asyncapis:
 - description: AsyncAPI description of the publicly documented WeChat (Weixin) webhook surfaces. WeChat does not expose a public WebSocket / streaming endpoint for third-party developers — its event-driven surface i
   name: WeChat Webhooks (Official Accounts, WeChat Pay APIv3, WeCom)
   slug: wechat-webhooks-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: WeChat Mini Program Server API (subset) Access Token API
   slug: open-wechat-access-token-api
@@ -125,12 +126,12 @@ collections:
   slug: open-wechat
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wechat/refs/heads/main/agentic-access/wechat-agentic-access.yml
+  href: https://artifacts.apis.io/wechat/agentic-access/wechat-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/wechat-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wechat/refs/heads/main/security/wechat-domain-security.yml
+  href: https://artifacts.apis.io/wechat/security/wechat-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wechat-domain-security.yml
@@ -315,7 +316,7 @@ overview: 'WeChat publishes 16 API contracts indexed on the [APIs.io](https://ap
 
 
   WeChat''s developer surface includes developer portal, documentation, API reference, getting-started guide, support, developer console, code examples, and 31 more developer resources.'
-random_paper: 20
+random_paper: 12
 rules:
 - authorship: generated
   effective_rule_count: 36
@@ -333,13 +334,13 @@ score:
   band: developing
   composite: 50.5
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 36.5
     catalog_earned_first_party: 0.0
     catalog_gap: 63.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 57.1
     contract_governance: 13.6
@@ -354,7 +355,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 50.4
+  previous_composite: 50.5
   provenance:
     agentic_access: derived
     contracts:
@@ -368,14 +369,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 17.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/wechat/refs/heads/main/screenshots/wechat-2026-06-20T201343.png
+screenshot: https://apis.io/screenshots/wechat/wechat-2026-06-20T201343.png
 security:
 - kind: domain-security
   name: Wechat Domain Security

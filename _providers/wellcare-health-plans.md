@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,10 +11,11 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.0
-  scored_at: '2026-10-17'
+  score: 29.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -109,11 +116,8 @@ apis:
   description: A practitioner's role within an organization and network.
   name: wellcare-health-plans Practitioner Role API
   slug: wellcare-health-plans-practitioner-role-api
-artifact_total: 45
+artifact_total: 44
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: WellCare FHIR Patient Access API
   slug: open-wellcare-fhir-patient-access-api
@@ -161,17 +165,17 @@ collections:
   slug: open-wellcare-health-plans-practitioner-role-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wellcare-health-plans/refs/heads/main/plans/wellcare-health-plans-plans-pricing.yml
+  href: https://artifacts.apis.io/wellcare-health-plans/plans/wellcare-health-plans-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/wellcare-health-plans-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wellcare-health-plans/refs/heads/main/rate-limits/wellcare-health-plans-rate-limits.yml
+  href: https://artifacts.apis.io/wellcare-health-plans/rate-limits/wellcare-health-plans-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/wellcare-health-plans-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wellcare-health-plans/refs/heads/main/finops/wellcare-health-plans-finops.yml
+  href: https://artifacts.apis.io/wellcare-health-plans/finops/wellcare-health-plans-finops.yml
   title: ''
   type: FinOps
   url: finops/wellcare-health-plans-finops.yml
@@ -180,22 +184,22 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/centene-corporation/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wellcare-health-plans/refs/heads/main/agentic-access/wellcare-health-plans-agentic-access.yml
+  href: https://artifacts.apis.io/wellcare-health-plans/agentic-access/wellcare-health-plans-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/wellcare-health-plans-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wellcare-health-plans/refs/heads/main/security/wellcare-health-plans-domain-security.yml
+  href: https://artifacts.apis.io/wellcare-health-plans/security/wellcare-health-plans-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wellcare-health-plans-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wellcare-health-plans/refs/heads/main/authentication/wellcare-health-plans-authentication.yml
+  href: https://artifacts.apis.io/wellcare-health-plans/authentication/wellcare-health-plans-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wellcare-health-plans-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wellcare-health-plans/refs/heads/main/scopes/wellcare-health-plans-scopes.yml
+  href: https://artifacts.apis.io/wellcare-health-plans/scopes/wellcare-health-plans-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/wellcare-health-plans-scopes.yml
@@ -220,12 +224,12 @@ common:
   type: GitHubOrg
   url: https://github.com/wellcare-health-plans
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wellcare-health-plans/refs/heads/main/json-ld/wellcare-health-plans-context.jsonld
+  href: https://artifacts.apis.io/wellcare-health-plans/json-ld/wellcare-health-plans-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/wellcare-health-plans-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wellcare-health-plans/refs/heads/main/vocabulary/wellcare-health-plans-vocabulary.yml
+  href: https://artifacts.apis.io/wellcare-health-plans/vocabulary/wellcare-health-plans-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/wellcare-health-plans-vocabulary.yml
@@ -244,7 +248,7 @@ finops:
 - has_sources: false
   method: generated
   name: Wellcare Health Plans Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: wellcare-health-plans-finops
   template: true
@@ -297,7 +301,7 @@ press:
 - date: ''
   title: Wellcare Announces Refreshed Brand in Effort to Better ...
   url: https://www.prnewswire.com/news-releases/wellcare-announces-refreshed-brand-in-effort-to-better-serve-medicare-members-301366933.html
-random_paper: 19
+random_paper: 21
 rate_limits:
 - limit_count: 5
   name: Wellcare Health Plans Rate Limits
@@ -335,13 +339,13 @@ score:
   band: thin
   composite: 34.7
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 64.0
     catalog_earned_first_party: 0.0
     catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 27.3
@@ -349,7 +353,7 @@ score:
     developer_ergonomics: 21.4
     discoverability: 51.8
     operational_transparency: 13.2
-  previous_composite: 36.2
+  previous_composite: 34.7
   provenance:
     agentic_access: derived
     contracts:
@@ -363,14 +367,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/wellcare-health-plans/refs/heads/main/screenshots/wellcare-health-plans-2026-08-17T082908.png
+screenshot: https://apis.io/screenshots/wellcare-health-plans/wellcare-health-plans-2026-08-17T082908.png
 security:
 - kind: authentication
   name: Wellcare Health Plans Authentication

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.1
-  scored_at: '2026-10-17'
+  score: 37.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 16
   slug: ssen-agentic-access
   summary_line: 16 operations
-api_count: 2
+api_count: 1
 apis:
 - description: The public CKAN 2.10.10 Action API behind the SSEN Distribution Data Portal, serving 45 open datasets covering substations, LV feeder smart meter half-hourly usage, the Embedded Capacity Register, fle
   name: SSEN Distribution Data Portal API
@@ -64,74 +67,74 @@ apis:
   description: API to work on records
   name: Scottish and Southern Electricity Networks Dataset API
   slug: ssen-dataset-api
-artifact_total: 11
+artifact_total: 15
 collections:
 - collection_type: open
   name: Explore API
   slug: open-ssen-transmission-opendatasoft-explore-v2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/overlays/ssen-transmission-opendatasoft-explore-v2.1-overlay.yaml
+  href: https://artifacts.apis.io/ssen/overlays/ssen-transmission-opendatasoft-explore-v2.1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ssen-transmission-opendatasoft-explore-v2.1-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/agentic-access/ssen-agentic-access.yml
+  href: https://artifacts.apis.io/ssen/agentic-access/ssen-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ssen-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/security/ssen-domain-security.yml
+  href: https://artifacts.apis.io/ssen/security/ssen-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ssen-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/authentication/ssen-authentication.yml
+  href: https://artifacts.apis.io/ssen/authentication/ssen-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ssen-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/conventions/ssen-conventions.yml
+  href: https://artifacts.apis.io/ssen/conventions/ssen-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ssen-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/errors/ssen-problem-types.yml
+  href: https://artifacts.apis.io/ssen/errors/ssen-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ssen-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/rate-limits/ssen-rate-limits.yml
+  href: https://artifacts.apis.io/ssen/rate-limits/ssen-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ssen-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/lifecycle/ssen-lifecycle.yml
+  href: https://artifacts.apis.io/ssen/lifecycle/ssen-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ssen-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/conformance/ssen-conformance.yml
+  href: https://artifacts.apis.io/ssen/conformance/ssen-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ssen-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/data-model/ssen-data-model.yml
+  href: https://artifacts.apis.io/ssen/data-model/ssen-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ssen-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/well-known/ssen-well-known.yml
+  href: https://artifacts.apis.io/ssen/well-known/ssen-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ssen-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/well-known/ssen-security.txt
+  href: https://artifacts.apis.io/ssen/well-known/ssen-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ssen-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/security/ssen-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ssen/security/ssen-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ssen-vulnerability-disclosure.yml
@@ -140,17 +143,17 @@ common:
   type: Security
   url: https://ssentransmission.opendatasoft.com/.well-known/security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/mcp/ssen-mcp.yml
+  href: https://artifacts.apis.io/ssen/mcp/ssen-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/ssen-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ssen/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/llms/ssen-llms.txt
+  href: https://artifacts.apis.io/ssen/llms/ssen-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ssen-llms.txt
@@ -242,27 +245,43 @@ network: true
 overview: 'Scottish and Southern Electricity Networks publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Catalog API, Dataset API, and 3 more. Tagged areas include Energy, United Kingdom, Utilities, Electricity, and Grid.
 
 
+  The Scottish and Southern Electricity Networks catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Scottish and Southern Electricity Networks'' developer surface includes authentication, getting-started guide, support, engineering blog, signup flow, documentation, developer portal, and 29 more developer resources.'
-random_paper: 1
+random_paper: 9
 rate_limits:
 - limit_count: 1
   name: Ssen Rate Limits
   slug: ssen-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Scottish and Southern Electricity Networks API Rules
+  rule_count: 56
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 2
+    warn: 2
+  slug: ssen-rules
 score:
   band: developing
-  composite: 47.7
+  composite: 49.0
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 45.0
+    artifact_dirs: 22
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.4
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 51.4
+    contract_governance: 18.2
+    contract_quality: 53.8
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 31.6
@@ -274,14 +293,14 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 47.7
+  previous_composite: 47.6
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
     mcp: derived
     skills: derived
@@ -290,15 +309,15 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 32.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 25.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/ssen/refs/heads/main/screenshots/ssen-2026-08-17T082055.png
+screenshot: https://apis.io/screenshots/ssen/ssen-2026-08-17T082055.png
 security:
 - kind: authentication
   name: Ssen Authentication
@@ -312,6 +331,14 @@ security:
   name: Ssen Vulnerability Disclosure
   slug: ssen-vulnerability-disclosure
   summary_line: Hackerone · security.txt · contact published
+skill_count: 3
+skills:
+- name: Discover SSEN Transmission datasets
+  slug: ssen-discover-transmission-datasets
+- name: Pull SSEN Transmission records in bulk
+  slug: ssen-export-transmission-records
+- name: Harvest the SSEN catalog as DCAT
+  slug: ssen-harvest-catalog-dcat
 slug: ssen
 tags:
 - Energy

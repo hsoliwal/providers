@@ -27,16 +27,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 20.6
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.openapi-generator.tech
   baseurl_source: declared
@@ -48,11 +51,8 @@ apis:
   description: The servers API from OpenAPI Generator — 3 operation(s) for servers.
   name: OpenAPI Generator Servers API
   slug: openapi-generator-servers-api
-artifact_total: 10
+artifact_total: 13
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: OpenAPI Generator Online Clients API
   slug: open-openapi-generator-clients-api
@@ -61,12 +61,12 @@ collections:
   slug: open-openapi-generator-servers-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/capabilities/openapi-generator-capability-edges.yml
+  href: https://artifacts.apis.io/openapi-generator/capabilities/openapi-generator-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/openapi-generator-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/vendor-facets/openapi-generator-vendor-facets.yml
+  href: https://artifacts.apis.io/openapi-generator/vendor-facets/openapi-generator-vendor-facets.yml
   title: ''
   type: VendorFacets
   url: vendor-facets/openapi-generator-vendor-facets.yml
@@ -83,67 +83,67 @@ common:
   type: ContributionGuide
   url: https://github.com/OpenAPITools/openapi-generator/blob/master/CONTRIBUTING.md
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/overlays/openapi-generator-online-overlay.yaml
+  href: https://artifacts.apis.io/openapi-generator/overlays/openapi-generator-online-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/openapi-generator-online-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/security/openapi-generator-domain-security.yml
+  href: https://artifacts.apis.io/openapi-generator/security/openapi-generator-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/openapi-generator-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/packages/openapi-generator-packages.yml
+  href: https://artifacts.apis.io/openapi-generator/packages/openapi-generator-packages.yml
   title: ''
   type: Packages
   url: packages/openapi-generator-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/cli/openapi-generator-cli.yml
+  href: https://artifacts.apis.io/openapi-generator/cli/openapi-generator-cli.yml
   title: ''
   type: CLI
   url: cli/openapi-generator-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/changelog/openapi-generator-changelog.yml
+  href: https://artifacts.apis.io/openapi-generator/changelog/openapi-generator-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/openapi-generator-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/lifecycle/openapi-generator-lifecycle.yml
+  href: https://artifacts.apis.io/openapi-generator/lifecycle/openapi-generator-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/openapi-generator-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/conformance/openapi-generator-conformance.yml
+  href: https://artifacts.apis.io/openapi-generator/conformance/openapi-generator-conformance.yml
   title: ''
   type: Conformance
   url: conformance/openapi-generator-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/mcp/openapi-generator-mcp.yml
+  href: https://artifacts.apis.io/openapi-generator/mcp/openapi-generator-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/openapi-generator-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/openapi-generator/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/llms/openapi-generator-llms.txt
+  href: https://artifacts.apis.io/openapi-generator/llms/openapi-generator-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/openapi-generator-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/rate-limits/openapi-generator-rate-limits.yml
+  href: https://artifacts.apis.io/openapi-generator/rate-limits/openapi-generator-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/openapi-generator-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/plans/openapi-generator-plans-pricing.yml
+  href: https://artifacts.apis.io/openapi-generator/plans/openapi-generator-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/openapi-generator-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/finops/openapi-generator-finops.yml
+  href: https://artifacts.apis.io/openapi-generator/finops/openapi-generator-finops.yml
   title: ''
   type: FinOps
   url: finops/openapi-generator-finops.yml
@@ -210,11 +210,11 @@ common:
 created: '2026-03-16'
 description: OpenAPI Generator is a community-governed, Apache-2.0 open-source project that generates client libraries (SDKs), server stubs, API documentation and configuration automatically from an OpenAPI Specification (v2 and v3). Forked from Swagger Codegen in 2018 by more than 40 of that project's top contributors and template creators, it is one of the most widely deployed implementations of the OpenAPI Specification in existence. The product is a CLI plus Maven, Gradle and sbt plugins, a Docker image and an embeddable JVM library, distributed through npm, PyPI, Maven Central, Homebrew, Scoop and Docker Hub. A hosted Online Generator REST API at api.openapi-generator.tech offers the same generation over HTTP, anonymously and without a key, across 84 client generators and 65 server frameworks.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Openapi Generator Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: openapi-generator-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openapi-generator.png
@@ -226,44 +226,60 @@ network: true
 overview: 'OpenAPI Generator publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Clients API and Servers API. Tagged areas include Code Generation, Documentation, Open Source, OpenAPI, and SDK.
 
 
+  The OpenAPI Generator catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   OpenAPI Generator''s developer surface includes CLI, changelog, documentation, API reference, getting-started guide, support, engineering blog, and 26 more developer resources.'
 plans:
 - name: Openapi Generator Plans Pricing
   plan_count: 2
   slug: openapi-generator-plans-pricing
-random_paper: 0
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Openapi Generator Rate Limits
   slug: openapi-generator-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: OpenAPI Generator API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: openapi-generator-rules
 score:
   band: developing
-  composite: 40.5
+  composite: 43.0
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 45.0
+    artifact_dirs: 29
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 1.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 39.8
+    contract_governance: 18.2
+    contract_quality: 44.2
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 23.7
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 41.9
+  previous_composite: 42.0
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
     mcp: derived
     skills: derived
@@ -273,13 +289,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/openapi-generator/refs/heads/main/screenshots/openapi-generator-2026-06-20T190908.png
+screenshot: https://apis.io/screenshots/openapi-generator/openapi-generator-2026-06-20T190908.png
 security:
 - kind: authentication
   name: Openapi Generator Authentication
@@ -289,6 +305,14 @@ security:
   name: Openapi Generator Domain Security
   slug: openapi-generator-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 3
+skills:
+- name: openapi-generator-discover-generators
+  slug: openapi-generator-discover-generators
+- name: openapi-generator-generate-client
+  slug: openapi-generator-generate-client
+- name: openapi-generator-generate-server
+  slug: openapi-generator-generate-server
 slug: openapi-generator
 tags:
 - Code Generation

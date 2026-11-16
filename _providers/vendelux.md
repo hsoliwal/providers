@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vendelux/refs/heads/main/security/vendelux-domain-security.yml
+  href: https://artifacts.apis.io/vendelux/security/vendelux-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vendelux-domain-security.yml
@@ -73,27 +88,27 @@ common:
   type: TrustCenter
   url: https://trust.vendelux.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vendelux/refs/heads/main/conformance/vendelux-conformance.yml
+  href: https://artifacts.apis.io/vendelux/conformance/vendelux-conformance.yml
   title: ''
   type: Compliance
   url: conformance/vendelux-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vendelux/refs/heads/main/conformance/vendelux-conformance.yml
+  href: https://artifacts.apis.io/vendelux/conformance/vendelux-conformance.yml
   title: ''
   type: Conformance
   url: conformance/vendelux-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vendelux/refs/heads/main/plans/vendelux-plans-pricing.yml
+  href: https://artifacts.apis.io/vendelux/plans/vendelux-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/vendelux-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vendelux/refs/heads/main/rate-limits/vendelux-rate-limits.yml
+  href: https://artifacts.apis.io/vendelux/rate-limits/vendelux-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/vendelux-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vendelux/refs/heads/main/llms/vendelux-llms.txt
+  href: https://artifacts.apis.io/vendelux/llms/vendelux-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/vendelux-llms.txt
@@ -120,7 +135,7 @@ modified: '2026-09-02'
 name: Vendelux
 nav: Providers
 network: true
-overview: 'Vendelux is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Event Intelligence, Event Marketing, B2B Events, Marketing Intelligence, and Sales Intelligence.
+overview: 'Vendelux is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Event-Intelligence, Event Marketing, B2B Events, Marketing Intelligence, and Sales Intelligence.
 
 
   Vendelux''s developer surface includes pricing, support, engineering blog, and 13 more developer resources.'
@@ -128,7 +143,7 @@ plans:
 - name: Vendelux Plans Pricing
   plan_count: 3
   slug: vendelux-plans-pricing
-random_paper: 17
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Vendelux Rate Limits
@@ -137,13 +152,13 @@ score:
   band: thin
   composite: 27.1
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
@@ -158,7 +173,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 27.0
+  previous_composite: 27.1
   provenance:
     conformance: first-party
   regulatory:
@@ -171,14 +186,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/vendelux/refs/heads/main/screenshots/vendelux-2026-10-11T132810.png
+screenshot: https://apis.io/screenshots/vendelux/vendelux-2026-10-11T132810.png
 security:
 - kind: domain-security
   name: Vendelux Domain Security
@@ -190,7 +205,7 @@ security:
   summary_line: trust center published
 slug: vendelux
 tags:
-- Event Intelligence
+- Event-Intelligence
 - Event Marketing
 - B2B Events
 - Marketing Intelligence

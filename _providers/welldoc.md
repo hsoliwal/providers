@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,22 +38,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/welldoc/refs/heads/main/security/welldoc-trust-center.yml
+  href: https://artifacts.apis.io/welldoc/security/welldoc-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/welldoc-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/welldoc/refs/heads/main/security/welldoc-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/welldoc/security/welldoc-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/welldoc-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/welldoc/refs/heads/main/security/welldoc-domain-security.yml
+  href: https://artifacts.apis.io/welldoc/security/welldoc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/welldoc-domain-security.yml
@@ -91,7 +106,7 @@ common:
   type: X
   url: https://x.com/welldoc
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/welldoc/refs/heads/main/conformance/welldoc-conformance.yml
+  href: https://artifacts.apis.io/welldoc/conformance/welldoc-conformance.yml
   title: ''
   type: Conformance
   url: conformance/welldoc-conformance.yml
@@ -104,17 +119,17 @@ common:
   type: Security
   url: https://www.welldoc.com/platform/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/welldoc/refs/heads/main/llms/welldoc-llms.txt
+  href: https://artifacts.apis.io/welldoc/llms/welldoc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/welldoc-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/welldoc/refs/heads/main/plans/welldoc-plans-pricing.yml
+  href: https://artifacts.apis.io/welldoc/plans/welldoc-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/welldoc-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/welldoc/refs/heads/main/rate-limits/welldoc-rate-limits.yml
+  href: https://artifacts.apis.io/welldoc/rate-limits/welldoc-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/welldoc-rate-limits.yml
@@ -164,7 +179,7 @@ plans:
 - name: Welldoc Plans Pricing
   plan_count: 0
   slug: welldoc-plans-pricing
-random_paper: 20
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Welldoc Rate Limits
@@ -173,7 +188,7 @@ score:
   band: emerging
   composite: 22.0
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -202,14 +217,14 @@ score:
     regime: Health
     regime_id: health
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/welldoc/refs/heads/main/screenshots/welldoc-2026-10-11T194322.png
+screenshot: https://apis.io/screenshots/welldoc/welldoc-2026-10-11T194322.png
 security:
 - kind: domain-security
   name: Welldoc Domain Security

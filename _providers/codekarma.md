@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -57,22 +61,22 @@ common:
   type: Compliance
   url: https://codekarma.ai/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codekarma/refs/heads/main/llms/codekarma-llms.txt
+  href: https://artifacts.apis.io/codekarma/llms/codekarma-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/codekarma-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codekarma/refs/heads/main/mcp/codekarma-mcp.yml
+  href: https://artifacts.apis.io/codekarma/mcp/codekarma-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/codekarma-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codekarma/refs/heads/main/conformance/codekarma-conformance.yml
+  href: https://artifacts.apis.io/codekarma/conformance/codekarma-conformance.yml
   title: ''
   type: Conformance
   url: conformance/codekarma-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codekarma/refs/heads/main/security/codekarma-domain-security.yml
+  href: https://artifacts.apis.io/codekarma/security/codekarma-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/codekarma-domain-security.yml
@@ -93,12 +97,12 @@ overview: 'CodeKarma is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   CodeKarma''s developer surface includes engineering blog and 8 more developer resources.'
-random_paper: 11
+random_paper: 23
 score:
   band: emerging
   composite: 14.9
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -129,14 +133,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/codekarma/refs/heads/main/screenshots/codekarma-2026-07-25T205918.png
+screenshot: https://apis.io/screenshots/codekarma/codekarma-2026-07-25T205918.png
 security:
 - kind: domain-security
   name: Codekarma Domain Security

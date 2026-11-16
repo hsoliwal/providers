@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Paid
+  confidence: low
+  label: Freemium (free trial)
   onboarding: unknown
-  pricing: paid
+  pricing: freemium
   public: false
   source:
   - plans
-  trial: false
+  - security
+  trial: true
   try_now: false
 agent_readiness:
   band: agent-aware
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-10-17'
+  score: 21.7
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.housecallpro.com
@@ -91,11 +95,8 @@ apis:
   description: The Webhooks API from Housecall Pro — 2 operation(s) for webhooks.
   name: Housecall Pro Webhooks API
   slug: housecall-pro-webhooks-api
-artifact_total: 52
+artifact_total: 51
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Housecall Pro Public Companies API
   slug: open-housecall-pro-companies-api
@@ -135,7 +136,7 @@ common:
   type: Website
   url: https://www.housecallpro.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/housecall-pro/refs/heads/main/capabilities/housecall-pro-capability-edges.yml
+  href: https://artifacts.apis.io/housecall-pro/capabilities/housecall-pro-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/housecall-pro-capability-edges.yml
@@ -144,7 +145,7 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/housecall-pro/overview
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/housecall-pro/refs/heads/main/security/housecall-pro-domain-security.yml
+  href: https://artifacts.apis.io/housecall-pro/security/housecall-pro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/housecall-pro-domain-security.yml
@@ -257,17 +258,17 @@ common:
   type: Forums
   url: https://www.facebook.com/groups/superprocommunity/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/housecall-pro/refs/heads/main/plans/housecall-pro-plans-pricing.yml
+  href: https://artifacts.apis.io/housecall-pro/plans/housecall-pro-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/housecall-pro-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/housecall-pro/refs/heads/main/rate-limits/housecall-pro-rate-limits.yml
+  href: https://artifacts.apis.io/housecall-pro/rate-limits/housecall-pro-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/housecall-pro-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/housecall-pro/refs/heads/main/finops/housecall-pro-finops.yml
+  href: https://artifacts.apis.io/housecall-pro/finops/housecall-pro-finops.yml
   title: ''
   type: FinOps
   url: finops/housecall-pro-finops.yml
@@ -295,10 +296,10 @@ features:
 - 14-day full-MAX free trial
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Housecall Pro Finops
-  primary_unit: seat
-  service_category: Business Applications
+  primary_unit: account (annual billing)
+  service_category: ''
   slug: housecall-pro-finops
   template: false
 image: https://static-assets.housecallpro.com/brand/logos/square-door-only.svg
@@ -322,7 +323,7 @@ modified: '2026-05-25'
 name: Housecall Pro
 nav: Providers
 network: true
-overview: 'Housecall Pro publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Companies API, Customers API, Employees API, and 8 more. Tagged areas include Home Services, Field Service, Scheduling, Dispatching, and Invoicing.
+overview: 'Housecall Pro publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Companies API, Customers API, Employees API, and 8 more. Tagged areas include Home Services, Field Service Management, Scheduling, Dispatching, and Invoicing.
 
 
   The Housecall Pro catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -336,7 +337,7 @@ plans:
 - name: Housecall Pro Price Estimates
   plan_count: 0
   slug: housecall-pro-price-estimates
-random_paper: 0
+random_paper: 22
 rate_limits:
 - limit_count: 0
   name: Housecall Pro Rate Limits
@@ -357,13 +358,13 @@ score:
   band: developing
   composite: 48.8
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 72.3
     catalog_earned_first_party: 12.0
     catalog_gap: 42.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 67.1
     contract_governance: 9.8
@@ -378,7 +379,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.7
+  previous_composite: 48.8
   provenance:
     contracts:
       callable: 100.0
@@ -391,13 +392,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/housecall-pro/refs/heads/main/screenshots/housecall-pro-2026-06-20T182849.png
+screenshot: https://apis.io/screenshots/housecall-pro/housecall-pro-2026-06-20T182849.png
 security:
 - kind: domain-security
   name: Housecall Pro Domain Security
@@ -406,7 +407,7 @@ security:
 slug: housecall-pro
 tags:
 - Home Services
-- Field Service
+- Field Service Management
 - Scheduling
 - Dispatching
 - Invoicing

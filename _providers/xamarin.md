@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://xamarin.com/'', ''status'': 301, ''note'': ''declared website redirects to https://dotnet.microsoft.com/en-us/apps/xamarin — a different registrable domain (xamarin.com -> microsoft.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -62,17 +66,17 @@ common:
   type: Support
   url: https://learn.microsoft.com/en-us/answers/tags/18/xamarin
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/xamarin/refs/heads/main/packages/xamarin-packages.yml
+  href: https://artifacts.apis.io/xamarin/packages/xamarin-packages.yml
   title: ''
   type: Packages
   url: packages/xamarin-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/xamarin/refs/heads/main/packages/xamarin-packages.yml
+  href: https://artifacts.apis.io/xamarin/packages/xamarin-packages.yml
   title: ''
   type: SDKs
   url: packages/xamarin-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/xamarin/refs/heads/main/lifecycle/xamarin-lifecycle.yml
+  href: https://artifacts.apis.io/xamarin/lifecycle/xamarin-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/xamarin-lifecycle.yml
@@ -81,17 +85,17 @@ common:
   type: Deprecation
   url: https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/xamarin/refs/heads/main/changelog/xamarin-changelog.yml
+  href: https://artifacts.apis.io/xamarin/changelog/xamarin-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/xamarin-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/xamarin/refs/heads/main/llms/xamarin-llms.txt
+  href: https://artifacts.apis.io/xamarin/llms/xamarin-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/xamarin-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/xamarin/refs/heads/main/security/xamarin-domain-security.yml
+  href: https://artifacts.apis.io/xamarin/security/xamarin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/xamarin-domain-security.yml
@@ -107,12 +111,12 @@ overview: 'Xamarin is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Xamarin''s developer surface includes documentation, engineering blog, support, changelog, and 9 more developer resources.'
-random_paper: 4
+random_paper: 8
 score:
   band: emerging
   composite: 12.3
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -133,14 +137,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/xamarin/refs/heads/main/screenshots/xamarin-2026-09-02T171059.png
+screenshot: https://apis.io/screenshots/xamarin/xamarin-2026-09-02T171059.png
 security:
 - kind: domain-security
   name: Xamarin Domain Security

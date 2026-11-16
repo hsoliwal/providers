@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.6
-  scored_at: '2026-10-17'
+  score: 25.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 11
   slug: wagestream-agentic-access
   summary_line: 11 operations · 6 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://publicapi.wagestream.io/pushapi-prod
   baseurl_source: declared
@@ -70,11 +73,8 @@ apis:
   description: Operations relating to Shifts
   name: Wagestream Shifts API
   slug: wagestream-shifts-api
-artifact_total: 15
+artifact_total: 19
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Wagestream Integrations Absences API
   slug: open-wagestream-absences-api
@@ -92,22 +92,22 @@ collections:
   slug: open-wagestream-shifts-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/capabilities/wagestream-capability-edges.yml
+  href: https://artifacts.apis.io/wagestream/capabilities/wagestream-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/wagestream-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/mcp/wagestream-mcp.yml
+  href: https://artifacts.apis.io/wagestream/mcp/wagestream-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/wagestream-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/authentication/wagestream-authentication.yml
+  href: https://artifacts.apis.io/wagestream/authentication/wagestream-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wagestream-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/security/wagestream-domain-security.yml
+  href: https://artifacts.apis.io/wagestream/security/wagestream-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wagestream-domain-security.yml
@@ -172,62 +172,62 @@ common:
   type: StatusPage
   url: https://status.stream.co/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/agentic-access/wagestream-agentic-access.yml
+  href: https://artifacts.apis.io/wagestream/agentic-access/wagestream-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/wagestream-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/conventions/wagestream-conventions.yml
+  href: https://artifacts.apis.io/wagestream/conventions/wagestream-conventions.yml
   title: ''
   type: Conventions
   url: conventions/wagestream-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/conventions/wagestream-conventions.yml
+  href: https://artifacts.apis.io/wagestream/conventions/wagestream-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/wagestream-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/errors/wagestream-problem-types.yml
+  href: https://artifacts.apis.io/wagestream/errors/wagestream-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/wagestream-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/errors/wagestream-error-codes.yml
+  href: https://artifacts.apis.io/wagestream/errors/wagestream-error-codes.yml
   title: ''
   type: ErrorCodes
   url: errors/wagestream-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/lifecycle/wagestream-lifecycle.yml
+  href: https://artifacts.apis.io/wagestream/lifecycle/wagestream-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/wagestream-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/conformance/wagestream-conformance.yml
+  href: https://artifacts.apis.io/wagestream/conformance/wagestream-conformance.yml
   title: ''
   type: Conformance
   url: conformance/wagestream-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/data-model/wagestream-data-model.yml
+  href: https://artifacts.apis.io/wagestream/data-model/wagestream-data-model.yml
   title: ''
   type: DataModel
   url: data-model/wagestream-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/sandbox/wagestream-sandbox.yml
+  href: https://artifacts.apis.io/wagestream/sandbox/wagestream-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/wagestream-sandbox.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/overlays/wagestream-integrations-api-overlay.yaml
+  href: https://artifacts.apis.io/wagestream/overlays/wagestream-integrations-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wagestream-integrations-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/llms/wagestream-llms.txt
+  href: https://artifacts.apis.io/wagestream/llms/wagestream-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/wagestream-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/wagestream/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -242,24 +242,40 @@ network: true
 overview: 'Wagestream publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Absences API, Employees API, Enrollment API, and 2 more. Tagged areas include Financial Wellbeing, Earned Wage Access, Fintech, Payroll, and Human Resources.
 
 
+  The Wagestream catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Wagestream''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 24 more developer resources.'
 random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Wagestream API Rules
+  rule_count: 61
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 3
+    warn: 3
+  slug: wagestream-rules
 score:
   band: developing
-  composite: 44.1
+  composite: 50.7
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 5.0
   facets:
     access_clarity: 42.1
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 49.8
-    developer_ergonomics: 41.1
+    developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
@@ -270,7 +286,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 44.1
+  previous_composite: 45.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -287,13 +303,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/wagestream/refs/heads/main/screenshots/wagestream-2026-08-17T082831.png
+screenshot: https://apis.io/screenshots/wagestream/wagestream-2026-08-17T082831.png
 security:
 - kind: authentication
   name: Wagestream Authentication
@@ -307,6 +323,16 @@ security:
   name: Wagestream Trust Center
   slug: wagestream-trust-center
   summary_line: trust center published
+skill_count: 4
+skills:
+- name: Send absences and off-cycle payments to Stream
+  slug: wagestream-absences-and-off-cycle-payments
+- name: Reconcile Stream enrolments back into payroll
+  slug: wagestream-reconcile-enrolments
+- name: Exercise the Stream enrolment flow in the sandbox
+  slug: wagestream-sandbox-enrolment-test
+- name: Sync employees and shifts into Stream (Wagestream)
+  slug: wagestream-sync-employees-and-shifts
 slug: wagestream
 tags:
 - Financial Wellbeing

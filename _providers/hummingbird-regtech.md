@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Login-gated REST API for the Hummingbird financial-crime compliance platform — used to create and manage investigations, cases, customer profiles, and regulatory-reporting workflow data programmatical
@@ -41,7 +45,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbird-regtech/refs/heads/main/security/hummingbird-regtech-domain-security.yml
+  href: https://artifacts.apis.io/hummingbird-regtech/security/hummingbird-regtech-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hummingbird-regtech-domain-security.yml
@@ -78,7 +82,7 @@ common:
   type: PrivacyPolicy
   url: https://www.hummingbird.co/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbird-regtech/refs/heads/main/security/hummingbird-regtech-trust-center.yml
+  href: https://artifacts.apis.io/hummingbird-regtech/security/hummingbird-regtech-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/hummingbird-regtech-trust-center.yml
@@ -87,7 +91,7 @@ common:
   type: Compliance
   url: https://trust.hummingbird.co/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbird-regtech/refs/heads/main/security/hummingbird-regtech-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hummingbird-regtech/security/hummingbird-regtech-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hummingbird-regtech-vulnerability-disclosure.yml
@@ -96,7 +100,7 @@ common:
   type: Security
   url: https://www.hummingbird.co/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hummingbird-regtech/refs/heads/main/llms/hummingbird-regtech-llms.txt
+  href: https://artifacts.apis.io/hummingbird-regtech/llms/hummingbird-regtech-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hummingbird-regtech-llms.txt
@@ -112,7 +116,7 @@ overview: 'Hummingbird RegTech is listed with 1 API on the [APIs.io](https://api
 
 
   Hummingbird RegTech''s developer surface includes developer portal, documentation, support, engineering blog, changelog, and 9 more developer resources.'
-random_paper: 21
+random_paper: 13
 score:
   band: emerging
   composite: 22.4
@@ -123,7 +127,7 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 32.9
     contract_governance: 0.0
@@ -131,21 +135,21 @@ score:
     developer_ergonomics: 21.4
     discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 22.3
+  previous_composite: 22.4
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hummingbird-regtech/refs/heads/main/screenshots/hummingbird-regtech-2026-07-25T221723.png
+screenshot: https://apis.io/screenshots/hummingbird-regtech/hummingbird-regtech-2026-07-25T221723.png
 security:
 - kind: domain-security
   name: Hummingbird Regtech Domain Security

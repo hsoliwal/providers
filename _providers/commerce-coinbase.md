@@ -13,6 +13,7 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -20,22 +21,25 @@ agent_readiness:
     agentic_commerce: false
     auth_clarity: bearer
     consent_identity: false
-    delegated_identity: false
+    delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: true
     idempotency: verified
     mcp_server: false
-    openapi_examples: partial
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.8
-  scored_at: '2026-10-17'
+  score: 42.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -43,7 +47,7 @@ agentic_access:
   operation_count: 12
   slug: commerce-coinbase-agentic-access
   summary_line: 12 operations · 6 acting
-api_count: 2
+api_count: 3
 apis:
 - baseURL: https://api.commerce.coinbase.com
   baseurl_source: declared
@@ -65,11 +69,53 @@ apis:
   description: Checkout lifecycle event notifications
   name: Coinbase Commerce Webhooks API
   slug: commerce-coinbase-webhooks-api
-artifact_total: 24
+- baseURL: https://api.commerce.coinbase.com
+  baseurl_source: declared
+  description: The Account Management API from Coinbase Commerce — 17 operation(s) for account management.
+  name: Coinbase Commerce Account Management API
+  slug: commerce-coinbase-account-management-api
+- baseURL: https://api.commerce.coinbase.com
+  baseurl_source: declared
+  description: The Authentication API from Coinbase Commerce — 2 operation(s) for authentication.
+  name: Coinbase Commerce Authentication API
+  slug: commerce-coinbase-authentication-api
+- baseURL: https://api.commerce.coinbase.com
+  baseurl_source: declared
+  description: The Combo Books API from Coinbase Commerce — 5 operation(s) for combo books.
+  name: Coinbase Commerce Combo Books API
+  slug: commerce-coinbase-combo-books-api
+- baseURL: https://api.commerce.coinbase.com
+  baseurl_source: declared
+  description: The Market Data API from Coinbase Commerce — 30 operation(s) for market data.
+  name: Coinbase Commerce Market Data API
+  slug: commerce-coinbase-market-data-api
+- baseURL: https://api.commerce.coinbase.com
+  baseurl_source: declared
+  description: The Session Management API from Coinbase Commerce — 5 operation(s) for session management.
+  name: Coinbase Commerce Session Management API
+  slug: commerce-coinbase-session-management-api
+- baseURL: https://api.commerce.coinbase.com
+  baseurl_source: declared
+  description: Subscription works as [notifications](#notifications), so users will automatically (after subscribing) receive messages from the server. Overview for each channel response format is described in [subs
+  name: Coinbase Commerce Subscription Management API
+  slug: commerce-coinbase-subscription-management-api
+- baseURL: https://api.commerce.coinbase.com
+  baseurl_source: declared
+  description: The Supporting API from Coinbase Commerce — 4 operation(s) for supporting.
+  name: Coinbase Commerce Supporting API
+  slug: commerce-coinbase-supporting-api
+- baseURL: https://api.commerce.coinbase.com
+  baseurl_source: declared
+  description: The Trading API from Coinbase Commerce — 32 operation(s) for trading.
+  name: Coinbase Commerce Trading API
+  slug: commerce-coinbase-trading-api
+- baseURL: https://api.commerce.coinbase.com
+  baseurl_source: declared
+  description: The Wallet API from Coinbase Commerce — 1 operation(s) for wallet.
+  name: Coinbase Commerce Wallet API
+  slug: commerce-coinbase-wallet-api
+artifact_total: 32
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Coinbase Commerce Charges API
   slug: open-commerce-coinbase-charges-api
@@ -80,23 +126,27 @@ collections:
   name: Coinbase Commerce Charges Events API
   slug: open-commerce-coinbase-events-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/coinbase-commerce/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/commerce-coinbase/refs/heads/main/agentic-access/commerce-coinbase-agentic-access.yml
+  href: https://artifacts.apis.io/commerce-coinbase/agentic-access/commerce-coinbase-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/commerce-coinbase-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/commerce-coinbase/refs/heads/main/security/commerce-coinbase-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/commerce-coinbase/security/commerce-coinbase-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/commerce-coinbase-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/commerce-coinbase/refs/heads/main/security/commerce-coinbase-domain-security.yml
+  href: https://artifacts.apis.io/commerce-coinbase/security/commerce-coinbase-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/commerce-coinbase-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/commerce-coinbase/refs/heads/main/authentication/commerce-coinbase-authentication.yml
+  href: https://artifacts.apis.io/commerce-coinbase/authentication/commerce-coinbase-authentication.yml
   title: ''
   type: Authentication
   url: authentication/commerce-coinbase-authentication.yml
@@ -200,18 +250,18 @@ modified: '2026-06-13'
 name: Coinbase Commerce
 nav: Providers
 network: true
-overview: 'Coinbase Commerce publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Charges API, Checkouts API, Events API, and 1 more. Tagged areas include Crypto Payments, Cryptocurrency, Payment Gateway, Commerce, and Bitcoin.
+overview: 'Coinbase Commerce publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Charges API, Checkouts API, Events API, and 10 more. Tagged areas include Crypto Payments, Cryptocurrency, Payment Gateway, Commerce, and Bitcoin.
 
 
   The Coinbase Commerce catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Coinbase Commerce''s developer surface includes authentication, documentation, engineering blog, pricing, support, and 13 more developer resources.'
+  Coinbase Commerce''s developer surface includes authentication, documentation, engineering blog, pricing, support, and 14 more developer resources.'
 plans:
 - name: Plans
   plan_count: 2
   slug: plans
-random_paper: 8
+random_paper: 20
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -229,44 +279,44 @@ rules:
     warn: 4
   slug: commerce-coinbase-jsonschema-spectral-rules
 score:
-  band: thin
-  composite: 36.1
+  band: developing
+  composite: 41.0
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 53.3
+    artifact_dirs: 17
+    catalog_earned: 56.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.8
+    catalog_gap: 58.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.3
+  delta: 2.3
   facets:
-    access_clarity: 15.8
+    access_clarity: 21.1
     contract_governance: 9.8
-    contract_quality: 56.5
-    developer_ergonomics: 45.2
-    discoverability: 66.1
-    operational_transparency: 15.8
-  previous_composite: 40.4
+    contract_quality: 62.2
+    developer_ergonomics: 46.4
+    discoverability: 71.4
+    operational_transparency: 26.3
+  previous_composite: 38.7
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 4
+      marker_coverage: 69.2
+      total: 13
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 24.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 25.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/commerce-coinbase/refs/heads/main/screenshots/commerce-coinbase-2026-06-20T174814.png
+screenshot: https://apis.io/screenshots/commerce-coinbase/commerce-coinbase-2026-06-20T174814.png
 security:
 - kind: authentication
   name: Commerce Coinbase Authentication

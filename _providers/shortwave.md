@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,27 +37,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/shortwave/refs/heads/main/plans/shortwave-plans-pricing.yml
+  href: https://artifacts.apis.io/shortwave/plans/shortwave-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/shortwave-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shortwave/refs/heads/main/security/shortwave-trust-center.yml
+  href: https://artifacts.apis.io/shortwave/security/shortwave-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/shortwave-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shortwave/refs/heads/main/security/shortwave-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/shortwave/security/shortwave-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/shortwave-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shortwave/refs/heads/main/security/shortwave-domain-security.yml
+  href: https://artifacts.apis.io/shortwave/security/shortwave-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shortwave-domain-security.yml
@@ -61,17 +66,17 @@ common:
   type: Security
   url: https://www.shortwave.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shortwave/refs/heads/main/well-known/shortwave-security.txt
+  href: https://artifacts.apis.io/shortwave/well-known/shortwave-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/shortwave-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shortwave/refs/heads/main/well-known/shortwave-well-known.yml
+  href: https://artifacts.apis.io/shortwave/well-known/shortwave-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/shortwave-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shortwave/refs/heads/main/conformance/shortwave-conformance.yml
+  href: https://artifacts.apis.io/shortwave/conformance/shortwave-conformance.yml
   title: ''
   type: Conformance
   url: conformance/shortwave-conformance.yml
@@ -135,18 +140,18 @@ plans:
 - name: Shortwave Plans Pricing
   plan_count: 3
   slug: shortwave-plans-pricing
-random_paper: 5
+random_paper: 11
 score:
   band: thin
   composite: 30.5
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.0
+  delta: 0.0
   facets:
     access_clarity: 78.9
     contract_governance: 18.2
@@ -154,7 +159,7 @@ score:
     developer_ergonomics: 26.2
     discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 24.5
+  previous_composite: 30.5
   provenance:
     conformance: first-party
   regulatory:
@@ -163,14 +168,14 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/shortwave/refs/heads/main/screenshots/shortwave-2026-09-02T155312.png
+screenshot: https://apis.io/screenshots/shortwave/shortwave-2026-09-02T155312.png
 security:
 - kind: domain-security
   name: Shortwave Domain Security

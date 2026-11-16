@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: medium
-  label: Enterprise
+  label: Paid
   onboarding: unknown
-  pricing: enterprise
+  pricing: paid
   public: false
   source:
   - plans
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.9
-  scored_at: '2026-10-17'
+  score: 27.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -118,9 +121,6 @@ apis:
 artifact_total: 36
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: TableCheck API - V1 availability API
   slug: open-tablecheck-availability-api
 - collection_type: open
@@ -167,22 +167,22 @@ collections:
   slug: open-tablecheck
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tablecheck/refs/heads/main/capabilities/tablecheck-capability-edges.yml
+  href: https://artifacts.apis.io/tablecheck/capabilities/tablecheck-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tablecheck-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tablecheck/refs/heads/main/agentic-access/tablecheck-agentic-access.yml
+  href: https://artifacts.apis.io/tablecheck/agentic-access/tablecheck-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tablecheck-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tablecheck/refs/heads/main/security/tablecheck-domain-security.yml
+  href: https://artifacts.apis.io/tablecheck/security/tablecheck-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tablecheck-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tablecheck/refs/heads/main/authentication/tablecheck-authentication.yml
+  href: https://artifacts.apis.io/tablecheck/authentication/tablecheck-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tablecheck-authentication.yml
@@ -203,17 +203,17 @@ common:
   type: Documentation
   url: https://tablecheck.atlassian.net/wiki/spaces/API
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tablecheck/refs/heads/main/plans/tablecheck-plans-pricing.yml
+  href: https://artifacts.apis.io/tablecheck/plans/tablecheck-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tablecheck-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tablecheck/refs/heads/main/rate-limits/tablecheck-rate-limits.yml
+  href: https://artifacts.apis.io/tablecheck/rate-limits/tablecheck-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tablecheck-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tablecheck/refs/heads/main/finops/tablecheck-finops.yml
+  href: https://artifacts.apis.io/tablecheck/finops/tablecheck-finops.yml
   title: ''
   type: FinOps
   url: finops/tablecheck-finops.yml
@@ -240,30 +240,46 @@ network: true
 overview: 'TableCheck publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Availability API, Blockages API, Calendar API, and 11 more. Tagged areas include Restaurant, Reservations, Booking, Hospitality, and Availability.
 
 
+  The TableCheck catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   TableCheck''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Tablecheck Plans Pricing
   plan_count: 2
   slug: tablecheck-plans-pricing
-random_paper: 18
+random_paper: 22
 rate_limits:
 - limit_count: 2
   name: Tablecheck Rate Limits
   slug: tablecheck-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: TableCheck API Rules
+  rule_count: 59
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 2
+    warn: 4
+  slug: tablecheck-rules
 score:
   band: thin
-  composite: 26.5
+  composite: 28.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 44.0
+    artifact_dirs: 16
+    catalog_earned: 48.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    catalog_gap: 66.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 48.3
     developer_ergonomics: 32.1
     discoverability: 71.4
@@ -275,7 +291,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 32.5
+  previous_composite: 28.2
   provenance:
     agentic_access: derived
     contracts:
@@ -289,13 +305,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tablecheck/refs/heads/main/screenshots/tablecheck-2026-09-02T161720.png
+screenshot: https://apis.io/screenshots/tablecheck/tablecheck-2026-09-02T161720.png
 security:
 - kind: authentication
   name: Tablecheck Authentication

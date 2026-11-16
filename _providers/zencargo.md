@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Enterprise · Self-serve signup
   onboarding: self-serve
   pricing: enterprise
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - description: 'Query bookings by Zencargo reference and retrieve booking details: cargo, consignor/consignee, forwarder, incoterms, load type, mode of transport, bills of lading, required delivery date, and attached'
@@ -65,12 +72,12 @@ collections:
   slug: open-zencargo
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zencargo/refs/heads/main/security/zencargo-domain-security.yml
+  href: https://artifacts.apis.io/zencargo/security/zencargo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zencargo-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zencargo/refs/heads/main/authentication/zencargo-authentication.yml
+  href: https://artifacts.apis.io/zencargo/authentication/zencargo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zencargo-authentication.yml
@@ -91,17 +98,17 @@ common:
   type: Documentation
   url: https://api-docs.zencargo.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zencargo/refs/heads/main/plans/zencargo-plans-pricing.yml
+  href: https://artifacts.apis.io/zencargo/plans/zencargo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/zencargo-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zencargo/refs/heads/main/rate-limits/zencargo-rate-limits.yml
+  href: https://artifacts.apis.io/zencargo/rate-limits/zencargo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/zencargo-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zencargo/refs/heads/main/finops/zencargo-finops.yml
+  href: https://artifacts.apis.io/zencargo/finops/zencargo-finops.yml
   title: ''
   type: FinOps
   url: finops/zencargo-finops.yml
@@ -137,7 +144,7 @@ plans:
 - name: Zencargo Plans Pricing
   plan_count: 1
   slug: zencargo-plans-pricing
-random_paper: 21
+random_paper: 17
 rate_limits:
 - limit_count: 4
   name: Zencargo Rate Limits
@@ -146,13 +153,13 @@ score:
   band: emerging
   composite: 23.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 0.0
@@ -160,7 +167,7 @@ score:
     developer_ergonomics: 31.0
     discoverability: 65.0
     operational_transparency: 10.5
-  previous_composite: 30.3
+  previous_composite: 23.4
   provenance:
     mcp: first-party
   regulatory:
@@ -169,14 +176,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/zencargo/refs/heads/main/screenshots/zencargo-2026-09-02T171600.png
+screenshot: https://apis.io/screenshots/zencargo/zencargo-2026-09-02T171600.png
 security:
 - kind: authentication
   name: Zencargo Authentication

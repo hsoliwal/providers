@@ -1,15 +1,20 @@
 ---
 access_model:
   confidence: high
-  label: Freemium · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
   onboarding: self-serve
-  pricing: freemium
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - security
+  - sandbox
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.3
-  scored_at: '2026-10-17'
+  score: 35.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -42,7 +50,7 @@ agentic_access:
   operation_count: 28
   slug: digits-com-agentic-access
   summary_line: 28 operations · 7 acting
-api_count: 3
+api_count: 2
 apis:
 - description: Model Context Protocol server that lets AI clients like ChatGPT and Claude connect directly to Digits to query the ledger in natural language. Discovery is published as an MCP Server Card at /.well-kn
   name: Digits MCP Server
@@ -102,15 +110,12 @@ apis:
   description: The .well Known API from Digits — 2 operation(s) for .well known.
   name: Digits .well Known API
   slug: digits-com-well-known-api
-artifact_total: 35
+artifact_total: 39
 asyncapis:
 - description: ''
   name: Digits Com Webhooks
   slug: digits-com-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Digits Connect Chart of Accounts API
   slug: open-digits-com-chart-of-accounts-api
@@ -149,37 +154,37 @@ collections:
   slug: open-digits-com
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/capabilities/digits-com-capability-edges.yml
+  href: https://artifacts.apis.io/digits-com/capabilities/digits-com-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/digits-com-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/agentic-access/digits-com-agentic-access.yml
+  href: https://artifacts.apis.io/digits-com/agentic-access/digits-com-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/digits-com-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/security/digits-com-trust-center.yml
+  href: https://artifacts.apis.io/digits-com/security/digits-com-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/digits-com-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/security/digits-com-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/digits-com/security/digits-com-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/digits-com-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/security/digits-com-domain-security.yml
+  href: https://artifacts.apis.io/digits-com/security/digits-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/digits-com-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/authentication/digits-com-authentication.yml
+  href: https://artifacts.apis.io/digits-com/authentication/digits-com-authentication.yml
   title: ''
   type: Authentication
   url: authentication/digits-com-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/scopes/digits-com-scopes.yml
+  href: https://artifacts.apis.io/digits-com/scopes/digits-com-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/digits-com-scopes.yml
@@ -200,17 +205,17 @@ common:
   type: Documentation
   url: https://developer.digits.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/plans/digits-com-plans-pricing.yml
+  href: https://artifacts.apis.io/digits-com/plans/digits-com-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/digits-com-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/rate-limits/digits-com-rate-limits.yml
+  href: https://artifacts.apis.io/digits-com/rate-limits/digits-com-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/digits-com-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/finops/digits-com-finops.yml
+  href: https://artifacts.apis.io/digits-com/finops/digits-com-finops.yml
   title: ''
   type: FinOps
   url: finops/digits-com-finops.yml
@@ -263,77 +268,77 @@ common:
   type: Compliance
   url: https://trust.digits.com
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/overlays/digits-com-overlay.yaml
+  href: https://artifacts.apis.io/digits-com/overlays/digits-com-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/digits-com-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/mcp/digits-com-mcp.yml
+  href: https://artifacts.apis.io/digits-com/mcp/digits-com-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/digits-com-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/llms/digits-com-llms.txt
+  href: https://artifacts.apis.io/digits-com/llms/digits-com-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/digits-com-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/well-known/digits-com-well-known.yml
+  href: https://artifacts.apis.io/digits-com/well-known/digits-com-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/digits-com-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/well-known/digits-com-security.txt
+  href: https://artifacts.apis.io/digits-com/well-known/digits-com-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/digits-com-security.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/conventions/digits-com-conventions.yml
+  href: https://artifacts.apis.io/digits-com/conventions/digits-com-conventions.yml
   title: ''
   type: Conventions
   url: conventions/digits-com-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/conventions/digits-com-conventions.yml
+  href: https://artifacts.apis.io/digits-com/conventions/digits-com-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/digits-com-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/lifecycle/digits-com-lifecycle.yml
+  href: https://artifacts.apis.io/digits-com/lifecycle/digits-com-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/digits-com-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/lifecycle/digits-com-lifecycle.yml
+  href: https://artifacts.apis.io/digits-com/lifecycle/digits-com-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/digits-com-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/conformance/digits-com-conformance.yml
+  href: https://artifacts.apis.io/digits-com/conformance/digits-com-conformance.yml
   title: ''
   type: Conformance
   url: conformance/digits-com-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/errors/digits-com-problem-types.yml
+  href: https://artifacts.apis.io/digits-com/errors/digits-com-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/digits-com-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/data-model/digits-com-data-model.yml
+  href: https://artifacts.apis.io/digits-com/data-model/digits-com-data-model.yml
   title: ''
   type: DataModel
   url: data-model/digits-com-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/sandbox/digits-com-sandbox.yml
+  href: https://artifacts.apis.io/digits-com/sandbox/digits-com-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/digits-com-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/asyncapi/digits-com-webhooks.yml
+  href: https://artifacts.apis.io/digits-com/asyncapi/digits-com-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/digits-com-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/digits-com/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -341,10 +346,10 @@ created: '2026-07-01'
 description: Digits is an AI-native accounting and bookkeeping platform for startups and their accountants, built around the Autonomous General Ledger (AGL) that auto-books the majority of transactions in real time. The Digits Connect API opens the AGL programmatically over REST with OAuth 2.0, letting partners send raw transaction, party, and dimension data for AI categorization and vendor enrichment, and read back ledger entries and financial statements. Digits also publishes an MCP server for AI agents (ChatGPT, Claude) to query the ledger.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Digits Com Finops
-  primary_unit: ''
-  service_category: Business Applications
+  primary_unit: subscription
+  service_category: ''
   slug: digits-com-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/digits-com.png
@@ -356,7 +361,7 @@ network: true
 overview: 'Digits publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Chart of Accounts API, Connections API, Financial Statements API, and 9 more. Tagged areas include Accounting, Bookkeeping, Finance, General Ledger, and Artificial Intelligence.
 
 
-  The Digits catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Digits catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Digits'' developer surface includes authentication, documentation, engineering blog, API reference, getting-started guide, pricing, signup flow, and 34 more developer resources.'
@@ -364,42 +369,58 @@ plans:
 - name: Digits Com Plans Pricing
   plan_count: 3
   slug: digits-com-plans-pricing
-random_paper: 18
+- name: Digits Com Price Estimates
+  plan_count: 0
+  slug: digits-com-price-estimates
+random_paper: 0
 rate_limits:
 - limit_count: 2
   name: Digits Com Rate Limits
   slug: digits-com-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Digits API Rules
+  rule_count: 62
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 2
+    warn: 3
+  slug: digits-com-rules
 scopes:
 - name: Digits Com Scopes
   scope_count: 2
   slug: digits-com-scopes
   summary_line: 2 scopes · authorizationCode
 score:
-  band: developing
-  composite: 53.0
+  band: strong
+  composite: 59.9
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 49.0
+    artifact_dirs: 30
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.3
+  delta: 4.2
   facets:
-    access_clarity: 57.9
-    contract_governance: 18.2
-    contract_quality: 52.9
-    developer_ergonomics: 48.2
-    discoverability: 69.6
+    access_clarity: 65.8
+    contract_governance: 31.8
+    contract_quality: 54.3
+    developer_ergonomics: 67.3
+    discoverability: 64.3
     operational_transparency: 34.2
-  previous_composite: 53.3
+  previous_composite: 55.7
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 27.3
       total: 11
     mcp: first-party
     skills: derived
@@ -409,13 +430,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/screenshots/digits-com-2026-07-25T212036.png
+screenshot: https://apis.io/screenshots/digits-com/digits-com-2026-07-25T212036.png
 security:
 - kind: authentication
   name: Digits Com Authentication
@@ -433,6 +454,14 @@ security:
   name: Digits Com Trust Center
   slug: digits-com-trust-center
   summary_line: SOC 2
+skill_count: 3
+skills:
+- name: Run the Digits bill-pay workflow
+  slug: digits-com-bill-pay-workflow
+- name: Read Digits financial statements
+  slug: digits-com-read-financial-statements
+- name: Sync source transactions into Digits
+  slug: digits-com-sync-source-transactions
 slug: digits-com
 tags:
 - Accounting

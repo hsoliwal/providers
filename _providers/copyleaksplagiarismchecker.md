@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -10,21 +23,24 @@ agent_readiness:
     auth_clarity: served
     consent_identity: false
     delegated_identity: served
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: true
     error_semantics: false
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.9
-  scored_at: '2026-10-17'
+  score: 44.0
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
 - description: API for Copyleaks plagiarism detection and content authenticity services.
@@ -65,79 +81,79 @@ apis:
   description: The Writer Detector API from Copyleaksplagiarismchecker — 2 operation(s) for writer detector.
   name: Copyleaksplagiarismchecker Writer Detector API
   slug: copyleaksplagiarismchecker-writer-detector-api
-artifact_total: 21
+artifact_total: 22
 asyncapis:
 - description: ''
   name: Copyleaksplagiarismchecker Webhooks
   slug: copyleaksplagiarismchecker-webhooks
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/rate-limits/copyleaksplagiarismchecker-rate-limits.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/rate-limits/copyleaksplagiarismchecker-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/copyleaksplagiarismchecker-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/plans/copyleaksplagiarismchecker-plans-pricing.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/plans/copyleaksplagiarismchecker-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/copyleaksplagiarismchecker-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/rules/copyleaksplagiarismchecker-rules.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/rules/copyleaksplagiarismchecker-rules.yml
   title: ''
   type: Spectral
   url: rules/copyleaksplagiarismchecker-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/json-ld/copyleaksplagiarismchecker-context.jsonld
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/json-ld/copyleaksplagiarismchecker-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/copyleaksplagiarismchecker-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/vocabulary/copyleaksplagiarismchecker-vocabulary.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/vocabulary/copyleaksplagiarismchecker-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/copyleaksplagiarismchecker-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/asyncapi/copyleaksplagiarismchecker-webhooks.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/asyncapi/copyleaksplagiarismchecker-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/copyleaksplagiarismchecker-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/data-model/copyleaksplagiarismchecker-data-model.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/data-model/copyleaksplagiarismchecker-data-model.yml
   title: ''
   type: DataModel
   url: data-model/copyleaksplagiarismchecker-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/changelog/copyleaksplagiarismchecker-changelog.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/changelog/copyleaksplagiarismchecker-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/copyleaksplagiarismchecker-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/authentication/copyleaksplagiarismchecker-authentication.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/authentication/copyleaksplagiarismchecker-authentication.yml
   title: ''
   type: Authentication
   url: authentication/copyleaksplagiarismchecker-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/conformance/copyleaksplagiarismchecker-conformance.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/conformance/copyleaksplagiarismchecker-conformance.yml
   title: ''
   type: Conformance
   url: conformance/copyleaksplagiarismchecker-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/llms/copyleaksplagiarismchecker-llms.txt
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/llms/copyleaksplagiarismchecker-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/copyleaksplagiarismchecker-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/well-known/copyleaksplagiarismchecker-well-known.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/well-known/copyleaksplagiarismchecker-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/copyleaksplagiarismchecker-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/hosts/copyleaksplagiarismchecker-hosts.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/hosts/copyleaksplagiarismchecker-hosts.yml
   title: ''
   type: Hosts
   url: hosts/copyleaksplagiarismchecker-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/vendors/copyleaksplagiarismchecker-vendors.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/vendors/copyleaksplagiarismchecker-vendors.yml
   title: ''
   type: Vendors
   url: vendors/copyleaksplagiarismchecker-vendors.yml
@@ -186,7 +202,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/Copyleaks
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/copyleaksplagiarismchecker/refs/heads/main/security/copyleaksplagiarismchecker-domain-security.yml
+  href: https://artifacts.apis.io/copyleaksplagiarismchecker/security/copyleaksplagiarismchecker-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/copyleaksplagiarismchecker-domain-security.yml
@@ -204,6 +220,14 @@ coverage:
   state: unreadable
 created: '2026-10-10'
 description: Copyleaks provides AI-powered plagiarism detection and content authenticity solutions for businesses, educators, and developers. Their platform offers text, image, and video plagiarism checking, deepfake detection, and content moderation tools, with API access for integration into LMS, CMS, and custom applications. Copyleaks serves a global customer base across education, media, and enterprise sectors, emphasizing AI-driven accuracy and compliance.
+finops:
+- has_sources: true
+  method: derived
+  name: Copyleaksplagiarismchecker Finops
+  primary_unit: seat
+  service_category: ''
+  slug: copyleaksplagiarismchecker-finops
+  template: false
 image: https://copyleaks.com/wp-content/uploads/2023/02/Feature_Image-01.png?_t=1782892736
 json_schemas:
 - name: GetV3RepositoriesRepositoryMyRepo123InfoResponse
@@ -245,7 +269,7 @@ plans:
 - name: Copyleaksplagiarismchecker Plans Pricing
   plan_count: 6
   slug: copyleaksplagiarismchecker-plans-pricing
-random_paper: 11
+random_paper: 1
 rate_limits:
 - limit_count: 4
   name: Copyleaksplagiarismchecker Rate Limits
@@ -265,21 +289,23 @@ rules:
   slug: copyleaksplagiarismchecker-rules
 score:
   band: developing
-  composite: 48.2
+  composite: 41.0
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 84.0
+    artifact_dirs: 23
+    catalog_earned: 87.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 31.0
+    catalog_gap: 28.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.8
   facets:
-    access_clarity: 63.2
+    access_clarity: 55.3
     contract_governance: 19.7
     contract_quality: 33.8
-    developer_ergonomics: 47.6
-    discoverability: 71.4
-    operational_transparency: 60.5
+    developer_ergonomics: 29.8
+    discoverability: 70.5
+    operational_transparency: 50.0
+  previous_composite: 49.8
   provenance:
     conformance: derived
     contracts:
@@ -293,12 +319,14 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/copyleaksplagiarismchecker/copyleaksplagiarismchecker-2026-11-03T125314.png
 security:
 - kind: authentication
   name: Copyleaksplagiarismchecker Authentication

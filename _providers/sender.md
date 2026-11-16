@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -62,47 +66,47 @@ common:
   type: Blog
   url: https://medium.com/@senderlabs
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sender/refs/heads/main/llms/sender-llms.txt
+  href: https://artifacts.apis.io/sender/llms/sender-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sender-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sender/refs/heads/main/conventions/sender-conventions.yml
+  href: https://artifacts.apis.io/sender/conventions/sender-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sender-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sender/refs/heads/main/authentication/sender-authentication.yml
+  href: https://artifacts.apis.io/sender/authentication/sender-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sender-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sender/refs/heads/main/lifecycle/sender-lifecycle.yml
+  href: https://artifacts.apis.io/sender/lifecycle/sender-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sender-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sender/refs/heads/main/lifecycle/sender-lifecycle.yml
+  href: https://artifacts.apis.io/sender/lifecycle/sender-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/sender-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sender/refs/heads/main/errors/sender-error-codes.yml
+  href: https://artifacts.apis.io/sender/errors/sender-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/sender-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sender/refs/heads/main/conformance/sender-conformance.yml
+  href: https://artifacts.apis.io/sender/conformance/sender-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sender-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sender/refs/heads/main/security/sender-domain-security.yml
+  href: https://artifacts.apis.io/sender/security/sender-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sender-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sender/refs/heads/main/security/sender-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/sender/security/sender-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/sender-vulnerability-disclosure.yml
@@ -122,12 +126,12 @@ overview: 'Sender is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Sender''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, and 10 more developer resources.'
-random_paper: 3
+random_paper: 17
 score:
   band: emerging
   composite: 19.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -150,14 +154,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sender/refs/heads/main/screenshots/sender-2026-09-02T154837.png
+screenshot: https://apis.io/screenshots/sender/sender-2026-09-02T154837.png
 security:
 - kind: authentication
   name: Sender Authentication

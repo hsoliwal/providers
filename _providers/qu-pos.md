@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Qu POS offers a developer portal for its restaurant POS platform, but API specifications are behind authentication.
@@ -32,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qu-pos/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/qu-pos/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qu-pos/refs/heads/main/well-known/qu-pos-well-known.yml
+  href: https://artifacts.apis.io/qu-pos/well-known/qu-pos-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/qu-pos-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/qu-pos/refs/heads/main/hosts/qu-pos-hosts.yml
+  href: https://artifacts.apis.io/qu-pos/hosts/qu-pos-hosts.yml
   title: ''
   type: Hosts
   url: hosts/qu-pos-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/qu-pos/refs/heads/main/vendors/qu-pos-vendors.yml
+  href: https://artifacts.apis.io/qu-pos/vendors/qu-pos-vendors.yml
   title: ''
   type: Vendors
   url: vendors/qu-pos-vendors.yml
@@ -68,7 +81,7 @@ common:
   type: Leadership
   url: https://www.qubeyond.com/management
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qu-pos/refs/heads/main/security/qu-pos-domain-security.yml
+  href: https://artifacts.apis.io/qu-pos/security/qu-pos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/qu-pos-domain-security.yml
@@ -112,24 +125,26 @@ overview: 'Qu POS is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Qu POS''s developer surface includes documentation, getting-started guide, support, and 11 more developer resources.'
-random_paper: 19
+random_paper: 13
 score:
   band: emerging
-  composite: 20.3
+  composite: 13.0
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.3
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 42.1
-    discoverability: 58.9
-    operational_transparency: 15.8
+    developer_ergonomics: 24.3
+    discoverability: 58.0
+    operational_transparency: 7.9
+  previous_composite: 20.3
   provenance:
     mcp: derived
     skills: unknown
@@ -138,13 +153,15 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 17.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/qu-pos/qu-pos-2026-11-03T141806.png
 security:
 - kind: domain-security
   name: Qu Pos Domain Security

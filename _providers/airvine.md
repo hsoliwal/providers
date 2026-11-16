@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -88,17 +101,17 @@ common:
   type: X
   url: https://x.com/wavetunnel
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airvine/refs/heads/main/security/airvine-domain-security.yml
+  href: https://artifacts.apis.io/airvine/security/airvine-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/airvine-domain-security.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/airvine/refs/heads/main/regulatory/airvine-regulatory-posture.yml
+  href: https://artifacts.apis.io/airvine/regulatory/airvine-regulatory-posture.yml
   title: ''
   type: RegulatoryPosture
   url: regulatory/airvine-regulatory-posture.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airvine/refs/heads/main/llms/airvine-llms.txt
+  href: https://artifacts.apis.io/airvine/llms/airvine-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/airvine-llms.txt
@@ -136,12 +149,12 @@ overview: 'Airvine is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Airvine''s developer surface includes documentation, support, engineering blog, release notes, and 14 more developer resources.'
-random_paper: 2
+random_paper: 6
 score:
   band: emerging
   composite: 11.3
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -162,14 +175,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 8.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/airvine/refs/heads/main/screenshots/airvine-2026-10-11T093436.png
+screenshot: https://apis.io/screenshots/airvine/airvine-2026-10-11T093436.png
 security:
 - kind: domain-security
   name: Airvine Domain Security

@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.8
-  scored_at: '2026-10-17'
+  score: 30.4
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: OpenSearch 1.1 query interface returning an Atom feed of repository records, served from the institution's own host. Verified live 2026-08-19 (HTTP 200, 32KB Atom response for query=test).
@@ -79,14 +82,14 @@ apis:
   description: Service liveness and authentication state.
   name: Peking University Status API
   slug: peking-status-api
-artifact_total: 21
+artifact_total: 22
 common:
 - group: commercial
   title: ''
   type: License
   url: https://github.com/PKUHPC/OpenSCOW/blob/master/LICENSE
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/capabilities/peking-capability-edges.yml
+  href: https://artifacts.apis.io/peking/capabilities/peking-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/peking-capability-edges.yml
@@ -151,72 +154,72 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/school/peking-university/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/authentication/peking-authentication.yml
+  href: https://artifacts.apis.io/peking/authentication/peking-authentication.yml
   title: ''
   type: Authentication
   url: authentication/peking-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/scopes/peking-scopes.yml
+  href: https://artifacts.apis.io/peking/scopes/peking-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/peking-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/conformance/peking-conformance.yml
+  href: https://artifacts.apis.io/peking/conformance/peking-conformance.yml
   title: ''
   type: Conformance
   url: conformance/peking-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/errors/peking-errors.yml
+  href: https://artifacts.apis.io/peking/errors/peking-errors.yml
   title: ''
   type: ErrorCatalog
   url: errors/peking-errors.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/lifecycle/peking-lifecycle.yml
+  href: https://artifacts.apis.io/peking/lifecycle/peking-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/peking-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/vocabulary/peking-vocabulary.yml
+  href: https://artifacts.apis.io/peking/vocabulary/peking-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/peking-vocabulary.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/json-schema/peking-ir-item.json
+  href: https://artifacts.apis.io/peking/json-schema/peking-ir-item.json
   title: ''
   type: JSONSchema
   url: json-schema/peking-ir-item.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/examples/peking-ir-oai-identify-response.xml
+  href: https://artifacts.apis.io/peking/examples/peking-ir-oai-identify-response.xml
   title: ''
   type: Examples
   url: examples/peking-ir-oai-identify-response.xml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/json-ld/peking-context.jsonld
+  href: https://artifacts.apis.io/peking/json-ld/peking-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/peking-context.jsonld
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/security/peking-domain-security.yml
+  href: https://artifacts.apis.io/peking/security/peking-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/peking-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/plans/peking-plans-pricing.yml
+  href: https://artifacts.apis.io/peking/plans/peking-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/peking-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/rate-limits/peking-rate-limits.yml
+  href: https://artifacts.apis.io/peking/rate-limits/peking-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/peking-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/finops/peking-finops.yml
+  href: https://artifacts.apis.io/peking/finops/peking-finops.yml
   title: ''
   type: FinOps
   url: finops/peking-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/peking/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -255,7 +258,7 @@ network: true
 overview: 'Peking University publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Collections API, Communities API, Harvesting API, and 8 more. Tagged areas include University, Higher Education, Education, China, and Public Research University.
 
 
-  The Peking University catalog on APIs.io includes 1 JSON-LD context.
+  The Peking University catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Peking University''s developer surface includes engineering blog, authentication, code examples, and 28 more developer resources.'
@@ -263,11 +266,24 @@ plans:
 - name: Peking Plans Pricing
   plan_count: 2
   slug: peking-plans-pricing
-random_paper: 0
+random_paper: 14
 rate_limits:
 - limit_count: 1
   name: Peking Rate Limits
   slug: peking-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Peking University API Rules
+  rule_count: 51
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 2
+  slug: peking-rules
 scopes:
 - name: Peking Scopes
   scope_count: 0
@@ -275,20 +291,20 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 33.9
+  composite: 37.2
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 50.7
+    artifact_dirs: 23
+    catalog_earned: 55.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 64.4
+    catalog_gap: 59.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 1.7
   facets:
     access_clarity: 5.3
-    contract_governance: 22.0
-    contract_quality: 58.8
-    developer_ergonomics: 21.4
+    contract_governance: 35.6
+    contract_quality: 63.7
+    developer_ergonomics: 23.8
     discoverability: 57.1
     operational_transparency: 23.7
   jurisdiction:
@@ -298,7 +314,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 39.9
+  previous_composite: 35.5
   provenance:
     conformance: first-party
     contracts:
@@ -312,14 +328,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/peking/refs/heads/main/screenshots/peking-2026-06-20T191532.png
+screenshot: https://apis.io/screenshots/peking/peking-2026-06-20T191532.png
 security:
 - kind: authentication
   name: Peking Authentication

@@ -1,13 +1,15 @@
 ---
 access_model:
   confidence: high
-  label: Paid · Self-serve signup
-  onboarding: self-serve
+  label: Paid
+  onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -27,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.3
-  scored_at: '2026-10-17'
+  score: 41.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 0
@@ -88,7 +93,7 @@ apis:
   description: The Verification API from Transmit Security — 6 operation(s) for verification.
   name: Transmit Security Verification API
   slug: transmit-security-verification-api
-artifact_total: 48
+artifact_total: 52
 collections:
 - collection_type: postman
   name: One-Time Login Applications API
@@ -115,9 +120,6 @@ collections:
   name: One-Time Login Applications Verification API
   slug: postman-transmit-security-verification-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: One-Time Login Applications API
   slug: open-transmit-security-applications-api
 - collection_type: open
@@ -142,73 +144,83 @@ collections:
   name: One-Time Login Applications Verification API
   slug: open-transmit-security-verification-api
 common:
+- group: auth
+  href: https://artifacts.apis.io/transmit-security/well-known/transmit-security-status-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/transmit-security-status-security.txt
+- group: build
+  href: https://artifacts.apis.io/transmit-security/integrations/transmit-security-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/transmit-security-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/transmit-security/capabilities/transmit-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/transmit-security-capability-edges.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/rules/transmit-security-rules.yml
+  href: https://artifacts.apis.io/transmit-security/rules/transmit-security-rules.yml
   title: ''
   type: Spectral
   url: rules/transmit-security-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/rules/transmit-security-jsonschema-spectral-rules.yml
+  href: https://artifacts.apis.io/transmit-security/rules/transmit-security-jsonschema-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/transmit-security-jsonschema-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/json-ld/transmit-security-context.jsonld
+  href: https://artifacts.apis.io/transmit-security/json-ld/transmit-security-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/transmit-security-context.jsonld
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/transmit-security/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/data-model/transmit-security-data-model.yml
+  href: https://artifacts.apis.io/transmit-security/data-model/transmit-security-data-model.yml
   title: ''
   type: DataModel
   url: data-model/transmit-security-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/changelog/transmit-security-changelog.yml
+  href: https://artifacts.apis.io/transmit-security/changelog/transmit-security-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/transmit-security-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/errors/transmit-security-problem-types.yml
+  href: https://artifacts.apis.io/transmit-security/errors/transmit-security-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/transmit-security-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/conformance/transmit-security-conformance.yml
+  href: https://artifacts.apis.io/transmit-security/conformance/transmit-security-conformance.yml
   title: ''
   type: Conformance
   url: conformance/transmit-security-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/llms/transmit-security-llms.txt
+  href: https://artifacts.apis.io/transmit-security/llms/transmit-security-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/transmit-security-llms.txt
-- group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/well-known/transmit-security-status-security.txt
-  title: ''
-  type: SecurityTxt
-  url: well-known/transmit-security-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/well-known/transmit-security-well-known.yml
+  href: https://artifacts.apis.io/transmit-security/well-known/transmit-security-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/transmit-security-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/hosts/transmit-security-hosts.yml
+  href: https://artifacts.apis.io/transmit-security/hosts/transmit-security-hosts.yml
   title: ''
   type: Hosts
   url: hosts/transmit-security-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/vendors/transmit-security-vendors.yml
+  href: https://artifacts.apis.io/transmit-security/vendors/transmit-security-vendors.yml
   title: ''
   type: Vendors
   url: vendors/transmit-security-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/packages/transmit-security-packages.yml
+  href: https://artifacts.apis.io/transmit-security/packages/transmit-security-packages.yml
   title: ''
   type: Packages
   url: packages/transmit-security-packages.yml
@@ -241,22 +253,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/transmit-security/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/agentic-access/transmit-security-agentic-access.yml
+  href: https://artifacts.apis.io/transmit-security/agentic-access/transmit-security-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/transmit-security-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/security/transmit-security-domain-security.yml
+  href: https://artifacts.apis.io/transmit-security/security/transmit-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/transmit-security-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/authentication/transmit-security-authentication.yml
+  href: https://artifacts.apis.io/transmit-security/authentication/transmit-security-authentication.yml
   title: ''
   type: Authentication
   url: authentication/transmit-security-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/scopes/transmit-security-scopes.yml
+  href: https://artifacts.apis.io/transmit-security/scopes/transmit-security-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/transmit-security-scopes.yml
@@ -301,27 +313,27 @@ common:
   type: SDKs
   url: https://developer.transmitsecurity.com/sdk-ref/sdk_ref_intro
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/plans/transmit-security-plans-pricing.yml
+  href: https://artifacts.apis.io/transmit-security/plans/transmit-security-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/transmit-security-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/rate-limits/transmit-security-rate-limits.yml
+  href: https://artifacts.apis.io/transmit-security/rate-limits/transmit-security-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/transmit-security-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/finops/transmit-security-finops.yml
+  href: https://artifacts.apis.io/transmit-security/finops/transmit-security-finops.yml
   title: ''
   type: FinOps
   url: finops/transmit-security-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/vocabulary/transmit-security-vocabulary.yml
+  href: https://artifacts.apis.io/transmit-security/vocabulary/transmit-security-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/transmit-security-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/json-ld/transmit-security-context.jsonld
+  href: https://artifacts.apis.io/transmit-security/json-ld/transmit-security-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/transmit-security-context.jsonld
@@ -344,13 +356,13 @@ examples:
   name: Transmit Security Platform Administration Create App Example
   slug: transmit-security-platform-administration-create-app-example
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Transmit Security Finops
-  primary_unit: ''
+  primary_unit: 100k monthly active users
   service_category: ''
   slug: transmit-security-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/transmit-security.png
 json_schemas:
 - name: Transmit Security One-Time Login Schemas
@@ -390,12 +402,15 @@ overview: 'Transmit Security publishes 9 API contracts indexed on the [APIs.io](
   The Transmit Security catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Transmit Security''s developer surface includes changelog, support, getting-started guide, authentication, documentation, engineering blog, pricing, and 33 more developer resources.'
+  Transmit Security''s developer surface includes changelog, support, getting-started guide, authentication, documentation, engineering blog, pricing, and 35 more developer resources.'
 plans:
 - name: Transmit Security Plans Pricing
   plan_count: 4
   slug: transmit-security-plans-pricing
-random_paper: 11
+- name: Transmit Security Price Estimates
+  plan_count: 0
+  slug: transmit-security-price-estimates
+random_paper: 15
 rate_limits:
 - limit_count: 4
   name: Transmit Security Rate Limits
@@ -413,16 +428,16 @@ rules:
     warn: 5
   slug: transmit-security-jsonschema-spectral-rules
 - authorship: generated
-  effective_rule_count: 56
+  effective_rule_count: 101
   extends:
   - spectral:oas
   name: Transmit Security API Rules
-  rule_count: 15
+  rule_count: 60
   severity_counts:
-    error: 8
+    error: 38
     hint: 0
-    info: 2
-    warn: 5
+    info: 4
+    warn: 18
   slug: transmit-security-rules
 scopes:
 - name: Transmit Security Scopes
@@ -430,24 +445,24 @@ scopes:
   slug: transmit-security-scopes
   summary_line: 4 scopes · clientCredentials
 score:
-  band: developing
-  composite: 51.6
+  band: strong
+  composite: 55.2
   coverage:
-    artifact_dirs: 31
-    catalog_earned: 72.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 43.0
+    artifact_dirs: 35
+    catalog_earned: 84.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 31.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -11.0
+  delta: -4.1
   facets:
-    access_clarity: 28.9
+    access_clarity: 55.3
     contract_governance: 31.8
     contract_quality: 54.4
-    developer_ergonomics: 60.1
-    discoverability: 82.1
-    operational_transparency: 42.1
-  previous_composite: 62.6
+    developer_ergonomics: 47.0
+    discoverability: 80.4
+    operational_transparency: 52.6
+  previous_composite: 59.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -463,14 +478,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+    score: 28.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/transmit-security/refs/heads/main/screenshots/transmit-security-2026-06-20T195547.png
+screenshot: https://apis.io/screenshots/transmit-security/transmit-security-2026-06-20T195547.png
 security:
 - kind: authentication
   name: Transmit Security Authentication
@@ -480,6 +495,16 @@ security:
   name: Transmit Security Domain Security
   slug: transmit-security-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: transmit-security-auth-magic-link-login
+  slug: transmit-security-auth-magic-link-login
+- name: transmit-security-create-and-retrieve-user
+  slug: transmit-security-create-and-retrieve-user
+- name: transmit-security-create-organization-with-apps
+  slug: transmit-security-create-organization-with-apps
+- name: transmit-security-verify-session
+  slug: transmit-security-verify-session
 slug: transmit-security
 tags:
 - CIAM

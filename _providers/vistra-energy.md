@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,27 +36,27 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vistra-energy/refs/heads/main/security/vistra-energy-domain-security.yml
+  href: https://artifacts.apis.io/vistra-energy/security/vistra-energy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vistra-energy-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vistra-energy/refs/heads/main/conformance/vistra-energy-conformance.yml
+  href: https://artifacts.apis.io/vistra-energy/conformance/vistra-energy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/vistra-energy-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vistra-energy/refs/heads/main/llms/vistra-energy-llms.txt
+  href: https://artifacts.apis.io/vistra-energy/llms/vistra-energy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/vistra-energy-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vistra-energy/refs/heads/main/well-known/vistra-energy-well-known.yml
+  href: https://artifacts.apis.io/vistra-energy/well-known/vistra-energy-well-known.yml
   title: ''
   type: DiscoveryProbe
   url: well-known/vistra-energy-well-known.yml
@@ -175,12 +178,12 @@ overview: 'Vistra is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Vistra''s developer surface includes engineering blog, documentation, and 28 more developer resources.'
-random_paper: 18
+random_paper: 16
 score:
   band: emerging
   composite: 12.7
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -210,14 +213,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 15.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/vistra-energy/refs/heads/main/screenshots/vistra-energy-2026-09-02T170122.png
+screenshot: https://apis.io/screenshots/vistra-energy/vistra-energy-2026-09-02T170122.png
 security:
 - kind: domain-security
   name: Vistra Energy Domain Security

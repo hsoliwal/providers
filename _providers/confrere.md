@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -54,11 +57,8 @@ arazzos:
 - description: Mint a single-use room URL for a participant, then end the session by invalidating the room.
   name: Confrere — start and end a video session
   slug: confrere-video-session
-artifact_total: 9
+artifact_total: 10
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Room API
   slug: open-confrere-room-api
@@ -67,7 +67,7 @@ collections:
   slug: open-confrere-token-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/overlays/confrere-video-overlay.yaml
+  href: https://artifacts.apis.io/confrere/overlays/confrere-video-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/confrere-video-overlay.yaml
@@ -120,62 +120,62 @@ common:
   type: StatusPage
   url: https://status.confrere.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/authentication/confrere-authentication.yml
+  href: https://artifacts.apis.io/confrere/authentication/confrere-authentication.yml
   title: ''
   type: Authentication
   url: authentication/confrere-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/conventions/confrere-conventions.yml
+  href: https://artifacts.apis.io/confrere/conventions/confrere-conventions.yml
   title: ''
   type: Conventions
   url: conventions/confrere-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/errors/confrere-problem-types.yml
+  href: https://artifacts.apis.io/confrere/errors/confrere-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/confrere-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/lifecycle/confrere-lifecycle.yml
+  href: https://artifacts.apis.io/confrere/lifecycle/confrere-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/confrere-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/conformance/confrere-conformance.yml
+  href: https://artifacts.apis.io/confrere/conformance/confrere-conformance.yml
   title: ''
   type: Conformance
   url: conformance/confrere-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/data-model/confrere-data-model.yml
+  href: https://artifacts.apis.io/confrere/data-model/confrere-data-model.yml
   title: ''
   type: DataModel
   url: data-model/confrere-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/mcp/confrere-mcp.yml
+  href: https://artifacts.apis.io/confrere/mcp/confrere-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/confrere-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/llms/confrere-llms.txt
+  href: https://artifacts.apis.io/confrere/llms/confrere-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/confrere-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/confrere/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/arazzo/confrere-video-session.yml
+  href: https://artifacts.apis.io/confrere/arazzo/confrere-video-session.yml
   title: ''
   type: Arazzo
   url: arazzo/confrere-video-session.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/agentic-access/confrere-agentic-access.yml
+  href: https://artifacts.apis.io/confrere/agentic-access/confrere-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/confrere-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/security/confrere-domain-security.yml
+  href: https://artifacts.apis.io/confrere/security/confrere-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/confrere-domain-security.yml
@@ -190,27 +190,43 @@ network: true
 overview: 'Confrere publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Room API and Token API. Tagged areas include Company, Video, Video Conferencing, Communications, and Healthcare.
 
 
+  The Confrere catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Confrere''s developer surface includes documentation, API reference, pricing, signup flow, support, engineering blog, authentication, and 18 more developer resources.'
-random_paper: 16
+random_paper: 12
+rules:
+- authorship: generated
+  effective_rule_count: 74
+  extends:
+  - spectral:oas
+  name: Confrere API Rules
+  rule_count: 33
+  severity_counts:
+    error: 31
+    hint: 0
+    info: 1
+    warn: 1
+  slug: confrere-rules
 score:
   band: thin
-  composite: 36.7
+  composite: 38.3
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 32.0
+    artifact_dirs: 22
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 39.8
     developer_ergonomics: 47.0
     discoverability: 64.3
     operational_transparency: 7.9
-  previous_composite: 36.6
+  previous_composite: 38.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -227,13 +243,13 @@ score:
     regime: Health
     regime_id: health
     score: 19.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/confrere/refs/heads/main/screenshots/confrere-2026-07-25T210253.png
+screenshot: https://apis.io/screenshots/confrere/confrere-2026-07-25T210253.png
 security:
 - kind: authentication
   name: Confrere Authentication
@@ -243,6 +259,10 @@ security:
   name: Confrere Domain Security
   slug: confrere-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC
+skill_count: 1
+skills:
+- name: Embed a Confrere video call
+  slug: confrere-embed-video-call
 slug: confrere
 tags:
 - Company

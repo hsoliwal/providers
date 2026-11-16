@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -77,9 +84,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Pomelo Authentication API
   slug: open-pomelo-authentication-api
 - collection_type: open
@@ -106,22 +110,22 @@ common:
   type: Blog
   url: https://www.pomelo.la/blog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pomelo/refs/heads/main/agentic-access/pomelo-agentic-access.yml
+  href: https://artifacts.apis.io/pomelo/agentic-access/pomelo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pomelo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pomelo/refs/heads/main/security/pomelo-domain-security.yml
+  href: https://artifacts.apis.io/pomelo/security/pomelo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pomelo-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pomelo/refs/heads/main/authentication/pomelo-authentication.yml
+  href: https://artifacts.apis.io/pomelo/authentication/pomelo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pomelo-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pomelo/refs/heads/main/scopes/pomelo-scopes.yml
+  href: https://artifacts.apis.io/pomelo/scopes/pomelo-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/pomelo-scopes.yml
@@ -142,17 +146,17 @@ common:
   type: Documentation
   url: https://developers.pomelo.la
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pomelo/refs/heads/main/plans/pomelo-plans-pricing.yml
+  href: https://artifacts.apis.io/pomelo/plans/pomelo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pomelo-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pomelo/refs/heads/main/rate-limits/pomelo-rate-limits.yml
+  href: https://artifacts.apis.io/pomelo/rate-limits/pomelo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pomelo-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pomelo/refs/heads/main/finops/pomelo-finops.yml
+  href: https://artifacts.apis.io/pomelo/finops/pomelo-finops.yml
   title: ''
   type: FinOps
   url: finops/pomelo-finops.yml
@@ -175,16 +179,32 @@ network: true
 overview: 'Pomelo publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Card Accounts API, Cards API, and 3 more. Tagged areas include Fintech, Card Issuing, Embedded Finance, Payments, and Latin America.
 
 
+  The Pomelo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Pomelo''s developer surface includes engineering blog, authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Pomelo Plans Pricing
   plan_count: 2
   slug: pomelo-plans-pricing
-random_paper: 14
+random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Pomelo Rate Limits
   slug: pomelo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Pomelo API Rules
+  rule_count: 61
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 1
+    warn: 2
+  slug: pomelo-rules
 scopes:
 - name: Pomelo Scopes
   scope_count: 0
@@ -192,18 +212,18 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 26.2
+  composite: 27.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 42.0
+    artifact_dirs: 17
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.5
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.8
     developer_ergonomics: 32.1
     discoverability: 66.1
@@ -213,7 +233,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 32.7
+  previous_composite: 27.8
   provenance:
     agentic_access: derived
     contracts:
@@ -227,13 +247,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pomelo/refs/heads/main/screenshots/pomelo-2026-09-02T151717.png
+screenshot: https://apis.io/screenshots/pomelo/pomelo-2026-09-02T151717.png
 security:
 - kind: authentication
   name: Pomelo Authentication

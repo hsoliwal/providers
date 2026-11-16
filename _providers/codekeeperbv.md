@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid · Self-serve signup
+  onboarding: self-serve
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,37 +38,37 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/codekeeperbv/refs/heads/main/plans/codekeeperbv-plans-pricing.yml
+  href: https://artifacts.apis.io/codekeeperbv/plans/codekeeperbv-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/codekeeperbv-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codekeeperbv/refs/heads/main/authentication/codekeeperbv-authentication.yml
+  href: https://artifacts.apis.io/codekeeperbv/authentication/codekeeperbv-authentication.yml
   title: ''
   type: Authentication
   url: authentication/codekeeperbv-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codekeeperbv/refs/heads/main/conformance/codekeeperbv-conformance.yml
+  href: https://artifacts.apis.io/codekeeperbv/conformance/codekeeperbv-conformance.yml
   title: ''
   type: Conformance
   url: conformance/codekeeperbv-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codekeeperbv/refs/heads/main/llms/codekeeperbv-llms.txt
+  href: https://artifacts.apis.io/codekeeperbv/llms/codekeeperbv-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/codekeeperbv-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/codekeeperbv/refs/heads/main/hosts/codekeeperbv-hosts.yml
+  href: https://artifacts.apis.io/codekeeperbv/hosts/codekeeperbv-hosts.yml
   title: ''
   type: Hosts
   url: hosts/codekeeperbv-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/codekeeperbv/refs/heads/main/vendors/codekeeperbv-vendors.yml
+  href: https://artifacts.apis.io/codekeeperbv/vendors/codekeeperbv-vendors.yml
   title: ''
   type: Vendors
   url: vendors/codekeeperbv-vendors.yml
@@ -78,7 +93,7 @@ common:
   type: Pricing
   url: https://codekeeper.co/pricing
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codekeeperbv/refs/heads/main/security/codekeeperbv-domain-security.yml
+  href: https://artifacts.apis.io/codekeeperbv/security/codekeeperbv-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/codekeeperbv-domain-security.yml
@@ -109,24 +124,26 @@ plans:
 - name: Codekeeperbv Plans Pricing
   plan_count: 6
   slug: codekeeperbv-plans-pricing
-random_paper: 9
+random_paper: 15
 score:
-  band: thin
-  composite: 26.8
+  band: emerging
+  composite: 21.4
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 12.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.4
   facets:
-    access_clarity: 71.1
+    access_clarity: 51.3
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 16.7
+    developer_ergonomics: 14.3
     discoverability: 51.8
     operational_transparency: 0.0
+  previous_composite: 26.8
   provenance:
     conformance: first-party
   regulatory:
@@ -134,13 +151,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/codekeeperbv/codekeeperbv-2026-11-03T124724.png
 security:
 - kind: authentication
   name: Codekeeperbv Authentication

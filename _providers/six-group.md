@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.0
-  scored_at: '2026-10-17'
+  score: 41.6
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
 - description: Single API onto the SIX financial data universe - real-time, intraday, end-of-day, and historical pricing across asset classes, reference data, corporate actions, tax, and ESG datasets from 900+ price
@@ -86,15 +94,12 @@ apis:
   description: '**Bankmaster API** All public REST endpoints of the bank master data are located here, such as the bank master data as JSON and downloadable files.'
   name: SIX Bank Master API
   slug: six-group-bank-master-api
-artifact_total: 36
+artifact_total: 39
 asyncapis:
 - description: ''
   name: Six Group Debix Push Webhooks
   slug: six-group-debix-push-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: 'debiX Auth Provider API: Provider-to-SIX 3DS API'
   slug: open-six-group-3ds-api
@@ -165,17 +170,17 @@ common:
   type: BlogRSS
   url: https://www.six-group.com/en/blog.rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/capabilities/six-group-capability-edges.yml
+  href: https://artifacts.apis.io/six-group/capabilities/six-group-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/six-group-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/security/six-group-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/six-group/security/six-group-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/six-group-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/security/six-group-domain-security.yml
+  href: https://artifacts.apis.io/six-group/security/six-group-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/six-group-domain-security.yml
@@ -216,57 +221,57 @@ common:
   type: Support
   url: https://www.six-group.com/en/contacts.html
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/packages/six-group-packages.yml
+  href: https://artifacts.apis.io/six-group/packages/six-group-packages.yml
   title: ''
   type: Packages
   url: packages/six-group-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/components/six-group-components.yml
+  href: https://artifacts.apis.io/six-group/components/six-group-components.yml
   title: ''
   type: Components
   url: components/six-group-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/well-known/six-group-well-known.yml
+  href: https://artifacts.apis.io/six-group/well-known/six-group-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/six-group-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/well-known/six-group-security.txt
+  href: https://artifacts.apis.io/six-group/well-known/six-group-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/six-group-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/mcp/six-group-mcp.yml
+  href: https://artifacts.apis.io/six-group/mcp/six-group-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/six-group-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/llms/six-group-llms.txt
+  href: https://artifacts.apis.io/six-group/llms/six-group-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/six-group-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/conformance/six-group-conformance.yml
+  href: https://artifacts.apis.io/six-group/conformance/six-group-conformance.yml
   title: ''
   type: Conformance
   url: conformance/six-group-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/errors/six-group-problem-types.yml
+  href: https://artifacts.apis.io/six-group/errors/six-group-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/six-group-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/lifecycle/six-group-lifecycle.yml
+  href: https://artifacts.apis.io/six-group/lifecycle/six-group-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/six-group-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/lifecycle/six-group-lifecycle.yml
+  href: https://artifacts.apis.io/six-group/lifecycle/six-group-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/six-group-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/authentication/six-group-authentication.yml
+  href: https://artifacts.apis.io/six-group/authentication/six-group-authentication.yml
   title: ''
   type: Authentication
   url: authentication/six-group-authentication.yml
@@ -275,32 +280,32 @@ common:
   type: Security
   url: https://hackerone.com/six-group
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/sandbox/six-group-sandbox.yml
+  href: https://artifacts.apis.io/six-group/sandbox/six-group-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/six-group-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/conventions/six-group-conventions.yml
+  href: https://artifacts.apis.io/six-group/conventions/six-group-conventions.yml
   title: ''
   type: Conventions
   url: conventions/six-group-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/changelog/six-group-changelog.yml
+  href: https://artifacts.apis.io/six-group/changelog/six-group-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/six-group-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/data-model/six-group-data-model.yml
+  href: https://artifacts.apis.io/six-group/data-model/six-group-data-model.yml
   title: ''
   type: DataModel
   url: data-model/six-group-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/asyncapi/six-group-debix-push-webhooks.yml
+  href: https://artifacts.apis.io/six-group/asyncapi/six-group-debix-push-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/six-group-debix-push-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/six-group/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -335,25 +340,38 @@ network: true
 overview: 'SIX publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including bLink API, Debi X API, debiX Auth Provider API, and 8 more. Tagged areas include Finance, Market Data, Stocks, Reference Data, and Corporate Actions.
 
 
-  The SIX catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The SIX catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   SIX''s developer surface includes engineering blog, developer portal, documentation, support, authentication, sandbox, changelog, and 30 more developer resources.'
-random_paper: 18
+random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: SIX API Rules
+  rule_count: 59
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 5
+    warn: 13
+  slug: six-group-rules
 score:
   band: developing
-  composite: 51.2
+  composite: 52.8
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 35.0
+    artifact_dirs: 27
+    catalog_earned: 39.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 55.1
     developer_ergonomics: 70.8
     discoverability: 69.6
@@ -366,7 +384,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 51.1
+  previous_composite: 52.8
   provenance:
     conformance: first-party
     contracts:
@@ -382,13 +400,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 34.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/six-group/refs/heads/main/screenshots/six-group-2026-07-22T202623.png
+screenshot: https://apis.io/screenshots/six-group/six-group-2026-07-22T202623.png
 security:
 - kind: authentication
   name: Six Group Authentication
@@ -402,6 +420,14 @@ security:
   name: Six Group Vulnerability Disclosure
   slug: six-group-vulnerability-disclosure
   summary_line: Hackerone · security.txt · contact published
+skill_count: 3
+skills:
+- name: Order and manage a debiX debit card
+  slug: six-group-debix-card-issuance
+- name: Check Swiss interbank clearing status and clearing days
+  slug: six-group-sic-operational-check
+- name: Look up Swiss bank master and IBAN data
+  slug: six-group-swiss-bank-lookup
 slug: six-group
 tags:
 - Finance

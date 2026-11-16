@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Miter exposes a REST API used to build custom integrations between the Miter HCM platform and construction ERPs, accounting, and workforce systems — syncing projects, cost codes, accounts, employees, '
@@ -41,12 +45,12 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/miter/refs/heads/main/security/miter-trust-center.yml
+  href: https://artifacts.apis.io/miter/security/miter-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/miter-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/miter/refs/heads/main/security/miter-domain-security.yml
+  href: https://artifacts.apis.io/miter/security/miter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/miter-domain-security.yml
@@ -63,12 +67,12 @@ common:
   type: StatusPage
   url: https://status.miter.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/miter/refs/heads/main/lifecycle/miter-lifecycle.yml
+  href: https://artifacts.apis.io/miter/lifecycle/miter-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/miter-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/miter/refs/heads/main/llms/miter-llms.txt
+  href: https://artifacts.apis.io/miter/llms/miter-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/miter-llms.txt
@@ -136,14 +140,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/miter/refs/heads/main/screenshots/miter-2026-08-07T183806.png
+screenshot: https://apis.io/screenshots/miter/miter-2026-08-07T183806.png
 security:
 - kind: domain-security
   name: Miter Domain Security

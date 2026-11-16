@@ -26,16 +26,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.3
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 22.2
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - description: 'Open-source gRPC geocoding and timezone-lookup service Rentberry built and runs for its own property search, with published proto3 definitions and PHP client bindings on Packagist. Two services: Geoco'
   name: Rentberry Geocoder (gRPC)
@@ -265,11 +268,8 @@ apis:
   description: OAuth
   name: Rentberry O Auth API
   slug: rentberry-oauth-api
-artifact_total: 94
+artifact_total: 100
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Rentberry Applications API
   slug: open-rentberry-applications-api
@@ -407,7 +407,7 @@ collections:
   slug: open-rentberry-virtual-tours-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/capabilities/rentberry-capability-edges.yml
+  href: https://artifacts.apis.io/rentberry/capabilities/rentberry-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/rentberry-capability-edges.yml
@@ -420,7 +420,7 @@ common:
   type: Releases
   url: https://github.com/Rentberry/geocoder/releases
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/mcp/rentberry-mcp.yml
+  href: https://artifacts.apis.io/rentberry/mcp/rentberry-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/rentberry-mcp.yml
@@ -489,77 +489,77 @@ common:
   type: Investors
   url: https://rentberry.com/investors
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/openapi/_original/rentberry-openapi.yml
+  href: https://artifacts.apis.io/rentberry/openapi/_original/rentberry-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/rentberry-openapi.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/grpc/rentberry-geocoder.proto
+  href: https://artifacts.apis.io/rentberry/grpc/rentberry-geocoder.proto
   title: ''
   type: Protobuf
   url: grpc/rentberry-geocoder.proto
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/authentication/rentberry-authentication.yml
+  href: https://artifacts.apis.io/rentberry/authentication/rentberry-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rentberry-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/conventions/rentberry-conventions.yml
+  href: https://artifacts.apis.io/rentberry/conventions/rentberry-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rentberry-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/errors/rentberry-problem-types.yml
+  href: https://artifacts.apis.io/rentberry/errors/rentberry-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/rentberry-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/data-model/rentberry-data-model.yml
+  href: https://artifacts.apis.io/rentberry/data-model/rentberry-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rentberry-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/lifecycle/rentberry-lifecycle.yml
+  href: https://artifacts.apis.io/rentberry/lifecycle/rentberry-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rentberry-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/conformance/rentberry-conformance.yml
+  href: https://artifacts.apis.io/rentberry/conformance/rentberry-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rentberry-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/overlays/rentberry-openapi-overlay.yaml
+  href: https://artifacts.apis.io/rentberry/overlays/rentberry-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rentberry-openapi-overlay.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/packages/rentberry-packages.yml
+  href: https://artifacts.apis.io/rentberry/packages/rentberry-packages.yml
   title: ''
   type: Packages
   url: packages/rentberry-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/well-known/rentberry-well-known.yml
+  href: https://artifacts.apis.io/rentberry/well-known/rentberry-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rentberry-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/llms/rentberry-llms.txt
+  href: https://artifacts.apis.io/rentberry/llms/rentberry-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rentberry-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/security/rentberry-domain-security.yml
+  href: https://artifacts.apis.io/rentberry/security/rentberry-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rentberry-domain-security.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/sandbox/rentberry-sandbox.yml
+  href: https://artifacts.apis.io/rentberry/sandbox/rentberry-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/rentberry-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rentberry/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -574,22 +574,38 @@ network: true
 overview: 'Rentberry publishes 46 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applications API, Auth API, Breadcrumbs API, and 43 more. Tagged areas include Real Estate, PropTech, Rentals, Rental Marketplace, and Property Management.
 
 
+  The Rentberry catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Rentberry''s developer surface includes API reference, documentation, support, engineering blog, pricing, signup flow, authentication, and 28 more developer resources.'
-random_paper: 21
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: Rentberry API Rules
+  rule_count: 44
+  severity_counts:
+    error: 25
+    hint: 0
+    info: 3
+    warn: 16
+  slug: rentberry-rules
 score:
   band: developing
-  composite: 42.7
+  composite: 44.2
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 40.3
     developer_ergonomics: 54.2
     discoverability: 66.1
@@ -604,7 +620,7 @@ score:
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 42.6
+  previous_composite: 44.2
   provenance:
     conformance: derived
     contracts:
@@ -620,13 +636,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 50.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rentberry/refs/heads/main/screenshots/rentberry-2026-09-02T153459.png
+screenshot: https://apis.io/screenshots/rentberry/rentberry-2026-09-02T153459.png
 security:
 - kind: authentication
   name: Rentberry Authentication
@@ -636,6 +652,20 @@ security:
   name: Rentberry Domain Security
   slug: rentberry-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 6
+skills:
+- name: Apply for a rental on Rentberry
+  slug: rentberry-apply-for-a-rental
+- name: Create and e-sign a Rentberry rental contract
+  slug: rentberry-contract-and-esign
+- name: List a property on Rentberry
+  slug: rentberry-list-a-property
+- name: Collect rent on Rentberry
+  slug: rentberry-rent-collection
+- name: Screen a tenant on Rentberry
+  slug: rentberry-screen-a-tenant
+- name: Search Rentberry listings and send an inquiry
+  slug: rentberry-search-and-inquire
 slug: rentberry
 tags:
 - Real Estate

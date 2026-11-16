@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -55,11 +61,8 @@ apis:
   description: Search for movies and series by title.
   name: The Open Movie Database Search API
   slug: the-open-movie-database-search-api
-artifact_total: 18
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: The Open Movie Database Movies API
   slug: open-the-open-movie-database-movies-api
@@ -71,32 +74,32 @@ collections:
   slug: open-the-open-movie-database
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/the-open-movie-database/refs/heads/main/plans/the-open-movie-database-plans-pricing.yml
+  href: https://artifacts.apis.io/the-open-movie-database/plans/the-open-movie-database-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/the-open-movie-database-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/the-open-movie-database/refs/heads/main/rate-limits/the-open-movie-database-rate-limits.yml
+  href: https://artifacts.apis.io/the-open-movie-database/rate-limits/the-open-movie-database-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/the-open-movie-database-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/the-open-movie-database/refs/heads/main/finops/the-open-movie-database-finops.yml
+  href: https://artifacts.apis.io/the-open-movie-database/finops/the-open-movie-database-finops.yml
   title: ''
   type: FinOps
   url: finops/the-open-movie-database-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/the-open-movie-database/refs/heads/main/agentic-access/the-open-movie-database-agentic-access.yml
+  href: https://artifacts.apis.io/the-open-movie-database/agentic-access/the-open-movie-database-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/the-open-movie-database-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/the-open-movie-database/refs/heads/main/security/the-open-movie-database-domain-security.yml
+  href: https://artifacts.apis.io/the-open-movie-database/security/the-open-movie-database-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/the-open-movie-database-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/the-open-movie-database/refs/heads/main/authentication/the-open-movie-database-authentication.yml
+  href: https://artifacts.apis.io/the-open-movie-database/authentication/the-open-movie-database-authentication.yml
   title: ''
   type: Authentication
   url: authentication/the-open-movie-database-authentication.yml
@@ -120,6 +123,10 @@ common:
   title: ''
   type: TermsOfService
   url: https://www.omdbapi.com/legal.htm
+- group: company
+  title: ''
+  type: Website
+  url: http://www.omdbapi.com/
 created: '2025-03-01'
 description: The OMDb API is a RESTful web service to obtain movie, series, and episode information. All content and images on the site are contributed and maintained by users. Access movie and TV metadata including title, year, genre, director, cast, plot, ratings, and IMDb data. Search by title or look up by IMDb ID. Requires a free API key obtained at omdbapi.com/apikey.aspx.
 examples:
@@ -130,7 +137,7 @@ finops:
 - has_sources: false
   method: generated
   name: The Open Movie Database Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: the-open-movie-database-finops
   template: true
@@ -159,12 +166,12 @@ overview: 'The Open Movie Database publishes 2 API contracts indexed on the [API
   The The Open Movie Database catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  The Open Movie Database''s developer surface includes authentication, documentation, signup flow, and 8 more developer resources.'
+  The Open Movie Database''s developer surface includes authentication, documentation, signup flow, and 9 more developer resources.'
 plans:
 - name: The Open Movie Database Plans Pricing
   plan_count: 3
   slug: the-open-movie-database-plans-pricing
-random_paper: 11
+random_paper: 23
 rate_limits:
 - limit_count: 5
   name: The Open Movie Database Rate Limits
@@ -196,13 +203,13 @@ score:
   band: thin
   composite: 37.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 64.2
     catalog_earned_first_party: 0.0
     catalog_gap: 50.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 31.6
     contract_governance: 23.5
@@ -210,7 +217,7 @@ score:
     developer_ergonomics: 21.4
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 39.2
+  previous_composite: 37.6
   provenance:
     agentic_access: derived
     contracts:
@@ -224,14 +231,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/the-open-movie-database/refs/heads/main/screenshots/the-open-movie-database-2026-06-20T195233.png
+screenshot: https://apis.io/screenshots/the-open-movie-database/the-open-movie-database-2026-06-20T195233.png
 security:
 - kind: authentication
   name: The Open Movie Database Authentication
@@ -248,5 +255,7 @@ tags:
 - Television
 - IMDb
 - Metadata
+- Video
+- Public APIs
 website: https://www.omdbapi.com/
 ---

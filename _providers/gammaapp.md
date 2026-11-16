@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The Gamma Public API generates presentations, documents, websites, and social posts from text. Everything runs asynchronously: create a generation, poll for status, and retrieve the result (gammaUrl, '
@@ -102,72 +107,72 @@ common:
   type: Compliance
   url: https://trust.gamma.app
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/changelog/gammaapp-changelog.yml
+  href: https://artifacts.apis.io/gammaapp/changelog/gammaapp-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/gammaapp-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/authentication/gammaapp-authentication.yml
+  href: https://artifacts.apis.io/gammaapp/authentication/gammaapp-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gammaapp-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/scopes/gammaapp-scopes.yml
+  href: https://artifacts.apis.io/gammaapp/scopes/gammaapp-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/gammaapp-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/mcp/gammaapp-mcp.yml
+  href: https://artifacts.apis.io/gammaapp/mcp/gammaapp-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/gammaapp-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/llms/gammaapp-llms.txt
+  href: https://artifacts.apis.io/gammaapp/llms/gammaapp-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gammaapp-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/well-known/gammaapp-well-known.yml
+  href: https://artifacts.apis.io/gammaapp/well-known/gammaapp-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/gammaapp-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/packages/gammaapp-packages.yml
+  href: https://artifacts.apis.io/gammaapp/packages/gammaapp-packages.yml
   title: ''
   type: Packages
   url: packages/gammaapp-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/errors/gammaapp-error-codes.yml
+  href: https://artifacts.apis.io/gammaapp/errors/gammaapp-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/gammaapp-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/lifecycle/gammaapp-lifecycle.yml
+  href: https://artifacts.apis.io/gammaapp/lifecycle/gammaapp-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/gammaapp-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/lifecycle/gammaapp-lifecycle.yml
+  href: https://artifacts.apis.io/gammaapp/lifecycle/gammaapp-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/gammaapp-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/conventions/gammaapp-conventions.yml
+  href: https://artifacts.apis.io/gammaapp/conventions/gammaapp-conventions.yml
   title: ''
   type: Conventions
   url: conventions/gammaapp-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/data-model/gammaapp-data-model.yml
+  href: https://artifacts.apis.io/gammaapp/data-model/gammaapp-data-model.yml
   title: ''
   type: DataModel
   url: data-model/gammaapp-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/conformance/gammaapp-conformance.yml
+  href: https://artifacts.apis.io/gammaapp/conformance/gammaapp-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gammaapp-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/security/gammaapp-domain-security.yml
+  href: https://artifacts.apis.io/gammaapp/security/gammaapp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gammaapp-domain-security.yml
@@ -187,7 +192,7 @@ overview: 'Gamma.app is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Gamma.app''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 22 more developer resources.'
-random_paper: 0
+random_paper: 20
 scopes:
 - name: Gammaapp Scopes
   scope_count: 2
@@ -197,13 +202,13 @@ score:
   band: thin
   composite: 36.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
@@ -211,7 +216,7 @@ score:
     developer_ergonomics: 57.1
     discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 36.5
+  previous_composite: 36.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -227,14 +232,14 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/gammaapp/refs/heads/main/screenshots/gammaapp-2026-07-25T215431.png
+screenshot: https://apis.io/screenshots/gammaapp/gammaapp-2026-07-25T215431.png
 security:
 - kind: authentication
   name: Gammaapp Authentication

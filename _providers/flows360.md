@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,20 +27,25 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.8
-  scored_at: '2026-10-17'
+  score: 41.1
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
-- description: Integration documentation for Flows360 provides technical references and guides to implement connected workflows.
+- baseURL: https://your-metabase-instance.com
+  baseurl_source: spec
+  description: Integration documentation for Flows360 provides technical references and guides to implement connected workflows.
   name: Flows360 API
-  slug: flows360-api-2
+  slug: flows360-api
 - baseURL: https://your-metabase-instance.com
   baseurl_source: declared
   description: The Purchase Orders API from Flows360 — 1 operation(s) for purchase orders.
@@ -45,35 +61,35 @@ apis:
   description: The Suppliers API from Flows360 — 1 operation(s) for suppliers.
   name: Flows360 Suppliers API
   slug: flows360-suppliers-api
-artifact_total: 11
+artifact_total: 13
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/plans/flows360-plans-pricing.yml
+  href: https://artifacts.apis.io/flows360/plans/flows360-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/flows360-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/rules/flows360-rules.yml
+  href: https://artifacts.apis.io/flows360/rules/flows360-rules.yml
   title: ''
   type: Spectral
   url: rules/flows360-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/json-ld/flows360-context.jsonld
+  href: https://artifacts.apis.io/flows360/json-ld/flows360-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/flows360-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/vocabulary/flows360-vocabulary.yml
+  href: https://artifacts.apis.io/flows360/vocabulary/flows360-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/flows360-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/data-model/flows360-data-model.yml
+  href: https://artifacts.apis.io/flows360/data-model/flows360-data-model.yml
   title: ''
   type: DataModel
   url: data-model/flows360-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/changelog/flows360-changelog.yml
+  href: https://artifacts.apis.io/flows360/changelog/flows360-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/flows360-changelog.yml
@@ -82,22 +98,22 @@ common:
   type: Compliance
   url: https://www.flows360.co/platform/security-governance/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/conformance/flows360-conformance.yml
+  href: https://artifacts.apis.io/flows360/conformance/flows360-conformance.yml
   title: ''
   type: Conformance
   url: conformance/flows360-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/llms/flows360-llms.txt
+  href: https://artifacts.apis.io/flows360/llms/flows360-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/flows360-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/well-known/flows360-well-known.yml
+  href: https://artifacts.apis.io/flows360/well-known/flows360-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/flows360-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/hosts/flows360-hosts.yml
+  href: https://artifacts.apis.io/flows360/hosts/flows360-hosts.yml
   title: ''
   type: Hosts
   url: hosts/flows360-hosts.yml
@@ -118,12 +134,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/flows360
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/security/flows360-trust-center.yml
+  href: https://artifacts.apis.io/flows360/security/flows360-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/flows360-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flows360/refs/heads/main/security/flows360-domain-security.yml
+  href: https://artifacts.apis.io/flows360/security/flows360-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flows360-domain-security.yml
@@ -161,6 +177,14 @@ coverage:
   state: unreadable
 created: '2026-10-16'
 description: Flows360 provides a comprehensive workflow automation platform that enables businesses to design, execute, and monitor complex processes across multiple systems. The solution offers a visual builder, extensive integrations, real-time analytics, and robust security features, helping organizations streamline operations, reduce manual effort, and improve efficiency. With a focus on scalability and flexibility, Flows360 serves enterprises across various industries, delivering customizable automation capabilities and enterprise-grade support.
+finops:
+- has_sources: true
+  method: derived
+  name: Flows360 Finops
+  primary_unit: seat
+  service_category: ''
+  slug: flows360-finops
+  template: false
 image: https://www.flows360.co/wp-content/uploads/2026/03/cropped-1c.-Full-Colour-Logo-2000pxl-NoBackGround-PNG-300x88.png
 json_schemas:
 - name: PostApiSessionRequest
@@ -179,7 +203,7 @@ modified: '2026-10-16'
 name: Flows360
 nav: Providers
 network: true
-overview: 'Flows360 is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Purchase Orders API, Session API, Suppliers API, and 1 more. Tagged areas include Company, Automation, Workflows, Integration, and Software-as-a-Service.
+overview: 'Flows360 is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Purchase Orders API, Session API, and 2 more. Tagged areas include Company, Automation, Workflows, Integration, and Software-as-a-Service.
 
 
   The Flows360 catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -190,7 +214,10 @@ plans:
 - name: Flows360 Plans Pricing
   plan_count: 3
   slug: flows360-plans-pricing
-random_paper: 4
+- name: Flows360 Price Estimates
+  plan_count: 0
+  slug: flows360-price-estimates
+random_paper: 12
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -205,22 +232,24 @@ rules:
     warn: 1
   slug: flows360-rules
 score:
-  band: developing
-  composite: 41.1
+  band: thin
+  composite: 34.1
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 66.8
+    artifact_dirs: 21
+    catalog_earned: 69.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 48.3
+    catalog_gap: 45.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.6
   facets:
-    access_clarity: 78.9
+    access_clarity: 67.1
     contract_governance: 22.0
     contract_quality: 19.4
-    developer_ergonomics: 28.6
+    developer_ergonomics: 14.3
     discoverability: 69.6
-    operational_transparency: 28.9
+    operational_transparency: 22.4
+  previous_composite: 42.7
   provenance:
     conformance: derived
     contracts:
@@ -234,12 +263,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/flows360/flows360-2026-11-03T132201.png
 security:
 - kind: domain-security
   name: Flows360 Domain Security

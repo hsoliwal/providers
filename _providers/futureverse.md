@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -15,6 +15,7 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: conformant
     agent_skills: derived
@@ -29,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.3
-  scored_at: '2026-10-17'
+  score: 39.2
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Relay-compliant GraphQL API for the Asset Register — a metadata ledger that defines what an asset is, what it can do, and which environments it works in, across chains and for off-chain assets. 29 que
@@ -62,7 +66,7 @@ apis:
   description: Quest detail, public quest discovery, and point allocation.
   name: Futureverse Quests API
   slug: futureverse-quests-api
-artifact_total: 13
+artifact_total: 17
 asyncapis:
 - description: ''
   name: Futureverse Asset Register Events
@@ -93,102 +97,102 @@ common:
   type: ChangeLog
   url: https://docs.therootnetwork.com/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/changelog/futureverse-changelog.yml
+  href: https://artifacts.apis.io/futureverse/changelog/futureverse-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/futureverse-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/llms/futureverse-llms.txt
+  href: https://artifacts.apis.io/futureverse/llms/futureverse-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/futureverse-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/a2a/futureverse-a2a.yml
+  href: https://artifacts.apis.io/futureverse/a2a/futureverse-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/futureverse-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/well-known/futureverse-well-known.yml
+  href: https://artifacts.apis.io/futureverse/well-known/futureverse-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/futureverse-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/packages/futureverse-packages.yml
+  href: https://artifacts.apis.io/futureverse/packages/futureverse-packages.yml
   title: ''
   type: Packages
   url: packages/futureverse-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/packages/futureverse-packages.yml
+  href: https://artifacts.apis.io/futureverse/packages/futureverse-packages.yml
   title: ''
   type: SDKs
   url: packages/futureverse-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/components/futureverse-components.yml
+  href: https://artifacts.apis.io/futureverse/components/futureverse-components.yml
   title: ''
   type: Components
   url: components/futureverse-components.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/authentication/futureverse-authentication.yml
+  href: https://artifacts.apis.io/futureverse/authentication/futureverse-authentication.yml
   title: ''
   type: Authentication
   url: authentication/futureverse-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/scopes/futureverse-scopes.yml
+  href: https://artifacts.apis.io/futureverse/scopes/futureverse-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/futureverse-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/conventions/futureverse-conventions.yml
+  href: https://artifacts.apis.io/futureverse/conventions/futureverse-conventions.yml
   title: ''
   type: Conventions
   url: conventions/futureverse-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/conformance/futureverse-conformance.yml
+  href: https://artifacts.apis.io/futureverse/conformance/futureverse-conformance.yml
   title: ''
   type: Conformance
   url: conformance/futureverse-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/errors/futureverse-problem-types.yml
+  href: https://artifacts.apis.io/futureverse/errors/futureverse-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/futureverse-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/lifecycle/futureverse-lifecycle.yml
+  href: https://artifacts.apis.io/futureverse/lifecycle/futureverse-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/futureverse-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/data-model/futureverse-data-model.yml
+  href: https://artifacts.apis.io/futureverse/data-model/futureverse-data-model.yml
   title: ''
   type: DataModel
   url: data-model/futureverse-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/asyncapi/futureverse-asset-register-events.yml
+  href: https://artifacts.apis.io/futureverse/asyncapi/futureverse-asset-register-events.yml
   title: ''
   type: Webhooks
   url: asyncapi/futureverse-asset-register-events.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/sandbox/futureverse-sandbox.yml
+  href: https://artifacts.apis.io/futureverse/sandbox/futureverse-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/futureverse-sandbox.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/plans/futureverse-plans-pricing.yml
+  href: https://artifacts.apis.io/futureverse/plans/futureverse-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/futureverse-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/rate-limits/futureverse-rate-limits.yml
+  href: https://artifacts.apis.io/futureverse/rate-limits/futureverse-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/futureverse-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/security/futureverse-domain-security.yml
+  href: https://artifacts.apis.io/futureverse/security/futureverse-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/futureverse-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/futureverse/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -215,7 +219,7 @@ network: true
 overview: 'Futureverse publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Campaigns API, Quests API, and 4 more. Tagged areas include Blockchain, Web3, Metaverse, Digital Assets, and NFT.
 
 
-  The Futureverse catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Futureverse catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Futureverse''s developer surface includes documentation, getting-started guide, API reference, changelog, authentication, sandbox, support, and 21 more developer resources.'
@@ -223,11 +227,24 @@ plans:
 - name: Futureverse Plans Pricing
   plan_count: 0
   slug: futureverse-plans-pricing
-random_paper: 6
+random_paper: 16
 rate_limits:
 - limit_count: 0
   name: Futureverse Rate Limits
   slug: futureverse-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Futureverse API Rules
+  rule_count: 58
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 1
+  slug: futureverse-rules
 scopes:
 - name: Futureverse Scopes
   scope_count: 2
@@ -235,23 +252,23 @@ scopes:
   summary_line: 2 scopes
 score:
   band: thin
-  composite: 32.9
+  composite: 35.5
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.9
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 30.4
-    developer_ergonomics: 66.1
+    developer_ergonomics: 70.8
     discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 32.9
+  previous_composite: 34.6
   provenance:
     conformance: derived
     contracts:
@@ -267,13 +284,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/futureverse/refs/heads/main/screenshots/futureverse-2026-08-17T080945.png
+screenshot: https://apis.io/screenshots/futureverse/futureverse-2026-08-17T080945.png
 security:
 - kind: authentication
   name: Futureverse Authentication
@@ -283,6 +300,14 @@ security:
   name: Futureverse Domain Security
   slug: futureverse-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 3
+skills:
+- name: futureverse-read-asset-tree
+  slug: futureverse-read-asset-tree
+- name: futureverse-submit-asset-transaction
+  slug: futureverse-submit-asset-transaction
+- name: futureverse-subscribe-to-asset-events
+  slug: futureverse-subscribe-to-asset-events
 slug: futureverse
 tags:
 - Blockchain

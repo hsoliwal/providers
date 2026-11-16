@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -112,9 +116,6 @@ apis:
 artifact_total: 30
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Azure Cosmos DB Data Plane REST Collections API
   slug: open-azure-cosmos-db-collections-api
 - collection_type: open
@@ -162,27 +163,27 @@ common:
   type: Support
   url: https://support.microsoft.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/azure-cosmos-db/refs/heads/main/agentic-access/azure-cosmos-db-agentic-access.yml
+  href: https://artifacts.apis.io/azure-cosmos-db/agentic-access/azure-cosmos-db-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/azure-cosmos-db-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-cosmos-db/refs/heads/main/security/azure-cosmos-db-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/azure-cosmos-db/security/azure-cosmos-db-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/azure-cosmos-db-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-cosmos-db/refs/heads/main/security/azure-cosmos-db-domain-security.yml
+  href: https://artifacts.apis.io/azure-cosmos-db/security/azure-cosmos-db-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/azure-cosmos-db-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-cosmos-db/refs/heads/main/authentication/azure-cosmos-db-authentication.yml
+  href: https://artifacts.apis.io/azure-cosmos-db/authentication/azure-cosmos-db-authentication.yml
   title: ''
   type: Authentication
   url: authentication/azure-cosmos-db-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-cosmos-db/refs/heads/main/scopes/azure-cosmos-db-scopes.yml
+  href: https://artifacts.apis.io/azure-cosmos-db/scopes/azure-cosmos-db-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/azure-cosmos-db-scopes.yml
@@ -222,35 +223,51 @@ modified: '2026-05-11'
 name: Azure Cosmos DB
 nav: Providers
 network: true
-overview: 'Azure Cosmos DB publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Collections API, Databases API, Documents API, and 11 more. Tagged areas include Database, NoSQL, Document Database, Vector Database, and Globally Distributed.
+overview: 'Azure Cosmos DB publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Collections API, Databases API, Documents API, and 11 more. Tagged areas include Database, NoSQL, Document Database, Vector Search, and Globally Distributed.
+
+
+  The Azure Cosmos DB catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Azure Cosmos DB''s developer surface includes developer portal, support, authentication, documentation, pricing, signup flow, engineering blog, and 9 more developer resources.'
-random_paper: 3
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Azure Cosmos DB API Rules
+  rule_count: 56
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 1
+  slug: azure-cosmos-db-rules
 scopes:
 - name: Azure Cosmos Db Scopes
   scope_count: 1
   slug: azure-cosmos-db-scopes
   summary_line: 1 scope · clientCredentials
 score:
-  band: thin
-  composite: 37.9
+  band: developing
+  composite: 40.9
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 37.0
+    artifact_dirs: 14
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.3
     developer_ergonomics: 38.1
     discoverability: 73.2
-    operational_transparency: 2.6
-  previous_composite: 37.8
+    operational_transparency: 13.2
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     contracts:
@@ -264,13 +281,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/azure-cosmos-db/refs/heads/main/screenshots/azure-cosmos-db-2026-06-20T172847.png
+screenshot: https://apis.io/screenshots/azure-cosmos-db/azure-cosmos-db-2026-06-20T172847.png
 security:
 - kind: authentication
   name: Azure Cosmos Db Authentication
@@ -289,7 +306,7 @@ tags:
 - Database
 - NoSQL
 - Document Database
-- Vector Database
+- Vector Search
 - Globally Distributed
 - Cloud
 - Microsoft Azure

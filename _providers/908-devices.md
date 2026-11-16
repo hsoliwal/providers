@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -84,22 +97,22 @@ common:
   type: Twitter
   url: https://x.com/908devices
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/908-devices/refs/heads/main/llms/908-devices-llms.txt
+  href: https://artifacts.apis.io/908-devices/llms/908-devices-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/908-devices-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/908-devices/refs/heads/main/changelog/908-devices-changelog.yml
+  href: https://artifacts.apis.io/908-devices/changelog/908-devices-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/908-devices-changelog.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/908-devices/refs/heads/main/plans/908-devices-plans-pricing.yml
+  href: https://artifacts.apis.io/908-devices/plans/908-devices-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/908-devices-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/908-devices/refs/heads/main/security/908-devices-domain-security.yml
+  href: https://artifacts.apis.io/908-devices/security/908-devices-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/908-devices-domain-security.yml
@@ -135,12 +148,12 @@ plans:
 - name: 908 Devices Plans Pricing
   plan_count: 0
   slug: 908-devices-plans-pricing
-random_paper: 21
+random_paper: 9
 score:
   band: emerging
   composite: 13.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -161,14 +174,14 @@ score:
     regime: Health
     regime_id: health
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/908-devices/refs/heads/main/screenshots/908-devices-2026-10-11T092322.png
+screenshot: https://apis.io/screenshots/908-devices/908-devices-2026-10-11T092322.png
 security:
 - kind: domain-security
   name: 908 Devices Domain Security

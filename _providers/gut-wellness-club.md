@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,27 +36,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gut-wellness-club/refs/heads/main/security/gut-wellness-club-domain-security.yml
+  href: https://artifacts.apis.io/gut-wellness-club/security/gut-wellness-club-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gut-wellness-club-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gut-wellness-club/refs/heads/main/mcp/gut-wellness-club-mcp.yml
+  href: https://artifacts.apis.io/gut-wellness-club/mcp/gut-wellness-club-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/gut-wellness-club-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gut-wellness-club/refs/heads/main/llms/gut-wellness-club-llms.txt
+  href: https://artifacts.apis.io/gut-wellness-club/llms/gut-wellness-club-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gut-wellness-club-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gut-wellness-club/refs/heads/main/well-known/gut-wellness-club-well-known.yml
+  href: https://artifacts.apis.io/gut-wellness-club/well-known/gut-wellness-club-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/gut-wellness-club-well-known.yml
@@ -73,7 +77,7 @@ description: 'Gut Wellness Club is an India-based consumer wellness brand offeri
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gut-wellness-club.png
 layout: provider
 mcp_servers:
-- description: Remote MCP server at www.gutwellnessclub.in over HTTP; 9 tools listed.
+- description: Remote MCP server at www.gutwellnessclub.in over HTTP; 10 tools listed.
   name: Wix Site MCP (Site Visitor Assistant)
   slug: site-visitor-assistant-for-site-gut-wellness-club
 modified: '2026-07-19'
@@ -84,7 +88,7 @@ overview: 'Gut Wellness Club is profiled on the [APIs.io](https://apis.io/) netw
 
 
   Gut Wellness Club''s developer surface includes support and 6 more developer resources.'
-random_paper: 9
+random_paper: 21
 score:
   band: minimal
   composite: 8.2
@@ -95,7 +99,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
@@ -108,7 +112,7 @@ score:
     countries:
     - india
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 8.1
+  previous_composite: 8.2
   provenance:
     mcp: platform-generated
   regulatory:
@@ -117,14 +121,14 @@ score:
     regime: Health
     regime_id: health
     score: 7.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/gut-wellness-club/refs/heads/main/screenshots/gut-wellness-club-2026-07-25T220445.png
+screenshot: https://apis.io/screenshots/gut-wellness-club/gut-wellness-club-2026-07-25T220445.png
 security:
 - kind: domain-security
   name: Gut Wellness Club Domain Security

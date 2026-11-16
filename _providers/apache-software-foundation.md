@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -73,11 +77,8 @@ apis:
   description: The Podlings API from Apache Software Foundation — 2 operation(s) for podlings.
   name: Apache Software Foundation Podlings API
   slug: apache-software-foundation-podlings-api
-artifact_total: 47
+artifact_total: 46
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Apache Software Foundation Projects Committees API
   slug: open-apache-software-foundation-committees-api
@@ -110,17 +111,17 @@ collections:
   slug: open-apache-software-foundation-whimsy-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apache-software-foundation/refs/heads/main/plans/apache-software-foundation-plans-pricing.yml
+  href: https://artifacts.apis.io/apache-software-foundation/plans/apache-software-foundation-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apache-software-foundation-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apache-software-foundation/refs/heads/main/rate-limits/apache-software-foundation-rate-limits.yml
+  href: https://artifacts.apis.io/apache-software-foundation/rate-limits/apache-software-foundation-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apache-software-foundation-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apache-software-foundation/refs/heads/main/finops/apache-software-foundation-finops.yml
+  href: https://artifacts.apis.io/apache-software-foundation/finops/apache-software-foundation-finops.yml
   title: ''
   type: FinOps
   url: finops/apache-software-foundation-finops.yml
@@ -129,17 +130,17 @@ common:
   type: Website
   url: https://www.apache.org/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apache-software-foundation/refs/heads/main/agentic-access/apache-software-foundation-agentic-access.yml
+  href: https://artifacts.apis.io/apache-software-foundation/agentic-access/apache-software-foundation-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/apache-software-foundation-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-software-foundation/refs/heads/main/security/apache-software-foundation-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/apache-software-foundation/security/apache-software-foundation-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/apache-software-foundation-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-software-foundation/refs/heads/main/security/apache-software-foundation-domain-security.yml
+  href: https://artifacts.apis.io/apache-software-foundation/security/apache-software-foundation-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apache-software-foundation-domain-security.yml
@@ -164,12 +165,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/apache
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apache-software-foundation/refs/heads/main/rules/apache-software-foundation-spectral-rules.yml
+  href: https://artifacts.apis.io/apache-software-foundation/rules/apache-software-foundation-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/apache-software-foundation-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apache-software-foundation/refs/heads/main/vocabulary/apache-software-foundation-vocabulary.yaml
+  href: https://artifacts.apis.io/apache-software-foundation/vocabulary/apache-software-foundation-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/apache-software-foundation-vocabulary.yaml
@@ -177,6 +178,14 @@ common:
   title: ''
   type: TermsOfService
   url: https://www.apache.org/licenses/
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://www.apache.org/dev/
+- group: company
+  title: ''
+  type: Blog
+  url: https://news.apache.org
 created: '2025-01-01'
 description: APIs for the Apache Software Foundation (ASF), a nonprofit organization that supports the development of open-source software projects under the Apache License, providing governance, legal protection, and infrastructure for over 350 projects. The ASF exposes public APIs for project discovery, committee governance data, member information, and organizational structure through its Projects API and Whimsy Public Data API.
 examples:
@@ -204,7 +213,7 @@ finops:
 - has_sources: false
   method: generated
   name: Apache Software Foundation Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: apache-software-foundation-finops
   template: true
@@ -252,7 +261,7 @@ overview: 'Apache Software Foundation publishes 6 API contracts indexed on the [
   The Apache Software Foundation catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Apache Software Foundation''s developer surface includes developer portal, engineering blog, documentation, and 12 more developer resources.'
+  Apache Software Foundation''s developer surface includes developer portal, engineering blog, documentation, and 14 more developer resources.'
 plans:
 - name: Apache Software Foundation Plans Pricing
   plan_count: 3
@@ -288,44 +297,44 @@ rules:
   slug: apache-software-foundation-spectral-rules
 score:
   band: thin
-  composite: 32.8
+  composite: 34.2
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 58.0
     catalog_earned_first_party: 0.0
     catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.0
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 27.3
     contract_quality: 54.6
     developer_ergonomics: 21.4
     discoverability: 57.1
-    operational_transparency: 10.5
-  previous_composite: 34.8
+    operational_transparency: 21.1
+  previous_composite: 34.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 9
+      total: 16
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/apache-software-foundation/refs/heads/main/screenshots/apache-software-foundation-2026-06-20T172144.png
+screenshot: https://apis.io/screenshots/apache-software-foundation/apache-software-foundation-2026-06-20T172144.png
 security:
 - kind: domain-security
   name: Apache Software Foundation Domain Security
@@ -342,6 +351,8 @@ tags:
 - Governance
 - Project
 - Apache
+- Foundations
+- Software
 use_cases:
 - description: Discover and explore all Apache Software Foundation projects programmatically.
   name: Apache Project Discovery

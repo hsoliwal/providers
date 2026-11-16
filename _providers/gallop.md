@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 28.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -65,11 +68,8 @@ apis:
   description: The Starknet API from Gallop — 2 operation(s) for starknet.
   name: Gallop Starknet API
   slug: gallop-starknet-api
-artifact_total: 13
+artifact_total: 16
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Analytics Ethereum API
   slug: open-gallop-ethereum-api
@@ -84,7 +84,7 @@ collections:
   slug: open-gallop-starknet-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/overlays/gallop-analytics-overlay.yaml
+  href: https://artifacts.apis.io/gallop/overlays/gallop-analytics-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/gallop-analytics-overlay.yaml
@@ -121,62 +121,62 @@ common:
   type: Support
   url: mailto:support@higallop.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/llms/gallop-llms.txt
+  href: https://artifacts.apis.io/gallop/llms/gallop-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gallop-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/authentication/gallop-authentication.yml
+  href: https://artifacts.apis.io/gallop/authentication/gallop-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gallop-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/agentic-access/gallop-agentic-access.yml
+  href: https://artifacts.apis.io/gallop/agentic-access/gallop-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gallop-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/security/gallop-domain-security.yml
+  href: https://artifacts.apis.io/gallop/security/gallop-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gallop-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/conventions/gallop-conventions.yml
+  href: https://artifacts.apis.io/gallop/conventions/gallop-conventions.yml
   title: ''
   type: Conventions
   url: conventions/gallop-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/errors/gallop-problem-types.yml
+  href: https://artifacts.apis.io/gallop/errors/gallop-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/gallop-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/rate-limits/gallop-rate-limits.yml
+  href: https://artifacts.apis.io/gallop/rate-limits/gallop-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gallop-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/data-model/gallop-data-model.yml
+  href: https://artifacts.apis.io/gallop/data-model/gallop-data-model.yml
   title: ''
   type: DataModel
   url: data-model/gallop-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/lifecycle/gallop-lifecycle.yml
+  href: https://artifacts.apis.io/gallop/lifecycle/gallop-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/gallop-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/conformance/gallop-conformance.yml
+  href: https://artifacts.apis.io/gallop/conformance/gallop-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gallop-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/mcp/gallop-mcp.yml
+  href: https://artifacts.apis.io/gallop/mcp/gallop-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/gallop-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/gallop/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -191,31 +191,47 @@ network: true
 overview: 'Gallop publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ethereum API, Polygon API, Solana API, and 1 more. Tagged areas include Company, Developer Tools, NFT, Blockchain, and Web3.
 
 
+  The Gallop catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Gallop''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, authentication, and 15 more developer resources.'
-random_paper: 1
+random_paper: 15
 rate_limits:
 - limit_count: 1
   name: Gallop Rate Limits
   slug: gallop-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Gallop API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: gallop-rules
 score:
   band: thin
-  composite: 33.2
+  composite: 36.3
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 48.0
+    artifact_dirs: 19
+    catalog_earned: 52.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 67.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.4
   facets:
     access_clarity: 11.8
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.6
-    developer_ergonomics: 37.5
+    developer_ergonomics: 44.6
     discoverability: 78.6
     operational_transparency: 21.1
-  previous_composite: 33.1
+  previous_composite: 34.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -232,13 +248,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/gallop/refs/heads/main/screenshots/gallop-2026-07-25T215406.png
+screenshot: https://apis.io/screenshots/gallop/gallop-2026-07-25T215406.png
 security:
 - kind: authentication
   name: Gallop Authentication
@@ -248,6 +264,14 @@ security:
   name: Gallop Domain Security
   slug: gallop-domain-security
   summary_line: DMARC
+skill_count: 3
+skills:
+- name: Gallop collection market snapshot
+  slug: gallop-collection-market-snapshot
+- name: Gallop token rarity and appraisal
+  slug: gallop-token-rarity-and-appraisal
+- name: Gallop wallet portfolio valuation
+  slug: gallop-wallet-portfolio-valuation
 slug: gallop
 tags:
 - Company

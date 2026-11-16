@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The JSON API behind the Arbital Health adjudication platform at platform.arbitalhealth.com. Observed live and returning JSON, but every resource path answers 401 {"error":"Unauthorized"} to an anonymo
@@ -76,7 +79,7 @@ common:
   type: Twitter
   url: https://twitter.com/arbitalhealth
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arbital-health/refs/heads/main/security/arbital-health-trust-center.yml
+  href: https://artifacts.apis.io/arbital-health/security/arbital-health-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/arbital-health-trust-center.yml
@@ -89,37 +92,37 @@ common:
   type: Security
   url: https://security.arbitalhealth.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arbital-health/refs/heads/main/security/arbital-health-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/arbital-health/security/arbital-health-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/arbital-health-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arbital-health/refs/heads/main/security/arbital-health-domain-security.yml
+  href: https://artifacts.apis.io/arbital-health/security/arbital-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arbital-health-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arbital-health/refs/heads/main/well-known/arbital-health-well-known.yml
+  href: https://artifacts.apis.io/arbital-health/well-known/arbital-health-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/arbital-health-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arbital-health/refs/heads/main/authentication/arbital-health-authentication.yml
+  href: https://artifacts.apis.io/arbital-health/authentication/arbital-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/arbital-health-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arbital-health/refs/heads/main/scopes/arbital-health-scopes.yml
+  href: https://artifacts.apis.io/arbital-health/scopes/arbital-health-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/arbital-health-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arbital-health/refs/heads/main/conformance/arbital-health-conformance.yml
+  href: https://artifacts.apis.io/arbital-health/conformance/arbital-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/arbital-health-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arbital-health/refs/heads/main/llms/arbital-health-llms.txt
+  href: https://artifacts.apis.io/arbital-health/llms/arbital-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/arbital-health-llms.txt
@@ -151,7 +154,7 @@ overview: 'Arbital Health is listed with 1 API on the [APIs.io](https://apis.io/
 
 
   Arbital Health''s developer surface includes engineering blog, authentication, and 16 more developer resources.'
-random_paper: 2
+random_paper: 18
 scopes:
 - name: Arbital Health Scopes
   scope_count: 3
@@ -161,7 +164,7 @@ score:
   band: emerging
   composite: 23.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -184,14 +187,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/arbital-health/refs/heads/main/screenshots/arbital-health-2026-08-07T161614.png
+screenshot: https://apis.io/screenshots/arbital-health/arbital-health-2026-08-07T161614.png
 security:
 - kind: authentication
   name: Arbital Health Authentication

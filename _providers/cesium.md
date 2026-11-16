@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.9
-  scored_at: '2026-10-17'
+  score: 31.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Cesium ion REST API for tiling and streaming capabilities
@@ -74,75 +88,75 @@ apis:
   description: Routes related to the currently authenticated account.
   name: Cesium User API
   slug: cesium-user-api
-artifact_total: 20
+artifact_total: 22
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/rules/cesium-rules.yml
+  href: https://artifacts.apis.io/cesium/rules/cesium-rules.yml
   title: ''
   type: Spectral
   url: rules/cesium-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/json-ld/cesium-context.jsonld
+  href: https://artifacts.apis.io/cesium/json-ld/cesium-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cesium-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/vocabulary/cesium-vocabulary.yml
+  href: https://artifacts.apis.io/cesium/vocabulary/cesium-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cesium-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/conformance/cesium-conformance.yml
+  href: https://artifacts.apis.io/cesium/conformance/cesium-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cesium-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/plans/cesium-plans-pricing.yml
+  href: https://artifacts.apis.io/cesium/plans/cesium-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cesium-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/data-model/cesium-data-model.yml
+  href: https://artifacts.apis.io/cesium/data-model/cesium-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cesium-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/errors/cesium-problem-types.yml
+  href: https://artifacts.apis.io/cesium/errors/cesium-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cesium-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/llms/cesium-llms.txt
+  href: https://artifacts.apis.io/cesium/llms/cesium-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cesium-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/well-known/cesium-status-security.txt
+  href: https://artifacts.apis.io/cesium/well-known/cesium-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cesium-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/well-known/cesium-well-known.yml
+  href: https://artifacts.apis.io/cesium/well-known/cesium-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cesium-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/hosts/cesium-hosts.yml
+  href: https://artifacts.apis.io/cesium/hosts/cesium-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cesium-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/vendors/cesium-vendors.yml
+  href: https://artifacts.apis.io/cesium/vendors/cesium-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cesium-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/packages/cesium-packages.yml
+  href: https://artifacts.apis.io/cesium/packages/cesium-packages.yml
   title: ''
   type: SDKs
   url: packages/cesium-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/packages/cesium-packages.yml
+  href: https://artifacts.apis.io/cesium/packages/cesium-packages.yml
   title: ''
   type: Packages
   url: packages/cesium-packages.yml
@@ -175,7 +189,7 @@ common:
   type: Blog
   url: https://cesium.com/blog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cesium/refs/heads/main/security/cesium-domain-security.yml
+  href: https://artifacts.apis.io/cesium/security/cesium-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cesium-domain-security.yml
@@ -185,6 +199,14 @@ common:
   url: https://cesium.com/
 created: '2026-10-13'
 description: Cesium provides an open platform for 3D geospatial applications, offering tools like CesiumJS, Cesium ion, and integrations for Unity, Unreal, and Omniverse. It serves developers, enterprises, and government agencies with streaming 3D Tiles, curated global content, and AI‑enabled workflows, enabling visualization, analysis, and design of complex spatial data.
+finops:
+- has_sources: true
+  method: derived
+  name: Cesium Finops
+  primary_unit: seat
+  service_category: ''
+  slug: cesium-finops
+  template: false
 image: https://images.prismic.io/cesium/d8282fb7-4939-4a71-a4e2-08005792e788_cesium-logo-globe.jpg?auto=compress,format&rect=0,9,1172,612&w=1200&h=627
 json_schemas:
 - name: Archive Metadata
@@ -226,7 +248,10 @@ plans:
 - name: Cesium Plans Pricing
   plan_count: 6
   slug: cesium-plans-pricing
-random_paper: 8
+- name: Cesium Price Estimates
+  plan_count: 0
+  slug: cesium-price-estimates
+random_paper: 22
 rules:
 - authorship: generated
   effective_rule_count: 57
@@ -242,21 +267,23 @@ rules:
   slug: cesium-rules
 score:
   band: developing
-  composite: 42.5
+  composite: 41.2
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 74.8
+    artifact_dirs: 21
+    catalog_earned: 77.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 40.3
+    catalog_gap: 37.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.2
   facets:
-    access_clarity: 55.3
+    access_clarity: 51.3
     contract_governance: 22.0
     contract_quality: 67.6
-    developer_ergonomics: 9.5
-    discoverability: 76.8
+    developer_ergonomics: 8.3
+    discoverability: 75.0
     operational_transparency: 21.1
+  previous_composite: 45.4
   provenance:
     conformance: derived
     contracts:
@@ -271,11 +298,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cesium/cesium-2026-11-03T123809.png
 security:
 - kind: domain-security
   name: Cesium Domain Security

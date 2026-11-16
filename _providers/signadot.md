@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.4
-  scored_at: '2026-10-17'
+  score: 27.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -73,11 +77,8 @@ arazzos:
 - description: Create a sandbox, poll it until ready to read its preview endpoints, then delete it.
   name: Create and inspect a Signadot sandbox
   slug: signadot-create-and-inspect-sandbox
-artifact_total: 16
+artifact_total: 21
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Signadot Cluster API
   slug: open-signadot-cluster-api
@@ -94,13 +95,18 @@ collections:
   name: Signadot Cluster Sandboxes API
   slug: open-signadot-sandboxes-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/signadot/plans/signadot-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/signadot-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/capabilities/signadot-capability-edges.yml
+  href: https://artifacts.apis.io/signadot/capabilities/signadot-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/signadot-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/overlays/signadot-openapi-overlay.yaml
+  href: https://artifacts.apis.io/signadot/overlays/signadot-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/signadot-openapi-overlay.yaml
@@ -153,72 +159,72 @@ common:
   type: StatusPage
   url: https://status.signadot.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/changelog/signadot-changelog.yml
+  href: https://artifacts.apis.io/signadot/changelog/signadot-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/signadot-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/lifecycle/signadot-lifecycle.yml
+  href: https://artifacts.apis.io/signadot/lifecycle/signadot-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/signadot-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/packages/signadot-packages.yml
+  href: https://artifacts.apis.io/signadot/packages/signadot-packages.yml
   title: ''
   type: Packages
   url: packages/signadot-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/packages/signadot-packages.yml
+  href: https://artifacts.apis.io/signadot/packages/signadot-packages.yml
   title: ''
   type: SDKs
   url: packages/signadot-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/cli/signadot-cli.yml
+  href: https://artifacts.apis.io/signadot/cli/signadot-cli.yml
   title: ''
   type: CLI
   url: cli/signadot-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/mcp/signadot-mcp.yml
+  href: https://artifacts.apis.io/signadot/mcp/signadot-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/signadot-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/signadot/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/llms/signadot-llms.txt
+  href: https://artifacts.apis.io/signadot/llms/signadot-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/signadot-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/conformance/signadot-conformance.yml
+  href: https://artifacts.apis.io/signadot/conformance/signadot-conformance.yml
   title: ''
   type: Conformance
   url: conformance/signadot-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/conformance/signadot-conformance.yml
+  href: https://artifacts.apis.io/signadot/conformance/signadot-conformance.yml
   title: ''
   type: Compliance
   url: conformance/signadot-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/arazzo/signadot-create-and-inspect-sandbox.yml
+  href: https://artifacts.apis.io/signadot/arazzo/signadot-create-and-inspect-sandbox.yml
   title: ''
   type: Arazzo
   url: arazzo/signadot-create-and-inspect-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/agentic-access/signadot-agentic-access.yml
+  href: https://artifacts.apis.io/signadot/agentic-access/signadot-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/signadot-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/authentication/signadot-authentication.yml
+  href: https://artifacts.apis.io/signadot/authentication/signadot-authentication.yml
   title: ''
   type: Authentication
   url: authentication/signadot-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/security/signadot-domain-security.yml
+  href: https://artifacts.apis.io/signadot/security/signadot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/signadot-domain-security.yml
@@ -228,6 +234,14 @@ common:
   url: https://signadot.com/
 created: '2026-07-17'
 description: 'Signadot is a Kubernetes-native platform for validating microservices and AI-generated code changes against real dependencies before merge. Its core is environment virtualization: large numbers of lightweight ephemeral "sandboxes" spin up in seconds by routing request-level traffic to only the changed services on a shared cluster, without duplicating the whole stack. Testing capabilities — Jobs (Playwright/Cypress/k6 runners), Smart Tests (AI regression detection), and Plans (reusable validation workflows) — layer on top, and a bundled MCP server plus installable Agent Skills let coding agents (Cursor, Claude Code, Codex) provision environments and validate their own work. Signadot installs as a Kubernetes operator, integrates with service meshes and CI/CD, and exposes a REST control-plane API, a CLI, and a Go SDK.'
+finops:
+- has_sources: true
+  method: derived
+  name: Signadot Finops
+  primary_unit: add-on
+  service_category: ''
+  slug: signadot-finops
+  template: false
 image: https://www.signadot.com/images/og-image.png
 layout: provider
 mcp_servers:
@@ -241,27 +255,50 @@ network: true
 overview: 'Signadot publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Cluster API, Orgs API, ResourcePlugins API, and 2 more. Tagged areas include Company, Developer Tools, Kubernetes, Testing, and Ephemeral Environments.
 
 
-  Signadot''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 22 more developer resources.'
-random_paper: 21
+  The Signadot catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Signadot''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 23 more developer resources.'
+plans:
+- name: Signadot Plans Pricing
+  plan_count: 4
+  slug: signadot-plans-pricing
+- name: Signadot Price Estimates
+  plan_count: 0
+  slug: signadot-price-estimates
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Signadot API Rules
+  rule_count: 60
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 3
+    warn: 4
+  slug: signadot-rules
 score:
   band: strong
-  composite: 55.6
+  composite: 65.2
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 30
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 52.6
-    contract_governance: 18.2
+    access_clarity: 92.1
+    contract_governance: 31.8
     contract_quality: 50.8
     developer_ergonomics: 73.2
     discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 55.6
+  previous_composite: 65.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -278,13 +315,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/signadot/refs/heads/main/screenshots/signadot-2026-08-17T081851.png
+screenshot: https://apis.io/screenshots/signadot/signadot-2026-08-17T081851.png
 security:
 - kind: authentication
   name: Signadot Authentication
@@ -294,6 +331,12 @@ security:
   name: Signadot Domain Security
   slug: signadot-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Create a sandbox and validate a change
+  slug: signadot-create-sandbox-and-validate
+- name: Group sandboxes with a route group
+  slug: signadot-manage-routegroup
 slug: signadot
 tags:
 - Company

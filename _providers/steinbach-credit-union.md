@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,37 +38,37 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/steinbach-credit-union/refs/heads/main/security/steinbach-credit-union-domain-security.yml
+  href: https://artifacts.apis.io/steinbach-credit-union/security/steinbach-credit-union-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/steinbach-credit-union-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/steinbach-credit-union/refs/heads/main/authentication/steinbach-credit-union-authentication.yml
+  href: https://artifacts.apis.io/steinbach-credit-union/authentication/steinbach-credit-union-authentication.yml
   title: ''
   type: Authentication
   url: authentication/steinbach-credit-union-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/steinbach-credit-union/refs/heads/main/scopes/steinbach-credit-union-scopes.yml
+  href: https://artifacts.apis.io/steinbach-credit-union/scopes/steinbach-credit-union-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/steinbach-credit-union-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/steinbach-credit-union/refs/heads/main/conformance/steinbach-credit-union-conformance.yml
+  href: https://artifacts.apis.io/steinbach-credit-union/conformance/steinbach-credit-union-conformance.yml
   title: ''
   type: Conformance
   url: conformance/steinbach-credit-union-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/steinbach-credit-union/refs/heads/main/well-known/steinbach-credit-union-well-known.yml
+  href: https://artifacts.apis.io/steinbach-credit-union/well-known/steinbach-credit-union-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/steinbach-credit-union-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/steinbach-credit-union/refs/heads/main/llms/steinbach-credit-union-llms.txt
+  href: https://artifacts.apis.io/steinbach-credit-union/llms/steinbach-credit-union-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/steinbach-credit-union-llms.txt
@@ -110,7 +113,7 @@ overview: 'Steinbach Credit Union is profiled on the [APIs.io](https://apis.io/)
 
 
   Steinbach Credit Union''s developer surface includes authentication, support, documentation, and 10 more developer resources.'
-random_paper: 1
+random_paper: 15
 scopes:
 - name: Steinbach Credit Union Scopes
   scope_count: 7
@@ -150,14 +153,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 37.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/steinbach-credit-union/refs/heads/main/screenshots/steinbach-credit-union-2026-09-02T160831.png
+screenshot: https://apis.io/screenshots/steinbach-credit-union/steinbach-credit-union-2026-09-02T160831.png
 security:
 - kind: authentication
   name: Steinbach Credit Union Authentication

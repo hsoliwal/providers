@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -52,27 +66,27 @@ common:
   type: Security
   url: https://agrolend.agr.br/wp-content/uploads/2026/07/AGROLEND-CIBERSEGURANCA_FEV26.pdf
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agrolend/refs/heads/main/conformance/agrolend-conformance.yml
+  href: https://artifacts.apis.io/agrolend/conformance/agrolend-conformance.yml
   title: ''
   type: Conformance
   url: conformance/agrolend-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agrolend/refs/heads/main/security/agrolend-domain-security.yml
+  href: https://artifacts.apis.io/agrolend/security/agrolend-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/agrolend-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agrolend/refs/heads/main/llms/agrolend-llms.txt
+  href: https://artifacts.apis.io/agrolend/llms/agrolend-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/agrolend-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/agrolend/refs/heads/main/plans/agrolend-plans-pricing.yml
+  href: https://artifacts.apis.io/agrolend/plans/agrolend-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/agrolend-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/agrolend/refs/heads/main/rate-limits/agrolend-rate-limits.yml
+  href: https://artifacts.apis.io/agrolend/rate-limits/agrolend-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/agrolend-rate-limits.yml
@@ -110,7 +124,7 @@ plans:
 - name: Agrolend Plans Pricing
   plan_count: 0
   slug: agrolend-plans-pricing
-random_paper: 8
+random_paper: 4
 rate_limits:
 - limit_count: 0
   name: Agrolend Rate Limits
@@ -149,14 +163,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 12.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/agrolend/refs/heads/main/screenshots/agrolend-2026-10-11T140045.png
+screenshot: https://apis.io/screenshots/agrolend/agrolend-2026-10-11T140045.png
 security:
 - kind: domain-security
   name: Agrolend Domain Security

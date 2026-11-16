@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/security/boston-scientific-domain-security.yml
+  href: https://artifacts.apis.io/boston-scientific/security/boston-scientific-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/boston-scientific-domain-security.yml
@@ -86,62 +91,62 @@ common:
   type: PrivacyPolicy
   url: https://www.bostonscientific.com/en-US/privacy-policy.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/security/boston-scientific-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/boston-scientific/security/boston-scientific-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/boston-scientific-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/security/boston-scientific-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/boston-scientific/security/boston-scientific-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/boston-scientific-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/conformance/boston-scientific-conformance.yml
+  href: https://artifacts.apis.io/boston-scientific/conformance/boston-scientific-conformance.yml
   title: ''
   type: Compliance
   url: conformance/boston-scientific-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/conformance/boston-scientific-conformance.yml
+  href: https://artifacts.apis.io/boston-scientific/conformance/boston-scientific-conformance.yml
   title: ''
   type: Conformance
   url: conformance/boston-scientific-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/packages/boston-scientific-packages.yml
+  href: https://artifacts.apis.io/boston-scientific/packages/boston-scientific-packages.yml
   title: ''
   type: Packages
   url: packages/boston-scientific-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/components/boston-scientific-components.yml
+  href: https://artifacts.apis.io/boston-scientific/components/boston-scientific-components.yml
   title: ''
   type: Components
   url: components/boston-scientific-components.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/changelog/boston-scientific-changelog.yml
+  href: https://artifacts.apis.io/boston-scientific/changelog/boston-scientific-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/boston-scientific-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/lifecycle/boston-scientific-lifecycle.yml
+  href: https://artifacts.apis.io/boston-scientific/lifecycle/boston-scientific-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/boston-scientific-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/plans/boston-scientific-plans-pricing.yml
+  href: https://artifacts.apis.io/boston-scientific/plans/boston-scientific-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/boston-scientific-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/rate-limits/boston-scientific-rate-limits.yml
+  href: https://artifacts.apis.io/boston-scientific/rate-limits/boston-scientific-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/boston-scientific-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/conventions/boston-scientific-conventions.yml
+  href: https://artifacts.apis.io/boston-scientific/conventions/boston-scientific-conventions.yml
   title: ''
   type: Conventions
   url: conventions/boston-scientific-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/llms/boston-scientific-llms.txt
+  href: https://artifacts.apis.io/boston-scientific/llms/boston-scientific-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/boston-scientific-llms.txt
@@ -191,7 +196,7 @@ press:
 - date: ''
   title: Using AI to predict and prevent cardiac emergencies
   url: https://news.bostonscientific.com/ai-diagnostic-heart-failure-symptoms-arrythmia
-random_paper: 3
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Boston Scientific Rate Limits
@@ -200,7 +205,7 @@ score:
   band: emerging
   composite: 24.9
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -224,14 +229,14 @@ score:
     regime: Health
     regime_id: health
     score: 23.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/boston-scientific/refs/heads/main/screenshots/boston-scientific-2026-06-20T173616.png
+screenshot: https://apis.io/screenshots/boston-scientific/boston-scientific-2026-06-20T173616.png
 security:
 - kind: domain-security
   name: Boston Scientific Domain Security

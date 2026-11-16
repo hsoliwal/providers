@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API for Carepoynt platform
@@ -32,12 +45,12 @@ apis:
 artifact_total: 2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carepoynt/refs/heads/main/hosts/carepoynt-hosts.yml
+  href: https://artifacts.apis.io/carepoynt/hosts/carepoynt-hosts.yml
   title: ''
   type: Hosts
   url: hosts/carepoynt-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/carepoynt/refs/heads/main/vendors/carepoynt-vendors.yml
+  href: https://artifacts.apis.io/carepoynt/vendors/carepoynt-vendors.yml
   title: ''
   type: Vendors
   url: vendors/carepoynt-vendors.yml
@@ -58,7 +71,7 @@ common:
   type: Blog
   url: https://www.carepoynt.com/carepoynt-blog/tag/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carepoynt/refs/heads/main/security/carepoynt-domain-security.yml
+  href: https://artifacts.apis.io/carepoynt/security/carepoynt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/carepoynt-domain-security.yml
@@ -90,24 +103,26 @@ overview: 'Carepoynt is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Carepoynt''s developer surface includes engineering blog and 8 more developer resources.'
-random_paper: 13
+random_paper: 21
 score:
   band: minimal
-  composite: 10.4
+  composite: 7.5
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 10
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.9
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 2.4
-    discoverability: 58.9
+    developer_ergonomics: 1.2
+    discoverability: 58.0
     operational_transparency: 0.0
+  previous_composite: 10.4
   provenance:
     mcp: derived
   regulatory:
@@ -115,13 +130,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 7.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/carepoynt/carepoynt-2026-11-03T123336.png
 security:
 - kind: domain-security
   name: Carepoynt Domain Security

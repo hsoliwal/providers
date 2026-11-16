@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 51
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 105
   slug: inaturalist-agentic-access
   summary_line: 105 operations · 51 acting
-api_count: 2
+api_count: 1
 apis:
 - description: The next-generation iNaturalist API (v2) currently in development, designed to eventually replace v0 and v1 endpoints. Provides access to observation data with improved performance and response format
   name: iNaturalist API v2
@@ -148,11 +154,8 @@ apis:
   description: JSON for observation tiles
   name: iNaturalist UTFGrid API
   slug: inaturalist-utfgrid-api
-artifact_total: 225
+artifact_total: 224
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: iNaturalist Annotations API
   slug: open-inaturalist-annotations-api
@@ -215,17 +218,17 @@ collections:
   slug: open-inaturalist-utfgrid-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/inaturalist/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/inaturalist/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/inaturalist/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/inaturalist/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/inaturalist/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/inaturalist/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
@@ -234,17 +237,17 @@ common:
   type: Website
   url: https://www.inaturalist.org/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/inaturalist/refs/heads/main/agentic-access/inaturalist-agentic-access.yml
+  href: https://artifacts.apis.io/inaturalist/agentic-access/inaturalist-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/inaturalist-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/inaturalist/refs/heads/main/security/inaturalist-domain-security.yml
+  href: https://artifacts.apis.io/inaturalist/security/inaturalist-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/inaturalist-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/inaturalist/refs/heads/main/authentication/inaturalist-authentication.yml
+  href: https://artifacts.apis.io/inaturalist/authentication/inaturalist-authentication.yml
   title: ''
   type: Authentication
   url: authentication/inaturalist-authentication.yml
@@ -632,7 +635,7 @@ json_schemas:
   property_count: 8
   slug: annotation
 - name: AutocompleteTaxon
-  property_count: 0
+  property_count: 3
   slug: autocompletetaxon
 - name: BaseResponse
   property_count: 3
@@ -674,19 +677,19 @@ json_schemas:
   property_count: 21
   slug: identification
 - name: IdentificationsResponse
-  property_count: 0
+  property_count: 1
   slug: identificationsresponse
 - name: Message
   property_count: 9
   slug: message
 - name: MessagesResponse
-  property_count: 0
+  property_count: 1
   slug: messagesresponse
 - name: ModeratorAction
   property_count: 6
   slug: moderatoraction
 - name: NearbyPlacesResponse
-  property_count: 0
+  property_count: 1
   slug: nearbyplacesresponse
 - name: NonOwnerIdentification
   property_count: 5
@@ -698,16 +701,16 @@ json_schemas:
   property_count: 4
   slug: observationphoto
 - name: ObservationsObserversResponse
-  property_count: 0
+  property_count: 1
   slug: observationsobserversresponse
 - name: ObservationsResponse
-  property_count: 0
+  property_count: 1
   slug: observationsresponse
 - name: ObservationsShowResponse
-  property_count: 0
+  property_count: 1
   slug: observationsshowresponse
 - name: ObservationTaxon
-  property_count: 0
+  property_count: 8
   slug: observationtaxon
 - name: Outlink
   property_count: 3
@@ -716,7 +719,7 @@ json_schemas:
   property_count: 4
   slug: photo
 - name: PlacesResponse
-  property_count: 0
+  property_count: 1
   slug: placesresponse
 - name: PointGeoJson
   property_count: 2
@@ -779,13 +782,13 @@ json_schemas:
   property_count: 8
   slug: projectmember
 - name: ProjectMembersResponse
-  property_count: 0
+  property_count: 1
   slug: projectmembersresponse
 - name: ProjectObservation
   property_count: 6
   slug: projectobservation
 - name: ProjectsResponse
-  property_count: 0
+  property_count: 1
   slug: projectsresponse
 - name: PutFlag
   property_count: 1
@@ -797,31 +800,31 @@ json_schemas:
   property_count: 6
   slug: rawconservationstatus
 - name: ShowObservation
-  property_count: 0
+  property_count: 2
   slug: showobservation
 - name: ShowPlace
-  property_count: 0
+  property_count: 7
   slug: showplace
 - name: ShowTaxon
-  property_count: 0
+  property_count: 8
   slug: showtaxon
 - name: Sound
   property_count: 8
   slug: sound
 - name: SpeciesCountsResponse
-  property_count: 0
+  property_count: 1
   slug: speciescountsresponse
 - name: TaxaAutocompleteResponse
-  property_count: 0
+  property_count: 1
   slug: taxaautocompleteresponse
 - name: TaxaShowResponse
-  property_count: 0
+  property_count: 1
   slug: taxashowresponse
 - name: TaxonConservationStatus
-  property_count: 0
+  property_count: 1
   slug: taxonconservationstatus
 - name: TaxonPhoto
-  property_count: 0
+  property_count: 2
   slug: taxonphoto
 - name: UpdateProjectObservation
   property_count: 1
@@ -830,7 +833,7 @@ json_schemas:
   property_count: 15
   slug: user
 - name: UserCountsResponse
-  property_count: 0
+  property_count: 1
   slug: usercountsresponse
 - name: UTFGridResponse
   property_count: 3
@@ -859,7 +862,7 @@ plans:
 - name: Plans
   plan_count: 1
   slug: plans
-random_paper: 12
+random_paper: 0
 rate_limits:
 - limit_count: 1
   name: Rate Limits
@@ -878,29 +881,29 @@ rules:
   slug: inaturalist-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 37.1
+  composite: 38.2
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 52.3
     catalog_earned_first_party: 0.0
     catalog_gap: 62.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 1.1
   facets:
     access_clarity: 32.9
     contract_governance: 9.8
-    contract_quality: 48.3
+    contract_quality: 52.8
     developer_ergonomics: 42.9
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 43.1
+  previous_composite: 37.1
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 20
   regulatory:
     applies: true
@@ -908,13 +911,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/inaturalist/refs/heads/main/screenshots/inaturalist-2026-06-20T183309.png
+screenshot: https://apis.io/screenshots/inaturalist/inaturalist-2026-06-20T183309.png
 security:
 - kind: authentication
   name: Inaturalist Authentication

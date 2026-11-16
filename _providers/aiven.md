@@ -1,14 +1,19 @@
 ---
 access_model:
   confidence: high
-  label: Freemium (free trial) · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
   public: false
   source:
   - plans
   - authentication
-  trial: true
+  - rate-limits
+  - security
+  trial: false
   try_now: true
 agent_readiness:
   band: agent-ready
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.3
-  scored_at: '2026-10-17'
+  score: 30.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 244
   human_in_the_loop: 14
@@ -214,11 +222,33 @@ apis:
   description: The Users API from Aiven — 31 operation(s) for users.
   name: Aiven Users API
   slug: aiven-users-api
-artifact_total: 93
+- baseURL: https://api.aiven.io/v1
+  baseurl_source: declared
+  description: The AIGateway API from Aiven — 4 operation(s) for aigateway.
+  name: Aiven AI Gateway API
+  slug: aiven-aigateway-api
+- baseURL: https://api.aiven.io/v1
+  baseurl_source: declared
+  description: The Kafka_Connect_Custom_Plugins API from Aiven — 12 operation(s) for kafka_connect_custom_plugins.
+  name: Aiven Kafka Connect Custom Plugins API
+  slug: aiven-kafka-connect-custom-plugins-api
+- baseURL: https://api.aiven.io/v1
+  baseurl_source: declared
+  description: The OAuth2 API from Aiven — 1 operation(s) for oauth2.
+  name: Aiven O Auth2 API
+  slug: aiven-oauth2-api
+- baseURL: https://api.aiven.io/v1
+  baseurl_source: declared
+  description: The Service:_Application API from Aiven — 1 operation(s) for service:_application.
+  name: 'Aiven Service: Application API'
+  slug: aiven-service-application-api
+- baseURL: https://api.aiven.io/v1
+  baseurl_source: declared
+  description: The Service:_Managed_Agents API from Aiven — 8 operation(s) for service:_managed_agents.
+  name: 'Aiven Service: Managed Agents API'
+  slug: aiven-service-managed-agents-api
+artifact_total: 97
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Aiven API Documentation Account API
   slug: open-aiven-account-api
@@ -323,32 +353,32 @@ collections:
   slug: open-aiven-users-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/capabilities/aiven-capability-edges.yml
+  href: https://artifacts.apis.io/aiven/capabilities/aiven-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/aiven-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/agentic-access/aiven-agentic-access.yml
+  href: https://artifacts.apis.io/aiven/agentic-access/aiven-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/aiven-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/security/aiven-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/aiven/security/aiven-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/aiven-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/security/aiven-domain-security.yml
+  href: https://artifacts.apis.io/aiven/security/aiven-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aiven-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/authentication/aiven-authentication.yml
+  href: https://artifacts.apis.io/aiven/authentication/aiven-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aiven-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/scopes/aiven-scopes.yml
+  href: https://artifacts.apis.io/aiven/scopes/aiven-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/aiven-scopes.yml
@@ -389,27 +419,27 @@ common:
   type: X
   url: https://x.com/aiven_io
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/vocabulary/aiven-vocabulary.yml
+  href: https://artifacts.apis.io/aiven/vocabulary/aiven-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/aiven-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/json-ld/aiven-context.jsonld
+  href: https://artifacts.apis.io/aiven/json-ld/aiven-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/aiven-context.jsonld
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/plans/aiven-plans-pricing.yml
+  href: https://artifacts.apis.io/aiven/plans/aiven-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aiven-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/rate-limits/aiven-rate-limits.yml
+  href: https://artifacts.apis.io/aiven/rate-limits/aiven-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aiven-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/finops/aiven-finops.yml
+  href: https://artifacts.apis.io/aiven/finops/aiven-finops.yml
   title: ''
   type: FinOps
   url: finops/aiven-finops.yml
@@ -433,13 +463,13 @@ examples:
   name: Aiven List Services
   slug: aiven-list-services
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Aiven Finops
-  primary_unit: ''
+  primary_unit: service plan
   service_category: ''
   slug: aiven-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aiven.png
 json_schemas:
 - name: AccountAuthenticationMethodCreateRequestBody
@@ -480,7 +510,7 @@ modified: '2026-07-12'
 name: Aiven
 nav: Providers
 network: true
-overview: 'Aiven publishes 34 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Application_Users API, Authentication_Methods API, and 31 more. Tagged areas include Managed Data Infrastructure, Apache Kafka, PostgreSQL, OpenSearch, and ClickHouse.
+overview: 'Aiven publishes 39 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Application_Users API, Authentication_Methods API, and 36 more. Tagged areas include Managed Data Infrastructure, Apache Kafka, PostgreSQL, OpenSearch, and ClickHouse.
 
 
   The Aiven catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -518,43 +548,43 @@ scopes:
   summary_line: 34 scopes · authorizationCode
 score:
   band: developing
-  composite: 43.8
+  composite: 46.8
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 73.8
+    artifact_dirs: 22
+    catalog_earned: 76.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 41.3
+    catalog_gap: 38.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.1
   facets:
-    access_clarity: 42.1
+    access_clarity: 50.0
     contract_governance: 23.5
-    contract_quality: 66.6
+    contract_quality: 66.8
     developer_ergonomics: 23.8
     discoverability: 65.0
-    operational_transparency: 21.1
-  previous_composite: 45.3
+    operational_transparency: 31.6
+  previous_composite: 46.7
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 34
+      total: 74
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/aiven/refs/heads/main/screenshots/aiven-2026-06-20T171443.png
+screenshot: https://apis.io/screenshots/aiven/aiven-2026-06-20T171443.png
 security:
 - kind: authentication
   name: Aiven Authentication

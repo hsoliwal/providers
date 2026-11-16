@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: high
-  label: Freemium · Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
   onboarding: self-serve
-  pricing: freemium
+  pricing: unknown
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-10-17'
+  score: 22.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -99,9 +106,6 @@ collections:
   name: Azure Traffic Manager REST Endpoints UserMetrics API
   slug: postman-microsoft-azure-traffic-manager-usermetrics-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Azure Traffic Manager REST Endpoints API
   slug: open-microsoft-azure-traffic-manager-endpoints-api
 - collection_type: open
@@ -121,22 +125,22 @@ collections:
   slug: open-microsoft-azure-traffic-manager
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-traffic-manager/refs/heads/main/rate-limits/microsoft-azure-traffic-manager-rate-limits.yml
+  href: https://artifacts.apis.io/microsoft-azure-traffic-manager/rate-limits/microsoft-azure-traffic-manager-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/microsoft-azure-traffic-manager-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-traffic-manager/refs/heads/main/finops/microsoft-azure-traffic-manager-finops.yml
+  href: https://artifacts.apis.io/microsoft-azure-traffic-manager/finops/microsoft-azure-traffic-manager-finops.yml
   title: ''
   type: FinOps
   url: finops/microsoft-azure-traffic-manager-finops.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-traffic-manager/refs/heads/main/plans/microsoft-azure-traffic-manager-plans-pricing.yml
+  href: https://artifacts.apis.io/microsoft-azure-traffic-manager/plans/microsoft-azure-traffic-manager-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/microsoft-azure-traffic-manager-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-traffic-manager/refs/heads/main/capabilities/microsoft-azure-traffic-manager-capability-edges.yml
+  href: https://artifacts.apis.io/microsoft-azure-traffic-manager/capabilities/microsoft-azure-traffic-manager-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/microsoft-azure-traffic-manager-capability-edges.yml
@@ -145,22 +149,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/azure-traffic-manager/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-traffic-manager/refs/heads/main/agentic-access/microsoft-azure-traffic-manager-agentic-access.yml
+  href: https://artifacts.apis.io/microsoft-azure-traffic-manager/agentic-access/microsoft-azure-traffic-manager-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/microsoft-azure-traffic-manager-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-traffic-manager/refs/heads/main/security/microsoft-azure-traffic-manager-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-azure-traffic-manager/security/microsoft-azure-traffic-manager-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-azure-traffic-manager-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-traffic-manager/refs/heads/main/authentication/microsoft-azure-traffic-manager-authentication.yml
+  href: https://artifacts.apis.io/microsoft-azure-traffic-manager/authentication/microsoft-azure-traffic-manager-authentication.yml
   title: ''
   type: Authentication
   url: authentication/microsoft-azure-traffic-manager-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-traffic-manager/refs/heads/main/scopes/microsoft-azure-traffic-manager-scopes.yml
+  href: https://artifacts.apis.io/microsoft-azure-traffic-manager/scopes/microsoft-azure-traffic-manager-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/microsoft-azure-traffic-manager-scopes.yml
@@ -279,11 +283,11 @@ common:
 created: '2026-03-13'
 description: Azure Traffic Manager is a DNS-based traffic load balancer that enables you to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. It supports configurable routing methods including priority, weighted, performance, geographic, multivalue, and subnet routing.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Microsoft Azure Traffic Manager Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: microsoft-azure-traffic-manager-finops
   template: true
 image: https://azure.microsoft.com/svghandler/traffic-manager/
@@ -299,16 +303,32 @@ network: true
 overview: 'Azure Traffic Manager publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Endpoints API, GeographicHierarchies API, HeatMap API, and 6 more. Tagged areas include DNS Load Balancing, Failover, Global Routing, Networking, and Traffic Distribution.
 
 
+  The Azure Traffic Manager catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Azure Traffic Manager''s developer surface includes authentication, developer portal, documentation, getting-started guide, pricing, engineering blog, support, and 30 more developer resources.'
 plans:
 - name: Microsoft Azure Traffic Manager Plans Pricing
   plan_count: 7
   slug: microsoft-azure-traffic-manager-plans-pricing
-random_paper: 10
+random_paper: 14
 rate_limits:
 - limit_count: 5
   name: Microsoft Azure Traffic Manager Rate Limits
   slug: microsoft-azure-traffic-manager-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Azure Traffic Manager API Rules
+  rule_count: 58
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 1
+  slug: microsoft-azure-traffic-manager-rules
 scopes:
 - name: Microsoft Azure Traffic Manager Scopes
   scope_count: 1
@@ -316,43 +336,43 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: strong
-  composite: 55.0
+  composite: 56.6
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 52.0
+    artifact_dirs: 17
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: -0.6
   facets:
     access_clarity: 76.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 43.2
     developer_ergonomics: 63.1
     discoverability: 71.7
     operational_transparency: 42.1
-  previous_composite: 56.5
+  previous_composite: 57.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 5
+      total: 11
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-traffic-manager/refs/heads/main/screenshots/microsoft-azure-traffic-manager-2026-06-20T185440.png
+screenshot: https://apis.io/screenshots/microsoft-azure-traffic-manager/microsoft-azure-traffic-manager-2026-06-20T185440.png
 security:
 - kind: authentication
   name: Microsoft Azure Traffic Manager Authentication

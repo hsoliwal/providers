@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -87,27 +90,27 @@ common:
   type: Twitter
   url: https://twitter.com/prixtel
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prixtel/refs/heads/main/security/prixtel-domain-security.yml
+  href: https://artifacts.apis.io/prixtel/security/prixtel-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/prixtel-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/prixtel/refs/heads/main/packages/prixtel-packages.yml
+  href: https://artifacts.apis.io/prixtel/packages/prixtel-packages.yml
   title: ''
   type: Packages
   url: packages/prixtel-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/prixtel/refs/heads/main/plans/prixtel-plans-pricing.yml
+  href: https://artifacts.apis.io/prixtel/plans/prixtel-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/prixtel-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/prixtel/refs/heads/main/rate-limits/prixtel-rate-limits.yml
+  href: https://artifacts.apis.io/prixtel/rate-limits/prixtel-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/prixtel-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prixtel/refs/heads/main/llms/prixtel-llms.txt
+  href: https://artifacts.apis.io/prixtel/llms/prixtel-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/prixtel-llms.txt
@@ -152,7 +155,7 @@ plans:
 - name: Prixtel Plans Pricing
   plan_count: 0
   slug: prixtel-plans-pricing
-random_paper: 6
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Prixtel Rate Limits
@@ -190,14 +193,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 11.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/prixtel/refs/heads/main/screenshots/prixtel-2026-09-02T152051.png
+screenshot: https://apis.io/screenshots/prixtel/prixtel-2026-09-02T152051.png
 security:
 - kind: domain-security
   name: Prixtel Domain Security

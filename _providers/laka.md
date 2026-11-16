@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 27.0
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api-gb.app.laka.co
@@ -83,11 +86,8 @@ apis:
   description: The tasks API from Laka — 1 operation(s) for tasks.
   name: Laka Tasks API
   slug: laka-tasks-api
-artifact_total: 21
+artifact_total: 25
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Laka accounts API
   slug: open-laka-accounts-api
@@ -117,17 +117,17 @@ collections:
   slug: open-laka-tasks-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/capabilities/laka-capability-edges.yml
+  href: https://artifacts.apis.io/laka/capabilities/laka-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/laka-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/security/laka-domain-security.yml
+  href: https://artifacts.apis.io/laka/security/laka-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/laka-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/authentication/laka-authentication.yml
+  href: https://artifacts.apis.io/laka/authentication/laka-authentication.yml
   title: ''
   type: Authentication
   url: authentication/laka-authentication.yml
@@ -184,57 +184,57 @@ common:
   type: Glossary
   url: https://docs.laka.co/docs/glossary
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/llms/laka-llms.txt
+  href: https://artifacts.apis.io/laka/llms/laka-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/laka-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/lifecycle/laka-lifecycle.yml
+  href: https://artifacts.apis.io/laka/lifecycle/laka-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/laka-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/conventions/laka-conventions.yml
+  href: https://artifacts.apis.io/laka/conventions/laka-conventions.yml
   title: ''
   type: Conventions
   url: conventions/laka-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/errors/laka-problem-types.yml
+  href: https://artifacts.apis.io/laka/errors/laka-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/laka-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/data-model/laka-data-model.yml
+  href: https://artifacts.apis.io/laka/data-model/laka-data-model.yml
   title: ''
   type: DataModel
   url: data-model/laka-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/conformance/laka-conformance.yml
+  href: https://artifacts.apis.io/laka/conformance/laka-conformance.yml
   title: ''
   type: Conformance
   url: conformance/laka-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/sandbox/laka-sandbox.yml
+  href: https://artifacts.apis.io/laka/sandbox/laka-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/laka-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/mcp/laka-mcp.yml
+  href: https://artifacts.apis.io/laka/mcp/laka-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/laka-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/laka/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/overlays/laka-platform-overlay.yaml
+  href: https://artifacts.apis.io/laka/overlays/laka-platform-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/laka-platform-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/overlays/laka-quote-overlay.yaml
+  href: https://artifacts.apis.io/laka/overlays/laka-quote-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/laka-quote-overlay.yaml
@@ -250,24 +250,40 @@ network: true
 overview: 'Laka publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Claims API, Deeplinks API, and 6 more. Tagged areas include Company, Insurance, Insurtech, Cycling, and Micromobility.
 
 
+  The Laka catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Laka''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, support, engineering blog, and 20 more developer resources.'
-random_paper: 13
+random_paper: 1
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Laka API Rules
+  rule_count: 55
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 7
+    warn: 8
+  slug: laka-rules
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 44.3
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.8
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 46.4
-    developer_ergonomics: 44.6
+    developer_ergonomics: 63.7
     discoverability: 73.2
     operational_transparency: 15.8
   jurisdiction:
@@ -275,7 +291,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 38.8
+  previous_composite: 40.5
   provenance:
     conformance: derived
     contracts:
@@ -291,13 +307,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/laka/refs/heads/main/screenshots/laka-2026-07-25T224431.png
+screenshot: https://apis.io/screenshots/laka/laka-2026-07-25T224431.png
 security:
 - kind: authentication
   name: Laka Authentication
@@ -307,6 +323,16 @@ security:
   name: Laka Domain Security
   slug: laka-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: laka-file-a-claim
+  slug: laka-file-a-claim
+- name: laka-onboard-beneficiary
+  slug: laka-onboard-beneficiary
+- name: laka-quote-a-rider
+  slug: laka-quote-a-rider
+- name: laka-reporting-sync
+  slug: laka-reporting-sync
 slug: laka
 tags:
 - Company

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.6
-  scored_at: '2026-10-17'
+  score: 22.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 1
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 46
   slug: anything-agentic-access
   summary_line: 46 operations · 24 acting · 1 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.anything.com/v0/api
   baseurl_source: declared
@@ -114,11 +117,8 @@ apis:
   description: The User API from Anything — 1 operation(s) for user.
   name: Anything User API
   slug: anything-user-api
-artifact_total: 32
+artifact_total: 34
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Anything Assets API
   slug: open-anything-assets-api
@@ -163,7 +163,7 @@ collections:
   slug: open-anything-user-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/capabilities/anything-capability-edges.yml
+  href: https://artifacts.apis.io/anything/capabilities/anything-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/anything-capability-edges.yml
@@ -212,77 +212,77 @@ common:
   type: PrivacyPolicy
   url: https://www.anything.com/privacy-policy
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/openapi/_original/anything-openapi-original.json
+  href: https://artifacts.apis.io/anything/openapi/_original/anything-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/anything-openapi-original.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/llms/anything-llms.txt
+  href: https://artifacts.apis.io/anything/llms/anything-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/anything-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/authentication/anything-authentication.yml
+  href: https://artifacts.apis.io/anything/authentication/anything-authentication.yml
   title: ''
   type: Authentication
   url: authentication/anything-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/conventions/anything-conventions.yml
+  href: https://artifacts.apis.io/anything/conventions/anything-conventions.yml
   title: ''
   type: Conventions
   url: conventions/anything-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/errors/anything-problem-types.yml
+  href: https://artifacts.apis.io/anything/errors/anything-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/anything-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/lifecycle/anything-lifecycle.yml
+  href: https://artifacts.apis.io/anything/lifecycle/anything-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/anything-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/conformance/anything-conformance.yml
+  href: https://artifacts.apis.io/anything/conformance/anything-conformance.yml
   title: ''
   type: Conformance
   url: conformance/anything-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/data-model/anything-data-model.yml
+  href: https://artifacts.apis.io/anything/data-model/anything-data-model.yml
   title: ''
   type: DataModel
   url: data-model/anything-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/mcp/anything-mcp.yml
+  href: https://artifacts.apis.io/anything/mcp/anything-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/anything-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/overlays/anything-openapi-overlay.yaml
+  href: https://artifacts.apis.io/anything/overlays/anything-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/anything-openapi-overlay.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/packages/anything-packages.yml
+  href: https://artifacts.apis.io/anything/packages/anything-packages.yml
   title: ''
   type: Packages
   url: packages/anything-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/cli/anything-cli.yml
+  href: https://artifacts.apis.io/anything/cli/anything-cli.yml
   title: ''
   type: CLI
   url: cli/anything-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/anything/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/agentic-access/anything-agentic-access.yml
+  href: https://artifacts.apis.io/anything/agentic-access/anything-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/anything-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/security/anything-domain-security.yml
+  href: https://artifacts.apis.io/anything/security/anything-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/anything-domain-security.yml
@@ -301,34 +301,50 @@ network: true
 overview: 'Anything publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Databases API, Deployments API, and 11 more. Tagged areas include Company, Artificial Intelligence, App Builder, Low-Code, and No-Code.
 
 
+  The Anything catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Anything''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 21 more developer resources.'
-random_paper: 8
+random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Anything API Rules
+  rule_count: 49
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 4
+  slug: anything-rules
 score:
-  band: thin
-  composite: 39.2
+  band: developing
+  composite: 42.2
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.2
+  delta: 1.3
   facets:
     access_clarity: 32.9
-    contract_governance: 4.5
-    contract_quality: 45.7
+    contract_governance: 18.2
+    contract_quality: 50.8
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 39.4
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 14
     mcp: derived
     skills: derived
@@ -338,13 +354,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/anything/refs/heads/main/screenshots/anything-2026-07-25T200512.png
+screenshot: https://apis.io/screenshots/anything/anything-2026-07-25T200512.png
 security:
 - kind: authentication
   name: Anything Authentication
@@ -354,6 +370,12 @@ security:
   name: Anything Domain Security
   slug: anything-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Create and launch an app
+  slug: anything-create-and-launch-app
+- name: Provision and query a database
+  slug: anything-provision-and-query-database
 slug: anything
 tags:
 - Company

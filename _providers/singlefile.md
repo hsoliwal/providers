@@ -1,12 +1,18 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.8
-  scored_at: '2026-10-17'
+  score: 34.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -78,15 +87,12 @@ apis:
   description: Compliance tasks and deadlines
   name: SingleFile Tasks API
   slug: singlefile-tasks-api
-artifact_total: 22
+artifact_total: 26
 asyncapis:
 - description: Webhook event surface for SingleFile. Endpoints are configured in Profile Settings > Webhook Settings; deliveries are HTTPS-only and retried with exponential backoff on 5xx.
   name: SingleFile Webhooks
   slug: singlefile-webhooks-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: SingleFile External API Documentation documents API
   slug: open-singlefile-documents-api
@@ -114,32 +120,32 @@ common:
   type: BlogRSS
   url: https://www.singlefile.ai/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/capabilities/singlefile-capability-edges.yml
+  href: https://artifacts.apis.io/singlefile/capabilities/singlefile-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/singlefile-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/security/singlefile-trust-center.yml
+  href: https://artifacts.apis.io/singlefile/security/singlefile-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/singlefile-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/security/singlefile-domain-security.yml
+  href: https://artifacts.apis.io/singlefile/security/singlefile-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/singlefile-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/agentic-access/singlefile-agentic-access.yml
+  href: https://artifacts.apis.io/singlefile/agentic-access/singlefile-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/singlefile-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/scopes/singlefile-scopes.yml
+  href: https://artifacts.apis.io/singlefile/scopes/singlefile-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/singlefile-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/authentication/singlefile-authentication.yml
+  href: https://artifacts.apis.io/singlefile/authentication/singlefile-authentication.yml
   title: ''
   type: Authentication
   url: authentication/singlefile-authentication.yml
@@ -188,22 +194,22 @@ common:
   type: Support
   url: https://www.singlefile.ai/faqs/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/llms/singlefile-llms.txt
+  href: https://artifacts.apis.io/singlefile/llms/singlefile-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/singlefile-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/mcp/singlefile-mcp.yml
+  href: https://artifacts.apis.io/singlefile/mcp/singlefile-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/singlefile-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/overlays/singlefile-openapi-overlay.yaml
+  href: https://artifacts.apis.io/singlefile/overlays/singlefile-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/singlefile-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/conformance/singlefile-conformance.yml
+  href: https://artifacts.apis.io/singlefile/conformance/singlefile-conformance.yml
   title: ''
   type: Conformance
   url: conformance/singlefile-conformance.yml
@@ -212,47 +218,47 @@ common:
   type: Compliance
   url: https://www.singlefile.ai/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/errors/singlefile-error-codes.yml
+  href: https://artifacts.apis.io/singlefile/errors/singlefile-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/singlefile-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/lifecycle/singlefile-lifecycle.yml
+  href: https://artifacts.apis.io/singlefile/lifecycle/singlefile-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/singlefile-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/sandbox/singlefile-sandbox.yml
+  href: https://artifacts.apis.io/singlefile/sandbox/singlefile-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/singlefile-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/conventions/singlefile-conventions.yml
+  href: https://artifacts.apis.io/singlefile/conventions/singlefile-conventions.yml
   title: ''
   type: Conventions
   url: conventions/singlefile-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/data-model/singlefile-data-model.yml
+  href: https://artifacts.apis.io/singlefile/data-model/singlefile-data-model.yml
   title: ''
   type: DataModel
   url: data-model/singlefile-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/rate-limits/singlefile-rate-limits.yml
+  href: https://artifacts.apis.io/singlefile/rate-limits/singlefile-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/singlefile-rate-limits.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/asyncapi/singlefile-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/singlefile/asyncapi/singlefile-webhooks-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/singlefile-webhooks-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/asyncapi/singlefile-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/singlefile/asyncapi/singlefile-webhooks-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/singlefile-webhooks-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/singlefile/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -267,7 +273,7 @@ network: true
 overview: 'SingleFile publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Documents API, Entities API, Jurisdictions API, and 4 more. Tagged areas include Company, Compliance, Legal, Entity Management, and Corporate Compliance.
 
 
-  The SingleFile catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The SingleFile catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   SingleFile''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, signup flow, support, and 25 more developer resources.'
@@ -276,30 +282,43 @@ rate_limits:
 - limit_count: 3
   name: Singlefile Rate Limits
   slug: singlefile-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: SingleFile API Rules
+  rule_count: 61
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 2
+    warn: 2
+  slug: singlefile-rules
 scopes:
 - name: Singlefile Scopes
   scope_count: 2
   slug: singlefile-scopes
   summary_line: 2 scopes · clientCredentials
 score:
-  band: developing
-  composite: 52.6
+  band: strong
+  composite: 57.4
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 49.0
+    artifact_dirs: 26
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 3.2
   facets:
     access_clarity: 50.0
-    contract_governance: 18.2
-    contract_quality: 51.5
-    developer_ergonomics: 47.0
+    contract_governance: 31.8
+    contract_quality: 56.4
+    developer_ergonomics: 56.5
     discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 52.5
+  previous_composite: 54.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -316,13 +335,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/screenshots/singlefile-2026-08-17T081903.png
+screenshot: https://apis.io/screenshots/singlefile/singlefile-2026-08-17T081903.png
 security:
 - kind: authentication
   name: Singlefile Authentication
@@ -336,6 +355,16 @@ security:
   name: Singlefile Trust Center
   slug: singlefile-trust-center
   summary_line: SOC 2 Type II
+skill_count: 4
+skills:
+- name: File an annual report with SingleFile
+  slug: singlefile-annual-report-filing
+- name: Form a business entity with SingleFile
+  slug: singlefile-business-entity-formation
+- name: Manage entity documents with SingleFile
+  slug: singlefile-document-management
+- name: File for an EIN with SingleFile
+  slug: singlefile-ein-filing
 slug: singlefile
 tags:
 - Company
@@ -347,6 +376,7 @@ tags:
 - Business Filings
 - Regulatory
 - Webhook
+- OAuth
 - Authentication
 website: https://www.singlefile.ai
 ---

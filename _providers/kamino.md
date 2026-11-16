@@ -1,16 +1,19 @@
 ---
 access_model:
   confidence: low
+  gated_conflict: 'x-api-posture: private but 23 published API entries'
   label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: verified
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 26.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -41,7 +47,7 @@ agentic_access:
   operation_count: 85
   slug: kamino-agentic-access
   summary_line: 85 operations · 10 acting
-api_count: 2
+api_count: 3
 apis:
 - baseURL: https://api.kamino.finance
   baseurl_source: declared
@@ -158,11 +164,83 @@ apis:
   description: The Yields API from Kamino — 2 operation(s) for yields.
   name: Kamino Yields API
   slug: kamino-yields-api
-artifact_total: 52
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Kamino Lending API from Kamino — 17 operation(s) for kamino lending.
+  name: Kamino Kamino Lending API
+  slug: kamino-kamino-lending-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Ktoken API from Kamino — 2 operation(s) for ktoken.
+  name: Kamino Ktoken API
+  slug: kamino-ktoken-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Kvaults API from Kamino — 8 operation(s) for kvaults.
+  name: Kamino Kvaults API
+  slug: kamino-kvaults-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Leaderboard API from Kamino — 2 operation(s) for leaderboard.
+  name: Kamino Leaderboard API
+  slug: kamino-leaderboard-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Limo API from Kamino — 8 operation(s) for limo.
+  name: Kamino Limo API
+  slug: kamino-limo-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Points API from Kamino — 4 operation(s) for points.
+  name: Kamino Points API
+  slug: kamino-points-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Prices API from Kamino — 2 operation(s) for prices.
+  name: Kamino Prices API
+  slug: kamino-prices-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Raydium API from Kamino — 2 operation(s) for raydium.
+  name: Kamino Raydium API
+  slug: kamino-raydium-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Simulator API from Kamino — 1 operation(s) for simulator.
+  name: Kamino Simulator API
+  slug: kamino-simulator-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Staking API from Kamino — 7 operation(s) for staking.
+  name: Kamino Staking API
+  slug: kamino-staking-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Strategies API from Kamino — 25 operation(s) for strategies.
+  name: Kamino Strategies API
+  slug: kamino-strategies-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Tokens API from Kamino — 1 operation(s) for tokens.
+  name: Kamino Tokens API
+  slug: kamino-tokens-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Trades API from Kamino — 1 operation(s) for trades.
+  name: Kamino Trades API
+  slug: kamino-trades-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Transactions API from Kamino — 1 operation(s) for transactions.
+  name: Kamino Transactions API
+  slug: kamino-transactions-api
+- baseURL: https://api.kamino.finance
+  baseurl_source: declared
+  description: The Whirlpools API from Kamino — 3 operation(s) for whirlpools.
+  name: Kamino Whirlpools API
+  slug: kamino-whirlpools-api
+artifact_total: 70
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Kamino Public Airdrop API
   slug: open-kamino-airdrop-api
@@ -234,17 +312,17 @@ collections:
   slug: open-kamino-yields-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/overlays/kamino-public-overlay.yaml
+  href: https://artifacts.apis.io/kamino/overlays/kamino-public-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kamino-public-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/agentic-access/kamino-agentic-access.yml
+  href: https://artifacts.apis.io/kamino/agentic-access/kamino-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kamino-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/security/kamino-domain-security.yml
+  href: https://artifacts.apis.io/kamino/security/kamino-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kamino-domain-security.yml
@@ -289,87 +367,87 @@ common:
   type: X
   url: https://x.com/kamino
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/llms/kamino-llms.txt
+  href: https://artifacts.apis.io/kamino/llms/kamino-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kamino-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/packages/kamino-packages.yml
+  href: https://artifacts.apis.io/kamino/packages/kamino-packages.yml
   title: ''
   type: Packages
   url: packages/kamino-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/packages/kamino-packages.yml
+  href: https://artifacts.apis.io/kamino/packages/kamino-packages.yml
   title: ''
   type: SDKs
   url: packages/kamino-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/mcp/kamino-mcp.yml
+  href: https://artifacts.apis.io/kamino/mcp/kamino-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/kamino-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/conformance/kamino-conformance.yml
+  href: https://artifacts.apis.io/kamino/conformance/kamino-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kamino-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/errors/kamino-problem-types.yml
+  href: https://artifacts.apis.io/kamino/errors/kamino-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/kamino-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/lifecycle/kamino-lifecycle.yml
+  href: https://artifacts.apis.io/kamino/lifecycle/kamino-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kamino-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/authentication/kamino-authentication.yml
+  href: https://artifacts.apis.io/kamino/authentication/kamino-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kamino-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/security/kamino-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kamino/security/kamino-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/kamino-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/security/kamino-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kamino/security/kamino-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/kamino-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/security/kamino-trust-center.yml
+  href: https://artifacts.apis.io/kamino/security/kamino-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/kamino-trust-center.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/sandbox/kamino-sandbox.yml
+  href: https://artifacts.apis.io/kamino/sandbox/kamino-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/kamino-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/conventions/kamino-conventions.yml
+  href: https://artifacts.apis.io/kamino/conventions/kamino-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kamino-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/cli/kamino-cli.yml
+  href: https://artifacts.apis.io/kamino/cli/kamino-cli.yml
   title: ''
   type: CLI
   url: cli/kamino-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/components/kamino-components.yml
+  href: https://artifacts.apis.io/kamino/components/kamino-components.yml
   title: ''
   type: Components
   url: components/kamino-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/data-model/kamino-data-model.yml
+  href: https://artifacts.apis.io/kamino/data-model/kamino-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kamino-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kamino/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -381,30 +459,46 @@ modified: '2026-09-16'
 name: Kamino
 nav: Providers
 network: true
-overview: 'Kamino publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Airdrop API, Farms API, Earn Deposit API, and 20 more. Tagged areas include Company, Web3, DeFi, Solana, and Lending.
+overview: 'Kamino publishes 38 API contracts indexed on the [APIs.io](https://apis.io/) network, including Airdrop API, Farms API, Earn Deposit API, and 35 more. Tagged areas include Company, Web3, DeFi, Solana, and Lending.
+
+
+  The Kamino catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Kamino''s developer surface includes documentation, API reference, getting-started guide, support, signup flow, authentication, sandbox, and 23 more developer resources.'
-random_paper: 1
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: Kamino API Rules
+  rule_count: 54
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 3
+    warn: 11
+  slug: kamino-rules
 score:
   band: developing
-  composite: 40.2
+  composite: 41.6
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -0.8
   facets:
     access_clarity: 7.9
-    contract_governance: 4.5
-    contract_quality: 49.0
+    contract_governance: 18.2
+    contract_quality: 45.9
     developer_ergonomics: 78.0
-    discoverability: 73.2
+    discoverability: 78.6
     operational_transparency: 13.2
-  previous_composite: 40.1
+  previous_composite: 42.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -412,7 +506,7 @@ score:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 23
+      total: 55
     mcp: derived
     skills: derived
   regulatory:
@@ -421,13 +515,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kamino/refs/heads/main/screenshots/kamino-2026-07-25T223446.png
+screenshot: https://apis.io/screenshots/kamino/kamino-2026-07-25T223446.png
 security:
 - kind: authentication
   name: Kamino Authentication
@@ -445,6 +539,14 @@ security:
   name: Kamino Trust Center
   slug: kamino-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: Deposit into a Kamino Earn vault
+  slug: kamino-earn-vault-deposit
+- name: Read a wallet's Kamino portfolio
+  slug: kamino-read-wallet-portfolio
+- name: Supply collateral and borrow on Kamino Lend
+  slug: kamino-supply-and-borrow
 slug: kamino
 tags:
 - Company

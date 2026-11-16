@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: medium
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
   - security
   trial: false
   try_now: true
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -78,9 +85,6 @@ apis:
 artifact_total: 22
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Printify Catalog API
   slug: open-printify-catalog-api
 - collection_type: open
@@ -107,27 +111,27 @@ common:
   type: Pricing
   url: https://printify.com/pricing/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/printify/refs/heads/main/capabilities/printify-capability-edges.yml
+  href: https://artifacts.apis.io/printify/capabilities/printify-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/printify-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/printify/refs/heads/main/agentic-access/printify-agentic-access.yml
+  href: https://artifacts.apis.io/printify/agentic-access/printify-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/printify-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/printify/refs/heads/main/security/printify-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/printify/security/printify-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/printify-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/printify/refs/heads/main/security/printify-domain-security.yml
+  href: https://artifacts.apis.io/printify/security/printify-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/printify-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/printify/refs/heads/main/authentication/printify-authentication.yml
+  href: https://artifacts.apis.io/printify/authentication/printify-authentication.yml
   title: ''
   type: Authentication
   url: authentication/printify-authentication.yml
@@ -152,17 +156,17 @@ common:
   type: Documentation
   url: https://developers.printify.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/printify/refs/heads/main/plans/printify-plans-pricing.yml
+  href: https://artifacts.apis.io/printify/plans/printify-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/printify-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/printify/refs/heads/main/rate-limits/printify-rate-limits.yml
+  href: https://artifacts.apis.io/printify/rate-limits/printify-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/printify-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/printify/refs/heads/main/finops/printify-finops.yml
+  href: https://artifacts.apis.io/printify/finops/printify-finops.yml
   title: ''
   type: FinOps
   url: finops/printify-finops.yml
@@ -185,6 +189,9 @@ network: true
 overview: 'Printify publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Catalog API, Orders API, Products API, and 3 more. Tagged areas include Print on Demand, E-Commerce, Marketplace, Fulfillment, and Merchandise.
 
 
+  The Printify catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Printify''s developer surface includes pricing, authentication, engineering blog, documentation, and 10 more developer resources.'
 plans:
 - name: Printify Plans Pricing
@@ -193,30 +200,43 @@ plans:
 - name: Printify Price Estimates
   plan_count: 0
   slug: printify-price-estimates
-random_paper: 5
+random_paper: 21
 rate_limits:
 - limit_count: 4
   name: Printify Rate Limits
   slug: printify-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Printify API Rules
+  rule_count: 56
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 2
+  slug: printify-rules
 score:
   band: thin
-  composite: 35.6
+  composite: 37.5
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 61.0
+    artifact_dirs: 17
+    catalog_earned: 65.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 49.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: -1.1
   facets:
-    access_clarity: 42.1
-    contract_governance: 0.0
+    access_clarity: 36.8
+    contract_governance: 13.6
     contract_quality: 44.1
     developer_ergonomics: 13.1
     discoverability: 66.1
-    operational_transparency: 34.2
-  previous_composite: 37.1
+    operational_transparency: 44.7
+  previous_composite: 38.6
   provenance:
     agentic_access: derived
     contracts:
@@ -230,13 +250,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/printify/refs/heads/main/screenshots/printify-2026-09-02T152036.png
+screenshot: https://apis.io/screenshots/printify/printify-2026-09-02T152036.png
 security:
 - kind: authentication
   name: Printify Authentication

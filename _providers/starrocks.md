@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: 'Stream Load is a synchronous HTTP-based ingestion API. Clients PUT a CSV or JSON payload to /api/{db}/{table}/_stream_load with HTTP Basic authentication and headers like `label`, `column_separator`, '
@@ -68,7 +72,7 @@ common:
   type: ContributionGuide
   url: https://github.com/StarRocks/starrocks/blob/main/CONTRIBUTING.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/starrocks/refs/heads/main/security/starrocks-domain-security.yml
+  href: https://artifacts.apis.io/starrocks/security/starrocks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/starrocks-domain-security.yml
@@ -97,17 +101,17 @@ common:
   type: CommercialOffering
   url: https://www.celerdata.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/starrocks/refs/heads/main/plans/starrocks-plans-pricing.yml
+  href: https://artifacts.apis.io/starrocks/plans/starrocks-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/starrocks-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/starrocks/refs/heads/main/rate-limits/starrocks-rate-limits.yml
+  href: https://artifacts.apis.io/starrocks/rate-limits/starrocks-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/starrocks-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/starrocks/refs/heads/main/finops/starrocks-finops.yml
+  href: https://artifacts.apis.io/starrocks/finops/starrocks-finops.yml
   title: ''
   type: FinOps
   url: finops/starrocks-finops.yml
@@ -125,7 +129,7 @@ finops:
 - has_sources: false
   method: generated
   name: Starrocks Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: starrocks-finops
   template: true
@@ -143,7 +147,7 @@ plans:
 - name: Starrocks Plans Pricing
   plan_count: 3
   slug: starrocks-plans-pricing
-random_paper: 20
+random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Starrocks Rate Limits
@@ -152,13 +156,13 @@ score:
   band: thin
   composite: 28.6
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
@@ -169,21 +173,21 @@ score:
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 30.0
+  previous_composite: 28.6
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/starrocks/refs/heads/main/screenshots/starrocks-2026-06-20T194511.png
+screenshot: https://apis.io/screenshots/starrocks/starrocks-2026-06-20T194511.png
 security:
 - kind: domain-security
   name: Starrocks Domain Security

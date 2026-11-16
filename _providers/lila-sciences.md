@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lila-sciences/refs/heads/main/security/lila-sciences-domain-security.yml
+  href: https://artifacts.apis.io/lila-sciences/security/lila-sciences-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lila-sciences-domain-security.yml
@@ -86,7 +90,7 @@ common:
   type: Bluesky
   url: https://bsky.app/profile/lilasciences.bsky.social
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lila-sciences/refs/heads/main/llms/lila-sciences-llms.txt
+  href: https://artifacts.apis.io/lila-sciences/llms/lila-sciences-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lila-sciences-llms.txt
@@ -103,12 +107,12 @@ overview: 'Lila Sciences is profiled on the [APIs.io](https://apis.io/) network.
 
 
   Lila Sciences'' developer surface includes engineering blog and 12 more developer resources.'
-random_paper: 10
+random_paper: 12
 score:
   band: minimal
   composite: 9.9
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -129,14 +133,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lila-sciences/refs/heads/main/screenshots/lila-sciences-2026-07-25T225152.png
+screenshot: https://apis.io/screenshots/lila-sciences/lila-sciences-2026-07-25T225152.png
 security:
 - kind: domain-security
   name: Lila Sciences Domain Security

@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.0
-  scored_at: '2026-10-17'
+  score: 53.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 127
   human_in_the_loop: 6
@@ -131,11 +134,6 @@ apis:
   description: The github_integration API from CoreStory — 10 operation(s) for github_integration.
   name: CoreStory Github Integration API
   slug: corestory-github-integration-api
-- baseURL: https://c2s.corestory.ai
-  baseurl_source: declared
-  description: The github_webhooks API from CoreStory — 1 operation(s) for github_webhooks.
-  name: CoreStory Github Webhooks API
-  slug: corestory-github-webhooks-api
 - baseURL: https://c2s.corestory.ai
   baseurl_source: declared
   description: The languages API from CoreStory — 1 operation(s) for languages.
@@ -281,11 +279,48 @@ apis:
   description: The workflows API from CoreStory — 7 operation(s) for workflows.
   name: CoreStory Workflows API
   slug: corestory-workflows-api
-artifact_total: 101
+- baseURL: https://c2s.corestory.ai
+  baseurl_source: declared
+  description: The git-providers API from CoreStory — 1 operation(s) for git-providers.
+  name: CoreStory Git Providers API
+  slug: corestory-git-providers-api
+- baseURL: https://c2s.corestory.ai
+  baseurl_source: declared
+  description: The git_webhooks API from CoreStory — 2 operation(s) for git_webhooks.
+  name: CoreStory Git Webhooks API
+  slug: corestory-git-webhooks-api
+- baseURL: https://c2s.corestory.ai
+  baseurl_source: declared
+  description: The loc API from CoreStory — 1 operation(s) for loc.
+  name: CoreStory Loc API
+  slug: corestory-loc-api
+- baseURL: https://c2s.corestory.ai
+  baseurl_source: declared
+  description: The prds API from CoreStory — 5 operation(s) for prds.
+  name: CoreStory Prds API
+  slug: corestory-prds-api
+- baseURL: https://c2s.corestory.ai
+  baseurl_source: declared
+  description: The project-selections API from CoreStory — 2 operation(s) for project-selections.
+  name: CoreStory Project Selections API
+  slug: corestory-project-selections-api
+- baseURL: https://c2s.corestory.ai
+  baseurl_source: declared
+  description: The sio-actions API from CoreStory — 3 operation(s) for sio-actions.
+  name: CoreStory Sio Actions API
+  slug: corestory-sio-actions-api
+- baseURL: https://c2s.corestory.ai
+  baseurl_source: declared
+  description: The support API from CoreStory — 1 operation(s) for support.
+  name: CoreStory Support API
+  slug: corestory-support-api
+- baseURL: https://c2s.corestory.ai
+  baseurl_source: declared
+  description: The usage API from CoreStory — 1 operation(s) for usage.
+  name: CoreStory Usage API
+  slug: corestory-usage-api
+artifact_total: 109
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Crowdbotics API Documentation admin API
   slug: open-corestory-admin-api
@@ -429,7 +464,7 @@ collections:
   slug: open-corestory-workflows-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/capabilities/corestory-capability-edges.yml
+  href: https://artifacts.apis.io/corestory/capabilities/corestory-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/corestory-capability-edges.yml
@@ -470,62 +505,62 @@ common:
   type: PrivacyPolicy
   url: https://corestory.ai/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/mcp/corestory-mcp.yml
+  href: https://artifacts.apis.io/corestory/mcp/corestory-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/corestory-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/llms/corestory-llms.txt
+  href: https://artifacts.apis.io/corestory/llms/corestory-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/corestory-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/authentication/corestory-authentication.yml
+  href: https://artifacts.apis.io/corestory/authentication/corestory-authentication.yml
   title: ''
   type: Authentication
   url: authentication/corestory-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/scopes/corestory-scopes.yml
+  href: https://artifacts.apis.io/corestory/scopes/corestory-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/corestory-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/well-known/corestory-well-known.yml
+  href: https://artifacts.apis.io/corestory/well-known/corestory-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/corestory-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/errors/corestory-problem-types.yml
+  href: https://artifacts.apis.io/corestory/errors/corestory-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/corestory-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/conventions/corestory-conventions.yml
+  href: https://artifacts.apis.io/corestory/conventions/corestory-conventions.yml
   title: ''
   type: Conventions
   url: conventions/corestory-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/data-model/corestory-data-model.yml
+  href: https://artifacts.apis.io/corestory/data-model/corestory-data-model.yml
   title: ''
   type: DataModel
   url: data-model/corestory-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/overlays/corestory-openapi-overlay.yaml
+  href: https://artifacts.apis.io/corestory/overlays/corestory-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/corestory-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/corestory/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/agentic-access/corestory-agentic-access.yml
+  href: https://artifacts.apis.io/corestory/agentic-access/corestory-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/corestory-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/security/corestory-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/corestory/security/corestory-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/corestory-vulnerability-disclosure.yml
@@ -534,7 +569,7 @@ common:
   type: Security
   url: https://corestory.ai/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/security/corestory-domain-security.yml
+  href: https://artifacts.apis.io/corestory/security/corestory-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/corestory-domain-security.yml
@@ -562,11 +597,27 @@ modified: '2026-07-18'
 name: CoreStory
 nav: Providers
 network: true
-overview: 'CoreStory publishes 47 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, API Debugging API, API Key Management API, and 44 more. Tagged areas include Company, Artificial Intelligence, Code Intelligence, Legacy Modernization, and Developer Tools.
+overview: 'CoreStory publishes 54 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, API Debugging API, API Key Management API, and 51 more. Tagged areas include Company, Artificial Intelligence, Code Intelligence, Legacy Modernization, and Developer Tools.
+
+
+  The CoreStory catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   CoreStory''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, support, authentication, and 20 more developer resources.'
-random_paper: 12
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: CoreStory API Rules
+  rule_count: 57
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 3
+    warn: 14
+  slug: corestory-rules
 scopes:
 - name: Corestory Scopes
   scope_count: 7
@@ -574,30 +625,30 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: developing
-  composite: 40.7
+  composite: 46.0
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.7
   facets:
     access_clarity: 21.1
-    contract_governance: 0.0
-    contract_quality: 46.6
+    contract_governance: 13.6
+    contract_quality: 50.3
     developer_ergonomics: 58.9
     discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 40.6
+  previous_composite: 45.3
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
-      total: 47
+      marker_coverage: 53.5
+      total: 101
     mcp: first-party
     skills: derived
   regulatory:
@@ -606,13 +657,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/corestory/refs/heads/main/screenshots/corestory-2026-07-25T210432.png
+    score: 50.0
+screenshot: https://apis.io/screenshots/corestory/corestory-2026-07-25T210432.png
 security:
 - kind: authentication
   name: Corestory Authentication
@@ -626,6 +677,10 @@ security:
   name: Corestory Vulnerability Disclosure
   slug: corestory-vulnerability-disclosure
   summary_line: no policy recorded
+skill_count: 1
+skills:
+- name: Query CoreStory code intelligence for a project
+  slug: corestory-query-code-intelligence
 slug: corestory
 tags:
 - Company

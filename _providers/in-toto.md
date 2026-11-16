@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: The in-toto specification defines the metadata format for recording software supply chain steps. It includes layout metadata that defines the expected steps and their authorized functionaries, and lin
@@ -51,17 +55,17 @@ apis:
 artifact_total: 14
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/in-toto/refs/heads/main/plans/in-toto-plans-pricing.yml
+  href: https://artifacts.apis.io/in-toto/plans/in-toto-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/in-toto-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/in-toto/refs/heads/main/rate-limits/in-toto-rate-limits.yml
+  href: https://artifacts.apis.io/in-toto/rate-limits/in-toto-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/in-toto-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/in-toto/refs/heads/main/finops/in-toto-finops.yml
+  href: https://artifacts.apis.io/in-toto/finops/in-toto-finops.yml
   title: ''
   type: FinOps
   url: finops/in-toto-finops.yml
@@ -74,7 +78,7 @@ common:
   type: Releases
   url: https://github.com/in-toto/attestation/releases
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/in-toto/refs/heads/main/security/in-toto-domain-security.yml
+  href: https://artifacts.apis.io/in-toto/security/in-toto-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/in-toto-domain-security.yml
@@ -107,27 +111,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/in-toto
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/in-toto/refs/heads/main/json-schema/in-toto-layout-schema.json
+  href: https://artifacts.apis.io/in-toto/json-schema/in-toto-layout-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/in-toto-layout-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/in-toto/refs/heads/main/json-schema/in-toto-link-schema.json
+  href: https://artifacts.apis.io/in-toto/json-schema/in-toto-link-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/in-toto-link-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/in-toto/refs/heads/main/json-schema/in-toto-attestation-schema.json
+  href: https://artifacts.apis.io/in-toto/json-schema/in-toto-attestation-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/in-toto-attestation-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/in-toto/refs/heads/main/json-ld/in-toto-context.jsonld
+  href: https://artifacts.apis.io/in-toto/json-ld/in-toto-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/in-toto-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/in-toto/refs/heads/main/rules/in-toto-rules.yml
+  href: https://artifacts.apis.io/in-toto/rules/in-toto-rules.yml
   title: ''
   type: Rules
   url: rules/in-toto-rules.yml
@@ -137,7 +141,7 @@ finops:
 - has_sources: false
   method: generated
   name: In Toto Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: in-toto-finops
   template: true
@@ -173,7 +177,7 @@ plans:
 - name: In Toto Plans Pricing
   plan_count: 3
   slug: in-toto-plans-pricing
-random_paper: 10
+random_paper: 18
 rate_limits:
 - limit_count: 5
   name: In Toto Rate Limits
@@ -205,13 +209,13 @@ score:
   band: emerging
   composite: 25.8
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 64.3
     catalog_earned_first_party: 0.0
     catalog_gap: 50.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 9.8
@@ -219,21 +223,21 @@ score:
     developer_ergonomics: 33.3
     discoverability: 69.6
     operational_transparency: 26.3
-  previous_composite: 27.3
+  previous_composite: 25.8
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/in-toto/refs/heads/main/screenshots/in-toto-2026-06-20T183303.png
+screenshot: https://apis.io/screenshots/in-toto/in-toto-2026-06-20T183303.png
 security:
 - kind: domain-security
   name: In Toto Domain Security

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-10-17'
+  score: 19.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -62,9 +65,6 @@ apis:
 artifact_total: 10
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Blink Charging & Status API (BlinkMap API) Locations API
   slug: open-blink-locations-api
 - collection_type: open
@@ -75,17 +75,17 @@ collections:
   slug: open-blink-status-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blink/refs/heads/main/agentic-access/blink-agentic-access.yml
+  href: https://artifacts.apis.io/blink/agentic-access/blink-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/blink-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blink/refs/heads/main/security/blink-domain-security.yml
+  href: https://artifacts.apis.io/blink/security/blink-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/blink-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blink/refs/heads/main/authentication/blink-authentication.yml
+  href: https://artifacts.apis.io/blink/authentication/blink-authentication.yml
   title: ''
   type: Authentication
   url: authentication/blink-authentication.yml
@@ -128,27 +128,43 @@ network: true
 overview: 'Blink Charging publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Locations API, Search API, and Status API. Tagged areas include EV Charging, Electric Vehicles, Charging Stations, OCPI, and OCPP.
 
 
+  The Blink Charging catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Blink Charging''s developer surface includes authentication, documentation, product news, engineering blog, and 6 more developer resources.'
 random_paper: 0
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Blink Charging API Rules
+  rule_count: 57
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 1
+  slug: blink-rules
 score:
   band: minimal
-  composite: 9.3
+  composite: 10.9
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 37.0
+    artifact_dirs: 11
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 0.0
     developer_ergonomics: 19.0
     discoverability: 67.0
     operational_transparency: 2.6
-  previous_composite: 9.3
+  previous_composite: 10.9
   provenance:
     agentic_access: derived
     contracts:
@@ -162,14 +178,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/blink/refs/heads/main/screenshots/blink-2026-07-25T203318.png
+screenshot: https://apis.io/screenshots/blink/blink-2026-07-25T203318.png
 security:
 - kind: authentication
   name: Blink Authentication

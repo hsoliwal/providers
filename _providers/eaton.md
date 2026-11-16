@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.8
-  scored_at: '2026-10-17'
+  score: 21.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -118,11 +125,8 @@ apis:
   description: Tenant organizations that own devices and users.
   name: Eaton Organizations API
   slug: eaton-organizations-api
-artifact_total: 49
+artifact_total: 48
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Eaton Smart Breaker Authorization API
   slug: open-eaton-authorization-api
@@ -151,27 +155,32 @@ collections:
   name: Eaton Smart Breaker API
   slug: open-smart-breaker
 common:
+- group: other
+  href: https://artifacts.apis.io/eaton/capabilities/eaton-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/eaton-capability-edges.yml
 - group: company
   title: ''
   type: Website
   url: https://eaton.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eaton/refs/heads/main/agentic-access/eaton-agentic-access.yml
+  href: https://artifacts.apis.io/eaton/agentic-access/eaton-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/eaton-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eaton/refs/heads/main/security/eaton-domain-security.yml
+  href: https://artifacts.apis.io/eaton/security/eaton-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/eaton-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eaton/refs/heads/main/authentication/eaton-authentication.yml
+  href: https://artifacts.apis.io/eaton/authentication/eaton-authentication.yml
   title: ''
   type: Authentication
   url: authentication/eaton-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eaton/refs/heads/main/scopes/eaton-scopes.yml
+  href: https://artifacts.apis.io/eaton/scopes/eaton-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/eaton-scopes.yml
@@ -276,27 +285,27 @@ common:
   type: Pricing
   url: https://eaton.byappdirect.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/eaton/refs/heads/main/plans/eaton-plans-pricing.yml
+  href: https://artifacts.apis.io/eaton/plans/eaton-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/eaton-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/eaton/refs/heads/main/rate-limits/eaton-rate-limits.yml
+  href: https://artifacts.apis.io/eaton/rate-limits/eaton-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/eaton-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/eaton/refs/heads/main/finops/eaton-finops.yml
+  href: https://artifacts.apis.io/eaton/finops/eaton-finops.yml
   title: ''
   type: FinOps
   url: finops/eaton-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eaton/refs/heads/main/vocabulary/eaton-vocabulary.yml
+  href: https://artifacts.apis.io/eaton/vocabulary/eaton-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/eaton-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eaton/refs/heads/main/json-ld/eaton-context.jsonld
+  href: https://artifacts.apis.io/eaton/json-ld/eaton-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/eaton-context.jsonld
@@ -364,7 +373,7 @@ overview: 'Eaton publishes 1 API contract indexed on the [APIs.io](https://apis.
   The Eaton catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Eaton''s developer surface includes authentication, developer portal, signup flow, FAQ, engineering blog, release notes, YouTube channel, and 29 more developer resources.'
+  Eaton''s developer surface includes authentication, developer portal, signup flow, FAQ, engineering blog, release notes, YouTube channel, and 30 more developer resources.'
 plans:
 - name: Eaton Plans Pricing
   plan_count: 9
@@ -407,13 +416,13 @@ score:
   band: developing
   composite: 43.8
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 23
     catalog_earned: 52.0
     catalog_earned_first_party: 0.0
     catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.7
+  delta: 0.0
   facets:
     access_clarity: 46.1
     contract_governance: 27.3
@@ -421,7 +430,7 @@ score:
     developer_ergonomics: 40.5
     discoverability: 64.3
     operational_transparency: 18.4
-  previous_composite: 49.5
+  previous_composite: 43.8
   provenance:
     agentic_access: derived
     contracts:
@@ -435,13 +444,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 33.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/eaton/refs/heads/main/screenshots/eaton-2026-06-20T180408.png
+screenshot: https://apis.io/screenshots/eaton/eaton-2026-06-20T180408.png
 security:
 - kind: authentication
   name: Eaton Authentication

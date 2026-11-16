@@ -12,6 +12,7 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.9
-  scored_at: '2026-10-17'
+  score: 41.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 7
@@ -74,11 +78,8 @@ apis:
   description: Digital-signage campaigns and assets by group or zone.
   name: Rockbot Signage API
   slug: rockbot-signage-api
-artifact_total: 22
+artifact_total: 26
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Rockbot Audio Messaging API
   slug: open-rockbot-audio-messaging-api
@@ -98,27 +99,32 @@ collections:
   name: Rockbot Audio Messaging Signage API
   slug: open-rockbot-signage-api
 common:
+- group: other
+  href: https://artifacts.apis.io/rockbot/capabilities/rockbot-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rockbot-capability-edges.yml
 - group: company
   title: ''
   type: BlogRSS
   url: https://blog.rockbot.com/rss.xml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/agentic-access/rockbot-agentic-access.yml
+  href: https://artifacts.apis.io/rockbot/agentic-access/rockbot-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rockbot-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/security/rockbot-domain-security.yml
+  href: https://artifacts.apis.io/rockbot/security/rockbot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rockbot-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/scopes/rockbot-scopes.yml
+  href: https://artifacts.apis.io/rockbot/scopes/rockbot-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/rockbot-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/authentication/rockbot-authentication.yml
+  href: https://artifacts.apis.io/rockbot/authentication/rockbot-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rockbot-authentication.yml
@@ -175,77 +181,77 @@ common:
   type: StatusPage
   url: https://status.rockbot.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/lifecycle/rockbot-lifecycle.yml
+  href: https://artifacts.apis.io/rockbot/lifecycle/rockbot-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rockbot-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/conventions/rockbot-conventions.yml
+  href: https://artifacts.apis.io/rockbot/conventions/rockbot-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rockbot-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/errors/rockbot-problem-types.yml
+  href: https://artifacts.apis.io/rockbot/errors/rockbot-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/rockbot-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/data-model/rockbot-data-model.yml
+  href: https://artifacts.apis.io/rockbot/data-model/rockbot-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rockbot-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/conformance/rockbot-conformance.yml
+  href: https://artifacts.apis.io/rockbot/conformance/rockbot-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rockbot-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/overlays/rockbot-openapi-overlay.yaml
+  href: https://artifacts.apis.io/rockbot/overlays/rockbot-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rockbot-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/mcp/rockbot-mcp.yml
+  href: https://artifacts.apis.io/rockbot/mcp/rockbot-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/rockbot-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/mcp/rockbot-tool-crosswalk.yml
+  href: https://artifacts.apis.io/rockbot/mcp/rockbot-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/rockbot-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/llms/rockbot-llms.txt
+  href: https://artifacts.apis.io/rockbot/llms/rockbot-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rockbot-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rockbot/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/well-known/rockbot-well-known.yml
+  href: https://artifacts.apis.io/rockbot/well-known/rockbot-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rockbot-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/packages/rockbot-packages.yml
+  href: https://artifacts.apis.io/rockbot/packages/rockbot-packages.yml
   title: ''
   type: Packages
   url: packages/rockbot-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/plans/rockbot-plans-pricing.yml
+  href: https://artifacts.apis.io/rockbot/plans/rockbot-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/rockbot-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/rate-limits/rockbot-rate-limits.yml
+  href: https://artifacts.apis.io/rockbot/rate-limits/rockbot-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rockbot-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/security/rockbot-trust-center.yml
+  href: https://artifacts.apis.io/rockbot/security/rockbot-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/rockbot-trust-center.yml
@@ -259,6 +265,14 @@ common:
   url: https://github.com/rockbot-inc
 created: '2026-07-17'
 description: 'Rockbot is a unified in-location media platform for businesses, giving multi-location operators one system to control background music, audio messaging, digital signage, Rockbot TV, music videos, and retail-media advertising across their venues. Its v5 REST API lets customers programmatically manage that estate: control music playback and playlist overrides per zone, run audio-messaging and signage campaigns by group or zone, upload and attach assets, check device status / screenshots and reboot players remotely, and pull or export music, messaging, and signage playback history. Authentication is OAuth 2.0 client-credentials issuing 24-hour bearer tokens, with a documented default rate limit of one request per second. Rockbot is a GV (Google Ventures) portfolio company in the consumer sector.'
+finops:
+- has_sources: true
+  method: derived
+  name: Rockbot Finops
+  primary_unit: zone
+  service_category: ''
+  slug: rockbot-finops
+  template: false
 image: https://cdn.sanity.io/images/6h2uzio7/production/f258140dd891894dc1e27722af21f29a7c8c33e5-1581x1581.png
 layout: provider
 mcp_servers:
@@ -272,16 +286,35 @@ network: true
 overview: 'Rockbot publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audio Messaging API, Auth API, Data API, and 3 more. Tagged areas include Company, Consumer, Music, Digital Signage, and Audio Messaging.
 
 
-  Rockbot''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 28 more developer resources.'
+  The Rockbot catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Rockbot''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 29 more developer resources.'
 plans:
 - name: Rockbot Plans Pricing
-  plan_count: 4
+  plan_count: 8
   slug: rockbot-plans-pricing
-random_paper: 8
+- name: Rockbot Price Estimates
+  plan_count: 0
+  slug: rockbot-price-estimates
+random_paper: 12
 rate_limits:
 - limit_count: 2
   name: Rockbot Rate Limits
   slug: rockbot-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Rockbot API Rules
+  rule_count: 63
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 2
+    warn: 3
+  slug: rockbot-rules
 scopes:
 - name: Rockbot Scopes
   scope_count: 0
@@ -289,23 +322,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 57.7
+  composite: 60.9
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 57.0
+    artifact_dirs: 29
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 85.5
-    contract_governance: 18.2
+    access_clarity: 93.4
+    contract_governance: 31.8
     contract_quality: 45.1
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 57.6
+  previous_composite: 60.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -322,13 +355,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rockbot/refs/heads/main/screenshots/rockbot-2026-08-17T081620.png
+screenshot: https://apis.io/screenshots/rockbot/rockbot-2026-08-17T081620.png
 security:
 - kind: authentication
   name: Rockbot Authentication
@@ -346,6 +379,12 @@ security:
   name: Rockbot Trust Center
   slug: rockbot-trust-center
   summary_line: SOC 2
+skill_count: 2
+skills:
+- name: Control zone music playback
+  slug: rockbot-control-zone-music
+- name: Run an audio-messaging campaign
+  slug: rockbot-run-messaging-campaign
 slug: rockbot
 tags:
 - Company

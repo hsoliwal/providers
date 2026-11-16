@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.8
-  scored_at: '2026-10-17'
+  score: 43.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://business.example.com/usp/v1
@@ -62,7 +75,7 @@ apis:
   description: Waitlist management operations
   name: AlloyX Waitlist API
   slug: alloyx-waitlist-api
-artifact_total: 10
+artifact_total: 11
 asyncapis:
 - description: ''
   name: Alloyx Webhooks
@@ -73,57 +86,57 @@ common:
   type: BlogRSS
   url: https://www.alloyx.com/blog-feed.xml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/rules/alloyx-rules.yml
+  href: https://artifacts.apis.io/alloyx/rules/alloyx-rules.yml
   title: ''
   type: Spectral
   url: rules/alloyx-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/vocabulary/alloyx-vocabulary.yml
+  href: https://artifacts.apis.io/alloyx/vocabulary/alloyx-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/alloyx-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/alloyx/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/asyncapi/alloyx-webhooks.yml
+  href: https://artifacts.apis.io/alloyx/asyncapi/alloyx-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/alloyx-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/conventions/alloyx-conventions.yml
+  href: https://artifacts.apis.io/alloyx/conventions/alloyx-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/alloyx-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/conventions/alloyx-conventions.yml
+  href: https://artifacts.apis.io/alloyx/conventions/alloyx-conventions.yml
   title: ''
   type: Conventions
   url: conventions/alloyx-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/errors/alloyx-problem-types.yml
+  href: https://artifacts.apis.io/alloyx/errors/alloyx-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/alloyx-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/conformance/alloyx-conformance.yml
+  href: https://artifacts.apis.io/alloyx/conformance/alloyx-conformance.yml
   title: ''
   type: Conformance
   url: conformance/alloyx-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/llms/alloyx-llms.txt
+  href: https://artifacts.apis.io/alloyx/llms/alloyx-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/alloyx-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/hosts/alloyx-hosts.yml
+  href: https://artifacts.apis.io/alloyx/hosts/alloyx-hosts.yml
   title: ''
   type: Hosts
   url: hosts/alloyx-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/vendors/alloyx-vendors.yml
+  href: https://artifacts.apis.io/alloyx/vendors/alloyx-vendors.yml
   title: ''
   type: Vendors
   url: vendors/alloyx-vendors.yml
@@ -132,7 +145,7 @@ common:
   type: PrivacyPolicy
   url: https://www.alloyx.com/privacypolicy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/security/alloyx-domain-security.yml
+  href: https://artifacts.apis.io/alloyx/security/alloyx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/alloyx-domain-security.yml
@@ -156,7 +169,7 @@ overview: 'AlloyX publishes 7 API contracts indexed on the [APIs.io](https://api
 
 
   The AlloyX catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.'
-random_paper: 5
+random_paper: 17
 rules:
 - authorship: generated
   effective_rule_count: 57
@@ -172,23 +185,23 @@ rules:
   slug: alloyx-rules
 score:
   band: emerging
-  composite: 23.6
+  composite: 22.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 27.8
     catalog_earned_first_party: 0.0
     catalog_gap: 87.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -1.4
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 22.0
-    contract_quality: 54.3
+    contract_quality: 56.6
     developer_ergonomics: 1.8
     discoverability: 46.4
     operational_transparency: 7.9
-  previous_composite: 23.5
+  previous_composite: 24.2
   provenance:
     conformance: derived
     contracts:
@@ -203,19 +216,23 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/alloyx/refs/heads/main/screenshots/alloyx-2026-10-11T093703.png
+screenshot: https://apis.io/screenshots/alloyx/alloyx-2026-10-11T093703.png
 security:
 - kind: domain-security
   name: Alloyx Domain Security
   slug: alloyx-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: alloyx-availability-reserve
+  slug: alloyx-availability-reserve
 slug: alloyx
 tags:
 - Stablecoins

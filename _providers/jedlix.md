@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API for managing EV charging schedules, retrieving vehicle status, creating charging plans, and accessing billing information.
@@ -36,57 +51,57 @@ asyncapis:
   slug: jedlix-webhooks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/vendors/jedlix-vendors.yml
+  href: https://artifacts.apis.io/jedlix/vendors/jedlix-vendors.yml
   title: ''
   type: Vendors
   url: vendors/jedlix-vendors.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/asyncapi/jedlix-webhooks.yml
+  href: https://artifacts.apis.io/jedlix/asyncapi/jedlix-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/jedlix-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/conventions/jedlix-conventions.yml
+  href: https://artifacts.apis.io/jedlix/conventions/jedlix-conventions.yml
   title: ''
   type: Conventions
   url: conventions/jedlix-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/sandbox/jedlix-sandbox.yml
+  href: https://artifacts.apis.io/jedlix/sandbox/jedlix-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/jedlix-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/authentication/jedlix-authentication.yml
+  href: https://artifacts.apis.io/jedlix/authentication/jedlix-authentication.yml
   title: ''
   type: Authentication
   url: authentication/jedlix-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/lifecycle/jedlix-lifecycle.yml
+  href: https://artifacts.apis.io/jedlix/lifecycle/jedlix-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/jedlix-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/lifecycle/jedlix-lifecycle.yml
+  href: https://artifacts.apis.io/jedlix/lifecycle/jedlix-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/jedlix-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/errors/jedlix-problem-types.yml
+  href: https://artifacts.apis.io/jedlix/errors/jedlix-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/jedlix-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/hosts/jedlix-hosts.yml
+  href: https://artifacts.apis.io/jedlix/hosts/jedlix-hosts.yml
   title: ''
   type: Hosts
   url: hosts/jedlix-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/packages/jedlix-packages.yml
+  href: https://artifacts.apis.io/jedlix/packages/jedlix-packages.yml
   title: ''
   type: SDKs
   url: packages/jedlix-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/packages/jedlix-packages.yml
+  href: https://artifacts.apis.io/jedlix/packages/jedlix-packages.yml
   title: ''
   type: Packages
   url: packages/jedlix-packages.yml
@@ -103,7 +118,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/jedlix
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jedlix/refs/heads/main/security/jedlix-domain-security.yml
+  href: https://artifacts.apis.io/jedlix/security/jedlix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jedlix-domain-security.yml
@@ -129,36 +144,40 @@ overview: 'Jedlix is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Jedlix''s developer surface includes sandbox, authentication, getting-started guide, documentation, and 11 more developer resources.'
-random_paper: 2
+random_paper: 16
 score:
-  band: thin
-  composite: 27.8
+  band: emerging
+  composite: 25.3
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.5
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 39.0
-    developer_ergonomics: 47.6
+    developer_ergonomics: 36.9
     discoverability: 62.5
-    operational_transparency: 21.1
+    operational_transparency: 18.4
+  previous_composite: 27.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/jedlix/jedlix-2026-11-03T134135.png
 security:
 - kind: authentication
   name: Jedlix Authentication

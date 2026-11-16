@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium
+  confidence: low
+  label: Unknown
   onboarding: unknown
-  pricing: freemium
+  pricing: unknown
   public: false
   source:
-  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.3
-  scored_at: '2026-10-17'
+  score: 44.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -93,44 +99,44 @@ apis:
   description: The Newsletters API from Factiva — 2 operation(s) for newsletters.
   name: Factiva Newsletters API
   slug: factiva-newsletters-api
-artifact_total: 23
+artifact_total: 27
 asyncapis:
 - description: ''
   name: Factiva Streams Events
   slug: factiva-streams-events
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/overlays/factiva-content-api-overlay.yaml
+  href: https://artifacts.apis.io/factiva/overlays/factiva-content-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/factiva-content-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/skills/factiva-search-and-fetch-article.md
+  href: https://artifacts.apis.io/factiva/skills/factiva-search-and-fetch-article.md
   title: ''
   type: AgentSkill
   url: skills/factiva-search-and-fetch-article.md
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/overlays/factiva-newsletters-api-overlay.yaml
+  href: https://artifacts.apis.io/factiva/overlays/factiva-newsletters-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/factiva-newsletters-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/skills/factiva-read-newsletter-editions.md
+  href: https://artifacts.apis.io/factiva/skills/factiva-read-newsletter-editions.md
   title: ''
   type: AgentSkill
   url: skills/factiva-read-newsletter-editions.md
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/overlays/factiva-company-news-radar-api-overlay.yaml
+  href: https://artifacts.apis.io/factiva/overlays/factiva-company-news-radar-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/factiva-company-news-radar-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/skills/factiva-company-news-radar.md
+  href: https://artifacts.apis.io/factiva/skills/factiva-company-news-radar.md
   title: ''
   type: AgentSkill
   url: skills/factiva-company-news-radar.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/agentic-access/factiva-agentic-access.yml
+  href: https://artifacts.apis.io/factiva/agentic-access/factiva-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/factiva-agentic-access.yml
@@ -143,7 +149,7 @@ common:
   type: IssueTracker
   url: https://github.com/dowjones/developer-platform-archived/issues
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/security/factiva-domain-security.yml
+  href: https://artifacts.apis.io/factiva/security/factiva-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/factiva-domain-security.yml
@@ -192,7 +198,7 @@ common:
   type: GitHubRepository
   url: https://github.com/dowjones/developer-platform-archived
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/packages/factiva-packages.yml
+  href: https://artifacts.apis.io/factiva/packages/factiva-packages.yml
   title: ''
   type: SDKs
   url: packages/factiva-packages.yml
@@ -221,17 +227,17 @@ common:
   type: Quickstart
   url: https://developer.dowjones.com/documents/site-docs-getting_started-quick_start-getting_credentials
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/packages/factiva-packages.yml
+  href: https://artifacts.apis.io/factiva/packages/factiva-packages.yml
   title: ''
   type: Packages
   url: packages/factiva-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/well-known/factiva-well-known.yml
+  href: https://artifacts.apis.io/factiva/well-known/factiva-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/factiva-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/scopes/factiva-scopes.yml
+  href: https://artifacts.apis.io/factiva/scopes/factiva-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/factiva-scopes.yml
@@ -240,12 +246,12 @@ common:
   type: OpenIDConnect
   url: https://accounts.dowjones.com/.well-known/openid-configuration
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/conventions/factiva-conventions.yml
+  href: https://artifacts.apis.io/factiva/conventions/factiva-conventions.yml
   title: ''
   type: Conventions
   url: conventions/factiva-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/lifecycle/factiva-lifecycle.yml
+  href: https://artifacts.apis.io/factiva/lifecycle/factiva-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/factiva-lifecycle.yml
@@ -258,22 +264,22 @@ common:
   type: Versioning
   url: https://developer.dowjones.com/documents/factiva_integration-essentials-versioning
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/changelog/factiva-changelog.yml
+  href: https://artifacts.apis.io/factiva/changelog/factiva-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/factiva-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/errors/factiva-problem-types.yml
+  href: https://artifacts.apis.io/factiva/errors/factiva-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/factiva-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/errors/factiva-error-codes.yml
+  href: https://artifacts.apis.io/factiva/errors/factiva-error-codes.yml
   title: ''
   type: ErrorCodes
   url: errors/factiva-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/conformance/factiva-conformance.yml
+  href: https://artifacts.apis.io/factiva/conformance/factiva-conformance.yml
   title: ''
   type: Conformance
   url: conformance/factiva-conformance.yml
@@ -282,7 +288,7 @@ common:
   type: Compliance
   url: https://www.dowjones.com/iso-certification/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/security/factiva-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/factiva/security/factiva-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/factiva-vulnerability-disclosure.yml
@@ -291,37 +297,37 @@ common:
   type: Security
   url: https://www.dowjones.com/security/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/data-model/factiva-data-model.yml
+  href: https://artifacts.apis.io/factiva/data-model/factiva-data-model.yml
   title: ''
   type: DataModel
   url: data-model/factiva-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/llms/factiva-llms.txt
+  href: https://artifacts.apis.io/factiva/llms/factiva-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/factiva-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/factiva/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/asyncapi/factiva-streams-events.yml
+  href: https://artifacts.apis.io/factiva/asyncapi/factiva-streams-events.yml
   title: ''
   type: Webhooks
   url: asyncapi/factiva-streams-events.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/plans/factiva-plans-pricing.yml
+  href: https://artifacts.apis.io/factiva/plans/factiva-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/factiva-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/rate-limits/factiva-rate-limits.yml
+  href: https://artifacts.apis.io/factiva/rate-limits/factiva-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/factiva-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/finops/factiva-finops.yml
+  href: https://artifacts.apis.io/factiva/finops/factiva-finops.yml
   title: ''
   type: FinOps
   url: finops/factiva-finops.yml
@@ -332,11 +338,11 @@ common:
 created: '2024'
 description: 'Factiva is Dow Jones'' business information and research service, providing licensed access to a global news and data archive drawn from more than 33,000 sources across 200 countries and 28 languages. Its API suite lets organizations search and retrieve licensed articles, run one-time historical extractions (Snapshots), subscribe to real-time filtered news streams over Google Cloud Pub/Sub, resolve the ~350,000-code Dow Jones Intelligent Identifiers taxonomy of companies, industries, regions and news subjects, and feed copyright-compliant content into retrieval-augmented generation stacks. Access is contract-based: there is no self-service signup and no published pricing, and credentials are issued by Dow Jones after a trial request.'
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Factiva Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: factiva-finops
   template: true
 image: https://www.dowjones.com/wp-content/uploads/sites/9/2021/03/factiva-logo.png
@@ -348,7 +354,7 @@ network: true
 overview: 'Factiva publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Snapshots API, Streams API, Extractions API, and 10 more. Tagged areas include Artificial Intelligence, Business Intelligence, Content Aggregation, Enterprise Data, and Generative AI.
 
 
-  The Factiva catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Factiva catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Factiva''s developer surface includes authentication, getting-started guide, documentation, support, engineering blog, signup flow, API reference, and 44 more developer resources.'
@@ -356,35 +362,48 @@ plans:
 - name: Factiva Plans Pricing
   plan_count: 0
   slug: factiva-plans-pricing
-random_paper: 8
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Factiva Rate Limits
   slug: factiva-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Factiva API Rules
+  rule_count: 50
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 5
+    warn: 8
+  slug: factiva-rules
 scopes:
 - name: Factiva Scopes
   scope_count: 8
   slug: factiva-scopes
   summary_line: 8 scopes · password/authorizationCode/implicit
 score:
-  band: developing
-  composite: 52.7
+  band: strong
+  composite: 54.3
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 40.0
+    artifact_dirs: 28
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 53.6
     developer_ergonomics: 68.5
     discoverability: 78.6
     operational_transparency: 44.7
-  previous_composite: 54.2
+  previous_composite: 54.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -401,13 +420,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 44.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/factiva/refs/heads/main/screenshots/factiva-2026-06-20T181007.png
+screenshot: https://apis.io/screenshots/factiva/factiva-2026-06-20T181007.png
 security:
 - kind: authentication
   name: Factiva Authentication
@@ -425,6 +444,14 @@ security:
   name: Factiva Trust Center
   slug: factiva-trust-center
   summary_line: ISO/IEC 27001, ISAE 3000
+skill_count: 3
+skills:
+- name: Run a Factiva company news radar screen
+  slug: factiva-company-news-radar
+- name: Read Factiva newsletters and their editions
+  slug: factiva-read-newsletter-editions
+- name: Search Factiva and fetch a licensed article
+  slug: factiva-search-and-fetch-article
 slug: factiva
 tags:
 - Artificial Intelligence

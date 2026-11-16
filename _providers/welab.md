@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: WeLab Bank's Open API programme, published under the Hong Kong Monetary Authority Open API Framework and linked as "Open API" from the welab.bank site footer. The developer portal at portal-sandbox.we
@@ -43,7 +46,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/welab/refs/heads/main/security/welab-domain-security.yml
+  href: https://artifacts.apis.io/welab/security/welab-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/welab-domain-security.yml
@@ -96,22 +99,22 @@ common:
   type: Careers
   url: https://www.welab.co/en/careers/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/welab/refs/heads/main/authentication/welab-authentication.yml
+  href: https://artifacts.apis.io/welab/authentication/welab-authentication.yml
   title: ''
   type: Authentication
   url: authentication/welab-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/welab/refs/heads/main/conformance/welab-conformance.yml
+  href: https://artifacts.apis.io/welab/conformance/welab-conformance.yml
   title: ''
   type: Conformance
   url: conformance/welab-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/welab/refs/heads/main/lifecycle/welab-lifecycle.yml
+  href: https://artifacts.apis.io/welab/lifecycle/welab-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/welab-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/welab/refs/heads/main/llms/welab-llms.txt
+  href: https://artifacts.apis.io/welab/llms/welab-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/welab-llms.txt
@@ -144,7 +147,7 @@ overview: 'WeLab is listed with 1 API on the [APIs.io](https://apis.io/) network
 
 
   WeLab''s developer surface includes support, engineering blog, authentication, and 15 more developer resources.'
-random_paper: 17
+random_paper: 19
 score:
   band: emerging
   composite: 19.4
@@ -180,14 +183,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 24.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/welab/refs/heads/main/screenshots/welab-2026-09-02T170601.png
+screenshot: https://apis.io/screenshots/welab/welab-2026-09-02T170601.png
 security:
 - kind: authentication
   name: Welab Authentication

@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.3
-  scored_at: '2026-10-17'
+  score: 35.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Patrons API from Koha — 2 operation(s) for patrons.
@@ -32,52 +45,52 @@ apis:
 artifact_total: 6
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koha/refs/heads/main/rules/koha-rules.yml
+  href: https://artifacts.apis.io/koha/rules/koha-rules.yml
   title: ''
   type: Spectral
   url: rules/koha-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koha/refs/heads/main/json-ld/koha-context.jsonld
+  href: https://artifacts.apis.io/koha/json-ld/koha-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/koha-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koha/refs/heads/main/vocabulary/koha-vocabulary.yml
+  href: https://artifacts.apis.io/koha/vocabulary/koha-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/koha-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koha/refs/heads/main/data-model/koha-data-model.yml
+  href: https://artifacts.apis.io/koha/data-model/koha-data-model.yml
   title: ''
   type: DataModel
   url: data-model/koha-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koha/refs/heads/main/conformance/koha-conformance.yml
+  href: https://artifacts.apis.io/koha/conformance/koha-conformance.yml
   title: ''
   type: Conformance
   url: conformance/koha-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/koha/refs/heads/main/well-known/koha-git-security.txt
+  href: https://artifacts.apis.io/koha/well-known/koha-git-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/koha-git-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/koha/refs/heads/main/well-known/koha-well-known.yml
+  href: https://artifacts.apis.io/koha/well-known/koha-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/koha-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/koha/refs/heads/main/hosts/koha-hosts.yml
+  href: https://artifacts.apis.io/koha/hosts/koha-hosts.yml
   title: ''
   type: Hosts
   url: hosts/koha-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/koha/refs/heads/main/packages/koha-packages.yml
+  href: https://artifacts.apis.io/koha/packages/koha-packages.yml
   title: ''
   type: SDKs
   url: packages/koha-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/koha/refs/heads/main/packages/koha-packages.yml
+  href: https://artifacts.apis.io/koha/packages/koha-packages.yml
   title: ''
   type: Packages
   url: packages/koha-packages.yml
@@ -86,7 +99,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/Koha-Community
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/koha/refs/heads/main/security/koha-domain-security.yml
+  href: https://artifacts.apis.io/koha/security/koha-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/koha-domain-security.yml
@@ -139,7 +152,7 @@ overview: 'Koha is listed with 1 API on the [APIs.io](https://apis.io/) network:
 
 
   Koha''s developer surface includes documentation, support, and 14 more developer resources.'
-random_paper: 1
+random_paper: 11
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -155,21 +168,23 @@ rules:
   slug: koha-rules
 score:
   band: emerging
-  composite: 20.0
+  composite: 18.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 52.8
     catalog_earned_first_party: 0.0
     catalog_gap: 47.3
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.7
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 21.3
-    developer_ergonomics: 31.0
+    developer_ergonomics: 19.0
     discoverability: 53.6
-    operational_transparency: 5.3
+    operational_transparency: 13.2
+  previous_composite: 21.3
   provenance:
     conformance: derived
     contracts:
@@ -184,12 +199,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/koha/koha-2026-11-03T134501.png
 security:
 - kind: domain-security
   name: Koha Domain Security

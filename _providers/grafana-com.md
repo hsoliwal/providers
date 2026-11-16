@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-10-17'
+  score: 31.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 167
   human_in_the_loop: 23
@@ -272,55 +277,55 @@ apis:
   description: If you are running Grafana Enterprise and have Fine-grained access control enabled, for some endpoints you would need to have relevant permissions. Refer to specific resources to understand what permi
   name: Grafana Data Sources API
   slug: grafana-com-data-sources-api
-artifact_total: 97
+artifact_total: 100
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/capabilities/grafana-com-capability-edges.yml
+  href: https://artifacts.apis.io/grafana-com/capabilities/grafana-com-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/grafana-com-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/agentic-access/grafana-com-agentic-access.yml
+  href: https://artifacts.apis.io/grafana-com/agentic-access/grafana-com-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/grafana-com-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/finops/grafana-com-finops.yml
+  href: https://artifacts.apis.io/grafana-com/finops/grafana-com-finops.yml
   title: ''
   type: FinOps
   url: finops/grafana-com-finops.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/rate-limits/grafana-com-rate-limits.yml
+  href: https://artifacts.apis.io/grafana-com/rate-limits/grafana-com-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/grafana-com-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/plans/grafana-com-plans-pricing.yml
+  href: https://artifacts.apis.io/grafana-com/plans/grafana-com-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/grafana-com-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/rules/grafana-com-rules.yml
+  href: https://artifacts.apis.io/grafana-com/rules/grafana-com-rules.yml
   title: ''
   type: Spectral
   url: rules/grafana-com-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/vocabulary/grafana-com-vocabulary.yml
+  href: https://artifacts.apis.io/grafana-com/vocabulary/grafana-com-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/grafana-com-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/grafana-com/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/data-model/grafana-com-data-model.yml
+  href: https://artifacts.apis.io/grafana-com/data-model/grafana-com-data-model.yml
   title: ''
   type: DataModel
   url: data-model/grafana-com-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/changelog/grafana-com-changelog.yml
+  href: https://artifacts.apis.io/grafana-com/changelog/grafana-com-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/grafana-com-changelog.yml
@@ -329,47 +334,47 @@ common:
   type: Compliance
   url: https://trust.grafana.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/security/grafana-com-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/grafana-com/security/grafana-com-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/grafana-com-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/authentication/grafana-com-authentication.yml
+  href: https://artifacts.apis.io/grafana-com/authentication/grafana-com-authentication.yml
   title: ''
   type: Authentication
   url: authentication/grafana-com-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/errors/grafana-com-problem-types.yml
+  href: https://artifacts.apis.io/grafana-com/errors/grafana-com-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/grafana-com-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/conformance/grafana-com-conformance.yml
+  href: https://artifacts.apis.io/grafana-com/conformance/grafana-com-conformance.yml
   title: ''
   type: Conformance
   url: conformance/grafana-com-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/llms/grafana-com-llms.txt
+  href: https://artifacts.apis.io/grafana-com/llms/grafana-com-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/grafana-com-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/well-known/grafana-com-status-security.txt
+  href: https://artifacts.apis.io/grafana-com/well-known/grafana-com-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/grafana-com-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/well-known/grafana-com-well-known.yml
+  href: https://artifacts.apis.io/grafana-com/well-known/grafana-com-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/grafana-com-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/hosts/grafana-com-hosts.yml
+  href: https://artifacts.apis.io/grafana-com/hosts/grafana-com-hosts.yml
   title: ''
   type: Hosts
   url: hosts/grafana-com-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/vendors/grafana-com-vendors.yml
+  href: https://artifacts.apis.io/grafana-com/vendors/grafana-com-vendors.yml
   title: ''
   type: Vendors
   url: vendors/grafana-com-vendors.yml
@@ -386,7 +391,7 @@ common:
   type: GettingStarted
   url: https://grafana.com/docs/learning-paths/grafana-cloud-onboarding
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/security/grafana-com-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/grafana-com/security/grafana-com-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/grafana-com-vulnerability-disclosure.yml
@@ -395,12 +400,12 @@ common:
   type: Website
   url: https://www.grafana.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/security/grafana-com-trust-center.yml
+  href: https://artifacts.apis.io/grafana-com/security/grafana-com-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/grafana-com-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/security/grafana-com-domain-security.yml
+  href: https://artifacts.apis.io/grafana-com/security/grafana-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/grafana-com-domain-security.yml
@@ -743,7 +748,7 @@ plans:
 - name: Grafana Com Plans Pricing
   plan_count: 5
   slug: grafana-com-plans-pricing
-random_paper: 6
+random_paper: 4
 rate_limits:
 - limit_count: 7
   name: Grafana Com Rate Limits
@@ -763,30 +768,30 @@ rules:
   slug: grafana-com-rules
 score:
   band: strong
-  composite: 64.3
+  composite: 60.6
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 26
     catalog_earned: 46.8
     catalog_earned_first_party: 0.0
     catalog_gap: 68.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -14.5
+  delta: -3.7
   facets:
-    access_clarity: 76.3
+    access_clarity: 65.8
     contract_governance: 22.0
-    contract_quality: 47.3
-    developer_ergonomics: 75.6
-    discoverability: 66.1
+    contract_quality: 52.2
+    developer_ergonomics: 63.7
+    discoverability: 65.2
     operational_transparency: 55.3
-  previous_composite: 78.8
+  previous_composite: 64.3
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 41
     mcp: derived
     skills: derived
@@ -795,14 +800,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+    score: 32.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/grafana-com/refs/heads/main/screenshots/grafana-com-2026-06-20T182343.png
+screenshot: https://apis.io/screenshots/grafana-com/grafana-com-2026-06-20T182343.png
 security:
 - kind: authentication
   name: Grafana Com Authentication
@@ -820,6 +825,14 @@ security:
   name: Grafana Com Trust Center
   slug: grafana-com-trust-center
   summary_line: SOC 2, ISO 27001, PCI DSS, FedRAMP, GDPR, CSA STAR
+skill_count: 3
+skills:
+- name: grafana-com-annotations-create-and-retrieve
+  slug: grafana-com-annotations-create-and-retrieve
+- name: grafana-com-create-dashboard
+  slug: grafana-com-create-dashboard
+- name: grafana-com-create-folder
+  slug: grafana-com-create-folder
 slug: grafana-com
 tags:
 - Observability

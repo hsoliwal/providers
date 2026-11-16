@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stoik/refs/heads/main/security/stoik-domain-security.yml
+  href: https://artifacts.apis.io/stoik/security/stoik-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/stoik-domain-security.yml
@@ -66,7 +70,7 @@ common:
   type: ChangeLog
   url: https://docs.stoik.io/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/stoik/refs/heads/main/changelog/stoik-changelog.yml
+  href: https://artifacts.apis.io/stoik/changelog/stoik-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/stoik-changelog.yml
@@ -83,7 +87,7 @@ common:
   type: Login
   url: https://app.stoik.io/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/stoik/refs/heads/main/llms/stoik-llms.txt
+  href: https://artifacts.apis.io/stoik/llms/stoik-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/stoik-llms.txt
@@ -100,12 +104,12 @@ overview: 'Stoik is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 
 
   Stoik''s developer surface includes documentation, engineering blog, changelog, and 9 more developer resources.'
-random_paper: 4
+random_paper: 2
 score:
   band: emerging
   composite: 16.1
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -134,14 +138,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 12.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/stoik/refs/heads/main/screenshots/stoik-2026-09-02T160916.png
+screenshot: https://apis.io/screenshots/stoik/stoik-2026-09-02T160916.png
 security:
 - kind: domain-security
   name: Stoik Domain Security

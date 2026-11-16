@@ -1,16 +1,17 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: human-only
   dimensions:
@@ -27,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 4
+artifact_total: 5
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/plans/flow-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/flow-ai/plans/flow-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/flow-ai-plans-pricing.yml
@@ -97,57 +101,57 @@ common:
   type: YouTube
   url: https://youtube.com/@flowaicom
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/llms/flow-ai-llms.txt
+  href: https://artifacts.apis.io/flow-ai/llms/flow-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/flow-ai-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/packages/flow-ai-packages.yml
+  href: https://artifacts.apis.io/flow-ai/packages/flow-ai-packages.yml
   title: ''
   type: Packages
   url: packages/flow-ai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/packages/flow-ai-packages.yml
+  href: https://artifacts.apis.io/flow-ai/packages/flow-ai-packages.yml
   title: ''
   type: SDKs
   url: packages/flow-ai-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/mcp/flow-ai-mcp.yml
+  href: https://artifacts.apis.io/flow-ai/mcp/flow-ai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/flow-ai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/flow-ai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/changelog/flow-ai-changelog.yml
+  href: https://artifacts.apis.io/flow-ai/changelog/flow-ai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/flow-ai-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/cli/flow-ai-cli.yml
+  href: https://artifacts.apis.io/flow-ai/cli/flow-ai-cli.yml
   title: ''
   type: CLI
   url: cli/flow-ai-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/authentication/flow-ai-authentication.yml
+  href: https://artifacts.apis.io/flow-ai/authentication/flow-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/flow-ai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/conventions/flow-ai-conventions.yml
+  href: https://artifacts.apis.io/flow-ai/conventions/flow-ai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/flow-ai-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/sandbox/flow-ai-sandbox.yml
+  href: https://artifacts.apis.io/flow-ai/sandbox/flow-ai-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/flow-ai-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/conformance/flow-ai-conformance.yml
+  href: https://artifacts.apis.io/flow-ai/conformance/flow-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/flow-ai-conformance.yml
@@ -156,7 +160,7 @@ common:
   type: Compliance
   url: https://flow-ai.com/legal
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/security/flow-ai-domain-security.yml
+  href: https://artifacts.apis.io/flow-ai/security/flow-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flow-ai-domain-security.yml
@@ -180,18 +184,18 @@ plans:
 - name: Flow Ai Plans Pricing
   plan_count: 2
   slug: flow-ai-plans-pricing
-random_paper: 5
+random_paper: 15
 score:
   band: thin
   composite: 37.5
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.3
+  delta: 0.0
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
@@ -199,7 +203,7 @@ score:
     developer_ergonomics: 80.4
     discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 33.2
+  previous_composite: 37.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -214,14 +218,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 23.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/flow-ai/refs/heads/main/screenshots/flow-ai-2026-07-25T214827.png
+screenshot: https://apis.io/screenshots/flow-ai/flow-ai-2026-07-25T214827.png
 security:
 - kind: authentication
   name: Flow Ai Authentication
@@ -231,6 +235,10 @@ security:
   name: Flow Ai Domain Security
   slug: flow-ai-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Build a coordinator-planner-executor data agent
+  slug: flow-ai-build-data-agent
 slug: flow-ai
 tags:
 - Company

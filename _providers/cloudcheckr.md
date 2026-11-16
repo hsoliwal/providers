@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - baseURL: https://api.flexera.com
@@ -49,67 +67,67 @@ apis:
 artifact_total: 11
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/rate-limits/cloudcheckr-rate-limits.yml
+  href: https://artifacts.apis.io/cloudcheckr/rate-limits/cloudcheckr-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cloudcheckr-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/rules/cloudcheckr-rules.yml
+  href: https://artifacts.apis.io/cloudcheckr/rules/cloudcheckr-rules.yml
   title: ''
   type: Spectral
   url: rules/cloudcheckr-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/json-ld/cloudcheckr-context.jsonld
+  href: https://artifacts.apis.io/cloudcheckr/json-ld/cloudcheckr-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cloudcheckr-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/vocabulary/cloudcheckr-vocabulary.yml
+  href: https://artifacts.apis.io/cloudcheckr/vocabulary/cloudcheckr-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cloudcheckr-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/data-model/cloudcheckr-data-model.yml
+  href: https://artifacts.apis.io/cloudcheckr/data-model/cloudcheckr-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cloudcheckr-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/conventions/cloudcheckr-conventions.yml
+  href: https://artifacts.apis.io/cloudcheckr/conventions/cloudcheckr-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cloudcheckr-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/authentication/cloudcheckr-authentication.yml
+  href: https://artifacts.apis.io/cloudcheckr/authentication/cloudcheckr-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloudcheckr-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/conformance/cloudcheckr-conformance.yml
+  href: https://artifacts.apis.io/cloudcheckr/conformance/cloudcheckr-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloudcheckr-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/llms/cloudcheckr-llms.txt
+  href: https://artifacts.apis.io/cloudcheckr/llms/cloudcheckr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cloudcheckr-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/well-known/cloudcheckr-status-security.txt
+  href: https://artifacts.apis.io/cloudcheckr/well-known/cloudcheckr-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cloudcheckr-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/well-known/cloudcheckr-well-known.yml
+  href: https://artifacts.apis.io/cloudcheckr/well-known/cloudcheckr-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cloudcheckr-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/hosts/cloudcheckr-hosts.yml
+  href: https://artifacts.apis.io/cloudcheckr/hosts/cloudcheckr-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cloudcheckr-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/vendors/cloudcheckr-vendors.yml
+  href: https://artifacts.apis.io/cloudcheckr/vendors/cloudcheckr-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cloudcheckr-vendors.yml
@@ -142,7 +160,7 @@ common:
   type: Documentation
   url: https://developer.flexera.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudcheckr/refs/heads/main/security/cloudcheckr-domain-security.yml
+  href: https://artifacts.apis.io/cloudcheckr/security/cloudcheckr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudcheckr-domain-security.yml
@@ -185,7 +203,7 @@ overview: 'CloudCheckr is listed with 4 APIs on the [APIs.io](https://apis.io/) 
 
 
   CloudCheckr''s developer surface includes authentication, engineering blog, getting-started guide, documentation, and 18 more developer resources.'
-random_paper: 15
+random_paper: 7
 rate_limits:
 - limit_count: 1
   name: Cloudcheckr Rate Limits
@@ -204,26 +222,28 @@ rules:
     warn: 1
   slug: cloudcheckr-rules
 score:
-  band: thin
-  composite: 31.6
+  band: emerging
+  composite: 25.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 20
     catalog_earned: 67.8
     catalog_earned_first_party: 8.0
     catalog_gap: 47.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.5
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 22.0
-    contract_quality: 21.6
-    developer_ergonomics: 35.7
-    discoverability: 80.4
-    operational_transparency: 47.4
+    contract_quality: 20.7
+    developer_ergonomics: 23.8
+    discoverability: 79.5
+    operational_transparency: 34.2
+  previous_composite: 31.4
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 5
       marker_coverage: 100.0
       total: 5
@@ -233,12 +253,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cloudcheckr/cloudcheckr-2026-11-03T124459.png
 security:
 - kind: authentication
   name: Cloudcheckr Authentication

@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.8
-  scored_at: '2026-10-17'
+  score: 29.3
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.shopgo.me/v1/management
@@ -63,15 +66,12 @@ apis:
   description: Dashboard user and tenant information
   name: ShopGo Users API
   slug: shopgo-users-api
-artifact_total: 14
+artifact_total: 16
 asyncapis:
 - description: ''
   name: Shopgo Webhooks
   slug: shopgo-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ShopGo Management Authentication API
   slug: open-shopgo-authentication-api
@@ -109,67 +109,67 @@ common:
   type: GitHubOrganization
   url: https://github.com/shopgo
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/authentication/shopgo-authentication.yml
+  href: https://artifacts.apis.io/shopgo/authentication/shopgo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/shopgo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/conventions/shopgo-conventions.yml
+  href: https://artifacts.apis.io/shopgo/conventions/shopgo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/shopgo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/errors/shopgo-problem-types.yml
+  href: https://artifacts.apis.io/shopgo/errors/shopgo-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/shopgo-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/data-model/shopgo-data-model.yml
+  href: https://artifacts.apis.io/shopgo/data-model/shopgo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/shopgo-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/conformance/shopgo-conformance.yml
+  href: https://artifacts.apis.io/shopgo/conformance/shopgo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/shopgo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/lifecycle/shopgo-lifecycle.yml
+  href: https://artifacts.apis.io/shopgo/lifecycle/shopgo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/shopgo-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/asyncapi/shopgo-webhooks.yml
+  href: https://artifacts.apis.io/shopgo/asyncapi/shopgo-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/shopgo-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/mcp/shopgo-mcp.yml
+  href: https://artifacts.apis.io/shopgo/mcp/shopgo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/shopgo-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/shopgo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/llms/shopgo-llms.txt
+  href: https://artifacts.apis.io/shopgo/llms/shopgo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/shopgo-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/well-known/shopgo-well-known.yml
+  href: https://artifacts.apis.io/shopgo/well-known/shopgo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/shopgo-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/overlays/shopgo-management-overlay.yaml
+  href: https://artifacts.apis.io/shopgo/overlays/shopgo-management-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/shopgo-management-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/security/shopgo-domain-security.yml
+  href: https://artifacts.apis.io/shopgo/security/shopgo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shopgo-domain-security.yml
@@ -184,36 +184,51 @@ network: true
 overview: 'ShopGo publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Orders API, Store API, and 2 more. Tagged areas include Company, E-Commerce, Online Store, Payments, and Shipping.
 
 
-  The ShopGo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The ShopGo catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   ShopGo''s developer surface includes documentation, API reference, authentication, and 15 more developer resources.'
-random_paper: 18
+random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: ShopGo API Rules
+  rule_count: 57
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 3
+    warn: 1
+  slug: shopgo-rules
 score:
   band: thin
-  composite: 29.5
+  composite: 31.1
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 20
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 54.6
     developer_ergonomics: 39.9
     discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - jordan
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - mena
     - middle-east
-  previous_composite: 29.5
+  previous_composite: 31.1
   provenance:
     conformance: derived
     contracts:
@@ -229,13 +244,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/shopgo/refs/heads/main/screenshots/shopgo-2026-09-02T155259.png
+screenshot: https://apis.io/screenshots/shopgo/shopgo-2026-09-02T155259.png
 security:
 - kind: authentication
   name: Shopgo Authentication
@@ -245,6 +260,12 @@ security:
   name: Shopgo Domain Security
   slug: shopgo-domain-security
   summary_line: TLSv1.3
+skill_count: 2
+skills:
+- name: Provide custom ShopGo shipping rates via webhook
+  slug: shopgo-custom-shipping-rates
+- name: Process a ShopGo order (payment, authorization, fulfillment)
+  slug: shopgo-process-order
 slug: shopgo
 tags:
 - Company

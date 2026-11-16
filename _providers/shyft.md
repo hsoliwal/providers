@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.8
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://app.myshyft.com
@@ -318,11 +321,8 @@ apis:
   description: The Support API from Shyft — 2 operation(s) for support.
   name: Shyft Support API
   slug: shyft-support-api
-artifact_total: 115
+artifact_total: 118
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Shyft Customer Authentication > Email API
   slug: open-shyft-authentication-email-api
@@ -493,22 +493,22 @@ collections:
   slug: open-shyft-support-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/capabilities/shyft-capability-edges.yml
+  href: https://artifacts.apis.io/shyft/capabilities/shyft-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/shyft-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/overlays/shyft-customer-overlay.yaml
+  href: https://artifacts.apis.io/shyft/overlays/shyft-customer-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/shyft-customer-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/security/shyft-domain-security.yml
+  href: https://artifacts.apis.io/shyft/security/shyft-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shyft-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/authentication/shyft-authentication.yml
+  href: https://artifacts.apis.io/shyft/authentication/shyft-authentication.yml
   title: ''
   type: Authentication
   url: authentication/shyft-authentication.yml
@@ -537,47 +537,47 @@ common:
   type: Login
   url: https://app.myshyft.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/mcp/shyft-mcp.yml
+  href: https://artifacts.apis.io/shyft/mcp/shyft-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/shyft-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/errors/shyft-problem-types.yml
+  href: https://artifacts.apis.io/shyft/errors/shyft-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/shyft-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/conventions/shyft-conventions.yml
+  href: https://artifacts.apis.io/shyft/conventions/shyft-conventions.yml
   title: ''
   type: Conventions
   url: conventions/shyft-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/data-model/shyft-data-model.yml
+  href: https://artifacts.apis.io/shyft/data-model/shyft-data-model.yml
   title: ''
   type: DataModel
   url: data-model/shyft-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/lifecycle/shyft-lifecycle.yml
+  href: https://artifacts.apis.io/shyft/lifecycle/shyft-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/shyft-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/conformance/shyft-conformance.yml
+  href: https://artifacts.apis.io/shyft/conformance/shyft-conformance.yml
   title: ''
   type: Conformance
   url: conformance/shyft-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/sandbox/shyft-sandbox.yml
+  href: https://artifacts.apis.io/shyft/sandbox/shyft-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/shyft-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/llms/shyft-llms.txt
+  href: https://artifacts.apis.io/shyft/llms/shyft-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/shyft-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/shyft/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -592,27 +592,43 @@ network: true
 overview: 'Shyft publishes 56 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication > Email API, Authentication > PhoneNumber API, Callbacks API, and 53 more. Tagged areas include Company, Workforce Management, Employee Scheduling, Shift Swapping, and Team Communication.
 
 
+  The Shyft catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Shyft''s developer surface includes authentication, documentation, API reference, pricing, signup flow, sandbox, and 13 more developer resources.'
-random_paper: 8
+random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 84
+  extends:
+  - spectral:oas
+  name: Shyft API Rules
+  rule_count: 43
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 1
+    warn: 9
+  slug: shyft-rules
 score:
   band: thin
-  composite: 27.1
+  composite: 28.8
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 37.0
+    artifact_dirs: 19
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 42.8
     developer_ergonomics: 37.5
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 27.1
+  previous_composite: 28.8
   provenance:
     conformance: derived
     contracts:
@@ -628,13 +644,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/shyft/refs/heads/main/screenshots/shyft-2026-09-02T155358.png
+screenshot: https://apis.io/screenshots/shyft/shyft-2026-09-02T155358.png
 security:
 - kind: authentication
   name: Shyft Authentication
@@ -644,6 +660,14 @@ security:
   name: Shyft Domain Security
   slug: shyft-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Read and set a worker's availability (Shyft)
+  slug: shyft-manage-availability
+- name: Create, publish and cover shifts (Shyft)
+  slug: shyft-manage-shifts
+- name: Authenticate a user by phone number (Shyft)
+  slug: shyft-phone-authentication
 slug: shyft
 tags:
 - Company

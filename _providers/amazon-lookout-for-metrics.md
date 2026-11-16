@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -185,7 +191,7 @@ apis:
   description: The UpdateMetricSet API from Amazon Lookout for Metrics — 1 operation(s) for updatemetricset.
   name: Amazon Lookout for Metrics UpdateMetricSet API
   slug: amazon-lookout-for-metrics-updatemetricset-api
-artifact_total: 795
+artifact_total: 794
 collections:
 - collection_type: postman
   name: Amazon Lookout for Metrics ActivateAnomalyDetector API
@@ -272,9 +278,6 @@ collections:
   name: Amazon Lookout for Metrics ActivateAnomalyDetector UpdateMetricSet API
   slug: postman-amazon-lookout-for-metrics-updatemetricset-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Amazon Lookout for Metrics ActivateAnomalyDetector API
   slug: open-amazon-lookout-for-metrics-activateanomalydetector-api
 - collection_type: open
@@ -360,17 +363,17 @@ collections:
   slug: open-amazon-lookout-for-metrics-updatemetricset-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/plans/amazon-lookout-for-metrics-plans-pricing.yml
+  href: https://artifacts.apis.io/amazon-lookout-for-metrics/plans/amazon-lookout-for-metrics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/amazon-lookout-for-metrics-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/rate-limits/amazon-lookout-for-metrics-rate-limits.yml
+  href: https://artifacts.apis.io/amazon-lookout-for-metrics/rate-limits/amazon-lookout-for-metrics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/amazon-lookout-for-metrics-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/finops/amazon-lookout-for-metrics-finops.yml
+  href: https://artifacts.apis.io/amazon-lookout-for-metrics/finops/amazon-lookout-for-metrics-finops.yml
   title: ''
   type: FinOps
   url: finops/amazon-lookout-for-metrics-finops.yml
@@ -379,7 +382,7 @@ common:
   type: Website
   url: https://amazon.com
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/capabilities/amazon-lookout-for-metrics-capability-edges.yml
+  href: https://artifacts.apis.io/amazon-lookout-for-metrics/capabilities/amazon-lookout-for-metrics-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/amazon-lookout-for-metrics-capability-edges.yml
@@ -388,27 +391,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-lookout-for-metrics/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/agentic-access/amazon-lookout-for-metrics-agentic-access.yml
+  href: https://artifacts.apis.io/amazon-lookout-for-metrics/agentic-access/amazon-lookout-for-metrics-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amazon-lookout-for-metrics-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/security/amazon-lookout-for-metrics-trust-center.yml
+  href: https://artifacts.apis.io/amazon-lookout-for-metrics/security/amazon-lookout-for-metrics-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/amazon-lookout-for-metrics-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/security/amazon-lookout-for-metrics-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-lookout-for-metrics/security/amazon-lookout-for-metrics-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-lookout-for-metrics-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/security/amazon-lookout-for-metrics-domain-security.yml
+  href: https://artifacts.apis.io/amazon-lookout-for-metrics/security/amazon-lookout-for-metrics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-lookout-for-metrics-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/authentication/amazon-lookout-for-metrics-authentication.yml
+  href: https://artifacts.apis.io/amazon-lookout-for-metrics/authentication/amazon-lookout-for-metrics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amazon-lookout-for-metrics-authentication.yml
@@ -461,12 +464,12 @@ common:
   type: Contact
   url: https://aws.amazon.com/contact-us/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/rules/amazon-lookout-for-metrics-spectral-rules.yml
+  href: https://artifacts.apis.io/amazon-lookout-for-metrics/rules/amazon-lookout-for-metrics-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/amazon-lookout-for-metrics-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/vocabulary/amazon-lookout-for-metrics-vocabulary.yaml
+  href: https://artifacts.apis.io/amazon-lookout-for-metrics/vocabulary/amazon-lookout-for-metrics-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/amazon-lookout-for-metrics-vocabulary.yaml
@@ -1179,7 +1182,7 @@ finops:
 - has_sources: false
   method: generated
   name: Amazon Lookout For Metrics Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: amazon-lookout-for-metrics-finops
   template: true
@@ -2570,7 +2573,7 @@ modified: '2026-09-16'
 name: Amazon Lookout for Metrics
 nav: Providers
 network: true
-overview: 'Amazon Lookout for Metrics publishes 28 API contracts indexed on the [APIs.io](https://apis.io/) network, including ActivateAnomalyDetector API, BackTestAnomalyDetector API, CreateAlert API, and 25 more. Tagged areas include Anomaly Detection, Business Intelligence, Machine Learning, Metrics, and Monitoring.
+overview: 'Amazon Lookout for Metrics publishes 28 API contracts indexed on the [APIs.io](https://apis.io/) network, including ActivateAnomalyDetector API, BackTestAnomalyDetector API, CreateAlert API, and 25 more. Tagged areas include Anomaly Detection, Amazon Web Services, Business Intelligence, Machine Learning, and Metrics.
 
 
   The Amazon Lookout for Metrics catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -2614,7 +2617,7 @@ score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 68.4
     catalog_earned_first_party: 0.0
     catalog_gap: 46.6
@@ -2643,13 +2646,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-metrics/refs/heads/main/screenshots/amazon-lookout-for-metrics-2026-06-20T171728.png
+screenshot: https://apis.io/screenshots/amazon-lookout-for-metrics/amazon-lookout-for-metrics-2026-06-20T171728.png
 security:
 - kind: authentication
   name: Amazon Lookout For Metrics Authentication
@@ -2670,6 +2673,7 @@ security:
 slug: amazon-lookout-for-metrics
 tags:
 - Anomaly Detection
+- Amazon Web Services
 - Business Intelligence
 - Machine Learning
 - Metrics

@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.0
-  scored_at: '2026-10-17'
+  score: 40.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -54,11 +57,8 @@ apis:
   description: The CrimeoMeter Sex Offenders API — 2 published operations (record search and radius search) over US state sex offender registry data, transcribed from CrimeoMeter's public Postman collection.
   name: Sex Offenders API Sex Offenders API
   slug: sex-offenders-api-sex-offenders-api
-artifact_total: 12
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Crimeometer Sex Offenders API
   slug: open-sex-offenders-api-sex-offenders-api
@@ -66,8 +66,13 @@ collections:
   name: Crimeometer Sex Offenders API
   slug: open-sex-offenders-api
 common:
+- group: other
+  href: https://artifacts.apis.io/sex-offenders-api/capabilities/sex-offenders-api-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sex-offenders-api-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/finops/sex-offenders-api-finops.yml
+  href: https://artifacts.apis.io/sex-offenders-api/finops/sex-offenders-api-finops.yml
   title: ''
   type: FinOps
   url: finops/sex-offenders-api-finops.yml
@@ -76,77 +81,77 @@ common:
   type: Website
   url: https://www.crimeometer.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/agentic-access/sex-offenders-api-agentic-access.yml
+  href: https://artifacts.apis.io/sex-offenders-api/agentic-access/sex-offenders-api-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sex-offenders-api-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/security/sex-offenders-api-domain-security.yml
+  href: https://artifacts.apis.io/sex-offenders-api/security/sex-offenders-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sex-offenders-api-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/authentication/sex-offenders-api-authentication.yml
+  href: https://artifacts.apis.io/sex-offenders-api/authentication/sex-offenders-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sex-offenders-api-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/packages/sex-offenders-api-packages.yml
+  href: https://artifacts.apis.io/sex-offenders-api/packages/sex-offenders-api-packages.yml
   title: ''
   type: Packages
   url: packages/sex-offenders-api-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/mcp/sex-offenders-api-mcp.yml
+  href: https://artifacts.apis.io/sex-offenders-api/mcp/sex-offenders-api-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/sex-offenders-api-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/mcp/sex-offenders-api-tool-crosswalk.yml
+  href: https://artifacts.apis.io/sex-offenders-api/mcp/sex-offenders-api-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/sex-offenders-api-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/llms/sex-offenders-api-llms.txt
+  href: https://artifacts.apis.io/sex-offenders-api/llms/sex-offenders-api-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sex-offenders-api-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/conformance/sex-offenders-api-conformance.yml
+  href: https://artifacts.apis.io/sex-offenders-api/conformance/sex-offenders-api-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sex-offenders-api-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/errors/sex-offenders-api-problem-types.yml
+  href: https://artifacts.apis.io/sex-offenders-api/errors/sex-offenders-api-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sex-offenders-api-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/lifecycle/sex-offenders-api-lifecycle.yml
+  href: https://artifacts.apis.io/sex-offenders-api/lifecycle/sex-offenders-api-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sex-offenders-api-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/conventions/sex-offenders-api-conventions.yml
+  href: https://artifacts.apis.io/sex-offenders-api/conventions/sex-offenders-api-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sex-offenders-api-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/data-model/sex-offenders-api-data-model.yml
+  href: https://artifacts.apis.io/sex-offenders-api/data-model/sex-offenders-api-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sex-offenders-api-data-model.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/plans/sex-offenders-api-plans-pricing.yml
+  href: https://artifacts.apis.io/sex-offenders-api/plans/sex-offenders-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sex-offenders-api-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/rate-limits/sex-offenders-api-rate-limits.yml
+  href: https://artifacts.apis.io/sex-offenders-api/rate-limits/sex-offenders-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sex-offenders-api-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/sex-offenders-api/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -197,11 +202,11 @@ common:
 created: '2024-11-13'
 description: The Sex Offenders API from CrimeoMeter (CityCop Corporation dba CrimeoMeter, San Francisco) returns registered sex offender records from US state registries, searchable by zip code, first/last name, alias, birthdate, a last-updated window, or a latitude/longitude radius. Records carry identity, physical description, charges, registry status (predator, absconder) and geocoded address, plus created/last-updated/last-synced timestamps that expose how fresh each record is against its source registry. Access is a private x-api-key issued by hand through the Contact Us form; there is no self-service signup. CrimeoMeter publishes no OpenAPI, but does publish a public Postman collection covering v5 of this API.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Sex Offenders Api Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: sex-offenders-api-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sex-offenders-api.png
@@ -214,38 +219,54 @@ modified: '2026-08-28'
 name: Sex Offenders API
 nav: Providers
 network: true
-overview: 'Sex Offenders API publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Sex Offenders API, and 1 more. Tagged areas include Sex Offenders, Public Safety, Crime Data, Background Checks, and Criminal Justice.
+overview: 'Sex Offenders API publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Sex Offenders API, and 1 more. Tagged areas include Sex Offenders, Public Safety, Crime, Background Checks, and Criminal Justice.
 
 
-  Sex Offenders API''s developer surface includes authentication, documentation, API reference, pricing, engineering blog, support, signup flow, and 21 more developer resources.'
+  The Sex Offenders API catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Sex Offenders API''s developer surface includes authentication, documentation, API reference, pricing, engineering blog, support, signup flow, and 22 more developer resources.'
 plans:
 - name: Sex Offenders Api Plans Pricing
   plan_count: 2
   slug: sex-offenders-api-plans-pricing
-random_paper: 2
+random_paper: 16
 rate_limits:
 - limit_count: 0
   name: Sex Offenders Api Rate Limits
   slug: sex-offenders-api-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Sex Offenders API API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: sex-offenders-api-rules
 score:
   band: developing
-  composite: 44.9
+  composite: 46.6
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 45.0
+    artifact_dirs: 27
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 59.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 53.9
     developer_ergonomics: 49.4
     discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 46.5
+  previous_composite: 46.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -262,14 +283,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/sex-offenders-api/refs/heads/main/screenshots/sex-offenders-api-2026-06-20T193740.png
+screenshot: https://apis.io/screenshots/sex-offenders-api/sex-offenders-api-2026-06-20T193740.png
 security:
 - kind: authentication
   name: Sex Offenders Api Authentication
@@ -279,11 +300,17 @@ security:
   name: Sex Offenders Api Domain Security
   slug: sex-offenders-api-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: search-sex-offender-registry-by-name
+  slug: sex-offenders-api-search-registry-by-name
+- name: search-sex-offender-registry-near-a-location
+  slug: sex-offenders-api-search-registry-near-a-location
 slug: sex-offenders-api
 tags:
 - Sex Offenders
 - Public Safety
-- Crime Data
+- Crime
 - Background Checks
 - Criminal Justice
 - Government Data

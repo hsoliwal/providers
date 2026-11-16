@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 6.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Bambuser provides a video commerce platform with live shopping, shoppable video, and video consultation APIs.
@@ -36,7 +50,7 @@ common:
   type: PrivacyPolicy
   url: https://bambuser.com/privacy-policy
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bambuser/refs/heads/main/plans/bambuser-plans-pricing.yml
+  href: https://artifacts.apis.io/bambuser/plans/bambuser-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bambuser-plans-pricing.yml
@@ -45,27 +59,27 @@ common:
   type: Compliance
   url: https://bambuser.com/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bambuser/refs/heads/main/llms/bambuser-llms.txt
+  href: https://artifacts.apis.io/bambuser/llms/bambuser-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bambuser-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bambuser/refs/heads/main/mcp/bambuser-mcp.yml
+  href: https://artifacts.apis.io/bambuser/mcp/bambuser-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/bambuser-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bambuser/refs/heads/main/well-known/bambuser-well-known.yml
+  href: https://artifacts.apis.io/bambuser/well-known/bambuser-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bambuser-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bambuser/refs/heads/main/hosts/bambuser-hosts.yml
+  href: https://artifacts.apis.io/bambuser/hosts/bambuser-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bambuser-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bambuser/refs/heads/main/vendors/bambuser-vendors.yml
+  href: https://artifacts.apis.io/bambuser/vendors/bambuser-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bambuser-vendors.yml
@@ -78,12 +92,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/bambuser
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bambuser/refs/heads/main/security/bambuser-trust-center.yml
+  href: https://artifacts.apis.io/bambuser/security/bambuser-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/bambuser-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bambuser/refs/heads/main/security/bambuser-domain-security.yml
+  href: https://artifacts.apis.io/bambuser/security/bambuser-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bambuser-domain-security.yml
@@ -154,24 +168,26 @@ plans:
 - name: Bambuser Plans Pricing
   plan_count: 4
   slug: bambuser-plans-pricing
-random_paper: 13
+random_paper: 9
 score:
-  band: thin
-  composite: 34.1
+  band: emerging
+  composite: 23.6
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 12
     catalog_earned: 44.0
     catalog_earned_first_party: 12.0
     catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.5
   facets:
-    access_clarity: 78.9
+    access_clarity: 59.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 45.2
+    developer_ergonomics: 22.6
     discoverability: 66.7
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  previous_composite: 34.1
   provenance:
     mcp: first-party
   regulatory:
@@ -179,13 +195,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/bambuser/bambuser-2026-11-03T121524.png
 security:
 - kind: domain-security
   name: Bambuser Domain Security

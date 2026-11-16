@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -53,12 +57,12 @@ common:
   type: TermsOfService
   url: https://www.genesisenergy.com/terms-and-conditions
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/genesis-energy/refs/heads/main/security/genesis-energy-domain-security.yml
+  href: https://artifacts.apis.io/genesis-energy/security/genesis-energy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/genesis-energy-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/genesis-energy/refs/heads/main/conformance/genesis-energy-conformance.yml
+  href: https://artifacts.apis.io/genesis-energy/conformance/genesis-energy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/genesis-energy-conformance.yml
@@ -104,7 +108,7 @@ press:
 - date: ''
   title: Genesis Energy excels in cloud data governance
   url: https://www.informatica.com/customer-success-stories/genesis-energy.html
-random_paper: 15
+random_paper: 5
 score:
   band: emerging
   composite: 11.1
@@ -139,14 +143,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 15.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/genesis-energy/refs/heads/main/screenshots/genesis-energy-2026-06-20T181731.png
+screenshot: https://apis.io/screenshots/genesis-energy/genesis-energy-2026-06-20T181731.png
 security:
 - kind: domain-security
   name: Genesis Energy Domain Security

@@ -5,7 +5,11 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The University of Phoenix identity provider, running ForgeRock Access Management in the /alpha realm. The OpenID Connect discovery document is served anonymously (HTTP 200, 2026-09-04) at https://logi
@@ -41,7 +48,7 @@ apis:
 artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/security/apollo-education-group-domain-security.yml
+  href: https://artifacts.apis.io/apollo-education-group/security/apollo-education-group-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apollo-education-group-domain-security.yml
@@ -82,52 +89,52 @@ common:
   type: PrivacyPolicy
   url: https://www.phoenix.edu/copyright-legal/privacy-policy.html
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/llms/apollo-education-group-llms.txt
+  href: https://artifacts.apis.io/apollo-education-group/llms/apollo-education-group-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/apollo-education-group-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/well-known/apollo-education-group-well-known.yml
+  href: https://artifacts.apis.io/apollo-education-group/well-known/apollo-education-group-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/apollo-education-group-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/authentication/apollo-education-group-authentication.yml
+  href: https://artifacts.apis.io/apollo-education-group/authentication/apollo-education-group-authentication.yml
   title: ''
   type: Authentication
   url: authentication/apollo-education-group-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/scopes/apollo-education-group-scopes.yml
+  href: https://artifacts.apis.io/apollo-education-group/scopes/apollo-education-group-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/apollo-education-group-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/conformance/apollo-education-group-conformance.yml
+  href: https://artifacts.apis.io/apollo-education-group/conformance/apollo-education-group-conformance.yml
   title: ''
   type: Conformance
   url: conformance/apollo-education-group-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/conventions/apollo-education-group-conventions.yml
+  href: https://artifacts.apis.io/apollo-education-group/conventions/apollo-education-group-conventions.yml
   title: ''
   type: Conventions
   url: conventions/apollo-education-group-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/lifecycle/apollo-education-group-lifecycle.yml
+  href: https://artifacts.apis.io/apollo-education-group/lifecycle/apollo-education-group-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/apollo-education-group-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/packages/apollo-education-group-packages.yml
+  href: https://artifacts.apis.io/apollo-education-group/packages/apollo-education-group-packages.yml
   title: ''
   type: Packages
   url: packages/apollo-education-group-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/plans/apollo-education-group-plans-pricing.yml
+  href: https://artifacts.apis.io/apollo-education-group/plans/apollo-education-group-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apollo-education-group-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/rate-limits/apollo-education-group-rate-limits.yml
+  href: https://artifacts.apis.io/apollo-education-group/rate-limits/apollo-education-group-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apollo-education-group-rate-limits.yml
@@ -163,7 +170,7 @@ press:
 - date: ''
   title: Higher Education Policy News
   url: https://www.highereddive.com/topic/policy/?page=94
-random_paper: 6
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: Apollo Education Group Rate Limits
@@ -177,7 +184,7 @@ score:
   band: emerging
   composite: 25.7
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -200,14 +207,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/apollo-education-group/refs/heads/main/screenshots/apollo-education-group-2026-06-20T172307.png
+screenshot: https://apis.io/screenshots/apollo-education-group/apollo-education-group-2026-06-20T172307.png
 security:
 - kind: authentication
   name: Apollo Education Group Authentication

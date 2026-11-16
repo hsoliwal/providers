@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -58,11 +62,8 @@ apis:
   description: '* OA系统 人员/部门变动事件推送API * 访问该目录下接口时header中需要携带参数 `access-token` 和 `enterprise-id` * access-token 参数来自鉴权接口返回的token值'
   name: 酷学院 (Cool College) thirdoa API
   slug: coolcollege-thirdoa-api
-artifact_total: 10
+artifact_total: 12
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: 酷学院 REST 学习 API
   slug: open-coolcollege-default-api
@@ -78,7 +79,7 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/beisen/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/overlays/coolcollege-openapi-overlay.yaml
+  href: https://artifacts.apis.io/coolcollege/overlays/coolcollege-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/coolcollege-openapi-overlay.yaml
@@ -119,57 +120,57 @@ common:
   type: StatusPage
   url: https://status.coolcollege.cn/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/authentication/coolcollege-authentication.yml
+  href: https://artifacts.apis.io/coolcollege/authentication/coolcollege-authentication.yml
   title: ''
   type: Authentication
   url: authentication/coolcollege-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/conventions/coolcollege-conventions.yml
+  href: https://artifacts.apis.io/coolcollege/conventions/coolcollege-conventions.yml
   title: ''
   type: Conventions
   url: conventions/coolcollege-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/errors/coolcollege-problem-types.yml
+  href: https://artifacts.apis.io/coolcollege/errors/coolcollege-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/coolcollege-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/data-model/coolcollege-data-model.yml
+  href: https://artifacts.apis.io/coolcollege/data-model/coolcollege-data-model.yml
   title: ''
   type: DataModel
   url: data-model/coolcollege-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/conformance/coolcollege-conformance.yml
+  href: https://artifacts.apis.io/coolcollege/conformance/coolcollege-conformance.yml
   title: ''
   type: Conformance
   url: conformance/coolcollege-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/lifecycle/coolcollege-lifecycle.yml
+  href: https://artifacts.apis.io/coolcollege/lifecycle/coolcollege-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/coolcollege-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/mcp/coolcollege-mcp.yml
+  href: https://artifacts.apis.io/coolcollege/mcp/coolcollege-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/coolcollege-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/llms/coolcollege-llms.txt
+  href: https://artifacts.apis.io/coolcollege/llms/coolcollege-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/coolcollege-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/coolcollege/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/agentic-access/coolcollege-agentic-access.yml
+  href: https://artifacts.apis.io/coolcollege/agentic-access/coolcollege-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/coolcollege-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/security/coolcollege-domain-security.yml
+  href: https://artifacts.apis.io/coolcollege/security/coolcollege-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coolcollege-domain-security.yml
@@ -188,23 +189,39 @@ network: true
 overview: '酷学院 (Cool College) publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: 学习 API, pet API, and thirdoa API. Tagged areas include Company, Corporate Training, E-Learning, Talent Development, and Human Resources.
 
 
+  The 酷学院 (Cool College) catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   酷学院 (Cool College)''s developer surface includes API reference, documentation, support, engineering blog, signup flow, authentication, and 17 more developer resources.'
-random_paper: 16
+random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: 酷学院 (Cool College) API Rules
+  rule_count: 52
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 8
+  slug: coolcollege-rules
 score:
   band: thin
-  composite: 32.0
+  composite: 34.7
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.0
   facets:
     access_clarity: 28.9
-    contract_governance: 4.5
-    contract_quality: 38.8
+    contract_governance: 18.2
+    contract_quality: 43.1
     developer_ergonomics: 38.7
     discoverability: 73.2
     operational_transparency: 7.9
@@ -215,14 +232,14 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 32.0
+  previous_composite: 33.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
     mcp: derived
     skills: derived
@@ -232,13 +249,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/coolcollege/refs/heads/main/screenshots/coolcollege-2026-07-25T210405.png
+screenshot: https://apis.io/screenshots/coolcollege/coolcollege-2026-07-25T210405.png
 security:
 - kind: authentication
   name: Coolcollege Authentication
@@ -248,6 +265,12 @@ security:
   name: Coolcollege Domain Security
   slug: coolcollege-domain-security
   summary_line: TLSv1.2
+skill_count: 2
+skills:
+- name: Authenticate and read learning data (Cool College)
+  slug: coolcollege-authenticate-and-read-learning
+- name: Sync organization data into Cool College
+  slug: coolcollege-sync-org-data
 slug: coolcollege
 tags:
 - Company

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -30,15 +33,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 57.7
-  scored_at: '2026-10-17'
+  score: 58.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -67,15 +73,12 @@ apis:
   description: The Webhook API from b.well — 1 operation(s) for webhook.
   name: b.well Webhook API
   slug: b-well-webhook-api
-artifact_total: 20
+artifact_total: 26
 asyncapis:
 - description: ''
   name: B Well Webhooks
   slug: b-well-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Client Webhook API
   slug: open-b-well-client-webhook-api
@@ -98,7 +101,7 @@ common:
   type: BlogRSS
   url: https://resources.icanbwell.com/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/overlays/b-well-client-webhook-api-overlay.yaml
+  href: https://artifacts.apis.io/b-well/overlays/b-well-client-webhook-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/b-well-client-webhook-api-overlay.yaml
@@ -115,7 +118,7 @@ common:
   type: License
   url: https://github.com/icanbwell/fhir-server/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/agentic-access/b-well-agentic-access.yml
+  href: https://artifacts.apis.io/b-well/agentic-access/b-well-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/b-well-agentic-access.yml
@@ -140,12 +143,12 @@ common:
   type: GettingStarted
   url: https://developer.bwell.com/docs/welcome
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/authentication/b-well-authentication.yml
+  href: https://artifacts.apis.io/b-well/authentication/b-well-authentication.yml
   title: ''
   type: Authentication
   url: authentication/b-well-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/scopes/b-well-scopes.yml
+  href: https://artifacts.apis.io/b-well/scopes/b-well-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/b-well-scopes.yml
@@ -178,32 +181,32 @@ common:
   type: StatusPage
   url: https://status.bwell.com
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/changelog/b-well-changelog.yml
+  href: https://artifacts.apis.io/b-well/changelog/b-well-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/b-well-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/lifecycle/b-well-lifecycle.yml
+  href: https://artifacts.apis.io/b-well/lifecycle/b-well-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/b-well-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/packages/b-well-packages.yml
+  href: https://artifacts.apis.io/b-well/packages/b-well-packages.yml
   title: ''
   type: Packages
   url: packages/b-well-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/packages/b-well-packages.yml
+  href: https://artifacts.apis.io/b-well/packages/b-well-packages.yml
   title: ''
   type: SDKs
   url: packages/b-well-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/well-known/b-well-well-known.yml
+  href: https://artifacts.apis.io/b-well/well-known/b-well-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/b-well-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/well-known/b-well-security.txt
+  href: https://artifacts.apis.io/b-well/well-known/b-well-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/b-well-security.txt
@@ -212,93 +215,101 @@ common:
   type: Security
   url: https://www.icanbwell.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/security/b-well-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/b-well/security/b-well-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/b-well-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/security/b-well-domain-security.yml
+  href: https://artifacts.apis.io/b-well/security/b-well-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/b-well-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/llms/b-well-llms.txt
+  href: https://artifacts.apis.io/b-well/llms/b-well-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/b-well-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/mcp/b-well-mcp.yml
+  href: https://artifacts.apis.io/b-well/mcp/b-well-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/b-well-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/mcp/b-well-tool-crosswalk.yml
+  href: https://artifacts.apis.io/b-well/mcp/b-well-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/b-well-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/b-well/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/conformance/b-well-conformance.yml
+  href: https://artifacts.apis.io/b-well/conformance/b-well-conformance.yml
   title: ''
   type: Conformance
   url: conformance/b-well-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/errors/b-well-problem-types.yml
+  href: https://artifacts.apis.io/b-well/errors/b-well-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/b-well-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/conventions/b-well-conventions.yml
+  href: https://artifacts.apis.io/b-well/conventions/b-well-conventions.yml
   title: ''
   type: Conventions
   url: conventions/b-well-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/sandbox/b-well-sandbox.yml
+  href: https://artifacts.apis.io/b-well/sandbox/b-well-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/b-well-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/components/b-well-components.yml
+  href: https://artifacts.apis.io/b-well/components/b-well-components.yml
   title: ''
   type: Components
   url: components/b-well-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/data-model/b-well-data-model.yml
+  href: https://artifacts.apis.io/b-well/data-model/b-well-data-model.yml
   title: ''
   type: DataModel
   url: data-model/b-well-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/asyncapi/b-well-webhooks.yml
+  href: https://artifacts.apis.io/b-well/asyncapi/b-well-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/b-well-webhooks.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/plans/b-well-plans-pricing.yml
+  href: https://artifacts.apis.io/b-well/plans/b-well-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/b-well-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/rate-limits/b-well-rate-limits.yml
+  href: https://artifacts.apis.io/b-well/rate-limits/b-well-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/b-well-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/security/b-well-trust-center.yml
+  href: https://artifacts.apis.io/b-well/security/b-well-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/b-well-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/security/b-well-trust-center.yml
+  href: https://artifacts.apis.io/b-well/security/b-well-trust-center.yml
   title: ''
   type: Compliance
   url: security/b-well-trust-center.yml
 created: '2026-08-06'
 description: b.well Connected Health is a Baltimore-based digital health platform that unifies a person's fragmented medical, pharmacy, claims, wearable and lab data into a single FHIR-native longitudinal health record, then exposes that record to partner applications through a developer platform. The company operates a consumer-mediated health data network spanning millions of providers, health plans, HIEs/HINs, TEFCA QHINs and CMS-aligned networks, and licenses it to health systems, payers, employers and retail health brands who embed it in their own apps. Its developer surface is built around four Health SDKs (Web/TypeScript, Android/Kotlin, iOS/Swift and an AI SDK that speaks Model Context Protocol), a federated GraphQL gateway, REST endpoints for user data operations and webhooks, and a FHIR R4 server (the open-source Helix FHIR Server) supporting $everything and International Patient Summary retrieval. Authentication is OAuth 2.0 throughout — token exchange with OIDC for end-user context,
   client credentials for system-to-system access, and HMAC-SHA512 request signing on the user data operations API.
+finops:
+- has_sources: true
+  method: derived
+  name: B Well Finops
+  primary_unit: ''
+  service_category: ''
+  slug: b-well-finops
+  template: true
 image: https://www.icanbwell.com/wp-content/uploads/2023/01/bwell-logo.png
 layout: provider
 mcp_servers:
@@ -312,7 +323,7 @@ network: true
 overview: 'b.well publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Users API, Webhook API, and 3 more. Tagged areas include Company, Health, Healthcare, Digital Health, and FHIR.
 
 
-  The b.well catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The b.well catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   b.well''s developer surface includes engineering blog, documentation, API reference, getting-started guide, authentication, support, changelog, and 38 more developer resources.'
@@ -320,32 +331,45 @@ plans:
 - name: B Well Plans Pricing
   plan_count: 0
   slug: b-well-plans-pricing
-random_paper: 7
+random_paper: 3
 rate_limits:
 - limit_count: 0
   name: B Well Rate Limits
   slug: b-well-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: b.well API Rules
+  rule_count: 50
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 1
+  slug: b-well-rules
 scopes:
 - name: B Well Scopes
   scope_count: 4
   slug: b-well-scopes
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
-  band: developing
-  composite: 52.3
+  band: strong
+  composite: 58.2
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 37.0
+    artifact_dirs: 32
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 4.5
   facets:
     access_clarity: 43.4
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 57.0
-    developer_ergonomics: 49.4
+    developer_ergonomics: 74.4
     discoverability: 75.0
     operational_transparency: 39.5
   jurisdiction:
@@ -358,7 +382,7 @@ score:
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 52.2
+  previous_composite: 53.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -375,13 +399,13 @@ score:
     regime: Health
     regime_id: health
     score: 46.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/b-well/refs/heads/main/screenshots/b-well-2026-08-07T162052.png
+screenshot: https://apis.io/screenshots/b-well/b-well-2026-08-07T162052.png
 security:
 - kind: authentication
   name: B Well Authentication
@@ -399,6 +423,18 @@ security:
   name: B Well Trust Center
   slug: b-well-trust-center
   summary_line: HITRUST, NIST Cybersecurity Framework (CSF), HIPAA
+skill_count: 5
+skills:
+- name: Answer a patient's insurance question
+  slug: b-well-answer-an-insurance-question
+- name: Find a provider and book an appointment
+  slug: b-well-book-an-appointment
+- name: Connect a patient to a health data source
+  slug: b-well-connect-a-data-source
+- name: Honor a user's data export or deletion request
+  slug: b-well-honor-a-data-rights-request
+- name: Retrieve a patient's health records
+  slug: b-well-retrieve-health-records
 slug: b-well
 tags:
 - Company

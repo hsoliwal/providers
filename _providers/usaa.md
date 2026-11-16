@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 11
 common:
@@ -54,22 +59,22 @@ common:
   type: Documentation
   url: https://www.financialdataexchange.org/FDX/FDX/News/Spotlights/Member%20Spotlight%20USAA.aspx
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/plans/usaa-plans-pricing.yml
+  href: https://artifacts.apis.io/usaa/plans/usaa-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/usaa-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/rate-limits/usaa-rate-limits.yml
+  href: https://artifacts.apis.io/usaa/rate-limits/usaa-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/usaa-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/finops/usaa-finops.yml
+  href: https://artifacts.apis.io/usaa/finops/usaa-finops.yml
   title: ''
   type: FinOps
   url: finops/usaa-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/security/usaa-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/usaa/security/usaa-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/usaa-vulnerability-disclosure.yml
@@ -78,32 +83,32 @@ common:
   type: Security
   url: https://www.usaa.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/security/usaa-domain-security.yml
+  href: https://artifacts.apis.io/usaa/security/usaa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/usaa-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/well-known/usaa-well-known.yml
+  href: https://artifacts.apis.io/usaa/well-known/usaa-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/usaa-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/well-known/usaa-security.txt
+  href: https://artifacts.apis.io/usaa/well-known/usaa-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/usaa-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/authentication/usaa-authentication.yml
+  href: https://artifacts.apis.io/usaa/authentication/usaa-authentication.yml
   title: ''
   type: Authentication
   url: authentication/usaa-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/conformance/usaa-conformance.yml
+  href: https://artifacts.apis.io/usaa/conformance/usaa-conformance.yml
   title: ''
   type: Conformance
   url: conformance/usaa-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/llms/usaa-llms.txt
+  href: https://artifacts.apis.io/usaa/llms/usaa-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/usaa-llms.txt
@@ -166,7 +171,7 @@ press:
 - date: ''
   title: Responsible Use of Artificial Intelligence
   url: https://www.usaa.com/about/artificial-intelligence/
-random_paper: 8
+random_paper: 18
 rate_limits:
 - limit_count: 1
   name: Usaa Rate Limits
@@ -187,13 +192,13 @@ score:
   band: emerging
   composite: 17.1
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 42.3
     catalog_earned_first_party: 0.0
     catalog_gap: 72.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 28.0
@@ -208,7 +213,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.6
+  previous_composite: 17.1
   provenance:
     conformance: first-party
   regulatory:
@@ -217,14 +222,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 18.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/usaa/refs/heads/main/screenshots/usaa-2026-06-20T200644.png
+screenshot: https://apis.io/screenshots/usaa/usaa-2026-06-20T200644.png
 security:
 - kind: authentication
   name: Usaa Authentication

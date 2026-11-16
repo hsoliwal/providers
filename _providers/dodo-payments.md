@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.4
-  scored_at: '2026-10-17'
+  score: 47.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -109,9 +112,6 @@ apis:
 artifact_total: 34
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Dodo Payments Checkout Sessions API
   slug: open-dodo-payments-checkout-sessions-api
 - collection_type: open
@@ -152,27 +152,27 @@ collections:
   slug: open-dodo-payments
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dodo-payments/refs/heads/main/capabilities/dodo-payments-capability-edges.yml
+  href: https://artifacts.apis.io/dodo-payments/capabilities/dodo-payments-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/dodo-payments-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dodo-payments/refs/heads/main/agentic-access/dodo-payments-agentic-access.yml
+  href: https://artifacts.apis.io/dodo-payments/agentic-access/dodo-payments-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dodo-payments-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dodo-payments/refs/heads/main/security/dodo-payments-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/dodo-payments/security/dodo-payments-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/dodo-payments-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dodo-payments/refs/heads/main/security/dodo-payments-domain-security.yml
+  href: https://artifacts.apis.io/dodo-payments/security/dodo-payments-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dodo-payments-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dodo-payments/refs/heads/main/authentication/dodo-payments-authentication.yml
+  href: https://artifacts.apis.io/dodo-payments/authentication/dodo-payments-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dodo-payments-authentication.yml
@@ -193,17 +193,17 @@ common:
   type: Documentation
   url: https://docs.dodopayments.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dodo-payments/refs/heads/main/plans/dodo-payments-plans-pricing.yml
+  href: https://artifacts.apis.io/dodo-payments/plans/dodo-payments-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dodo-payments-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dodo-payments/refs/heads/main/rate-limits/dodo-payments-rate-limits.yml
+  href: https://artifacts.apis.io/dodo-payments/rate-limits/dodo-payments-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dodo-payments-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dodo-payments/refs/heads/main/finops/dodo-payments-finops.yml
+  href: https://artifacts.apis.io/dodo-payments/finops/dodo-payments-finops.yml
   title: ''
   type: FinOps
   url: finops/dodo-payments-finops.yml
@@ -234,35 +234,51 @@ network: true
 overview: 'Dodo Payments publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Checkout Sessions API, Customers API, Discounts API, and 9 more. Tagged areas include Payments, Merchant of Record, Subscription, Billing, and Global Commerce.
 
 
+  The Dodo Payments catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Dodo Payments'' developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Dodo Payments Plans Pricing
   plan_count: 3
   slug: dodo-payments-plans-pricing
-random_paper: 6
+random_paper: 4
 rate_limits:
 - limit_count: 3
   name: Dodo Payments Rate Limits
   slug: dodo-payments-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Dodo Payments API Rules
+  rule_count: 58
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 2
+    warn: 3
+  slug: dodo-payments-rules
 score:
   band: thin
-  composite: 26.6
+  composite: 29.6
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 43.0
+    artifact_dirs: 19
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.4
     developer_ergonomics: 32.1
     discoverability: 68.3
-    operational_transparency: 10.5
-  previous_composite: 34.9
+    operational_transparency: 21.1
+  previous_composite: 29.6
   provenance:
     agentic_access: derived
     contracts:
@@ -277,13 +293,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 16.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/dodo-payments/refs/heads/main/screenshots/dodo-payments-2026-07-25T212230.png
+screenshot: https://apis.io/screenshots/dodo-payments/dodo-payments-2026-07-25T212230.png
 security:
 - kind: authentication
   name: Dodo Payments Authentication

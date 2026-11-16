@@ -1,16 +1,18 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-10-17'
+  score: 29.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -58,11 +63,8 @@ apis:
   description: Authenticated Awair user profile
   name: Bitfinder User API
   slug: bitfinder-user-api
-artifact_total: 12
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Awair Home & OAuth Developer Air Data API
   slug: open-bitfinder-air-data-api
@@ -122,82 +124,82 @@ common:
   type: PrivacyPolicy
   url: https://getawair.com/pages/legal
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/authentication/bitfinder-authentication.yml
+  href: https://artifacts.apis.io/bitfinder/authentication/bitfinder-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bitfinder-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/scopes/bitfinder-scopes.yml
+  href: https://artifacts.apis.io/bitfinder/scopes/bitfinder-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/bitfinder-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/agentic-access/bitfinder-agentic-access.yml
+  href: https://artifacts.apis.io/bitfinder/agentic-access/bitfinder-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bitfinder-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/security/bitfinder-domain-security.yml
+  href: https://artifacts.apis.io/bitfinder/security/bitfinder-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bitfinder-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/conventions/bitfinder-conventions.yml
+  href: https://artifacts.apis.io/bitfinder/conventions/bitfinder-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bitfinder-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/rate-limits/bitfinder-rate-limits.yml
+  href: https://artifacts.apis.io/bitfinder/rate-limits/bitfinder-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bitfinder-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/errors/bitfinder-problem-types.yml
+  href: https://artifacts.apis.io/bitfinder/errors/bitfinder-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bitfinder-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/lifecycle/bitfinder-lifecycle.yml
+  href: https://artifacts.apis.io/bitfinder/lifecycle/bitfinder-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bitfinder-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/conformance/bitfinder-conformance.yml
+  href: https://artifacts.apis.io/bitfinder/conformance/bitfinder-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bitfinder-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/data-model/bitfinder-data-model.yml
+  href: https://artifacts.apis.io/bitfinder/data-model/bitfinder-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bitfinder-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/packages/bitfinder-packages.yml
+  href: https://artifacts.apis.io/bitfinder/packages/bitfinder-packages.yml
   title: ''
   type: Packages
   url: packages/bitfinder-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/well-known/bitfinder-well-known.yml
+  href: https://artifacts.apis.io/bitfinder/well-known/bitfinder-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bitfinder-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/mcp/bitfinder-mcp.yml
+  href: https://artifacts.apis.io/bitfinder/mcp/bitfinder-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/bitfinder-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bitfinder/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/llms/bitfinder-llms.txt
+  href: https://artifacts.apis.io/bitfinder/llms/bitfinder-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bitfinder-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/overlays/bitfinder-awair-overlay.yaml
+  href: https://artifacts.apis.io/bitfinder/overlays/bitfinder-awair-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bitfinder-awair-overlay.yaml
@@ -212,36 +214,52 @@ network: true
 overview: 'Bitfinder publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Air Data API, Devices API, and User API. Tagged areas include Company, Air Quality, IoT, Environmental Monitoring, and Smart Home.
 
 
+  The Bitfinder catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Bitfinder''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 21 more developer resources.'
-random_paper: 5
+random_paper: 15
 rate_limits:
 - limit_count: 2
   name: Bitfinder Rate Limits
   slug: bitfinder-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Bitfinder API Rules
+  rule_count: 57
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 1
+  slug: bitfinder-rules
 scopes:
 - name: Bitfinder Scopes
   scope_count: 0
   slug: bitfinder-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: thin
-  composite: 38.1
+  band: developing
+  composite: 39.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 45.0
+    artifact_dirs: 23
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 13.6
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 38.1
+  previous_composite: 39.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -258,14 +276,14 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/bitfinder/refs/heads/main/screenshots/bitfinder-2026-07-25T203146.png
+screenshot: https://apis.io/screenshots/bitfinder/bitfinder-2026-07-25T203146.png
 security:
 - kind: authentication
   name: Bitfinder Authentication
@@ -275,6 +293,12 @@ security:
   name: Bitfinder Domain Security
   slug: bitfinder-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Fetch Awair air-data history
+  slug: bitfinder-fetch-air-data-history
+- name: Read latest Awair air quality
+  slug: bitfinder-read-latest-air-quality
 slug: bitfinder
 tags:
 - Company

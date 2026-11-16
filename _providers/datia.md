@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +27,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.5
-  scored_at: '2026-10-17'
+  score: 21.4
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
-- description: Data platform API for sustainable finance, providing ESG, SDG, stewardship and compliance data.
+- baseURL: https://eco.datia.app
+  baseurl_source: spec
+  description: Data platform API for sustainable finance, providing ESG, SDG, stewardship and compliance data.
   name: Datia API
-  slug: datia-api-2
+  slug: datia-api
 - baseURL: https://eco.datia.app
   baseurl_source: declared
   description: The Instruments API from Datia — 1 operation(s) for instruments.
@@ -62,52 +79,52 @@ apis:
 artifact_total: 18
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/datia/refs/heads/main/plans/datia-plans-pricing.yml
+  href: https://artifacts.apis.io/datia/plans/datia-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/datia-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/datia/refs/heads/main/rules/datia-rules.yml
+  href: https://artifacts.apis.io/datia/rules/datia-rules.yml
   title: ''
   type: Spectral
   url: rules/datia-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/datia/refs/heads/main/json-ld/datia-context.jsonld
+  href: https://artifacts.apis.io/datia/json-ld/datia-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/datia-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/datia/refs/heads/main/vocabulary/datia-vocabulary.yml
+  href: https://artifacts.apis.io/datia/vocabulary/datia-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/datia-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/datia/refs/heads/main/data-model/datia-data-model.yml
+  href: https://artifacts.apis.io/datia/data-model/datia-data-model.yml
   title: ''
   type: DataModel
   url: data-model/datia-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/datia/refs/heads/main/authentication/datia-authentication.yml
+  href: https://artifacts.apis.io/datia/authentication/datia-authentication.yml
   title: ''
   type: Authentication
   url: authentication/datia-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/datia/refs/heads/main/conformance/datia-conformance.yml
+  href: https://artifacts.apis.io/datia/conformance/datia-conformance.yml
   title: ''
   type: Conformance
   url: conformance/datia-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/datia/refs/heads/main/llms/datia-llms.txt
+  href: https://artifacts.apis.io/datia/llms/datia-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/datia-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/datia/refs/heads/main/hosts/datia-hosts.yml
+  href: https://artifacts.apis.io/datia/hosts/datia-hosts.yml
   title: ''
   type: Hosts
   url: hosts/datia-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/datia/refs/heads/main/vendors/datia-vendors.yml
+  href: https://artifacts.apis.io/datia/vendors/datia-vendors.yml
   title: ''
   type: Vendors
   url: vendors/datia-vendors.yml
@@ -128,7 +145,7 @@ common:
   type: APIReference
   url: https://docs.datia.app/llms-full.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/datia/refs/heads/main/security/datia-domain-security.yml
+  href: https://artifacts.apis.io/datia/security/datia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/datia-domain-security.yml
@@ -183,7 +200,7 @@ modified: '2026-10-15'
 name: Datia
 nav: Providers
 network: true
-overview: 'Datia is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Instruments API, Portfolios API, Reports API, and 4 more. Tagged areas include Sustainable Finance, ESG, Data Platform, and Finance.
+overview: 'Datia is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Instruments API, Portfolios API, and 5 more. Tagged areas include Sustainable Finance, ESG, Data Platform, and Finance.
 
 
   The Datia catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -194,7 +211,7 @@ plans:
 - name: Datia Plans Pricing
   plan_count: 4
   slug: datia-plans-pricing
-random_paper: 9
+random_paper: 11
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -210,21 +227,23 @@ rules:
   slug: datia-rules
 score:
   band: thin
-  composite: 32.1
+  composite: 27.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 20
     catalog_earned: 65.8
     catalog_earned_first_party: 12.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.2
   facets:
-    access_clarity: 42.1
+    access_clarity: 36.8
     contract_governance: 22.0
     contract_quality: 28.2
-    developer_ergonomics: 42.9
-    discoverability: 58.9
+    developer_ergonomics: 27.4
+    discoverability: 58.0
     operational_transparency: 0.0
+  previous_composite: 32.1
   provenance:
     conformance: derived
     contracts:
@@ -239,11 +258,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/datia/datia-2026-11-03T130313.png
 security:
 - kind: authentication
   name: Datia Authentication

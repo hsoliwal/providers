@@ -1,6 +1,18 @@
 ---
+access_model:
+  confidence: medium
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -9,22 +21,25 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: na
+    dry_run_mode: true
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
-    idempotency: na
+    idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: false
-    reversibility_documented: na
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.1
-  scored_at: '2026-10-17'
-api_count: 3
+  score: 35.5
+  scored_at: '2026-11-06'
+api_count: 11
 apis:
 - description: Build, train, and deploy YOLO models via the Ultralytics Platform REST API.
   name: Ultralytics Platform API
@@ -39,19 +54,59 @@ apis:
   description: The Ultralytics API from Ultralytics — 1 operation(s) for ultralytics.
   name: Ultralytics Ultralytics API
   slug: ultralytics-ultralytics-api
-artifact_total: 9
+- baseURL: https://platform.ultralytics.com
+  baseurl_source: declared
+  description: The Agents API from Ultralytics — 6 operation(s) for agents.
+  name: Ultralytics Agents API
+  slug: ultralytics-agents-api
+- baseURL: https://apipj.com.br
+  baseurl_source: declared
+  description: Assinaturas (Stripe; Asaas como alternativa)
+  name: Ultralytics Billing API
+  slug: ultralytics-billing-api
+- baseURL: https://platform.ultralytics.com
+  baseurl_source: declared
+  description: The Datasets API from Ultralytics — 114 operation(s) for datasets.
+  name: Ultralytics Datasets API
+  slug: ultralytics-datasets-api
+- baseURL: https://platform.ultralytics.com
+  baseurl_source: declared
+  description: Deploy models to dedicated inference endpoints with auto-scaling, health checks, and monitoring. See Endpoints documentation.
+  name: Ultralytics Deployments API
+  slug: ultralytics-deployments-api
+- baseURL: https://platform.ultralytics.com
+  baseurl_source: declared
+  description: Restore or permanently delete trashed projects, datasets, and models.
+  name: Ultralytics Lifecycle API
+  slug: ultralytics-lifecycle-api
+- baseURL: https://platform.ultralytics.com
+  baseurl_source: declared
+  description: Connect external cloud storage for dataset ingestion.
+  name: Ultralytics Storage Integrations API
+  slug: ultralytics-storage-integrations-api
+- baseURL: https://platform.ultralytics.com
+  baseurl_source: declared
+  description: Launch YOLO training on cloud GPUs (RTX 4090, A100, H100) and monitor progress in real time. See Cloud Training documentation.
+  name: Ultralytics Training API
+  slug: ultralytics-training-api
+- baseURL: https://platform.ultralytics.com
+  baseurl_source: declared
+  description: Upload files directly to cloud storage using signed URLs for fast, reliable transfers. See Data documentation.
+  name: Ultralytics Upload API
+  slug: ultralytics-upload-api
+artifact_total: 19
 common:
 - group: commercial
   title: ''
   type: TermsOfService
   url: https://www.ultralytics.com/legal/terms-of-service
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/plans/ultralytics-plans-pricing.yml
+  href: https://artifacts.apis.io/ultralytics/plans/ultralytics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ultralytics-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/rules/ultralytics-rules.yml
+  href: https://artifacts.apis.io/ultralytics/rules/ultralytics-rules.yml
   title: ''
   type: Spectral
   url: rules/ultralytics-rules.yml
@@ -60,42 +115,42 @@ common:
   type: Compliance
   url: https://www.ultralytics.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/authentication/ultralytics-authentication.yml
+  href: https://artifacts.apis.io/ultralytics/authentication/ultralytics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ultralytics-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/conformance/ultralytics-conformance.yml
+  href: https://artifacts.apis.io/ultralytics/conformance/ultralytics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ultralytics-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/llms/ultralytics-llms.txt
+  href: https://artifacts.apis.io/ultralytics/llms/ultralytics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ultralytics-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/well-known/ultralytics-well-known.yml
+  href: https://artifacts.apis.io/ultralytics/well-known/ultralytics-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ultralytics-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/hosts/ultralytics-hosts.yml
+  href: https://artifacts.apis.io/ultralytics/hosts/ultralytics-hosts.yml
   title: ''
   type: Hosts
   url: hosts/ultralytics-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/vendors/ultralytics-vendors.yml
+  href: https://artifacts.apis.io/ultralytics/vendors/ultralytics-vendors.yml
   title: ''
   type: Vendors
   url: vendors/ultralytics-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/packages/ultralytics-packages.yml
+  href: https://artifacts.apis.io/ultralytics/packages/ultralytics-packages.yml
   title: ''
   type: SDKs
   url: packages/ultralytics-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/packages/ultralytics-packages.yml
+  href: https://artifacts.apis.io/ultralytics/packages/ultralytics-packages.yml
   title: ''
   type: Packages
   url: packages/ultralytics-packages.yml
@@ -116,17 +171,17 @@ common:
   type: ChangeLog
   url: https://github.com/ultralytics/ultralytics/releases
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/security/ultralytics-trust-center.yml
+  href: https://artifacts.apis.io/ultralytics/security/ultralytics-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/ultralytics-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/security/ultralytics-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ultralytics/security/ultralytics-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ultralytics-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ultralytics/refs/heads/main/security/ultralytics-domain-security.yml
+  href: https://artifacts.apis.io/ultralytics/security/ultralytics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ultralytics-domain-security.yml
@@ -179,13 +234,21 @@ coverage:
   state: none
 created: '2026-10-13'
 description: Ultralytics provides cutting‑edge computer‑vision solutions, including the popular YOLO family of models, a cloud platform for training, annotation, and deployment, and extensive open‑source tools. The company offers a SaaS platform, on‑premise options, and integrates with major cloud providers, serving industries such as retail, healthcare, automotive, and aerospace. Its mission is to democratize AI by delivering high‑performance, easy‑to‑use vision AI products for developers and enterprises worldwide.
+finops:
+- has_sources: true
+  method: derived
+  name: Ultralytics Finops
+  primary_unit: seat
+  service_category: ''
+  slug: ultralytics-finops
+  template: false
 image: https://cdn.ul.run/i/c39ff384220f4734c78092eebe2f9c74.webp
 layout: provider
 modified: '2026-10-13'
 name: Ultralytics
 nav: Providers
 network: true
-overview: 'Ultralytics is listed with 3 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Ultralytics API, and 1 more. Tagged areas include Computer Vision, Artificial Intelligence, Machine Learning, Open Source, and Software-as-a-Service.
+overview: 'Ultralytics is listed with 11 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Ultralytics API, Agents API, and 8 more. Tagged areas include Computer Vision, Artificial Intelligence, Machine Learning, Open Source, and Software-as-a-Service.
 
 
   The Ultralytics catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -196,7 +259,10 @@ plans:
 - name: Ultralytics Plans Pricing
   plan_count: 3
   slug: ultralytics-plans-pricing
-random_paper: 6
+- name: Ultralytics Price Estimates
+  plan_count: 0
+  slug: ultralytics-price-estimates
+random_paper: 16
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -212,28 +278,30 @@ rules:
   slug: ultralytics-rules
 score:
   band: developing
-  composite: 51.6
+  composite: 51.4
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 56.5
+    artifact_dirs: 18
+    catalog_earned: 59.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 58.5
+    catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -12.2
   facets:
-    access_clarity: 92.1
+    access_clarity: 73.7
     contract_governance: 31.8
-    contract_quality: 11.9
-    developer_ergonomics: 54.8
-    discoverability: 80.4
-    operational_transparency: 36.8
+    contract_quality: 40.8
+    developer_ergonomics: 36.9
+    discoverability: 79.5
+    operational_transparency: 18.4
+  previous_composite: 63.6
   provenance:
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 3
-      marker_coverage: 100.0
-      total: 3
+      marker_coverage: 27.3
+      total: 11
     mcp: unknown
   regulatory:
     applies: true
@@ -248,13 +316,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 26.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
-    applies: false
-    note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
-    reason: read_only
+    applies: true
+    score: 38.9
+screenshot: https://apis.io/screenshots/ultralytics/ultralytics-2026-11-03T145401.png
 security:
 - kind: authentication
   name: Ultralytics Authentication

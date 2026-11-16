@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-10-17'
+  score: 26.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -65,15 +71,12 @@ apis:
   description: Durable worker lifecycle and invocation operations.
   name: Golem Worker API
   slug: golem-cloud-worker-api
-artifact_total: 18
+artifact_total: 17
 asyncapis:
 - description: AsyncAPI description of Golem's worker `connect` WebSocket endpoint. The REST route GET /v1/components/{component_id}/workers/{agent_name}/connect upgrades the connection to a WebSocket (wss://) and s
   name: Golem Worker Connect (WebSocket) API
   slug: golem-cloud-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Golem Cloud ApiDefinition API
   slug: open-golem-cloud-apidefinition-api
@@ -91,17 +94,17 @@ collections:
   slug: open-golem-cloud
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/golem-cloud/refs/heads/main/agentic-access/golem-cloud-agentic-access.yml
+  href: https://artifacts.apis.io/golem-cloud/agentic-access/golem-cloud-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/golem-cloud-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/golem-cloud/refs/heads/main/security/golem-cloud-domain-security.yml
+  href: https://artifacts.apis.io/golem-cloud/security/golem-cloud-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/golem-cloud-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/golem-cloud/refs/heads/main/authentication/golem-cloud-authentication.yml
+  href: https://artifacts.apis.io/golem-cloud/authentication/golem-cloud-authentication.yml
   title: ''
   type: Authentication
   url: authentication/golem-cloud-authentication.yml
@@ -122,17 +125,17 @@ common:
   type: Documentation
   url: https://learn.golem.cloud
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/golem-cloud/refs/heads/main/plans/golem-cloud-plans-pricing.yml
+  href: https://artifacts.apis.io/golem-cloud/plans/golem-cloud-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/golem-cloud-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/golem-cloud/refs/heads/main/rate-limits/golem-cloud-rate-limits.yml
+  href: https://artifacts.apis.io/golem-cloud/rate-limits/golem-cloud-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/golem-cloud-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/golem-cloud/refs/heads/main/finops/golem-cloud-finops.yml
+  href: https://artifacts.apis.io/golem-cloud/finops/golem-cloud-finops.yml
   title: ''
   type: FinOps
   url: finops/golem-cloud-finops.yml
@@ -167,7 +170,7 @@ plans:
 - name: Golem Cloud Plans Pricing
   plan_count: 4
   slug: golem-cloud-plans-pricing
-random_paper: 12
+random_paper: 8
 rate_limits:
 - limit_count: 4
   name: Golem Cloud Rate Limits
@@ -189,13 +192,13 @@ score:
   band: thin
   composite: 29.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 46.8
     catalog_earned_first_party: 0.0
     catalog_gap: 68.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 11.4
@@ -203,7 +206,7 @@ score:
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 37.6
+  previous_composite: 29.3
   provenance:
     agentic_access: derived
     contracts:
@@ -217,13 +220,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/golem-cloud/refs/heads/main/screenshots/golem-cloud-2026-06-20T181950.png
+screenshot: https://apis.io/screenshots/golem-cloud/golem-cloud-2026-06-20T181950.png
 security:
 - kind: authentication
   name: Golem Cloud Authentication

@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://amplication.com'', ''status'': 301, ''note'': ''declared website redirects to https://overcut.ai/ — a different registrable domain (amplication.com -> overcut.ai), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -42,27 +46,27 @@ common:
   type: Blog
   url: https://overcut.ai/blog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amplication/refs/heads/main/security/amplication-domain-security.yml
+  href: https://artifacts.apis.io/amplication/security/amplication-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amplication-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/amplication/refs/heads/main/packages/amplication-packages.yml
+  href: https://artifacts.apis.io/amplication/packages/amplication-packages.yml
   title: ''
   type: Packages
   url: packages/amplication-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/amplication/refs/heads/main/cli/amplication-cli.yml
+  href: https://artifacts.apis.io/amplication/cli/amplication-cli.yml
   title: ''
   type: CLI
   url: cli/amplication-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amplication/refs/heads/main/changelog/amplication-changelog.yml
+  href: https://artifacts.apis.io/amplication/changelog/amplication-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/amplication-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amplication/refs/heads/main/lifecycle/amplication-lifecycle.yml
+  href: https://artifacts.apis.io/amplication/lifecycle/amplication-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/amplication-lifecycle.yml
@@ -94,18 +98,18 @@ overview: 'Amplication is profiled on the [APIs.io](https://apis.io/) network. T
 
 
   Amplication''s developer surface includes engineering blog, CLI, changelog, documentation, support, and 5 more developer resources.'
-random_paper: 3
+random_paper: 17
 score:
   band: minimal
   composite: 9.6
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -113,21 +117,21 @@ score:
     developer_ergonomics: 19.0
     discoverability: 48.2
     operational_transparency: 18.4
-  previous_composite: 9.1
+  previous_composite: 9.6
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/amplication/refs/heads/main/screenshots/amplication-2026-07-25T200131.png
+screenshot: https://apis.io/screenshots/amplication/amplication-2026-07-25T200131.png
 security:
 - kind: domain-security
   name: Amplication Domain Security

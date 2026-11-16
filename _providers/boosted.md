@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The Boosted.ai (Alfa) API delivers personalized, autonomous market insights and conversational investment research to platforms via API, SDK, or embedded UI. Documented endpoints let a client execute '
@@ -95,42 +98,42 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/boostedai
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boosted/refs/heads/main/authentication/boosted-authentication.yml
+  href: https://artifacts.apis.io/boosted/authentication/boosted-authentication.yml
   title: ''
   type: Authentication
   url: authentication/boosted-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/boosted/refs/heads/main/conventions/boosted-conventions.yml
+  href: https://artifacts.apis.io/boosted/conventions/boosted-conventions.yml
   title: ''
   type: Conventions
   url: conventions/boosted-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/boosted/refs/heads/main/conformance/boosted-conformance.yml
+  href: https://artifacts.apis.io/boosted/conformance/boosted-conformance.yml
   title: ''
   type: Conformance
   url: conformance/boosted-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boosted/refs/heads/main/security/boosted-trust-center.yml
+  href: https://artifacts.apis.io/boosted/security/boosted-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/boosted-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boosted/refs/heads/main/security/boosted-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/boosted/security/boosted-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/boosted-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boosted/refs/heads/main/security/boosted-domain-security.yml
+  href: https://artifacts.apis.io/boosted/security/boosted-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/boosted-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/boosted/refs/heads/main/mcp/boosted-mcp.yml
+  href: https://artifacts.apis.io/boosted/mcp/boosted-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/boosted-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/boosted/refs/heads/main/llms/boosted-llms.txt
+  href: https://artifacts.apis.io/boosted/llms/boosted-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/boosted-llms.txt
@@ -146,7 +149,7 @@ overview: 'Boosted.ai is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   Boosted.ai''s developer surface includes documentation, getting-started guide, signup flow, support, authentication, and 16 more developer resources.'
-random_paper: 4
+random_paper: 8
 score:
   band: thin
   composite: 31.7
@@ -157,7 +160,7 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
@@ -172,7 +175,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 31.6
+  previous_composite: 31.7
   provenance:
     conformance: first-party
     mcp: derived
@@ -186,14 +189,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/boosted/refs/heads/main/screenshots/boosted-2026-07-25T203622.png
+screenshot: https://apis.io/screenshots/boosted/boosted-2026-07-25T203622.png
 security:
 - kind: authentication
   name: Boosted Authentication

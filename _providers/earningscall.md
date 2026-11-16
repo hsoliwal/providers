@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,20 +28,25 @@ agent_readiness:
     event_surface_described: true
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.6
-  scored_at: '2026-10-17'
+  score: 41.1
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
-- description: Provides earnings call transcripts, audio, slide decks, and event data.
+- baseURL: https://api.earningscall.dev
+  baseurl_source: spec
+  description: Provides earnings call transcripts, audio, slide decks, and event data.
   name: EarningsCall API
-  slug: earningscall-api-2
+  slug: earningscall-api
 - baseURL: https://api.earningscall.dev
   baseurl_source: declared
   description: The Audio API from EarningsCall — 1 operation(s) for audio.
@@ -65,84 +82,84 @@ apis:
   description: The Transcript API from EarningsCall — 1 operation(s) for transcript.
   name: EarningsCall Transcript API
   slug: earningscall-transcript-api
-artifact_total: 17
+artifact_total: 19
 asyncapis:
 - description: ''
   name: Earningscall Webhooks
   slug: earningscall-webhooks
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/plans/earningscall-plans-pricing.yml
+  href: https://artifacts.apis.io/earningscall/plans/earningscall-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/earningscall-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/rules/earningscall-rules.yml
+  href: https://artifacts.apis.io/earningscall/rules/earningscall-rules.yml
   title: ''
   type: Spectral
   url: rules/earningscall-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/json-ld/earningscall-context.jsonld
+  href: https://artifacts.apis.io/earningscall/json-ld/earningscall-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/earningscall-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/vocabulary/earningscall-vocabulary.yml
+  href: https://artifacts.apis.io/earningscall/vocabulary/earningscall-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/earningscall-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/asyncapi/earningscall-webhooks.yml
+  href: https://artifacts.apis.io/earningscall/asyncapi/earningscall-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/earningscall-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/data-model/earningscall-data-model.yml
+  href: https://artifacts.apis.io/earningscall/data-model/earningscall-data-model.yml
   title: ''
   type: DataModel
   url: data-model/earningscall-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/authentication/earningscall-authentication.yml
+  href: https://artifacts.apis.io/earningscall/authentication/earningscall-authentication.yml
   title: ''
   type: Authentication
   url: authentication/earningscall-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/lifecycle/earningscall-lifecycle.yml
+  href: https://artifacts.apis.io/earningscall/lifecycle/earningscall-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/earningscall-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/conformance/earningscall-conformance.yml
+  href: https://artifacts.apis.io/earningscall/conformance/earningscall-conformance.yml
   title: ''
   type: Conformance
   url: conformance/earningscall-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/llms/earningscall-llms.txt
+  href: https://artifacts.apis.io/earningscall/llms/earningscall-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/earningscall-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/well-known/earningscall-well-known.yml
+  href: https://artifacts.apis.io/earningscall/well-known/earningscall-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/earningscall-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/hosts/earningscall-hosts.yml
+  href: https://artifacts.apis.io/earningscall/hosts/earningscall-hosts.yml
   title: ''
   type: Hosts
   url: hosts/earningscall-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/vendors/earningscall-vendors.yml
+  href: https://artifacts.apis.io/earningscall/vendors/earningscall-vendors.yml
   title: ''
   type: Vendors
   url: vendors/earningscall-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/packages/earningscall-packages.yml
+  href: https://artifacts.apis.io/earningscall/packages/earningscall-packages.yml
   title: ''
   type: SDKs
   url: packages/earningscall-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/packages/earningscall-packages.yml
+  href: https://artifacts.apis.io/earningscall/packages/earningscall-packages.yml
   title: ''
   type: Packages
   url: packages/earningscall-packages.yml
@@ -159,7 +176,7 @@ common:
   type: DeveloperPortal
   url: https://api.earningscall.dev/events?apikey=demo&amp;exchange=NASDAQ&amp;symbol=AAPL&
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/earningscall/refs/heads/main/security/earningscall-domain-security.yml
+  href: https://artifacts.apis.io/earningscall/security/earningscall-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/earningscall-domain-security.yml
@@ -212,6 +229,14 @@ coverage:
   state: none
 created: '2026-10-16'
 description: EarningsCall provides a comprehensive API delivering real-time earnings call transcripts, audio, slide decks, and event data for over 9,000 public companies. Their platform aggregates clean JSON data, enabling developers to integrate earnings information into applications, models, and analytics. Features include searchable calendars, AI chat assistance, and multi‑platform mobile apps, all accessible via a straightforward REST API with generous rate limits and transparent pricing.
+finops:
+- has_sources: true
+  method: derived
+  name: Earningscall Finops
+  primary_unit: seat
+  service_category: ''
+  slug: earningscall-finops
+  template: false
 image: https://earningscall.biz/android-chrome-512x512.png
 json_schemas:
 - name: GetLiveResponse
@@ -233,7 +258,7 @@ modified: '2026-10-16'
 name: EarningsCall
 nav: Providers
 network: true
-overview: 'EarningsCall is listed with 8 APIs on the [APIs.io](https://apis.io/) network, including Audio API, Calendar API, Events API, and 5 more. Tagged areas include Company, Finance, Data, and Earnings.
+overview: 'EarningsCall is listed with 8 APIs on the [APIs.io](https://apis.io/) network, including Audio API, Calendar API, and 6 more. Tagged areas include Company, Finance, Data, and Earnings.
 
 
   The EarningsCall catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
@@ -244,7 +269,10 @@ plans:
 - name: Earningscall Plans Pricing
   plan_count: 4
   slug: earningscall-plans-pricing
-random_paper: 13
+- name: Earningscall Price Estimates
+  plan_count: 0
+  slug: earningscall-price-estimates
+random_paper: 19
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -259,22 +287,24 @@ rules:
     warn: 1
   slug: earningscall-rules
 score:
-  band: developing
-  composite: 47.3
+  band: thin
+  composite: 39.0
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 61.8
+    artifact_dirs: 24
+    catalog_earned: 64.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 53.3
+    catalog_gap: 50.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.9
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 22.0
     contract_quality: 29.4
-    developer_ergonomics: 64.3
+    developer_ergonomics: 41.7
     discoverability: 60.7
-    operational_transparency: 13.2
+    operational_transparency: 10.5
+  previous_composite: 48.9
   provenance:
     conformance: derived
     contracts:
@@ -288,13 +318,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/earningscall/earningscall-2026-11-03T131242.png
 security:
 - kind: authentication
   name: Earningscall Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -32,8 +35,8 @@ name: Fortunes
 nav: Providers
 network: true
 overview: Fortunes is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Music, Analytics, Data, and Mobile.
-random_paper: 6
-screenshot: https://raw.githubusercontent.com/api-evangelist/fortunes/refs/heads/main/screenshots/fortunes-2026-07-25T215017.png
+random_paper: 22
+screenshot: https://apis.io/screenshots/fortunes/fortunes-2026-07-25T215017.png
 slug: fortunes
 tags:
 - Company

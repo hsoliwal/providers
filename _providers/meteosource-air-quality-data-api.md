@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 28.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -47,34 +53,21 @@ api_count: 1
 apis:
 - baseURL: https://www.meteosource.com/api/v1
   baseurl_source: declared
-  description: Air quality and pollution forecasts.
-  name: MeteoSource Air Quality Data API Air Quality API
-  slug: meteosource-air-quality-data-api-air-quality-api
-- baseURL: https://www.meteosource.com/api/v1
-  baseurl_source: declared
-  description: Historical Time Machine data.
-  name: MeteoSource Air Quality Data API History API
-  slug: meteosource-air-quality-data-api-history-api
-- baseURL: https://www.meteosource.com/api/v1
-  baseurl_source: declared
   description: Location lookup endpoints.
   name: MeteoSource Air Quality Data API Locations API
   slug: meteosource-air-quality-data-api-locations-api
 - baseURL: https://www.meteosource.com/api/v1
   baseurl_source: declared
-  description: Tile-based weather and pollution maps.
-  name: MeteoSource Air Quality Data API Maps API
-  slug: meteosource-air-quality-data-api-maps-api
-- baseURL: https://www.meteosource.com/api/v1
-  baseurl_source: declared
   description: Current and forecasted weather endpoints.
   name: MeteoSource Air Quality Data API Weather API
   slug: meteosource-air-quality-data-api-weather-api
-artifact_total: 18
+- baseURL: https://www.meteosource.com/api/v1
+  baseurl_source: declared
+  description: PNG map images of weather variables (e.g. temperature, precipitation, cloud cover) for a given area and time, plus the base map tileset used to render them as an interactive map.
+  name: MeteoSource Air Quality Data API Weather maps API
+  slug: meteosource-air-quality-data-api-weather-maps-api
+artifact_total: 16
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: MeteoSource Data Air Quality API
   slug: open-meteosource-air-quality-data-api-air-quality-api
@@ -95,17 +88,17 @@ collections:
   slug: open-meteosource-air-quality-data-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/meteosource-air-quality-data-api/refs/heads/main/plans/meteosource-air-quality-data-api-plans-pricing.yml
+  href: https://artifacts.apis.io/meteosource-air-quality-data-api/plans/meteosource-air-quality-data-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/meteosource-air-quality-data-api-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/meteosource-air-quality-data-api/refs/heads/main/rate-limits/meteosource-air-quality-data-api-rate-limits.yml
+  href: https://artifacts.apis.io/meteosource-air-quality-data-api/rate-limits/meteosource-air-quality-data-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/meteosource-air-quality-data-api-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/meteosource-air-quality-data-api/refs/heads/main/finops/meteosource-air-quality-data-api-finops.yml
+  href: https://artifacts.apis.io/meteosource-air-quality-data-api/finops/meteosource-air-quality-data-api-finops.yml
   title: ''
   type: FinOps
   url: finops/meteosource-air-quality-data-api-finops.yml
@@ -114,17 +107,17 @@ common:
   type: Website
   url: https://www.meteosource.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meteosource-air-quality-data-api/refs/heads/main/agentic-access/meteosource-air-quality-data-api-agentic-access.yml
+  href: https://artifacts.apis.io/meteosource-air-quality-data-api/agentic-access/meteosource-air-quality-data-api-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/meteosource-air-quality-data-api-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meteosource-air-quality-data-api/refs/heads/main/security/meteosource-air-quality-data-api-domain-security.yml
+  href: https://artifacts.apis.io/meteosource-air-quality-data-api/security/meteosource-air-quality-data-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/meteosource-air-quality-data-api-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meteosource-air-quality-data-api/refs/heads/main/authentication/meteosource-air-quality-data-api-authentication.yml
+  href: https://artifacts.apis.io/meteosource-air-quality-data-api/authentication/meteosource-air-quality-data-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/meteosource-air-quality-data-api-authentication.yml
@@ -154,7 +147,7 @@ finops:
 - has_sources: false
   method: generated
   name: Meteosource Air Quality Data Api Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: meteosource-air-quality-data-api-finops
   template: true
@@ -164,7 +157,10 @@ modified: '2026-05-19'
 name: MeteoSource Air Quality Data API
 nav: Providers
 network: true
-overview: 'MeteoSource Air Quality Data API publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Air Quality API, History API, Locations API, and 2 more. Tagged areas include Air Quality, Environmental Data, Forecasting, and Weather.
+overview: 'MeteoSource Air Quality Data API publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Locations API, Weather API, and Weather maps API. Tagged areas include Air Quality, Environmental Data, Forecasting, and Weather.
+
+
+  The MeteoSource Air Quality Data API catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   MeteoSource Air Quality Data API''s developer surface includes authentication, developer portal, pricing, signup flow, engineering blog, and 7 more developer resources.'
@@ -172,51 +168,64 @@ plans:
 - name: Meteosource Air Quality Data Api Plans Pricing
   plan_count: 3
   slug: meteosource-air-quality-data-api-plans-pricing
-random_paper: 2
+random_paper: 0
 rate_limits:
 - limit_count: 5
   name: Meteosource Air Quality Data Api Rate Limits
   slug: meteosource-air-quality-data-api-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: MeteoSource Air Quality Data API API Rules
+  rule_count: 57
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 3
+  slug: meteosource-air-quality-data-api-rules
 score:
   band: thin
-  composite: 31.3
+  composite: 34.0
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 38.0
+    artifact_dirs: 16
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.4
   facets:
     access_clarity: 31.6
-    contract_governance: 0.0
-    contract_quality: 47.1
+    contract_governance: 13.6
+    contract_quality: 51.4
     developer_ergonomics: 33.3
     discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 32.8
+  previous_composite: 33.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 33.3
+      total: 9
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/meteosource-air-quality-data-api/refs/heads/main/screenshots/meteosource-air-quality-data-api-2026-06-20T185257.png
+screenshot: https://apis.io/screenshots/meteosource-air-quality-data-api/meteosource-air-quality-data-api-2026-06-20T185257.png
 security:
 - kind: authentication
   name: Meteosource Air Quality Data Api Authentication

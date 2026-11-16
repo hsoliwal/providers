@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 16.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 1
@@ -68,11 +72,8 @@ apis:
   description: The Tasks API from Debezium — 3 operation(s) for tasks.
   name: Debezium Tasks API
   slug: debezium-tasks-api
-artifact_total: 21
+artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Debezium Kafka Connect REST Cluster API
   slug: open-debezium-cluster-api
@@ -93,27 +94,27 @@ collections:
   slug: open-debezium-tasks-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/debezium/refs/heads/main/plans/debezium-plans-pricing.yml
+  href: https://artifacts.apis.io/debezium/plans/debezium-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/debezium-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/debezium/refs/heads/main/rate-limits/debezium-rate-limits.yml
+  href: https://artifacts.apis.io/debezium/rate-limits/debezium-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/debezium-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/debezium/refs/heads/main/finops/debezium-finops.yml
+  href: https://artifacts.apis.io/debezium/finops/debezium-finops.yml
   title: ''
   type: FinOps
   url: finops/debezium-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/debezium/refs/heads/main/agentic-access/debezium-agentic-access.yml
+  href: https://artifacts.apis.io/debezium/agentic-access/debezium-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/debezium-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/debezium/refs/heads/main/security/debezium-domain-security.yml
+  href: https://artifacts.apis.io/debezium/security/debezium-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/debezium-domain-security.yml
@@ -150,12 +151,12 @@ common:
   type: License
   url: https://www.apache.org/licenses/LICENSE-2.0
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/debezium/refs/heads/main/json-ld/debezium-context.jsonld
+  href: https://artifacts.apis.io/debezium/json-ld/debezium-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/debezium-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/debezium/refs/heads/main/vocabulary/debezium-vocabulary.yml
+  href: https://artifacts.apis.io/debezium/vocabulary/debezium-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/debezium-vocabulary.yml
@@ -165,7 +166,7 @@ finops:
 - has_sources: false
   method: generated
   name: Debezium Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: debezium-finops
   template: true
@@ -195,7 +196,7 @@ plans:
 - name: Debezium Plans Pricing
   plan_count: 3
   slug: debezium-plans-pricing
-random_paper: 17
+random_paper: 13
 rate_limits:
 - limit_count: 5
   name: Debezium Rate Limits
@@ -228,13 +229,13 @@ score:
   band: thin
   composite: 27.0
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 57.4
     catalog_earned_first_party: 0.0
     catalog_gap: 57.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 27.3
@@ -242,7 +243,7 @@ score:
     developer_ergonomics: 26.2
     discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 28.5
+  previous_composite: 27.0
   provenance:
     agentic_access: derived
     contracts:
@@ -256,13 +257,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/debezium/refs/heads/main/screenshots/debezium-2026-06-20T175745.png
+screenshot: https://apis.io/screenshots/debezium/debezium-2026-06-20T175745.png
 security:
 - kind: domain-security
   name: Debezium Domain Security

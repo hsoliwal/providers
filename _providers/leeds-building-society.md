@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: high
-  label: No public API program
+  confidence: low
+  gated_conflict: 'x-api-posture: private but 9 published API entries'
+  label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
   source:
-  - review
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.0
-  scored_at: '2026-10-17'
+  score: 16.4
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The OBIE Read/Write Account and Transaction Information (AIS) standard for retrieving account, balance, transaction, and beneficiary data with customer consent, secured with FAPI-grade OAuth2/OIDC, mu
@@ -75,24 +79,24 @@ apis:
   description: Endpoint for getting Unsecured SME Loan data
   name: Leeds Building Society SME API
   slug: leeds-building-society-sme-api
-artifact_total: 11
+artifact_total: 12
 collections:
 - collection_type: open
   name: Open Data API
   slug: open-obie-opendata-standard-swagger
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/leeds-building-society/refs/heads/main/capabilities/leeds-building-society-capability-edges.yml
+  href: https://artifacts.apis.io/leeds-building-society/capabilities/leeds-building-society-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/leeds-building-society-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/leeds-building-society/refs/heads/main/security/leeds-building-society-domain-security.yml
+  href: https://artifacts.apis.io/leeds-building-society/security/leeds-building-society-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/leeds-building-society-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/leeds-building-society/refs/heads/main/llms/leeds-building-society-llms.txt
+  href: https://artifacts.apis.io/leeds-building-society/llms/leeds-building-society-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/leeds-building-society-llms.txt
@@ -136,22 +140,38 @@ network: true
 overview: 'Leeds Building Society publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including ATM API, BCA API, Branch API, and 6 more. Tagged areas include Financial Services, Banking, Building Society, Mutual, and Savings.
 
 
+  The Leeds Building Society catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Leeds Building Society''s developer surface includes support, engineering blog, and 8 more developer resources.'
-random_paper: 7
+random_paper: 21
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Leeds Building Society API Rules
+  rule_count: 49
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 1
+  slug: leeds-building-society-rules
 score:
   band: thin
-  composite: 31.4
+  composite: 33.1
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 32.0
+    artifact_dirs: 12
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 68.0
+    catalog_gap: 63.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 57.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 35.5
     developer_ergonomics: 23.8
     discoverability: 64.3
@@ -164,7 +184,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 31.4
+  previous_composite: 33.1
   provenance:
     contracts:
       callable: 0.0
@@ -177,14 +197,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 11.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/leeds-building-society/refs/heads/main/screenshots/leeds-building-society-2026-07-25T224818.png
+screenshot: https://apis.io/screenshots/leeds-building-society/leeds-building-society-2026-07-25T224818.png
 security:
 - kind: domain-security
   name: Leeds Building Society Domain Security

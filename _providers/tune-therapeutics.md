@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Two Model Context Protocol servers exposed from the Tune Therapeutics corporate WordPress site via the WordPress MCP Adapter plugin, backed by the WordPress Abilities API. Both endpoints are live and '
@@ -44,7 +47,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tune-therapeutics/refs/heads/main/security/tune-therapeutics-domain-security.yml
+  href: https://artifacts.apis.io/tune-therapeutics/security/tune-therapeutics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tune-therapeutics-domain-security.yml
@@ -73,32 +76,32 @@ common:
   type: PrivacyPolicy
   url: https://tunetx.com/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tune-therapeutics/refs/heads/main/well-known/tune-therapeutics-well-known.yml
+  href: https://artifacts.apis.io/tune-therapeutics/well-known/tune-therapeutics-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/tune-therapeutics-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tune-therapeutics/refs/heads/main/mcp/tune-therapeutics-mcp.yml
+  href: https://artifacts.apis.io/tune-therapeutics/mcp/tune-therapeutics-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/tune-therapeutics-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tune-therapeutics/refs/heads/main/authentication/tune-therapeutics-authentication.yml
+  href: https://artifacts.apis.io/tune-therapeutics/authentication/tune-therapeutics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tune-therapeutics-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tune-therapeutics/refs/heads/main/scopes/tune-therapeutics-scopes.yml
+  href: https://artifacts.apis.io/tune-therapeutics/scopes/tune-therapeutics-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/tune-therapeutics-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tune-therapeutics/refs/heads/main/conformance/tune-therapeutics-conformance.yml
+  href: https://artifacts.apis.io/tune-therapeutics/conformance/tune-therapeutics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tune-therapeutics-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tune-therapeutics/refs/heads/main/llms/tune-therapeutics-llms.txt
+  href: https://artifacts.apis.io/tune-therapeutics/llms/tune-therapeutics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tune-therapeutics-llms.txt
@@ -118,7 +121,7 @@ overview: 'Tune Therapeutics is listed with 1 API on the [APIs.io](https://apis.
 
 
   Tune Therapeutics'' developer surface includes engineering blog, support, authentication, and 10 more developer resources.'
-random_paper: 4
+random_paper: 10
 scopes:
 - name: Tune Therapeutics Scopes
   scope_count: 1
@@ -128,7 +131,7 @@ score:
   band: emerging
   composite: 20.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -159,14 +162,14 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tune-therapeutics/refs/heads/main/screenshots/tune-therapeutics-2026-09-02T164523.png
+screenshot: https://apis.io/screenshots/tune-therapeutics/tune-therapeutics-2026-09-02T164523.png
 security:
 - kind: authentication
   name: Tune Therapeutics Authentication

@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Paysend Enterprise's single Payout API disburses funds worldwide to cards and bank accounts through the Paysend payments network. A multi-task POST /processing endpoint carries operations including pa
@@ -48,7 +51,7 @@ asyncapis:
   slug: paysend-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paysend/refs/heads/main/security/paysend-domain-security.yml
+  href: https://artifacts.apis.io/paysend/security/paysend-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/paysend-domain-security.yml
@@ -101,42 +104,42 @@ common:
   type: Compliance
   url: https://paysend.com/en/blog/paysend-compliance-security-digital-money-transfers
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paysend/refs/heads/main/conventions/paysend-conventions.yml
+  href: https://artifacts.apis.io/paysend/conventions/paysend-conventions.yml
   title: ''
   type: Conventions
   url: conventions/paysend-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paysend/refs/heads/main/conventions/paysend-conventions.yml
+  href: https://artifacts.apis.io/paysend/conventions/paysend-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/paysend-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paysend/refs/heads/main/errors/paysend-error-codes.yml
+  href: https://artifacts.apis.io/paysend/errors/paysend-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/paysend-error-codes.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/paysend/refs/heads/main/sandbox/paysend-sandbox.yml
+  href: https://artifacts.apis.io/paysend/sandbox/paysend-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/paysend-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paysend/refs/heads/main/asyncapi/paysend-webhooks.yml
+  href: https://artifacts.apis.io/paysend/asyncapi/paysend-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/paysend-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paysend/refs/heads/main/conformance/paysend-conformance.yml
+  href: https://artifacts.apis.io/paysend/conformance/paysend-conformance.yml
   title: ''
   type: Conformance
   url: conformance/paysend-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paysend/refs/heads/main/mcp/paysend-mcp.yml
+  href: https://artifacts.apis.io/paysend/mcp/paysend-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/paysend-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paysend/refs/heads/main/llms/paysend-llms.txt
+  href: https://artifacts.apis.io/paysend/llms/paysend-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/paysend-llms.txt
@@ -156,12 +159,12 @@ overview: 'Paysend is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Paysend''s developer surface includes documentation, API reference, authentication, engineering blog, getting-started guide, support, sandbox, and 14 more developer resources.'
-random_paper: 8
+random_paper: 12
 score:
   band: thin
   composite: 37.9
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -199,14 +202,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/paysend/refs/heads/main/screenshots/paysend-2026-08-07T191655.png
+screenshot: https://apis.io/screenshots/paysend/paysend-2026-08-07T191655.png
 security:
 - kind: authentication
   name: Paysend Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 22.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -112,9 +118,6 @@ apis:
 artifact_total: 33
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: PandaScore Changes API
   slug: open-pandascore-changes-api
 - collection_type: open
@@ -152,32 +155,32 @@ collections:
   slug: open-pandascore
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pandascore/refs/heads/main/plans/pandascore-plans-pricing.yml
+  href: https://artifacts.apis.io/pandascore/plans/pandascore-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pandascore-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pandascore/refs/heads/main/rate-limits/pandascore-rate-limits.yml
+  href: https://artifacts.apis.io/pandascore/rate-limits/pandascore-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pandascore-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pandascore/refs/heads/main/finops/pandascore-finops.yml
+  href: https://artifacts.apis.io/pandascore/finops/pandascore-finops.yml
   title: ''
   type: FinOps
   url: finops/pandascore-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pandascore/refs/heads/main/agentic-access/pandascore-agentic-access.yml
+  href: https://artifacts.apis.io/pandascore/agentic-access/pandascore-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pandascore-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pandascore/refs/heads/main/security/pandascore-domain-security.yml
+  href: https://artifacts.apis.io/pandascore/security/pandascore-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pandascore-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pandascore/refs/heads/main/authentication/pandascore-authentication.yml
+  href: https://artifacts.apis.io/pandascore/authentication/pandascore-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pandascore-authentication.yml
@@ -240,6 +243,9 @@ network: true
 overview: 'PandaScore publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Changes API, Game - CS:GO API, Game - Dota 2 API, and 11 more. Tagged areas include Esports, Odds, Betting, Live Data, and Stats.
 
 
+  The PandaScore catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   PandaScore''s developer surface includes authentication, developer portal, documentation, signup flow, engineering blog, and 11 more developer resources.'
 plans:
 - name: Pandascore Plans Pricing
@@ -250,22 +256,35 @@ rate_limits:
 - limit_count: 2
   name: Pandascore Rate Limits
   slug: pandascore-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: PandaScore API Rules
+  rule_count: 44
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 1
+  slug: pandascore-rules
 score:
   band: thin
-  composite: 33.1
+  composite: 37.6
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 41.0
+    artifact_dirs: 17
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.1
+  delta: 2.8
   facets:
     access_clarity: 39.5
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.3
-    developer_ergonomics: 26.2
+    developer_ergonomics: 40.5
     discoverability: 73.2
     operational_transparency: 5.3
   jurisdiction:
@@ -276,7 +295,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 39.2
+  previous_composite: 34.8
   provenance:
     agentic_access: derived
     contracts:
@@ -290,14 +309,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/pandascore/refs/heads/main/screenshots/pandascore-2026-08-17T083019.png
+screenshot: https://apis.io/screenshots/pandascore/pandascore-2026-08-17T083019.png
 security:
 - kind: authentication
   name: Pandascore Authentication

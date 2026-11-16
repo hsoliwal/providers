@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.6
-  scored_at: '2026-10-17'
+  score: 26.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 166
   human_in_the_loop: 2
@@ -263,11 +267,8 @@ apis:
   description: The workflow-architect API from Netter — 2 operation(s) for workflow-architect.
   name: Netter Workflow Architect API
   slug: netter-workflow-architect-api
-artifact_total: 92
+artifact_total: 94
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: DMI Backend actions API
   slug: open-netter-actions-api
@@ -402,12 +403,12 @@ collections:
   slug: open-netter-workflow-architect-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/capabilities/netter-capability-edges.yml
+  href: https://artifacts.apis.io/netter/capabilities/netter-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/netter-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/security/netter-domain-security.yml
+  href: https://artifacts.apis.io/netter/security/netter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/netter-domain-security.yml
@@ -444,62 +445,62 @@ common:
   type: Support
   url: mailto:samuel@netter.ai
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/openapi/_original/netter-openapi-original.json
+  href: https://artifacts.apis.io/netter/openapi/_original/netter-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/netter-openapi-original.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/overlays/netter-openapi-overlay.yaml
+  href: https://artifacts.apis.io/netter/overlays/netter-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/netter-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/llms/netter-llms.txt
+  href: https://artifacts.apis.io/netter/llms/netter-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/netter-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/authentication/netter-authentication.yml
+  href: https://artifacts.apis.io/netter/authentication/netter-authentication.yml
   title: ''
   type: Authentication
   url: authentication/netter-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/conventions/netter-conventions.yml
+  href: https://artifacts.apis.io/netter/conventions/netter-conventions.yml
   title: ''
   type: Conventions
   url: conventions/netter-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/errors/netter-problem-types.yml
+  href: https://artifacts.apis.io/netter/errors/netter-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/netter-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/conformance/netter-conformance.yml
+  href: https://artifacts.apis.io/netter/conformance/netter-conformance.yml
   title: ''
   type: Conformance
   url: conformance/netter-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/lifecycle/netter-lifecycle.yml
+  href: https://artifacts.apis.io/netter/lifecycle/netter-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/netter-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/data-model/netter-data-model.yml
+  href: https://artifacts.apis.io/netter/data-model/netter-data-model.yml
   title: ''
   type: DataModel
   url: data-model/netter-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/mcp/netter-mcp.yml
+  href: https://artifacts.apis.io/netter/mcp/netter-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/netter-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/netter/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/agentic-access/netter-agentic-access.yml
+  href: https://artifacts.apis.io/netter/agentic-access/netter-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/netter-agentic-access.yml
@@ -514,27 +515,43 @@ network: true
 overview: 'Netter publishes 44 API contracts indexed on the [APIs.io](https://apis.io/) network, including Actions API, API Keys API, App Chat API, and 41 more. Tagged areas include Company, Data, Data Platform, Analytics, and Artificial Intelligence.
 
 
+  The Netter catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Netter''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, authentication, and 16 more developer resources.'
-random_paper: 20
+random_paper: 10
+rules:
+- authorship: generated
+  effective_rule_count: 84
+  extends:
+  - spectral:oas
+  name: Netter API Rules
+  rule_count: 43
+  severity_counts:
+    error: 29
+    hint: 0
+    info: 3
+    warn: 11
+  slug: netter-rules
 score:
   band: thin
-  composite: 33.5
+  composite: 35.1
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 37.0
+    artifact_dirs: 20
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 6.6
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 43.5
     developer_ergonomics: 56.5
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 33.4
+  previous_composite: 35.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -551,13 +568,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/netter/refs/heads/main/screenshots/netter-2026-08-07T184948.png
+screenshot: https://apis.io/screenshots/netter/netter-2026-08-07T184948.png
 security:
 - kind: authentication
   name: Netter Authentication
@@ -567,6 +584,12 @@ security:
   name: Netter Domain Security
   slug: netter-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Create a Netter project and run its pipeline
+  slug: netter-project-pipeline
+- name: Upload a file to a Netter workspace
+  slug: netter-upload-file
 slug: netter
 tags:
 - Company

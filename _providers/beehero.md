@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 12
   slug: beehero-agentic-access
   summary_line: 12 operations · 6 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://backend.beehero.io/external
   baseurl_source: declared
@@ -64,11 +67,8 @@ apis:
   description: Get sensors sample data
   name: BeeHero Sensors API
   slug: beehero-sensors-api
-artifact_total: 13
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: BeeHero API Documentation Audio API
   slug: open-beehero-audio-api
@@ -83,17 +83,17 @@ collections:
   slug: open-beehero-sensors-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/agentic-access/beehero-agentic-access.yml
+  href: https://artifacts.apis.io/beehero/agentic-access/beehero-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/beehero-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/security/beehero-domain-security.yml
+  href: https://artifacts.apis.io/beehero/security/beehero-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/beehero-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/authentication/beehero-authentication.yml
+  href: https://artifacts.apis.io/beehero/authentication/beehero-authentication.yml
   title: ''
   type: Authentication
   url: authentication/beehero-authentication.yml
@@ -130,62 +130,62 @@ common:
   type: PrivacyPolicy
   url: https://www.beehero.io/privacy-policy
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/openapi/_original/beehero-openapi-original.yml
+  href: https://artifacts.apis.io/beehero/openapi/_original/beehero-openapi-original.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/beehero-openapi-original.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/overlays/beehero-api-overlay.yaml
+  href: https://artifacts.apis.io/beehero/overlays/beehero-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/beehero-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/mcp/beehero-mcp.yml
+  href: https://artifacts.apis.io/beehero/mcp/beehero-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/beehero-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/mcp/beehero-tool-crosswalk.yml
+  href: https://artifacts.apis.io/beehero/mcp/beehero-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/beehero-tool-crosswalk.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/packages/beehero-packages.yml
+  href: https://artifacts.apis.io/beehero/packages/beehero-packages.yml
   title: ''
   type: Packages
   url: packages/beehero-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/beehero/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/llms/beehero-llms.txt
+  href: https://artifacts.apis.io/beehero/llms/beehero-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/beehero-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/conventions/beehero-conventions.yml
+  href: https://artifacts.apis.io/beehero/conventions/beehero-conventions.yml
   title: ''
   type: Conventions
   url: conventions/beehero-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/errors/beehero-problem-types.yml
+  href: https://artifacts.apis.io/beehero/errors/beehero-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/beehero-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/data-model/beehero-data-model.yml
+  href: https://artifacts.apis.io/beehero/data-model/beehero-data-model.yml
   title: ''
   type: DataModel
   url: data-model/beehero-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/lifecycle/beehero-lifecycle.yml
+  href: https://artifacts.apis.io/beehero/lifecycle/beehero-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/beehero-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/conformance/beehero-conformance.yml
+  href: https://artifacts.apis.io/beehero/conformance/beehero-conformance.yml
   title: ''
   type: Conformance
   url: conformance/beehero-conformance.yml
@@ -204,34 +204,50 @@ network: true
 overview: 'BeeHero publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audio API, Auth API, Gateways API, and 1 more. Tagged areas include Company, Agriculture, AgTech, Pollination, and beekeeping.
 
 
+  The BeeHero catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   BeeHero''s developer surface includes authentication, documentation, API reference, engineering blog, support, and 18 more developer resources.'
-random_paper: 4
+random_paper: 10
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: BeeHero API Rules
+  rule_count: 54
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 3
+  slug: beehero-rules
 score:
   band: thin
-  composite: 34.8
+  composite: 37.9
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.5
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
-    contract_quality: 52.7
+    contract_governance: 18.2
+    contract_quality: 58.5
     developer_ergonomics: 37.5
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 34.7
+  previous_composite: 36.4
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 4
     mcp: first-party
     skills: derived
@@ -241,13 +257,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/beehero/refs/heads/main/screenshots/beehero-2026-08-07T162253.png
+screenshot: https://apis.io/screenshots/beehero/beehero-2026-08-07T162253.png
 security:
 - kind: authentication
   name: Beehero Authentication
@@ -257,6 +273,16 @@ security:
   name: Beehero Domain Security
   slug: beehero-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Inspect and configure a BeeHero gateway
+  slug: beehero-configure-gateway
+- name: Pull BeeHero in-hive audio samples
+  slug: beehero-pull-in-hive-audio
+- name: Query BeeHero platform entities over MCP
+  slug: beehero-query-platform-entities-mcp
+- name: Read BeeHero hive telemetry
+  slug: beehero-read-hive-telemetry
 slug: beehero
 tags:
 - Company

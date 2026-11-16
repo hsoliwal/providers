@@ -1,13 +1,17 @@
 ---
 access_model:
-  confidence: high
-  label: Paid (free trial) · Open access
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium (free trial) · Open access
   onboarding: open
-  pricing: paid
+  pricing: freemium
   public: true
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -87,9 +94,6 @@ apis:
 artifact_total: 26
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: GitClear Public API Tokens API
   slug: open-gitclear-api-tokens-api
 - collection_type: open
@@ -118,32 +122,32 @@ collections:
   slug: open-gitclear
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/capabilities/gitclear-capability-edges.yml
+  href: https://artifacts.apis.io/gitclear/capabilities/gitclear-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/gitclear-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/agentic-access/gitclear-agentic-access.yml
+  href: https://artifacts.apis.io/gitclear/agentic-access/gitclear-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gitclear-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/security/gitclear-trust-center.yml
+  href: https://artifacts.apis.io/gitclear/security/gitclear-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/gitclear-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/security/gitclear-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/gitclear/security/gitclear-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/gitclear-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/security/gitclear-domain-security.yml
+  href: https://artifacts.apis.io/gitclear/security/gitclear-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gitclear-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/authentication/gitclear-authentication.yml
+  href: https://artifacts.apis.io/gitclear/authentication/gitclear-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gitclear-authentication.yml
@@ -164,17 +168,17 @@ common:
   type: Documentation
   url: https://www.gitclear.com/api_reference
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/plans/gitclear-plans-pricing.yml
+  href: https://artifacts.apis.io/gitclear/plans/gitclear-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gitclear-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/rate-limits/gitclear-rate-limits.yml
+  href: https://artifacts.apis.io/gitclear/rate-limits/gitclear-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gitclear-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/finops/gitclear-finops.yml
+  href: https://artifacts.apis.io/gitclear/finops/gitclear-finops.yml
   title: ''
   type: FinOps
   url: finops/gitclear-finops.yml
@@ -201,35 +205,51 @@ network: true
 overview: 'GitClear publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including API Tokens API, Code Introspection API, Data Audit API, and 5 more. Tagged areas include Code Analytics, Commit Analytics, Developer Productivity, Diff Delta, and Engineering Metrics.
 
 
+  The GitClear catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   GitClear''s developer surface includes authentication, documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Gitclear Plans Pricing
   plan_count: 4
   slug: gitclear-plans-pricing
-random_paper: 7
+random_paper: 3
 rate_limits:
 - limit_count: 2
   name: Gitclear Rate Limits
   slug: gitclear-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: GitClear API Rules
+  rule_count: 57
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 1
+  slug: gitclear-rules
 score:
   band: thin
-  composite: 29.5
+  composite: 32.4
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 42.0
+    artifact_dirs: 17
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.3
+  delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 48.2
     developer_ergonomics: 31.0
     discoverability: 66.1
-    operational_transparency: 7.9
-  previous_composite: 36.8
+    operational_transparency: 18.4
+  previous_composite: 32.4
   provenance:
     agentic_access: derived
     contracts:
@@ -243,13 +263,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/screenshots/gitclear-2026-07-25T215835.png
+screenshot: https://apis.io/screenshots/gitclear/gitclear-2026-07-25T215835.png
 security:
 - kind: authentication
   name: Gitclear Authentication

@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -37,17 +40,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/budget-direct/refs/heads/main/security/budget-direct-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/budget-direct/security/budget-direct-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/budget-direct-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/budget-direct/refs/heads/main/security/budget-direct-domain-security.yml
+  href: https://artifacts.apis.io/budget-direct/security/budget-direct-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/budget-direct-domain-security.yml
@@ -112,22 +115,22 @@ common:
   type: Security
   url: https://www.autogeneral.com.au/docs/ag-external-vulnerability-disclosure-policy.pdf
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/budget-direct/refs/heads/main/well-known/budget-direct-security.txt
+  href: https://artifacts.apis.io/budget-direct/well-known/budget-direct-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/budget-direct-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/budget-direct/refs/heads/main/well-known/budget-direct-well-known.yml
+  href: https://artifacts.apis.io/budget-direct/well-known/budget-direct-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/budget-direct-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/budget-direct/refs/heads/main/conformance/budget-direct-conformance.yml
+  href: https://artifacts.apis.io/budget-direct/conformance/budget-direct-conformance.yml
   title: ''
   type: Conformance
   url: conformance/budget-direct-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/budget-direct/refs/heads/main/llms/budget-direct-llms.txt
+  href: https://artifacts.apis.io/budget-direct/llms/budget-direct-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/budget-direct-llms.txt
@@ -145,12 +148,12 @@ overview: 'Budget Direct is profiled on the [APIs.io](https://apis.io/) network.
 
 
   Budget Direct''s developer surface includes support and 20 more developer resources.'
-random_paper: 17
+random_paper: 19
 score:
   band: emerging
   composite: 18.3
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -180,14 +183,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 26.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/budget-direct/refs/heads/main/screenshots/budget-direct-2026-07-25T204030.png
+screenshot: https://apis.io/screenshots/budget-direct/budget-direct-2026-07-25T204030.png
 security:
 - kind: domain-security
   name: Budget Direct Domain Security

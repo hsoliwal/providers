@@ -29,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.0
-  scored_at: '2026-10-17'
+  score: 34.3
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - baseURL: https://marketplace.madeiramadeira.com.br
@@ -75,29 +78,29 @@ apis:
   description: The Produtos API from Madeiramadeira — 38 operation(s) for produtos.
   name: Madeiramadeira Produtos API
   slug: madeiramadeira-produtos-api
-artifact_total: 12
+artifact_total: 17
 asyncapis:
 - description: ''
   name: Madeiramadeira Marketplace Webhooks
   slug: madeiramadeira-marketplace-webhooks
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/rate-limits/madeiramadeira-rate-limits.yml
+  href: https://artifacts.apis.io/madeiramadeira/rate-limits/madeiramadeira-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/madeiramadeira-rate-limits.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/capabilities/madeiramadeira-capability-edges.yml
+  href: https://artifacts.apis.io/madeiramadeira/capabilities/madeiramadeira-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/madeiramadeira-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/overlays/madeiramadeira-marketplace-overlay.yaml
+  href: https://artifacts.apis.io/madeiramadeira/overlays/madeiramadeira-marketplace-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/madeiramadeira-marketplace-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/madeiramadeira/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -150,37 +153,37 @@ common:
   type: PrivacyPolicy
   url: https://www.madeiramadeira.com.br/termos-e-privacidade
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/plans/madeiramadeira-plans-pricing.yml
+  href: https://artifacts.apis.io/madeiramadeira/plans/madeiramadeira-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/madeiramadeira-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/lifecycle/madeiramadeira-lifecycle.yml
+  href: https://artifacts.apis.io/madeiramadeira/lifecycle/madeiramadeira-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/madeiramadeira-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/lifecycle/madeiramadeira-lifecycle.yml
+  href: https://artifacts.apis.io/madeiramadeira/lifecycle/madeiramadeira-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/madeiramadeira-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/conformance/madeiramadeira-conformance.yml
+  href: https://artifacts.apis.io/madeiramadeira/conformance/madeiramadeira-conformance.yml
   title: ''
   type: Conformance
   url: conformance/madeiramadeira-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/security/madeiramadeira-domain-security.yml
+  href: https://artifacts.apis.io/madeiramadeira/security/madeiramadeira-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/madeiramadeira-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/packages/madeiramadeira-packages.yml
+  href: https://artifacts.apis.io/madeiramadeira/packages/madeiramadeira-packages.yml
   title: ''
   type: Packages
   url: packages/madeiramadeira-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/llms/madeiramadeira-llms.txt
+  href: https://artifacts.apis.io/madeiramadeira/llms/madeiramadeira-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/madeiramadeira-llms.txt
@@ -196,7 +199,7 @@ network: true
 overview: 'Madeiramadeira is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Callbacks API, Categorias API, Financeiro API, and 4 more. Tagged areas include Company, E-Commerce, Marketplace, Retail, and Home Goods.
 
 
-  The Madeiramadeira catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Madeiramadeira catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Madeiramadeira''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, and 17 more developer resources.'
@@ -204,25 +207,38 @@ plans:
 - name: Madeiramadeira Plans Pricing
   plan_count: 0
   slug: madeiramadeira-plans-pricing
-random_paper: 16
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Madeiramadeira Rate Limits
   slug: madeiramadeira-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: Madeiramadeira API Rules
+  rule_count: 64
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 3
+    warn: 3
+  slug: madeiramadeira-rules
 score:
   band: thin
-  composite: 34.6
+  composite: 36.2
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 40.0
+    artifact_dirs: 28
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 23.5
     developer_ergonomics: 55.4
     discoverability: 71.4
@@ -234,7 +250,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 34.5
+  previous_composite: 36.2
   provenance:
     conformance: derived
     contracts:
@@ -250,13 +266,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/madeiramadeira/refs/heads/main/screenshots/madeiramadeira-2026-09-02T150356.png
+screenshot: https://apis.io/screenshots/madeiramadeira/madeiramadeira-2026-09-02T150356.png
 security:
 - kind: authentication
   name: Madeiramadeira Authentication
@@ -266,6 +282,16 @@ security:
   name: Madeiramadeira Domain Security
   slug: madeiramadeira-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: madeiramadeira-fulfill-order
+  slug: madeiramadeira-fulfill-order
+- name: madeiramadeira-manage-callbacks
+  slug: madeiramadeira-manage-callbacks
+- name: madeiramadeira-publish-product
+  slug: madeiramadeira-publish-product
+- name: madeiramadeira-sync-price-stock
+  slug: madeiramadeira-sync-price-stock
 slug: madeiramadeira
 tags:
 - Company

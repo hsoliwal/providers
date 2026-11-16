@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
@@ -98,7 +102,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/bluevine-dev
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bluevine/refs/heads/main/security/bluevine-domain-security.yml
+  href: https://artifacts.apis.io/bluevine/security/bluevine-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bluevine-domain-security.yml
@@ -154,7 +158,7 @@ plans:
 - name: Bluevine Plans Pricing
   plan_count: 3
   slug: bluevine-plans-pricing
-random_paper: 0
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: Bluevine Rate Limits
@@ -163,13 +167,13 @@ score:
   band: emerging
   composite: 19.2
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.0
   facets:
     access_clarity: 35.5
     contract_governance: 0.0
@@ -184,21 +188,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 24.8
+  previous_composite: 19.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bluevine/refs/heads/main/screenshots/bluevine-2026-06-20T173536.png
+screenshot: https://apis.io/screenshots/bluevine/bluevine-2026-06-20T173536.png
 security:
 - kind: domain-security
   name: Bluevine Domain Security

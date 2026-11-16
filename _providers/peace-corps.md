@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API for accessing Peace Corps volunteer statistics, country programs, and development data.
@@ -42,17 +46,17 @@ apis:
 artifact_total: 5
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/peace-corps/refs/heads/main/plans/peace-corps-plans-pricing.yml
+  href: https://artifacts.apis.io/peace-corps/plans/peace-corps-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/peace-corps-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/peace-corps/refs/heads/main/rate-limits/peace-corps-rate-limits.yml
+  href: https://artifacts.apis.io/peace-corps/rate-limits/peace-corps-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/peace-corps-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/peace-corps/refs/heads/main/finops/peace-corps-finops.yml
+  href: https://artifacts.apis.io/peace-corps/finops/peace-corps-finops.yml
   title: ''
   type: FinOps
   url: finops/peace-corps-finops.yml
@@ -61,7 +65,7 @@ common:
   type: Blog
   url: https://www.peacecorps.gov/connect/blog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peace-corps/refs/heads/main/security/peace-corps-domain-security.yml
+  href: https://artifacts.apis.io/peace-corps/security/peace-corps-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/peace-corps-domain-security.yml
@@ -87,7 +91,7 @@ finops:
 - has_sources: false
   method: generated
   name: Peace Corps Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: peace-corps-finops
   template: true
@@ -105,7 +109,7 @@ plans:
 - name: Peace Corps Plans Pricing
   plan_count: 3
   slug: peace-corps-plans-pricing
-random_paper: 6
+random_paper: 2
 rate_limits:
 - limit_count: 5
   name: Peace Corps Rate Limits
@@ -114,13 +118,13 @@ score:
   band: emerging
   composite: 11.7
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 33.0
     catalog_earned_first_party: 0.0
     catalog_gap: 82.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.2
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 0.0
@@ -128,21 +132,21 @@ score:
     developer_ergonomics: 11.9
     discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 12.9
+  previous_composite: 11.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/peace-corps/refs/heads/main/screenshots/peace-corps-2026-06-20T191524.png
+screenshot: https://apis.io/screenshots/peace-corps/peace-corps-2026-06-20T191524.png
 security:
 - kind: domain-security
   name: Peace Corps Domain Security

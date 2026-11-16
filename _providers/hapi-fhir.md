@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 12.9
-  scored_at: '2026-10-17'
+  score: 14.8
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: http://your-server-base
@@ -39,52 +52,52 @@ apis:
 artifact_total: 8
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hapi-fhir/refs/heads/main/rules/hapi-fhir-rules.yml
+  href: https://artifacts.apis.io/hapi-fhir/rules/hapi-fhir-rules.yml
   title: ''
   type: Spectral
   url: rules/hapi-fhir-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hapi-fhir/refs/heads/main/json-ld/hapi-fhir-context.jsonld
+  href: https://artifacts.apis.io/hapi-fhir/json-ld/hapi-fhir-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/hapi-fhir-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hapi-fhir/refs/heads/main/vocabulary/hapi-fhir-vocabulary.yml
+  href: https://artifacts.apis.io/hapi-fhir/vocabulary/hapi-fhir-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/hapi-fhir-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hapi-fhir/refs/heads/main/data-model/hapi-fhir-data-model.yml
+  href: https://artifacts.apis.io/hapi-fhir/data-model/hapi-fhir-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hapi-fhir-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hapi-fhir/refs/heads/main/cli/hapi-fhir-cli.yml
+  href: https://artifacts.apis.io/hapi-fhir/cli/hapi-fhir-cli.yml
   title: ''
   type: CLI
   url: cli/hapi-fhir-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hapi-fhir/refs/heads/main/changelog/hapi-fhir-changelog.yml
+  href: https://artifacts.apis.io/hapi-fhir/changelog/hapi-fhir-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/hapi-fhir-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hapi-fhir/refs/heads/main/conformance/hapi-fhir-conformance.yml
+  href: https://artifacts.apis.io/hapi-fhir/conformance/hapi-fhir-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hapi-fhir-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hapi-fhir/refs/heads/main/hosts/hapi-fhir-hosts.yml
+  href: https://artifacts.apis.io/hapi-fhir/hosts/hapi-fhir-hosts.yml
   title: ''
   type: Hosts
   url: hosts/hapi-fhir-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hapi-fhir/refs/heads/main/packages/hapi-fhir-packages.yml
+  href: https://artifacts.apis.io/hapi-fhir/packages/hapi-fhir-packages.yml
   title: ''
   type: SDKs
   url: packages/hapi-fhir-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hapi-fhir/refs/heads/main/packages/hapi-fhir-packages.yml
+  href: https://artifacts.apis.io/hapi-fhir/packages/hapi-fhir-packages.yml
   title: ''
   type: Packages
   url: packages/hapi-fhir-packages.yml
@@ -97,7 +110,7 @@ common:
   type: GettingStarted
   url: https://hapifhir.io/hapi-fhir/docs/getting_started/introduction.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hapi-fhir/refs/heads/main/security/hapi-fhir-domain-security.yml
+  href: https://artifacts.apis.io/hapi-fhir/security/hapi-fhir-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hapi-fhir-domain-security.yml
@@ -159,7 +172,7 @@ overview: 'HAPI FHIR is listed with 2 APIs on the [APIs.io](https://apis.io/) ne
 
 
   HAPI FHIR''s developer surface includes CLI, changelog, API reference, getting-started guide, documentation, engineering blog, support, and 11 more developer resources.'
-random_paper: 8
+random_paper: 0
 rules:
 - authorship: generated
   effective_rule_count: 48
@@ -175,21 +188,23 @@ rules:
   slug: hapi-fhir-rules
 score:
   band: emerging
-  composite: 25.6
+  composite: 22.0
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 56.8
     catalog_earned_first_party: 0.0
     catalog_gap: 58.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.6
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 19.4
-    developer_ergonomics: 50.0
+    developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 21.1
+  previous_composite: 25.6
   provenance:
     conformance: derived
     contracts:
@@ -204,11 +219,13 @@ score:
     regime: Health
     regime_id: health
     score: 8.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/hapi-fhir/hapi-fhir-2026-11-03T133146.png
 security:
 - kind: domain-security
   name: Hapi Fhir Domain Security

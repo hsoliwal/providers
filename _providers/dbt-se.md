@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 40.4
-  scored_at: '2026-10-17'
+  score: 39.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 115
   human_in_the_loop: 2
@@ -104,65 +118,65 @@ apis:
   description: Analysis workbooks and models
   name: DBT Capital Workbooks API
   slug: dbt-se-workbooks-api
-artifact_total: 25
+artifact_total: 26
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/agentic-access/dbt-se-agentic-access.yml
+  href: https://artifacts.apis.io/dbt-se/agentic-access/dbt-se-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dbt-se-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/rules/dbt-se-rules.yml
+  href: https://artifacts.apis.io/dbt-se/rules/dbt-se-rules.yml
   title: ''
   type: Spectral
   url: rules/dbt-se-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/json-ld/dbt-se-context.jsonld
+  href: https://artifacts.apis.io/dbt-se/json-ld/dbt-se-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/dbt-se-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/vocabulary/dbt-se-vocabulary.yml
+  href: https://artifacts.apis.io/dbt-se/vocabulary/dbt-se-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/dbt-se-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/dbt-se/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/data-model/dbt-se-data-model.yml
+  href: https://artifacts.apis.io/dbt-se/data-model/dbt-se-data-model.yml
   title: ''
   type: DataModel
   url: data-model/dbt-se-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/errors/dbt-se-problem-types.yml
+  href: https://artifacts.apis.io/dbt-se/errors/dbt-se-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/dbt-se-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/conformance/dbt-se-conformance.yml
+  href: https://artifacts.apis.io/dbt-se/conformance/dbt-se-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dbt-se-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/llms/dbt-se-llms.txt
+  href: https://artifacts.apis.io/dbt-se/llms/dbt-se-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dbt-se-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/well-known/dbt-se-well-known.yml
+  href: https://artifacts.apis.io/dbt-se/well-known/dbt-se-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/dbt-se-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/hosts/dbt-se-hosts.yml
+  href: https://artifacts.apis.io/dbt-se/hosts/dbt-se-hosts.yml
   title: ''
   type: Hosts
   url: hosts/dbt-se-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/vendors/dbt-se-vendors.yml
+  href: https://artifacts.apis.io/dbt-se/vendors/dbt-se-vendors.yml
   title: ''
   type: Vendors
   url: vendors/dbt-se-vendors.yml
@@ -171,12 +185,12 @@ common:
   type: Newsroom
   url: https://www.dbt.se/press
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/authentication/dbt-se-authentication.yml
+  href: https://artifacts.apis.io/dbt-se/authentication/dbt-se-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dbt-se-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dbt-se/refs/heads/main/security/dbt-se-domain-security.yml
+  href: https://artifacts.apis.io/dbt-se/security/dbt-se-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dbt-se-domain-security.yml
@@ -235,7 +249,7 @@ overview: 'DBT Capital publishes 14 API contracts indexed on the [APIs.io](https
 
 
   DBT Capital''s developer surface includes authentication, documentation, support, and 16 more developer resources.'
-random_paper: 3
+random_paper: 23
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -251,21 +265,31 @@ rules:
   slug: dbt-se-rules
 score:
   band: thin
-  composite: 35.4
+  composite: 32.5
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.9
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 22.0
     contract_quality: 60.9
-    developer_ergonomics: 28.0
-    discoverability: 75.0
+    developer_ergonomics: 20.8
+    discoverability: 74.1
     operational_transparency: 0.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - sweden
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+    - nordics
+  previous_composite: 35.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -281,12 +305,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
+screenshot: https://apis.io/screenshots/dbt-se/dbt-se-2026-11-03T130347.png
 security:
 - kind: authentication
   name: Dbt Se Authentication
@@ -296,6 +322,10 @@ security:
   name: Dbt Se Domain Security
   slug: dbt-se-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: dbt-se-fetch-organization-kyc
+  slug: dbt-se-fetch-organization-kyc
 slug: dbt-se
 tags:
 - Company

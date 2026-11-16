@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Open access
   onboarding: open
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.7
-  scored_at: '2026-10-17'
+  score: 30.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -59,11 +66,8 @@ apis:
   description: Retrieve time series data for BLS statistical series
   name: Bureau of Labor Statistics Time Series API
   slug: bls-gov-time-series-api
-artifact_total: 21
+artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: BLS Public Data Popular Series API
   slug: open-bls-gov-popular-series-api
@@ -78,17 +82,17 @@ collections:
   slug: open-bls-public-data-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bls-gov/refs/heads/main/plans/bls-gov-plans-pricing.yml
+  href: https://artifacts.apis.io/bls-gov/plans/bls-gov-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bls-gov-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bls-gov/refs/heads/main/rate-limits/bls-gov-rate-limits.yml
+  href: https://artifacts.apis.io/bls-gov/rate-limits/bls-gov-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bls-gov-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bls-gov/refs/heads/main/finops/bls-gov-finops.yml
+  href: https://artifacts.apis.io/bls-gov/finops/bls-gov-finops.yml
   title: ''
   type: FinOps
   url: finops/bls-gov-finops.yml
@@ -97,17 +101,17 @@ common:
   type: BlogRSS
   url: https://www.bls.gov/feed/bls_latest.rss
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bls-gov/refs/heads/main/agentic-access/bls-gov-agentic-access.yml
+  href: https://artifacts.apis.io/bls-gov/agentic-access/bls-gov-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bls-gov-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bls-gov/refs/heads/main/security/bls-gov-domain-security.yml
+  href: https://artifacts.apis.io/bls-gov/security/bls-gov-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bls-gov-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bls-gov/refs/heads/main/authentication/bls-gov-authentication.yml
+  href: https://artifacts.apis.io/bls-gov/authentication/bls-gov-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bls-gov-authentication.yml
@@ -168,7 +172,7 @@ finops:
 - has_sources: false
   method: generated
   name: Bls Gov Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: bls-gov-finops
   template: true
@@ -202,7 +206,7 @@ plans:
 - name: Bls Gov Plans Pricing
   plan_count: 3
   slug: bls-gov-plans-pricing
-random_paper: 16
+random_paper: 2
 rate_limits:
 - limit_count: 5
   name: Bls Gov Rate Limits
@@ -234,13 +238,13 @@ score:
   band: developing
   composite: 39.4
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 64.2
     catalog_earned_first_party: 0.0
     catalog_gap: 50.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 31.6
     contract_governance: 23.5
@@ -253,7 +257,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 41.0
+  previous_composite: 39.4
   provenance:
     agentic_access: derived
     contracts:
@@ -267,13 +271,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bls-gov/refs/heads/main/screenshots/bls-gov-2026-06-20T173524.png
+screenshot: https://apis.io/screenshots/bls-gov/bls-gov-2026-06-20T173524.png
 security:
 - kind: authentication
   name: Bls Gov Authentication

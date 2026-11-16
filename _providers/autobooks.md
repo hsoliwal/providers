@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -32,32 +45,32 @@ common:
   type: BlogRSS
   url: https://blog.autobooks.co/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/autobooks/refs/heads/main/well-known/autobooks-status-security.txt
+  href: https://artifacts.apis.io/autobooks/well-known/autobooks-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/autobooks-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/autobooks/refs/heads/main/well-known/autobooks-well-known.yml
+  href: https://artifacts.apis.io/autobooks/well-known/autobooks-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/autobooks-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/autobooks/refs/heads/main/hosts/autobooks-hosts.yml
+  href: https://artifacts.apis.io/autobooks/hosts/autobooks-hosts.yml
   title: ''
   type: Hosts
   url: hosts/autobooks-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/autobooks/refs/heads/main/vendors/autobooks-vendors.yml
+  href: https://artifacts.apis.io/autobooks/vendors/autobooks-vendors.yml
   title: ''
   type: Vendors
   url: vendors/autobooks-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/autobooks/refs/heads/main/packages/autobooks-packages.yml
+  href: https://artifacts.apis.io/autobooks/packages/autobooks-packages.yml
   title: ''
   type: SDKs
   url: packages/autobooks-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/autobooks/refs/heads/main/packages/autobooks-packages.yml
+  href: https://artifacts.apis.io/autobooks/packages/autobooks-packages.yml
   title: ''
   type: Packages
   url: packages/autobooks-packages.yml
@@ -94,7 +107,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/autobooks
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/autobooks/refs/heads/main/security/autobooks-domain-security.yml
+  href: https://artifacts.apis.io/autobooks/security/autobooks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/autobooks-domain-security.yml
@@ -121,26 +134,26 @@ overview: 'Autobooks is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Autobooks'' developer surface includes support, pricing, engineering blog, getting-started guide, documentation, and 12 more developer resources.'
-random_paper: 15
+random_paper: 23
 score:
   band: emerging
-  composite: 16.7
+  composite: 11.5
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.6
   facets:
-    access_clarity: 23.7
+    access_clarity: 11.8
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 35.7
+    developer_ergonomics: 21.4
     discoverability: 44.6
     operational_transparency: 21.1
-  previous_composite: 16.7
+  previous_composite: 18.1
   provenance:
     mcp: unknown
   regulatory:
@@ -149,14 +162,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/autobooks/refs/heads/main/screenshots/autobooks-2026-10-11T100910.png
+screenshot: https://apis.io/screenshots/autobooks/autobooks-2026-10-11T100910.png
 security:
 - kind: domain-security
   name: Autobooks Domain Security

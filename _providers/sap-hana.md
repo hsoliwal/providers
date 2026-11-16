@@ -1,13 +1,16 @@
 ---
 access_model:
-  confidence: high
-  label: Enterprise · Requires approval
-  onboarding: approval
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Enterprise · Self-serve signup
+  onboarding: self-serve
   pricing: enterprise
   public: false
   source:
-  - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-10-17'
+  score: 26.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -105,7 +111,7 @@ apis:
   description: Operations for retrieving database performance metrics and resource utilization data for SAP HANA Cloud instances.
   name: SAP HANA Metrics API
   slug: sap-hana-metrics-api
-artifact_total: 157
+artifact_total: 156
 collections:
 - collection_type: postman
   name: SAP HANA Cloud REST Alerts API
@@ -122,9 +128,6 @@ collections:
 - collection_type: postman
   name: SAP HANA Cloud REST Alerts Metrics API
   slug: postman-sap-hana-metrics-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: SAP HANA Cloud REST Alerts API
   slug: open-sap-hana-alerts-api
@@ -145,17 +148,17 @@ collections:
   slug: open-sap-hana-metrics-api
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/rate-limits/sap-hana-rate-limits.yml
+  href: https://artifacts.apis.io/sap-hana/rate-limits/sap-hana-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sap-hana-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/finops/sap-hana-finops.yml
+  href: https://artifacts.apis.io/sap-hana/finops/sap-hana-finops.yml
   title: ''
   type: FinOps
   url: finops/sap-hana-finops.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/plans/sap-hana-plans-pricing.yml
+  href: https://artifacts.apis.io/sap-hana/plans/sap-hana-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sap-hana-plans-pricing.yml
@@ -164,7 +167,7 @@ common:
   type: Website
   url: https://sap.com
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/capabilities/sap-hana-capability-edges.yml
+  href: https://artifacts.apis.io/sap-hana/capabilities/sap-hana-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/sap-hana-capability-edges.yml
@@ -173,27 +176,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/sap-hana/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/agentic-access/sap-hana-agentic-access.yml
+  href: https://artifacts.apis.io/sap-hana/agentic-access/sap-hana-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sap-hana-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/security/sap-hana-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/sap-hana/security/sap-hana-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/sap-hana-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/security/sap-hana-domain-security.yml
+  href: https://artifacts.apis.io/sap-hana/security/sap-hana-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sap-hana-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/authentication/sap-hana-authentication.yml
+  href: https://artifacts.apis.io/sap-hana/authentication/sap-hana-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sap-hana-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/scopes/sap-hana-scopes.yml
+  href: https://artifacts.apis.io/sap-hana/scopes/sap-hana-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/sap-hana-scopes.yml
@@ -238,12 +241,12 @@ common:
   type: PrivacyPolicy
   url: https://www.sap.com/about/legal/privacy.html
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/json-ld/sap-hana-context.jsonld
+  href: https://artifacts.apis.io/sap-hana/json-ld/sap-hana-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/sap-hana-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/rules/sap-hana-spectral-rules.yml
+  href: https://artifacts.apis.io/sap-hana/rules/sap-hana-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/sap-hana-spectral-rules.yml
@@ -367,12 +370,12 @@ features:
   name: Smart Data Integration
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Sap Hana Finops
   primary_unit: ''
-  service_category: Database
+  service_category: ''
   slug: sap-hana-finops
-  template: false
+  template: true
 image: https://www.sap.com/content/dam/application/shared/logos/sap-logo-svg.svg
 integrations:
 - description: Native integration with SAP Business Technology Platform for enterprise application development.
@@ -614,7 +617,7 @@ plans:
 - name: Sap Hana Plans Pricing
   plan_count: 0
   slug: sap-hana-plans-pricing
-random_paper: 7
+random_paper: 9
 rate_limits:
 - limit_count: 1
   name: Sap Hana Rate Limits
@@ -650,7 +653,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 43.8
+  composite: 45.2
   coverage:
     artifact_dirs: 20
     catalog_earned: 55.5
@@ -658,15 +661,15 @@ score:
     catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 31.6
     contract_governance: 13.6
     contract_quality: 69.8
     developer_ergonomics: 27.4
     discoverability: 64.3
-    operational_transparency: 26.3
-  previous_composite: 45.3
+    operational_transparency: 36.8
+  previous_composite: 45.2
   provenance:
     agentic_access: derived
     contracts:
@@ -680,13 +683,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sap-hana/refs/heads/main/screenshots/sap-hana-2026-06-20T193427.png
+screenshot: https://apis.io/screenshots/sap-hana/sap-hana-2026-06-20T193427.png
 security:
 - kind: authentication
   name: Sap Hana Authentication

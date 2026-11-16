@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated_conflict: 'x-api-posture: private but 3 published API entries'
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: 'Discovery endpoint (GET api/service/v1/discovery) that a partner application calls on startup to resolve the current RESTful URI patterns for the Web-Intent resources it needs, rather than hardcoding '
@@ -48,7 +53,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mitchell1/refs/heads/main/security/mitchell1-domain-security.yml
+  href: https://artifacts.apis.io/mitchell1/security/mitchell1-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mitchell1-domain-security.yml
@@ -65,7 +70,7 @@ common:
   type: Documentation
   url: https://mitchell1.com/resources/api-request/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mitchell1/refs/heads/main/plans/mitchell1-plans-pricing.yml
+  href: https://artifacts.apis.io/mitchell1/plans/mitchell1-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mitchell1-plans-pricing.yml
@@ -90,18 +95,18 @@ plans:
 - name: Mitchell1 Plans Pricing
   plan_count: 4
   slug: mitchell1-plans-pricing
-random_paper: 19
+random_paper: 11
 score:
   band: emerging
   composite: 11.1
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 43.0
     catalog_earned_first_party: 0.0
     catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.1
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
@@ -109,15 +114,15 @@ score:
     developer_ergonomics: 19.0
     discoverability: 71.4
     operational_transparency: 0.0
-  previous_composite: 15.2
+  previous_composite: 11.1
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

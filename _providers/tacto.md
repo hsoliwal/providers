@@ -1,11 +1,15 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,9 +39,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 4
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -69,17 +76,17 @@ common:
   type: Compliance
   url: https://tacto.ai/en/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tacto/refs/heads/main/conformance/tacto-conformance.yml
+  href: https://artifacts.apis.io/tacto/conformance/tacto-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tacto-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tacto/refs/heads/main/security/tacto-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tacto/security/tacto-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/tacto-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tacto/refs/heads/main/security/tacto-domain-security.yml
+  href: https://artifacts.apis.io/tacto/security/tacto-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tacto-domain-security.yml
@@ -87,10 +94,6 @@ created: '2026-07-17'
 description: 'Tacto (Tacto Technology GmbH) is a Munich-based AI procurement intelligence platform for manufacturing companies. It unifies internal ERP and engineering data with external market intelligence to power AI agents that automate procurement work across four areas: Supplier Intelligence (centralized supplier management with documents, evaluations and performance data), Spend & Cost Intelligence (spend analysis and savings identification), Sourcing Intelligence (AI-optimized RFQ and price inquiries) and Compliance Intelligence (automated regulatory and supply-chain due-diligence detection). Tacto is ISO/IEC 27001:2022 certified and GDPR compliant with EU-only hosting and an audit log of every AI action. It does not publish a public API or developer program; this profile captures the company''s corporate, security and compliance surface.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tacto.png
 layout: provider
-mcp_servers:
-- description: Remote MCP server at api.tacto.ai over HTTP.
-  name: Tacto MCP Server
-  slug: tacto
 modified: '2026-07-21'
 name: Tacto
 nav: Providers
@@ -104,7 +107,7 @@ score:
   band: emerging
   composite: 15.4
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -140,14 +143,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 23.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tacto/refs/heads/main/screenshots/tacto-2026-10-11T130555.png
+screenshot: https://apis.io/screenshots/tacto/tacto-2026-10-11T130555.png
 security:
 - kind: domain-security
   name: Tacto Domain Security

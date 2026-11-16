@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Admin/management REST API for MultiLine, used to connect external applications to a Movius organization. Supports provisioning and managing API users, assigning and reassigning business numbers, confi
@@ -43,22 +46,22 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/movius/refs/heads/main/security/movius-domain-security.yml
+  href: https://artifacts.apis.io/movius/security/movius-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/movius-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/movius/refs/heads/main/authentication/movius-authentication.yml
+  href: https://artifacts.apis.io/movius/authentication/movius-authentication.yml
   title: ''
   type: Authentication
   url: authentication/movius-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/movius/refs/heads/main/conformance/movius-conformance.yml
+  href: https://artifacts.apis.io/movius/conformance/movius-conformance.yml
   title: ''
   type: Conformance
   url: conformance/movius-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/movius/refs/heads/main/lifecycle/movius-lifecycle.yml
+  href: https://artifacts.apis.io/movius/lifecycle/movius-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/movius-lifecycle.yml
@@ -126,18 +129,18 @@ overview: 'Movius is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Movius'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, changelog, and 10 more developer resources.'
-random_paper: 15
+random_paper: 3
 score:
   band: thin
   composite: 31.3
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.1
+  delta: 0.0
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
@@ -145,7 +148,7 @@ score:
     developer_ergonomics: 57.1
     discoverability: 66.1
     operational_transparency: 23.7
-  previous_composite: 31.4
+  previous_composite: 31.3
   provenance:
     conformance: first-party
   regulatory:
@@ -164,14 +167,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 25.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/movius/refs/heads/main/screenshots/movius-2026-08-07T184403.png
+screenshot: https://apis.io/screenshots/movius/movius-2026-08-07T184403.png
 security:
 - kind: authentication
   name: Movius Authentication

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.4
-  scored_at: '2026-10-17'
+  score: 23.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.zego.com
@@ -62,15 +65,12 @@ apis:
   description: Start and end insurance cover periods (shifts) for customers.
   name: Zego Shifts API
   slug: zego-shifts-api
-artifact_total: 15
+artifact_total: 17
 asyncapis:
 - description: ''
   name: Zego Webhooks
   slug: zego-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Zego Partner Customer Integration API
   slug: open-zego-customer-integration-api
@@ -88,17 +88,17 @@ collections:
   slug: open-zego-shifts-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zego/refs/heads/main/skills/zego-enrol-public-liability.md
+  href: https://artifacts.apis.io/zego/skills/zego-enrol-public-liability.md
   title: ''
   type: AgentSkill
   url: skills/zego-enrol-public-liability.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zego/refs/heads/main/mcp/zego-mcp.yml
+  href: https://artifacts.apis.io/zego/mcp/zego-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/zego-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zego/refs/heads/main/security/zego-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/zego/security/zego-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/zego-vulnerability-disclosure.yml
@@ -107,7 +107,7 @@ common:
   type: Security
   url: https://www.zego.com/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zego/refs/heads/main/security/zego-domain-security.yml
+  href: https://artifacts.apis.io/zego/security/zego-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zego-domain-security.yml
@@ -146,30 +146,43 @@ network: true
 overview: 'Zego publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Customer Integration API, Customers API, Occupations API, and 2 more. Tagged areas include Company, Insurance, Insurtech, Auto Insurance, and Gig Economy.
 
 
-  The Zego catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Zego catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Zego''s developer surface includes documentation, engineering blog, support, and 8 more developer resources.'
-random_paper: 19
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Zego API Rules
+  rule_count: 56
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 1
+  slug: zego-rules
 score:
   band: thin
-  composite: 26.8
+  composite: 28.4
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 37.0
+    artifact_dirs: 20
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 20.8
     developer_ergonomics: 30.4
     discoverability: 66.1
     operational_transparency: 34.2
-  previous_composite: 26.8
+  previous_composite: 28.4
   provenance:
     contracts:
       callable: 100.0
@@ -184,13 +197,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 22.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zego/refs/heads/main/screenshots/zego-2026-09-02T171533.png
+screenshot: https://apis.io/screenshots/zego/zego-2026-09-02T171533.png
 security:
 - kind: authentication
   name: Zego Authentication
@@ -204,6 +217,12 @@ security:
   name: Zego Vulnerability Disclosure
   slug: zego-vulnerability-disclosure
   summary_line: no policy recorded
+skill_count: 2
+skills:
+- name: Enrol a Zego customer on public liability cover
+  slug: zego-enrol-public-liability
+- name: Manage Zego shift cover for a customer
+  slug: zego-manage-shift-cover
 slug: zego
 tags:
 - Company

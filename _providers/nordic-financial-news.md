@@ -1,4 +1,21 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-native
   dimensions:
@@ -15,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
-    well_known_catalog: false
+    well_known_catalog: true
   schema_version: '0.2'
-  score: 58.2
-  scored_at: '2026-10-17'
+  score: 62.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -31,7 +51,7 @@ agentic_access:
   operation_count: 30
   slug: nordic-financial-news-agentic-access
   summary_line: 30 operations
-api_count: 2
+api_count: 1
 apis:
 - description: Remote Streamable HTTP MCP server exposing 19 read tools over the same data as the REST API, with OAuth 2.1 or static Bearer API keys.
   name: Nordic Financial News MCP Server
@@ -111,110 +131,140 @@ apis:
   description: The Watchlists API from Nordic Financial News — 2 operation(s) for watchlists.
   name: Nordic Financial News Watchlists API
   slug: nordic-financial-news-watchlists-api
-artifact_total: 31
+artifact_total: 34
 common:
+- group: commercial
+  href: https://artifacts.apis.io/nordic-financial-news/finops/nordic-financial-news-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/nordic-financial-news-finops.yml
+- group: auth
+  href: https://artifacts.apis.io/nordic-financial-news/security/nordic-financial-news-vulnerability-disclosure.yml
+  title: ''
+  type: Security
+  url: security/nordic-financial-news-vulnerability-disclosure.yml
+- group: auth
+  href: https://artifacts.apis.io/nordic-financial-news/well-known/nordic-financial-news-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/nordic-financial-news-security.txt
+- group: build
+  href: https://artifacts.apis.io/nordic-financial-news/integrations/nordic-financial-news-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/nordic-financial-news-integration-edges.yml
+- group: auth
+  href: https://artifacts.apis.io/nordic-financial-news/security/nordic-financial-news-vulnerability-disclosure.yml
+  title: ''
+  type: VulnerabilityDisclosure
+  url: security/nordic-financial-news-vulnerability-disclosure.yml
+- group: other
+  href: https://artifacts.apis.io/nordic-financial-news/capabilities/nordic-financial-news-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nordic-financial-news-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/agentic-access/nordic-financial-news-agentic-access.yml
+  href: https://artifacts.apis.io/nordic-financial-news/agentic-access/nordic-financial-news-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nordic-financial-news-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/rate-limits/nordic-financial-news-rate-limits.yml
+  href: https://artifacts.apis.io/nordic-financial-news/rate-limits/nordic-financial-news-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/nordic-financial-news-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/plans/nordic-financial-news-plans-pricing.yml
+  href: https://artifacts.apis.io/nordic-financial-news/plans/nordic-financial-news-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/nordic-financial-news-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/rules/nordic-financial-news-rules.yml
+  href: https://artifacts.apis.io/nordic-financial-news/rules/nordic-financial-news-rules.yml
   title: ''
   type: Spectral
   url: rules/nordic-financial-news-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/json-ld/nordic-financial-news-context.jsonld
+  href: https://artifacts.apis.io/nordic-financial-news/json-ld/nordic-financial-news-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/nordic-financial-news-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/vocabulary/nordic-financial-news-vocabulary.yml
+  href: https://artifacts.apis.io/nordic-financial-news/vocabulary/nordic-financial-news-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/nordic-financial-news-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/data-model/nordic-financial-news-data-model.yml
+  href: https://artifacts.apis.io/nordic-financial-news/data-model/nordic-financial-news-data-model.yml
   title: ''
   type: DataModel
   url: data-model/nordic-financial-news-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/cli/nordic-financial-news-cli.yml
+  href: https://artifacts.apis.io/nordic-financial-news/cli/nordic-financial-news-cli.yml
   title: ''
   type: CLI
   url: cli/nordic-financial-news-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/changelog/nordic-financial-news-changelog.yml
+  href: https://artifacts.apis.io/nordic-financial-news/changelog/nordic-financial-news-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/nordic-financial-news-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/conventions/nordic-financial-news-conventions.yml
+  href: https://artifacts.apis.io/nordic-financial-news/conventions/nordic-financial-news-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nordic-financial-news-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/scopes/nordic-financial-news-scopes.yml
+  href: https://artifacts.apis.io/nordic-financial-news/scopes/nordic-financial-news-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/nordic-financial-news-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/lifecycle/nordic-financial-news-lifecycle.yml
+  href: https://artifacts.apis.io/nordic-financial-news/lifecycle/nordic-financial-news-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nordic-financial-news-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/errors/nordic-financial-news-problem-types.yml
+  href: https://artifacts.apis.io/nordic-financial-news/errors/nordic-financial-news-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/nordic-financial-news-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/conformance/nordic-financial-news-conformance.yml
+  href: https://artifacts.apis.io/nordic-financial-news/conformance/nordic-financial-news-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nordic-financial-news-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/llms/nordic-financial-news-llms.txt
+  href: https://artifacts.apis.io/nordic-financial-news/llms/nordic-financial-news-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nordic-financial-news-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/a2a/nordic-financial-news-a2a.yml
+  href: https://artifacts.apis.io/nordic-financial-news/a2a/nordic-financial-news-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/nordic-financial-news-a2a.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/mcp/nordic-financial-news-tool-crosswalk.yml
+  href: https://artifacts.apis.io/nordic-financial-news/mcp/nordic-financial-news-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/nordic-financial-news-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/mcp/nordic-financial-news-mcp.yml
+  href: https://artifacts.apis.io/nordic-financial-news/mcp/nordic-financial-news-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/nordic-financial-news-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/well-known/nordic-financial-news-well-known.yml
+  href: https://artifacts.apis.io/nordic-financial-news/well-known/nordic-financial-news-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/nordic-financial-news-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/hosts/nordic-financial-news-hosts.yml
+  href: https://artifacts.apis.io/nordic-financial-news/hosts/nordic-financial-news-hosts.yml
   title: ''
   type: Hosts
   url: hosts/nordic-financial-news-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/vendors/nordic-financial-news-vendors.yml
+  href: https://artifacts.apis.io/nordic-financial-news/vendors/nordic-financial-news-vendors.yml
   title: ''
   type: Vendors
   url: vendors/nordic-financial-news-vendors.yml
@@ -223,12 +273,12 @@ common:
   type: Newsroom
   url: https://nordicfinancialnews.com/news
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/authentication/nordic-financial-news-authentication.yml
+  href: https://artifacts.apis.io/nordic-financial-news/authentication/nordic-financial-news-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nordic-financial-news-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/security/nordic-financial-news-domain-security.yml
+  href: https://artifacts.apis.io/nordic-financial-news/security/nordic-financial-news-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nordic-financial-news-domain-security.yml
@@ -294,10 +344,18 @@ common:
   url: https://x.com/nordicfinnews
 created: '2026-10-09'
 description: Nordic Financial News delivers structured, English-translated financial news from 70+ Nordic-language sources across Sweden, Norway, Denmark, Finland and Iceland, with synthesized stories, company and exchange reference data, and a financial calendar of earnings, dividends and AGMs, through a REST API, a remote OAuth MCP server and the nfn CLI.
+finops:
+- has_sources: true
+  method: derived
+  name: Nordic Financial News Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: nordic-financial-news-finops
+  template: false
 image: https://nordicfinancialnews.com/assets/nfn-og-c4be56ba.jpg
 json_schemas:
 - name: ArticleDetail
-  property_count: 0
+  property_count: 16
   slug: nordic-financial-news-article-detail
 - name: ArticleSummary
   property_count: 11
@@ -306,10 +364,10 @@ json_schemas:
   property_count: 18
   slug: nordic-financial-news-calendar-event-summary
 - name: CompanyDetail
-  property_count: 0
+  property_count: 20
   slug: nordic-financial-news-company-detail
 - name: EventDetail
-  property_count: 0
+  property_count: 19
   slug: nordic-financial-news-event-detail
 - name: EventSummary
   property_count: 13
@@ -334,28 +392,31 @@ overview: 'Nordic Financial News publishes 16 API contracts indexed on the [APIs
   The Nordic Financial News catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Nordic Financial News'' developer surface includes CLI, changelog, authentication, documentation, API reference, getting-started guide, pricing, and 32 more developer resources.'
+  Nordic Financial News'' developer surface includes CLI, changelog, authentication, documentation, API reference, getting-started guide, pricing, and 38 more developer resources.'
 plans:
 - name: Nordic Financial News Plans Pricing
   plan_count: 3
   slug: nordic-financial-news-plans-pricing
-random_paper: 17
+- name: Nordic Financial News Price Estimates
+  plan_count: 0
+  slug: nordic-financial-news-price-estimates
+random_paper: 19
 rate_limits:
 - limit_count: 3
   name: Nordic Financial News Rate Limits
   slug: nordic-financial-news-rate-limits
 rules:
 - authorship: generated
-  effective_rule_count: 55
+  effective_rule_count: 105
   extends:
   - spectral:oas
   name: Nordic Financial News API Rules
-  rule_count: 14
+  rule_count: 64
   severity_counts:
-    error: 10
+    error: 49
     hint: 0
-    info: 1
-    warn: 3
+    info: 6
+    warn: 9
   slug: nordic-financial-news-rules
 scopes:
 - name: Nordic Financial News Scopes
@@ -364,36 +425,36 @@ scopes:
   summary_line: 2 scopes
 score:
   band: strong
-  composite: 63.9
+  composite: 58.7
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 86.8
+    artifact_dirs: 34
+    catalog_earned: 89.8
     catalog_earned_first_party: 24.0
-    catalog_gap: 28.3
+    catalog_gap: 25.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.4
+  delta: -9.6
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 22.0
-    contract_quality: 63.6
-    developer_ergonomics: 54.8
-    discoverability: 76.7
-    operational_transparency: 68.4
+    contract_quality: 71.9
+    developer_ergonomics: 36.9
+    discoverability: 75.8
+    operational_transparency: 60.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - nordics
-  previous_composite: 63.5
+  previous_composite: 68.3
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 15
     mcp: first-party
   regulatory:
@@ -401,15 +462,15 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 38.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 39.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/nordic-financial-news/refs/heads/main/screenshots/nordic-financial-news-2026-10-11T111624.png
+screenshot: https://apis.io/screenshots/nordic-financial-news/nordic-financial-news-2026-10-11T111624.png
 security:
 - kind: authentication
   name: Nordic Financial News Authentication
@@ -419,6 +480,10 @@ security:
   name: Nordic Financial News Domain Security
   slug: nordic-financial-news-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+- kind: vulnerability-disclosure
+  name: Nordic Financial News Vulnerability Disclosure
+  slug: nordic-financial-news-vulnerability-disclosure
+  summary_line: security.txt · contact published
 slug: nordic-financial-news
 tags:
 - Company

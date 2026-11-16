@@ -1,13 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Enterprise
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: enterprise
+  pricing: paid
   public: false
   source:
-  - plans
+  - finops
   - authentication
+  - scopes
+  - rate-limits
   - security
   trial: false
   try_now: false
@@ -27,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.0
-  scored_at: '2026-10-17'
+  score: 46.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -60,11 +65,8 @@ apis:
   description: ADM food ingredients and product catalog
   name: Archer Daniels Midland Products API
   slug: archer-daniels-midland-products-api
-artifact_total: 55
+artifact_total: 54
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Archer Daniels Midland Commodity Data Commodities API
   slug: open-archer-daniels-midland-commodities-api
@@ -79,7 +81,7 @@ collections:
   slug: open-archer-daniels-midland-products-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/finops/archer-daniels-midland-finops.yml
+  href: https://artifacts.apis.io/archer-daniels-midland/finops/archer-daniels-midland-finops.yml
   title: ''
   type: FinOps
   url: finops/archer-daniels-midland-finops.yml
@@ -88,17 +90,17 @@ common:
   type: Website
   url: https://www.adm.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/agentic-access/archer-daniels-midland-agentic-access.yml
+  href: https://artifacts.apis.io/archer-daniels-midland/agentic-access/archer-daniels-midland-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/archer-daniels-midland-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/security/archer-daniels-midland-domain-security.yml
+  href: https://artifacts.apis.io/archer-daniels-midland/security/archer-daniels-midland-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/archer-daniels-midland-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/authentication/archer-daniels-midland-authentication.yml
+  href: https://artifacts.apis.io/archer-daniels-midland/authentication/archer-daniels-midland-authentication.yml
   title: ''
   type: Authentication
   url: authentication/archer-daniels-midland-authentication.yml
@@ -127,42 +129,42 @@ common:
   type: Blog
   url: https://www.adm.com/en-us/news/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/well-known/archer-daniels-midland-well-known.yml
+  href: https://artifacts.apis.io/archer-daniels-midland/well-known/archer-daniels-midland-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/archer-daniels-midland-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/llms/archer-daniels-midland-llms.txt
+  href: https://artifacts.apis.io/archer-daniels-midland/llms/archer-daniels-midland-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/archer-daniels-midland-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/scopes/archer-daniels-midland-scopes.yml
+  href: https://artifacts.apis.io/archer-daniels-midland/scopes/archer-daniels-midland-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/archer-daniels-midland-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/conformance/archer-daniels-midland-conformance.yml
+  href: https://artifacts.apis.io/archer-daniels-midland/conformance/archer-daniels-midland-conformance.yml
   title: ''
   type: Conformance
   url: conformance/archer-daniels-midland-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/conventions/archer-daniels-midland-conventions.yml
+  href: https://artifacts.apis.io/archer-daniels-midland/conventions/archer-daniels-midland-conventions.yml
   title: ''
   type: Conventions
   url: conventions/archer-daniels-midland-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/lifecycle/archer-daniels-midland-lifecycle.yml
+  href: https://artifacts.apis.io/archer-daniels-midland/lifecycle/archer-daniels-midland-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/archer-daniels-midland-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/plans/archer-daniels-midland-plans-pricing.yml
+  href: https://artifacts.apis.io/archer-daniels-midland/plans/archer-daniels-midland-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/archer-daniels-midland-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/rate-limits/archer-daniels-midland-rate-limits.yml
+  href: https://artifacts.apis.io/archer-daniels-midland/rate-limits/archer-daniels-midland-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/archer-daniels-midland-rate-limits.yml
@@ -337,7 +339,7 @@ press:
 - date: ''
   title: AI could pose risk for food and ag companies
   url: https://www.agriculturedive.com/news/ai-could-create-risk-for-food-and-ag-companies-ADM-Coca-Cola/724981/
-random_paper: 6
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Archer Daniels Midland Rate Limits
@@ -375,13 +377,13 @@ score:
   band: thin
   composite: 31.5
   coverage:
-    artifact_dirs: 28
+    artifact_dirs: 29
     catalog_earned: 60.0
     catalog_earned_first_party: 0.0
     catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 45.5
@@ -389,7 +391,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 78.6
     operational_transparency: 0.0
-  previous_composite: 33.0
+  previous_composite: 31.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -405,14 +407,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/archer-daniels-midland/refs/heads/main/screenshots/archer-daniels-midland-2026-06-20T172404.png
+screenshot: https://apis.io/screenshots/archer-daniels-midland/archer-daniels-midland-2026-06-20T172404.png
 security:
 - kind: authentication
   name: Archer Daniels Midland Authentication

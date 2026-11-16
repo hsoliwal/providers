@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The HTTP API behind the Kueski Pay merchant widgets. The widgets.js library authenticates with the merchant public key as an HTTP bearer token and reads merchant configuration and installment-messagin
@@ -98,62 +101,62 @@ common:
   type: StatusPage
   url: https://status.kueski.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/lifecycle/kueski-lifecycle.yml
+  href: https://artifacts.apis.io/kueski/lifecycle/kueski-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kueski-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/changelog/kueski-changelog.yml
+  href: https://artifacts.apis.io/kueski/changelog/kueski-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/kueski-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/packages/kueski-packages.yml
+  href: https://artifacts.apis.io/kueski/packages/kueski-packages.yml
   title: ''
   type: Packages
   url: packages/kueski-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/components/kueski-components.yml
+  href: https://artifacts.apis.io/kueski/components/kueski-components.yml
   title: ''
   type: Components
   url: components/kueski-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/conventions/kueski-conventions.yml
+  href: https://artifacts.apis.io/kueski/conventions/kueski-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kueski-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/authentication/kueski-authentication.yml
+  href: https://artifacts.apis.io/kueski/authentication/kueski-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kueski-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/errors/kueski-problem-types.yml
+  href: https://artifacts.apis.io/kueski/errors/kueski-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/kueski-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/conformance/kueski-conformance.yml
+  href: https://artifacts.apis.io/kueski/conformance/kueski-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kueski-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/sandbox/kueski-sandbox.yml
+  href: https://artifacts.apis.io/kueski/sandbox/kueski-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/kueski-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/well-known/kueski-well-known.yml
+  href: https://artifacts.apis.io/kueski/well-known/kueski-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kueski-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/security/kueski-domain-security.yml
+  href: https://artifacts.apis.io/kueski/security/kueski-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kueski-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/llms/kueski-llms.txt
+  href: https://artifacts.apis.io/kueski/llms/kueski-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kueski-llms.txt
@@ -169,12 +172,12 @@ overview: 'Kueski is listed with 2 APIs on the [APIs.io](https://apis.io/) netwo
 
 
   Kueski''s developer surface includes documentation, getting-started guide, support, engineering blog, signup flow, changelog, authentication, and 18 more developer resources.'
-random_paper: 14
+random_paper: 4
 score:
   band: thin
   composite: 29.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -204,14 +207,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kueski/refs/heads/main/screenshots/kueski-2026-08-07T171345.png
+screenshot: https://apis.io/screenshots/kueski/kueski-2026-08-07T171345.png
 security:
 - kind: authentication
   name: Kueski Authentication

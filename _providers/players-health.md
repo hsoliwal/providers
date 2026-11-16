@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -61,7 +65,7 @@ common:
   type: PrivacyPolicy
   url: https://playershealth.com/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/players-health/refs/heads/main/security/players-health-domain-security.yml
+  href: https://artifacts.apis.io/players-health/security/players-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/players-health-domain-security.yml
@@ -77,7 +81,7 @@ overview: 'Player''s Health is profiled on the [APIs.io](https://apis.io/) netwo
 
 
   Player''s Health''s developer surface includes support, engineering blog, signup flow, and 4 more developer resources.'
-random_paper: 13
+random_paper: 3
 score:
   band: minimal
   composite: 9.8
@@ -110,14 +114,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 12.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/players-health/refs/heads/main/screenshots/players-health-2026-09-02T151451.png
+screenshot: https://apis.io/screenshots/players-health/players-health-2026-09-02T151451.png
 security:
 - kind: domain-security
   name: Players Health Domain Security

@@ -1,22 +1,25 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
   - sandbox
-  - '{''url'': ''https://getdivvy.com/'', ''status'': 301, ''note'': ''declared website redirects to https://www.bill.com/product/spend-and-expense — a different registrable domain (getdivvy.com -> bill.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-native
   dimensions:
-    agent_card: conformant
+    agent_card: false
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
@@ -29,15 +32,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 62.5
-  scored_at: '2026-10-17'
+  score: 55.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 208
   human_in_the_loop: 0
@@ -222,69 +228,79 @@ apis:
   description: The vendors API from Divvy — 8 operation(s) for vendors.
   name: Divvy Vendors API
   slug: divvy-vendors-api
-artifact_total: 54
+artifact_total: 57
 asyncapis:
 - description: ''
   name: Divvy Spend Expense Webhooks
   slug: divvy-spend-expense-webhooks
 common:
+- group: commercial
+  href: https://artifacts.apis.io/divvy/finops/divvy-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/divvy-finops.yml
+- group: auth
+  href: https://artifacts.apis.io/divvy/well-known/divvy-apis-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/divvy-apis-security.txt
+- group: commercial
+  href: https://artifacts.apis.io/divvy/plans/divvy-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/divvy-plans-pricing.yml
+- group: other
+  href: https://artifacts.apis.io/divvy/capabilities/divvy-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/divvy-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/agentic-access/divvy-agentic-access.yml
+  href: https://artifacts.apis.io/divvy/agentic-access/divvy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/divvy-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/rules/divvy-rules.yml
+  href: https://artifacts.apis.io/divvy/rules/divvy-rules.yml
   title: ''
   type: Spectral
   url: rules/divvy-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/json-ld/divvy-context.jsonld
+  href: https://artifacts.apis.io/divvy/json-ld/divvy-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/divvy-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/vocabulary/divvy-vocabulary.yml
+  href: https://artifacts.apis.io/divvy/vocabulary/divvy-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/divvy-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/conventions/divvy-conventions.yml
+  href: https://artifacts.apis.io/divvy/conventions/divvy-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/divvy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/errors/divvy-problem-types.yml
+  href: https://artifacts.apis.io/divvy/errors/divvy-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/divvy-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/conformance/divvy-conformance.yml
+  href: https://artifacts.apis.io/divvy/conformance/divvy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/divvy-conformance.yml
-- group: other
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/a2a/divvy-a2a.yml
-  title: ''
-  type: AgentCard
-  url: a2a/divvy-a2a.yml
-- group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/well-known/divvy-apis-security.txt
-  title: ''
-  type: SecurityTxt
-  url: well-known/divvy-apis-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/well-known/divvy-well-known.yml
+  href: https://artifacts.apis.io/divvy/well-known/divvy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/divvy-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/hosts/divvy-hosts.yml
+  href: https://artifacts.apis.io/divvy/hosts/divvy-hosts.yml
   title: ''
   type: Hosts
   url: hosts/divvy-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/vendors/divvy-vendors.yml
+  href: https://artifacts.apis.io/divvy/vendors/divvy-vendors.yml
   title: ''
   type: Vendors
   url: vendors/divvy-vendors.yml
@@ -361,62 +377,70 @@ common:
   type: ChangeLog
   url: https://developer.bill.com/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/changelog/divvy-changelog.yml
+  href: https://artifacts.apis.io/divvy/changelog/divvy-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/divvy-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/authentication/divvy-authentication.yml
+  href: https://artifacts.apis.io/divvy/authentication/divvy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/divvy-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/rate-limits/divvy-rate-limits.yml
+  href: https://artifacts.apis.io/divvy/rate-limits/divvy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/divvy-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/asyncapi/divvy-spend-expense-webhooks.yml
+  href: https://artifacts.apis.io/divvy/asyncapi/divvy-spend-expense-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/divvy-spend-expense-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/conventions/divvy-conventions.yml
+  href: https://artifacts.apis.io/divvy/conventions/divvy-conventions.yml
   title: ''
   type: Conventions
   url: conventions/divvy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/errors/divvy-error-codes.yml
+  href: https://artifacts.apis.io/divvy/errors/divvy-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/divvy-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/lifecycle/divvy-lifecycle.yml
+  href: https://artifacts.apis.io/divvy/lifecycle/divvy-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/divvy-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/lifecycle/divvy-lifecycle.yml
+  href: https://artifacts.apis.io/divvy/lifecycle/divvy-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/divvy-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/sandbox/divvy-sandbox.yml
+  href: https://artifacts.apis.io/divvy/sandbox/divvy-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/divvy-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/data-model/divvy-data-model.yml
+  href: https://artifacts.apis.io/divvy/data-model/divvy-data-model.yml
   title: ''
   type: DataModel
   url: data-model/divvy-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/security/divvy-domain-security.yml
+  href: https://artifacts.apis.io/divvy/security/divvy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/divvy-domain-security.yml
 created: '2026-07-17'
 description: Divvy is a corporate card and spend-management platform (free software plus business credit cards) that was acquired by BILL and now operates as BILL Spend & Expense; getdivvy.com redirects to bill.com. Its API for budgets, users, virtual cards, transactions, and reimbursements is delivered through the BILL developer platform (developer.bill.com) as part of the BILL v3 API, authenticated with a Spend & Expense API token, with a documented webhook event surface, dated changelog, sandbox environment, and per-token rate limits. This profile was surfaced as an Insight Partners portfolio company and has been enriched from BILL's public developer surface.
+finops:
+- has_sources: true
+  method: derived
+  name: Divvy Finops
+  primary_unit: user
+  service_category: ''
+  slug: divvy-finops
+  template: false
 image: https://www.bill.com/product/spend-and-expense
 json_schemas:
 - name: BudgetCreateDto
@@ -471,44 +495,51 @@ overview: 'Divvy publishes 35 API contracts indexed on the [APIs.io](https://api
   The Divvy catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Divvy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 34 more developer resources.'
-random_paper: 12
+  Divvy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 36 more developer resources.'
+plans:
+- name: Divvy Plans Pricing
+  plan_count: 7
+  slug: divvy-plans-pricing
+- name: Divvy Price Estimates
+  plan_count: 0
+  slug: divvy-price-estimates
+random_paper: 10
 rate_limits:
 - limit_count: 5
   name: Divvy Rate Limits
   slug: divvy-rate-limits
 rules:
 - authorship: generated
-  effective_rule_count: 56
+  effective_rule_count: 91
   extends:
   - spectral:oas
   name: Divvy API Rules
-  rule_count: 15
+  rule_count: 50
   severity_counts:
-    error: 9
+    error: 37
     hint: 0
     info: 1
-    warn: 5
+    warn: 12
   slug: divvy-rules
 score:
-  band: developing
-  composite: 53.0
+  band: exemplar
+  composite: 66.6
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 64.8
-    catalog_earned_first_party: 12.0
-    catalog_gap: 50.3
+    artifact_dirs: 30
+    catalog_earned: 79.8
+    catalog_earned_first_party: 24.0
+    catalog_gap: 35.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 12.8
+  delta: 5.7
   facets:
-    access_clarity: 44.7
+    access_clarity: 84.2
     contract_governance: 22.0
-    contract_quality: 66.9
-    developer_ergonomics: 45.2
-    discoverability: 51.8
-    operational_transparency: 65.8
-  previous_composite: 40.2
+    contract_quality: 71.8
+    developer_ergonomics: 66.7
+    discoverability: 50.0
+    operational_transparency: 68.4
+  previous_composite: 60.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -524,13 +555,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: rising
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/divvy/refs/heads/main/screenshots/divvy-2026-07-25T212135.png
+screenshot: https://apis.io/screenshots/divvy/divvy-2026-07-25T212135.png
 security:
 - kind: authentication
   name: Divvy Authentication

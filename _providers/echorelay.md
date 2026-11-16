@@ -1,6 +1,18 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,20 +27,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 38.0
-  scored_at: '2026-10-17'
+  score: 40.7
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
-- description: REST API for EchoRelay integration platform
+- baseURL: https://api.echorelay.dev
+  baseurl_source: spec
+  description: REST API for EchoRelay integration platform
   name: EchoRelay API
-  slug: echorelay-api-2
+  slug: echorelay-api
 - baseURL: https://api.echorelay.dev
   baseurl_source: declared
   description: The Keys API from EchoRelay — 1 operation(s) for keys.
@@ -39,30 +56,30 @@ apis:
   description: The Projects API from EchoRelay — 1 operation(s) for projects.
   name: EchoRelay Projects API
   slug: echorelay-projects-api
-artifact_total: 11
+artifact_total: 13
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/plans/echorelay-plans-pricing.yml
+  href: https://artifacts.apis.io/echorelay/plans/echorelay-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/echorelay-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/rules/echorelay-rules.yml
+  href: https://artifacts.apis.io/echorelay/rules/echorelay-rules.yml
   title: ''
   type: Spectral
   url: rules/echorelay-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/json-ld/echorelay-context.jsonld
+  href: https://artifacts.apis.io/echorelay/json-ld/echorelay-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/echorelay-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/vocabulary/echorelay-vocabulary.yml
+  href: https://artifacts.apis.io/echorelay/vocabulary/echorelay-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/echorelay-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/data-model/echorelay-data-model.yml
+  href: https://artifacts.apis.io/echorelay/data-model/echorelay-data-model.yml
   title: ''
   type: DataModel
   url: data-model/echorelay-data-model.yml
@@ -71,67 +88,67 @@ common:
   type: Compliance
   url: https://echorelay.dev/trust
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/conformance/echorelay-conformance.yml
+  href: https://artifacts.apis.io/echorelay/conformance/echorelay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/echorelay-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/llms/echorelay-llms.txt
+  href: https://artifacts.apis.io/echorelay/llms/echorelay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/echorelay-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/mcp/echorelay-mcp.yml
+  href: https://artifacts.apis.io/echorelay/mcp/echorelay-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/echorelay-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/well-known/echorelay-status-security.txt
+  href: https://artifacts.apis.io/echorelay/well-known/echorelay-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/echorelay-status-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/well-known/echorelay-security.txt
+  href: https://artifacts.apis.io/echorelay/well-known/echorelay-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/echorelay-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/well-known/echorelay-mcp-security.txt
+  href: https://artifacts.apis.io/echorelay/well-known/echorelay-mcp-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/echorelay-mcp-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/well-known/echorelay-kb-security.txt
+  href: https://artifacts.apis.io/echorelay/well-known/echorelay-kb-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/echorelay-kb-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/well-known/echorelay-docs-security.txt
+  href: https://artifacts.apis.io/echorelay/well-known/echorelay-docs-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/echorelay-docs-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/well-known/echorelay-app-security.txt
+  href: https://artifacts.apis.io/echorelay/well-known/echorelay-app-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/echorelay-app-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/well-known/echorelay-api-security.txt
+  href: https://artifacts.apis.io/echorelay/well-known/echorelay-api-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/echorelay-api-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/well-known/echorelay-well-known.yml
+  href: https://artifacts.apis.io/echorelay/well-known/echorelay-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/echorelay-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/hosts/echorelay-hosts.yml
+  href: https://artifacts.apis.io/echorelay/hosts/echorelay-hosts.yml
   title: ''
   type: Hosts
   url: hosts/echorelay-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/vendors/echorelay-vendors.yml
+  href: https://artifacts.apis.io/echorelay/vendors/echorelay-vendors.yml
   title: ''
   type: Vendors
   url: vendors/echorelay-vendors.yml
@@ -152,17 +169,17 @@ common:
   type: DeveloperPortal
   url: https://api.echorelay.dev</code
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/security/echorelay-trust-center.yml
+  href: https://artifacts.apis.io/echorelay/security/echorelay-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/echorelay-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/security/echorelay-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/echorelay/security/echorelay-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/echorelay-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/echorelay/refs/heads/main/security/echorelay-domain-security.yml
+  href: https://artifacts.apis.io/echorelay/security/echorelay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/echorelay-domain-security.yml
@@ -219,6 +236,14 @@ coverage:
   state: none
 created: '2026-10-16'
 description: EchoRelay provides a managed runtime platform for building, deploying, and operating custom API integrations without writing code. It enables teams to connect partner, vendor, and customer APIs quickly, handling retries, credential management, and mapping transformations. Users can design integrations via a visual interface, test with live traffic, and publish changes without downtime, reducing integration maintenance overhead and accelerating time‑to‑value.
+finops:
+- has_sources: true
+  method: derived
+  name: Echorelay Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: echorelay-finops
+  template: false
 image: https://echorelay.dev/og-image.png?v=4
 json_schemas:
 - name: PostKeysRequest
@@ -249,7 +274,10 @@ plans:
 - name: Echorelay Plans Pricing
   plan_count: 3
   slug: echorelay-plans-pricing
-random_paper: 10
+- name: Echorelay Price Estimates
+  plan_count: 0
+  slug: echorelay-price-estimates
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -264,22 +292,24 @@ rules:
     warn: 1
   slug: echorelay-rules
 score:
-  band: developing
-  composite: 49.4
+  band: thin
+  composite: 37.7
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 63.2
+    artifact_dirs: 22
+    catalog_earned: 66.2
     catalog_earned_first_party: 12.0
-    catalog_gap: 51.9
+    catalog_gap: 48.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -13.3
   facets:
-    access_clarity: 92.1
+    access_clarity: 73.7
     contract_governance: 22.0
     contract_quality: 19.0
-    developer_ergonomics: 50.0
+    developer_ergonomics: 25.0
     discoverability: 71.7
-    operational_transparency: 31.6
+    operational_transparency: 15.8
+  previous_composite: 51.0
   provenance:
     conformance: derived
     contracts:
@@ -293,12 +323,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 28.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/echorelay/echorelay-2026-11-03T131257.png
 security:
 - kind: domain-security
   name: Echorelay Domain Security

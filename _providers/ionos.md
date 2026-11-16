@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Cloud API for managing IONOS resources
@@ -32,7 +46,7 @@ apis:
 artifact_total: 4
 common:
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/integrations/ionos-integration-edges.yml
+  href: https://artifacts.apis.io/ionos/integrations/ionos-integration-edges.yml
   title: ''
   type: IntegrationEdges
   url: integrations/ionos-integration-edges.yml
@@ -41,82 +55,82 @@ common:
   type: Pricing
   url: https://price-calculator.cloud.ionos.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/vendors/ionos-vendors.yml
+  href: https://artifacts.apis.io/ionos/vendors/ionos-vendors.yml
   title: ''
   type: Vendors
   url: vendors/ionos-vendors.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/changelog/ionos-changelog.yml
+  href: https://artifacts.apis.io/ionos/changelog/ionos-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/ionos-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/authentication/ionos-authentication.yml
+  href: https://artifacts.apis.io/ionos/authentication/ionos-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ionos-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/conformance/ionos-conformance.yml
+  href: https://artifacts.apis.io/ionos/conformance/ionos-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ionos-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/llms/ionos-llms.txt
+  href: https://artifacts.apis.io/ionos/llms/ionos-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ionos-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/well-known/ionos-security.txt
+  href: https://artifacts.apis.io/ionos/well-known/ionos-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ionos-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/well-known/ionos-partnernetwork-security.txt
+  href: https://artifacts.apis.io/ionos/well-known/ionos-partnernetwork-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ionos-partnernetwork-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/well-known/ionos-id-security.txt
+  href: https://artifacts.apis.io/ionos/well-known/ionos-id-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ionos-id-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/well-known/ionos-feedback-security.txt
+  href: https://artifacts.apis.io/ionos/well-known/ionos-feedback-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ionos-feedback-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/well-known/ionos-dcd-security.txt
+  href: https://artifacts.apis.io/ionos/well-known/ionos-dcd-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ionos-dcd-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/well-known/ionos-cloud-security.txt
+  href: https://artifacts.apis.io/ionos/well-known/ionos-cloud-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ionos-cloud-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/well-known/ionos-api-security.txt
+  href: https://artifacts.apis.io/ionos/well-known/ionos-api-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ionos-api-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/well-known/ionos-well-known.yml
+  href: https://artifacts.apis.io/ionos/well-known/ionos-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ionos-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/hosts/ionos-hosts.yml
+  href: https://artifacts.apis.io/ionos/hosts/ionos-hosts.yml
   title: ''
   type: Hosts
   url: hosts/ionos-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/packages/ionos-packages.yml
+  href: https://artifacts.apis.io/ionos/packages/ionos-packages.yml
   title: ''
   type: SDKs
   url: packages/ionos-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/packages/ionos-packages.yml
+  href: https://artifacts.apis.io/ionos/packages/ionos-packages.yml
   title: ''
   type: Packages
   url: packages/ionos-packages.yml
@@ -161,12 +175,12 @@ common:
   type: Documentation
   url: https://docs.ionos.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/security/ionos-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ionos/security/ionos-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ionos-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionos/refs/heads/main/security/ionos-domain-security.yml
+  href: https://artifacts.apis.io/ionos/security/ionos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ionos-domain-security.yml
@@ -196,24 +210,26 @@ overview: 'IONOS is listed with 1 API on the [APIs.io](https://apis.io/) network
 
 
   IONOS''s developer surface includes pricing, changelog, authentication, support, API reference, getting-started guide, documentation, and 24 more developer resources.'
-random_paper: 2
+random_paper: 0
 score:
-  band: thin
-  composite: 29.5
+  band: emerging
+  composite: 20.6
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 13
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.9
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 4.5
     contract_quality: 0.0
-    developer_ergonomics: 52.4
-    discoverability: 67.9
-    operational_transparency: 26.3
+    developer_ergonomics: 35.7
+    discoverability: 66.1
+    operational_transparency: 13.2
+  previous_composite: 29.5
   provenance:
     conformance: derived
   regulatory:
@@ -221,13 +237,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 28.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 24.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/ionos/ionos-2026-11-03T134023.png
 security:
 - kind: authentication
   name: Ionos Authentication

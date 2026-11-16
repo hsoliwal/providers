@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: API for ASAPIO Integration Add‑on connecting SAP to cloud platforms.
@@ -41,42 +54,42 @@ apis:
 artifact_total: 10
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asapio/refs/heads/main/rules/asapio-rules.yml
+  href: https://artifacts.apis.io/asapio/rules/asapio-rules.yml
   title: ''
   type: Spectral
   url: rules/asapio-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asapio/refs/heads/main/json-ld/asapio-context.jsonld
+  href: https://artifacts.apis.io/asapio/json-ld/asapio-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/asapio-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asapio/refs/heads/main/vocabulary/asapio-vocabulary.yml
+  href: https://artifacts.apis.io/asapio/vocabulary/asapio-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/asapio-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asapio/refs/heads/main/data-model/asapio-data-model.yml
+  href: https://artifacts.apis.io/asapio/data-model/asapio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/asapio-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/asapio/refs/heads/main/changelog/asapio-changelog.yml
+  href: https://artifacts.apis.io/asapio/changelog/asapio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/asapio-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/asapio/refs/heads/main/conformance/asapio-conformance.yml
+  href: https://artifacts.apis.io/asapio/conformance/asapio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/asapio-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/asapio/refs/heads/main/llms/asapio-llms.txt
+  href: https://artifacts.apis.io/asapio/llms/asapio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/asapio-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/asapio/refs/heads/main/hosts/asapio-hosts.yml
+  href: https://artifacts.apis.io/asapio/hosts/asapio-hosts.yml
   title: ''
   type: Hosts
   url: hosts/asapio-hosts.yml
@@ -89,7 +102,7 @@ common:
   type: PrivacyPolicy
   url: https://asapio.com/privacy.php
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/asapio/refs/heads/main/security/asapio-domain-security.yml
+  href: https://artifacts.apis.io/asapio/security/asapio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/asapio-domain-security.yml
@@ -156,7 +169,7 @@ overview: 'ASAPIO is listed with 4 APIs on the [APIs.io](https://apis.io/) netwo
 
 
   ASAPIO''s developer surface includes changelog, documentation, getting-started guide, API reference, support, engineering blog, and 11 more developer resources.'
-random_paper: 21
+random_paper: 13
 rules:
 - authorship: generated
   effective_rule_count: 49
@@ -171,22 +184,24 @@ rules:
     warn: 1
   slug: asapio-rules
 score:
-  band: thin
-  composite: 35.6
+  band: emerging
+  composite: 25.8
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 55.8
     catalog_earned_first_party: 0.0
     catalog_gap: 44.3
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.8
   facets:
-    access_clarity: 57.1
+    access_clarity: 28.6
     contract_governance: 22.0
     contract_quality: 20.9
-    developer_ergonomics: 35.7
+    developer_ergonomics: 17.9
     discoverability: 66.1
     operational_transparency: 15.8
+  previous_composite: 35.6
   provenance:
     conformance: derived
     contracts:
@@ -200,13 +215,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/asapio/asapio-2026-11-03T121150.png
 security:
 - kind: domain-security
   name: Asapio Domain Security

@@ -1,13 +1,17 @@
 ---
 access_model:
-  confidence: high
-  label: Free · Application and approval required
-  onboarding: unknown
-  pricing: free
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
   public: false
   source:
-  - documentation
-  - terms
+  - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Hydro One's Green Button Connect My Data implementation, mandated by Ontario Regulation 633/21. A registered third-party vendor obtains an OAuth 2.0 authorization code after the customer authenticates
@@ -43,42 +50,42 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hydro-one/refs/heads/main/security/hydro-one-domain-security.yml
+  href: https://artifacts.apis.io/hydro-one/security/hydro-one-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hydro-one-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hydro-one/refs/heads/main/authentication/hydro-one-authentication.yml
+  href: https://artifacts.apis.io/hydro-one/authentication/hydro-one-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hydro-one-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hydro-one/refs/heads/main/scopes/hydro-one-scopes.yml
+  href: https://artifacts.apis.io/hydro-one/scopes/hydro-one-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/hydro-one-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hydro-one/refs/heads/main/conventions/hydro-one-conventions.yml
+  href: https://artifacts.apis.io/hydro-one/conventions/hydro-one-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hydro-one-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hydro-one/refs/heads/main/conformance/hydro-one-conformance.yml
+  href: https://artifacts.apis.io/hydro-one/conformance/hydro-one-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hydro-one-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hydro-one/refs/heads/main/lifecycle/hydro-one-lifecycle.yml
+  href: https://artifacts.apis.io/hydro-one/lifecycle/hydro-one-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hydro-one-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/hydro-one/refs/heads/main/sandbox/hydro-one-sandbox.yml
+  href: https://artifacts.apis.io/hydro-one/sandbox/hydro-one-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/hydro-one-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hydro-one/refs/heads/main/llms/hydro-one-llms.txt
+  href: https://artifacts.apis.io/hydro-one/llms/hydro-one-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hydro-one-llms.txt
@@ -143,7 +150,7 @@ overview: 'Hydro One is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Hydro One''s developer surface includes authentication, sandbox, documentation, getting-started guide, signup flow, support, product news, and 13 more developer resources.'
-random_paper: 15
+random_paper: 5
 scopes:
 - name: Hydro One Scopes
   scope_count: 0
@@ -153,7 +160,7 @@ score:
   band: thin
   composite: 26.7
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -183,14 +190,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hydro-one/refs/heads/main/screenshots/hydro-one-2026-08-07T170505.png
+screenshot: https://apis.io/screenshots/hydro-one/hydro-one-2026-08-07T170505.png
 security:
 - kind: authentication
   name: Hydro One Authentication

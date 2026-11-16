@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST API for the Zomentum revenue platform, documented as public Postman documentation. Uses Bearer token authentication (Auth0-issued access and refresh tokens) via an API User provisioned in the das
@@ -106,27 +110,27 @@ common:
   type: Security
   url: https://www.zomentum.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zomentum/refs/heads/main/authentication/zomentum-authentication.yml
+  href: https://artifacts.apis.io/zomentum/authentication/zomentum-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zomentum-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zomentum/refs/heads/main/lifecycle/zomentum-lifecycle.yml
+  href: https://artifacts.apis.io/zomentum/lifecycle/zomentum-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zomentum-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zomentum/refs/heads/main/security/zomentum-domain-security.yml
+  href: https://artifacts.apis.io/zomentum/security/zomentum-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zomentum-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zomentum/refs/heads/main/security/zomentum-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/zomentum/security/zomentum-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/zomentum-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zomentum/refs/heads/main/llms/zomentum-llms.txt
+  href: https://artifacts.apis.io/zomentum/llms/zomentum-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zomentum-llms.txt
@@ -142,12 +146,12 @@ overview: 'Zomentum is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Zomentum''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 14 more developer resources.'
-random_paper: 15
+random_paper: 7
 score:
   band: thin
   composite: 30.7
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -173,14 +177,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 23.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/zomentum/refs/heads/main/screenshots/zomentum-2026-09-02T171827.png
+screenshot: https://apis.io/screenshots/zomentum/zomentum-2026-09-02T171827.png
 security:
 - kind: authentication
   name: Zomentum Authentication

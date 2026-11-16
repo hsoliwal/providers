@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,37 +38,37 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-tire-bank/refs/heads/main/security/canadian-tire-bank-domain-security.yml
+  href: https://artifacts.apis.io/canadian-tire-bank/security/canadian-tire-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/canadian-tire-bank-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-tire-bank/refs/heads/main/well-known/canadian-tire-bank-well-known.yml
+  href: https://artifacts.apis.io/canadian-tire-bank/well-known/canadian-tire-bank-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/canadian-tire-bank-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-tire-bank/refs/heads/main/authentication/canadian-tire-bank-authentication.yml
+  href: https://artifacts.apis.io/canadian-tire-bank/authentication/canadian-tire-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/canadian-tire-bank-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-tire-bank/refs/heads/main/scopes/canadian-tire-bank-scopes.yml
+  href: https://artifacts.apis.io/canadian-tire-bank/scopes/canadian-tire-bank-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/canadian-tire-bank-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-tire-bank/refs/heads/main/conformance/canadian-tire-bank-conformance.yml
+  href: https://artifacts.apis.io/canadian-tire-bank/conformance/canadian-tire-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/canadian-tire-bank-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canadian-tire-bank/refs/heads/main/llms/canadian-tire-bank-llms.txt
+  href: https://artifacts.apis.io/canadian-tire-bank/llms/canadian-tire-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/canadian-tire-bank-llms.txt
@@ -98,7 +101,7 @@ overview: 'Canadian Tire Bank is profiled on the [APIs.io](https://apis.io/) net
 
 
   Canadian Tire Bank''s developer surface includes authentication and 9 more developer resources.'
-random_paper: 15
+random_paper: 1
 scopes:
 - name: Canadian Tire Bank Scopes
   scope_count: 4
@@ -138,14 +141,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 34.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/canadian-tire-bank/refs/heads/main/screenshots/canadian-tire-bank-2026-07-25T204326.png
+screenshot: https://apis.io/screenshots/canadian-tire-bank/canadian-tire-bank-2026-07-25T204326.png
 security:
 - kind: authentication
   name: Canadian Tire Bank Authentication

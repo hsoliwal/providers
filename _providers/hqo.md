@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -41,12 +45,12 @@ common:
   type: BlogRSS
   url: https://www.hqo.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hqo/refs/heads/main/security/hqo-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hqo/security/hqo-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hqo-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hqo/refs/heads/main/security/hqo-domain-security.yml
+  href: https://artifacts.apis.io/hqo/security/hqo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hqo-domain-security.yml
@@ -87,7 +91,7 @@ common:
   type: Compliance
   url: https://www.hqo.com/trust-and-security/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hqo/refs/heads/main/conformance/hqo-conformance.yml
+  href: https://artifacts.apis.io/hqo/conformance/hqo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hqo-conformance.yml
@@ -96,22 +100,22 @@ common:
   type: Security
   url: https://www.hqo.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hqo/refs/heads/main/well-known/hqo-security.txt
+  href: https://artifacts.apis.io/hqo/well-known/hqo-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/hqo-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hqo/refs/heads/main/well-known/hqo-well-known.yml
+  href: https://artifacts.apis.io/hqo/well-known/hqo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/hqo-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hqo/refs/heads/main/lifecycle/hqo-lifecycle.yml
+  href: https://artifacts.apis.io/hqo/lifecycle/hqo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hqo-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hqo/refs/heads/main/llms/hqo-llms.txt
+  href: https://artifacts.apis.io/hqo/llms/hqo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hqo-llms.txt
@@ -135,12 +139,12 @@ overview: 'HqO is profiled on the [APIs.io](https://apis.io/) network. Tagged ar
 
 
   HqO''s developer surface includes support, documentation, engineering blog, signup flow, and 16 more developer resources.'
-random_paper: 20
+random_paper: 16
 score:
   band: emerging
   composite: 24.2
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -178,14 +182,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hqo/refs/heads/main/screenshots/hqo-2026-07-25T221543.png
+screenshot: https://apis.io/screenshots/hqo/hqo-2026-07-25T221543.png
 security:
 - kind: domain-security
   name: Hqo Domain Security

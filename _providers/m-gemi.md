@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The Universal Commerce Protocol (UCP) shopping service for the M.Gemi store, exposed over Model Context Protocol at https://mgemi.com/api/ucp/mcp. An anonymous tools/list returns 13 tools with full JS
@@ -45,7 +48,7 @@ apis:
 - description: 'The read-only Shopify storefront JSON surface for the M.Gemi catalog, documented by the store''s own /llms.txt for agents that only need to read store data without transacting: /products.json, /product'
   name: M.Gemi Storefront Product JSON
   slug: mgemi-storefront-product-json
-artifact_total: 8
+artifact_total: 10
 common:
 - group: company
   title: ''
@@ -56,72 +59,72 @@ common:
   type: Documentation
   url: https://mgemi.com/agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/llms/m-gemi-llms.txt
+  href: https://artifacts.apis.io/m-gemi/llms/m-gemi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/m-gemi-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/mcp/m-gemi-mcp.yml
+  href: https://artifacts.apis.io/m-gemi/mcp/m-gemi-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/m-gemi-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/well-known/m-gemi-well-known.yml
+  href: https://artifacts.apis.io/m-gemi/well-known/m-gemi-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/m-gemi-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/authentication/m-gemi-authentication.yml
+  href: https://artifacts.apis.io/m-gemi/authentication/m-gemi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/m-gemi-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/scopes/m-gemi-scopes.yml
+  href: https://artifacts.apis.io/m-gemi/scopes/m-gemi-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/m-gemi-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/conventions/m-gemi-conventions.yml
+  href: https://artifacts.apis.io/m-gemi/conventions/m-gemi-conventions.yml
   title: ''
   type: Conventions
   url: conventions/m-gemi-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/conventions/m-gemi-conventions.yml
+  href: https://artifacts.apis.io/m-gemi/conventions/m-gemi-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/m-gemi-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/conformance/m-gemi-conformance.yml
+  href: https://artifacts.apis.io/m-gemi/conformance/m-gemi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/m-gemi-conformance.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/rate-limits/m-gemi-rate-limits.yml
+  href: https://artifacts.apis.io/m-gemi/rate-limits/m-gemi-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/m-gemi-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/errors/m-gemi-problem-types.yml
+  href: https://artifacts.apis.io/m-gemi/errors/m-gemi-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/m-gemi-problem-types.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/plans/m-gemi-plans-pricing.yml
+  href: https://artifacts.apis.io/m-gemi/plans/m-gemi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/m-gemi-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/lifecycle/m-gemi-lifecycle.yml
+  href: https://artifacts.apis.io/m-gemi/lifecycle/m-gemi-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/m-gemi-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/m-gemi/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/security/m-gemi-domain-security.yml
+  href: https://artifacts.apis.io/m-gemi/security/m-gemi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/m-gemi-domain-security.yml
@@ -165,7 +168,7 @@ plans:
 - name: M Gemi Plans Pricing
   plan_count: 0
   slug: m-gemi-plans-pricing
-random_paper: 0
+random_paper: 20
 rate_limits:
 - limit_count: 0
   name: M Gemi Rate Limits
@@ -211,14 +214,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 31.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/m-gemi/refs/heads/main/screenshots/m-gemi-2026-09-02T150434.png
+screenshot: https://apis.io/screenshots/m-gemi/m-gemi-2026-09-02T150434.png
 security:
 - kind: authentication
   name: M Gemi Authentication
@@ -228,6 +231,12 @@ security:
   name: M Gemi Domain Security
   slug: m-gemi-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: m-gemi-agentic-purchase
+  slug: m-gemi-agentic-purchase
+- name: m-gemi-catalog-search
+  slug: m-gemi-catalog-search
 slug: m-gemi
 tags:
 - Company

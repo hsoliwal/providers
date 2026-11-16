@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-10-17'
+  score: 20.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 50
   human_in_the_loop: 0
@@ -140,11 +143,8 @@ apis:
   description: Webhooks are used to notify your application when certain events occur within the system. They can be configured to send a POST request to a specified URL when a specific event happens. Available reso
   name: Canto Webhooks API
   slug: canto-webhooks-api
-artifact_total: 71
+artifact_total: 70
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Canto PIM bulk_products_catalogs API
   slug: open-canto-bulk-products-catalogs-api
@@ -204,27 +204,27 @@ collections:
   slug: open-canto-webhooks-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/canto/refs/heads/main/capabilities/canto-capability-edges.yml
+  href: https://artifacts.apis.io/canto/capabilities/canto-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/canto-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canto/refs/heads/main/agentic-access/canto-agentic-access.yml
+  href: https://artifacts.apis.io/canto/agentic-access/canto-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/canto-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canto/refs/heads/main/security/canto-trust-center.yml
+  href: https://artifacts.apis.io/canto/security/canto-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/canto-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canto/refs/heads/main/security/canto-domain-security.yml
+  href: https://artifacts.apis.io/canto/security/canto-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/canto-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canto/refs/heads/main/authentication/canto-authentication.yml
+  href: https://artifacts.apis.io/canto/authentication/canto-authentication.yml
   title: ''
   type: Authentication
   url: authentication/canto-authentication.yml
@@ -261,17 +261,17 @@ common:
   type: X
   url: https://x.com/canto
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/canto/refs/heads/main/plans/canto-plans-pricing.yml
+  href: https://artifacts.apis.io/canto/plans/canto-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/canto-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/canto/refs/heads/main/rate-limits/canto-rate-limits.yml
+  href: https://artifacts.apis.io/canto/rate-limits/canto-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/canto-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/canto/refs/heads/main/finops/canto-finops.yml
+  href: https://artifacts.apis.io/canto/finops/canto-finops.yml
   title: ''
   type: FinOps
   url: finops/canto-finops.yml
@@ -399,13 +399,13 @@ score:
   band: thin
   composite: 34.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 54.3
     catalog_earned_first_party: 0.0
     catalog_gap: 60.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.7
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
@@ -413,7 +413,7 @@ score:
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 39.9
+  previous_composite: 34.2
   provenance:
     agentic_access: derived
     contracts:
@@ -427,13 +427,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/canto/refs/heads/main/screenshots/canto-2026-06-20T173928.png
+screenshot: https://apis.io/screenshots/canto/canto-2026-06-20T173928.png
 security:
 - kind: authentication
   name: Canto Authentication

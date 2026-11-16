@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Open access
   onboarding: open
   pricing: freemium
@@ -29,7 +32,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -37,7 +43,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The API host point.me operates behind its consumer search product and its Gateway embedded platform. https://api.point.me/ returns HTTP 200 text/plain "Flight Search APIs"; every other path probed (/o
@@ -46,7 +52,7 @@ apis:
 artifact_total: 7
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/security/point-me-domain-security.yml
+  href: https://artifacts.apis.io/point-me/security/point-me-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/point-me-domain-security.yml
@@ -63,7 +69,7 @@ common:
   type: Pricing
   url: https://www.point.me/our-services
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/plans/point-me-plans-pricing.yml
+  href: https://artifacts.apis.io/point-me/plans/point-me-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/point-me-plans-pricing.yml
@@ -108,47 +114,47 @@ common:
   type: Jobs
   url: https://connect.point.me/jobs
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/llms/point-me-llms.txt
+  href: https://artifacts.apis.io/point-me/llms/point-me-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/point-me-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/well-known/point-me-well-known.yml
+  href: https://artifacts.apis.io/point-me/well-known/point-me-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/point-me-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/authentication/point-me-authentication.yml
+  href: https://artifacts.apis.io/point-me/authentication/point-me-authentication.yml
   title: ''
   type: Authentication
   url: authentication/point-me-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/scopes/point-me-scopes.yml
+  href: https://artifacts.apis.io/point-me/scopes/point-me-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/point-me-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/conformance/point-me-conformance.yml
+  href: https://artifacts.apis.io/point-me/conformance/point-me-conformance.yml
   title: ''
   type: Conformance
   url: conformance/point-me-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/conformance/point-me-conformance.yml
+  href: https://artifacts.apis.io/point-me/conformance/point-me-conformance.yml
   title: ''
   type: Compliance
   url: conformance/point-me-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/conventions/point-me-conventions.yml
+  href: https://artifacts.apis.io/point-me/conventions/point-me-conventions.yml
   title: ''
   type: Conventions
   url: conventions/point-me-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/rate-limits/point-me-rate-limits.yml
+  href: https://artifacts.apis.io/point-me/rate-limits/point-me-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/point-me-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/mcp/point-me-mcp.yml
+  href: https://artifacts.apis.io/point-me/mcp/point-me-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/point-me-mcp.yml
@@ -186,7 +192,7 @@ score:
   band: thin
   composite: 32.7
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -210,14 +216,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 37.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/point-me/refs/heads/main/screenshots/point-me-2026-09-02T151619.png
+screenshot: https://apis.io/screenshots/point-me/point-me-2026-09-02T151619.png
 security:
 - kind: authentication
   name: Point Me Authentication

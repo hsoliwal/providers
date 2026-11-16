@@ -1,15 +1,18 @@
 ---
 access_model:
-  confidence: high
-  label: Free · Anonymous undocumented data feeds · No developer program
-  onboarding: unknown
-  pricing: free
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Open access
+  onboarding: open
+  pricing: unknown
   public: true
   source:
-  - documentation
-  - probes
+  - authentication
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -26,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: The undocumented JSON endpoint behind SaskPower's public "Where Your Power Comes From" page. A single anonymous GET — no key, no signup, no referer check — returns the province's current supply pictur
@@ -55,47 +61,47 @@ apis:
 artifact_total: 11
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/saskpower/refs/heads/main/security/saskpower-domain-security.yml
+  href: https://artifacts.apis.io/saskpower/security/saskpower-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/saskpower-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/saskpower/refs/heads/main/authentication/saskpower-authentication.yml
+  href: https://artifacts.apis.io/saskpower/authentication/saskpower-authentication.yml
   title: ''
   type: Authentication
   url: authentication/saskpower-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/saskpower/refs/heads/main/conventions/saskpower-conventions.yml
+  href: https://artifacts.apis.io/saskpower/conventions/saskpower-conventions.yml
   title: ''
   type: Conventions
   url: conventions/saskpower-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/saskpower/refs/heads/main/errors/saskpower-error-codes.yml
+  href: https://artifacts.apis.io/saskpower/errors/saskpower-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/saskpower-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/saskpower/refs/heads/main/lifecycle/saskpower-lifecycle.yml
+  href: https://artifacts.apis.io/saskpower/lifecycle/saskpower-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/saskpower-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/saskpower/refs/heads/main/conformance/saskpower-conformance.yml
+  href: https://artifacts.apis.io/saskpower/conformance/saskpower-conformance.yml
   title: ''
   type: Conformance
   url: conformance/saskpower-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/saskpower/refs/heads/main/examples/saskpower-examples.yml
+  href: https://artifacts.apis.io/saskpower/examples/saskpower-examples.yml
   title: ''
   type: Examples
   url: examples/saskpower-examples.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/saskpower/refs/heads/main/json-schema/saskpower-power-use-dashboard.schema.json
+  href: https://artifacts.apis.io/saskpower/json-schema/saskpower-power-use-dashboard.schema.json
   title: ''
   type: JSONSchema
   url: json-schema/saskpower-power-use-dashboard.schema.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/saskpower/refs/heads/main/llms/saskpower-llms.txt
+  href: https://artifacts.apis.io/saskpower/llms/saskpower-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/saskpower-llms.txt
@@ -187,7 +193,7 @@ overview: 'SaskPower is listed with 5 APIs on the [APIs.io](https://apis.io/) ne
 
 
   SaskPower''s developer surface includes authentication, code examples, privacy policy, support, pricing, signup flow, engineering blog, and 17 more developer resources.'
-random_paper: 1
+random_paper: 7
 score:
   band: emerging
   composite: 18.0
@@ -198,7 +204,7 @@ score:
     catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.3
+  delta: 0.0
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
@@ -213,7 +219,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 19.3
+  previous_composite: 18.0
   provenance:
     conformance: derived
   regulatory:
@@ -222,14 +228,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 13.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/saskpower/refs/heads/main/screenshots/saskpower-2026-09-02T154439.png
+screenshot: https://apis.io/screenshots/saskpower/saskpower-2026-09-02T154439.png
 security:
 - kind: authentication
   name: Saskpower Authentication

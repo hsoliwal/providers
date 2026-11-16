@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.7
-  scored_at: '2026-10-17'
+  score: 40.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 34
   human_in_the_loop: 1
@@ -124,7 +132,7 @@ apis:
   description: The Oauth API from Ocrolus — 1 operation(s) for oauth.
   name: Ocrolus OAUTH API
   slug: ocrolus-oauth-api
-artifact_total: 56
+artifact_total: 60
 asyncapis:
 - description: ''
   name: Ocrolus Webhooks
@@ -179,9 +187,6 @@ collections:
   name: Account Level Book Commands Webhooks API
   slug: postman-ocrolus-webhooks-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Account Level Webhooks Book Commands API
   slug: open-ocrolus-book-commands-api
 - collection_type: open
@@ -231,7 +236,7 @@ collections:
   slug: open-ocrolus-webhooks-api
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/rate-limits/ocrolus-rate-limits.yml
+  href: https://artifacts.apis.io/ocrolus/rate-limits/ocrolus-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ocrolus-rate-limits.yml
@@ -240,7 +245,7 @@ common:
   type: BlogRSS
   url: https://www.ocrolus.com/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/capabilities/ocrolus-capability-edges.yml
+  href: https://artifacts.apis.io/ocrolus/capabilities/ocrolus-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/ocrolus-capability-edges.yml
@@ -269,7 +274,7 @@ common:
   type: GettingStarted
   url: https://docs.ocrolus.com/docs/getting-started
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/authentication/ocrolus-authentication.yml
+  href: https://artifacts.apis.io/ocrolus/authentication/ocrolus-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ocrolus-authentication.yml
@@ -318,7 +323,7 @@ common:
   type: Deprecation
   url: https://docs.ocrolus.com/docs/breaking-change-policy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/lifecycle/ocrolus-lifecycle.yml
+  href: https://artifacts.apis.io/ocrolus/lifecycle/ocrolus-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ocrolus-lifecycle.yml
@@ -327,7 +332,7 @@ common:
   type: Compliance
   url: https://security.ocrolus.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/security/ocrolus-trust-center.yml
+  href: https://artifacts.apis.io/ocrolus/security/ocrolus-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/ocrolus-trust-center.yml
@@ -336,117 +341,117 @@ common:
   type: Security
   url: https://security.ocrolus.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/security/ocrolus-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ocrolus/security/ocrolus-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ocrolus-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/security/ocrolus-domain-security.yml
+  href: https://artifacts.apis.io/ocrolus/security/ocrolus-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ocrolus-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/conformance/ocrolus-conformance.yml
+  href: https://artifacts.apis.io/ocrolus/conformance/ocrolus-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ocrolus-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/conventions/ocrolus-conventions.yml
+  href: https://artifacts.apis.io/ocrolus/conventions/ocrolus-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ocrolus-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/data-model/ocrolus-data-model.yml
+  href: https://artifacts.apis.io/ocrolus/data-model/ocrolus-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ocrolus-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/agentic-access/ocrolus-agentic-access.yml
+  href: https://artifacts.apis.io/ocrolus/agentic-access/ocrolus-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ocrolus-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/mcp/ocrolus-mcp.yml
+  href: https://artifacts.apis.io/ocrolus/mcp/ocrolus-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/ocrolus-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ocrolus/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/llms/ocrolus-llms.txt
+  href: https://artifacts.apis.io/ocrolus/llms/ocrolus-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ocrolus-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-account-level-webhooks-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-account-level-webhooks-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-account-level-webhooks-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-analyze-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-analyze-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-analyze-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-authentication-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-authentication-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-authentication-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-book-commands-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-book-commands-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-book-commands-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-book-queries-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-book-queries-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-book-queries-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-business-history-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-business-history-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-business-history-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-capture-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-capture-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-capture-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-detect-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-detect-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-detect-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-encore-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-encore-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-encore-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-file-uploads-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-file-uploads-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-file-uploads-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-income-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-income-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-income-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-org-level-webhooks-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-org-level-webhooks-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-org-level-webhooks-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-tag-management-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-tag-management-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-tag-management-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/overlays/ocrolus-user-management-overlay.yaml
+  href: https://artifacts.apis.io/ocrolus/overlays/ocrolus-user-management-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ocrolus-user-management-overlay.yaml
@@ -461,34 +466,47 @@ network: true
 overview: 'Ocrolus publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Book Commands API, Book Queries API, Business history API, and 13 more. Tagged areas include Company, Fintech, Document Automation, Lending, and Underwriting.
 
 
-  The Ocrolus catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Ocrolus catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Ocrolus'' developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 41 more developer resources.'
-random_paper: 5
+random_paper: 7
 rate_limits:
 - limit_count: 1
   name: Ocrolus Rate Limits
   slug: ocrolus-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Ocrolus API Rules
+  rule_count: 53
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 14
+  slug: ocrolus-rules
 score:
-  band: developing
-  composite: 53.9
+  band: strong
+  composite: 61.4
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 48.0
+    artifact_dirs: 30
+    catalog_earned: 52.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 67.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 5.9
   facets:
     access_clarity: 50.0
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 56.0
-    developer_ergonomics: 42.3
+    developer_ergonomics: 63.7
     discoverability: 78.6
-    operational_transparency: 69.7
-  previous_composite: 53.9
+    operational_transparency: 81.6
+  previous_composite: 55.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -513,13 +531,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 29.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/screenshots/ocrolus-2026-08-07T185929.png
+screenshot: https://apis.io/screenshots/ocrolus/ocrolus-2026-08-07T185929.png
 security:
 - kind: authentication
   name: Ocrolus Authentication
@@ -537,6 +555,16 @@ security:
   name: Ocrolus Trust Center
   slug: ocrolus-trust-center
   summary_line: SOC 2, ISO 27001, PCI DSS, GDPR, CSA STAR
+skill_count: 4
+skills:
+- name: Analyze a bank statement with Ocrolus
+  slug: ocrolus-analyze-bank-statement
+- name: Configure Ocrolus webhooks for async completion
+  slug: ocrolus-configure-webhooks
+- name: Detect document fraud signals with Ocrolus
+  slug: ocrolus-detect-fraud
+- name: Calculate income for mortgage underwriting with Ocrolus
+  slug: ocrolus-mortgage-income
 slug: ocrolus
 tags:
 - Company

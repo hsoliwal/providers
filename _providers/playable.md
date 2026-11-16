@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Paid · Self-serve signup
   onboarding: self-serve
   pricing: paid
@@ -30,16 +33,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.6
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 45.7
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - description: 'Hosted Model Context Protocol endpoint served from the Playable web property and advertised through RFC 9728 protected-resource metadata at playable.com/.well-known/oauth-protected-resource. Requires '
   name: Playable MCP Server
@@ -67,7 +73,7 @@ apis:
   description: OAuth
   name: Playable OAUTH API
   slug: playable-oauth-api
-artifact_total: 15
+artifact_total: 21
 asyncapis:
 - description: ''
   name: Playable Webhooks
@@ -82,12 +88,12 @@ common:
   type: BlogRSS
   url: https://playable.com/learn/blog/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/capabilities/playable-capability-edges.yml
+  href: https://artifacts.apis.io/playable/capabilities/playable-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/playable-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/security/playable-domain-security.yml
+  href: https://artifacts.apis.io/playable/security/playable-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/playable-domain-security.yml
@@ -152,112 +158,120 @@ common:
   type: Compliance
   url: https://playable.com/iso-gdpr-security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/security/playable-trust-center.yml
+  href: https://artifacts.apis.io/playable/security/playable-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/playable-trust-center.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/plans/playable-plans-pricing.yml
+  href: https://artifacts.apis.io/playable/plans/playable-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/playable-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/rate-limits/playable-rate-limits.yml
+  href: https://artifacts.apis.io/playable/rate-limits/playable-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/playable-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/authentication/playable-authentication.yml
+  href: https://artifacts.apis.io/playable/authentication/playable-authentication.yml
   title: ''
   type: Authentication
   url: authentication/playable-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/scopes/playable-scopes.yml
+  href: https://artifacts.apis.io/playable/scopes/playable-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/playable-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/conventions/playable-conventions.yml
+  href: https://artifacts.apis.io/playable/conventions/playable-conventions.yml
   title: ''
   type: Conventions
   url: conventions/playable-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/lifecycle/playable-lifecycle.yml
+  href: https://artifacts.apis.io/playable/lifecycle/playable-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/playable-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/conformance/playable-conformance.yml
+  href: https://artifacts.apis.io/playable/conformance/playable-conformance.yml
   title: ''
   type: Conformance
   url: conformance/playable-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/errors/playable-problem-types.yml
+  href: https://artifacts.apis.io/playable/errors/playable-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/playable-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/errors/playable-integration-status-codes.yml
+  href: https://artifacts.apis.io/playable/errors/playable-integration-status-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/playable-integration-status-codes.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/sandbox/playable-sandbox.yml
+  href: https://artifacts.apis.io/playable/sandbox/playable-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/playable-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/data-model/playable-data-model.yml
+  href: https://artifacts.apis.io/playable/data-model/playable-data-model.yml
   title: ''
   type: DataModel
   url: data-model/playable-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/packages/playable-packages.yml
+  href: https://artifacts.apis.io/playable/packages/playable-packages.yml
   title: ''
   type: Packages
   url: packages/playable-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/packages/playable-packages.yml
+  href: https://artifacts.apis.io/playable/packages/playable-packages.yml
   title: ''
   type: SDKs
   url: packages/playable-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/components/playable-components.yml
+  href: https://artifacts.apis.io/playable/components/playable-components.yml
   title: ''
   type: Components
   url: components/playable-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/asyncapi/playable-webhooks.yml
+  href: https://artifacts.apis.io/playable/asyncapi/playable-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/playable-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/mcp/playable-mcp.yml
+  href: https://artifacts.apis.io/playable/mcp/playable-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/playable-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/well-known/playable-well-known.yml
+  href: https://artifacts.apis.io/playable/well-known/playable-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/playable-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/llms/playable-llms.txt
+  href: https://artifacts.apis.io/playable/llms/playable-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/playable-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/playable/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/overlays/playable-api-overlay.yaml
+  href: https://artifacts.apis.io/playable/overlays/playable-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/playable-api-overlay.yaml
 created: '2026-08-12'
 description: Playable (formerly Leadfamly, Playable ApS, Aarhus Denmark and London UK) is a self-service marketing gamification platform used by brands to build, publish and measure interactive campaigns — spin-the-wheel, advent calendars, quizzes, scratch cards, memory and skill games — across web, email, in-app, in-store and retail-media placements. The platform pairs a campaign builder with zero-party data collection, prize and voucher management, ESP/CRM/storage integrations, webhooks and campaign analytics. Programmatic access is delivered through a public REST API at api.playable.com documented with an OpenAPI 3.0 definition and secured with OAuth 2.0 client-credentials scoped per capability, plus a browser-side campaign SDK published to npm. API access is a Premium-plan entitlement; developer apps and credentials are created under Global settings.
+finops:
+- has_sources: true
+  method: derived
+  name: Playable Finops
+  primary_unit: ''
+  service_category: ''
+  slug: playable-finops
+  template: true
 image: https://playable.com/wp-content/uploads/2022/09/Logo_Playable_wobble.png
 layout: provider
 mcp_servers:
@@ -271,7 +285,7 @@ network: true
 overview: 'Playable publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Campaigns API, Media API, User API, and 3 more. Tagged areas include Company, marketing-gamification, interactive-marketing, Campaign Management, and Zero-Party Data.
 
 
-  The Playable catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Playable catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Playable''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 32 more developer resources.'
@@ -279,11 +293,24 @@ plans:
 - name: Playable Plans Pricing
   plan_count: 3
   slug: playable-plans-pricing
-random_paper: 6
+random_paper: 2
 rate_limits:
 - limit_count: 1
   name: Playable Rate Limits
   slug: playable-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Playable API Rules
+  rule_count: 53
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 3
+    warn: 8
+  slug: playable-rules
 scopes:
 - name: Playable Scopes
   scope_count: 37
@@ -291,29 +318,29 @@ scopes:
   summary_line: 37 scopes · clientCredentials
 score:
   band: strong
-  composite: 63.7
+  composite: 66.1
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 60.0
+    artifact_dirs: 31
+    catalog_earned: 61.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 55.0
+    catalog_gap: 53.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 1.3
   facets:
     access_clarity: 92.1
-    contract_governance: 4.5
-    contract_quality: 56.0
+    contract_governance: 18.2
+    contract_quality: 61.3
     developer_ergonomics: 73.2
-    discoverability: 73.3
+    discoverability: 68.3
     operational_transparency: 44.7
-  previous_composite: 63.1
+  previous_composite: 64.8
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 4
     mcp: site-plugin
     skills: derived
@@ -327,13 +354,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/playable/refs/heads/main/screenshots/playable-2026-08-17T080409.png
+screenshot: https://apis.io/screenshots/playable/playable-2026-08-17T080409.png
 security:
 - kind: authentication
   name: Playable Authentication
@@ -347,6 +374,16 @@ security:
   name: Playable Trust Center
   slug: playable-trust-center
   summary_line: ISO 27001:2022, ISAE 3000 Type 2, GDPR
+skill_count: 4
+skills:
+- name: Award prizes and notify Playable winners
+  slug: playable-award-and-notify-winners
+- name: Run a Playable campaign lifecycle
+  slug: playable-manage-campaign-lifecycle
+- name: Pull player registrations from a Playable campaign
+  slug: playable-pull-campaign-registrations
+- name: Report on Playable campaign performance
+  slug: playable-report-campaign-performance
 slug: playable
 tags:
 - Company
@@ -358,6 +395,7 @@ tags:
 - Loyalty
 - MarTech
 - Webhook
+- OAuth
 - Authentication
 website: https://playable.com/
 ---

@@ -1,16 +1,16 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 880
   human_in_the_loop: 1
@@ -116,9 +119,6 @@ apis:
 artifact_total: 36
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: NetBox REST authentication-check API
   slug: open-netbox-authentication-check-api
 - collection_type: open
@@ -162,12 +162,12 @@ collections:
   slug: open-netbox
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/netbox/refs/heads/main/rate-limits/netbox-rate-limits.yml
+  href: https://artifacts.apis.io/netbox/rate-limits/netbox-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/netbox-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/netbox/refs/heads/main/finops/netbox-finops.yml
+  href: https://artifacts.apis.io/netbox/finops/netbox-finops.yml
   title: ''
   type: FinOps
   url: finops/netbox-finops.yml
@@ -176,7 +176,7 @@ common:
   type: Pricing
   url: https://netboxlabs.com/pricing/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/netbox/refs/heads/main/plans/netbox-plans-pricing.yml
+  href: https://artifacts.apis.io/netbox/plans/netbox-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/netbox-plans-pricing.yml
@@ -185,22 +185,22 @@ common:
   type: Website
   url: https://netbox.dev
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/netbox/refs/heads/main/capabilities/netbox-capability-edges.yml
+  href: https://artifacts.apis.io/netbox/capabilities/netbox-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/netbox-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/netbox/refs/heads/main/agentic-access/netbox-agentic-access.yml
+  href: https://artifacts.apis.io/netbox/agentic-access/netbox-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/netbox-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/netbox/refs/heads/main/security/netbox-domain-security.yml
+  href: https://artifacts.apis.io/netbox/security/netbox-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/netbox-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/netbox/refs/heads/main/authentication/netbox-authentication.yml
+  href: https://artifacts.apis.io/netbox/authentication/netbox-authentication.yml
   title: ''
   type: Authentication
   url: authentication/netbox-authentication.yml
@@ -238,7 +238,7 @@ finops:
 - has_sources: false
   method: generated
   name: Netbox Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: netbox-finops
   template: true
@@ -255,35 +255,51 @@ network: true
 overview: 'NetBox publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication Check API, Circuits API, Core API, and 11 more. Tagged areas include Data Center, DCIM, Infrastructure as Code, IPAM, and Network Automation.
 
 
+  The NetBox catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   NetBox''s developer surface includes pricing, authentication, engineering blog, getting-started guide, and 12 more developer resources.'
 plans:
 - name: Netbox Plans Pricing
   plan_count: 3
   slug: netbox-plans-pricing
-random_paper: 18
+random_paper: 8
 rate_limits:
 - limit_count: 5
   name: Netbox Rate Limits
   slug: netbox-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: NetBox API Rules
+  rule_count: 56
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 7
+    warn: 9
+  slug: netbox-rules
 score:
   band: thin
-  composite: 34.1
+  composite: 35.7
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 52.0
+    artifact_dirs: 18
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 47.1
     developer_ergonomics: 35.7
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 35.6
+  previous_composite: 35.7
   provenance:
     agentic_access: derived
     contracts:
@@ -297,13 +313,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/netbox/refs/heads/main/screenshots/netbox-2026-08-07T184926.png
+screenshot: https://apis.io/screenshots/netbox/netbox-2026-08-07T184926.png
 security:
 - kind: authentication
   name: Netbox Authentication

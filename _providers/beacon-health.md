@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,17 +38,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 6
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/plans/beacon-health-plans-pricing.yml
+  href: https://artifacts.apis.io/beacon-health/plans/beacon-health-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/beacon-health-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/rate-limits/beacon-health-rate-limits.yml
+  href: https://artifacts.apis.io/beacon-health/rate-limits/beacon-health-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/beacon-health-rate-limits.yml
@@ -78,22 +81,22 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/beacon-health-ai/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/well-known/beacon-health-well-known.yml
+  href: https://artifacts.apis.io/beacon-health/well-known/beacon-health-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/beacon-health-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/security/beacon-health-domain-security.yml
+  href: https://artifacts.apis.io/beacon-health/security/beacon-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/beacon-health-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/authentication/beacon-health-authentication.yml
+  href: https://artifacts.apis.io/beacon-health/authentication/beacon-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/beacon-health-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/conformance/beacon-health-conformance.yml
+  href: https://artifacts.apis.io/beacon-health/conformance/beacon-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/beacon-health-conformance.yml
@@ -102,27 +105,27 @@ common:
   type: Compliance
   url: https://trust.beaconhealth.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/security/beacon-health-trust-center.yml
+  href: https://artifacts.apis.io/beacon-health/security/beacon-health-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/beacon-health-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/security/beacon-health-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/beacon-health/security/beacon-health-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/beacon-health-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/security/beacon-health-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/beacon-health/security/beacon-health-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/beacon-health-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/lifecycle/beacon-health-lifecycle.yml
+  href: https://artifacts.apis.io/beacon-health/lifecycle/beacon-health-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/beacon-health-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/llms/beacon-health-llms.txt
+  href: https://artifacts.apis.io/beacon-health/llms/beacon-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/beacon-health-llms.txt
@@ -159,7 +162,7 @@ plans:
 - name: Beacon Health Plans Pricing
   plan_count: 0
   slug: beacon-health-plans-pricing
-random_paper: 15
+random_paper: 19
 rate_limits:
 - limit_count: 0
   name: Beacon Health Rate Limits
@@ -195,14 +198,14 @@ score:
     regime: Health
     regime_id: health
     score: 27.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/beacon-health/refs/heads/main/screenshots/beacon-health-2026-07-25T202509.png
+screenshot: https://apis.io/screenshots/beacon-health/beacon-health-2026-07-25T202509.png
 security:
 - kind: authentication
   name: Beacon Health Authentication

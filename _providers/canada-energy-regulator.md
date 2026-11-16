@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 8.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: The Canada Energy Regulator operates its own ArcGIS Online organization (portal neb-gis.maps.arcgis.com, organization id vNzamREXvX2WcX6d) and hosts 23 public feature services on it. This is the one g
@@ -49,7 +52,7 @@ apis:
 artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canada-energy-regulator/refs/heads/main/security/canada-energy-regulator-domain-security.yml
+  href: https://artifacts.apis.io/canada-energy-regulator/security/canada-energy-regulator-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/canada-energy-regulator-domain-security.yml
@@ -110,47 +113,47 @@ common:
   type: License
   url: https://open.canada.ca/en/open-government-licence-canada
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/canada-energy-regulator/refs/heads/main/authentication/canada-energy-regulator-authentication.yml
+  href: https://artifacts.apis.io/canada-energy-regulator/authentication/canada-energy-regulator-authentication.yml
   title: ''
   type: Authentication
   url: authentication/canada-energy-regulator-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canada-energy-regulator/refs/heads/main/conventions/canada-energy-regulator-conventions.yml
+  href: https://artifacts.apis.io/canada-energy-regulator/conventions/canada-energy-regulator-conventions.yml
   title: ''
   type: Conventions
   url: conventions/canada-energy-regulator-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canada-energy-regulator/refs/heads/main/errors/canada-energy-regulator-problem-types.yml
+  href: https://artifacts.apis.io/canada-energy-regulator/errors/canada-energy-regulator-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/canada-energy-regulator-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canada-energy-regulator/refs/heads/main/lifecycle/canada-energy-regulator-lifecycle.yml
+  href: https://artifacts.apis.io/canada-energy-regulator/lifecycle/canada-energy-regulator-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/canada-energy-regulator-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canada-energy-regulator/refs/heads/main/conformance/canada-energy-regulator-conformance.yml
+  href: https://artifacts.apis.io/canada-energy-regulator/conformance/canada-energy-regulator-conformance.yml
   title: ''
   type: Conformance
   url: conformance/canada-energy-regulator-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canada-energy-regulator/refs/heads/main/data-model/canada-energy-regulator-data-model.yml
+  href: https://artifacts.apis.io/canada-energy-regulator/data-model/canada-energy-regulator-data-model.yml
   title: ''
   type: DataModel
   url: data-model/canada-energy-regulator-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/canada-energy-regulator/refs/heads/main/vocabulary/canada-energy-regulator-glossary.yml
+  href: https://artifacts.apis.io/canada-energy-regulator/vocabulary/canada-energy-regulator-glossary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/canada-energy-regulator-glossary.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/canada-energy-regulator/refs/heads/main/json-schema/canada-energy-regulator-arcgis-layers.schema.json
+  href: https://artifacts.apis.io/canada-energy-regulator/json-schema/canada-energy-regulator-arcgis-layers.schema.json
   title: ''
   type: JSONSchema
   url: json-schema/canada-energy-regulator-arcgis-layers.schema.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/canada-energy-regulator/refs/heads/main/llms/canada-energy-regulator-llms.txt
+  href: https://artifacts.apis.io/canada-energy-regulator/llms/canada-energy-regulator-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/canada-energy-regulator-llms.txt
@@ -172,12 +175,12 @@ overview: 'Canada Energy Regulator is listed with 3 APIs on the [APIs.io](https:
 
 
   Canada Energy Regulator''s developer surface includes documentation, API reference, support, engineering blog, authentication, and 19 more developer resources.'
-random_paper: 11
+random_paper: 17
 score:
   band: emerging
   composite: 25.7
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 50.4
     catalog_earned_first_party: 5.0
     catalog_gap: 64.6
@@ -207,14 +210,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/canada-energy-regulator/refs/heads/main/screenshots/canada-energy-regulator-2026-08-07T162922.png
+screenshot: https://apis.io/screenshots/canada-energy-regulator/canada-energy-regulator-2026-08-07T162922.png
 security:
 - kind: authentication
   name: Canada Energy Regulator Authentication

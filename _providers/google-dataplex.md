@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.3
-  scored_at: '2026-10-17'
+  score: 27.8
+  scored_at: '2026-11-06'
 api_count: 12
 apis:
 - description: Google Dataplex REST API for managing lakes, zones, and assets.
@@ -87,42 +100,42 @@ apis:
 artifact_total: 21
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-dataplex/refs/heads/main/rules/google-dataplex-rules.yml
+  href: https://artifacts.apis.io/google-dataplex/rules/google-dataplex-rules.yml
   title: ''
   type: Spectral
   url: rules/google-dataplex-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-dataplex/refs/heads/main/json-ld/google-dataplex-context.jsonld
+  href: https://artifacts.apis.io/google-dataplex/json-ld/google-dataplex-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/google-dataplex-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-dataplex/refs/heads/main/vocabulary/google-dataplex-vocabulary.yml
+  href: https://artifacts.apis.io/google-dataplex/vocabulary/google-dataplex-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/google-dataplex-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-dataplex/refs/heads/main/data-model/google-dataplex-data-model.yml
+  href: https://artifacts.apis.io/google-dataplex/data-model/google-dataplex-data-model.yml
   title: ''
   type: DataModel
   url: data-model/google-dataplex-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-dataplex/refs/heads/main/conformance/google-dataplex-conformance.yml
+  href: https://artifacts.apis.io/google-dataplex/conformance/google-dataplex-conformance.yml
   title: ''
   type: Conformance
   url: conformance/google-dataplex-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-dataplex/refs/heads/main/well-known/google-dataplex-google-security.txt
+  href: https://artifacts.apis.io/google-dataplex/well-known/google-dataplex-google-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/google-dataplex-google-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/google-dataplex/refs/heads/main/well-known/google-dataplex-well-known.yml
+  href: https://artifacts.apis.io/google-dataplex/well-known/google-dataplex-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/google-dataplex-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/google-dataplex/refs/heads/main/hosts/google-dataplex-hosts.yml
+  href: https://artifacts.apis.io/google-dataplex/hosts/google-dataplex-hosts.yml
   title: ''
   type: Hosts
   url: hosts/google-dataplex-hosts.yml
@@ -151,12 +164,12 @@ common:
   type: DeveloperPortal
   url: https://developers.googleblog.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-dataplex/refs/heads/main/security/google-dataplex-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/google-dataplex/security/google-dataplex-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/google-dataplex-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-dataplex/refs/heads/main/security/google-dataplex-domain-security.yml
+  href: https://artifacts.apis.io/google-dataplex/security/google-dataplex-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/google-dataplex-domain-security.yml
@@ -223,7 +236,7 @@ overview: 'Google Dataplex is listed with 12 APIs on the [APIs.io](https://apis.
 
 
   Google Dataplex''s developer surface includes sandbox, documentation, getting-started guide, pricing, release notes, and 16 more developer resources.'
-random_paper: 15
+random_paper: 21
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -239,21 +252,23 @@ rules:
   slug: google-dataplex-rules
 score:
   band: thin
-  composite: 36.9
+  composite: 31.0
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.9
   facets:
-    access_clarity: 44.7
+    access_clarity: 32.9
     contract_governance: 22.0
     contract_quality: 25.7
-    developer_ergonomics: 38.1
+    developer_ergonomics: 23.8
     discoverability: 62.5
-    operational_transparency: 26.3
+    operational_transparency: 21.1
+  previous_composite: 36.9
   provenance:
     conformance: derived
     contracts:
@@ -268,11 +283,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/google-dataplex/google-dataplex-2026-11-03T132934.png
 security:
 - kind: domain-security
   name: Google Dataplex Domain Security

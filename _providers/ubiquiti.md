@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-10-17'
+  score: 23.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -82,9 +88,6 @@ apis:
 artifact_total: 33
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: UniFi Site Manager Devices API
   slug: open-ubiquiti-devices-api
 - collection_type: open
@@ -103,27 +106,32 @@ collections:
   name: UniFi Site Manager API
   slug: open-ubiquiti-unifi-site-manager-api
 common:
+- group: other
+  href: https://artifacts.apis.io/ubiquiti/capabilities/ubiquiti-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ubiquiti-capability-edges.yml
 - group: company
   title: ''
   type: Website
   url: https://www.ui.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ubiquiti/refs/heads/main/agentic-access/ubiquiti-agentic-access.yml
+  href: https://artifacts.apis.io/ubiquiti/agentic-access/ubiquiti-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ubiquiti-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ubiquiti/refs/heads/main/security/ubiquiti-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ubiquiti/security/ubiquiti-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ubiquiti-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ubiquiti/refs/heads/main/security/ubiquiti-domain-security.yml
+  href: https://artifacts.apis.io/ubiquiti/security/ubiquiti-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ubiquiti-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ubiquiti/refs/heads/main/authentication/ubiquiti-authentication.yml
+  href: https://artifacts.apis.io/ubiquiti/authentication/ubiquiti-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ubiquiti-authentication.yml
@@ -236,12 +244,12 @@ common:
   type: Tools
   url: https://github.com/ubiquiti-community/external-dns-unifi-webhook
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ubiquiti/refs/heads/main/plans/ubiquiti-plans-pricing.yml
+  href: https://artifacts.apis.io/ubiquiti/plans/ubiquiti-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ubiquiti-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ubiquiti/refs/heads/main/rate-limits/ubiquiti-rate-limits.yml
+  href: https://artifacts.apis.io/ubiquiti/rate-limits/ubiquiti-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ubiquiti-rate-limits.yml
@@ -269,44 +277,60 @@ network: true
 overview: 'Ubiquiti publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Devices API, Hosts API, ISP Metrics API, and 5 more. Tagged areas include Networking, Wi-Fi, Switching, Routing, and Surveillance.
 
 
-  Ubiquiti''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, engineering blog, support, and 27 more developer resources.'
+  The Ubiquiti catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Ubiquiti''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, engineering blog, support, and 28 more developer resources.'
 plans:
 - name: Ubiquiti Plans Pricing
   plan_count: 3
   slug: ubiquiti-plans-pricing
-random_paper: 18
+random_paper: 12
 rate_limits:
 - limit_count: 5
   name: Ubiquiti Rate Limits
   slug: ubiquiti-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: Ubiquiti API Rules
+  rule_count: 69
+  severity_counts:
+    error: 67
+    hint: 0
+    info: 1
+    warn: 1
+  slug: ubiquiti-rules
 score:
   band: developing
-  composite: 44.1
+  composite: 46.3
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 38.0
+    artifact_dirs: 16
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.7
+  delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 0.0
-    contract_quality: 49.7
+    contract_governance: 13.6
+    contract_quality: 46.7
     developer_ergonomics: 52.4
     discoverability: 57.1
-    operational_transparency: 42.1
+    operational_transparency: 52.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
     - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 50.8
+  previous_composite: 46.3
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 5
@@ -316,14 +340,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/ubiquiti/refs/heads/main/screenshots/ubiquiti-2026-06-20T195930.png
+screenshot: https://apis.io/screenshots/ubiquiti/ubiquiti-2026-06-20T195930.png
 security:
 - kind: authentication
   name: Ubiquiti Authentication

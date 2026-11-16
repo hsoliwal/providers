@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
-    well_known_catalog: false
+    well_known_catalog: true
   schema_version: '0.2'
-  score: 43.4
-  scored_at: '2026-10-17'
+  score: 49.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 42
   human_in_the_loop: 3
@@ -32,7 +48,7 @@ agentic_access:
   operation_count: 88
   slug: observeinc-agentic-access
   summary_line: 88 operations · 42 acting · 3 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - description: Read-only subset of the Apache Iceberg REST Catalog protocol served under /v1/iceberg/catalog on each Observe tenant, authenticated with the same Observe API token. Implements the Apache Iceberg spec;
   name: Observe Apache Iceberg REST Catalog API
@@ -142,110 +158,130 @@ apis:
   description: The Tag Values API from Observe — 1 operation(s) for tag values.
   name: Observe Tag Values API
   slug: observeinc-tag-values-api
-artifact_total: 35
+artifact_total: 37
 common:
-- group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/lifecycle/observeinc-lifecycle.yml
+- group: commercial
+  href: https://artifacts.apis.io/observeinc/finops/observeinc-finops.yml
   title: ''
-  type: Deprecation
-  url: lifecycle/observeinc-lifecycle.yml
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/agentic-access/observeinc-agentic-access.yml
-  title: ''
-  type: AgenticAccess
-  url: agentic-access/observeinc-agentic-access.yml
-- group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/rate-limits/observeinc-rate-limits.yml
-  title: ''
-  type: RateLimits
-  url: rate-limits/observeinc-rate-limits.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/rules/observeinc-rules.yml
-  title: ''
-  type: Spectral
-  url: rules/observeinc-rules.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/json-ld/observeinc-context.jsonld
-  title: ''
-  type: JSONLD
-  url: json-ld/observeinc-context.jsonld
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/vocabulary/observeinc-vocabulary.yml
-  title: ''
-  type: Vocabulary
-  url: vocabulary/observeinc-vocabulary.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/data-model/observeinc-data-model.yml
-  title: ''
-  type: DataModel
-  url: data-model/observeinc-data-model.yml
-- group: build
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/cli/observeinc-cli.yml
-  title: ''
-  type: CLI
-  url: cli/observeinc-cli.yml
-- group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/changelog/observeinc-changelog.yml
-  title: ''
-  type: ChangeLog
-  url: changelog/observeinc-changelog.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/lifecycle/observeinc-lifecycle.yml
-  title: ''
-  type: Lifecycle
-  url: lifecycle/observeinc-lifecycle.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/errors/observeinc-problem-types.yml
-  title: ''
-  type: ErrorCatalog
-  url: errors/observeinc-problem-types.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/conformance/observeinc-conformance.yml
-  title: ''
-  type: Conformance
-  url: conformance/observeinc-conformance.yml
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/llms/observeinc-llms.txt
-  title: ''
-  type: LLMsTxt
-  url: llms/observeinc-llms.txt
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/mcp/observeinc-mcp.yml
-  title: ''
-  type: MCPServer
-  url: mcp/observeinc-mcp.yml
+  type: FinOps
+  url: finops/observeinc-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/well-known/observeinc-www-security.txt
+  href: https://artifacts.apis.io/observeinc/well-known/observeinc-www-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/observeinc-www-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/well-known/observeinc-status-security.txt
+  href: https://artifacts.apis.io/observeinc/well-known/observeinc-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/observeinc-status-security.txt
+- group: build
+  href: https://artifacts.apis.io/observeinc/integrations/observeinc-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/observeinc-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/observeinc/capabilities/observeinc-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/observeinc-capability-edges.yml
+- group: commercial
+  href: https://artifacts.apis.io/observeinc/plans/observeinc-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/observeinc-plans-pricing.yml
+- group: operate
+  href: https://artifacts.apis.io/observeinc/lifecycle/observeinc-lifecycle.yml
+  title: ''
+  type: Deprecation
+  url: lifecycle/observeinc-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/well-known/observeinc-well-known.yml
+  href: https://artifacts.apis.io/observeinc/agentic-access/observeinc-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/observeinc-agentic-access.yml
+- group: operate
+  href: https://artifacts.apis.io/observeinc/rate-limits/observeinc-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/observeinc-rate-limits.yml
+- group: design
+  href: https://artifacts.apis.io/observeinc/rules/observeinc-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/observeinc-rules.yml
+- group: design
+  href: https://artifacts.apis.io/observeinc/json-ld/observeinc-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/observeinc-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/observeinc/vocabulary/observeinc-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/observeinc-vocabulary.yml
+- group: design
+  href: https://artifacts.apis.io/observeinc/data-model/observeinc-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/observeinc-data-model.yml
+- group: build
+  href: https://artifacts.apis.io/observeinc/cli/observeinc-cli.yml
+  title: ''
+  type: CLI
+  url: cli/observeinc-cli.yml
+- group: operate
+  href: https://artifacts.apis.io/observeinc/changelog/observeinc-changelog.yml
+  title: ''
+  type: ChangeLog
+  url: changelog/observeinc-changelog.yml
+- group: design
+  href: https://artifacts.apis.io/observeinc/lifecycle/observeinc-lifecycle.yml
+  title: ''
+  type: Lifecycle
+  url: lifecycle/observeinc-lifecycle.yml
+- group: design
+  href: https://artifacts.apis.io/observeinc/errors/observeinc-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/observeinc-problem-types.yml
+- group: design
+  href: https://artifacts.apis.io/observeinc/conformance/observeinc-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/observeinc-conformance.yml
+- group: agent
+  href: https://artifacts.apis.io/observeinc/llms/observeinc-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/observeinc-llms.txt
+- group: agent
+  href: https://artifacts.apis.io/observeinc/mcp/observeinc-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/observeinc-mcp.yml
+- group: agent
+  href: https://artifacts.apis.io/observeinc/well-known/observeinc-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/observeinc-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/hosts/observeinc-hosts.yml
+  href: https://artifacts.apis.io/observeinc/hosts/observeinc-hosts.yml
   title: ''
   type: Hosts
   url: hosts/observeinc-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/vendors/observeinc-vendors.yml
+  href: https://artifacts.apis.io/observeinc/vendors/observeinc-vendors.yml
   title: ''
   type: Vendors
   url: vendors/observeinc-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/packages/observeinc-packages.yml
+  href: https://artifacts.apis.io/observeinc/packages/observeinc-packages.yml
   title: ''
   type: SDKs
   url: packages/observeinc-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/packages/observeinc-packages.yml
+  href: https://artifacts.apis.io/observeinc/packages/observeinc-packages.yml
   title: ''
   type: Packages
   url: packages/observeinc-packages.yml
@@ -262,12 +298,12 @@ common:
   type: GettingStarted
   url: https://docs.observeinc.com/docs/google-cloud-platform-quickstart-1
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/authentication/observeinc-authentication.yml
+  href: https://artifacts.apis.io/observeinc/authentication/observeinc-authentication.yml
   title: ''
   type: Authentication
   url: authentication/observeinc-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/observeinc/refs/heads/main/security/observeinc-domain-security.yml
+  href: https://artifacts.apis.io/observeinc/security/observeinc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/observeinc-domain-security.yml
@@ -317,6 +353,14 @@ common:
   url: https://www.snowflake.com/en/blog/product-and-technology/?tags=blog%2Fproduct-and-technology%2Fobservability
 created: '2026-10-13'
 description: 'Observe (Observe, Inc., now "Observe by Snowflake" following its acquisition by Snowflake; www.observeinc.com redirects to snowflake.com/en/product/observe) is an observability platform for logs, metrics, traces and APM built on a data lake and the OPAL query language. Its developer surface lives on docs.observeinc.com: a tenant-scoped REST API (https://{customerid}.observeinc.com/v1, bearer "<customerid> <token>") covering monitors, datasets, ingest and API tokens, reference tables, service accounts and query export, with date-based Observe-Api-Version response versioning; a read-only Apache Iceberg REST Catalog endpoint; a tenant MCP server; a CLI; and a Terraform provider. Snowflake''s own APIs are not credited here.'
+finops:
+- has_sources: true
+  method: derived
+  name: Observeinc Finops
+  primary_unit: ''
+  service_category: ''
+  slug: observeinc-finops
+  template: true
 image: https://www.snowflake.com/content/dam/snowflake-site/general/technical/default-og-image/snowflake-social-share.png
 json_schemas:
 - name: AlertResource
@@ -357,7 +401,11 @@ overview: 'Observe publishes 22 API contracts indexed on the [APIs.io](https://a
   The Observe catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Observe''s developer surface includes CLI, changelog, getting-started guide, authentication, documentation, API reference, support, and 30 more developer resources.'
+  Observe''s developer surface includes CLI, changelog, getting-started guide, authentication, documentation, API reference, support, and 34 more developer resources.'
+plans:
+- name: Observeinc Plans Pricing
+  plan_count: 4
+  slug: observeinc-plans-pricing
 random_paper: 16
 rate_limits:
 - limit_count: 4
@@ -365,34 +413,36 @@ rate_limits:
   slug: observeinc-rate-limits
 rules:
 - authorship: generated
-  effective_rule_count: 59
+  effective_rule_count: 106
   extends:
   - spectral:oas
   name: Observe API Rules
-  rule_count: 18
+  rule_count: 65
   severity_counts:
-    error: 11
+    error: 42
     hint: 0
-    info: 6
-    warn: 1
+    info: 8
+    warn: 15
   slug: observeinc-rules
 score:
   band: strong
-  composite: 61.6
+  composite: 62.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 74.8
-    catalog_earned_first_party: 12.0
-    catalog_gap: 40.3
+    artifact_dirs: 30
+    catalog_earned: 86.8
+    catalog_earned_first_party: 24.0
+    catalog_gap: 28.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.1
   facets:
-    access_clarity: 52.6
+    access_clarity: 78.9
     contract_governance: 22.0
     contract_quality: 68.1
-    developer_ergonomics: 61.9
-    discoverability: 76.7
+    developer_ergonomics: 40.5
+    discoverability: 75.8
     operational_transparency: 76.3
+  previous_composite: 69.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -407,12 +457,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 27.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/observeinc/observeinc-2026-11-03T140414.png
 security:
 - kind: authentication
   name: Observeinc Authentication

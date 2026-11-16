@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -83,9 +87,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs API
   slug: open-wmo-jobs-api
 - collection_type: open
@@ -102,17 +103,17 @@ collections:
   slug: open-wmo-wis2-discovery-metadata-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wmo/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/wmo/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wmo/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/wmo/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wmo/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/wmo/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
@@ -121,12 +122,12 @@ common:
   type: Blog
   url: https://wmo.int/news
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wmo/refs/heads/main/agentic-access/wmo-agentic-access.yml
+  href: https://artifacts.apis.io/wmo/agentic-access/wmo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/wmo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wmo/refs/heads/main/security/wmo-domain-security.yml
+  href: https://artifacts.apis.io/wmo/security/wmo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wmo-domain-security.yml
@@ -194,7 +195,7 @@ network: true
 overview: 'World Meteorological Organization publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Jobs API, Pywcmp Wis2 Wcmp2 Ets API, Pywcmp Wis2 Wcmp2 Kpi API, and 6 more. Tagged areas include Weather, Climate, Hydrology, Meteorology, and International Organization.
 
 
-  The World Meteorological Organization catalog on APIs.io includes 1 JSON-LD context.
+  The World Meteorological Organization catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   World Meteorological Organization''s developer surface includes engineering blog, developer portal, documentation, and 13 more developer resources.'
@@ -202,30 +203,43 @@ plans:
 - name: Plans
   plan_count: 4
   slug: plans
-random_paper: 9
+random_paper: 3
 rate_limits:
 - limit_count: 0
   name: Rate Limits
   slug: rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: World Meteorological Organization API Rules
+  rule_count: 57
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 4
+    warn: 2
+  slug: wmo-rules
 score:
   band: thin
-  composite: 29.7
+  composite: 31.3
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 45.0
+    artifact_dirs: 15
+    catalog_earned: 49.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.2
+  delta: 0.0
   facets:
     access_clarity: 18.4
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 49.6
     developer_ergonomics: 35.7
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 34.9
+  previous_composite: 31.3
   provenance:
     agentic_access: derived
     contracts:
@@ -239,13 +253,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/wmo/refs/heads/main/screenshots/wmo-2026-06-20T201531.png
+screenshot: https://apis.io/screenshots/wmo/wmo-2026-06-20T201531.png
 security:
 - kind: domain-security
   name: Wmo Domain Security

@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: medium
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The GraphQL gateway that backs the Acin / CUBE Platform web application. It is served from Acin's own Azure API Management instance at apim-prod.acin.com and is referenced by name in the application b
@@ -32,7 +49,7 @@ apis:
 artifact_total: 8
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/security/acin-domain-security.yml
+  href: https://artifacts.apis.io/acin/security/acin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/acin-domain-security.yml
@@ -77,7 +94,7 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/acin-ltd
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/security/acin-trust-center.yml
+  href: https://artifacts.apis.io/acin/security/acin-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/acin-trust-center.yml
@@ -86,62 +103,62 @@ common:
   type: ChangeLog
   url: https://www.acin.com/release-note/acin-release-notes-and-product-updates-q2-2025/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/well-known/acin-well-known.yml
+  href: https://artifacts.apis.io/acin/well-known/acin-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/acin-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/authentication/acin-authentication.yml
+  href: https://artifacts.apis.io/acin/authentication/acin-authentication.yml
   title: ''
   type: Authentication
   url: authentication/acin-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/scopes/acin-scopes.yml
+  href: https://artifacts.apis.io/acin/scopes/acin-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/acin-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/conformance/acin-conformance.yml
+  href: https://artifacts.apis.io/acin/conformance/acin-conformance.yml
   title: ''
   type: Conformance
   url: conformance/acin-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/security/acin-trust-center.yml
+  href: https://artifacts.apis.io/acin/security/acin-trust-center.yml
   title: ''
   type: Compliance
   url: security/acin-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/data-model/acin-data-model.yml
+  href: https://artifacts.apis.io/acin/data-model/acin-data-model.yml
   title: ''
   type: DataModel
   url: data-model/acin-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/conventions/acin-conventions.yml
+  href: https://artifacts.apis.io/acin/conventions/acin-conventions.yml
   title: ''
   type: Conventions
   url: conventions/acin-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/lifecycle/acin-lifecycle.yml
+  href: https://artifacts.apis.io/acin/lifecycle/acin-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/acin-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/plans/acin-plans-pricing.yml
+  href: https://artifacts.apis.io/acin/plans/acin-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/acin-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/rate-limits/acin-rate-limits.yml
+  href: https://artifacts.apis.io/acin/rate-limits/acin-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/acin-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/llms/acin-llms.txt
+  href: https://artifacts.apis.io/acin/llms/acin-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/acin-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/changelog/acin-changelog.yml
+  href: https://artifacts.apis.io/acin/changelog/acin-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/acin-changelog.yml
@@ -161,7 +178,7 @@ plans:
 - name: Acin Plans Pricing
   plan_count: 0
   slug: acin-plans-pricing
-random_paper: 15
+random_paper: 3
 rate_limits:
 - limit_count: 0
   name: Acin Rate Limits
@@ -206,14 +223,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 37.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/acin/refs/heads/main/screenshots/acin-2026-10-11T092650.png
+screenshot: https://apis.io/screenshots/acin/acin-2026-10-11T092650.png
 security:
 - kind: authentication
   name: Acin Authentication

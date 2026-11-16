@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -71,9 +75,6 @@ apis:
 artifact_total: 17
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Federal Railroad Administration Public Accidents API
   slug: open-federal-railroad-administration-accidents-api
 - collection_type: open
@@ -93,27 +94,27 @@ collections:
   slug: open-federal-railroad-administration
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/federal-railroad-administration/refs/heads/main/plans/federal-railroad-administration-plans-pricing.yml
+  href: https://artifacts.apis.io/federal-railroad-administration/plans/federal-railroad-administration-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/federal-railroad-administration-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/federal-railroad-administration/refs/heads/main/rate-limits/federal-railroad-administration-rate-limits.yml
+  href: https://artifacts.apis.io/federal-railroad-administration/rate-limits/federal-railroad-administration-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/federal-railroad-administration-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/federal-railroad-administration/refs/heads/main/finops/federal-railroad-administration-finops.yml
+  href: https://artifacts.apis.io/federal-railroad-administration/finops/federal-railroad-administration-finops.yml
   title: ''
   type: FinOps
   url: finops/federal-railroad-administration-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/federal-railroad-administration/refs/heads/main/agentic-access/federal-railroad-administration-agentic-access.yml
+  href: https://artifacts.apis.io/federal-railroad-administration/agentic-access/federal-railroad-administration-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/federal-railroad-administration-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/federal-railroad-administration/refs/heads/main/security/federal-railroad-administration-domain-security.yml
+  href: https://artifacts.apis.io/federal-railroad-administration/security/federal-railroad-administration-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/federal-railroad-administration-domain-security.yml
@@ -135,7 +136,7 @@ finops:
 - has_sources: false
   method: generated
   name: Federal Railroad Administration Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: federal-railroad-administration-finops
   template: true
@@ -148,6 +149,9 @@ network: true
 overview: 'Federal Railroad Administration publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accidents API, Crossings API, Incidents API, and 2 more. Tagged areas include Federal Government, Railroads, Safety, and Transportation.
 
 
+  The Federal Railroad Administration catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Federal Railroad Administration''s developer surface includes documentation and 7 more developer resources.'
 plans:
 - name: Federal Railroad Administration Plans Pricing
@@ -158,20 +162,33 @@ rate_limits:
 - limit_count: 5
   name: Federal Railroad Administration Rate Limits
   slug: federal-railroad-administration-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 80
+  extends:
+  - spectral:oas
+  name: Federal Railroad Administration API Rules
+  rule_count: 39
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 1
+    warn: 1
+  slug: federal-railroad-administration-rules
 score:
   band: emerging
-  composite: 18.2
+  composite: 19.8
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 33.0
+    artifact_dirs: 12
+    catalog_earned: 37.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 82.0
+    catalog_gap: 77.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.6
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 39.8
     developer_ergonomics: 9.5
     discoverability: 48.2
@@ -181,7 +198,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 16.6
+  previous_composite: 19.8
   provenance:
     agentic_access: derived
     contracts:
@@ -195,14 +212,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/federal-railroad-administration/refs/heads/main/screenshots/federal-railroad-administration-2026-06-20T181126.png
+screenshot: https://apis.io/screenshots/federal-railroad-administration/federal-railroad-administration-2026-06-20T181126.png
 security:
 - kind: domain-security
   name: Federal Railroad Administration Domain Security

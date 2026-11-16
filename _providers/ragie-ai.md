@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -73,9 +79,6 @@ apis:
 artifact_total: 19
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Ragie Connections API
   slug: open-ragie-ai-connections-api
 - collection_type: open
@@ -99,22 +102,22 @@ common:
   type: Pricing
   url: https://www.ragie.ai/pricing
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ragie-ai/refs/heads/main/agentic-access/ragie-ai-agentic-access.yml
+  href: https://artifacts.apis.io/ragie-ai/agentic-access/ragie-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ragie-ai-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ragie-ai/refs/heads/main/security/ragie-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ragie-ai/security/ragie-ai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ragie-ai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ragie-ai/refs/heads/main/security/ragie-ai-domain-security.yml
+  href: https://artifacts.apis.io/ragie-ai/security/ragie-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ragie-ai-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ragie-ai/refs/heads/main/authentication/ragie-ai-authentication.yml
+  href: https://artifacts.apis.io/ragie-ai/authentication/ragie-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ragie-ai-authentication.yml
@@ -135,17 +138,17 @@ common:
   type: Documentation
   url: https://docs.ragie.ai
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ragie-ai/refs/heads/main/plans/ragie-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/ragie-ai/plans/ragie-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ragie-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ragie-ai/refs/heads/main/rate-limits/ragie-ai-rate-limits.yml
+  href: https://artifacts.apis.io/ragie-ai/rate-limits/ragie-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ragie-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ragie-ai/refs/heads/main/finops/ragie-ai-finops.yml
+  href: https://artifacts.apis.io/ragie-ai/finops/ragie-ai-finops.yml
   title: ''
   type: FinOps
   url: finops/ragie-ai-finops.yml
@@ -172,35 +175,51 @@ network: true
 overview: 'Ragie publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Connections API, Documents API, Entities API, and 2 more. Tagged areas include Artificial Intelligence, RAG, Retrieval, Vector Search, and Document Ingestion.
 
 
+  The Ragie catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Ragie''s developer surface includes pricing, authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Ragie Ai Plans Pricing
   plan_count: 5
   slug: ragie-ai-plans-pricing
-random_paper: 19
+random_paper: 23
 rate_limits:
 - limit_count: 5
   name: Ragie Ai Rate Limits
   slug: ragie-ai-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Ragie API Rules
+  rule_count: 59
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 4
+  slug: ragie-ai-rules
 score:
   band: thin
-  composite: 36.1
+  composite: 38.0
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 52.0
+    artifact_dirs: 16
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: -1.1
   facets:
-    access_clarity: 42.1
-    contract_governance: 0.0
+    access_clarity: 36.8
+    contract_governance: 13.6
     contract_quality: 50.7
     developer_ergonomics: 23.8
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 37.5
+    operational_transparency: 21.1
+  previous_composite: 39.1
   provenance:
     agentic_access: derived
     contracts:
@@ -214,13 +233,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/ragie-ai/refs/heads/main/screenshots/ragie-ai-2026-06-20T192529.png
+screenshot: https://apis.io/screenshots/ragie-ai/ragie-ai-2026-06-20T192529.png
 security:
 - kind: authentication
   name: Ragie Ai Authentication

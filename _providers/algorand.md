@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Open access
   onboarding: open
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 23.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 34
   human_in_the_loop: 1
@@ -42,7 +49,7 @@ agentic_access:
   operation_count: 100
   slug: algorand-agentic-access
   summary_line: 100 operations · 34 acting · 1 human-in-the-loop
-api_count: 4
+api_count: 3
 apis:
 - description: The Key Management Daemon (KMD) REST API provides local key storage and transaction signing for Algorand nodes. It exposes wallet management, key generation, and signing endpoints through a locally-ru
   name: Algorand KMD REST API
@@ -117,7 +124,7 @@ apis:
   description: The Wallets API from Algorand — 1 operation(s) for wallets.
   name: Algorand Wallets API
   slug: algorand-wallets-api
-artifact_total: 86
+artifact_total: 85
 collections:
 - collection_type: postman
   name: Algod REST API. common API
@@ -173,9 +180,6 @@ collections:
 - collection_type: postman
   name: Algod REST API. common Wallets API
   slug: postman-algorand-wallets-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Algod REST API. common API
   slug: open-algorand-common-api
@@ -236,17 +240,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/algorand/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/algorand/refs/heads/main/agentic-access/algorand-agentic-access.yml
+  href: https://artifacts.apis.io/algorand/agentic-access/algorand-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/algorand-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/algorand/refs/heads/main/security/algorand-domain-security.yml
+  href: https://artifacts.apis.io/algorand/security/algorand-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/algorand-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/algorand/refs/heads/main/authentication/algorand-authentication.yml
+  href: https://artifacts.apis.io/algorand/authentication/algorand-authentication.yml
   title: ''
   type: Authentication
   url: authentication/algorand-authentication.yml
@@ -315,17 +319,17 @@ common:
   type: TermsOfService
   url: https://algorand.co/terms
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/algorand/refs/heads/main/plans/algorand-plans.yml
+  href: https://artifacts.apis.io/algorand/plans/algorand-plans.yml
   title: ''
   type: Plans
   url: plans/algorand-plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/algorand/refs/heads/main/rate-limits/algorand-rate-limits.yml
+  href: https://artifacts.apis.io/algorand/rate-limits/algorand-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/algorand-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/algorand/refs/heads/main/finops/algorand-finops.yml
+  href: https://artifacts.apis.io/algorand/finops/algorand-finops.yml
   title: ''
   type: FinOps
   url: finops/algorand-finops.yml
@@ -363,7 +367,7 @@ finops:
 - has_sources: true
   method: generated
   name: Algorand Finops
-  primary_unit: ''
+  primary_unit: month
   service_category: Blockchain
   slug: algorand-finops
   template: false
@@ -414,7 +418,7 @@ plans:
 - name: Algorand Plans
   plan_count: 4
   slug: algorand-plans
-random_paper: 4
+random_paper: 0
 rate_limits:
 - limit_count: 7
   name: Algorand Rate Limits
@@ -432,30 +436,30 @@ rules:
     warn: 4
   slug: algorand-jsonschema-spectral-rules
 score:
-  band: thin
-  composite: 39.2
+  band: developing
+  composite: 41.1
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 49.3
+    artifact_dirs: 21
+    catalog_earned: 52.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 65.8
+    catalog_gap: 62.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.3
   facets:
-    access_clarity: 18.4
+    access_clarity: 26.3
     contract_governance: 9.8
-    contract_quality: 46.5
+    contract_quality: 47.8
     developer_ergonomics: 75.0
     discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 47.5
+  previous_composite: 40.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 35.7
       total: 14
   regulatory:
     applies: true
@@ -463,13 +467,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/algorand/refs/heads/main/screenshots/algorand-2026-06-20T171519.png
+screenshot: https://apis.io/screenshots/algorand/algorand-2026-06-20T171519.png
 security:
 - kind: authentication
   name: Algorand Authentication

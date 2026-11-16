@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -19,7 +22,7 @@ name: GreatHorn
 nav: Providers
 network: true
 overview: GreatHorn is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Email Security, Anti-Phishing, Cloud Email, and Business Email Compromise.
-random_paper: 2
+random_paper: 10
 slug: greathorn
 tags:
 - Company

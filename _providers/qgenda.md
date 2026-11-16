@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-10-17'
+  score: 18.8
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.qgenda.com/v2
@@ -172,11 +175,8 @@ apis:
   description: The Workflows API from QGenda — 5 operation(s) for workflows.
   name: QGenda Workflows API
   slug: qgenda-workflows-api
-artifact_total: 58
+artifact_total: 61
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: QGenda REST Company API
   slug: open-qgenda-company-api
@@ -260,12 +260,12 @@ collections:
   slug: open-qgenda-workflows-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/capabilities/qgenda-capability-edges.yml
+  href: https://artifacts.apis.io/qgenda/capabilities/qgenda-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/qgenda-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/overlays/qgenda-openapi-overlay.yaml
+  href: https://artifacts.apis.io/qgenda/overlays/qgenda-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/qgenda-openapi-overlay.yaml
@@ -286,42 +286,42 @@ common:
   type: APIReference
   url: https://restapi.qgenda.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/postman/qgenda-collection.json
+  href: https://artifacts.apis.io/qgenda/postman/qgenda-collection.json
   title: ''
   type: Postman
   url: postman/qgenda-collection.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/authentication/qgenda-authentication.yml
+  href: https://artifacts.apis.io/qgenda/authentication/qgenda-authentication.yml
   title: ''
   type: Authentication
   url: authentication/qgenda-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/conventions/qgenda-conventions.yml
+  href: https://artifacts.apis.io/qgenda/conventions/qgenda-conventions.yml
   title: ''
   type: Conventions
   url: conventions/qgenda-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/errors/qgenda-problem-types.yml
+  href: https://artifacts.apis.io/qgenda/errors/qgenda-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/qgenda-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/data-model/qgenda-data-model.yml
+  href: https://artifacts.apis.io/qgenda/data-model/qgenda-data-model.yml
   title: ''
   type: DataModel
   url: data-model/qgenda-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/mcp/qgenda-mcp.yml
+  href: https://artifacts.apis.io/qgenda/mcp/qgenda-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/qgenda-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/llms/qgenda-llms.txt
+  href: https://artifacts.apis.io/qgenda/llms/qgenda-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/qgenda-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/lifecycle/qgenda-lifecycle.yml
+  href: https://artifacts.apis.io/qgenda/lifecycle/qgenda-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/qgenda-lifecycle.yml
@@ -330,12 +330,12 @@ common:
   type: StatusPage
   url: https://status.qgenda.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/lifecycle/qgenda-lifecycle.yml
+  href: https://artifacts.apis.io/qgenda/lifecycle/qgenda-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/qgenda-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/conformance/qgenda-conformance.yml
+  href: https://artifacts.apis.io/qgenda/conformance/qgenda-conformance.yml
   title: ''
   type: Conformance
   url: conformance/qgenda-conformance.yml
@@ -344,22 +344,22 @@ common:
   type: Compliance
   url: https://trust.qgenda.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/well-known/qgenda-well-known.yml
+  href: https://artifacts.apis.io/qgenda/well-known/qgenda-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/qgenda-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/security/qgenda-domain-security.yml
+  href: https://artifacts.apis.io/qgenda/security/qgenda-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/qgenda-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/security/qgenda-trust-center.yml
+  href: https://artifacts.apis.io/qgenda/security/qgenda-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/qgenda-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/qgenda/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -402,31 +402,47 @@ network: true
 overview: 'QGenda publishes 27 API contracts indexed on the [APIs.io](https://apis.io/) network, including Company API, Contacts API, Corporate Entities API, and 24 more. Tagged areas include Company, Healthcare, Scheduling, Workforce Management, and Physician Scheduling.
 
 
+  The QGenda catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   QGenda''s developer surface includes documentation, API reference, authentication, support, engineering blog, signup flow, and 23 more developer resources.'
-random_paper: 8
+random_paper: 0
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: QGenda API Rules
+  rule_count: 56
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 7
+  slug: qgenda-rules
 score:
   band: developing
-  composite: 47.7
+  composite: 48.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 50.0
-    contract_governance: 16.4
-    contract_quality: 57.6
+    contract_governance: 30.0
+    contract_quality: 54.5
     developer_ergonomics: 48.2
     discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 47.7
+  previous_composite: 48.6
   provenance:
     conformance: unknown
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 27
@@ -438,13 +454,13 @@ score:
     regime: Health
     regime_id: health
     score: 23.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/qgenda/refs/heads/main/screenshots/qgenda-2026-08-17T081419.png
+screenshot: https://apis.io/screenshots/qgenda/qgenda-2026-08-17T081419.png
 security:
 - kind: authentication
   name: Qgenda Authentication
@@ -458,6 +474,14 @@ security:
   name: Qgenda Trust Center
   slug: qgenda-trust-center
   summary_line: SOC 2
+skill_count: 3
+skills:
+- name: Authenticate and read the physician schedule
+  slug: qgenda-authenticate-and-read-schedule
+- name: Read and update the staff member directory
+  slug: qgenda-manage-staff-directory
+- name: Retrieve time-off requests and request limits
+  slug: qgenda-time-off-requests
 slug: qgenda
 tags:
 - Company

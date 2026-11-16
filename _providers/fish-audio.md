@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 43.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -44,7 +50,7 @@ agentic_access:
   operation_count: 10
   slug: fish-audio-agentic-access
   summary_line: 10 operations · 6 acting
-api_count: 1
+api_count: 2
 apis:
 - description: The Fish Audio API provides RESTful access to text-to-speech, speech-to-text, voice cloning, and voice management capabilities backed by the Fish Audio S2-Pro model. Endpoints support streaming low-la
   name: Fish Audio API
@@ -72,9 +78,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Fish Audio Asr API
   slug: open-fish-audio-asr-api
 - collection_type: open
@@ -90,18 +93,23 @@ collections:
   name: Fish Audio API
   slug: open-fish-audio
 common:
+- group: other
+  href: https://artifacts.apis.io/fish-audio/capabilities/fish-audio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/fish-audio-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fish-audio/refs/heads/main/plans/fish-audio-plans-pricing.yml
+  href: https://artifacts.apis.io/fish-audio/plans/fish-audio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fish-audio-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fish-audio/refs/heads/main/rate-limits/fish-audio-rate-limits.yml
+  href: https://artifacts.apis.io/fish-audio/rate-limits/fish-audio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fish-audio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fish-audio/refs/heads/main/finops/fish-audio-finops.yml
+  href: https://artifacts.apis.io/fish-audio/finops/fish-audio-finops.yml
   title: ''
   type: FinOps
   url: finops/fish-audio-finops.yml
@@ -110,17 +118,17 @@ common:
   type: Blog
   url: https://fish.audio/blog/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fish-audio/refs/heads/main/agentic-access/fish-audio-agentic-access.yml
+  href: https://artifacts.apis.io/fish-audio/agentic-access/fish-audio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fish-audio-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fish-audio/refs/heads/main/security/fish-audio-domain-security.yml
+  href: https://artifacts.apis.io/fish-audio/security/fish-audio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fish-audio-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fish-audio/refs/heads/main/authentication/fish-audio-authentication.yml
+  href: https://artifacts.apis.io/fish-audio/authentication/fish-audio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fish-audio-authentication.yml
@@ -187,42 +195,58 @@ network: true
 overview: 'Fish Audio publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Asr API, Model API, Tts API, and 2 more. Tagged areas include Voice, Text-to-Speech, Speech-to-Text, Voice Cloning, and Audio.
 
 
-  Fish Audio''s developer surface includes engineering blog, authentication, documentation, pricing, and 13 more developer resources.'
+  The Fish Audio catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Fish Audio''s developer surface includes engineering blog, authentication, documentation, pricing, and 14 more developer resources.'
 plans:
 - name: Fish Audio Plans Pricing
   plan_count: 1
   slug: fish-audio-plans-pricing
-random_paper: 11
+random_paper: 17
 rate_limits:
 - limit_count: 2
   name: Fish Audio Rate Limits
   slug: fish-audio-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Fish Audio API Rules
+  rule_count: 62
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 8
+    warn: 12
+  slug: fish-audio-rules
 score:
   band: thin
-  composite: 29.5
+  composite: 32.2
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 41.0
+    artifact_dirs: 20
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.9
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 47.9
+    contract_governance: 13.6
+    contract_quality: 52.3
     developer_ergonomics: 48.8
     discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 35.5
+  previous_composite: 31.3
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 4
+      marker_coverage: 70.6
+      total: 17
     mcp: first-party
   regulatory:
     applies: true
@@ -230,13 +254,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 10.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/fish-audio/refs/heads/main/screenshots/fish-audio-2026-06-20T181249.png
+screenshot: https://apis.io/screenshots/fish-audio/fish-audio-2026-06-20T181249.png
 security:
 - kind: authentication
   name: Fish Audio Authentication

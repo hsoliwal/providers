@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -36,22 +49,22 @@ common:
   type: PrivacyPolicy
   url: https://www.soundtrap.com/legal/privacy_world
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/soundtrap/refs/heads/main/llms/soundtrap-llms.txt
+  href: https://artifacts.apis.io/soundtrap/llms/soundtrap-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/soundtrap-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/soundtrap/refs/heads/main/well-known/soundtrap-well-known.yml
+  href: https://artifacts.apis.io/soundtrap/well-known/soundtrap-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/soundtrap-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/soundtrap/refs/heads/main/hosts/soundtrap-hosts.yml
+  href: https://artifacts.apis.io/soundtrap/hosts/soundtrap-hosts.yml
   title: ''
   type: Hosts
   url: hosts/soundtrap-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/soundtrap/refs/heads/main/vendors/soundtrap-vendors.yml
+  href: https://artifacts.apis.io/soundtrap/vendors/soundtrap-vendors.yml
   title: ''
   type: Vendors
   url: vendors/soundtrap-vendors.yml
@@ -68,7 +81,7 @@ common:
   type: StatusPage
   url: https://status.soundtrap.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/soundtrap/refs/heads/main/security/soundtrap-domain-security.yml
+  href: https://artifacts.apis.io/soundtrap/security/soundtrap-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/soundtrap-domain-security.yml
@@ -114,24 +127,26 @@ overview: 'Soundtrap is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Soundtrap''s developer surface includes support, engineering blog, pricing, signup flow, and 11 more developer resources.'
-random_paper: 2
+random_paper: 8
 score:
   band: emerging
-  composite: 21.5
+  composite: 12.6
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.9
   facets:
-    access_clarity: 52.6
+    access_clarity: 26.3
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 16.7
+    developer_ergonomics: 8.3
     discoverability: 55.4
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  previous_composite: 21.5
   provenance:
     mcp: derived
   regulatory:
@@ -139,13 +154,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/soundtrap/soundtrap-2026-11-03T143548.png
 security:
 - kind: domain-security
   name: Soundtrap Domain Security

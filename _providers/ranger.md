@@ -1,14 +1,16 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,17 +38,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/plans/ranger-plans-pricing.yml
+  href: https://artifacts.apis.io/ranger/plans/ranger-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ranger-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/security/ranger-domain-security.yml
+  href: https://artifacts.apis.io/ranger/security/ranger-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ranger-domain-security.yml
@@ -88,42 +93,42 @@ common:
   type: Support
   url: mailto:howdy@ranger.net
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/authentication/ranger-authentication.yml
+  href: https://artifacts.apis.io/ranger/authentication/ranger-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ranger-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/well-known/ranger-well-known.yml
+  href: https://artifacts.apis.io/ranger/well-known/ranger-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ranger-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/packages/ranger-packages.yml
+  href: https://artifacts.apis.io/ranger/packages/ranger-packages.yml
   title: ''
   type: Packages
   url: packages/ranger-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/packages/ranger-packages.yml
+  href: https://artifacts.apis.io/ranger/packages/ranger-packages.yml
   title: ''
   type: SDKs
   url: packages/ranger-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/cli/ranger-cli.yml
+  href: https://artifacts.apis.io/ranger/cli/ranger-cli.yml
   title: ''
   type: CLI
   url: cli/ranger-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/lifecycle/ranger-lifecycle.yml
+  href: https://artifacts.apis.io/ranger/lifecycle/ranger-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ranger-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/security/ranger-trust-center.yml
+  href: https://artifacts.apis.io/ranger/security/ranger-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/ranger-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/llms/ranger-llms.txt
+  href: https://artifacts.apis.io/ranger/llms/ranger-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ranger-llms.txt
@@ -147,7 +152,7 @@ plans:
 - name: Ranger Plans Pricing
   plan_count: 3
   slug: ranger-plans-pricing
-random_paper: 1
+random_paper: 15
 score:
   band: thin
   composite: 35.3
@@ -158,7 +163,7 @@ score:
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.0
   facets:
     access_clarity: 77.6
     contract_governance: 0.0
@@ -166,7 +171,7 @@ score:
     developer_ergonomics: 64.3
     discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 29.0
+  previous_composite: 35.3
   provenance:
     mcp: first-party
   regulatory:
@@ -175,14 +180,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/screenshots/ranger-2026-09-02T152840.png
+screenshot: https://apis.io/screenshots/ranger/ranger-2026-09-02T152840.png
 security:
 - kind: authentication
   name: Ranger Authentication

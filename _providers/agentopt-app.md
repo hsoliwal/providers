@@ -1,4 +1,21 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +32,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +43,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'One operation: POST /v1/select with JSON {query, top_n?, constraints?, weights?, caller_agent?} returns ordered MCP/A2A candidates with an absolute 0-1 hybrid-fit score (0.55 usable, 0.72+ strong). Fr'
@@ -60,62 +80,62 @@ common:
   type: StatusPage
   url: https://agentopt.app/status
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/a2a/agentopt-app-a2a.yml
+  href: https://artifacts.apis.io/agentopt-app/a2a/agentopt-app-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/agentopt-app-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/well-known/agentopt-app-well-known.yml
+  href: https://artifacts.apis.io/agentopt-app/well-known/agentopt-app-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/agentopt-app-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/llms/agentopt-app-llms.txt
+  href: https://artifacts.apis.io/agentopt-app/llms/agentopt-app-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/agentopt-app-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/authentication/agentopt-app-authentication.yml
+  href: https://artifacts.apis.io/agentopt-app/authentication/agentopt-app-authentication.yml
   title: ''
   type: Authentication
   url: authentication/agentopt-app-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/conventions/agentopt-app-conventions.yml
+  href: https://artifacts.apis.io/agentopt-app/conventions/agentopt-app-conventions.yml
   title: ''
   type: Conventions
   url: conventions/agentopt-app-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/errors/agentopt-app-problem-types.yml
+  href: https://artifacts.apis.io/agentopt-app/errors/agentopt-app-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/agentopt-app-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/rate-limits/agentopt-app-rate-limits.yml
+  href: https://artifacts.apis.io/agentopt-app/rate-limits/agentopt-app-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/agentopt-app-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/plans/agentopt-app-plans-pricing.yml
+  href: https://artifacts.apis.io/agentopt-app/plans/agentopt-app-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/agentopt-app-plans-pricing.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/sandbox/agentopt-app-sandbox.yml
+  href: https://artifacts.apis.io/agentopt-app/sandbox/agentopt-app-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/agentopt-app-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/conformance/agentopt-app-conformance.yml
+  href: https://artifacts.apis.io/agentopt-app/conformance/agentopt-app-conformance.yml
   title: ''
   type: Conformance
   url: conformance/agentopt-app-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/lifecycle/agentopt-app-lifecycle.yml
+  href: https://artifacts.apis.io/agentopt-app/lifecycle/agentopt-app-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/agentopt-app-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/security/agentopt-app-domain-security.yml
+  href: https://artifacts.apis.io/agentopt-app/security/agentopt-app-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/agentopt-app-domain-security.yml
@@ -135,30 +155,30 @@ plans:
 - name: Agentopt App Plans Pricing
   plan_count: 2
   slug: agentopt-app-plans-pricing
-random_paper: 0
+random_paper: 8
 rate_limits:
 - limit_count: 4
   name: Agentopt App Rate Limits
   slug: agentopt-app-rate-limits
 score:
-  band: thin
-  composite: 31.9
+  band: emerging
+  composite: 25.6
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 55.0
     catalog_earned_first_party: 20.0
     catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -6.3
   facets:
-    access_clarity: 44.7
+    access_clarity: 32.9
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 40.5
+    developer_ergonomics: 26.2
     discoverability: 62.5
-    operational_transparency: 47.4
-  previous_composite: 31.8
+    operational_transparency: 39.5
+  previous_composite: 31.9
   provenance:
     conformance: first-party
   regulatory:
@@ -167,14 +187,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/agentopt-app/refs/heads/main/screenshots/agentopt-app-2026-10-11T093052.png
+screenshot: https://apis.io/screenshots/agentopt-app/agentopt-app-2026-10-11T093052.png
 security:
 - kind: authentication
   name: Agentopt App Authentication

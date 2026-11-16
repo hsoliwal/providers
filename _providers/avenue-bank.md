@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.3
-  scored_at: '2026-10-17'
+  score: 30.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -78,11 +83,8 @@ apis:
   description: Banking Product endpoints
   name: Avenue Bank Banking Products API
   slug: avenue-bank-banking-products-api
-artifact_total: 19
+artifact_total: 22
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CDR Banking Banking Account Balances API
   slug: open-avenue-bank-banking-account-balances-api
@@ -106,12 +108,12 @@ collections:
   slug: open-avenue-bank-banking-products-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/agentic-access/avenue-bank-agentic-access.yml
+  href: https://artifacts.apis.io/avenue-bank/agentic-access/avenue-bank-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/avenue-bank-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/security/avenue-bank-domain-security.yml
+  href: https://artifacts.apis.io/avenue-bank/security/avenue-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/avenue-bank-domain-security.yml
@@ -144,57 +146,57 @@ common:
   type: SignUp
   url: https://application.avenuebank.com.au
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/llms/avenue-bank-llms.txt
+  href: https://artifacts.apis.io/avenue-bank/llms/avenue-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/avenue-bank-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/authentication/avenue-bank-authentication.yml
+  href: https://artifacts.apis.io/avenue-bank/authentication/avenue-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/avenue-bank-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/scopes/avenue-bank-scopes.yml
+  href: https://artifacts.apis.io/avenue-bank/scopes/avenue-bank-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/avenue-bank-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/conventions/avenue-bank-conventions.yml
+  href: https://artifacts.apis.io/avenue-bank/conventions/avenue-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/avenue-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/errors/avenue-bank-problem-types.yml
+  href: https://artifacts.apis.io/avenue-bank/errors/avenue-bank-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/avenue-bank-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/conformance/avenue-bank-conformance.yml
+  href: https://artifacts.apis.io/avenue-bank/conformance/avenue-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/avenue-bank-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/lifecycle/avenue-bank-lifecycle.yml
+  href: https://artifacts.apis.io/avenue-bank/lifecycle/avenue-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/avenue-bank-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/data-model/avenue-bank-data-model.yml
+  href: https://artifacts.apis.io/avenue-bank/data-model/avenue-bank-data-model.yml
   title: ''
   type: DataModel
   url: data-model/avenue-bank-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/mcp/avenue-bank-mcp.yml
+  href: https://artifacts.apis.io/avenue-bank/mcp/avenue-bank-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/avenue-bank-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/overlays/avenue-bank-cds-banking-overlay.yaml
+  href: https://artifacts.apis.io/avenue-bank/overlays/avenue-bank-cds-banking-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/avenue-bank-cds-banking-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/avenue-bank/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -210,8 +212,24 @@ network: true
 overview: 'Avenue Bank publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Data Right.
 
 
+  The Avenue Bank catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Avenue Bank''s developer surface includes engineering blog, support, signup flow, authentication, and 16 more developer resources.'
-random_paper: 1
+random_paper: 21
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: Avenue Bank API Rules
+  rule_count: 68
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 5
+  slug: avenue-bank-rules
 scopes:
 - name: Avenue Bank Scopes
   scope_count: 5
@@ -219,18 +237,18 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: emerging
-  composite: 18.9
+  composite: 20.6
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 12.4
     developer_ergonomics: 30.4
     discoverability: 73.2
@@ -242,7 +260,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 18.9
+  previous_composite: 20.6
   provenance:
     agentic_access: first-party
     conformance: derived
@@ -263,13 +281,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 37.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/avenue-bank/refs/heads/main/screenshots/avenue-bank-2026-07-21T114700.png
+screenshot: https://apis.io/screenshots/avenue-bank/avenue-bank-2026-07-21T114700.png
 security:
 - kind: authentication
   name: Avenue Bank Authentication
@@ -279,6 +297,14 @@ security:
   name: Avenue Bank Domain Security
   slug: avenue-bank-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Read consented accounts and balances
+  slug: avenue-bank-accounts-and-balances
+- name: List Avenue Bank products (public CDR PRD)
+  slug: avenue-bank-product-reference
+- name: Retrieve consented account transactions
+  slug: avenue-bank-transactions
 slug: avenue-bank
 tags:
 - Finance

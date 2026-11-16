@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 33.5
-  scored_at: '2026-10-17'
+  score: 32.7
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: API for Centipid Technologies ISP billing platform, as documented in the developer reference.
@@ -49,60 +63,60 @@ apis:
   description: The Mcp API from Centipid Technologies — 1 operation(s) for mcp.
   name: Centipid Technologies MCP API
   slug: centipidbilling-mcp-api
-artifact_total: 13
+artifact_total: 14
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/plans/centipidbilling-plans-pricing.yml
+  href: https://artifacts.apis.io/centipidbilling/plans/centipidbilling-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/centipidbilling-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/rules/centipidbilling-rules.yml
+  href: https://artifacts.apis.io/centipidbilling/rules/centipidbilling-rules.yml
   title: ''
   type: Spectral
   url: rules/centipidbilling-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/json-ld/centipidbilling-context.jsonld
+  href: https://artifacts.apis.io/centipidbilling/json-ld/centipidbilling-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/centipidbilling-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/vocabulary/centipidbilling-vocabulary.yml
+  href: https://artifacts.apis.io/centipidbilling/vocabulary/centipidbilling-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/centipidbilling-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/centipidbilling/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/data-model/centipidbilling-data-model.yml
+  href: https://artifacts.apis.io/centipidbilling/data-model/centipidbilling-data-model.yml
   title: ''
   type: DataModel
   url: data-model/centipidbilling-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/conformance/centipidbilling-conformance.yml
+  href: https://artifacts.apis.io/centipidbilling/conformance/centipidbilling-conformance.yml
   title: ''
   type: Conformance
   url: conformance/centipidbilling-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/llms/centipidbilling-llms.txt
+  href: https://artifacts.apis.io/centipidbilling/llms/centipidbilling-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/centipidbilling-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/well-known/centipidbilling-well-known.yml
+  href: https://artifacts.apis.io/centipidbilling/well-known/centipidbilling-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/centipidbilling-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/hosts/centipidbilling-hosts.yml
+  href: https://artifacts.apis.io/centipidbilling/hosts/centipidbilling-hosts.yml
   title: ''
   type: Hosts
   url: hosts/centipidbilling-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/vendors/centipidbilling-vendors.yml
+  href: https://artifacts.apis.io/centipidbilling/vendors/centipidbilling-vendors.yml
   title: ''
   type: Vendors
   url: vendors/centipidbilling-vendors.yml
@@ -135,7 +149,7 @@ common:
   type: GettingStarted
   url: https://docs.centipidbilling.com/quickstart
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/centipidbilling/refs/heads/main/security/centipidbilling-domain-security.yml
+  href: https://artifacts.apis.io/centipidbilling/security/centipidbilling-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/centipidbilling-domain-security.yml
@@ -173,6 +187,14 @@ coverage:
   state: unreadable
 created: '2026-10-16'
 description: Centipid Technologies provides a comprehensive ISP billing and OSS/BSS platform that enables broadband providers to manage subscriber records, billing, payments, and network access. The solution integrates PPPoE, Hotspot, RADIUS, and various router platforms, offering features such as automated invoicing, payment reconciliation, captive‑portal promotions, lead management, and AI‑assisted staff tools. It supports multi‑country tax compliance, extensive reporting, and flexible deployment options for ISPs seeking to streamline operations and improve customer experience.
+finops:
+- has_sources: true
+  method: derived
+  name: Centipidbilling Finops
+  primary_unit: ''
+  service_category: ''
+  slug: centipidbilling-finops
+  template: true
 image: https://centipidbilling.com/brand/centipid-og-v4.jpg
 json_schemas:
 - name: GetApiV2AsyncPaymentsOrderidResponse
@@ -197,7 +219,7 @@ modified: '2026-10-16'
 name: Centipid Technologies
 nav: Providers
 network: true
-overview: 'Centipid Technologies is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Async API, Collections API, Interface API, and 2 more. Tagged areas include Company, ISP, Billing, OSS/BSS, and Telecommunications.
+overview: 'Centipid Technologies is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Async API, Collections API, Interface API, and 2 more. Tagged areas include Company, ISP, Billing, OSS BSS, and Telecommunications.
 
 
   The Centipid Technologies catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -223,22 +245,24 @@ rules:
     warn: 1
   slug: centipidbilling-rules
 score:
-  band: developing
-  composite: 44.2
+  band: thin
+  composite: 32.5
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 22
     catalog_earned: 66.8
     catalog_earned_first_party: 12.0
     catalog_gap: 48.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -11.7
   facets:
-    access_clarity: 84.2
+    access_clarity: 57.9
     contract_governance: 22.0
     contract_quality: 21.4
-    developer_ergonomics: 51.7
+    developer_ergonomics: 29.0
     discoverability: 69.6
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  previous_composite: 44.2
   provenance:
     conformance: derived
     contracts:
@@ -253,12 +277,14 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 25.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/centipidbilling/centipidbilling-2026-11-03T123645.png
 security:
 - kind: domain-security
   name: Centipidbilling Domain Security
@@ -269,7 +295,7 @@ tags:
 - Company
 - ISP
 - Billing
-- OSS/BSS
+- OSS BSS
 - Telecommunications
 website: https://centipidbilling.com/
 ---

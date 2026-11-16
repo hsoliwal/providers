@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 21.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://fusionoperations.autodesk.com
@@ -125,9 +128,6 @@ asyncapis:
   slug: prodsmart-webhooks
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Autodesk Fusion Operations (Prodsmart) API v1 Authorization API
   slug: open-prodsmart-authorization-api
 - collection_type: open
@@ -177,7 +177,7 @@ collections:
   slug: open-prodsmart-task-durations-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/capabilities/prodsmart-capability-edges.yml
+  href: https://artifacts.apis.io/prodsmart/capabilities/prodsmart-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/prodsmart-capability-edges.yml
@@ -186,7 +186,7 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/autodesk/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/overlays/prodsmart-v1-overlay.yaml
+  href: https://artifacts.apis.io/prodsmart/overlays/prodsmart-v1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/prodsmart-v1-overlay.yaml
@@ -215,52 +215,52 @@ common:
   type: Support
   url: https://help.fusionoperations.autodesk.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/authentication/prodsmart-authentication.yml
+  href: https://artifacts.apis.io/prodsmart/authentication/prodsmart-authentication.yml
   title: ''
   type: Authentication
   url: authentication/prodsmart-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/conventions/prodsmart-conventions.yml
+  href: https://artifacts.apis.io/prodsmart/conventions/prodsmart-conventions.yml
   title: ''
   type: Conventions
   url: conventions/prodsmart-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/changelog/prodsmart-changelog.yml
+  href: https://artifacts.apis.io/prodsmart/changelog/prodsmart-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/prodsmart-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/lifecycle/prodsmart-lifecycle.yml
+  href: https://artifacts.apis.io/prodsmart/lifecycle/prodsmart-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/prodsmart-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/lifecycle/prodsmart-lifecycle.yml
+  href: https://artifacts.apis.io/prodsmart/lifecycle/prodsmart-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/prodsmart-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/asyncapi/prodsmart-webhooks.yml
+  href: https://artifacts.apis.io/prodsmart/asyncapi/prodsmart-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/prodsmart-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/mcp/prodsmart-mcp.yml
+  href: https://artifacts.apis.io/prodsmart/mcp/prodsmart-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/prodsmart-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/llms/prodsmart-llms.txt
+  href: https://artifacts.apis.io/prodsmart/llms/prodsmart-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/prodsmart-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/security/prodsmart-domain-security.yml
+  href: https://artifacts.apis.io/prodsmart/security/prodsmart-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/prodsmart-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/data-model/prodsmart-data-model.yml
+  href: https://artifacts.apis.io/prodsmart/data-model/prodsmart-data-model.yml
   title: ''
   type: DataModel
   url: data-model/prodsmart-data-model.yml
@@ -275,30 +275,43 @@ network: true
 overview: 'Prodsmart publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authorization API, Changes Feed API, Clients API, and 13 more. Tagged areas include Company, Manufacturing, Manufacturing Execution System, Production Management, and Inventory.
 
 
-  The Prodsmart catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Prodsmart catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Prodsmart''s developer surface includes documentation, API reference, getting-started guide, support, authentication, changelog, and 13 more developer resources.'
-random_paper: 20
+random_paper: 4
+rules:
+- authorship: generated
+  effective_rule_count: 81
+  extends:
+  - spectral:oas
+  name: Prodsmart API Rules
+  rule_count: 40
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 1
+  slug: prodsmart-rules
 score:
   band: thin
-  composite: 34.5
+  composite: 36.1
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 37.0
+    artifact_dirs: 18
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 53.1
     developer_ergonomics: 54.8
     discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 34.4
+  previous_composite: 36.1
   provenance:
     contracts:
       callable: 100.0
@@ -312,13 +325,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/screenshots/prodsmart-2026-09-02T152117.png
+screenshot: https://apis.io/screenshots/prodsmart/prodsmart-2026-09-02T152117.png
 security:
 - kind: authentication
   name: Prodsmart Authentication

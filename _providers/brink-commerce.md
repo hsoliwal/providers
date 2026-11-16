@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-10-17'
+  score: 24.3
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: Backend management APIs for configuring products, pricing, inventory, and business rules.
@@ -51,62 +65,62 @@ asyncapis:
   slug: brink-commerce-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/rules/brink-commerce-rules.yml
+  href: https://artifacts.apis.io/brink-commerce/rules/brink-commerce-rules.yml
   title: ''
   type: Spectral
   url: rules/brink-commerce-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/json-ld/brink-commerce-context.jsonld
+  href: https://artifacts.apis.io/brink-commerce/json-ld/brink-commerce-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/brink-commerce-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/vocabulary/brink-commerce-vocabulary.yml
+  href: https://artifacts.apis.io/brink-commerce/vocabulary/brink-commerce-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/brink-commerce-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/asyncapi/brink-commerce-webhooks.yml
+  href: https://artifacts.apis.io/brink-commerce/asyncapi/brink-commerce-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/brink-commerce-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/data-model/brink-commerce-data-model.yml
+  href: https://artifacts.apis.io/brink-commerce/data-model/brink-commerce-data-model.yml
   title: ''
   type: DataModel
   url: data-model/brink-commerce-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/authentication/brink-commerce-authentication.yml
+  href: https://artifacts.apis.io/brink-commerce/authentication/brink-commerce-authentication.yml
   title: ''
   type: Authentication
   url: authentication/brink-commerce-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/conformance/brink-commerce-conformance.yml
+  href: https://artifacts.apis.io/brink-commerce/conformance/brink-commerce-conformance.yml
   title: ''
   type: Conformance
   url: conformance/brink-commerce-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/llms/brink-commerce-llms.txt
+  href: https://artifacts.apis.io/brink-commerce/llms/brink-commerce-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/brink-commerce-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/well-known/brink-commerce-status-security.txt
+  href: https://artifacts.apis.io/brink-commerce/well-known/brink-commerce-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/brink-commerce-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/well-known/brink-commerce-well-known.yml
+  href: https://artifacts.apis.io/brink-commerce/well-known/brink-commerce-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/brink-commerce-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/hosts/brink-commerce-hosts.yml
+  href: https://artifacts.apis.io/brink-commerce/hosts/brink-commerce-hosts.yml
   title: ''
   type: Hosts
   url: hosts/brink-commerce-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/vendors/brink-commerce-vendors.yml
+  href: https://artifacts.apis.io/brink-commerce/vendors/brink-commerce-vendors.yml
   title: ''
   type: Vendors
   url: vendors/brink-commerce-vendors.yml
@@ -135,12 +149,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/brinkcommerce
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/scopes/brink-commerce-scopes.yml
+  href: https://artifacts.apis.io/brink-commerce/scopes/brink-commerce-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/brink-commerce-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brink-commerce/refs/heads/main/security/brink-commerce-domain-security.yml
+  href: https://artifacts.apis.io/brink-commerce/security/brink-commerce-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brink-commerce-domain-security.yml
@@ -212,7 +226,7 @@ overview: 'Brink Commerce is listed with 6 APIs on the [APIs.io](https://apis.io
 
 
   Brink Commerce''s developer surface includes authentication, engineering blog, documentation, API reference, getting-started guide, support, and 20 more developer resources.'
-random_paper: 14
+random_paper: 6
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -233,21 +247,23 @@ scopes:
   summary_line: 4 scopes · clientCredentials
 score:
   band: thin
-  composite: 35.7
+  composite: 29.3
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 20
     catalog_earned: 49.8
     catalog_earned_first_party: 0.0
     catalog_gap: 65.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.8
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
     contract_quality: 27.9
-    developer_ergonomics: 47.6
-    discoverability: 64.3
+    developer_ergonomics: 29.8
+    discoverability: 62.5
     operational_transparency: 28.9
+  previous_composite: 37.1
   provenance:
     conformance: derived
     contracts:
@@ -261,12 +277,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 30.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/brink-commerce/brink-commerce-2026-11-03T122644.png
 security:
 - kind: authentication
   name: Brink Commerce Authentication

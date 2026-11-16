@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +29,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,18 +40,23 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST API for programmatically creating and managing Qwilr pages (proposals, quotes, contracts, reports) from templates and saved blocks, managing quote taxes, listing payment gateways and users, and s
   name: Qwilr API
   slug: qwilr-api
-artifact_total: 8
+artifact_total: 11
 asyncapis:
 - description: ''
   name: Qwilr Webhooks
   slug: qwilr-webhooks
 common:
+- group: commercial
+  href: https://artifacts.apis.io/qwilr/plans/qwilr-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/qwilr-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -103,37 +114,37 @@ common:
   type: ChangeLog
   url: https://product.qwilr.com/Qwilr-Product-Updates-2025-ZmP5Cml2THGA
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/authentication/qwilr-authentication.yml
+  href: https://artifacts.apis.io/qwilr/authentication/qwilr-authentication.yml
   title: ''
   type: Authentication
   url: authentication/qwilr-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/scopes/qwilr-scopes.yml
+  href: https://artifacts.apis.io/qwilr/scopes/qwilr-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/qwilr-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/mcp/qwilr-mcp.yml
+  href: https://artifacts.apis.io/qwilr/mcp/qwilr-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/qwilr-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/well-known/qwilr-well-known.yml
+  href: https://artifacts.apis.io/qwilr/well-known/qwilr-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/qwilr-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/well-known/qwilr-security.txt
+  href: https://artifacts.apis.io/qwilr/well-known/qwilr-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/qwilr-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/security/qwilr-domain-security.yml
+  href: https://artifacts.apis.io/qwilr/security/qwilr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/qwilr-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/security/qwilr-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/qwilr/security/qwilr-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/qwilr-vulnerability-disclosure.yml
@@ -142,7 +153,7 @@ common:
   type: Security
   url: https://qwilr.com/vulnerability-disclosure/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/security/qwilr-trust-center.yml
+  href: https://artifacts.apis.io/qwilr/security/qwilr-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/qwilr-trust-center.yml
@@ -151,37 +162,45 @@ common:
   type: Compliance
   url: https://trust.qwilr.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/conformance/qwilr-conformance.yml
+  href: https://artifacts.apis.io/qwilr/conformance/qwilr-conformance.yml
   title: ''
   type: Conformance
   url: conformance/qwilr-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/lifecycle/qwilr-lifecycle.yml
+  href: https://artifacts.apis.io/qwilr/lifecycle/qwilr-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/qwilr-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/conventions/qwilr-conventions.yml
+  href: https://artifacts.apis.io/qwilr/conventions/qwilr-conventions.yml
   title: ''
   type: Conventions
   url: conventions/qwilr-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/data-model/qwilr-data-model.yml
+  href: https://artifacts.apis.io/qwilr/data-model/qwilr-data-model.yml
   title: ''
   type: DataModel
   url: data-model/qwilr-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/asyncapi/qwilr-webhooks.yml
+  href: https://artifacts.apis.io/qwilr/asyncapi/qwilr-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/qwilr-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/llms/qwilr-llms.txt
+  href: https://artifacts.apis.io/qwilr/llms/qwilr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/qwilr-llms.txt
 created: '2026-07-17'
 description: Qwilr is a document-experience platform for creating interactive, web-based sales proposals, quotes, contracts, and reports that replace static PDFs. Beyond the editor, Qwilr exposes a REST API (https://api.qwilr.com/v1) and a hosted, OAuth-protected Model Context Protocol (MCP) server that let teams generate branded pages from templates and reusable saved blocks, manage quote tax definitions and Qwilr Pay payment gateways, subscribe to page-lifecycle webhook events (viewed, accepted, set-live), and automate the sales workflow programmatically. API access is an Enterprise capability authenticated with bearer JWT access tokens. Qwilr is backed by Point Nine and maintains a public trust portal with SOC 2 Type 2, PCI DSS, and GDPR posture.
+finops:
+- has_sources: true
+  method: derived
+  name: Qwilr Finops
+  primary_unit: user
+  service_category: ''
+  slug: qwilr-finops
+  template: false
 image: https://qwilr.com/apple-touch-icon.png
 layout: provider
 mcp_servers:
@@ -198,32 +217,39 @@ overview: 'Qwilr is listed with 1 API on the [APIs.io](https://apis.io/) network
   The Qwilr catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Qwilr''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 23 more developer resources.'
-random_paper: 9
+  Qwilr''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
+plans:
+- name: Qwilr Plans Pricing
+  plan_count: 4
+  slug: qwilr-plans-pricing
+- name: Qwilr Price Estimates
+  plan_count: 0
+  slug: qwilr-price-estimates
+random_paper: 7
 scopes:
 - name: Qwilr Scopes
   scope_count: 1
   slug: qwilr-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: developing
-  composite: 52.6
+  band: strong
+  composite: 60.5
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 18
+    catalog_earned: 52.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 53.9
+    access_clarity: 93.4
     contract_governance: 18.2
     contract_quality: 39.0
     developer_ergonomics: 57.1
     discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 52.6
+  previous_composite: 60.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -239,14 +265,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/screenshots/qwilr-2026-08-17T081434.png
+screenshot: https://apis.io/screenshots/qwilr/qwilr-2026-08-17T081434.png
 security:
 - kind: authentication
   name: Qwilr Authentication

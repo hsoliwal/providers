@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -69,32 +73,32 @@ common:
   type: Compliance
   url: https://www.workhuman.com/why-workhuman/security-and-privacy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/workhuman/refs/heads/main/llms/workhuman-llms.txt
+  href: https://artifacts.apis.io/workhuman/llms/workhuman-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/workhuman-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/workhuman/refs/heads/main/well-known/workhuman-well-known.yml
+  href: https://artifacts.apis.io/workhuman/well-known/workhuman-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/workhuman-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workhuman/refs/heads/main/security/workhuman-domain-security.yml
+  href: https://artifacts.apis.io/workhuman/security/workhuman-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/workhuman-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workhuman/refs/heads/main/security/workhuman-trust-center.yml
+  href: https://artifacts.apis.io/workhuman/security/workhuman-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/workhuman-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workhuman/refs/heads/main/conformance/workhuman-conformance.yml
+  href: https://artifacts.apis.io/workhuman/conformance/workhuman-conformance.yml
   title: ''
   type: Conformance
   url: conformance/workhuman-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workhuman/refs/heads/main/lifecycle/workhuman-lifecycle.yml
+  href: https://artifacts.apis.io/workhuman/lifecycle/workhuman-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/workhuman-lifecycle.yml
@@ -110,12 +114,12 @@ overview: 'Workhuman is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Workhuman''s developer surface includes engineering blog, support, and 12 more developer resources.'
-random_paper: 20
+random_paper: 4
 score:
   band: emerging
   composite: 20.6
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -151,14 +155,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/workhuman/refs/heads/main/screenshots/workhuman-2026-09-02T170935.png
+screenshot: https://apis.io/screenshots/workhuman/workhuman-2026-09-02T170935.png
 security:
 - kind: domain-security
   name: Workhuman Domain Security

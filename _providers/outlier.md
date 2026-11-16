@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Shopify-native Universal Commerce Protocol (UCP) shopping surface for the Outlier storefront. Agents discover capabilities at /.well-known/ucp and transact via the hosted MCP endpoint (search_catalog,
@@ -42,7 +47,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/outlier/refs/heads/main/security/outlier-domain-security.yml
+  href: https://artifacts.apis.io/outlier/security/outlier-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/outlier-domain-security.yml
@@ -67,37 +72,37 @@ common:
   type: PrivacyPolicy
   url: https://www.outlier.org/policies/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/outlier/refs/heads/main/llms/outlier-llms.txt
+  href: https://artifacts.apis.io/outlier/llms/outlier-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/outlier-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/outlier/refs/heads/main/well-known/outlier-well-known.yml
+  href: https://artifacts.apis.io/outlier/well-known/outlier-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/outlier-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/outlier/refs/heads/main/mcp/outlier-mcp.yml
+  href: https://artifacts.apis.io/outlier/mcp/outlier-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/outlier-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/outlier/refs/heads/main/authentication/outlier-authentication.yml
+  href: https://artifacts.apis.io/outlier/authentication/outlier-authentication.yml
   title: ''
   type: Authentication
   url: authentication/outlier-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/outlier/refs/heads/main/scopes/outlier-scopes.yml
+  href: https://artifacts.apis.io/outlier/scopes/outlier-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/outlier-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/outlier/refs/heads/main/conventions/outlier-conventions.yml
+  href: https://artifacts.apis.io/outlier/conventions/outlier-conventions.yml
   title: ''
   type: Conventions
   url: conventions/outlier-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/outlier/refs/heads/main/lifecycle/outlier-lifecycle.yml
+  href: https://artifacts.apis.io/outlier/lifecycle/outlier-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/outlier-lifecycle.yml
@@ -117,7 +122,7 @@ overview: 'Outlier is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Outlier''s developer surface includes documentation, authentication, and 11 more developer resources.'
-random_paper: 2
+random_paper: 4
 scopes:
 - name: Outlier Scopes
   scope_count: 4
@@ -133,7 +138,7 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
@@ -141,7 +146,7 @@ score:
     developer_ergonomics: 21.4
     discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 18.9
+  previous_composite: 19.0
   provenance:
     mcp: platform-generated
   regulatory:
@@ -150,14 +155,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/outlier/refs/heads/main/screenshots/outlier-2026-08-07T191059.png
+screenshot: https://apis.io/screenshots/outlier/outlier-2026-08-07T191059.png
 security:
 - kind: authentication
   name: Outlier Authentication

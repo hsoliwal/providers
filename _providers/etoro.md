@@ -7,33 +7,38 @@ access_model:
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: false
+    auth_clarity: bearer
     consent_identity: false
-    delegated_identity: false
+    delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.9
-  scored_at: '2026-10-17'
+  score: 39.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 69
   human_in_the_loop: 0
@@ -71,16 +76,6 @@ apis:
   slug: etoro-agent-portfolios-api
 - baseURL: https://public-api.etoro.com/api/v1
   baseurl_source: declared
-  description: The Asset Explorer API from eToro — 3 operation(s) for asset explorer.
-  name: eToro Asset Explorer API
-  slug: etoro-asset-explorer-api
-- baseURL: https://public-api.etoro.com/api/v1
-  baseurl_source: declared
-  description: The Attachments API from eToro — 1 operation(s) for attachments.
-  name: eToro Attachments API
-  slug: etoro-attachments-api
-- baseURL: https://public-api.etoro.com/api/v1
-  baseurl_source: declared
   description: The Balances API from eToro — 6 operation(s) for balances.
   name: eToro Balances API
   slug: etoro-balances-api
@@ -96,34 +91,9 @@ apis:
   slug: etoro-clubs-api
 - baseURL: https://public-api.etoro.com/api/v1
   baseurl_source: declared
-  description: The Comments and Replies API from eToro — 4 operation(s) for comments and replies.
-  name: eToro Comments and Replies API
-  slug: etoro-comments-and-replies-api
-- baseURL: https://public-api.etoro.com/api/v1
-  baseurl_source: declared
-  description: The Comments API from eToro — 1 operation(s) for comments.
-  name: eToro Comments API
-  slug: etoro-comments-api
-- baseURL: https://public-api.etoro.com/api/v1
-  baseurl_source: declared
-  description: The Deprecated API from eToro — 14 operation(s) for deprecated.
-  name: eToro Deprecated API
-  slug: etoro-deprecated-api
-- baseURL: https://public-api.etoro.com/api/v1
-  baseurl_source: declared
-  description: The Feeds API from eToro — 10 operation(s) for feeds.
-  name: eToro Feeds API
-  slug: etoro-feeds-api
-- baseURL: https://public-api.etoro.com/api/v1
-  baseurl_source: declared
   description: The Identity API from eToro — 1 operation(s) for identity.
   name: eToro Identity API
   slug: etoro-identity-api
-- baseURL: https://public-api.etoro.com/api/v1
-  baseurl_source: declared
-  description: The Likes API from eToro — 3 operation(s) for likes.
-  name: eToro Likes API
-  slug: etoro-likes-api
 - baseURL: https://public-api.etoro.com/api/v1
   baseurl_source: declared
   description: The Market Data API from eToro — 8 operation(s) for market data.
@@ -139,11 +109,6 @@ apis:
   description: The PI Data API from eToro — 1 operation(s) for pi data.
   name: eToro PI Data API
   slug: etoro-pi-data-api
-- baseURL: https://public-api.etoro.com/api/v1
-  baseurl_source: declared
-  description: The Posts API from eToro — 9 operation(s) for posts.
-  name: eToro Posts API
-  slug: etoro-posts-api
 - baseURL: https://public-api.etoro.com/api/v1
   baseurl_source: declared
   description: The Price Alerts API from eToro — 2 operation(s) for price alerts.
@@ -166,19 +131,81 @@ apis:
   slug: etoro-users-info-api
 - baseURL: https://public-api.etoro.com/api/v1
   baseurl_source: declared
-  description: The Users Stats API from eToro — 4 operation(s) for users stats.
-  name: eToro Users Stats API
-  slug: etoro-users-stats-api
-- baseURL: https://public-api.etoro.com/api/v1
-  baseurl_source: declared
   description: The Watchlists API from eToro — 12 operation(s) for watchlists.
   name: eToro Watchlists API
   slug: etoro-watchlists-api
-artifact_total: 387
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The App Data API from eToro — 1 operation(s) for app data.
+  name: eToro App Data API
+  slug: etoro-app-data-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The Copy Trading API from eToro — 4 operation(s) for copy trading.
+  name: eToro Copy Trading API
+  slug: etoro-copy-trading-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The Copy Trading - Demo API from eToro — 4 operation(s) for copy trading - demo.
+  name: eToro Copy Trading - Demo API
+  slug: etoro-copy-trading-demo-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The Data API from eToro — 4 operation(s) for data.
+  name: eToro Data API
+  slug: etoro-data-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The PortfolioSearch API from eToro — 1 operation(s) for portfoliosearch.
+  name: eToro Portfolio Search API
+  slug: etoro-portfoliosearch-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The Rankings API from eToro — 7 operation(s) for rankings.
+  name: eToro Rankings API
+  slug: etoro-rankings-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The Social Feeds API from eToro — 24 operation(s) for social feeds.
+  name: eToro Social Feeds API
+  slug: etoro-social-feeds-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The SSO - Applications API from eToro — 3 operation(s) for sso - applications.
+  name: eToro SSO - Applications API
+  slug: etoro-sso-applications-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The SSO - Scopes API from eToro — 1 operation(s) for sso - scopes.
+  name: eToro SSO - Scopes API
+  slug: etoro-sso-scopes-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The Sub-Accounts - eToro Trading API from eToro — 4 operation(s) for sub-accounts - etoro trading.
+  name: eToro Sub-Accounts - eToro Trading API
+  slug: etoro-sub-accounts-etoro-trading-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The Top Assets API from eToro — 1 operation(s) for top assets.
+  name: eToro Top Assets API
+  slug: etoro-top-assets-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The Transfer API from eToro — 7 operation(s) for transfer.
+  name: eToro Transfer API
+  slug: etoro-transfer-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The User Stats API from eToro — 4 operation(s) for user stats.
+  name: eToro User Stats API
+  slug: etoro-user-stats-api
+- baseURL: https://public-api.etoro.com/api/v1
+  baseurl_source: declared
+  description: The Subaccounts API from eToro — 1 operation(s) for subaccounts.
+  name: eToro Subaccounts API
+  slug: etoro-subaccounts-api
+artifact_total: 391
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Deprecated eToro Public API operations Agent Portfolios API
   slug: open-etoro-agent-portfolios-api
@@ -251,12 +278,12 @@ common:
   type: Website
   url: https://www.etoro.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/etoro/refs/heads/main/agentic-access/etoro-agentic-access.yml
+  href: https://artifacts.apis.io/etoro/agentic-access/etoro-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/etoro-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/etoro/refs/heads/main/security/etoro-domain-security.yml
+  href: https://artifacts.apis.io/etoro/security/etoro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/etoro-domain-security.yml
@@ -277,17 +304,17 @@ common:
   type: RateLimits
   url: https://builders.etoro.com/learn/rate-limits-and-429-handling
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/etoro/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/etoro/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/etoro/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/etoro/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/etoro/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/etoro/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
@@ -300,22 +327,22 @@ common:
   type: MCPServer
   url: https://api-portal.etoro.com/mcp
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/etoro/refs/heads/main/openapi/_original/openapi.json
+  href: https://artifacts.apis.io/etoro/openapi/_original/openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/openapi.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/etoro/refs/heads/main/openapi/_original/deprecated-openapi.json
+  href: https://artifacts.apis.io/etoro/openapi/_original/deprecated-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/deprecated-openapi.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/etoro/refs/heads/main/json-ld/jsonld.json
+  href: https://artifacts.apis.io/etoro/json-ld/jsonld.json
   title: ''
   type: JSONLD
   url: json-ld/jsonld.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/etoro/refs/heads/main/vocabulary/vocabulary.json
+  href: https://artifacts.apis.io/etoro/vocabulary/vocabulary.json
   title: ''
   type: Vocabulary
   url: vocabulary/vocabulary.json
@@ -1329,7 +1356,7 @@ modified: '2026-06-13'
 name: eToro
 nav: Providers
 network: true
-overview: 'eToro publishes 29 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Portfolios API, Asset Explorer API, Attachments API, and 26 more. Tagged areas include Social Trading, Copy Trading, Investing, Market Data, and Portfolio Management.
+overview: 'eToro publishes 34 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Portfolios API, Balances API, Cash Accounts API, and 31 more. Tagged areas include Social Trading, Copy Trading, Investing, Market Data, and Portfolio Management.
 
 
   The eToro catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -1340,7 +1367,7 @@ plans:
 - name: Plans
   plan_count: 1
   slug: plans
-random_paper: 3
+random_paper: 1
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -1359,30 +1386,30 @@ rules:
   slug: etoro-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 27.7
+  composite: 30.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 46.8
     catalog_earned_first_party: 0.0
     catalog_gap: 68.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.3
+  delta: 0.6
   facets:
     access_clarity: 5.3
     contract_governance: 23.5
-    contract_quality: 47.1
+    contract_quality: 52.4
     developer_ergonomics: 33.3
     discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 32.0
+  previous_composite: 29.5
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
-      marker_coverage: 0.0
-      total: 22
+      marker_coverage: 50.0
+      total: 50
     mcp: first-party
   regulatory:
     applies: true
@@ -1390,13 +1417,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/etoro/refs/heads/main/screenshots/etoro-2026-06-20T180841.png
+    score: 11.1
+screenshot: https://apis.io/screenshots/etoro/etoro-2026-06-20T180841.png
 security:
 - kind: domain-security
   name: Etoro Domain Security

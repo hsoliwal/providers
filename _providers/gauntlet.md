@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-10-17'
+  score: 33.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -70,11 +73,13 @@ apis:
   description: The Vaults API from Gauntlet — 5 operation(s) for vaults.
   name: Gauntlet Vaults API
   slug: gauntlet-vaults-api
-artifact_total: 16
+- baseURL: https://api.gauntlet.xyz
+  baseurl_source: declared
+  description: The Strategies API from Gauntlet — 1 operation(s) for strategies.
+  name: Gauntlet Strategies API
+  slug: gauntlet-strategies-api
+artifact_total: 19
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Gauntlet Prices API
   slug: open-gauntlet-prices-api
@@ -92,7 +97,7 @@ collections:
   slug: open-gauntlet-vaults-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/overlays/gauntlet-openapi-overlay.yaml
+  href: https://artifacts.apis.io/gauntlet/overlays/gauntlet-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/gauntlet-openapi-overlay.yaml
@@ -149,72 +154,72 @@ common:
   type: PrivacyPolicy
   url: https://www.gauntlet.xyz/privacy-policy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/packages/gauntlet-packages.yml
+  href: https://artifacts.apis.io/gauntlet/packages/gauntlet-packages.yml
   title: ''
   type: Packages
   url: packages/gauntlet-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/packages/gauntlet-packages.yml
+  href: https://artifacts.apis.io/gauntlet/packages/gauntlet-packages.yml
   title: ''
   type: SDKs
   url: packages/gauntlet-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/authentication/gauntlet-authentication.yml
+  href: https://artifacts.apis.io/gauntlet/authentication/gauntlet-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gauntlet-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/rate-limits/gauntlet-rate-limits.yml
+  href: https://artifacts.apis.io/gauntlet/rate-limits/gauntlet-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gauntlet-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/conventions/gauntlet-conventions.yml
+  href: https://artifacts.apis.io/gauntlet/conventions/gauntlet-conventions.yml
   title: ''
   type: Conventions
   url: conventions/gauntlet-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/errors/gauntlet-problem-types.yml
+  href: https://artifacts.apis.io/gauntlet/errors/gauntlet-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/gauntlet-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/lifecycle/gauntlet-lifecycle.yml
+  href: https://artifacts.apis.io/gauntlet/lifecycle/gauntlet-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/gauntlet-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/conformance/gauntlet-conformance.yml
+  href: https://artifacts.apis.io/gauntlet/conformance/gauntlet-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gauntlet-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/data-model/gauntlet-data-model.yml
+  href: https://artifacts.apis.io/gauntlet/data-model/gauntlet-data-model.yml
   title: ''
   type: DataModel
   url: data-model/gauntlet-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/llms/gauntlet-llms.txt
+  href: https://artifacts.apis.io/gauntlet/llms/gauntlet-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gauntlet-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/mcp/gauntlet-mcp.yml
+  href: https://artifacts.apis.io/gauntlet/mcp/gauntlet-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/gauntlet-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/gauntlet/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/agentic-access/gauntlet-agentic-access.yml
+  href: https://artifacts.apis.io/gauntlet/agentic-access/gauntlet-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gauntlet-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/security/gauntlet-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/gauntlet/security/gauntlet-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/gauntlet-vulnerability-disclosure.yml
@@ -223,7 +228,7 @@ common:
   type: Security
   url: https://docs.gauntlet.xyz/guides/concepts/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/security/gauntlet-domain-security.yml
+  href: https://artifacts.apis.io/gauntlet/security/gauntlet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gauntlet-domain-security.yml
@@ -235,42 +240,58 @@ modified: '2026-07-19'
 name: Gauntlet
 nav: Providers
 network: true
-overview: 'Gauntlet publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Prices API, System API, TVL API, and 2 more. Tagged areas include Company, Crypto Data, DeFi, Risk Management, and Yield.
+overview: 'Gauntlet publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Prices API, System API, TVL API, and 3 more. Tagged areas include Company, Crypto Data, DeFi, Risk Management, and Yield.
+
+
+  The Gauntlet catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Gauntlet''s developer surface includes documentation, API reference, getting-started guide, quickstart, signup flow, support, engineering blog, and 23 more developer resources.'
-random_paper: 10
+random_paper: 4
 rate_limits:
 - limit_count: 2
   name: Gauntlet Rate Limits
   slug: gauntlet-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Gauntlet API Rules
+  rule_count: 53
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 2
+    warn: 8
+  slug: gauntlet-rules
 score:
   band: developing
-  composite: 47.5
+  composite: 49.9
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 45.0
+    artifact_dirs: 24
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.7
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 43.2
+    contract_governance: 18.2
+    contract_quality: 46.0
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 47.4
+  previous_composite: 49.2
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 54.5
+      total: 11
     mcp: derived
     skills: derived
   regulatory:
@@ -279,14 +300,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/gauntlet/refs/heads/main/screenshots/gauntlet-2026-07-25T215504.png
+screenshot: https://apis.io/screenshots/gauntlet/gauntlet-2026-07-25T215504.png
 security:
 - kind: authentication
   name: Gauntlet Authentication
@@ -300,6 +321,12 @@ security:
   name: Gauntlet Vulnerability Disclosure
   slug: gauntlet-vulnerability-disclosure
   summary_line: disclosure policy published
+skill_count: 2
+skills:
+- name: Discover and compare Gauntlet vaults
+  slug: gauntlet-discover-vaults
+- name: Track a wallet's Gauntlet positions and returns
+  slug: gauntlet-track-user-position
 slug: gauntlet
 tags:
 - Company

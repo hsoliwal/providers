@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.2
-  scored_at: '2026-10-17'
+  score: 28.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 63
   human_in_the_loop: 0
@@ -160,11 +163,8 @@ apis:
   description: The Watermark API from PicsArt (Socialin) — 1 operation(s) for watermark.
   name: PicsArt (Socialin) Watermark API
   slug: picsart-socialin-watermark-api
-artifact_total: 52
+artifact_total: 56
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Picsart GenAI Ads API
   slug: open-picsart-socialin-ads-api
@@ -244,17 +244,17 @@ common:
   type: BlogRSS
   url: https://picsart.com/blog/feed/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/agentic-access/picsart-socialin-agentic-access.yml
+  href: https://artifacts.apis.io/picsart-socialin/agentic-access/picsart-socialin-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/picsart-socialin-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/security/picsart-socialin-domain-security.yml
+  href: https://artifacts.apis.io/picsart-socialin/security/picsart-socialin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/picsart-socialin-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/authentication/picsart-socialin-authentication.yml
+  href: https://artifacts.apis.io/picsart-socialin/authentication/picsart-socialin-authentication.yml
   title: ''
   type: Authentication
   url: authentication/picsart-socialin-authentication.yml
@@ -319,92 +319,92 @@ common:
   type: PrivacyPolicy
   url: https://picsart.com/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/llms/picsart-socialin-llms.txt
+  href: https://artifacts.apis.io/picsart-socialin/llms/picsart-socialin-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/picsart-socialin-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/packages/picsart-socialin-packages.yml
+  href: https://artifacts.apis.io/picsart-socialin/packages/picsart-socialin-packages.yml
   title: ''
   type: Packages
   url: packages/picsart-socialin-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/packages/picsart-socialin-packages.yml
+  href: https://artifacts.apis.io/picsart-socialin/packages/picsart-socialin-packages.yml
   title: ''
   type: SDKs
   url: packages/picsart-socialin-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/mcp/picsart-socialin-mcp.yml
+  href: https://artifacts.apis.io/picsart-socialin/mcp/picsart-socialin-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/picsart-socialin-mcp.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/rate-limits/picsart-socialin-rate-limits.yml
+  href: https://artifacts.apis.io/picsart-socialin/rate-limits/picsart-socialin-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/picsart-socialin-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/errors/picsart-socialin-error-codes.yml
+  href: https://artifacts.apis.io/picsart-socialin/errors/picsart-socialin-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/picsart-socialin-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/lifecycle/picsart-socialin-lifecycle.yml
+  href: https://artifacts.apis.io/picsart-socialin/lifecycle/picsart-socialin-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/picsart-socialin-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/lifecycle/picsart-socialin-lifecycle.yml
+  href: https://artifacts.apis.io/picsart-socialin/lifecycle/picsart-socialin-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/picsart-socialin-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/conventions/picsart-socialin-conventions.yml
+  href: https://artifacts.apis.io/picsart-socialin/conventions/picsart-socialin-conventions.yml
   title: ''
   type: Conventions
   url: conventions/picsart-socialin-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/conformance/picsart-socialin-conformance.yml
+  href: https://artifacts.apis.io/picsart-socialin/conformance/picsart-socialin-conformance.yml
   title: ''
   type: Conformance
   url: conformance/picsart-socialin-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/components/picsart-socialin-components.yml
+  href: https://artifacts.apis.io/picsart-socialin/components/picsart-socialin-components.yml
   title: ''
   type: Components
   url: components/picsart-socialin-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/data-model/picsart-socialin-data-model.yml
+  href: https://artifacts.apis.io/picsart-socialin/data-model/picsart-socialin-data-model.yml
   title: ''
   type: DataModel
   url: data-model/picsart-socialin-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/changelog/picsart-socialin-changelog.yml
+  href: https://artifacts.apis.io/picsart-socialin/changelog/picsart-socialin-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/picsart-socialin-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/picsart-socialin/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/overlays/picsart-socialin-image-tools-overlay.yaml
+  href: https://artifacts.apis.io/picsart-socialin/overlays/picsart-socialin-image-tools-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/picsart-socialin-image-tools-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/overlays/picsart-socialin-video-tools-overlay.yaml
+  href: https://artifacts.apis.io/picsart-socialin/overlays/picsart-socialin-video-tools-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/picsart-socialin-video-tools-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/overlays/picsart-socialin-genai-tools-overlay.yaml
+  href: https://artifacts.apis.io/picsart-socialin/overlays/picsart-socialin-genai-tools-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/picsart-socialin-genai-tools-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/overlays/picsart-socialin-variable-data-tools-overlay.yaml
+  href: https://artifacts.apis.io/picsart-socialin/overlays/picsart-socialin-variable-data-tools-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/picsart-socialin-variable-data-tools-overlay.yaml
@@ -423,31 +423,47 @@ network: true
 overview: 'PicsArt (Socialin) publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ads API, Audio API, Classification API, and 20 more. Tagged areas include Company, Image Editing, Video Editing, Generative AI, and Photos.
 
 
+  The PicsArt (Socialin) catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   PicsArt (Socialin)''s developer surface includes engineering blog, authentication, documentation, API reference, getting-started guide, signup flow, pricing, and 31 more developer resources.'
-random_paper: 3
+random_paper: 21
 rate_limits:
 - limit_count: 3
   name: Picsart Socialin Rate Limits
   slug: picsart-socialin-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: PicsArt (Socialin) API Rules
+  rule_count: 53
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 1
+    warn: 1
+  slug: picsart-socialin-rules
 score:
   band: developing
-  composite: 50.0
+  composite: 53.1
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 52.0
+    artifact_dirs: 26
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.3
+  delta: 1.5
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 52.3
-    developer_ergonomics: 54.2
+    developer_ergonomics: 56.5
     discoverability: 80.0
-    operational_transparency: 65.8
-  previous_composite: 50.3
+    operational_transparency: 73.7
+  previous_composite: 51.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -464,13 +480,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/screenshots/picsart-socialin-2026-08-17T081221.png
+screenshot: https://apis.io/screenshots/picsart-socialin/picsart-socialin-2026-08-17T081221.png
 security:
 - kind: authentication
   name: Picsart Socialin Authentication
@@ -480,6 +496,16 @@ security:
   name: Picsart Socialin Domain Security
   slug: picsart-socialin-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Remove an image background with Picsart
+  slug: picsart-socialin-remove-background
+- name: Generate an image from text with Picsart GenAI
+  slug: picsart-socialin-text2image
+- name: Transcribe a video's audio with Picsart
+  slug: picsart-socialin-transcribe-video
+- name: Upscale and enhance an image with Picsart
+  slug: picsart-socialin-upscale-enhance
 slug: picsart-socialin
 tags:
 - Company

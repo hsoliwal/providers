@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 13
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cdi-corp/refs/heads/main/security/cdi-corp-domain-security.yml
+  href: https://artifacts.apis.io/cdi-corp/security/cdi-corp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cdi-corp-domain-security.yml
@@ -105,7 +109,7 @@ name: CDI
 nav: Providers
 network: true
 overview: CDI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Engineering Services, Technical Staffing, Energy, Chemicals, and Project Services.
-random_paper: 15
+random_paper: 17
 score:
   band: minimal
   composite: 3.6
@@ -136,14 +140,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 4.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cdi-corp/refs/heads/main/screenshots/cdi-corp-2026-06-20T174111.png
+screenshot: https://apis.io/screenshots/cdi-corp/cdi-corp-2026-06-20T174111.png
 security:
 - kind: domain-security
   name: Cdi Corp Domain Security

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Custom Laravel REST API for data.egov.bg with action-named endpoints under /api, almost all POST with JSON bodies. Public read methods include listDatasets, getDatasetDetails, listResources, getResour
@@ -41,7 +45,7 @@ apis:
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/data-egov-bg/refs/heads/main/security/data-egov-bg-domain-security.yml
+  href: https://artifacts.apis.io/data-egov-bg/security/data-egov-bg-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/data-egov-bg-domain-security.yml
@@ -54,7 +58,7 @@ common:
   type: Documentation
   url: https://data.egov.bg/document
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/data-egov-bg/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/data-egov-bg/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -70,7 +74,7 @@ overview: 'data.egov.bg (Open Data Portal of Bulgaria) is listed with 1 API on t
 
 
   data.egov.bg (Open Data Portal of Bulgaria)''s developer surface includes documentation and 3 more developer resources.'
-random_paper: 12
+random_paper: 6
 score:
   band: minimal
   composite: 7.4
@@ -91,6 +95,8 @@ score:
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - bulgaria
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - cee
@@ -102,14 +108,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/data-egov-bg/refs/heads/main/screenshots/data-egov-bg-2026-10-11T184701.png
+screenshot: https://apis.io/screenshots/data-egov-bg/data-egov-bg-2026-10-11T184701.png
 security:
 - kind: domain-security
   name: Data Egov Bg Domain Security

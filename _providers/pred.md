@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
   public: true
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.0
-  scored_at: '2026-10-17'
+  score: 31.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -82,15 +90,12 @@ arazzos:
 - description: End-to-end signed-order trading flow on the Pred prediction exchange.
   name: PRED trading workflows
   slug: pred-trading
-artifact_total: 20
+artifact_total: 22
 asyncapis:
 - description: Real-time market and order data for the Pred prediction exchange, delivered over Ably WebSocket. Obtain an Ably token via POST /api/v1/auth/ably (use it as Ably authCallback). The private user channel
   name: PRED Real-Time API (Ably WebSocket)
   slug: pred-realtime-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: PRED Trading Platform Authentication API
   slug: open-pred-authentication-api
@@ -114,17 +119,17 @@ collections:
   slug: open-pred-websocket-api
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/security/pred-domain-security.yml
+  href: https://artifacts.apis.io/pred/security/pred-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pred-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/agentic-access/pred-agentic-access.yml
+  href: https://artifacts.apis.io/pred/agentic-access/pred-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pred-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/authentication/pred-authentication.yml
+  href: https://artifacts.apis.io/pred/authentication/pred-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pred-authentication.yml
@@ -173,62 +178,62 @@ common:
   type: PrivacyPolicy
   url: https://www.pred.app/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/llms/pred-llms.txt
+  href: https://artifacts.apis.io/pred/llms/pred-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pred-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/conventions/pred-conventions.yml
+  href: https://artifacts.apis.io/pred/conventions/pred-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pred-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/errors/pred-problem-types.yml
+  href: https://artifacts.apis.io/pred/errors/pred-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pred-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/lifecycle/pred-lifecycle.yml
+  href: https://artifacts.apis.io/pred/lifecycle/pred-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pred-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/conformance/pred-conformance.yml
+  href: https://artifacts.apis.io/pred/conformance/pred-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pred-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/data-model/pred-data-model.yml
+  href: https://artifacts.apis.io/pred/data-model/pred-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pred-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/mcp/pred-mcp.yml
+  href: https://artifacts.apis.io/pred/mcp/pred-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/pred-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/overlays/pred-openapi-overlay.yaml
+  href: https://artifacts.apis.io/pred/overlays/pred-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pred-openapi-overlay.yaml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/sandbox/pred-sandbox.yml
+  href: https://artifacts.apis.io/pred/sandbox/pred-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/pred-sandbox.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/asyncapi/pred-realtime-asyncapi.yml
+  href: https://artifacts.apis.io/pred/asyncapi/pred-realtime-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/pred-realtime-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pred/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/arazzo/pred-trading.yml
+  href: https://artifacts.apis.io/pred/arazzo/pred-trading.yml
   title: ''
   type: Arazzo
   url: arazzo/pred-trading.yml
@@ -255,30 +260,43 @@ network: true
 overview: 'Pred publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Market Discovery API, Orders API, and 4 more. Tagged areas include Company, Fintech, Prediction Markets, Sports, and Trading.
 
 
-  The Pred catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Pred catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Pred''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, and 22 more developer resources.'
-random_paper: 9
+random_paper: 19
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Pred API Rules
+  rule_count: 63
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 6
+    warn: 1
+  slug: pred-rules
 score:
   band: developing
-  composite: 41.6
+  composite: 43.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 55.5
     developer_ergonomics: 56.5
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 41.6
+  previous_composite: 43.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -295,13 +313,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 23.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pred/refs/heads/main/screenshots/pred-2026-08-17T081353.png
+screenshot: https://apis.io/screenshots/pred/pred-2026-08-17T081353.png
 security:
 - kind: authentication
   name: Pred Authentication
@@ -311,6 +329,12 @@ security:
   name: Pred Domain Security
   slug: pred-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Place a trade on PRED
+  slug: pred-place-a-trade
+- name: Stream PRED real-time order and market data
+  slug: pred-stream-realtime
 slug: pred
 tags:
 - Company

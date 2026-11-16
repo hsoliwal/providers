@@ -1,13 +1,11 @@
 ---
 access_model:
-  confidence: high
-  label: Application approval · portal registration reviewed by LH Cargo API managers
+  confidence: low
+  label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
-  source:
-  - https://developer.lufthansa-cargo.com/partneronboardingprocess
-  - https://developer.lufthansa-cargo.com/how-to-connect
+  source: []
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +24,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.lufthansa-cargo.com
@@ -75,7 +76,7 @@ apis:
   description: The stations API from Lufthansa Cargo — 3 operation(s) for stations.
   name: Lufthansa Cargo Stations API
   slug: lufthansa-cargo-stations-api
-artifact_total: 14
+artifact_total: 15
 collections:
 - collection_type: open
   name: Routing Offer API
@@ -95,7 +96,7 @@ common:
   type: Blog
   url: https://www.lufthansa-cargo.com/en/ci/newsroom
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lufthansa-cargo/refs/heads/main/capabilities/lufthansa-cargo-capability-edges.yml
+  href: https://artifacts.apis.io/lufthansa-cargo/capabilities/lufthansa-cargo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/lufthansa-cargo-capability-edges.yml
@@ -155,22 +156,38 @@ network: true
 overview: 'Lufthansa Cargo publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Shipment Tracking API, Shipment Tracking Subscribe API, Routes API, and 7 more. Tagged areas include Logistics, Supply Chain, Germany, Air Cargo, and Freight.
 
 
+  The Lufthansa Cargo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Lufthansa Cargo''s developer surface includes engineering blog, documentation, support, changelog, signup flow, sandbox, and 7 more developer resources.'
-random_paper: 17
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Lufthansa Cargo API Rules
+  rule_count: 49
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 1
+  slug: lufthansa-cargo-rules
 score:
   band: emerging
-  composite: 17.0
+  composite: 18.6
   coverage:
-    artifact_dirs: 6
-    catalog_earned: 32.0
+    artifact_dirs: 8
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.1
     developer_ergonomics: 2.4
     discoverability: 57.1
@@ -183,7 +200,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 16.4
+  previous_composite: 18.6
   provenance:
     contracts:
       callable: 100.0
@@ -196,13 +213,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/lufthansa-cargo/refs/heads/main/screenshots/lufthansa-cargo-2026-08-07T171824.png
+screenshot: https://apis.io/screenshots/lufthansa-cargo/lufthansa-cargo-2026-08-07T171824.png
 slug: lufthansa-cargo
 tags:
 - Logistics

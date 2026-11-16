@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST API for the Bakuraku (バクラク) back-office suite. Publicly documented capabilities are retrieval and list-search of applications/requests (申請), download of attached files, creation of applications f
@@ -109,67 +112,67 @@ common:
   type: TrustCenter
   url: https://bakuraku.jp/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/conformance/layerx-conformance.yml
+  href: https://artifacts.apis.io/layerx/conformance/layerx-conformance.yml
   title: ''
   type: Compliance
   url: conformance/layerx-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/conformance/layerx-conformance.yml
+  href: https://artifacts.apis.io/layerx/conformance/layerx-conformance.yml
   title: ''
   type: Conformance
   url: conformance/layerx-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/security/layerx-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/layerx/security/layerx-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/layerx-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/security/layerx-domain-security.yml
+  href: https://artifacts.apis.io/layerx/security/layerx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/layerx-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/authentication/layerx-authentication.yml
+  href: https://artifacts.apis.io/layerx/authentication/layerx-authentication.yml
   title: ''
   type: Authentication
   url: authentication/layerx-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/conventions/layerx-conventions.yml
+  href: https://artifacts.apis.io/layerx/conventions/layerx-conventions.yml
   title: ''
   type: Conventions
   url: conventions/layerx-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/errors/layerx-error-codes.yml
+  href: https://artifacts.apis.io/layerx/errors/layerx-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/layerx-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/lifecycle/layerx-lifecycle.yml
+  href: https://artifacts.apis.io/layerx/lifecycle/layerx-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/layerx-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/rate-limits/layerx-rate-limits.yml
+  href: https://artifacts.apis.io/layerx/rate-limits/layerx-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/layerx-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/plans/layerx-plans-pricing.yml
+  href: https://artifacts.apis.io/layerx/plans/layerx-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/layerx-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/changelog/layerx-changelog.yml
+  href: https://artifacts.apis.io/layerx/changelog/layerx-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/layerx-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/packages/layerx-packages.yml
+  href: https://artifacts.apis.io/layerx/packages/layerx-packages.yml
   title: ''
   type: Packages
   url: packages/layerx-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/llms/layerx-llms.txt
+  href: https://artifacts.apis.io/layerx/llms/layerx-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/layerx-llms.txt
@@ -204,7 +207,7 @@ plans:
 - name: Layerx Plans Pricing
   plan_count: 0
   slug: layerx-plans-pricing
-random_paper: 1
+random_paper: 13
 rate_limits:
 - limit_count: 0
   name: Layerx Rate Limits
@@ -213,7 +216,7 @@ score:
   band: thin
   composite: 35.2
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -244,14 +247,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/layerx/refs/heads/main/screenshots/layerx-2026-09-02T150224.png
+screenshot: https://apis.io/screenshots/layerx/layerx-2026-09-02T150224.png
 security:
 - kind: authentication
   name: Layerx Authentication

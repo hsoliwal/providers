@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.3
-  scored_at: '2026-10-17'
+  score: 34.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.re.xyz
@@ -61,11 +65,8 @@ apis:
   description: Per-wallet balances and points
   name: Re Wallet API
   slug: re-wallet-api
-artifact_total: 14
+artifact_total: 16
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Re Protocol General API
   slug: open-re-general-api
@@ -111,57 +112,57 @@ common:
   type: GettingStarted
   url: https://docs.re.xyz/getting-started-with-re/readme.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/authentication/re-authentication.yml
+  href: https://artifacts.apis.io/re/authentication/re-authentication.yml
   title: ''
   type: Authentication
   url: authentication/re-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/mcp/re-mcp.yml
+  href: https://artifacts.apis.io/re/mcp/re-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/re-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/llms/re-llms.txt
+  href: https://artifacts.apis.io/re/llms/re-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/re-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/well-known/re-well-known.yml
+  href: https://artifacts.apis.io/re/well-known/re-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/re-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/security/re-domain-security.yml
+  href: https://artifacts.apis.io/re/security/re-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/re-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/conventions/re-conventions.yml
+  href: https://artifacts.apis.io/re/conventions/re-conventions.yml
   title: ''
   type: Conventions
   url: conventions/re-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/errors/re-problem-types.yml
+  href: https://artifacts.apis.io/re/errors/re-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/re-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/data-model/re-data-model.yml
+  href: https://artifacts.apis.io/re/data-model/re-data-model.yml
   title: ''
   type: DataModel
   url: data-model/re-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/conformance/re-conformance.yml
+  href: https://artifacts.apis.io/re/conformance/re-conformance.yml
   title: ''
   type: Conformance
   url: conformance/re-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/lifecycle/re-lifecycle.yml
+  href: https://artifacts.apis.io/re/lifecycle/re-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/re-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/re/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -212,31 +213,47 @@ network: true
 overview: 'Re publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including General API, Points API, Supply API, and 2 more. Tagged areas include Company, Fintech, Reinsurance, Insurance, and DeFi.
 
 
+  The Re catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Re''s developer surface includes engineering blog, documentation, API reference, getting-started guide, authentication, support, signup flow, and 19 more developer resources.'
-random_paper: 17
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Re API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: re-rules
 score:
-  band: thin
-  composite: 39.2
+  band: developing
+  composite: 40.0
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 46.8
+    contract_governance: 18.2
+    contract_quality: 43.7
     developer_ergonomics: 58.9
     discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 38.7
+  previous_composite: 40.0
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 5
@@ -248,14 +265,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/re/refs/heads/main/screenshots/re-2026-09-02T152938.png
+screenshot: https://apis.io/screenshots/re/re-2026-09-02T152938.png
 security:
 - kind: authentication
   name: Re Authentication
@@ -265,6 +282,12 @@ security:
   name: Re Domain Security
   slug: re-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Check Re Protocol yields and TVL
+  slug: re-check-yields-and-tvl
+- name: Look up a wallet's Re holdings and points
+  slug: re-wallet-holdings-and-points
 slug: re
 tags:
 - Company

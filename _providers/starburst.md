@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Public REST API for Starburst Galaxy, secured with the OAuth2 client-credentials flow. Manages clusters, catalogs, users, roles, privileges, access-control policies, tags, row filters, column masks, d
@@ -106,55 +110,59 @@ common:
   type: TrustCenter
   url: https://trust.starburst.io/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/starburst/refs/heads/main/packages/starburst-packages.yml
+  href: https://artifacts.apis.io/starburst/packages/starburst-packages.yml
   title: ''
   type: Packages
   url: packages/starburst-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/starburst/refs/heads/main/packages/starburst-packages.yml
+  href: https://artifacts.apis.io/starburst/packages/starburst-packages.yml
   title: ''
   type: SDKs
   url: packages/starburst-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/starburst/refs/heads/main/authentication/starburst-authentication.yml
+  href: https://artifacts.apis.io/starburst/authentication/starburst-authentication.yml
   title: ''
   type: Authentication
   url: authentication/starburst-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/starburst/refs/heads/main/conventions/starburst-conventions.yml
+  href: https://artifacts.apis.io/starburst/conventions/starburst-conventions.yml
   title: ''
   type: Conventions
   url: conventions/starburst-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/starburst/refs/heads/main/lifecycle/starburst-lifecycle.yml
+  href: https://artifacts.apis.io/starburst/lifecycle/starburst-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/starburst-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/starburst/refs/heads/main/changelog/starburst-changelog.yml
+  href: https://artifacts.apis.io/starburst/changelog/starburst-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/starburst-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/starburst/refs/heads/main/conformance/starburst-conformance.yml
+  href: https://artifacts.apis.io/starburst/conformance/starburst-conformance.yml
   title: ''
   type: Conformance
   url: conformance/starburst-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/starburst/refs/heads/main/mcp/starburst-mcp.yml
+  href: https://artifacts.apis.io/starburst/mcp/starburst-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/starburst-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/starburst/refs/heads/main/llms/starburst-llms.txt
+  href: https://artifacts.apis.io/starburst/llms/starburst-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/starburst-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/starburst/refs/heads/main/security/starburst-domain-security.yml
+  href: https://artifacts.apis.io/starburst/security/starburst-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/starburst-domain-security.yml
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://docs.starburstdata.com/
 created: '2026-07-17'
 description: Starburst is an enterprise data analytics and intelligence platform built on Trino, the open-source distributed SQL query engine. It lets organizations access and query data across disparate systems through a unified context layer — federated analytics with no pipelines or data movement required. Its products include Starburst Galaxy (a fully managed cloud service on AWS, GCP, and Azure), Starburst Enterprise (self-managed for hybrid and on-premises), Icehouse (Apache Iceberg plus Trino for the lakehouse), and AIDA, a conversational AI data assistant. Starburst Galaxy exposes a public REST API secured with OAuth2 client credentials for managing clusters, catalogs, users, roles, privileges, access policies, data products, and SQL jobs.
 image: https://www.starburst.io/wp-content/uploads/2021/01/starburst-og.jpg
@@ -166,13 +174,13 @@ network: true
 overview: 'Starburst is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data Analytics, Data Lakehouse, SQL Query Engine, and Trino.
 
 
-  Starburst''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 19 more developer resources.'
-random_paper: 12
+  Starburst''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
+random_paper: 18
 score:
   band: thin
   composite: 37.8
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -196,14 +204,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/starburst/refs/heads/main/screenshots/starburst-2026-09-02T160757.png
+screenshot: https://apis.io/screenshots/starburst/starburst-2026-09-02T160757.png
 security:
 - kind: authentication
   name: Starburst Authentication
@@ -227,5 +235,8 @@ tags:
 - Federated Query
 - Data Governance
 - Business Intelligence
+- Data Platform
+- Analytics
+- Apache Iceberg
 website: https://www.starburst.io/
 ---

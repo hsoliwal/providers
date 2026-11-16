@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: medium
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
   - security
   trial: false
   try_now: true
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.5
-  scored_at: '2026-10-17'
+  score: 31.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 62
   human_in_the_loop: 7
@@ -107,29 +114,49 @@ apis:
   slug: hookdeck-attempts-api
 - baseURL: https://api.hookdeck.com/2025-07-01
   baseurl_source: declared
-  description: Bulk cancel operations allow you to cancel multiple pending events at once.
-  name: Hookdeck Bulk cancel events API
-  slug: hookdeck-bulk-cancel-events-api
-- baseURL: https://api.hookdeck.com/2025-07-01
-  baseurl_source: declared
-  description: Bulk retry operations allow you to retry many events at once. A bulk retry is first estimated, then created, then processed asynchronously.
-  name: Hookdeck Bulk retry events API
-  slug: hookdeck-bulk-retry-events-api
-- baseURL: https://api.hookdeck.com/2025-07-01
-  baseurl_source: declared
-  description: Bulk retry ignored events allow you to retry many events that were previously ignored (for instance due to filter rules) at once.
-  name: Hookdeck Bulk retry ignored events API
-  slug: hookdeck-bulk-retry-ignored-events-api
-- baseURL: https://api.hookdeck.com/2025-07-01
-  baseurl_source: declared
-  description: Bulk retry requests allow you to re-ingest many previously received requests at once.
-  name: Hookdeck Bulk retry requests API
-  slug: hookdeck-bulk-retry-requests-api
-- baseURL: https://api.hookdeck.com/2025-07-01
-  baseurl_source: declared
   description: Issue Triggers lets you setup rules that trigger issues when certain conditions are met.
   name: Hookdeck Issue Triggers API
   slug: hookdeck-issue-triggers-api
+- baseURL: https://api.hookdeck.com/2025-07-01
+  baseurl_source: declared
+  description: The Configuration API is only available on managed Outpost. It allows you to read and update instance-level settings, the same settings available as environment variables in self-hosted deployments.
+  name: Hookdeck Configuration API
+  slug: hookdeck-configuration-api
+- baseURL: https://api.hookdeck.com/2025-07-01
+  baseurl_source: declared
+  description: This endpoint is only available for **self-hosted** Outpost deployments. Managed Outpost health is monitored by Hookdeck.
+  name: Hookdeck Health API
+  slug: hookdeck-health-api
+- baseURL: https://api.hookdeck.com/2025-07-01
+  baseurl_source: declared
+  description: 'Operator events are Outpost''s own lifecycle and alerting stream: delivery failures, destinations being auto-disabled, retry exhaustion and tenant subscription changes. They are about the deployment, n'
+  name: Hookdeck Operator Events API
+  slug: hookdeck-operator-events-api
+- baseURL: https://api.hookdeck.com/2025-07-01
+  baseurl_source: declared
+  description: Use the Publish endpoint to send events into Outpost. Events are matched against all destinations whose topic subscriptions and filters match the event. Requires Admin API Key.
+  name: Hookdeck Publish API
+  slug: hookdeck-publish-api
+- baseURL: https://api.hookdeck.com/2025-07-01
+  baseurl_source: declared
+  description: Triggers a retry for delivering an event to a destination. The event must exist, and the destination must be enabled, match the event's topic and filter, and already have a delivery attempt for the ev
+  name: Hookdeck Retry API
+  slug: hookdeck-retry-api
+- baseURL: https://api.hookdeck.com/2025-07-01
+  baseurl_source: declared
+  description: Destination types describe the available event delivery targets and their configuration schemas. Use these endpoints to render UI forms and list available destination types with their configuration sc
+  name: Hookdeck Schemas API
+  slug: hookdeck-schemas-api
+- baseURL: https://api.hookdeck.com/2025-07-01
+  baseurl_source: declared
+  description: The API segments resources per `tenant`. A tenant represents a user/team/organization in your product. The provided value determines the tenant's ID, which can be any string representation. If your sy
+  name: Hookdeck Tenants API
+  slug: hookdeck-tenants-api
+- baseURL: https://api.hookdeck.com/2025-07-01
+  baseurl_source: declared
+  description: Returns the list of topics configured for this Outpost deployment. Tenants subscribe their destinations to topics from this list. Topics are defined via your configuration file and not a specific Crea
+  name: Hookdeck Topics API
+  slug: hookdeck-topics-api
 arazzos:
 - description: Create a source, create an authentication integration, then attach the integration to the source.
   name: Hookdeck Attach an Integration to a New Source
@@ -173,7 +200,7 @@ arazzos:
 - description: Idempotently create or update a connection by name, then confirm the result.
   name: Hookdeck Upsert a Connection by Name
   slug: hookdeck-upsert-connection-workflow
-artifact_total: 103
+artifact_total: 106
 collections:
 - collection_type: postman
   name: Hookdeck Bookmarks API
@@ -211,9 +238,6 @@ collections:
 - collection_type: postman
   name: Hookdeck Transformations API
   slug: postman-hookdeck-transformations-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Hookdeck Bookmarks Attempts API
   slug: open-hookdeck-attempts-api
@@ -274,7 +298,7 @@ common:
   type: Website
   url: https://www.hookdeck.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/capabilities/hookdeck-capability-edges.yml
+  href: https://artifacts.apis.io/hookdeck/capabilities/hookdeck-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/hookdeck-capability-edges.yml
@@ -291,17 +315,17 @@ common:
   type: CodeOfConduct
   url: https://github.com/hookdeck/.github/blob/master/CODE_OF_CONDUCT.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/agentic-access/hookdeck-agentic-access.yml
+  href: https://artifacts.apis.io/hookdeck/agentic-access/hookdeck-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hookdeck-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/security/hookdeck-domain-security.yml
+  href: https://artifacts.apis.io/hookdeck/security/hookdeck-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hookdeck-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/authentication/hookdeck-authentication.yml
+  href: https://artifacts.apis.io/hookdeck/authentication/hookdeck-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hookdeck-authentication.yml
@@ -310,72 +334,72 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/hookdeck/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-attach-integration-to-source-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-attach-integration-to-source-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-attach-integration-to-source-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-author-transformation-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-author-transformation-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-author-transformation-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-bookmark-and-replay-event-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-bookmark-and-replay-event-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-bookmark-and-replay-event-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-bulk-retry-failed-events-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-bulk-retry-failed-events-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-bulk-retry-failed-events-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-cancel-pending-event-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-cancel-pending-event-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-cancel-pending-event-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-decommission-source-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-decommission-source-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-decommission-source-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-inline-connection-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-inline-connection-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-inline-connection-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-investigate-event-attempts-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-investigate-event-attempts-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-investigate-event-attempts-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-pause-resume-connection-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-pause-resume-connection-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-pause-resume-connection-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-provision-connection-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-provision-connection-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-provision-connection-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-replay-request-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-replay-request-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-replay-request-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-retry-failed-event-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-retry-failed-event-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-retry-failed-event-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-update-transformation-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-update-transformation-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-update-transformation-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/arazzo/hookdeck-upsert-connection-workflow.yml
+  href: https://artifacts.apis.io/hookdeck/arazzo/hookdeck-upsert-connection-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hookdeck-upsert-connection-workflow.yml
@@ -404,22 +428,22 @@ common:
   type: Pricing
   url: https://hookdeck.com/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/plans/hookdeck-plans-pricing.yml
+  href: https://artifacts.apis.io/hookdeck/plans/hookdeck-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hookdeck-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/rate-limits/hookdeck-rate-limits.yml
+  href: https://artifacts.apis.io/hookdeck/rate-limits/hookdeck-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hookdeck-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/finops/hookdeck-finops.yml
+  href: https://artifacts.apis.io/hookdeck/finops/hookdeck-finops.yml
   title: ''
   type: FinOps
   url: finops/hookdeck-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/json-ld/hookdeck-context.jsonld
+  href: https://artifacts.apis.io/hookdeck/json-ld/hookdeck-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/hookdeck-context.jsonld
@@ -558,13 +582,13 @@ common:
 created: '2025-08-19'
 description: Hookdeck is a Toronto-based webhook and event-infrastructure platform. The Hookdeck Event Gateway sits between webhook senders and your services to receive, verify, queue, retry, transform, filter, route, and observe events reliably at scale. Hookdeck exposes a fully versioned REST Admin API, a CLI for local development, language SDKs (TypeScript, Go, Python, .NET), a Terraform provider, and the open-source Outpost project for self-hostable outbound webhook delivery.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Hookdeck Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: additional 100k events
+  service_category: ''
   slug: hookdeck-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hookdeck.png
 json_schemas:
 - name: Hookdeck EventAttempt
@@ -601,7 +625,7 @@ modified: '2026-05-25'
 name: Hookdeck
 nav: Providers
 network: true
-overview: 'Hookdeck publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Connections API, Sources API, Destinations API, and 14 more. Tagged areas include Webhook, Event Gateways, Gateways, Event, and Event Infrastructure.
+overview: 'Hookdeck publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Connections API, Sources API, Destinations API, and 18 more. Tagged areas include Webhook, Event Gateways, Gateways, Event, and Event Infrastructure.
 
 
   The Hookdeck catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -615,7 +639,7 @@ plans:
 - name: Hookdeck Price Estimates
   plan_count: 0
   slug: hookdeck-price-estimates
-random_paper: 4
+random_paper: 0
 rate_limits:
 - limit_count: 1
   name: Hookdeck Rate Limits
@@ -634,19 +658,19 @@ rules:
   slug: hookdeck-jsonschema-spectral-rules
 score:
   band: strong
-  composite: 59.3
+  composite: 63.7
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 80.3
+    artifact_dirs: 22
+    catalog_earned: 83.3
     catalog_earned_first_party: 20.0
-    catalog_gap: 34.8
+    catalog_gap: 31.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.5
   facets:
-    access_clarity: 69.7
+    access_clarity: 77.6
     contract_governance: 9.8
-    contract_quality: 68.0
+    contract_quality: 70.2
     developer_ergonomics: 79.0
     discoverability: 66.1
     operational_transparency: 31.6
@@ -657,27 +681,27 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 60.8
+  previous_composite: 63.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 17
+      marker_coverage: 30.8
+      total: 26
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/hookdeck/refs/heads/main/screenshots/hookdeck-2026-06-20T182825.png
+    score: 22.2
+screenshot: https://apis.io/screenshots/hookdeck/hookdeck-2026-06-20T182825.png
 security:
 - kind: authentication
   name: Hookdeck Authentication

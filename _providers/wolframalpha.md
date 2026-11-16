@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.6
-  scored_at: '2026-10-17'
+  score: 28.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -74,7 +80,7 @@ arazzos:
 - description: Get a spoken-word answer, falling back to a short text answer when none is available.
   name: Wolfram|Alpha Voice Assistant Answer
   slug: wolframalpha-voice-assistant-answer-workflow
-artifact_total: 72
+artifact_total: 71
 collections:
 - collection_type: postman
   name: Wolfram|Alpha Fast Query Recognizer API
@@ -94,9 +100,6 @@ collections:
 - collection_type: postman
   name: Wolfram|Alpha Spoken Results API
   slug: postman-wolframalpha-spoken-results-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Wolfram|Alpha Fast Query Recognizer Classification API
   slug: open-wolframalpha-classification-api
@@ -123,17 +126,17 @@ collections:
   slug: open-wolframalpha-spoken-results-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/agentic-access/wolframalpha-agentic-access.yml
+  href: https://artifacts.apis.io/wolframalpha/agentic-access/wolframalpha-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/wolframalpha-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/security/wolframalpha-domain-security.yml
+  href: https://artifacts.apis.io/wolframalpha/security/wolframalpha-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wolframalpha-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/authentication/wolframalpha-authentication.yml
+  href: https://artifacts.apis.io/wolframalpha/authentication/wolframalpha-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wolframalpha-authentication.yml
@@ -146,32 +149,32 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/wolframalpha/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/arazzo/wolframalpha-answer-with-visual-workflow.yml
+  href: https://artifacts.apis.io/wolframalpha/arazzo/wolframalpha-answer-with-visual-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/wolframalpha-answer-with-visual-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/arazzo/wolframalpha-full-results-to-specific-pod-workflow.yml
+  href: https://artifacts.apis.io/wolframalpha/arazzo/wolframalpha-full-results-to-specific-pod-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/wolframalpha-full-results-to-specific-pod-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/arazzo/wolframalpha-llm-conversational-query-workflow.yml
+  href: https://artifacts.apis.io/wolframalpha/arazzo/wolframalpha-llm-conversational-query-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/wolframalpha-llm-conversational-query-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/arazzo/wolframalpha-query-recognizer-routing-workflow.yml
+  href: https://artifacts.apis.io/wolframalpha/arazzo/wolframalpha-query-recognizer-routing-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/wolframalpha-query-recognizer-routing-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/arazzo/wolframalpha-short-answer-with-detail-fallback-workflow.yml
+  href: https://artifacts.apis.io/wolframalpha/arazzo/wolframalpha-short-answer-with-detail-fallback-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/wolframalpha-short-answer-with-detail-fallback-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/arazzo/wolframalpha-voice-assistant-answer-workflow.yml
+  href: https://artifacts.apis.io/wolframalpha/arazzo/wolframalpha-voice-assistant-answer-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/wolframalpha-voice-assistant-answer-workflow.yml
@@ -200,17 +203,17 @@ common:
   type: Pricing
   url: https://products.wolframalpha.com/api/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/plans/wolframalpha-plans-pricing.yml
+  href: https://artifacts.apis.io/wolframalpha/plans/wolframalpha-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/wolframalpha-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/rate-limits/wolframalpha-rate-limits.yml
+  href: https://artifacts.apis.io/wolframalpha/rate-limits/wolframalpha-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/wolframalpha-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/finops/wolframalpha-finops.yml
+  href: https://artifacts.apis.io/wolframalpha/finops/wolframalpha-finops.yml
   title: ''
   type: FinOps
   url: finops/wolframalpha-finops.yml
@@ -291,17 +294,17 @@ common:
   type: Tools
   url: https://github.com/WolframResearch/LSPServer
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/rules/wolframalpha-rules.yml
+  href: https://artifacts.apis.io/wolframalpha/rules/wolframalpha-rules.yml
   title: ''
   type: SpectralRules
   url: rules/wolframalpha-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/vocabulary/wolframalpha-vocabulary.yml
+  href: https://artifacts.apis.io/wolframalpha/vocabulary/wolframalpha-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/wolframalpha-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/json-ld/wolframalpha-context.jsonld
+  href: https://artifacts.apis.io/wolframalpha/json-ld/wolframalpha-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/wolframalpha-context.jsonld
@@ -436,7 +439,7 @@ plans:
 - name: Wolframalpha Plans Pricing
   plan_count: 3
   slug: wolframalpha-plans-pricing
-random_paper: 2
+random_paper: 6
 rate_limits:
 - limit_count: 2
   name: Wolframalpha Rate Limits
@@ -466,27 +469,27 @@ rules:
   slug: wolframalpha-rules
 score:
   band: thin
-  composite: 38.6
+  composite: 38.5
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 71.0
     catalog_earned_first_party: 0.0
     catalog_gap: 44.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 42.1
     contract_governance: 27.3
-    contract_quality: 30.8
+    contract_quality: 30.4
     developer_ergonomics: 51.2
     discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 40.1
+  previous_composite: 38.5
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 50.0
       derived: 8
       marker_coverage: 100.0
       total: 8
@@ -496,14 +499,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/wolframalpha/refs/heads/main/screenshots/wolframalpha-2026-06-20T201538.png
+screenshot: https://apis.io/screenshots/wolframalpha/wolframalpha-2026-06-20T201538.png
 security:
 - kind: authentication
   name: Wolframalpha Authentication

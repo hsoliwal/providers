@@ -23,19 +23,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.0
-  scored_at: '2026-10-17'
+  score: 26.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 25
   slug: contextual-ai-agentic-access
   summary_line: 25 operations · 15 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.contextual.ai/v1
   baseurl_source: declared
@@ -90,15 +93,42 @@ apis:
   description: Manage workspace users.
   name: Contextual AI Users API
   slug: contextual-ai-users-api
-artifact_total: 30
+- baseURL: https://api.contextual.ai/v1
+  baseurl_source: declared
+  description: The /agents/{id}/query API from Contextual AI — 5 operation(s) for /agents/{id}/query.
+  name: Contextual AI /agents/{id}/query API
+  slug: contextual-ai-agents-id-query-api
+- baseURL: https://api.contextual.ai/v1
+  baseurl_source: declared
+  description: The /billing API from Contextual AI — 7 operation(s) for /billing.
+  name: Contextual AI /billing API
+  slug: contextual-ai-billing-api
+- baseURL: https://api.contextual.ai/v1
+  baseurl_source: declared
+  description: The /contents API from Contextual AI — 2 operation(s) for /contents.
+  name: Contextual AI /contents API
+  slug: contextual-ai-contents-api
+- baseURL: https://api.contextual.ai/v1
+  baseurl_source: declared
+  description: The /datastores/{id}/documents API from Contextual AI — 5 operation(s) for /datastores/{id}/documents.
+  name: Contextual AI /datastores/{id}/documents API
+  slug: contextual-ai-datastores-id-documents-api
+- baseURL: https://api.contextual.ai/v1
+  baseurl_source: declared
+  description: The /extract API from Contextual AI — 9 operation(s) for /extract.
+  name: Contextual AI /extract API
+  slug: contextual-ai-extract-api
+- baseURL: https://api.contextual.ai/v1
+  baseurl_source: declared
+  description: The /workspaces API from Contextual AI — 1 operation(s) for /workspaces.
+  name: Contextual AI /workspaces API
+  slug: contextual-ai-workspaces-api
+artifact_total: 36
 asyncapis:
 - description: AsyncAPI 2.6 description of Contextual AI's **agent query streaming** surface. Contextual AI does not publish a WebSocket API. The only asynchronous / event-style transport documented at https://docs.
   name: Contextual AI Agent Query Streaming (HTTP + SSE)
   slug: contextual-ai-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Contextual AI Platform Agents API
   slug: open-contextual-ai-agents-api
@@ -135,32 +165,32 @@ common:
   type: Pricing
   url: https://contextual.ai/pricing
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/contextual-ai/refs/heads/main/capabilities/contextual-ai-capability-edges.yml
+  href: https://artifacts.apis.io/contextual-ai/capabilities/contextual-ai-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/contextual-ai-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/contextual-ai/refs/heads/main/agentic-access/contextual-ai-agentic-access.yml
+  href: https://artifacts.apis.io/contextual-ai/agentic-access/contextual-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/contextual-ai-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/contextual-ai/refs/heads/main/security/contextual-ai-trust-center.yml
+  href: https://artifacts.apis.io/contextual-ai/security/contextual-ai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/contextual-ai-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/contextual-ai/refs/heads/main/security/contextual-ai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/contextual-ai/security/contextual-ai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/contextual-ai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/contextual-ai/refs/heads/main/security/contextual-ai-domain-security.yml
+  href: https://artifacts.apis.io/contextual-ai/security/contextual-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/contextual-ai-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/contextual-ai/refs/heads/main/authentication/contextual-ai-authentication.yml
+  href: https://artifacts.apis.io/contextual-ai/authentication/contextual-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/contextual-ai-authentication.yml
@@ -181,17 +211,17 @@ common:
   type: Documentation
   url: https://docs.contextual.ai
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/contextual-ai/refs/heads/main/plans/contextual-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/contextual-ai/plans/contextual-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/contextual-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/contextual-ai/refs/heads/main/rate-limits/contextual-ai-rate-limits.yml
+  href: https://artifacts.apis.io/contextual-ai/rate-limits/contextual-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/contextual-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/contextual-ai/refs/heads/main/finops/contextual-ai-finops.yml
+  href: https://artifacts.apis.io/contextual-ai/finops/contextual-ai-finops.yml
   title: ''
   type: FinOps
   url: finops/contextual-ai-finops.yml
@@ -203,10 +233,10 @@ created: '2026-06-20'
 description: Contextual AI is an enterprise RAG platform built around a Grounded Language Model (GLM) engineered to minimize hallucinations. Its REST API exposes end-to-end RAG agents (create, configure, query) plus standalone component APIs - Generate, Rerank, Parse, and LMUnit - over datastores of ingested documents, all authenticated with a Bearer API key.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Contextual Ai Finops
-  primary_unit: ''
-  service_category: AI and Machine Learning
+  primary_unit: 1m tokens
+  service_category: ''
   slug: contextual-ai-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/contextual-ai.png
@@ -215,7 +245,7 @@ modified: '2026-06-20'
 name: Contextual AI
 nav: Providers
 network: true
-overview: 'Contextual AI publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Agents Query API, Datastores API, and 6 more. Tagged areas include Artificial Intelligence, RAG, LLM, Grounded Language Model, and Enterprise.
+overview: 'Contextual AI publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Agents Query API, Datastores API, and 12 more. Tagged areas include Artificial Intelligence, RAG, LLM, Grounded Language Model, and Enterprise.
 
 
   The Contextual AI catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -226,7 +256,10 @@ plans:
 - name: Contextual Ai Plans Pricing
   plan_count: 9
   slug: contextual-ai-plans-pricing
-random_paper: 0
+- name: Contextual Ai Price Estimates
+  plan_count: 0
+  slug: contextual-ai-price-estimates
+random_paper: 22
 rate_limits:
 - limit_count: 6
   name: Contextual Ai Rate Limits
@@ -246,43 +279,43 @@ rules:
   slug: contextual-ai-asyncapi-spectral-rules
 score:
   band: developing
-  composite: 40.0
+  composite: 43.0
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 55.8
+    artifact_dirs: 17
+    catalog_earned: 58.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 59.3
+    catalog_gap: 56.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.2
   facets:
-    access_clarity: 50.0
+    access_clarity: 52.6
     contract_governance: 11.4
-    contract_quality: 58.0
+    contract_quality: 62.2
     developer_ergonomics: 32.1
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 40.0
+    operational_transparency: 21.1
+  previous_composite: 44.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 9
+      total: 25
   regulatory:
     applies: true
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 20.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/contextual-ai/refs/heads/main/screenshots/contextual-ai-2026-06-20T174932.png
+screenshot: https://apis.io/screenshots/contextual-ai/contextual-ai-2026-06-20T174932.png
 security:
 - kind: authentication
   name: Contextual Ai Authentication

@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +28,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Budbee's public REST API for e-commerce merchants and integration partners to create delivery orders, book home and locker delivery intervals, validate serviceable postal codes, discover parcel locker
@@ -82,57 +88,57 @@ common:
   type: Login
   url: https://partner.instabee.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/authentication/instabee-authentication.yml
+  href: https://artifacts.apis.io/instabee/authentication/instabee-authentication.yml
   title: ''
   type: Authentication
   url: authentication/instabee-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/rate-limits/instabee-rate-limits.yml
+  href: https://artifacts.apis.io/instabee/rate-limits/instabee-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/instabee-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/asyncapi/instabee-webhooks.yml
+  href: https://artifacts.apis.io/instabee/asyncapi/instabee-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/instabee-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/errors/instabee-problem-types.yml
+  href: https://artifacts.apis.io/instabee/errors/instabee-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/instabee-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/conventions/instabee-conventions.yml
+  href: https://artifacts.apis.io/instabee/conventions/instabee-conventions.yml
   title: ''
   type: Conventions
   url: conventions/instabee-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/lifecycle/instabee-lifecycle.yml
+  href: https://artifacts.apis.io/instabee/lifecycle/instabee-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/instabee-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/lifecycle/instabee-lifecycle.yml
+  href: https://artifacts.apis.io/instabee/lifecycle/instabee-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/instabee-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/sandbox/instabee-sandbox.yml
+  href: https://artifacts.apis.io/instabee/sandbox/instabee-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/instabee-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/mcp/instabee-mcp.yml
+  href: https://artifacts.apis.io/instabee/mcp/instabee-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/instabee-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/security/instabee-domain-security.yml
+  href: https://artifacts.apis.io/instabee/security/instabee-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/instabee-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/llms/instabee-llms.txt
+  href: https://artifacts.apis.io/instabee/llms/instabee-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/instabee-llms.txt
@@ -151,7 +157,7 @@ overview: 'Instabee is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Instabee''s developer surface includes documentation, API reference, engineering blog, authentication, sandbox, and 15 more developer resources.'
-random_paper: 7
+random_paper: 3
 rate_limits:
 - limit_count: 3
   name: Instabee Rate Limits
@@ -189,14 +195,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/instabee/refs/heads/main/screenshots/instabee-2026-07-25T222557.png
+screenshot: https://apis.io/screenshots/instabee/instabee-2026-07-25T222557.png
 security:
 - kind: authentication
   name: Instabee Authentication

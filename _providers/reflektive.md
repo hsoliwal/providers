@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Enterprise · Self-serve signup
   onboarding: self-serve
   pricing: enterprise
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   - '{''url'': ''https://www.reflektive.com/'', ''status'': 301, ''note'': ''declared website redirects to https://www.peoplefluent.com:443/products/reflektive/ — a different registrable domain (reflektive.com -> peoplefluent.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 25.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -65,11 +72,8 @@ apis:
   description: Asynchronous task objects used to track the status of report generation jobs.
   name: Reflektive Tasks API
   slug: reflektive-tasks-api
-artifact_total: 27
+artifact_total: 26
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Reflektive Real-time Feedback (v1) Real-time Feedback (v1) Real-time Feedback (v1) API
   slug: open-reflektive-real-time-feedback-v1-api
@@ -83,28 +87,32 @@ collections:
   name: Reflektive Real-time Feedback (v1) Real-time Feedback (v1) Tasks API
   slug: open-reflektive-tasks-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/reflektive/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/reflektive/refs/heads/main/capabilities/reflektive-capability-edges.yml
+  href: https://artifacts.apis.io/reflektive/capabilities/reflektive-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/reflektive-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reflektive/refs/heads/main/agentic-access/reflektive-agentic-access.yml
+  href: https://artifacts.apis.io/reflektive/agentic-access/reflektive-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/reflektive-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reflektive/refs/heads/main/security/reflektive-trust-center.yml
+  href: https://artifacts.apis.io/reflektive/security/reflektive-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/reflektive-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reflektive/refs/heads/main/security/reflektive-domain-security.yml
+  href: https://artifacts.apis.io/reflektive/security/reflektive-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/reflektive-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reflektive/refs/heads/main/authentication/reflektive-authentication.yml
+  href: https://artifacts.apis.io/reflektive/authentication/reflektive-authentication.yml
   title: ''
   type: Authentication
   url: authentication/reflektive-authentication.yml
@@ -141,17 +149,17 @@ common:
   type: X
   url: https://x.com/reflektive
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/reflektive/refs/heads/main/plans/reflektive-plans-pricing.yml
+  href: https://artifacts.apis.io/reflektive/plans/reflektive-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/reflektive-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/reflektive/refs/heads/main/rate-limits/reflektive-rate-limits.yml
+  href: https://artifacts.apis.io/reflektive/rate-limits/reflektive-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/reflektive-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/reflektive/refs/heads/main/finops/reflektive-finops.yml
+  href: https://artifacts.apis.io/reflektive/finops/reflektive-finops.yml
   title: ''
   type: FinOps
   url: finops/reflektive-finops.yml
@@ -211,7 +219,7 @@ overview: 'Reflektive publishes 4 API contracts indexed on the [APIs.io](https:/
   The Reflektive catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Reflektive''s developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
+  Reflektive''s developer surface includes authentication, documentation, engineering blog, pricing, and 13 more developer resources.'
 plans:
 - name: Reflektive Plans Pricing
   plan_count: 1
@@ -234,24 +242,24 @@ rules:
     warn: 4
   slug: reflektive-jsonschema-spectral-rules
 score:
-  band: thin
-  composite: 39.2
+  band: developing
+  composite: 39.4
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 69.8
     catalog_earned_first_party: 0.0
     catalog_gap: 45.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.0
+  delta: 0.0
   facets:
     access_clarity: 23.7
     contract_governance: 23.5
     contract_quality: 67.2
-    developer_ergonomics: 23.8
+    developer_ergonomics: 25.0
     discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 46.2
+  previous_composite: 39.4
   provenance:
     agentic_access: derived
     contracts:
@@ -265,13 +273,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/reflektive/refs/heads/main/screenshots/reflektive-2026-06-20T192747.png
+screenshot: https://apis.io/screenshots/reflektive/reflektive-2026-06-20T192747.png
 security:
 - kind: authentication
   name: Reflektive Authentication

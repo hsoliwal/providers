@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.5
-  scored_at: '2026-10-17'
+  score: 19.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://dashboard.app.usebraintrust.com
@@ -40,17 +44,14 @@ apis:
   description: Public Braintrust network statistics.
   name: Braintrust (Talent Network) dashboard API
   slug: usebraintrust-dashboard-api
-artifact_total: 6
+artifact_total: 7
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Braintrust Network Stats dashboard API
   slug: open-usebraintrust-dashboard-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/usebraintrust/refs/heads/main/overlays/usebraintrust-network-stats-overlay.yaml
+  href: https://artifacts.apis.io/usebraintrust/overlays/usebraintrust-network-stats-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/usebraintrust-network-stats-overlay.yaml
@@ -91,22 +92,22 @@ common:
   type: PrivacyPolicy
   url: https://www.usebraintrust.com/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/usebraintrust/refs/heads/main/llms/usebraintrust-llms.txt
+  href: https://artifacts.apis.io/usebraintrust/llms/usebraintrust-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/usebraintrust-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/usebraintrust/refs/heads/main/well-known/usebraintrust-well-known.yml
+  href: https://artifacts.apis.io/usebraintrust/well-known/usebraintrust-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/usebraintrust-well-known.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/usebraintrust/refs/heads/main/changelog/usebraintrust-changelog.yml
+  href: https://artifacts.apis.io/usebraintrust/changelog/usebraintrust-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/usebraintrust-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/usebraintrust/refs/heads/main/conformance/usebraintrust-conformance.yml
+  href: https://artifacts.apis.io/usebraintrust/conformance/usebraintrust-conformance.yml
   title: ''
   type: Conformance
   url: conformance/usebraintrust-conformance.yml
@@ -115,22 +116,22 @@ common:
   type: Compliance
   url: https://www.usebraintrust.com/products/air/compliance
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/usebraintrust/refs/heads/main/security/usebraintrust-trust-center.yml
+  href: https://artifacts.apis.io/usebraintrust/security/usebraintrust-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/usebraintrust-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/usebraintrust/refs/heads/main/security/usebraintrust-domain-security.yml
+  href: https://artifacts.apis.io/usebraintrust/security/usebraintrust-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/usebraintrust-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/usebraintrust/refs/heads/main/mcp/usebraintrust-mcp.yml
+  href: https://artifacts.apis.io/usebraintrust/mcp/usebraintrust-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/usebraintrust-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/usebraintrust/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/usebraintrust/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -149,27 +150,43 @@ network: true
 overview: 'Braintrust (Talent Network) publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: dashboard API. Tagged areas include Company, Talent Marketplace, AI Recruiting, Hiring, and Freelancing.
 
 
+  The Braintrust (Talent Network) catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Braintrust (Talent Network)''s developer surface includes documentation, engineering blog, pricing, support, signup flow, changelog, and 13 more developer resources.'
-random_paper: 5
+random_paper: 19
+rules:
+- authorship: generated
+  effective_rule_count: 80
+  extends:
+  - spectral:oas
+  name: Braintrust (Talent Network) API Rules
+  rule_count: 39
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 1
+    warn: 1
+  slug: usebraintrust-rules
 score:
   band: thin
-  composite: 31.2
+  composite: 32.9
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 37.0
+    artifact_dirs: 18
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 53.9
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 15.8
     developer_ergonomics: 18.5
     discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 31.2
+  previous_composite: 32.9
   provenance:
     conformance: first-party
     contracts:
@@ -189,14 +206,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/usebraintrust/refs/heads/main/screenshots/usebraintrust-2026-09-02T165230.png
+screenshot: https://apis.io/screenshots/usebraintrust/usebraintrust-2026-09-02T165230.png
 security:
 - kind: domain-security
   name: Usebraintrust Domain Security
@@ -206,6 +223,10 @@ security:
   name: Usebraintrust Trust Center
   slug: usebraintrust-trust-center
   summary_line: SOC 2 Type II
+skill_count: 1
+skills:
+- name: Read Braintrust network statistics
+  slug: usebraintrust-network-stats
 slug: usebraintrust
 tags:
 - Company

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
-    openapi_examples: partial
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 31.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -50,34 +56,91 @@ apis:
   slug: hotglue-api-v1
 - baseURL: https://api.hotglue.com
   baseurl_source: declared
-  description: Retrieve available and supported connectors.
-  name: Hotglue Connector Metadata API
-  slug: hotglue-connector-metadata-api
-- baseURL: https://api.hotglue.com
-  baseurl_source: declared
-  description: Manage bookmark and sync state for linked connectors.
-  name: Hotglue Connector State API
-  slug: hotglue-connector-state-api
-- baseURL: https://api.hotglue.com
-  baseurl_source: declared
-  description: Trigger and poll connector discovery.
-  name: Hotglue Discover API
-  slug: hotglue-discover-api
-- baseURL: https://api.hotglue.com
-  baseurl_source: declared
   description: Run jobs for linked connectors.
   name: Hotglue Jobs API
   slug: hotglue-jobs-api
 - baseURL: https://api.hotglue.com
   baseurl_source: declared
-  description: Create, retrieve, update, and delete linked connectors for a tenant.
+  description: The AvailableConnectors API from Hotglue — 1 operation(s) for availableconnectors.
+  name: Hotglue Available Connectors API
+  slug: hotglue-availableconnectors-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The AvailableSources API from Hotglue — 1 operation(s) for availablesources.
+  name: Hotglue Available Sources API
+  slug: hotglue-availablesources-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The AvailableTargets API from Hotglue — 1 operation(s) for availabletargets.
+  name: Hotglue Available Targets API
+  slug: hotglue-availabletargets-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The Connectors API from Hotglue — 6 operation(s) for connectors.
+  name: Hotglue Connectors API
+  slug: hotglue-connectors-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The Flows API from Hotglue — 2 operation(s) for flows.
+  name: Hotglue Flows API
+  slug: hotglue-flows-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The Jupyter API from Hotglue — 1 operation(s) for jupyter.
+  name: Hotglue Jupyter API
+  slug: hotglue-jupyter-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The LinkedConnectors API from Hotglue — 4 operation(s) for linkedconnectors.
   name: Hotglue Linked Connectors API
-  slug: hotglue-linked-connectors-api
-artifact_total: 22
+  slug: hotglue-linkedconnectors-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The LinkedSources API from Hotglue — 5 operation(s) for linkedsources.
+  name: Hotglue Linked Sources API
+  slug: hotglue-linkedsources-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The LinkedTargets API from Hotglue — 3 operation(s) for linkedtargets.
+  name: Hotglue Linked Targets API
+  slug: hotglue-linkedtargets-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The McpToken API from Hotglue — 1 operation(s) for mcptoken.
+  name: Hotglue MCP Token API
+  slug: hotglue-mcptoken-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The SupportedConnectors API from Hotglue — 1 operation(s) for supportedconnectors.
+  name: Hotglue Supported Connectors API
+  slug: hotglue-supportedconnectors-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The SupportedSources API from Hotglue — 1 operation(s) for supportedsources.
+  name: Hotglue Supported Sources API
+  slug: hotglue-supportedsources-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The SupportedTargets API from Hotglue — 1 operation(s) for supportedtargets.
+  name: Hotglue Supported Targets API
+  slug: hotglue-supportedtargets-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The Tenant API from Hotglue — 5 operation(s) for tenant.
+  name: Hotglue Tenant API
+  slug: hotglue-tenant-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The Tenants API from Hotglue — 2 operation(s) for tenants.
+  name: Hotglue Tenants API
+  slug: hotglue-tenants-api
+- baseURL: https://api.hotglue.com
+  baseurl_source: declared
+  description: The Magic Link API from Hotglue — 1 operation(s) for magic link.
+  name: Hotglue Magic Link API
+  slug: hotglue-magic-link-api
+artifact_total: 34
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Hotglue API V2 Connector Metadata API
   slug: open-hotglue-connector-metadata-api
@@ -97,43 +160,48 @@ collections:
   name: Hotglue API V2
   slug: open-hotglue
 common:
+- group: other
+  href: https://artifacts.apis.io/hotglue/capabilities/hotglue-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hotglue-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/plans/hotglue-plans-pricing.yml
+  href: https://artifacts.apis.io/hotglue/plans/hotglue-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hotglue-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/rate-limits/hotglue-rate-limits.yml
+  href: https://artifacts.apis.io/hotglue/rate-limits/hotglue-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hotglue-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/finops/hotglue-finops.yml
+  href: https://artifacts.apis.io/hotglue/finops/hotglue-finops.yml
   title: ''
   type: FinOps
   url: finops/hotglue-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/agentic-access/hotglue-agentic-access.yml
+  href: https://artifacts.apis.io/hotglue/agentic-access/hotglue-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hotglue-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/security/hotglue-trust-center.yml
+  href: https://artifacts.apis.io/hotglue/security/hotglue-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/hotglue-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/security/hotglue-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hotglue/security/hotglue-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hotglue-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/security/hotglue-domain-security.yml
+  href: https://artifacts.apis.io/hotglue/security/hotglue-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hotglue-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/authentication/hotglue-authentication.yml
+  href: https://artifacts.apis.io/hotglue/authentication/hotglue-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hotglue-authentication.yml
@@ -179,7 +247,7 @@ finops:
 - has_sources: false
   method: generated
   name: Hotglue Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: hotglue-finops
   template: true
@@ -193,45 +261,61 @@ modified: '2026-05-19'
 name: Hotglue
 nav: Providers
 network: true
-overview: 'Hotglue publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Connector Metadata API, Connector State API, Discover API, and 3 more. Tagged areas include Connectors, Embedded Integrations, ETL, Integration Platform, and iPaaS.
+overview: 'Hotglue publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Jobs API, Available Connectors API, Available Sources API, and 15 more. Tagged areas include Connectors, Embedded Integrations, ETL, Integration Platform, and iPaaS.
 
 
-  Hotglue''s developer surface includes authentication, documentation, pricing, engineering blog, signup flow, and 12 more developer resources.'
+  The Hotglue catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Hotglue''s developer surface includes authentication, documentation, pricing, engineering blog, signup flow, and 13 more developer resources.'
 plans:
 - name: Hotglue Plans Pricing
   plan_count: 3
   slug: hotglue-plans-pricing
-random_paper: 12
+random_paper: 16
 rate_limits:
 - limit_count: 5
   name: Hotglue Rate Limits
   slug: hotglue-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Hotglue API Rules
+  rule_count: 57
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 14
+  slug: hotglue-rules
 score:
   band: thin
-  composite: 34.0
+  composite: 38.9
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 18
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 1.1
   facets:
     access_clarity: 32.9
-    contract_governance: 0.0
-    contract_quality: 48.0
+    contract_governance: 13.6
+    contract_quality: 55.3
     developer_ergonomics: 31.0
     discoverability: 75.0
-    operational_transparency: 10.5
-  previous_composite: 35.6
+    operational_transparency: 21.1
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 73.9
+      total: 23
     mcp: first-party
   regulatory:
     applies: true
@@ -239,13 +323,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/hotglue/refs/heads/main/screenshots/hotglue-2026-06-20T182845.png
+screenshot: https://apis.io/screenshots/hotglue/hotglue-2026-06-20T182845.png
 security:
 - kind: authentication
   name: Hotglue Authentication

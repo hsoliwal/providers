@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: The Glia platform REST API. Serves operators, sites, engagements, queues and reporting resources over api.glia.com (US) and api.glia.eu (EU). Authentication is a bearer token minted from an API key id
@@ -46,8 +49,13 @@ apis:
 - description: The public browser SDK for embedding Glia engagements into a web property - queueing for engagement, chat, media upgrades, screen sharing, CoBrowsing, visitor authentication, surveys and message cente
   name: Glia Visitor JS SDK
   slug: glia-visitor-js-sdk
-artifact_total: 8
+artifact_total: 10
 common:
+- group: commercial
+  href: https://artifacts.apis.io/glia/plans/glia-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/glia-plans-pricing.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -117,97 +125,105 @@ common:
   type: Compliance
   url: https://www.glia.com/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/llms/glia-llms.txt
+  href: https://artifacts.apis.io/glia/llms/glia-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/glia-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/packages/glia-packages.yml
+  href: https://artifacts.apis.io/glia/packages/glia-packages.yml
   title: ''
   type: Packages
   url: packages/glia-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/packages/glia-packages.yml
+  href: https://artifacts.apis.io/glia/packages/glia-packages.yml
   title: ''
   type: SDKs
   url: packages/glia-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/cli/glia-cli.yml
+  href: https://artifacts.apis.io/glia/cli/glia-cli.yml
   title: ''
   type: CLI
   url: cli/glia-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/mcp/glia-mcp.yml
+  href: https://artifacts.apis.io/glia/mcp/glia-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/glia-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/mcp/glia-tool-crosswalk.yml
+  href: https://artifacts.apis.io/glia/mcp/glia-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/glia-tool-crosswalk.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/authentication/glia-authentication.yml
+  href: https://artifacts.apis.io/glia/authentication/glia-authentication.yml
   title: ''
   type: Authentication
   url: authentication/glia-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/conventions/glia-conventions.yml
+  href: https://artifacts.apis.io/glia/conventions/glia-conventions.yml
   title: ''
   type: Conventions
   url: conventions/glia-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/conventions/glia-conventions.yml
+  href: https://artifacts.apis.io/glia/conventions/glia-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/glia-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/errors/glia-error-codes.yml
+  href: https://artifacts.apis.io/glia/errors/glia-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/glia-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/lifecycle/glia-lifecycle.yml
+  href: https://artifacts.apis.io/glia/lifecycle/glia-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/glia-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/changelog/glia-changelog.yml
+  href: https://artifacts.apis.io/glia/changelog/glia-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/glia-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/conformance/glia-conformance.yml
+  href: https://artifacts.apis.io/glia/conformance/glia-conformance.yml
   title: ''
   type: Conformance
   url: conformance/glia-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/security/glia-domain-security.yml
+  href: https://artifacts.apis.io/glia/security/glia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/glia-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/security/glia-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/glia/security/glia-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/glia-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/security/glia-trust-center.yml
+  href: https://artifacts.apis.io/glia/security/glia-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/glia-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/components/glia-components.yml
+  href: https://artifacts.apis.io/glia/components/glia-components.yml
   title: ''
   type: Components
   url: components/glia-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/data-model/glia-data-model.yml
+  href: https://artifacts.apis.io/glia/data-model/glia-data-model.yml
   title: ''
   type: DataModel
   url: data-model/glia-data-model.yml
 created: '2026-08-04'
 description: Glia (formerly SaleMove) is a digital customer service and applied-AI platform built for banks, credit unions and insurers, unifying chat, voice, video, messaging and CoBrowsing under what the company calls ChannelLess architecture. Its AI layer is packaged as Glia Banker (customer-facing AI agent), Glia CoPilot (real-time agent assist) and Glia Analyst (manager/QA AI), alongside Glia Voice. The developer surface is a REST API at api.glia.com with regional US/EU hosts, a public Visitor JS SDK for embedding engagements in web properties, native iOS/Android/Ionic widget SDKs published to CocoaPods and Maven Central, and Glia Functions - a workerd-based serverless JavaScript runtime with a first-party CLI and MCP server. Developer documentation is served from a Fern-hosted portal that requires a Glia account login, so no public OpenAPI is published.
+finops:
+- has_sources: true
+  method: derived
+  name: Glia Finops
+  primary_unit: ''
+  service_category: ''
+  slug: glia-finops
+  template: true
 image: https://cdn.prod.website-files.com/680f1550811d9719bdbcf21b/680f7b6051475b02b05d75c6_logo.svg
 layout: provider
 mcp_servers:
@@ -221,13 +237,17 @@ network: true
 overview: 'Glia is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Customer Service, Contact Center, Banking, and Credit Union.
 
 
-  Glia''s developer surface includes documentation, API reference, engineering blog, support, pricing, CLI, authentication, and 28 more developer resources.'
-random_paper: 17
+  Glia''s developer surface includes documentation, API reference, engineering blog, support, pricing, CLI, authentication, and 29 more developer resources.'
+plans:
+- name: Glia Plans Pricing
+  plan_count: 0
+  slug: glia-plans-pricing
+random_paper: 5
 score:
   band: developing
   composite: 39.7
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 21
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -257,14 +277,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 28.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/glia/refs/heads/main/screenshots/glia-2026-08-07T165740.png
+screenshot: https://apis.io/screenshots/glia/glia-2026-08-07T165740.png
 security:
 - kind: authentication
   name: Glia Authentication

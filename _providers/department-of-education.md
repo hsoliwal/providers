@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 23.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -62,9 +68,6 @@ apis:
 artifact_total: 14
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: U.S. Department of Education — College Scorecard Schools API
   slug: open-department-of-education-schools-api
 - collection_type: open
@@ -72,32 +75,32 @@ collections:
   slug: open-department-of-education
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-education/refs/heads/main/plans/department-of-education-plans-pricing.yml
+  href: https://artifacts.apis.io/department-of-education/plans/department-of-education-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/department-of-education-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-education/refs/heads/main/rate-limits/department-of-education-rate-limits.yml
+  href: https://artifacts.apis.io/department-of-education/rate-limits/department-of-education-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/department-of-education-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-education/refs/heads/main/finops/department-of-education-finops.yml
+  href: https://artifacts.apis.io/department-of-education/finops/department-of-education-finops.yml
   title: ''
   type: FinOps
   url: finops/department-of-education-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-education/refs/heads/main/agentic-access/department-of-education-agentic-access.yml
+  href: https://artifacts.apis.io/department-of-education/agentic-access/department-of-education-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/department-of-education-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-education/refs/heads/main/security/department-of-education-domain-security.yml
+  href: https://artifacts.apis.io/department-of-education/security/department-of-education-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/department-of-education-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-education/refs/heads/main/authentication/department-of-education-authentication.yml
+  href: https://artifacts.apis.io/department-of-education/authentication/department-of-education-authentication.yml
   title: ''
   type: Authentication
   url: authentication/department-of-education-authentication.yml
@@ -150,12 +153,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/usedgov
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-education/refs/heads/main/json-ld/department-of-education-context.jsonld
+  href: https://artifacts.apis.io/department-of-education/json-ld/department-of-education-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/department-of-education-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-education/refs/heads/main/vocabulary/department-of-education-vocabulary.yml
+  href: https://artifacts.apis.io/department-of-education/vocabulary/department-of-education-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/department-of-education-vocabulary.yml
@@ -173,7 +176,7 @@ finops:
 - has_sources: false
   method: generated
   name: Department Of Education Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: department-of-education-finops
   template: true
@@ -191,7 +194,7 @@ network: true
 overview: 'Department of Education publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Schools API, and 3 more. Tagged areas include College Scorecard, Education, Federal Government, Higher Education, and IPEDS.
 
 
-  The Department of Education catalog on APIs.io includes 1 JSON-LD context.
+  The Department of Education catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Department of Education''s developer surface includes authentication, product news, engineering blog, and 19 more developer resources.'
@@ -199,25 +202,38 @@ plans:
 - name: Department Of Education Plans Pricing
   plan_count: 3
   slug: department-of-education-plans-pricing
-random_paper: 3
+random_paper: 7
 rate_limits:
 - limit_count: 5
   name: Department Of Education Rate Limits
   slug: department-of-education-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Department of Education API Rules
+  rule_count: 53
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 1
+    warn: 1
+  slug: department-of-education-rules
 score:
   band: thin
-  composite: 33.6
+  composite: 35.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 52.5
+    artifact_dirs: 18
+    catalog_earned: 57.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 62.5
+    catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 13.6
+    contract_governance: 27.3
     contract_quality: 53.0
     developer_ergonomics: 33.3
     discoverability: 67.0
@@ -227,7 +243,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 35.1
+  previous_composite: 35.2
   provenance:
     agentic_access: derived
     contracts:
@@ -241,14 +257,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/department-of-education/refs/heads/main/screenshots/department-of-education-2026-06-20T175915.png
+screenshot: https://apis.io/screenshots/department-of-education/department-of-education-2026-06-20T175915.png
 security:
 - kind: authentication
   name: Department Of Education Authentication

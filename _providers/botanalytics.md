@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.beta.botanalytics.co/v2
@@ -42,17 +45,14 @@ apis:
   description: The Messages API from Botanalytics — 1 operation(s) for messages.
   name: Botanalytics Messages API
   slug: botanalytics-messages-api
-artifact_total: 5
+artifact_total: 6
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Botanalytics Message Ingestion Messages API
   slug: open-botanalytics-messages-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/overlays/botanalytics-messages-overlay.yaml
+  href: https://artifacts.apis.io/botanalytics/overlays/botanalytics-messages-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/botanalytics-messages-overlay.yaml
@@ -105,57 +105,57 @@ common:
   type: PrivacyPolicy
   url: https://cdn.botanalytics.co/docs/privacy.pdf
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/packages/botanalytics-packages.yml
+  href: https://artifacts.apis.io/botanalytics/packages/botanalytics-packages.yml
   title: ''
   type: Packages
   url: packages/botanalytics-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/packages/botanalytics-packages.yml
+  href: https://artifacts.apis.io/botanalytics/packages/botanalytics-packages.yml
   title: ''
   type: SDKs
   url: packages/botanalytics-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/authentication/botanalytics-authentication.yml
+  href: https://artifacts.apis.io/botanalytics/authentication/botanalytics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/botanalytics-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/conventions/botanalytics-conventions.yml
+  href: https://artifacts.apis.io/botanalytics/conventions/botanalytics-conventions.yml
   title: ''
   type: Conventions
   url: conventions/botanalytics-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/errors/botanalytics-problem-types.yml
+  href: https://artifacts.apis.io/botanalytics/errors/botanalytics-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/botanalytics-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/lifecycle/botanalytics-lifecycle.yml
+  href: https://artifacts.apis.io/botanalytics/lifecycle/botanalytics-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/botanalytics-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/conformance/botanalytics-conformance.yml
+  href: https://artifacts.apis.io/botanalytics/conformance/botanalytics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/botanalytics-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/mcp/botanalytics-mcp.yml
+  href: https://artifacts.apis.io/botanalytics/mcp/botanalytics-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/botanalytics-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/botanalytics/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/llms/botanalytics-llms.txt
+  href: https://artifacts.apis.io/botanalytics/llms/botanalytics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/botanalytics-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/security/botanalytics-domain-security.yml
+  href: https://artifacts.apis.io/botanalytics/security/botanalytics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/botanalytics-domain-security.yml
@@ -170,27 +170,43 @@ network: true
 overview: 'Botanalytics publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Messages API. Tagged areas include Company, Conversational Analytics, Chatbots, Voice Assistant, and Bot Analytics.
 
 
+  The Botanalytics catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Botanalytics'' developer surface includes documentation, API reference, getting-started guide, support, signup flow, authentication, and 18 more developer resources.'
-random_paper: 17
+random_paper: 21
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Botanalytics API Rules
+  rule_count: 53
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 1
+    warn: 1
+  slug: botanalytics-rules
 score:
   band: thin
-  composite: 29.8
+  composite: 31.5
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 37.0
+    artifact_dirs: 19
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.4
+  delta: 0.0
   facets:
     access_clarity: 23.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 13.9
     developer_ergonomics: 68.5
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 30.2
+  previous_composite: 31.5
   provenance:
     conformance: derived
     contracts:
@@ -206,13 +222,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/botanalytics/refs/heads/main/screenshots/botanalytics-2026-07-25T203639.png
+screenshot: https://apis.io/screenshots/botanalytics/botanalytics-2026-07-25T203639.png
 security:
 - kind: authentication
   name: Botanalytics Authentication
@@ -222,6 +238,10 @@ security:
   name: Botanalytics Domain Security
   slug: botanalytics-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 1
+skills:
+- name: Log a conversation to Botanalytics
+  slug: botanalytics-log-conversation
 slug: botanalytics
 tags:
 - Company

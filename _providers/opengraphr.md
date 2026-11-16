@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://opengraphr.com/docs/1.0/overview'', ''status'': 301, ''note'': ''declared website redirects to https://heine.familiedeelstra.com/ — a different registrable domain (opengraphr.com -> familiedeelstra.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Really simple API to retrieve Open Graph data from an URL
@@ -42,12 +46,12 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opengraphr/refs/heads/main/security/opengraphr-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/opengraphr/security/opengraphr-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/opengraphr-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opengraphr/refs/heads/main/security/opengraphr-domain-security.yml
+  href: https://artifacts.apis.io/opengraphr/security/opengraphr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/opengraphr-domain-security.yml
@@ -68,10 +72,10 @@ name: OpenGraphr
 nav: Providers
 network: true
 overview: OpenGraphr is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Development and Public APIs.
-random_paper: 0
+random_paper: 22
 score:
   band: minimal
-  composite: 4.1
+  composite: 5.5
   coverage:
     artifact_dirs: 3
     catalog_earned: 22.0
@@ -86,22 +90,22 @@ score:
     contract_quality: 0.0
     developer_ergonomics: 0.0
     discoverability: 46.4
-    operational_transparency: 0.0
-  previous_composite: 4.1
+    operational_transparency: 10.5
+  previous_composite: 5.5
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/opengraphr/refs/heads/main/screenshots/opengraphr-2026-06-20T191003.png
+screenshot: https://apis.io/screenshots/opengraphr/opengraphr-2026-06-20T191003.png
 security:
 - kind: domain-security
   name: Opengraphr Domain Security

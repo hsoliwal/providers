@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: high
-  label: Paid · Open access
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Open access
   onboarding: open
-  pricing: paid
+  pricing: freemium
   public: true
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -85,9 +92,6 @@ apis:
 artifact_total: 24
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Upbit REST Exchange - Account API
   slug: open-upbit-exchange-account-api
 - collection_type: open
@@ -110,12 +114,12 @@ collections:
   slug: open-upbit-quotation-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/upbit/refs/heads/main/plans/upbit-plans-pricing.yml
+  href: https://artifacts.apis.io/upbit/plans/upbit-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/upbit-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/upbit/refs/heads/main/finops/upbit-finops.yml
+  href: https://artifacts.apis.io/upbit/finops/upbit-finops.yml
   title: ''
   type: FinOps
   url: finops/upbit-finops.yml
@@ -124,22 +128,22 @@ common:
   type: Blog
   url: https://www.upbit.com/blog/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/upbit/refs/heads/main/agentic-access/upbit-agentic-access.yml
+  href: https://artifacts.apis.io/upbit/agentic-access/upbit-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/upbit-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/upbit/refs/heads/main/security/upbit-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/upbit/security/upbit-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/upbit-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/upbit/refs/heads/main/security/upbit-domain-security.yml
+  href: https://artifacts.apis.io/upbit/security/upbit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/upbit-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/upbit/refs/heads/main/authentication/upbit-authentication.yml
+  href: https://artifacts.apis.io/upbit/authentication/upbit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/upbit-authentication.yml
@@ -219,7 +223,7 @@ network: true
 overview: 'Upbit publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Exchange - Account API, Exchange - Deposits API, Exchange - Orders API, and 5 more. Tagged areas include Cryptocurrency, Exchange, Market Data, Order, and Trading.
 
 
-  The Upbit catalog on APIs.io includes 1 JSON-LD context.
+  The Upbit catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Upbit''s developer surface includes engineering blog, authentication, documentation, getting-started guide, GitHub presence, support, and 14 more developer resources.'
@@ -232,34 +236,47 @@ rate_limits:
 - limit_count: 4
   name: Upbit Rate Limits
   slug: upbit-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: Upbit API Rules
+  rule_count: 69
+  severity_counts:
+    error: 64
+    hint: 0
+    info: 1
+    warn: 4
+  slug: upbit-rules
 score:
   band: thin
-  composite: 30.3
+  composite: 36.9
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 47.0
+    artifact_dirs: 17
+    catalog_earned: 51.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 68.0
+    catalog_gap: 63.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.5
+  delta: 4.3
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 53.3
-    developer_ergonomics: 33.3
+    contract_governance: 13.6
+    contract_quality: 50.3
+    developer_ergonomics: 54.8
     discoverability: 73.2
-    operational_transparency: 13.2
+    operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
     - south-korea
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 36.8
+  previous_composite: 32.6
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 7
@@ -269,13 +286,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 26.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/upbit/refs/heads/main/screenshots/upbit-2026-06-20T200501.png
+screenshot: https://apis.io/screenshots/upbit/upbit-2026-06-20T200501.png
 security:
 - kind: authentication
   name: Upbit Authentication

@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.9
-  scored_at: '2026-10-17'
+  score: 41.1
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: Elastic Email REST API for sending emails, managing contacts, campaigns, and more.
@@ -50,7 +65,7 @@ apis:
   description: The Webhook API from Elastic Email — 3 operation(s) for webhook.
   name: Elastic Email Webhook API
   slug: elastic-email-webhook-api
-artifact_total: 18
+artifact_total: 20
 asyncapis:
 - description: ''
   name: Elastic Email Webhooks
@@ -61,87 +76,87 @@ common:
   type: PrivacyPolicy
   url: https://elasticemail.com/resources/usage-policies/privacy-policy
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/rate-limits/elastic-email-rate-limits.yml
+  href: https://artifacts.apis.io/elastic-email/rate-limits/elastic-email-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/elastic-email-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/plans/elastic-email-plans-pricing.yml
+  href: https://artifacts.apis.io/elastic-email/plans/elastic-email-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/elastic-email-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/rules/elastic-email-rules.yml
+  href: https://artifacts.apis.io/elastic-email/rules/elastic-email-rules.yml
   title: ''
   type: Spectral
   url: rules/elastic-email-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/json-ld/elastic-email-context.jsonld
+  href: https://artifacts.apis.io/elastic-email/json-ld/elastic-email-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/elastic-email-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/vocabulary/elastic-email-vocabulary.yml
+  href: https://artifacts.apis.io/elastic-email/vocabulary/elastic-email-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/elastic-email-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/asyncapi/elastic-email-webhooks.yml
+  href: https://artifacts.apis.io/elastic-email/asyncapi/elastic-email-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/elastic-email-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/data-model/elastic-email-data-model.yml
+  href: https://artifacts.apis.io/elastic-email/data-model/elastic-email-data-model.yml
   title: ''
   type: DataModel
   url: data-model/elastic-email-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/conformance/elastic-email-conformance.yml
+  href: https://artifacts.apis.io/elastic-email/conformance/elastic-email-conformance.yml
   title: ''
   type: Conformance
   url: conformance/elastic-email-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/overlays/elastic-email-openapi-overlay.yml
+  href: https://artifacts.apis.io/elastic-email/overlays/elastic-email-openapi-overlay.yml
   title: ''
   type: Overlay
   url: overlays/elastic-email-openapi-overlay.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/llms/elastic-email-llms.txt
+  href: https://artifacts.apis.io/elastic-email/llms/elastic-email-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/elastic-email-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/mcp/elastic-email-tool-crosswalk.yml
+  href: https://artifacts.apis.io/elastic-email/mcp/elastic-email-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/elastic-email-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/mcp/elastic-email-mcp.yml
+  href: https://artifacts.apis.io/elastic-email/mcp/elastic-email-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/elastic-email-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/well-known/elastic-email-auth-security.txt
+  href: https://artifacts.apis.io/elastic-email/well-known/elastic-email-auth-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/elastic-email-auth-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/well-known/elastic-email-well-known.yml
+  href: https://artifacts.apis.io/elastic-email/well-known/elastic-email-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/elastic-email-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/hosts/elastic-email-hosts.yml
+  href: https://artifacts.apis.io/elastic-email/hosts/elastic-email-hosts.yml
   title: ''
   type: Hosts
   url: hosts/elastic-email-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/packages/elastic-email-packages.yml
+  href: https://artifacts.apis.io/elastic-email/packages/elastic-email-packages.yml
   title: ''
   type: SDKs
   url: packages/elastic-email-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/packages/elastic-email-packages.yml
+  href: https://artifacts.apis.io/elastic-email/packages/elastic-email-packages.yml
   title: ''
   type: Packages
   url: packages/elastic-email-packages.yml
@@ -162,7 +177,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/elasticemail
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/elastic-email/refs/heads/main/security/elastic-email-domain-security.yml
+  href: https://artifacts.apis.io/elastic-email/security/elastic-email-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/elastic-email-domain-security.yml
@@ -215,6 +230,14 @@ coverage:
   state: none
 created: '2026-10-13'
 description: Elastic Email provides a cloud‑based email delivery platform offering transactional email, marketing campaigns, automation, and a robust API for developers. The service includes email templates, contact management, analytics, and integrations with popular tools, enabling businesses to send and track emails programmatically at scale.
+finops:
+- has_sources: true
+  method: derived
+  name: Elastic Email Finops
+  primary_unit: seat
+  service_category: ''
+  slug: elastic-email-finops
+  template: false
 image: https://cms.elasticemail.com/wp-content/uploads/2025/11/elastic-email-thumbnail-homepage.png
 json_schemas:
 - name: PostEmailsRequest
@@ -260,7 +283,10 @@ plans:
 - name: Elastic Email Plans Pricing
   plan_count: 1
   slug: elastic-email-plans-pricing
-random_paper: 8
+- name: Elastic Email Price Estimates
+  plan_count: 0
+  slug: elastic-email-price-estimates
+random_paper: 10
 rate_limits:
 - limit_count: 1
   name: Elastic Email Rate Limits
@@ -280,21 +306,23 @@ rules:
   slug: elastic-email-rules
 score:
   band: developing
-  composite: 50.1
+  composite: 39.5
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 76.8
+    artifact_dirs: 23
+    catalog_earned: 79.8
     catalog_earned_first_party: 16.0
-    catalog_gap: 38.3
+    catalog_gap: 35.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -12.2
   facets:
-    access_clarity: 65.8
+    access_clarity: 51.3
     contract_governance: 22.0
     contract_quality: 32.3
-    developer_ergonomics: 52.4
+    developer_ergonomics: 29.8
     discoverability: 71.7
-    operational_transparency: 60.5
+    operational_transparency: 40.8
+  previous_composite: 51.7
   provenance:
     conformance: derived
     contracts:
@@ -308,12 +336,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/elastic-email/elastic-email-2026-11-03T131348.png
 security:
 - kind: domain-security
   name: Elastic Email Domain Security

@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Enterprise · Self-serve signup
-  onboarding: self-serve
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
   pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: quarter
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.5
-  scored_at: '2026-10-17'
+  score: 37.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -171,11 +175,8 @@ arazzos:
 - description: Tokenize a card, verify the stored token, then charge it in a card payment.
   name: dLocal Tokenize Card and Charge
   slug: dlocal-tokenize-card-and-charge-workflow
-artifact_total: 61
+artifact_total: 60
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: dLocal Payins Accounts API
   slug: open-dlocal-accounts-api
@@ -219,78 +220,83 @@ collections:
   name: dLocal Payins Accounts Verifications API
   slug: open-dlocal-verifications-api
 common:
+- group: other
+  href: https://artifacts.apis.io/dlocal/capabilities/dlocal-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/dlocal-capability-edges.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-authorize-and-capture-payment-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-authorize-and-capture-payment-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-authorize-and-capture-payment-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-cancel-pending-payment-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-cancel-pending-payment-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-cancel-pending-payment-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-create-and-resolve-kyc-verification-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-create-and-resolve-kyc-verification-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-create-and-resolve-kyc-verification-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-create-payment-and-confirm-status-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-create-payment-and-confirm-status-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-create-payment-and-confirm-status-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-enroll-and-charge-recurring-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-enroll-and-charge-recurring-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-enroll-and-charge-recurring-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-fx-preview-and-pay-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-fx-preview-and-pay-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-fx-preview-and-pay-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-hold-and-release-payout-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-hold-and-release-payout-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-hold-and-release-payout-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-list-payment-refunds-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-list-payment-refunds-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-list-payment-refunds-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-manage-account-bank-accounts-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-manage-account-bank-accounts-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-manage-account-bank-accounts-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-onboard-submerchant-account-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-onboard-submerchant-account-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-onboard-submerchant-account-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-quote-and-request-payout-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-quote-and-request-payout-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-quote-and-request-payout-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-refund-payment-and-confirm-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-refund-payment-and-confirm-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-refund-payment-and-confirm-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-settle-transfer-between-accounts-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-settle-transfer-between-accounts-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-settle-transfer-between-accounts-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-simulate-and-inspect-chargeback-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-simulate-and-inspect-chargeback-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-simulate-and-inspect-chargeback-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/arazzo/dlocal-tokenize-card-and-charge-workflow.yml
+  href: https://artifacts.apis.io/dlocal/arazzo/dlocal-tokenize-card-and-charge-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dlocal-tokenize-card-and-charge-workflow.yml
@@ -415,22 +421,22 @@ common:
   type: ErrorCodes
   url: https://docs.dlocal.com/reference/error-codes-payouts-v3
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/rules/dlocal-rules.yml
+  href: https://artifacts.apis.io/dlocal/rules/dlocal-rules.yml
   title: ''
   type: SpectralRules
   url: rules/dlocal-rules.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/agentic-access/dlocal-agentic-access.yml
+  href: https://artifacts.apis.io/dlocal/agentic-access/dlocal-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dlocal-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/security/dlocal-domain-security.yml
+  href: https://artifacts.apis.io/dlocal/security/dlocal-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dlocal-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/authentication/dlocal-authentication.yml
+  href: https://artifacts.apis.io/dlocal/authentication/dlocal-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dlocal-authentication.yml
@@ -479,17 +485,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/dlocal-dev
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/plans/dlocal-plans-pricing.yml
+  href: https://artifacts.apis.io/dlocal/plans/dlocal-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dlocal-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/rate-limits/dlocal-rate-limits.yml
+  href: https://artifacts.apis.io/dlocal/rate-limits/dlocal-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dlocal-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/finops/dlocal-finops.yml
+  href: https://artifacts.apis.io/dlocal/finops/dlocal-finops.yml
   title: ''
   type: FinOps
   url: finops/dlocal-finops.yml
@@ -538,12 +544,12 @@ overview: 'dLocal publishes 17 API contracts indexed on the [APIs.io](https://ap
   The dLocal catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  dLocal''s developer surface includes developer portal, API reference, signup flow, support, code examples, authentication, documentation, and 56 more developer resources.'
+  dLocal''s developer surface includes developer portal, API reference, signup flow, support, code examples, authentication, documentation, and 57 more developer resources.'
 plans:
 - name: Dlocal Plans Pricing
   plan_count: 1
   slug: dlocal-plans-pricing
-random_paper: 7
+random_paper: 23
 rate_limits:
 - limit_count: 0
   name: Dlocal Rate Limits
@@ -574,20 +580,20 @@ rules:
   slug: dlocal-rules
 score:
   band: developing
-  composite: 44.8
+  composite: 45.7
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 21
     catalog_earned: 54.5
     catalog_earned_first_party: 0.0
     catalog_gap: 60.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.2
+  delta: 0.9
   facets:
     access_clarity: 36.8
     contract_governance: 13.6
     contract_quality: 57.4
-    developer_ergonomics: 61.9
+    developer_ergonomics: 66.7
     discoverability: 73.3
     operational_transparency: 18.4
   jurisdiction:
@@ -596,7 +602,7 @@ score:
     regions:
     - africa
     - latin-america
-  previous_composite: 49.0
+  previous_composite: 44.8
   provenance:
     agentic_access: derived
     contracts:
@@ -611,13 +617,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/dlocal/refs/heads/main/screenshots/dlocal-2026-06-20T180058.png
+screenshot: https://apis.io/screenshots/dlocal/dlocal-2026-06-20T180058.png
 security:
 - kind: authentication
   name: Dlocal Authentication

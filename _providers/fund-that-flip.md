@@ -28,16 +28,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 23.0
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://tools.flipperforce.com/api/v1
   baseurl_source: declared
@@ -114,25 +117,25 @@ apis:
   description: The User API from Fund That Flip — 1 operation(s) for user.
   name: Fund That Flip User API
   slug: fund-that-flip-user-api
-artifact_total: 19
+artifact_total: 26
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/capabilities/fund-that-flip-capability-edges.yml
+  href: https://artifacts.apis.io/fund-that-flip/capabilities/fund-that-flip-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/fund-that-flip-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/overlays/fund-that-flip-flipperforce-public-api-overlay.yaml
+  href: https://artifacts.apis.io/fund-that-flip/overlays/fund-that-flip-flipperforce-public-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/fund-that-flip-flipperforce-public-api-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/security/fund-that-flip-domain-security.yml
+  href: https://artifacts.apis.io/fund-that-flip/security/fund-that-flip-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fund-that-flip-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/authentication/fund-that-flip-authentication.yml
+  href: https://artifacts.apis.io/fund-that-flip/authentication/fund-that-flip-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fund-that-flip-authentication.yml
@@ -193,62 +196,70 @@ common:
   type: PrivacyPolicy
   url: https://www.upright.us/legal
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/packages/fund-that-flip-packages.yml
+  href: https://artifacts.apis.io/fund-that-flip/packages/fund-that-flip-packages.yml
   title: ''
   type: Packages
   url: packages/fund-that-flip-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/llms/fund-that-flip-llms.txt
+  href: https://artifacts.apis.io/fund-that-flip/llms/fund-that-flip-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fund-that-flip-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/conformance/fund-that-flip-conformance.yml
+  href: https://artifacts.apis.io/fund-that-flip/conformance/fund-that-flip-conformance.yml
   title: ''
   type: Conformance
   url: conformance/fund-that-flip-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/errors/fund-that-flip-problem-types.yml
+  href: https://artifacts.apis.io/fund-that-flip/errors/fund-that-flip-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/fund-that-flip-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/lifecycle/fund-that-flip-lifecycle.yml
+  href: https://artifacts.apis.io/fund-that-flip/lifecycle/fund-that-flip-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/fund-that-flip-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/conventions/fund-that-flip-conventions.yml
+  href: https://artifacts.apis.io/fund-that-flip/conventions/fund-that-flip-conventions.yml
   title: ''
   type: Conventions
   url: conventions/fund-that-flip-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/changelog/fund-that-flip-changelog.yml
+  href: https://artifacts.apis.io/fund-that-flip/changelog/fund-that-flip-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/fund-that-flip-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/data-model/fund-that-flip-data-model.yml
+  href: https://artifacts.apis.io/fund-that-flip/data-model/fund-that-flip-data-model.yml
   title: ''
   type: DataModel
   url: data-model/fund-that-flip-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/fund-that-flip/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/plans/fund-that-flip-plans-pricing.yml
+  href: https://artifacts.apis.io/fund-that-flip/plans/fund-that-flip-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fund-that-flip-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/rate-limits/fund-that-flip-rate-limits.yml
+  href: https://artifacts.apis.io/fund-that-flip/rate-limits/fund-that-flip-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fund-that-flip-rate-limits.yml
 created: '2026-08-16'
 description: Fund That Flip is a Cleveland- and New York-based real estate fintech founded in 2014 that lends to residential redevelopers and offers passive income opportunities to accredited investors, having originated more than $2.6B in short-term hard money, fix-and-flip, new construction and DSCR loans. In 2022 it acquired FlipperForce, a web-based project management, deal analysis, rehab estimating and job-costing platform for house flippers and builders, and in September 2023 the combined lending and software business rebranded as Upright (upright.us). The company's developer surface is the FlipperForce Public API — an OpenAPI 3.1 documented REST API at tools.flipperforce.com/api/v1 covering projects, expenses, income, receipts, photo logs, project updates, companies, expense accounts and the workspace activity log.
+finops:
+- has_sources: true
+  method: derived
+  name: Fund That Flip Finops
+  primary_unit: 1 user
+  service_category: ''
+  slug: fund-that-flip-finops
+  template: false
 image: https://cdn.prod.website-files.com/64b99dfa2be98253c176ca3b/64fa2106537c70e46a8afb34_apple-touch-icon.png
 layout: provider
 modified: '2026-08-16'
@@ -258,30 +269,49 @@ network: true
 overview: 'Fund That Flip publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activity Log API, Attachment Upload API, Company API, and 12 more. Tagged areas include Company, Real Estate, Lending, Construction, and Project Management.
 
 
+  The Fund That Flip catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Fund That Flip''s developer surface includes authentication, developer portal, documentation, API reference, getting-started guide, support, engineering blog, and 22 more developer resources.'
 plans:
 - name: Fund That Flip Plans Pricing
-  plan_count: 7
+  plan_count: 6
   slug: fund-that-flip-plans-pricing
-random_paper: 15
+- name: Fund That Flip Price Estimates
+  plan_count: 0
+  slug: fund-that-flip-price-estimates
+random_paper: 11
 rate_limits:
 - limit_count: 0
   name: Fund That Flip Rate Limits
   slug: fund-that-flip-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Fund That Flip API Rules
+  rule_count: 56
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 7
+  slug: fund-that-flip-rules
 score:
   band: developing
-  composite: 50.4
+  composite: 53.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 49.0
+    artifact_dirs: 26
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 76.3
-    contract_governance: 4.5
+    access_clarity: 84.2
+    contract_governance: 18.2
     contract_quality: 49.8
     developer_ergonomics: 58.9
     discoverability: 73.2
@@ -293,7 +323,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 50.4
+  previous_composite: 53.7
   provenance:
     conformance: derived
     contracts:
@@ -309,13 +339,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/fund-that-flip/refs/heads/main/screenshots/fund-that-flip-2026-08-17T080937.png
+screenshot: https://apis.io/screenshots/fund-that-flip/fund-that-flip-2026-08-17T080937.png
 security:
 - kind: authentication
   name: Fund That Flip Authentication
@@ -325,6 +355,16 @@ security:
   name: Fund That Flip Domain Security
   slug: fund-that-flip-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: audit-workspace-activity
+  slug: fund-that-flip-audit-workspace-activity
+- name: create-and-track-project
+  slug: fund-that-flip-create-and-track-project
+- name: publish-progress-update
+  slug: fund-that-flip-publish-progress-update
+- name: record-expenses-and-receipts
+  slug: fund-that-flip-record-expenses-and-receipts
 slug: fund-that-flip
 tags:
 - Company

@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Bukalapak's public REST API for marketplace resources such as products and the authenticated user profile, secured with OAuth2 (client_credentials and resource-owner password grants) issued by account
@@ -50,27 +57,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/bukalapak
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bukalapak/refs/heads/main/authentication/bukalapak-authentication.yml
+  href: https://artifacts.apis.io/bukalapak/authentication/bukalapak-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bukalapak-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bukalapak/refs/heads/main/packages/bukalapak-packages.yml
+  href: https://artifacts.apis.io/bukalapak/packages/bukalapak-packages.yml
   title: ''
   type: Packages
   url: packages/bukalapak-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bukalapak/refs/heads/main/packages/bukalapak-packages.yml
+  href: https://artifacts.apis.io/bukalapak/packages/bukalapak-packages.yml
   title: ''
   type: SDKs
   url: packages/bukalapak-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bukalapak/refs/heads/main/security/bukalapak-domain-security.yml
+  href: https://artifacts.apis.io/bukalapak/security/bukalapak-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bukalapak-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bukalapak/refs/heads/main/llms/bukalapak-llms.txt
+  href: https://artifacts.apis.io/bukalapak/llms/bukalapak-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bukalapak-llms.txt
@@ -86,12 +93,12 @@ overview: 'Bukalapak is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Bukalapak''s developer surface includes authentication and 6 more developer resources.'
-random_paper: 16
+random_paper: 4
 score:
   band: minimal
   composite: 10.1
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -119,8 +126,8 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
@@ -144,6 +151,7 @@ tags:
 - Indonesia
 - Southeast Asia
 - Payments
+- OAuth
 - Authentication
 website: https://bukalapak.com
 ---

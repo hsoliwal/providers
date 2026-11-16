@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.3
-  scored_at: '2026-10-17'
+  score: 33.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -84,11 +87,8 @@ apis:
   description: The view API from SmartMind — 2 operation(s) for view.
   name: SmartMind View API
   slug: smartmind-view-api
-artifact_total: 20
+artifact_total: 22
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: THANOSQL api file API
   slug: open-smartmind-file-api
@@ -119,77 +119,77 @@ common:
   type: Blog
   url: https://www.smartmind-ai.io/insights
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/security/smartmind-domain-security.yml
+  href: https://artifacts.apis.io/smartmind/security/smartmind-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/smartmind-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/agentic-access/smartmind-agentic-access.yml
+  href: https://artifacts.apis.io/smartmind/agentic-access/smartmind-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/smartmind-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/authentication/smartmind-authentication.yml
+  href: https://artifacts.apis.io/smartmind/authentication/smartmind-authentication.yml
   title: ''
   type: Authentication
   url: authentication/smartmind-authentication.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/openapi/_original/smartmind-thanosql-openapi.json
+  href: https://artifacts.apis.io/smartmind/openapi/_original/smartmind-thanosql-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/smartmind-thanosql-openapi.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/overlays/smartmind-thanosql-overlay.yaml
+  href: https://artifacts.apis.io/smartmind/overlays/smartmind-thanosql-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/smartmind-thanosql-overlay.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/packages/smartmind-packages.yml
+  href: https://artifacts.apis.io/smartmind/packages/smartmind-packages.yml
   title: ''
   type: Packages
   url: packages/smartmind-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/packages/smartmind-packages.yml
+  href: https://artifacts.apis.io/smartmind/packages/smartmind-packages.yml
   title: ''
   type: SDKs
   url: packages/smartmind-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/mcp/smartmind-mcp.yml
+  href: https://artifacts.apis.io/smartmind/mcp/smartmind-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/smartmind-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/errors/smartmind-problem-types.yml
+  href: https://artifacts.apis.io/smartmind/errors/smartmind-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/smartmind-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/conventions/smartmind-conventions.yml
+  href: https://artifacts.apis.io/smartmind/conventions/smartmind-conventions.yml
   title: ''
   type: Conventions
   url: conventions/smartmind-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/data-model/smartmind-data-model.yml
+  href: https://artifacts.apis.io/smartmind/data-model/smartmind-data-model.yml
   title: ''
   type: DataModel
   url: data-model/smartmind-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/conformance/smartmind-conformance.yml
+  href: https://artifacts.apis.io/smartmind/conformance/smartmind-conformance.yml
   title: ''
   type: Conformance
   url: conformance/smartmind-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/lifecycle/smartmind-lifecycle.yml
+  href: https://artifacts.apis.io/smartmind/lifecycle/smartmind-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/smartmind-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/llms/smartmind-llms.txt
+  href: https://artifacts.apis.io/smartmind/llms/smartmind-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/smartmind-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/smartmind/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -221,6 +221,18 @@ common:
   title: ''
   type: Website
   url: https://smartmind-ai.io/
+- group: start
+  title: ''
+  type: DeveloperPortal
+  url: https://portal.smartmind.team/
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.smartmind-ai.io/insights/blog
+- group: company
+  title: ''
+  type: Website
+  url: https://www.smartmind-ai.io/
 created: '2026-07-17'
 description: SmartMind AI Inc. is a South Korean AI company (Techstars 2020, Seoul) building ontology-based enterprise AI. Its current products are Qurify — a natural-language data analysis platform that answers questions without SQL by combining structured databases and unstructured documents through a TAG+RAG hybrid architecture and a 2-tier ontology — and AI-Minwon, a government/public-administration application built on Qurify. SmartMind's earlier product, ThanoSQL, is an analytical relational database with a built-in LLM/DL/ML query layer, exposed through a REST API (OpenAPI 3.0.2, 34 operations across query, table, schema, view, template, file-manager, health, and metric resources) and an official Python SDK (pypi:thanosql). This profile captures the still-published ThanoSQL developer surface; the hosted ThanoSQL documentation has been decommissioned.
 image: https://avatars.githubusercontent.com/u/103923556?v=4
@@ -232,24 +244,40 @@ network: true
 overview: 'SmartMind publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including File API, Health API, Metric API, and 5 more. Tagged areas include Company, Artificial Intelligence, Machine Learning, Database, and Analytics.
 
 
-  SmartMind''s developer surface includes engineering blog, authentication, documentation, API reference, support, and 18 more developer resources.'
-random_paper: 7
+  The SmartMind catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  SmartMind''s developer surface includes engineering blog, authentication, documentation, API reference, support, and 21 more developer resources.'
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: SmartMind API Rules
+  rule_count: 54
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 5
+    warn: 4
+  slug: smartmind-rules
 score:
   band: thin
-  composite: 37.0
+  composite: 39.2
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.5
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 45.4
-    developer_ergonomics: 44.6
+    developer_ergonomics: 48.2
     discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
@@ -257,7 +285,7 @@ score:
     countries:
     - south-korea
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 36.5
+  previous_composite: 38.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -270,17 +298,17 @@ score:
     skills: derived
   regulatory:
     applies: true
-    matched_via: fallback
-    regime: Horizontal (data, software, accessibility, platform)
-    regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    matched_via: tags
+    regime: Health
+    regime_id: health
+    score: 18.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 38.9
-screenshot: https://raw.githubusercontent.com/api-evangelist/smartmind/refs/heads/main/screenshots/smartmind-2026-09-02T155926.png
+screenshot: https://apis.io/screenshots/smartmind/smartmind-2026-09-02T155926.png
 security:
 - kind: authentication
   name: Smartmind Authentication
@@ -290,6 +318,12 @@ security:
   name: Smartmind Domain Security
   slug: smartmind-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Create a ThanoSQL table and load records
+  slug: smartmind-create-and-load-table
+- name: Run a ThanoSQL query and review its log
+  slug: smartmind-run-query
 slug: smartmind
 tags:
 - Company
@@ -302,5 +336,8 @@ tags:
 - Ontology
 - RAG
 - Enterprise AI
+- Mental Health
+- Wellness
+- Platform
 website: https://smartmind-ai.io/
 ---

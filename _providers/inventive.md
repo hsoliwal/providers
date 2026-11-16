@@ -1,11 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Requires approval
   onboarding: approval
   pricing: unknown
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -73,22 +78,22 @@ common:
   type: Compliance
   url: https://www.inventive.ai/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/inventive/refs/heads/main/security/inventive-trust-center.yml
+  href: https://artifacts.apis.io/inventive/security/inventive-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/inventive-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/inventive/refs/heads/main/lifecycle/inventive-lifecycle.yml
+  href: https://artifacts.apis.io/inventive/lifecycle/inventive-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/inventive-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/inventive/refs/heads/main/security/inventive-domain-security.yml
+  href: https://artifacts.apis.io/inventive/security/inventive-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/inventive-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/inventive/refs/heads/main/llms/inventive-llms.txt
+  href: https://artifacts.apis.io/inventive/llms/inventive-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/inventive-llms.txt
@@ -97,7 +102,7 @@ common:
   type: Support
   url: https://www.inventive.ai/contact-information
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/inventive/refs/heads/main/plans/inventive-plans-pricing.yml
+  href: https://artifacts.apis.io/inventive/plans/inventive-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/inventive-plans-pricing.yml
@@ -133,12 +138,12 @@ plans:
 - name: Inventive Plans Pricing
   plan_count: 1
   slug: inventive-plans-pricing
-random_paper: 16
+random_paper: 0
 score:
   band: emerging
   composite: 24.6
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
@@ -159,14 +164,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/inventive/refs/heads/main/screenshots/inventive-2026-07-25T222737.png
+screenshot: https://apis.io/screenshots/inventive/inventive-2026-07-25T222737.png
 security:
 - kind: domain-security
   name: Inventive Domain Security

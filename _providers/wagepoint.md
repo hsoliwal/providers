@@ -1,6 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-10-17'
+  score: 29.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Public REST API for partners and integrations to access Wagepoint Company, Person, Pay Group, and Time data.
@@ -59,45 +73,45 @@ apis:
   description: The Time Entries API from Wagepoint — 2 operation(s) for time entries.
   name: Wagepoint Time Entries API
   slug: wagepoint-time-entries-api
-artifact_total: 18
+artifact_total: 20
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/rules/wagepoint-rules.yml
+  href: https://artifacts.apis.io/wagepoint/rules/wagepoint-rules.yml
   title: ''
   type: Spectral
   url: rules/wagepoint-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/json-ld/wagepoint-context.jsonld
+  href: https://artifacts.apis.io/wagepoint/json-ld/wagepoint-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/wagepoint-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/vocabulary/wagepoint-vocabulary.yml
+  href: https://artifacts.apis.io/wagepoint/vocabulary/wagepoint-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/wagepoint-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/conventions/wagepoint-conventions.yml
+  href: https://artifacts.apis.io/wagepoint/conventions/wagepoint-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/wagepoint-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/conventions/wagepoint-conventions.yml
+  href: https://artifacts.apis.io/wagepoint/conventions/wagepoint-conventions.yml
   title: ''
   type: Conventions
   url: conventions/wagepoint-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/conformance/wagepoint-conformance.yml
+  href: https://artifacts.apis.io/wagepoint/conformance/wagepoint-conformance.yml
   title: ''
   type: Conformance
   url: conformance/wagepoint-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/plans/wagepoint-plans-pricing.yml
+  href: https://artifacts.apis.io/wagepoint/plans/wagepoint-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/wagepoint-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/data-model/wagepoint-data-model.yml
+  href: https://artifacts.apis.io/wagepoint/data-model/wagepoint-data-model.yml
   title: ''
   type: DataModel
   url: data-model/wagepoint-data-model.yml
@@ -106,12 +120,12 @@ common:
   type: Compliance
   url: https://trust.wagepoint.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/errors/wagepoint-problem-types.yml
+  href: https://artifacts.apis.io/wagepoint/errors/wagepoint-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/wagepoint-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/hosts/wagepoint-hosts.yml
+  href: https://artifacts.apis.io/wagepoint/hosts/wagepoint-hosts.yml
   title: ''
   type: Hosts
   url: hosts/wagepoint-hosts.yml
@@ -144,12 +158,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/WagePoint
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/security/wagepoint-trust-center.yml
+  href: https://artifacts.apis.io/wagepoint/security/wagepoint-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/wagepoint-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wagepoint/refs/heads/main/security/wagepoint-domain-security.yml
+  href: https://artifacts.apis.io/wagepoint/security/wagepoint-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wagepoint-domain-security.yml
@@ -159,6 +173,14 @@ common:
   url: https://wagepoint.com
 created: '2026-10-13'
 description: Wagepoint provides cloud‑based payroll software for small and medium‑size businesses in Canada. The platform simplifies payroll processing, tax calculations, and compliance for a variety of industries including healthcare, hospitality, construction, retail, and professional services. Users can run payroll, generate T4 slips, manage employee benefits, and integrate with accounting tools such as Xero and QuickBooks. Wagepoint emphasizes ease of use, automated tax filing, and dedicated support, positioning itself as a friendly, modern payroll solution for Canadian employers.
+finops:
+- has_sources: true
+  method: derived
+  name: Wagepoint Finops
+  primary_unit: seat
+  service_category: ''
+  slug: wagepoint-finops
+  template: false
 image: https://www.wagepoint.com/wp-content/uploads/2026/04/Homepage-_-General.png
 json_schemas:
 - name: company_response
@@ -200,7 +222,10 @@ plans:
 - name: Wagepoint Plans Pricing
   plan_count: 2
   slug: wagepoint-plans-pricing
-random_paper: 6
+- name: Wagepoint Price Estimates
+  plan_count: 0
+  slug: wagepoint-price-estimates
+random_paper: 14
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -215,22 +240,31 @@ rules:
     warn: 1
   slug: wagepoint-rules
 score:
-  band: developing
-  composite: 39.9
+  band: thin
+  composite: 34.9
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 70.8
+    artifact_dirs: 20
+    catalog_earned: 73.8
     catalog_earned_first_party: 8.0
-    catalog_gap: 44.3
+    catalog_gap: 41.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.6
   facets:
-    access_clarity: 71.1
+    access_clarity: 57.9
     contract_governance: 22.0
     contract_quality: 54.5
-    developer_ergonomics: 2.4
-    discoverability: 67.9
-    operational_transparency: 21.1
+    developer_ergonomics: 1.2
+    discoverability: 67.0
+    operational_transparency: 10.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - canada
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 41.5
   provenance:
     conformance: derived
     contracts:
@@ -244,12 +278,14 @@ score:
     matched_via: tags
     regime: Employment & Payroll
     regime_id: employment_payroll
-    score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 15.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/wagepoint/wagepoint-2026-11-03T145945.png
 security:
 - kind: domain-security
   name: Wagepoint Domain Security

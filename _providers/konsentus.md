@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -58,9 +61,6 @@ apis:
 artifact_total: 22
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Konsentus Verify PSP Checking Service API
   slug: open-konsentus-psp-checking-service-api
 - collection_type: open
@@ -72,17 +72,17 @@ common:
   type: Website
   url: https://www.konsentus.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/konsentus/refs/heads/main/agentic-access/konsentus-agentic-access.yml
+  href: https://artifacts.apis.io/konsentus/agentic-access/konsentus-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/konsentus-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/konsentus/refs/heads/main/security/konsentus-domain-security.yml
+  href: https://artifacts.apis.io/konsentus/security/konsentus-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/konsentus-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/konsentus/refs/heads/main/authentication/konsentus-authentication.yml
+  href: https://artifacts.apis.io/konsentus/authentication/konsentus-authentication.yml
   title: ''
   type: Authentication
   url: authentication/konsentus-authentication.yml
@@ -204,25 +204,41 @@ modified: '2026-05-25'
 name: Konsentus
 nav: Providers
 network: true
-overview: 'Konsentus publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including PSP Checking Service API, and 2 more. Tagged areas include Open Banking, Open Finance, PSD2, PSD3, and FiDA.
+overview: 'Konsentus publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including PSP Checking Service API, and 2 more. Tagged areas include Open Banking, Open Finance, PSD2, PSD3, and FIDA.
+
+
+  The Konsentus catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Konsentus'' developer surface includes authentication, developer portal, documentation, getting-started guide, release notes, support, FAQ, and 21 more developer resources.'
-random_paper: 12
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Konsentus API Rules
+  rule_count: 61
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 1
+    warn: 1
+  slug: konsentus-rules
 score:
   band: thin
-  composite: 35.7
+  composite: 37.3
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 32.0
+    artifact_dirs: 12
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 52.0
     developer_ergonomics: 54.8
     discoverability: 58.0
@@ -232,7 +248,7 @@ score:
     countries:
     - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 35.6
+  previous_composite: 37.3
   provenance:
     agentic_access: derived
     contracts:
@@ -246,14 +262,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/konsentus/refs/heads/main/screenshots/konsentus-2026-06-20T184135.png
+screenshot: https://apis.io/screenshots/konsentus/konsentus-2026-06-20T184135.png
 security:
 - kind: authentication
   name: Konsentus Authentication
@@ -269,7 +285,7 @@ tags:
 - Open Finance
 - PSD2
 - PSD3
-- FiDA
+- FIDA
 - TPP Verification
 - Identity
 - eIDAS

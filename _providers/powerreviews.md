@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium
-  onboarding: unknown
-  pricing: freemium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
   public: false
   source:
-  - plans
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.4
-  scored_at: '2026-10-17'
+  score: 22.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -41,7 +49,7 @@ agentic_access:
   operation_count: 12
   slug: powerreviews-agentic-access
   summary_line: 12 operations · 4 acting
-api_count: 6
+api_count: 2
 apis:
 - baseURL: https://readservices-b2c.powerreviews.com
   baseurl_source: declared
@@ -83,30 +91,30 @@ apis:
   description: Endpoints for product snippets by merchant
   name: PowerReviews Snippets API
   slug: powerreviews-snippets-api
-artifact_total: 14
+artifact_total: 19
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/finops/powerreviews-finops.yml
+  href: https://artifacts.apis.io/powerreviews/finops/powerreviews-finops.yml
   title: ''
   type: FinOps
   url: finops/powerreviews-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/capabilities/powerreviews-capability-edges.yml
+  href: https://artifacts.apis.io/powerreviews/capabilities/powerreviews-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/powerreviews-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/overlays/powerreviews-readservices-overlay.yaml
+  href: https://artifacts.apis.io/powerreviews/overlays/powerreviews-readservices-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/powerreviews-readservices-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/overlays/powerreviews-writeservices-overlay.yaml
+  href: https://artifacts.apis.io/powerreviews/overlays/powerreviews-writeservices-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/powerreviews-writeservices-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/agentic-access/powerreviews-agentic-access.yml
+  href: https://artifacts.apis.io/powerreviews/agentic-access/powerreviews-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/powerreviews-agentic-access.yml
@@ -175,93 +183,93 @@ common:
   type: ChangeLog
   url: https://developers.powerreviews.com/Content/What's%20New/Changelog.htm
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/changelog/powerreviews-changelog.yml
+  href: https://artifacts.apis.io/powerreviews/changelog/powerreviews-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/powerreviews-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/lifecycle/powerreviews-lifecycle.yml
+  href: https://artifacts.apis.io/powerreviews/lifecycle/powerreviews-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/powerreviews-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/authentication/powerreviews-authentication.yml
+  href: https://artifacts.apis.io/powerreviews/authentication/powerreviews-authentication.yml
   title: ''
   type: Authentication
   url: authentication/powerreviews-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/conventions/powerreviews-conventions.yml
+  href: https://artifacts.apis.io/powerreviews/conventions/powerreviews-conventions.yml
   title: ''
   type: Conventions
   url: conventions/powerreviews-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/errors/powerreviews-problem-types.yml
+  href: https://artifacts.apis.io/powerreviews/errors/powerreviews-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/powerreviews-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/conformance/powerreviews-conformance.yml
+  href: https://artifacts.apis.io/powerreviews/conformance/powerreviews-conformance.yml
   title: ''
   type: Conformance
   url: conformance/powerreviews-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/data-model/powerreviews-data-model.yml
+  href: https://artifacts.apis.io/powerreviews/data-model/powerreviews-data-model.yml
   title: ''
   type: DataModel
   url: data-model/powerreviews-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/components/powerreviews-components.yml
+  href: https://artifacts.apis.io/powerreviews/components/powerreviews-components.yml
   title: ''
   type: Components
   url: components/powerreviews-components.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/packages/powerreviews-packages.yml
+  href: https://artifacts.apis.io/powerreviews/packages/powerreviews-packages.yml
   title: ''
   type: Packages
   url: packages/powerreviews-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/llms/powerreviews-llms.txt
+  href: https://artifacts.apis.io/powerreviews/llms/powerreviews-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/powerreviews-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/mcp/powerreviews-mcp.yml
+  href: https://artifacts.apis.io/powerreviews/mcp/powerreviews-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/powerreviews-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/mcp/powerreviews-tool-crosswalk.yml
+  href: https://artifacts.apis.io/powerreviews/mcp/powerreviews-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/powerreviews-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/powerreviews/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/rate-limits/powerreviews-rate-limits.yml
+  href: https://artifacts.apis.io/powerreviews/rate-limits/powerreviews-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/powerreviews-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/plans/powerreviews-plans-pricing.yml
+  href: https://artifacts.apis.io/powerreviews/plans/powerreviews-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/powerreviews-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/security/powerreviews-domain-security.yml
+  href: https://artifacts.apis.io/powerreviews/security/powerreviews-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/powerreviews-domain-security.yml
 created: '2026-03-16'
 description: 'PowerReviews provides ratings and reviews software and APIs for collecting, syndicating, and displaying user-generated reviews, questions, and answers so shoppers can make better purchase decisions and retailers and brands can drive e-commerce conversion. The platform publishes two public HTTP API surfaces: a Read API (readservices-b2c.powerreviews.com) that returns reviews, questions, answers, product snippets, and merchant display configuration for a merchant and locale, and a Write API (writeservices.powerreviews.com) that retrieves the write-a-review template and submits reviews, questions, answers, and merchant responses server-to-server. Both are authenticated with a merchant-scoped apikey query parameter issued by PowerReviews support, and are documented in a MadCap Flare developer portal with Swagger 2.0 references. PowerReviews was acquired by Syndigo and now sits inside the Syndigo Product Experience Cloud.'
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Powerreviews Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: powerreviews-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/powerreviews.png
@@ -271,6 +279,9 @@ name: PowerReviews
 nav: Providers
 network: true
 overview: 'PowerReviews publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including B2B Answer API, B2B MerchantResponse API, B2B Question API, and 5 more. Tagged areas include E-Commerce, Ratings and Reviews, User Generated Content, Retail, and Marketing.
+
+
+  The PowerReviews catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   PowerReviews'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 30 more developer resources.'
@@ -283,32 +294,45 @@ rate_limits:
 - limit_count: 2
   name: Powerreviews Rate Limits
   slug: powerreviews-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: PowerReviews API Rules
+  rule_count: 54
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 1
+    warn: 2
+  slug: powerreviews-rules
 score:
   band: developing
-  composite: 46.0
+  composite: 47.3
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 48.0
+    artifact_dirs: 28
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 67.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.6
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 40.3
+    contract_governance: 18.2
+    contract_quality: 40.9
     developer_ergonomics: 58.9
-    discoverability: 78.6
+    discoverability: 73.2
     operational_transparency: 63.2
-  previous_composite: 47.5
+  previous_composite: 46.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 50.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 50.0
       total: 8
     mcp: derived
     skills: derived
@@ -318,13 +342,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/powerreviews/refs/heads/main/screenshots/powerreviews-2026-06-20T192030.png
+screenshot: https://apis.io/screenshots/powerreviews/powerreviews-2026-06-20T192030.png
 security:
 - kind: authentication
   name: Powerreviews Authentication
@@ -334,6 +358,16 @@ security:
   name: Powerreviews Domain Security
   slug: powerreviews-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 4
+skills:
+- name: Render reviews and rating snippets for product pages
+  slug: powerreviews-display-product-reviews
+- name: Post merchant responses and Q&A content
+  slug: powerreviews-respond-to-reviews
+- name: Submit a review server-to-server
+  slug: powerreviews-submit-review-server-to-server
+- name: Sync PowerReviews review content into a downstream system
+  slug: powerreviews-sync-reviews-to-crm
 slug: powerreviews
 tags:
 - E-Commerce

@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://www.teem.com/'', ''status'': 301, ''note'': ''declared website redirects to https://eptura.com/teem/ — a different registrable domain (teem.com -> eptura.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -66,12 +70,12 @@ common:
   type: StatusPage
   url: https://status.eptura.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teem/refs/heads/main/lifecycle/teem-lifecycle.yml
+  href: https://artifacts.apis.io/teem/lifecycle/teem-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/teem-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teem/refs/heads/main/security/teem-trust-center.yml
+  href: https://artifacts.apis.io/teem/security/teem-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/teem-trust-center.yml
@@ -84,12 +88,12 @@ common:
   type: Security
   url: https://security.eptura.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teem/refs/heads/main/security/teem-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/teem/security/teem-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/teem-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teem/refs/heads/main/security/teem-domain-security.yml
+  href: https://artifacts.apis.io/teem/security/teem-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/teem-domain-security.yml
@@ -105,18 +109,18 @@ overview: 'Teem is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   Teem''s developer surface includes documentation, support, engineering blog, pricing, and 9 more developer resources.'
-random_paper: 9
+random_paper: 19
 score:
   band: emerging
   composite: 18.4
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 32.9
     contract_governance: 0.0
@@ -124,21 +128,21 @@ score:
     developer_ergonomics: 16.7
     discoverability: 48.2
     operational_transparency: 26.3
-  previous_composite: 18.3
+  previous_composite: 18.4
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/teem/refs/heads/main/screenshots/teem-2026-09-02T162715.png
+screenshot: https://apis.io/screenshots/teem/teem-2026-09-02T162715.png
 security:
 - kind: domain-security
   name: Teem Domain Security

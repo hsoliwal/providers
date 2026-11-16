@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -65,12 +69,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/faks-co
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/faks/refs/heads/main/security/faks-domain-security.yml
+  href: https://artifacts.apis.io/faks/security/faks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/faks-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/faks/refs/heads/main/llms/faks-llms.txt
+  href: https://artifacts.apis.io/faks/llms/faks-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/faks-llms.txt
@@ -86,7 +90,7 @@ overview: 'Faks is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   Faks'' developer surface includes engineering blog, pricing, and 7 more developer resources.'
-random_paper: 3
+random_paper: 13
 score:
   band: emerging
   composite: 13.8
@@ -120,14 +124,14 @@ score:
     regime: Health
     regime_id: health
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/faks/refs/heads/main/screenshots/faks-2026-07-25T214200.png
+screenshot: https://apis.io/screenshots/faks/faks-2026-07-25T214200.png
 security:
 - kind: domain-security
   name: Faks Domain Security

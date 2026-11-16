@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Everstream Analytics platform API surface (marketed as the Reveal API for real-time incident risk on entities, locations and lanes, and the Explore API for long-range planning data). It powers the
@@ -47,12 +50,12 @@ asyncapis:
   slug: everstream-analytics-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/everstream-analytics/refs/heads/main/mcp/everstream-analytics-mcp.yml
+  href: https://artifacts.apis.io/everstream-analytics/mcp/everstream-analytics-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/everstream-analytics-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/everstream-analytics/refs/heads/main/security/everstream-analytics-domain-security.yml
+  href: https://artifacts.apis.io/everstream-analytics/security/everstream-analytics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/everstream-analytics-domain-security.yml
@@ -105,42 +108,42 @@ common:
   type: Compliance
   url: https://www.everstream.ai/articles/everstreams-new-soc-2-compliance-enhances-supply-chain-security/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/everstream-analytics/refs/heads/main/conformance/everstream-analytics-conformance.yml
+  href: https://artifacts.apis.io/everstream-analytics/conformance/everstream-analytics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/everstream-analytics-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/everstream-analytics/refs/heads/main/authentication/everstream-analytics-authentication.yml
+  href: https://artifacts.apis.io/everstream-analytics/authentication/everstream-analytics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/everstream-analytics-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/everstream-analytics/refs/heads/main/well-known/everstream-analytics-well-known.yml
+  href: https://artifacts.apis.io/everstream-analytics/well-known/everstream-analytics-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/everstream-analytics-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/everstream-analytics/refs/heads/main/asyncapi/everstream-analytics-webhooks.yml
+  href: https://artifacts.apis.io/everstream-analytics/asyncapi/everstream-analytics-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/everstream-analytics-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/everstream-analytics/refs/heads/main/conventions/everstream-analytics-conventions.yml
+  href: https://artifacts.apis.io/everstream-analytics/conventions/everstream-analytics-conventions.yml
   title: ''
   type: Conventions
   url: conventions/everstream-analytics-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/everstream-analytics/refs/heads/main/lifecycle/everstream-analytics-lifecycle.yml
+  href: https://artifacts.apis.io/everstream-analytics/lifecycle/everstream-analytics-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/everstream-analytics-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/everstream-analytics/refs/heads/main/packages/everstream-analytics-packages.yml
+  href: https://artifacts.apis.io/everstream-analytics/packages/everstream-analytics-packages.yml
   title: ''
   type: Packages
   url: packages/everstream-analytics-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/everstream-analytics/refs/heads/main/llms/everstream-analytics-llms.txt
+  href: https://artifacts.apis.io/everstream-analytics/llms/everstream-analytics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/everstream-analytics-llms.txt
@@ -168,12 +171,12 @@ overview: 'Everstream Analytics is listed with 1 API on the [APIs.io](https://ap
 
 
   Everstream Analytics'' developer surface includes engineering blog, support, authentication, and 20 more developer resources.'
-random_paper: 9
+random_paper: 11
 score:
   band: thin
   composite: 32.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -197,14 +200,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/everstream-analytics/refs/heads/main/screenshots/everstream-analytics-2026-08-07T165038.png
+screenshot: https://apis.io/screenshots/everstream-analytics/everstream-analytics-2026-08-07T165038.png
 security:
 - kind: authentication
   name: Everstream Analytics Authentication

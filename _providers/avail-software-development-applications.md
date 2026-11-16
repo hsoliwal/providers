@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,27 +37,47 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/avail-software-development-applications/refs/heads/main/llms/avail-software-development-applications-llms.txt
-  title: ''
-  type: LLMsTxt
-  url: llms/avail-software-development-applications-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avail-software-development-applications/refs/heads/main/well-known/avail-software-development-applications-clarity-security.txt
+  href: https://artifacts.apis.io/avail-software-development-applications/well-known/avail-software-development-applications-clarity-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/avail-software-development-applications-clarity-security.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/avail-software-development-applications/refs/heads/main/plans/avail-software-development-applications-plans-pricing.yml
+  title: ''
+  type: PrivacyPolicy
+  url: https://docs.availproject.org/privacy
+- group: build
+  title: ''
+  type: GitHubOrganization
+  url: https://github.com/availproject
+- group: start
+  title: ''
+  type: GettingStarted
+  url: https://docs.availproject.org/docs/da/get-started
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://docs.availproject.org/
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://docs.availproject.org/docs/da/api-reference
+- group: agent
+  href: https://artifacts.apis.io/avail-software-development-applications/llms/avail-software-development-applications-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/avail-software-development-applications-llms.txt
+- group: commercial
+  href: https://artifacts.apis.io/avail-software-development-applications/plans/avail-software-development-applications-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/avail-software-development-applications-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/avail-software-development-applications/refs/heads/main/changelog/avail-software-development-applications-changelog.yml
+  href: https://artifacts.apis.io/avail-software-development-applications/changelog/avail-software-development-applications-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/avail-software-development-applications-changelog.yml
@@ -52,17 +86,17 @@ common:
   type: Security
   url: https://clarity.com/vdp
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/avail-software-development-applications/refs/heads/main/well-known/avail-software-development-applications-well-known.yml
+  href: https://artifacts.apis.io/avail-software-development-applications/well-known/avail-software-development-applications-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/avail-software-development-applications-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/avail-software-development-applications/refs/heads/main/hosts/avail-software-development-applications-hosts.yml
+  href: https://artifacts.apis.io/avail-software-development-applications/hosts/avail-software-development-applications-hosts.yml
   title: ''
   type: Hosts
   url: hosts/avail-software-development-applications-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/avail-software-development-applications/refs/heads/main/vendors/avail-software-development-applications-vendors.yml
+  href: https://artifacts.apis.io/avail-software-development-applications/vendors/avail-software-development-applications-vendors.yml
   title: ''
   type: Vendors
   url: vendors/avail-software-development-applications-vendors.yml
@@ -87,12 +121,12 @@ common:
   type: Blog
   url: https://blog.getavail.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avail-software-development-applications/refs/heads/main/security/avail-software-development-applications-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/avail-software-development-applications/security/avail-software-development-applications-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/avail-software-development-applications-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avail-software-development-applications/refs/heads/main/security/avail-software-development-applications-domain-security.yml
+  href: https://artifacts.apis.io/avail-software-development-applications/security/avail-software-development-applications-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/avail-software-development-applications-domain-security.yml
@@ -101,13 +135,13 @@ common:
   type: Website
   url: https://www.availproject.org/
 coverage:
-  checked: 2026-09-26
+  checked: '2026-09-26'
   detail: The company website provides no developer program or API documentation.
   evidence:
   - status: 200
     url: https://www.getavail.com
   reason: no-developer-program
-  state: unreadable
+  state: none
 created: '2026-09-26'
 description: Avail offers a content management system for architecture, engineering, and construction (AEC) teams that use Revit, AutoCAD, and Civil 3D. The platform lets firms organize, search, and reuse technical content such as block libraries, drawings, and PDFs across multiple file types and storage services. It integrates with existing infrastructure like OneDrive, BIM360, and Egnyte, and provides visual navigation tools such as thumbnails and channel cards.
 image: https://cdn.prod.website-files.com/69dfc405efb79040457a8ff2/6a85f2b2111a9d8b58e64733_OG-AVAIL%20standard.png
@@ -119,31 +153,31 @@ network: true
 overview: 'Avail Software Development Applications is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Content Management, AEC, Revit, AutoCAD, and Civil 3D.
 
 
-  Avail Software Development Applications'' developer surface includes changelog, signup flow, pricing, engineering blog, and 12 more developer resources.'
+  Avail Software Development Applications'' developer surface includes getting-started guide, documentation, API reference, changelog, signup flow, pricing, engineering blog, and 14 more developer resources.'
 plans:
 - name: Avail Software Development Applications Plans Pricing
   plan_count: 4
   slug: avail-software-development-applications-plans-pricing
-random_paper: 5
+random_paper: 1
 score:
-  band: emerging
-  composite: 23.6
+  band: thin
+  composite: 27.0
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 3.4
   facets:
-    access_clarity: 65.8
+    access_clarity: 59.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 2.4
+    developer_ergonomics: 29.8
     discoverability: 55.4
-    operational_transparency: 26.3
-  previous_composite: 23.5
+    operational_transparency: 18.4
+  previous_composite: 23.6
   provenance:
     mcp: unknown
   regulatory:
@@ -151,15 +185,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/avail-software-development-applications/refs/heads/main/screenshots/avail-software-development-applications-2026-10-11T101031.png
+screenshot: https://apis.io/screenshots/avail-software-development-applications/avail-software-development-applications-2026-10-11T101031.png
 security:
 - kind: domain-security
   name: Avail Software Development Applications Domain Security

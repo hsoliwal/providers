@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.2
-  scored_at: '2026-10-17'
+  score: 25.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -79,9 +85,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Tatum Data API
   slug: open-tatum-data-api
 - collection_type: open
@@ -92,22 +95,22 @@ collections:
   slug: open-tatum
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tatum/refs/heads/main/agentic-access/tatum-agentic-access.yml
+  href: https://artifacts.apis.io/tatum/agentic-access/tatum-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tatum-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tatum/refs/heads/main/security/tatum-trust-center.yml
+  href: https://artifacts.apis.io/tatum/security/tatum-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/tatum-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tatum/refs/heads/main/security/tatum-domain-security.yml
+  href: https://artifacts.apis.io/tatum/security/tatum-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tatum-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tatum/refs/heads/main/authentication/tatum-authentication.yml
+  href: https://artifacts.apis.io/tatum/authentication/tatum-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tatum-authentication.yml
@@ -128,17 +131,17 @@ common:
   type: Website
   url: https://tatum.io/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tatum/refs/heads/main/plans/tatum-plans-pricing.yml
+  href: https://artifacts.apis.io/tatum/plans/tatum-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tatum-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tatum/refs/heads/main/rate-limits/tatum-rate-limits.yml
+  href: https://artifacts.apis.io/tatum/rate-limits/tatum-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tatum-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tatum/refs/heads/main/finops/tatum-finops.yml
+  href: https://artifacts.apis.io/tatum/finops/tatum-finops.yml
   title: ''
   type: FinOps
   url: finops/tatum-finops.yml
@@ -169,35 +172,51 @@ network: true
 overview: 'Tatum publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data API, Rates API, and 7 more. Tagged areas include Web3, Blockchain, RPC, Multi-Chain, and Wallets.
 
 
+  The Tatum catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Tatum''s developer surface includes authentication, engineering blog, and 10 more developer resources.'
 plans:
 - name: Tatum Plans Pricing
   plan_count: 5
   slug: tatum-plans-pricing
-random_paper: 5
+random_paper: 3
 rate_limits:
 - limit_count: 3
   name: Tatum Rate Limits
   slug: tatum-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 82
+  extends:
+  - spectral:oas
+  name: Tatum API Rules
+  rule_count: 41
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 1
+    warn: 1
+  slug: tatum-rules
 score:
   band: thin
-  composite: 27.4
+  composite: 30.0
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 18
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.9
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 49.0
-    developer_ergonomics: 19.0
+    developer_ergonomics: 23.8
     discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 29.0
+  previous_composite: 29.1
   provenance:
     agentic_access: derived
     contracts:
@@ -212,14 +231,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/tatum/refs/heads/main/screenshots/tatum-2026-06-20T194929.png
+screenshot: https://apis.io/screenshots/tatum/tatum-2026-06-20T194929.png
 security:
 - kind: authentication
   name: Tatum Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 25.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -75,11 +81,8 @@ apis:
   description: Tobacco product problem reports.
   name: Food and Drug Administration Tobacco API
   slug: food-and-drug-administration-tobacco-api
-artifact_total: 21
+artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: openFDA Animal & Veterinary API
   slug: open-food-and-drug-administration-animal-veterinary-api
@@ -103,32 +106,32 @@ collections:
   slug: open-openfda
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/food-and-drug-administration/refs/heads/main/plans/food-and-drug-administration-plans-pricing.yml
+  href: https://artifacts.apis.io/food-and-drug-administration/plans/food-and-drug-administration-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/food-and-drug-administration-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/food-and-drug-administration/refs/heads/main/rate-limits/food-and-drug-administration-rate-limits.yml
+  href: https://artifacts.apis.io/food-and-drug-administration/rate-limits/food-and-drug-administration-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/food-and-drug-administration-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/food-and-drug-administration/refs/heads/main/finops/food-and-drug-administration-finops.yml
+  href: https://artifacts.apis.io/food-and-drug-administration/finops/food-and-drug-administration-finops.yml
   title: ''
   type: FinOps
   url: finops/food-and-drug-administration-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/food-and-drug-administration/refs/heads/main/agentic-access/food-and-drug-administration-agentic-access.yml
+  href: https://artifacts.apis.io/food-and-drug-administration/agentic-access/food-and-drug-administration-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/food-and-drug-administration-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/food-and-drug-administration/refs/heads/main/security/food-and-drug-administration-domain-security.yml
+  href: https://artifacts.apis.io/food-and-drug-administration/security/food-and-drug-administration-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/food-and-drug-administration-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/food-and-drug-administration/refs/heads/main/authentication/food-and-drug-administration-authentication.yml
+  href: https://artifacts.apis.io/food-and-drug-administration/authentication/food-and-drug-administration-authentication.yml
   title: ''
   type: Authentication
   url: authentication/food-and-drug-administration-authentication.yml
@@ -162,7 +165,7 @@ finops:
 - has_sources: false
   method: generated
   name: Food And Drug Administration Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: food-and-drug-administration-finops
   template: true
@@ -183,7 +186,7 @@ plans:
 - name: Food And Drug Administration Plans Pricing
   plan_count: 3
   slug: food-and-drug-administration-plans-pricing
-random_paper: 16
+random_paper: 2
 rate_limits:
 - limit_count: 5
   name: Food And Drug Administration Rate Limits
@@ -204,13 +207,13 @@ score:
   band: thin
   composite: 29.7
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 43.0
     catalog_earned_first_party: 0.0
     catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 0.0
@@ -223,7 +226,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 31.3
+  previous_composite: 29.7
   provenance:
     agentic_access: derived
     contracts:
@@ -237,14 +240,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/food-and-drug-administration/refs/heads/main/screenshots/food-and-drug-administration-2026-06-20T181356.png
+screenshot: https://apis.io/screenshots/food-and-drug-administration/food-and-drug-administration-2026-06-20T181356.png
 security:
 - kind: authentication
   name: Food And Drug Administration Authentication

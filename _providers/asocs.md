@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/asocs/refs/heads/main/hosts/asocs-hosts.yml
+  href: https://artifacts.apis.io/asocs/hosts/asocs-hosts.yml
   title: ''
   type: Hosts
   url: hosts/asocs-hosts.yml
@@ -57,7 +70,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/asocscloud
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/asocs/refs/heads/main/security/asocs-domain-security.yml
+  href: https://artifacts.apis.io/asocs/security/asocs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/asocs-domain-security.yml
@@ -86,23 +99,23 @@ overview: 'Asocs is profiled on the [APIs.io](https://apis.io/) network. Tagged 
   Asocs'' developer surface includes documentation and 8 more developer resources.'
 random_paper: 9
 score:
-  band: emerging
-  composite: 13.1
+  band: minimal
+  composite: 8.1
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.0
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 19.0
-    discoverability: 46.4
-    operational_transparency: 5.3
+    developer_ergonomics: 9.5
+    discoverability: 45.5
+    operational_transparency: 2.6
   previous_composite: 13.1
   provenance:
     mcp: unknown
@@ -111,15 +124,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 9.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/asocs/refs/heads/main/screenshots/asocs-2026-10-11T100542.png
+screenshot: https://apis.io/screenshots/asocs/asocs-2026-10-11T100542.png
 security:
 - kind: domain-security
   name: Asocs Domain Security

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.0
-  scored_at: '2026-10-17'
+  score: 35.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 4
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 95
   slug: immuta-agentic-access
   summary_line: 95 operations · 36 acting · 4 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - description: The Immuta Govern app API — the tenant-hosted REST surface for registering data sources and connections, authoring data, subscription and write policies, managing domains, projects, purposes, tags, fr
   name: Immuta Govern API
@@ -102,7 +105,7 @@ apis:
   description: APIs used to retrieve metadata settings
   name: Immuta Settings API
   slug: immuta-settings-api
-artifact_total: 20
+artifact_total: 26
 asyncapis:
 - description: ''
   name: Immuta Webhooks
@@ -113,12 +116,17 @@ collections:
   slug: open-immuta-marketplace-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/overlays/immuta-marketplace-api-overlay.yaml
+  href: https://artifacts.apis.io/immuta/capabilities/immuta-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/immuta-capability-edges.yml
+- group: other
+  href: https://artifacts.apis.io/immuta/overlays/immuta-marketplace-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/immuta-marketplace-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/agentic-access/immuta-agentic-access.yml
+  href: https://artifacts.apis.io/immuta/agentic-access/immuta-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/immuta-agentic-access.yml
@@ -159,7 +167,7 @@ common:
   type: ChangeLog
   url: https://changelog.immuta.com/en
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/changelog/immuta-changelog.yml
+  href: https://artifacts.apis.io/immuta/changelog/immuta-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/immuta-changelog.yml
@@ -172,7 +180,7 @@ common:
   type: Deprecation
   url: https://documentation.immuta.com/saas/releases/deprecations
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/lifecycle/immuta-lifecycle.yml
+  href: https://artifacts.apis.io/immuta/lifecycle/immuta-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/immuta-lifecycle.yml
@@ -189,7 +197,7 @@ common:
   type: Login
   url: https://app.immutacloud.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/security/immuta-trust-center.yml
+  href: https://artifacts.apis.io/immuta/security/immuta-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/immuta-trust-center.yml
@@ -206,67 +214,67 @@ common:
   type: Security
   url: https://bugcrowd.com/61d7ba4d-be53-4704-9a73-761d6f108df9/external/report
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/security/immuta-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/immuta/security/immuta-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/immuta-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/security/immuta-domain-security.yml
+  href: https://artifacts.apis.io/immuta/security/immuta-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/immuta-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/conformance/immuta-conformance.yml
+  href: https://artifacts.apis.io/immuta/conformance/immuta-conformance.yml
   title: ''
   type: Conformance
   url: conformance/immuta-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/authentication/immuta-authentication.yml
+  href: https://artifacts.apis.io/immuta/authentication/immuta-authentication.yml
   title: ''
   type: Authentication
   url: authentication/immuta-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/conventions/immuta-conventions.yml
+  href: https://artifacts.apis.io/immuta/conventions/immuta-conventions.yml
   title: ''
   type: Conventions
   url: conventions/immuta-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/conventions/immuta-conventions.yml
+  href: https://artifacts.apis.io/immuta/conventions/immuta-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/immuta-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/packages/immuta-packages.yml
+  href: https://artifacts.apis.io/immuta/packages/immuta-packages.yml
   title: ''
   type: Packages
   url: packages/immuta-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/cli/immuta-cli.yml
+  href: https://artifacts.apis.io/immuta/cli/immuta-cli.yml
   title: ''
   type: CLI
   url: cli/immuta-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/mcp/immuta-mcp.yml
+  href: https://artifacts.apis.io/immuta/mcp/immuta-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/immuta-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/mcp/immuta-tool-crosswalk.yml
+  href: https://artifacts.apis.io/immuta/mcp/immuta-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/immuta-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/immuta/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/asyncapi/immuta-webhooks.yml
+  href: https://artifacts.apis.io/immuta/asyncapi/immuta-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/immuta-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/llms/immuta-llms.txt
+  href: https://artifacts.apis.io/immuta/llms/immuta-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/immuta-llms.txt
@@ -302,37 +310,50 @@ network: true
 overview: 'Immuta publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Request API, Asset API, Auth API, and 9 more. Tagged areas include Company, Data Governance, Data Access Control, Data Security, and Privacy.
 
 
-  The Immuta catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Immuta catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Immuta''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, authentication, and 32 more developer resources.'
-random_paper: 15
+  Immuta''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, authentication, and 33 more developer resources.'
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 114
+  extends:
+  - spectral:oas
+  name: Immuta API Rules
+  rule_count: 73
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 4
+    warn: 11
+  slug: immuta-rules
 score:
   band: strong
-  composite: 54.3
+  composite: 57.3
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.3
   facets:
     access_clarity: 43.4
-    contract_governance: 18.2
-    contract_quality: 58.4
+    contract_governance: 31.8
+    contract_quality: 63.6
     developer_ergonomics: 66.1
     discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 54.2
+  previous_composite: 56.0
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 11
     mcp: first-party
     skills: derived
@@ -342,13 +363,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/immuta/refs/heads/main/screenshots/immuta-2026-08-07T170630.png
+screenshot: https://apis.io/screenshots/immuta/immuta-2026-08-07T170630.png
 security:
 - kind: authentication
   name: Immuta Authentication
@@ -366,6 +387,18 @@ security:
   name: Immuta Trust Center
   slug: immuta-trust-center
   summary_line: SOC 2, ISO 27001, PCI DSS, GDPR
+skill_count: 5
+skills:
+- name: Publish an Immuta data product
+  slug: immuta-publish-a-data-product
+- name: Request an Immuta masking exception
+  slug: immuta-request-a-masking-exception
+- name: Request access to an Immuta data product
+  slug: immuta-request-access-to-a-data-product
+- name: Review and determine Immuta access requests
+  slug: immuta-review-and-approve-access-requests
+- name: Subscribe to Immuta events with webhooks
+  slug: immuta-subscribe-to-immuta-events
 slug: immuta
 tags:
 - Company

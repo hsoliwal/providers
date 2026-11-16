@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/novakid/refs/heads/main/security/novakid-domain-security.yml
+  href: https://artifacts.apis.io/novakid/security/novakid-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/novakid-domain-security.yml
@@ -80,22 +83,22 @@ common:
   type: StatusPage
   url: https://status.novakidschool.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/novakid/refs/heads/main/lifecycle/novakid-lifecycle.yml
+  href: https://artifacts.apis.io/novakid/lifecycle/novakid-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/novakid-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/novakid/refs/heads/main/plans/novakid-plans-pricing.yml
+  href: https://artifacts.apis.io/novakid/plans/novakid-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/novakid-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/novakid/refs/heads/main/rate-limits/novakid-rate-limits.yml
+  href: https://artifacts.apis.io/novakid/rate-limits/novakid-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/novakid-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/novakid/refs/heads/main/llms/novakid-llms.txt
+  href: https://artifacts.apis.io/novakid/llms/novakid-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/novakid-llms.txt
@@ -133,7 +136,7 @@ plans:
 - name: Novakid Plans Pricing
   plan_count: 0
   slug: novakid-plans-pricing
-random_paper: 0
+random_paper: 4
 rate_limits:
 - limit_count: 0
   name: Novakid Rate Limits
@@ -142,7 +145,7 @@ score:
   band: emerging
   composite: 17.2
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -168,14 +171,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/novakid/refs/heads/main/screenshots/novakid-2026-09-02T150804.png
+screenshot: https://apis.io/screenshots/novakid/novakid-2026-09-02T150804.png
 security:
 - kind: domain-security
   name: Novakid Domain Security

@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: API reference for Oxford Nanopore Technologies services
@@ -37,7 +50,7 @@ apis:
 artifact_total: 5
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oxford-nanopore-technologies/refs/heads/main/rules/oxford-nanopore-technologies-rules.yml
+  href: https://artifacts.apis.io/oxford-nanopore-technologies/rules/oxford-nanopore-technologies-rules.yml
   title: ''
   type: Spectral
   url: rules/oxford-nanopore-technologies-rules.yml
@@ -46,37 +59,37 @@ common:
   type: Security
   url: https://nanoporetech.com/products/analyse/vulnerability-disclosure-guidance
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oxford-nanopore-technologies/refs/heads/main/conformance/oxford-nanopore-technologies-conformance.yml
+  href: https://artifacts.apis.io/oxford-nanopore-technologies/conformance/oxford-nanopore-technologies-conformance.yml
   title: ''
   type: Conformance
   url: conformance/oxford-nanopore-technologies-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oxford-nanopore-technologies/refs/heads/main/well-known/oxford-nanopore-technologies-security.txt
+  href: https://artifacts.apis.io/oxford-nanopore-technologies/well-known/oxford-nanopore-technologies-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/oxford-nanopore-technologies-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oxford-nanopore-technologies/refs/heads/main/well-known/oxford-nanopore-technologies-well-known.yml
+  href: https://artifacts.apis.io/oxford-nanopore-technologies/well-known/oxford-nanopore-technologies-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/oxford-nanopore-technologies-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/oxford-nanopore-technologies/refs/heads/main/hosts/oxford-nanopore-technologies-hosts.yml
+  href: https://artifacts.apis.io/oxford-nanopore-technologies/hosts/oxford-nanopore-technologies-hosts.yml
   title: ''
   type: Hosts
   url: hosts/oxford-nanopore-technologies-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/oxford-nanopore-technologies/refs/heads/main/vendors/oxford-nanopore-technologies-vendors.yml
+  href: https://artifacts.apis.io/oxford-nanopore-technologies/vendors/oxford-nanopore-technologies-vendors.yml
   title: ''
   type: Vendors
   url: vendors/oxford-nanopore-technologies-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/oxford-nanopore-technologies/refs/heads/main/packages/oxford-nanopore-technologies-packages.yml
+  href: https://artifacts.apis.io/oxford-nanopore-technologies/packages/oxford-nanopore-technologies-packages.yml
   title: ''
   type: SDKs
   url: packages/oxford-nanopore-technologies-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/oxford-nanopore-technologies/refs/heads/main/packages/oxford-nanopore-technologies-packages.yml
+  href: https://artifacts.apis.io/oxford-nanopore-technologies/packages/oxford-nanopore-technologies-packages.yml
   title: ''
   type: Packages
   url: packages/oxford-nanopore-technologies-packages.yml
@@ -113,12 +126,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/nanoporetech
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oxford-nanopore-technologies/refs/heads/main/security/oxford-nanopore-technologies-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/oxford-nanopore-technologies/security/oxford-nanopore-technologies-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/oxford-nanopore-technologies-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oxford-nanopore-technologies/refs/heads/main/security/oxford-nanopore-technologies-domain-security.yml
+  href: https://artifacts.apis.io/oxford-nanopore-technologies/security/oxford-nanopore-technologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/oxford-nanopore-technologies-domain-security.yml
@@ -149,7 +162,7 @@ overview: 'Oxford Nanopore Technologies is listed with 2 APIs on the [APIs.io](h
 
 
   Oxford Nanopore Technologies'' developer surface includes support, signup flow, documentation, engineering blog, and 16 more developer resources.'
-random_paper: 16
+random_paper: 18
 rules:
 - authorship: generated
   effective_rule_count: 49
@@ -164,22 +177,24 @@ rules:
     warn: 1
   slug: oxford-nanopore-technologies-rules
 score:
-  band: thin
-  composite: 26.7
+  band: emerging
+  composite: 19.9
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 13
     catalog_earned: 36.5
     catalog_earned_first_party: 0.0
     catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.8
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 18.2
     contract_quality: 10.7
-    developer_ergonomics: 23.8
-    discoverability: 58.9
-    operational_transparency: 15.8
+    developer_ergonomics: 15.5
+    discoverability: 58.0
+    operational_transparency: 7.9
+  previous_composite: 26.7
   provenance:
     conformance: derived
     contracts:
@@ -193,13 +208,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 26.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/oxford-nanopore-technologies/oxford-nanopore-technologies-2026-11-03T140832.png
 security:
 - kind: domain-security
   name: Oxford Nanopore Technologies Domain Security

@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
@@ -90,47 +95,47 @@ common:
   type: PrivacyPolicy
   url: https://www.cookieyes.com/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cookieyes/refs/heads/main/llms/cookieyes-llms.txt
+  href: https://artifacts.apis.io/cookieyes/llms/cookieyes-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cookieyes-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cookieyes/refs/heads/main/well-known/cookieyes-well-known.yml
+  href: https://artifacts.apis.io/cookieyes/well-known/cookieyes-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cookieyes-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cookieyes/refs/heads/main/mcp/cookieyes-mcp.yml
+  href: https://artifacts.apis.io/cookieyes/mcp/cookieyes-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/cookieyes-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cookieyes/refs/heads/main/authentication/cookieyes-authentication.yml
+  href: https://artifacts.apis.io/cookieyes/authentication/cookieyes-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cookieyes-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cookieyes/refs/heads/main/scopes/cookieyes-scopes.yml
+  href: https://artifacts.apis.io/cookieyes/scopes/cookieyes-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cookieyes-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cookieyes/refs/heads/main/security/cookieyes-domain-security.yml
+  href: https://artifacts.apis.io/cookieyes/security/cookieyes-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cookieyes-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cookieyes/refs/heads/main/security/cookieyes-trust-center.yml
+  href: https://artifacts.apis.io/cookieyes/security/cookieyes-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/cookieyes-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cookieyes/refs/heads/main/security/cookieyes-trust-center.yml
+  href: https://artifacts.apis.io/cookieyes/security/cookieyes-trust-center.yml
   title: ''
   type: Compliance
   url: security/cookieyes-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cookieyes/refs/heads/main/conformance/cookieyes-conformance.yml
+  href: https://artifacts.apis.io/cookieyes/conformance/cookieyes-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cookieyes-conformance.yml
@@ -150,7 +155,7 @@ overview: 'Cookieyes is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Cookieyes'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 15 more developer resources.'
-random_paper: 3
+random_paper: 11
 scopes:
 - name: Cookieyes Scopes
   scope_count: 5
@@ -160,7 +165,7 @@ score:
   band: thin
   composite: 33.8
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -188,14 +193,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cookieyes/refs/heads/main/screenshots/cookieyes-2026-07-25T210357.png
+screenshot: https://apis.io/screenshots/cookieyes/cookieyes-2026-07-25T210357.png
 security:
 - kind: authentication
   name: Cookieyes Authentication

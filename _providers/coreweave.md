@@ -1,16 +1,16 @@
 ---
 access_model:
   confidence: medium
-  label: Free · Self-serve signup
-  onboarding: self-serve
-  pricing: free
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 5
   slug: coreweave-agentic-access
   summary_line: 5 operations · 3 acting
-api_count: 1
+api_count: 2
 apis:
 - description: The CKS API provisions and manages CoreWeave Kubernetes Service clusters and node pools on bare-metal GPU and CPU hardware. It exposes operations for cluster lifecycle, node pool configuration, and ha
   name: CoreWeave Kubernetes Service API
@@ -68,9 +71,6 @@ apis:
 artifact_total: 28
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: CoreWeave Kubernetes Service (CKS) Clusters API
   slug: open-coreweave-clusters-api
 - collection_type: open
@@ -78,42 +78,42 @@ collections:
   slug: open-coreweave
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/rate-limits/coreweave-rate-limits.yml
+  href: https://artifacts.apis.io/coreweave/rate-limits/coreweave-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/coreweave-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/finops/coreweave-finops.yml
+  href: https://artifacts.apis.io/coreweave/finops/coreweave-finops.yml
   title: ''
   type: FinOps
   url: finops/coreweave-finops.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/plans/coreweave-plans-pricing.yml
+  href: https://artifacts.apis.io/coreweave/plans/coreweave-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/coreweave-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/capabilities/coreweave-capability-edges.yml
+  href: https://artifacts.apis.io/coreweave/capabilities/coreweave-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/coreweave-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/agentic-access/coreweave-agentic-access.yml
+  href: https://artifacts.apis.io/coreweave/agentic-access/coreweave-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/coreweave-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/security/coreweave-trust-center.yml
+  href: https://artifacts.apis.io/coreweave/security/coreweave-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/coreweave-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/security/coreweave-domain-security.yml
+  href: https://artifacts.apis.io/coreweave/security/coreweave-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coreweave-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/authentication/coreweave-authentication.yml
+  href: https://artifacts.apis.io/coreweave/authentication/coreweave-authentication.yml
   title: ''
   type: Authentication
   url: authentication/coreweave-authentication.yml
@@ -199,13 +199,13 @@ features:
 - description: Ephemeral compute sandboxes for short-lived, isolated workloads.
   name: CoreWeave Sandbox
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Coreweave Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: hour
+  service_category: ''
   slug: coreweave-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coreweave.png
 integrations:
 - description: Native Kubernetes API surface across CKS clusters with standard kubectl and Helm workflows.
@@ -224,6 +224,9 @@ network: true
 overview: 'CoreWeave publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Clusters API, and 5 more. Tagged areas include Artificial Intelligence, Cloud, GPU, HPC, and Inference.
 
 
+  The CoreWeave catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   CoreWeave''s developer surface includes authentication, documentation, developer portal, pricing, engineering blog, support, code examples, and 17 more developer resources.'
 plans:
 - name: Coreweave Plans Pricing
@@ -232,50 +235,63 @@ plans:
 - name: Coreweave Price Estimates
   plan_count: 0
   slug: coreweave-price-estimates
-random_paper: 15
+random_paper: 1
 rate_limits:
 - limit_count: 2
   name: Coreweave Rate Limits
   slug: coreweave-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: CoreWeave API Rules
+  rule_count: 46
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 1
+  slug: coreweave-rules
 score:
   band: developing
-  composite: 41.4
+  composite: 42.0
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 46.0
+    artifact_dirs: 19
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 69.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.3
+  delta: 0.4
   facets:
-    access_clarity: 50.0
-    contract_governance: 0.0
-    contract_quality: 52.0
+    access_clarity: 57.9
+    contract_governance: 13.6
+    contract_quality: 41.8
     developer_ergonomics: 47.6
     discoverability: 64.3
     operational_transparency: 23.7
-  previous_composite: 44.7
+  previous_composite: 41.6
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 50.0
       derived: 0
-      marker_coverage: 0.0
-      total: 1
+      marker_coverage: 57.1
+      total: 7
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/coreweave/refs/heads/main/screenshots/coreweave-2026-06-20T175029.png
+screenshot: https://apis.io/screenshots/coreweave/coreweave-2026-06-20T175029.png
 security:
 - kind: authentication
   name: Coreweave Authentication

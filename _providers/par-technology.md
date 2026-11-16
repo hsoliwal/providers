@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.2
-  scored_at: '2026-10-17'
+  score: 41.5
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: Developer portal for PAR Technology APIs and integrations.
@@ -57,27 +74,27 @@ asyncapis:
   slug: par-technology-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/rules/par-technology-rules.yml
+  href: https://artifacts.apis.io/par-technology/rules/par-technology-rules.yml
   title: ''
   type: Spectral
   url: rules/par-technology-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/json-ld/par-technology-context.jsonld
+  href: https://artifacts.apis.io/par-technology/json-ld/par-technology-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/par-technology-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/vocabulary/par-technology-vocabulary.yml
+  href: https://artifacts.apis.io/par-technology/vocabulary/par-technology-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/par-technology-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/asyncapi/par-technology-webhooks.yml
+  href: https://artifacts.apis.io/par-technology/asyncapi/par-technology-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/par-technology-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/data-model/par-technology-data-model.yml
+  href: https://artifacts.apis.io/par-technology/data-model/par-technology-data-model.yml
   title: ''
   type: DataModel
   url: data-model/par-technology-data-model.yml
@@ -86,32 +103,32 @@ common:
   type: Compliance
   url: https://trust.partech.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/authentication/par-technology-authentication.yml
+  href: https://artifacts.apis.io/par-technology/authentication/par-technology-authentication.yml
   title: ''
   type: Authentication
   url: authentication/par-technology-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/conformance/par-technology-conformance.yml
+  href: https://artifacts.apis.io/par-technology/conformance/par-technology-conformance.yml
   title: ''
   type: Conformance
   url: conformance/par-technology-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/llms/par-technology-llms.txt
+  href: https://artifacts.apis.io/par-technology/llms/par-technology-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/par-technology-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/well-known/par-technology-well-known.yml
+  href: https://artifacts.apis.io/par-technology/well-known/par-technology-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/par-technology-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/hosts/par-technology-hosts.yml
+  href: https://artifacts.apis.io/par-technology/hosts/par-technology-hosts.yml
   title: ''
   type: Hosts
   url: hosts/par-technology-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/vendors/par-technology-vendors.yml
+  href: https://artifacts.apis.io/par-technology/vendors/par-technology-vendors.yml
   title: ''
   type: Vendors
   url: vendors/par-technology-vendors.yml
@@ -136,12 +153,12 @@ common:
   type: Documentation
   url: https://developers.partech.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/security/par-technology-trust-center.yml
+  href: https://artifacts.apis.io/par-technology/security/par-technology-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/par-technology-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/par-technology/refs/heads/main/security/par-technology-domain-security.yml
+  href: https://artifacts.apis.io/par-technology/security/par-technology-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/par-technology-domain-security.yml
@@ -229,7 +246,7 @@ overview: 'PAR Technology is listed with 5 APIs on the [APIs.io](https://apis.io
 
 
   PAR Technology''s developer surface includes authentication, getting-started guide, documentation, engineering blog, support, and 19 more developer resources.'
-random_paper: 0
+random_paper: 12
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -245,21 +262,23 @@ rules:
   slug: par-technology-rules
 score:
   band: thin
-  composite: 38.4
+  composite: 35.3
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 60.0
     catalog_earned_first_party: 0.0
     catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.1
   facets:
-    access_clarity: 36.8
+    access_clarity: 32.9
     contract_governance: 19.7
     contract_quality: 32.7
-    developer_ergonomics: 40.5
-    discoverability: 71.4
+    developer_ergonomics: 31.0
+    discoverability: 70.5
     operational_transparency: 7.9
+  previous_composite: 38.4
   provenance:
     conformance: derived
     contracts:
@@ -273,12 +292,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 27.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
+screenshot: https://apis.io/screenshots/par-technology/par-technology-2026-11-03T140923.png
 security:
 - kind: authentication
   name: Par Technology Authentication

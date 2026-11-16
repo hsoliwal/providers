@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -50,11 +53,8 @@ apis:
   description: Submit images for recognition and retrieve the resulting annotation.
   name: CloudSight Images API
   slug: cloudsight-images-api
-artifact_total: 6
+artifact_total: 7
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CloudSight Images API
   slug: open-cloudsight-images-api
@@ -64,12 +64,12 @@ common:
   type: Blog
   url: https://cloudsight.ai/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/overlays/cloudsight-images-overlay.yaml
+  href: https://artifacts.apis.io/cloudsight/overlays/cloudsight-images-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/cloudsight-images-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/security/cloudsight-domain-security.yml
+  href: https://artifacts.apis.io/cloudsight/security/cloudsight-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudsight-domain-security.yml
@@ -102,77 +102,77 @@ common:
   type: PrivacyPolicy
   url: https://cloudsight.ai/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/authentication/cloudsight-authentication.yml
+  href: https://artifacts.apis.io/cloudsight/authentication/cloudsight-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloudsight-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/conventions/cloudsight-conventions.yml
+  href: https://artifacts.apis.io/cloudsight/conventions/cloudsight-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cloudsight-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/errors/cloudsight-problem-types.yml
+  href: https://artifacts.apis.io/cloudsight/errors/cloudsight-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cloudsight-problem-types.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/examples/cloudsight-images-examples.yml
+  href: https://artifacts.apis.io/cloudsight/examples/cloudsight-images-examples.yml
   title: ''
   type: Examples
   url: examples/cloudsight-images-examples.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/data-model/cloudsight-data-model.yml
+  href: https://artifacts.apis.io/cloudsight/data-model/cloudsight-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cloudsight-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/conformance/cloudsight-conformance.yml
+  href: https://artifacts.apis.io/cloudsight/conformance/cloudsight-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloudsight-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/lifecycle/cloudsight-lifecycle.yml
+  href: https://artifacts.apis.io/cloudsight/lifecycle/cloudsight-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cloudsight-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/changelog/cloudsight-changelog.yml
+  href: https://artifacts.apis.io/cloudsight/changelog/cloudsight-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/cloudsight-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/sandbox/cloudsight-sandbox.yml
+  href: https://artifacts.apis.io/cloudsight/sandbox/cloudsight-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/cloudsight-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/packages/cloudsight-packages.yml
+  href: https://artifacts.apis.io/cloudsight/packages/cloudsight-packages.yml
   title: ''
   type: Packages
   url: packages/cloudsight-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/packages/cloudsight-packages.yml
+  href: https://artifacts.apis.io/cloudsight/packages/cloudsight-packages.yml
   title: ''
   type: SDKs
   url: packages/cloudsight-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/mcp/cloudsight-mcp.yml
+  href: https://artifacts.apis.io/cloudsight/mcp/cloudsight-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/cloudsight-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/cloudsight/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/agentic-access/cloudsight-agentic-access.yml
+  href: https://artifacts.apis.io/cloudsight/agentic-access/cloudsight-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cloudsight-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/llms/cloudsight-llms.txt
+  href: https://artifacts.apis.io/cloudsight/llms/cloudsight-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cloudsight-llms.txt
@@ -187,27 +187,43 @@ network: true
 overview: 'CloudSight publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Images API. Tagged areas include Company, Artificial Intelligence, Machine Learning, Computer Vision, and Image Recognition.
 
 
+  The CloudSight catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   CloudSight''s developer surface includes engineering blog, documentation, support, authentication, code examples, changelog, sandbox, and 18 more developer resources.'
-random_paper: 0
+random_paper: 22
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: CloudSight API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: cloudsight-rules
 score:
   band: thin
-  composite: 30.8
+  composite: 32.4
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 6.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 54.1
     developer_ergonomics: 35.1
     discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 30.2
+  previous_composite: 32.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -224,13 +240,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/screenshots/cloudsight-2026-08-17T080822.png
+screenshot: https://apis.io/screenshots/cloudsight/cloudsight-2026-08-17T080822.png
 security:
 - kind: authentication
   name: Cloudsight Authentication
@@ -240,6 +256,10 @@ security:
   name: Cloudsight Domain Security
   slug: cloudsight-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 1
+skills:
+- name: Describe an image with CloudSight
+  slug: cloudsight-describe-an-image
 slug: cloudsight
 tags:
 - Company

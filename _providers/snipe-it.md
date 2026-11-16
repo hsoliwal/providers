@@ -1,10 +1,25 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: unknown
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
     consent_identity: false
@@ -15,15 +30,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
-    well_known_catalog: true
+    well_known_catalog: false
   schema_version: '0.2'
-  score: 21.6
-  scored_at: '2026-10-17'
+  score: 22.2
+  scored_at: '2026-11-06'
+agentic_access:
+- acting_count: 2
+  human_in_the_loop: 0
+  name: Snipe It Agentic Access
+  operation_count: 7
+  slug: snipe-it-agentic-access
+  summary_line: 7 operations · 2 acting
 api_count: 5
 apis:
 - baseURL: http://your-snipe-it
@@ -51,45 +76,65 @@ apis:
   description: The Snipe IT API API from Snipe-IT — 1 operation(s) for snipe it api.
   name: Snipe-IT Snipe IT API
   slug: snipe-it-snipe-it-api-api
-artifact_total: 9
+artifact_total: 13
 common:
+- group: agent
+  href: https://artifacts.apis.io/snipe-it/agentic-access/snipe-it-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/snipe-it-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/snipe-it/refs/heads/main/plans/snipe-it-plans-pricing.yml
+  href: https://artifacts.apis.io/snipe-it/finops/snipe-it-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/snipe-it-finops.yml
+- group: design
+  href: https://artifacts.apis.io/snipe-it/vocabulary/snipe-it-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/snipe-it-vocabulary.yml
+- group: auth
+  href: https://artifacts.apis.io/snipe-it/authentication/snipe-it-authentication.yml
+  title: ''
+  type: Authentication
+  url: authentication/snipe-it-authentication.yml
+- group: commercial
+  href: https://artifacts.apis.io/snipe-it/plans/snipe-it-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/snipe-it-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/snipe-it/refs/heads/main/rules/snipe-it-rules.yml
+  href: https://artifacts.apis.io/snipe-it/rules/snipe-it-rules.yml
   title: ''
   type: Spectral
   url: rules/snipe-it-rules.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/snipe-it/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/snipe-it/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/snipe-it/refs/heads/main/cli/snipe-it-cli.yml
+  href: https://artifacts.apis.io/snipe-it/cli/snipe-it-cli.yml
   title: ''
   type: CLI
   url: cli/snipe-it-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/snipe-it/refs/heads/main/conformance/snipe-it-conformance.yml
+  href: https://artifacts.apis.io/snipe-it/conformance/snipe-it-conformance.yml
   title: ''
   type: Conformance
   url: conformance/snipe-it-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/snipe-it/refs/heads/main/well-known/snipe-it-well-known.yml
+  href: https://artifacts.apis.io/snipe-it/well-known/snipe-it-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/snipe-it-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/snipe-it/refs/heads/main/hosts/snipe-it-hosts.yml
+  href: https://artifacts.apis.io/snipe-it/hosts/snipe-it-hosts.yml
   title: ''
   type: Hosts
   url: hosts/snipe-it-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/snipe-it/refs/heads/main/vendors/snipe-it-vendors.yml
+  href: https://artifacts.apis.io/snipe-it/vendors/snipe-it-vendors.yml
   title: ''
   type: Vendors
   url: vendors/snipe-it-vendors.yml
@@ -98,12 +143,12 @@ common:
   type: Security
   url: https://snipeitapp.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/snipe-it/refs/heads/main/security/snipe-it-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/snipe-it/security/snipe-it-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/snipe-it-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/snipe-it/refs/heads/main/security/snipe-it-domain-security.yml
+  href: https://artifacts.apis.io/snipe-it/security/snipe-it-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/snipe-it-domain-security.yml
@@ -165,6 +210,14 @@ common:
   url: https://www.postman.com/snipe-it/workspace/snipe-it-public-collection
 created: '2026-10-14'
 description: Snipe-IT provides free, open‑source IT asset management software that helps organizations track, manage, and maintain their hardware, software, and other technology assets. The platform offers a robust REST API for integration, detailed reporting, user‑friendly interface, and strong security features such as 2FA, bcrypt hashing, and HTTPS‑only cookies. It is designed to replace spreadsheets with a powerful, scalable solution for asset lifecycle management, supporting both self‑hosted deployments and cloud‑based services.
+finops:
+- has_sources: true
+  method: derived
+  name: Snipe It Finops
+  primary_unit: seat
+  service_category: ''
+  slug: snipe-it-finops
+  template: false
 image: https://snipeitapp.com/img/desktop_snipe.png
 layout: provider
 modified: '2026-10-14'
@@ -177,43 +230,49 @@ overview: 'Snipe-IT is listed with 5 APIs on the [APIs.io](https://apis.io/) net
   The Snipe-IT catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Snipe-IT''s developer surface includes CLI, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 18 more developer resources.'
+  Snipe-IT''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, support, engineering blog, and 22 more developer resources.'
 plans:
 - name: Snipe It Plans Pricing
   plan_count: 7
   slug: snipe-it-plans-pricing
+- name: Snipe It Price Estimates
+  plan_count: 0
+  slug: snipe-it-price-estimates
 random_paper: 17
 rules:
 - authorship: generated
-  effective_rule_count: 49
+  effective_rule_count: 76
   extends:
   - spectral:oas
   name: Snipe-IT API Rules
-  rule_count: 8
+  rule_count: 35
   severity_counts:
-    error: 6
+    error: 32
     hint: 0
-    info: 1
+    info: 2
     warn: 1
   slug: snipe-it-rules
 score:
-  band: developing
-  composite: 44.2
+  band: thin
+  composite: 38.1
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 56.5
+    artifact_dirs: 24
+    catalog_earned: 60.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 58.5
+    catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.7
   facets:
-    access_clarity: 76.3
-    contract_governance: 18.2
+    access_clarity: 61.8
+    contract_governance: 22.0
     contract_quality: 11.1
-    developer_ergonomics: 63.6
+    developer_ergonomics: 50.5
     discoverability: 71.4
-    operational_transparency: 21.1
+    operational_transparency: 10.5
+  previous_composite: 45.8
   provenance:
+    agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
@@ -227,14 +286,20 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 26.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/snipe-it/snipe-it-2026-11-03T143412.png
 security:
+- kind: authentication
+  name: Snipe It Authentication
+  slug: snipe-it-authentication
+  summary_line: http · 1 scheme
 - kind: domain-security
   name: Snipe It Domain Security
   slug: snipe-it-domain-security

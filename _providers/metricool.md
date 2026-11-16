@@ -1,7 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -16,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 39.5
-  scored_at: '2026-10-17'
+  score: 38.4
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Metricool API for social media management and analytics.
@@ -645,65 +658,65 @@ apis:
   description: The X Activity API Webhook API from Metricool — 1 operation(s) for x activity api webhook.
   name: Metricool X Activity API Webhook API
   slug: metricool-x-activity-api-webhook-api
-artifact_total: 134
+artifact_total: 136
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/capabilities/metricool-capability-edges.yml
+  href: https://artifacts.apis.io/metricool/capabilities/metricool-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/metricool-capability-edges.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/rules/metricool-rules.yml
+  href: https://artifacts.apis.io/metricool/rules/metricool-rules.yml
   title: ''
   type: Spectral
   url: rules/metricool-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/json-ld/metricool-context.jsonld
+  href: https://artifacts.apis.io/metricool/json-ld/metricool-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/metricool-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/vocabulary/metricool-vocabulary.yml
+  href: https://artifacts.apis.io/metricool/vocabulary/metricool-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/metricool-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/conformance/metricool-conformance.yml
+  href: https://artifacts.apis.io/metricool/conformance/metricool-conformance.yml
   title: ''
   type: Conformance
   url: conformance/metricool-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/plans/metricool-plans-pricing.yml
+  href: https://artifacts.apis.io/metricool/plans/metricool-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/metricool-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/data-model/metricool-data-model.yml
+  href: https://artifacts.apis.io/metricool/data-model/metricool-data-model.yml
   title: ''
   type: DataModel
   url: data-model/metricool-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/errors/metricool-problem-types.yml
+  href: https://artifacts.apis.io/metricool/errors/metricool-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/metricool-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/llms/metricool-llms.txt
+  href: https://artifacts.apis.io/metricool/llms/metricool-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/metricool-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/well-known/metricool-well-known.yml
+  href: https://artifacts.apis.io/metricool/well-known/metricool-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/metricool-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/hosts/metricool-hosts.yml
+  href: https://artifacts.apis.io/metricool/hosts/metricool-hosts.yml
   title: ''
   type: Hosts
   url: hosts/metricool-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/vendors/metricool-vendors.yml
+  href: https://artifacts.apis.io/metricool/vendors/metricool-vendors.yml
   title: ''
   type: Vendors
   url: vendors/metricool-vendors.yml
@@ -740,7 +753,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/metricool
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/metricool/refs/heads/main/security/metricool-domain-security.yml
+  href: https://artifacts.apis.io/metricool/security/metricool-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/metricool-domain-security.yml
@@ -762,6 +775,14 @@ common:
   url: https://metricool.com/support
 created: '2026-10-14'
 description: Metricool is a social media management platform that helps creators, marketers, and agencies plan, schedule, and analyze content across multiple networks. It offers tools for content calendar, performance analytics, social ads reporting, and AI‑assisted post generation. Users can integrate Instagram, TikTok, YouTube, Threads, Twitter, and more, with features like hashtag tracking, competitor analysis, and campaign dashboards. Metricool also provides a certification program and educational resources for social media professionals.
+finops:
+- has_sources: true
+  method: derived
+  name: Metricool Finops
+  primary_unit: seat
+  service_category: ''
+  slug: metricool-finops
+  template: false
 image: https://metricool.com/wp-content/uploads/home-image-1.png
 json_schemas:
 - name: AdCampaign
@@ -803,7 +824,10 @@ plans:
 - name: Metricool Plans Pricing
   plan_count: 11
   slug: metricool-plans-pricing
-random_paper: 6
+- name: Metricool Price Estimates
+  plan_count: 0
+  slug: metricool-price-estimates
+random_paper: 14
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -819,21 +843,23 @@ rules:
   slug: metricool-rules
 score:
   band: developing
-  composite: 51.7
+  composite: 44.1
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 74.8
+    artifact_dirs: 20
+    catalog_earned: 77.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 40.3
+    catalog_gap: 37.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.2
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 22.0
     contract_quality: 54.4
-    developer_ergonomics: 16.7
-    discoverability: 75.0
-    operational_transparency: 36.8
+    developer_ergonomics: 8.3
+    discoverability: 74.1
+    operational_transparency: 18.4
+  previous_composite: 53.3
   provenance:
     conformance: derived
     contracts:
@@ -847,12 +873,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 38.9
+screenshot: https://apis.io/screenshots/metricool/metricool-2026-11-03T135545.png
 security:
 - kind: domain-security
   name: Metricool Domain Security

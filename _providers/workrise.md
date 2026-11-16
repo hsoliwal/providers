@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -65,30 +69,34 @@ common:
   type: GitHubOrganization
   url: https://github.com/rigup
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workrise/refs/heads/main/security/workrise-trust-center.yml
+  href: https://artifacts.apis.io/workrise/security/workrise-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/workrise-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workrise/refs/heads/main/security/workrise-domain-security.yml
+  href: https://artifacts.apis.io/workrise/security/workrise-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/workrise-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/workrise/refs/heads/main/well-known/workrise-well-known.yml
+  href: https://artifacts.apis.io/workrise/well-known/workrise-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/workrise-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/workrise/refs/heads/main/packages/workrise-packages.yml
+  href: https://artifacts.apis.io/workrise/packages/workrise-packages.yml
   title: ''
   type: Packages
   url: packages/workrise-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/workrise/refs/heads/main/llms/workrise-llms.txt
+  href: https://artifacts.apis.io/workrise/llms/workrise-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/workrise-llms.txt
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://www.rigup.com/guides/how-to-navigate-regional-expansion-in-oil-gas
 created: '2026-07-17'
 description: Workrise - which returned to its original RigUp brand in September 2024 - is an Austin-based source-to-pay platform for the energy industry, combining vendor management, contingent workforce staffing, bid management, capital management, and field-service payments for upstream and midstream oil and gas operators. Backed by a16z and Founders Fund. The company publishes no public developer portal or API documentation; platform access is through accounts.rigup.com (OpenID Connect via Auth0), and its engineering org open-sources utilities at github.com/rigup.
 image: https://cdn.prod.website-files.com/63ee2e248c2a1605888432e8/63ee2e248c2a160dbd8433dc_workrise-logo-mark.svg
@@ -100,24 +108,24 @@ network: true
 overview: 'Workrise is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Energy, Oil and Gas, Workforce Management, and Vendor Management.
 
 
-  Workrise''s developer surface includes engineering blog, support, and 10 more developer resources.'
-random_paper: 6
+  Workrise''s developer surface includes engineering blog, support, documentation, and 10 more developer resources.'
+random_paper: 22
 score:
   band: emerging
-  composite: 14.8
+  composite: 15.7
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.9
   facets:
     access_clarity: 35.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 7.1
+    developer_ergonomics: 11.9
     discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
@@ -134,14 +142,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/workrise/refs/heads/main/screenshots/workrise-2026-09-02T171001.png
+screenshot: https://apis.io/screenshots/workrise/workrise-2026-09-02T171001.png
 security:
 - kind: domain-security
   name: Workrise Domain Security
@@ -160,5 +168,7 @@ tags:
 - Vendor Management
 - Procurement
 - Source-to-Pay
+- Workforce
+- Software-as-a-Service
 website: https://www.rigup.com
 ---

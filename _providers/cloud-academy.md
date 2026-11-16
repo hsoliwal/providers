@@ -1,12 +1,18 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - rate-limits
+  - security
   - '{''url'': ''https://cloudacademy.com'', ''status'': 301, ''note'': ''declared website redirects to https://platform.qa.com/login/ — a different registrable domain (cloudacademy.com -> qa.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -26,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.3
-  scored_at: '2026-10-17'
+  score: 30.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 4
@@ -59,11 +68,8 @@ apis:
   description: The Reports API from Cloud Academy — 32 operation(s) for reports.
   name: Cloud Academy Reports API
   slug: cloud-academy-reports-api
-artifact_total: 12
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: QA Learning Management System API
   slug: open-cloud-academy-learning-management-system-api
@@ -74,13 +80,18 @@ collections:
   name: QA Learning Management System Reports API
   slug: open-cloud-academy-reports-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/cloud-academy/plans/cloud-academy-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/cloud-academy-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/capabilities/cloud-academy-capability-edges.yml
+  href: https://artifacts.apis.io/cloud-academy/capabilities/cloud-academy-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cloud-academy-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/overlays/cloud-academy-openapi-overlay.yaml
+  href: https://artifacts.apis.io/cloud-academy/overlays/cloud-academy-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/cloud-academy-openapi-overlay.yaml
@@ -121,7 +132,7 @@ common:
   type: StatusPage
   url: https://status.platform.qa.com
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/lifecycle/cloud-academy-lifecycle.yml
+  href: https://artifacts.apis.io/cloud-academy/lifecycle/cloud-academy-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/cloud-academy-lifecycle.yml
@@ -142,72 +153,80 @@ common:
   type: PrivacyPolicy
   url: https://www.qa.com/legal-privacy/privacy-notice/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/authentication/cloud-academy-authentication.yml
+  href: https://artifacts.apis.io/cloud-academy/authentication/cloud-academy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloud-academy-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/scopes/cloud-academy-scopes.yml
+  href: https://artifacts.apis.io/cloud-academy/scopes/cloud-academy-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cloud-academy-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/conventions/cloud-academy-conventions.yml
+  href: https://artifacts.apis.io/cloud-academy/conventions/cloud-academy-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cloud-academy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/errors/cloud-academy-problem-types.yml
+  href: https://artifacts.apis.io/cloud-academy/errors/cloud-academy-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cloud-academy-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/rate-limits/cloud-academy-rate-limits.yml
+  href: https://artifacts.apis.io/cloud-academy/rate-limits/cloud-academy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cloud-academy-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/lifecycle/cloud-academy-lifecycle.yml
+  href: https://artifacts.apis.io/cloud-academy/lifecycle/cloud-academy-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cloud-academy-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/conformance/cloud-academy-conformance.yml
+  href: https://artifacts.apis.io/cloud-academy/conformance/cloud-academy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloud-academy-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/data-model/cloud-academy-data-model.yml
+  href: https://artifacts.apis.io/cloud-academy/data-model/cloud-academy-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cloud-academy-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/mcp/cloud-academy-mcp.yml
+  href: https://artifacts.apis.io/cloud-academy/mcp/cloud-academy-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/cloud-academy-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/cloud-academy/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/llms/cloud-academy-llms.txt
+  href: https://artifacts.apis.io/cloud-academy/llms/cloud-academy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cloud-academy-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/agentic-access/cloud-academy-agentic-access.yml
+  href: https://artifacts.apis.io/cloud-academy/agentic-access/cloud-academy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cloud-academy-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/security/cloud-academy-domain-security.yml
+  href: https://artifacts.apis.io/cloud-academy/security/cloud-academy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloud-academy-domain-security.yml
 created: '2026-07-17'
 description: Cloud Academy is a hands-on technology skills training platform, now operating as the QA Learning Platform (cloudacademy.com redirects to platform.qa.com). It combines self-paced course content with hands-on labs, learning paths, quizzes, and exams across cloud, security, and software disciplines. Its public REST API lets enterprise administrators integrate the platform with internal business systems — browsing the content catalog, managing organization teams and members, and generating asynchronous reports on learner activity, progress, and skills. Authentication is OAuth2 client-credentials and the public API is rate-limited to 100 requests per minute. Cloud Academy was surfaced as a 500 Global portfolio company and enriched into the API Evangelist network from its live Swagger definition.
+finops:
+- has_sources: true
+  method: derived
+  name: Cloud Academy Finops
+  primary_unit: user
+  service_category: ''
+  slug: cloud-academy-finops
+  template: false
 image: https://assets.platform.qa.com/hanami/static/favicon-platform/apple-touch-icon.png
 layout: provider
 modified: '2026-07-18'
@@ -217,36 +236,59 @@ network: true
 overview: 'Cloud Academy publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Learning Management System API, Organizations API, and Reports API. Tagged areas include Company, Training, Education, LMS, and Cloud Computing.
 
 
-  Cloud Academy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 22 more developer resources.'
-random_paper: 6
+  The Cloud Academy catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Cloud Academy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 23 more developer resources.'
+plans:
+- name: Cloud Academy Plans Pricing
+  plan_count: 10
+  slug: cloud-academy-plans-pricing
+- name: Cloud Academy Price Estimates
+  plan_count: 0
+  slug: cloud-academy-price-estimates
+random_paper: 8
 rate_limits:
 - limit_count: 3
   name: Cloud Academy Rate Limits
   slug: cloud-academy-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 84
+  extends:
+  - spectral:oas
+  name: Cloud Academy API Rules
+  rule_count: 43
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 1
+    warn: 2
+  slug: cloud-academy-rules
 scopes:
 - name: Cloud Academy Scopes
   scope_count: 0
   slug: cloud-academy-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: developing
-  composite: 46.7
+  band: strong
+  composite: 56.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 49.0
-    catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    artifact_dirs: 27
+    catalog_earned: 68.5
+    catalog_earned_first_party: 24.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 31.6
-    contract_governance: 4.5
+    access_clarity: 71.1
+    contract_governance: 18.2
     contract_quality: 46.3
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 57.9
-  previous_composite: 46.7
+  previous_composite: 56.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -263,13 +305,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cloud-academy/refs/heads/main/screenshots/cloud-academy-2026-07-25T205650.png
+screenshot: https://apis.io/screenshots/cloud-academy/cloud-academy-2026-07-25T205650.png
 security:
 - kind: authentication
   name: Cloud Academy Authentication
@@ -279,6 +321,14 @@ security:
   name: Cloud Academy Domain Security
   slug: cloud-academy-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Browse the QA content catalog
+  slug: cloud-academy-browse-content-catalog
+- name: Manage organization teams and members
+  slug: cloud-academy-manage-teams-and-members
+- name: Run and retrieve a report
+  slug: cloud-academy-run-and-retrieve-report
 slug: cloud-academy
 tags:
 - Company

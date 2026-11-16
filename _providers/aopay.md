@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.7
-  scored_at: '2026-10-17'
+  score: 19.3
+  scored_at: '2026-11-06'
 api_count: 20
 apis:
 - description: Payment and payout APIs for merchants.
@@ -131,42 +145,42 @@ common:
   type: TermsOfService
   url: https://aopay.in/terms-conditions
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aopay/refs/heads/main/rules/aopay-rules.yml
+  href: https://artifacts.apis.io/aopay/rules/aopay-rules.yml
   title: ''
   type: Spectral
   url: rules/aopay-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aopay/refs/heads/main/json-ld/aopay-context.jsonld
+  href: https://artifacts.apis.io/aopay/json-ld/aopay-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/aopay-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aopay/refs/heads/main/vocabulary/aopay-vocabulary.yml
+  href: https://artifacts.apis.io/aopay/vocabulary/aopay-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/aopay-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aopay/refs/heads/main/data-model/aopay-data-model.yml
+  href: https://artifacts.apis.io/aopay/data-model/aopay-data-model.yml
   title: ''
   type: DataModel
   url: data-model/aopay-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aopay/refs/heads/main/authentication/aopay-authentication.yml
+  href: https://artifacts.apis.io/aopay/authentication/aopay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aopay-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/aopay/refs/heads/main/conformance/aopay-conformance.yml
+  href: https://artifacts.apis.io/aopay/conformance/aopay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/aopay-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aopay/refs/heads/main/llms/aopay-llms.txt
+  href: https://artifacts.apis.io/aopay/llms/aopay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aopay-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aopay/refs/heads/main/hosts/aopay-hosts.yml
+  href: https://artifacts.apis.io/aopay/hosts/aopay-hosts.yml
   title: ''
   type: Hosts
   url: hosts/aopay-hosts.yml
@@ -175,7 +189,7 @@ common:
   type: GettingStarted
   url: https://aopay.in/gst-verification-api
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aopay/refs/heads/main/security/aopay-domain-security.yml
+  href: https://artifacts.apis.io/aopay/security/aopay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aopay-domain-security.yml
@@ -261,22 +275,24 @@ rules:
     warn: 1
   slug: aopay-rules
 score:
-  band: thin
-  composite: 28.9
+  band: emerging
+  composite: 23.3
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 55.8
     catalog_earned_first_party: 0.0
     catalog_gap: 59.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.6
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 35.6
     contract_quality: 25.5
-    developer_ergonomics: 31.0
+    developer_ergonomics: 21.4
     discoverability: 60.7
     operational_transparency: 0.0
+  previous_composite: 28.9
   provenance:
     conformance: first-party
     contracts:
@@ -290,12 +306,14 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 22.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/aopay/aopay-2026-11-03T120930.png
 security:
 - kind: authentication
   name: Aopay Authentication

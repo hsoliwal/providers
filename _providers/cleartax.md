@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: Generate, cancel, and retrieve GST e-invoices (IRN) and e-waybills, including government IRP/NIC-compatible endpoints, DSC PDF signing, and bulk operations.
@@ -60,17 +63,17 @@ common:
   type: Website
   url: https://cleartax.in
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/security/cleartax-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cleartax/security/cleartax-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cleartax-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/well-known/cleartax-security.txt
+  href: https://artifacts.apis.io/cleartax/well-known/cleartax-security.txt
   title: ''
   type: Security
   url: well-known/cleartax-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/security/cleartax-domain-security.yml
+  href: https://artifacts.apis.io/cleartax/security/cleartax-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cleartax-domain-security.yml
@@ -119,42 +122,42 @@ common:
   type: Postman
   url: https://docs.cleartax.in/cleartax-docs/max-itc-api/max-itc-api-reference/max-itc-apis/postman-collection
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/llms/cleartax-llms.txt
+  href: https://artifacts.apis.io/cleartax/llms/cleartax-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cleartax-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/well-known/cleartax-well-known.yml
+  href: https://artifacts.apis.io/cleartax/well-known/cleartax-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cleartax-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/well-known/cleartax-security.txt
+  href: https://artifacts.apis.io/cleartax/well-known/cleartax-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cleartax-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/authentication/cleartax-authentication.yml
+  href: https://artifacts.apis.io/cleartax/authentication/cleartax-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cleartax-authentication.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/sandbox/cleartax-sandbox.yml
+  href: https://artifacts.apis.io/cleartax/sandbox/cleartax-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/cleartax-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/conventions/cleartax-conventions.yml
+  href: https://artifacts.apis.io/cleartax/conventions/cleartax-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cleartax-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/lifecycle/cleartax-lifecycle.yml
+  href: https://artifacts.apis.io/cleartax/lifecycle/cleartax-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cleartax-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/errors/cleartax-error-codes.yml
+  href: https://artifacts.apis.io/cleartax/errors/cleartax-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/cleartax-error-codes.yml
@@ -170,12 +173,12 @@ overview: 'Cleartax is listed with 5 APIs on the [APIs.io](https://apis.io/) net
 
 
   Cleartax''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 16 more developer resources.'
-random_paper: 16
+random_paper: 12
 score:
   band: thin
   composite: 33.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -203,14 +206,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cleartax/refs/heads/main/screenshots/cleartax-2026-07-25T205549.png
+screenshot: https://apis.io/screenshots/cleartax/cleartax-2026-07-25T205549.png
 security:
 - kind: authentication
   name: Cleartax Authentication

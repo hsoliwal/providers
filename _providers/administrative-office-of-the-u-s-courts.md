@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 17.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -61,9 +65,6 @@ apis:
 artifact_total: 28
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Administrative Office of the U.S. Courts PACER Authentication Cases API
   slug: open-administrative-office-of-the-u-s-courts-cases-api
 - collection_type: open
@@ -80,32 +81,32 @@ collections:
   slug: open-pacer-case-locator-pcl-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/plans/administrative-office-of-the-u-s-courts-plans-pricing.yml
+  href: https://artifacts.apis.io/administrative-office-of-the-u-s-courts/plans/administrative-office-of-the-u-s-courts-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/administrative-office-of-the-u-s-courts-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/rate-limits/administrative-office-of-the-u-s-courts-rate-limits.yml
+  href: https://artifacts.apis.io/administrative-office-of-the-u-s-courts/rate-limits/administrative-office-of-the-u-s-courts-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/administrative-office-of-the-u-s-courts-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/finops/administrative-office-of-the-u-s-courts-finops.yml
+  href: https://artifacts.apis.io/administrative-office-of-the-u-s-courts/finops/administrative-office-of-the-u-s-courts-finops.yml
   title: ''
   type: FinOps
   url: finops/administrative-office-of-the-u-s-courts-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/capabilities/administrative-office-of-the-u-s-courts-capability-edges.yml
+  href: https://artifacts.apis.io/administrative-office-of-the-u-s-courts/capabilities/administrative-office-of-the-u-s-courts-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/administrative-office-of-the-u-s-courts-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/agentic-access/administrative-office-of-the-u-s-courts-agentic-access.yml
+  href: https://artifacts.apis.io/administrative-office-of-the-u-s-courts/agentic-access/administrative-office-of-the-u-s-courts-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/administrative-office-of-the-u-s-courts-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/security/administrative-office-of-the-u-s-courts-domain-security.yml
+  href: https://artifacts.apis.io/administrative-office-of-the-u-s-courts/security/administrative-office-of-the-u-s-courts-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/administrative-office-of-the-u-s-courts-domain-security.yml
@@ -156,7 +157,7 @@ finops:
 - has_sources: false
   method: generated
   name: Administrative Office Of The U S Courts Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: administrative-office-of-the-u-s-courts-finops
   template: true
@@ -176,30 +177,46 @@ network: true
 overview: 'Administrative Office of the U.S. Courts publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Cases API, Parties API, and Services API. Tagged areas include Courts, Federal Government, Legal, PACER, and Case Records.
 
 
+  The Administrative Office of the U.S. Courts catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Administrative Office of the U.S. Courts'' developer surface includes engineering blog, developer portal, signup flow, and 10 more developer resources.'
 plans:
 - name: Administrative Office Of The U S Courts Plans Pricing
   plan_count: 3
   slug: administrative-office-of-the-u-s-courts-plans-pricing
-random_paper: 8
+random_paper: 20
 rate_limits:
 - limit_count: 5
   name: Administrative Office Of The U S Courts Rate Limits
   slug: administrative-office-of-the-u-s-courts-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 79
+  extends:
+  - spectral:oas
+  name: Administrative Office of the U.S. Courts API Rules
+  rule_count: 38
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 1
+    warn: 1
+  slug: administrative-office-of-the-u-s-courts-rules
 score:
   band: thin
-  composite: 27.8
+  composite: 29.4
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 38.0
+    artifact_dirs: 16
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 42.2
     developer_ergonomics: 40.5
     discoverability: 57.1
@@ -223,13 +240,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/screenshots/administrative-office-of-the-u-s-courts-2026-06-20T164757.png
+screenshot: https://apis.io/screenshots/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-2026-06-20T164757.png
 security:
 - kind: domain-security
   name: Administrative Office Of The U S Courts Domain Security

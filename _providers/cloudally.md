@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -13,7 +16,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -22,21 +25,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 30.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -48,44 +54,46 @@ api_count: 1
 apis:
 - baseURL: https://api.cloudally.com
   baseurl_source: declared
-  description: Token issuance and refresh.
-  name: CloudAlly Authentication API
-  slug: cloudally-authentication-api
+  description: Authorization endpoint.
+  name: CloudAlly API Authorization API
+  slug: cloudally-api-authorization-api
 - baseURL: https://api.cloudally.com
   baseurl_source: declared
-  description: Backup tasks and status.
-  name: CloudAlly Backups API
-  slug: cloudally-backups-api
+  description: Endpoint for a backup tasks activation and management.
+  name: CloudAlly Backup management API
+  slug: cloudally-backup-management-api
 - baseURL: https://api.cloudally.com
   baseurl_source: declared
-  description: Billing and invoicing data.
-  name: CloudAlly Billing API
-  slug: cloudally-billing-api
+  description: Endpoint for billing.
+  name: CloudAlly Billing management API
+  slug: cloudally-billing-management-api
 - baseURL: https://api.cloudally.com
   baseurl_source: declared
-  description: Partner-portal account, billing, and reseller endpoints.
-  name: CloudAlly Partners API
-  slug: cloudally-partners-api
+  description: Endpoint for a backup tasks activation and management for distributors.
+  name: CloudAlly Distributor Backup management API
+  slug: cloudally-distributor-backup-management-api
 - baseURL: https://api.cloudally.com
   baseurl_source: declared
-  description: Restore and download requests.
-  name: CloudAlly Restore API
-  slug: cloudally-restore-api
+  description: Endpoint for partner related requests.
+  name: CloudAlly Partner Portal API
+  slug: cloudally-partner-portal-api
 - baseURL: https://api.cloudally.com
   baseurl_source: declared
-  description: Long-running task status.
-  name: CloudAlly Tasks API
-  slug: cloudally-tasks-api
+  description: Endpoint for a backup tasks activation and management for resellers.
+  name: CloudAlly Reseller Backup management API
+  slug: cloudally-reseller-backup-management-api
 - baseURL: https://api.cloudally.com
   baseurl_source: declared
-  description: User and account management.
-  name: CloudAlly Users API
-  slug: cloudally-users-api
+  description: Endpoint for Cloudally account activity.
+  name: CloudAlly Restore & Download API
+  slug: cloudally-restore-download-api
+- baseURL: https://api.cloudally.com
+  baseurl_source: declared
+  description: Endpoint for Cloudally user management.
+  name: CloudAlly User management API
+  slug: cloudally-user-management-api
 artifact_total: 27
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CloudAlly Authentication API
   slug: open-cloudally-authentication-api
@@ -112,17 +120,17 @@ collections:
   slug: open-cloudally
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/plans/cloudally-plans-pricing.yml
+  href: https://artifacts.apis.io/cloudally/plans/cloudally-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cloudally-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/rate-limits/cloudally-rate-limits.yml
+  href: https://artifacts.apis.io/cloudally/rate-limits/cloudally-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cloudally-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/finops/cloudally-finops.yml
+  href: https://artifacts.apis.io/cloudally/finops/cloudally-finops.yml
   title: ''
   type: FinOps
   url: finops/cloudally-finops.yml
@@ -131,27 +139,27 @@ common:
   type: Blog
   url: https://cybersecurity.opentext.com/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/capabilities/cloudally-capability-edges.yml
+  href: https://artifacts.apis.io/cloudally/capabilities/cloudally-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cloudally-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/agentic-access/cloudally-agentic-access.yml
+  href: https://artifacts.apis.io/cloudally/agentic-access/cloudally-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cloudally-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/security/cloudally-trust-center.yml
+  href: https://artifacts.apis.io/cloudally/security/cloudally-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/cloudally-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/security/cloudally-domain-security.yml
+  href: https://artifacts.apis.io/cloudally/security/cloudally-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudally-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/authentication/cloudally-authentication.yml
+  href: https://artifacts.apis.io/cloudally/authentication/cloudally-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloudally-authentication.yml
@@ -184,22 +192,22 @@ common:
   type: ParentCompany
   url: https://cybersecurity.opentext.com/legacy/cloudally/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/openapi/_original/cloudally-openapi.yml
+  href: https://artifacts.apis.io/cloudally/openapi/_original/cloudally-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/cloudally-openapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/json-schema/cloudally-backup-task-schema.json
+  href: https://artifacts.apis.io/cloudally/json-schema/cloudally-backup-task-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/cloudally-backup-task-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/json-ld/cloudally-context.jsonld
+  href: https://artifacts.apis.io/cloudally/json-ld/cloudally-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/cloudally-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/rules/cloudally-rules.yml
+  href: https://artifacts.apis.io/cloudally/rules/cloudally-rules.yml
   title: ''
   type: Spectral
   url: rules/cloudally-rules.yml
@@ -209,7 +217,7 @@ finops:
 - has_sources: false
   method: generated
   name: Cloudally Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: cloudally-finops
   template: true
@@ -228,7 +236,7 @@ modified: '2026-10-06'
 name: CloudAlly
 nav: Providers
 network: true
-overview: 'CloudAlly publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Backups API, Billing API, and 4 more. Tagged areas include Backup, Box, Data Protection, Disaster Recovery, and Dropbox.
+overview: 'CloudAlly publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including API Authorization API, Backup management API, Billing management API, and 5 more. Tagged areas include Backup, Box, Data Protection, Disaster Recovery, and Dropbox.
 
 
   The CloudAlly catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -239,7 +247,7 @@ plans:
 - name: Cloudally Plans Pricing
   plan_count: 3
   slug: cloudally-plans-pricing
-random_paper: 1
+random_paper: 9
 rate_limits:
 - limit_count: 5
   name: Cloudally Rate Limits
@@ -270,43 +278,43 @@ rules:
   slug: cloudally-rules
 score:
   band: thin
-  composite: 30.7
+  composite: 36.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 52.5
     catalog_earned_first_party: 0.0
     catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 3.3
   facets:
-    access_clarity: 15.8
+    access_clarity: 26.3
     contract_governance: 13.6
-    contract_quality: 49.2
+    contract_quality: 51.8
     developer_ergonomics: 28.6
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 31.7
+  previous_composite: 33.5
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 7
+      marker_coverage: 50.0
+      total: 16
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 25.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cloudally/refs/heads/main/screenshots/cloudally-2026-06-20T174540.png
+    score: 27.8
+screenshot: https://apis.io/screenshots/cloudally/cloudally-2026-06-20T174540.png
 security:
 - kind: authentication
   name: Cloudally Authentication

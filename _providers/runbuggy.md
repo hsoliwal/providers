@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-10-17'
+  score: 33.8
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: An OAuth-protected Model Context Protocol server RunBuggy operates on its application host. Discovered by probe — it is not referenced from the public developer documentation. tools/list returns 401 i
@@ -67,15 +70,12 @@ apis:
   description: Webhook operations.
   name: RunBuggy Webhooks API
   slug: runbuggy-webhooks-api
-artifact_total: 19
+artifact_total: 23
 asyncapis:
 - description: ''
   name: Runbuggy Webhooks
   slug: runbuggy-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Companies API
   slug: open-runbuggy-companies-api
@@ -93,12 +93,12 @@ collections:
   slug: open-runbuggy-webhooks-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/capabilities/runbuggy-capability-edges.yml
+  href: https://artifacts.apis.io/runbuggy/capabilities/runbuggy-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/runbuggy-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/overlays/runbuggy-authentication-overlay.yaml
+  href: https://artifacts.apis.io/runbuggy/overlays/runbuggy-authentication-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/runbuggy-authentication-overlay.yaml
@@ -123,7 +123,7 @@ common:
   type: GettingStarted
   url: https://docs.runbuggy.com/docs/shipping/e66c4d2e84e08-ship-vehicles
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/authentication/runbuggy-authentication.yml
+  href: https://artifacts.apis.io/runbuggy/authentication/runbuggy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/runbuggy-authentication.yml
@@ -164,82 +164,82 @@ common:
   type: StatusPage
   url: https://status.runbuggy.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/security/runbuggy-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/runbuggy/security/runbuggy-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/runbuggy-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/security/runbuggy-trust-center.yml
+  href: https://artifacts.apis.io/runbuggy/security/runbuggy-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/runbuggy-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/security/runbuggy-domain-security.yml
+  href: https://artifacts.apis.io/runbuggy/security/runbuggy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/runbuggy-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/well-known/runbuggy-well-known.yml
+  href: https://artifacts.apis.io/runbuggy/well-known/runbuggy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/runbuggy-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/lifecycle/runbuggy-lifecycle.yml
+  href: https://artifacts.apis.io/runbuggy/lifecycle/runbuggy-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/runbuggy-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/changelog/runbuggy-changelog.yml
+  href: https://artifacts.apis.io/runbuggy/changelog/runbuggy-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/runbuggy-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/conventions/runbuggy-conventions.yml
+  href: https://artifacts.apis.io/runbuggy/conventions/runbuggy-conventions.yml
   title: ''
   type: Conventions
   url: conventions/runbuggy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/errors/runbuggy-problem-types.yml
+  href: https://artifacts.apis.io/runbuggy/errors/runbuggy-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/runbuggy-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/conformance/runbuggy-conformance.yml
+  href: https://artifacts.apis.io/runbuggy/conformance/runbuggy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/runbuggy-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/asyncapi/runbuggy-webhooks.yml
+  href: https://artifacts.apis.io/runbuggy/asyncapi/runbuggy-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/runbuggy-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/sandbox/runbuggy-sandbox.yml
+  href: https://artifacts.apis.io/runbuggy/sandbox/runbuggy-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/runbuggy-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/components/runbuggy-components.yml
+  href: https://artifacts.apis.io/runbuggy/components/runbuggy-components.yml
   title: ''
   type: Components
   url: components/runbuggy-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/data-model/runbuggy-data-model.yml
+  href: https://artifacts.apis.io/runbuggy/data-model/runbuggy-data-model.yml
   title: ''
   type: DataModel
   url: data-model/runbuggy-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/scopes/runbuggy-scopes.yml
+  href: https://artifacts.apis.io/runbuggy/scopes/runbuggy-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/runbuggy-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/runbuggy/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/llms/runbuggy-llms.txt
+  href: https://artifacts.apis.io/runbuggy/llms/runbuggy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/runbuggy-llms.txt
@@ -258,11 +258,24 @@ network: true
 overview: 'RunBuggy publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Companies API, Orders API, Token API, and 3 more. Tagged areas include Company, Automotive, Logistics, Transportation, and Vehicle Shipping.
 
 
-  The RunBuggy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The RunBuggy catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   RunBuggy''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 26 more developer resources.'
-random_paper: 3
+random_paper: 19
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: RunBuggy API Rules
+  rule_count: 69
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 4
+    warn: 9
+  slug: runbuggy-rules
 scopes:
 - name: Runbuggy Scopes
   scope_count: 1
@@ -270,23 +283,23 @@ scopes:
   summary_line: 1 scope
 score:
   band: developing
-  composite: 46.2
+  composite: 47.9
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 40.0
+    artifact_dirs: 27
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 14.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 53.8
     developer_ergonomics: 63.7
     discoverability: 80.0
     operational_transparency: 52.6
-  previous_composite: 46.1
+  previous_composite: 47.9
   provenance:
     conformance: derived
     contracts:
@@ -302,13 +315,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/runbuggy/refs/heads/main/screenshots/runbuggy-2026-08-17T081656.png
+screenshot: https://apis.io/screenshots/runbuggy/runbuggy-2026-08-17T081656.png
 security:
 - kind: authentication
   name: Runbuggy Authentication
@@ -326,6 +339,16 @@ security:
   name: Runbuggy Trust Center
   slug: runbuggy-trust-center
   summary_line: trust center published
+skill_count: 4
+skills:
+- name: runbuggy-attach-gate-passes
+  slug: runbuggy-attach-gate-passes
+- name: runbuggy-order-for-another-company
+  slug: runbuggy-order-for-another-company
+- name: runbuggy-quote-and-place-order
+  slug: runbuggy-quote-and-place-order
+- name: runbuggy-track-vehicle-transfer
+  slug: runbuggy-track-vehicle-transfer
 slug: runbuggy
 tags:
 - Company
@@ -335,7 +358,7 @@ tags:
 - Vehicle Shipping
 - Marketplace
 - Supply Chain
-- Fleet
+- Fleet Management
 - TMS
 - Freight
 website: https://runbuggy.com/

@@ -1,9 +1,12 @@
 ---
 access_model:
   confidence: high
-  label: Paid
-  onboarding: unknown
-  pricing: paid
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
@@ -12,7 +15,7 @@ access_model:
   - security
   - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -29,7 +32,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
@@ -37,7 +43,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -56,7 +62,7 @@ arazzos:
 - description: Build a complete connectivity picture for one UK postcode by calling both Ofcom Connected Nations APIs — fixed broadband availability and mobile coverage across all four UK operators — and joining the
   name: Ofcom postcode connectivity profile
   slug: ofcom-postcode-connectivity-profile
-artifact_total: 9
+artifact_total: 13
 collections:
 - collection_type: open
   name: Ofcom Connected Nations Broadband API
@@ -66,102 +72,107 @@ collections:
   slug: open-ofcom-connected-nations-mobile-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/overlays/ofcom-connected-nations-broadband-api-overlay.yaml
+  href: https://artifacts.apis.io/ofcom/capabilities/ofcom-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ofcom-capability-edges.yml
+- group: other
+  href: https://artifacts.apis.io/ofcom/overlays/ofcom-connected-nations-broadband-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ofcom-connected-nations-broadband-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/skills/ofcom-check-broadband-coverage.md
+  href: https://artifacts.apis.io/ofcom/skills/ofcom-check-broadband-coverage.md
   title: ''
   type: AgentSkill
   url: skills/ofcom-check-broadband-coverage.md
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/overlays/ofcom-connected-nations-mobile-api-overlay.yaml
+  href: https://artifacts.apis.io/ofcom/overlays/ofcom-connected-nations-mobile-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ofcom-connected-nations-mobile-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/skills/ofcom-check-mobile-coverage.md
+  href: https://artifacts.apis.io/ofcom/skills/ofcom-check-mobile-coverage.md
   title: ''
   type: AgentSkill
   url: skills/ofcom-check-mobile-coverage.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/mcp/ofcom-mcp.yml
+  href: https://artifacts.apis.io/ofcom/mcp/ofcom-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/ofcom-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/agentic-access/ofcom-agentic-access.yml
+  href: https://artifacts.apis.io/ofcom/agentic-access/ofcom-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ofcom-agentic-access.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/mcp/ofcom-tool-crosswalk.yml
+  href: https://artifacts.apis.io/ofcom/mcp/ofcom-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/ofcom-tool-crosswalk.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/packages/ofcom-packages.yml
+  href: https://artifacts.apis.io/ofcom/packages/ofcom-packages.yml
   title: ''
   type: Packages
   url: packages/ofcom-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/llms/ofcom-llms.txt
+  href: https://artifacts.apis.io/ofcom/llms/ofcom-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ofcom-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/conformance/ofcom-conformance.yml
+  href: https://artifacts.apis.io/ofcom/conformance/ofcom-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ofcom-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/errors/ofcom-problem-types.yml
+  href: https://artifacts.apis.io/ofcom/errors/ofcom-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ofcom-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/lifecycle/ofcom-lifecycle.yml
+  href: https://artifacts.apis.io/ofcom/lifecycle/ofcom-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ofcom-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/conventions/ofcom-conventions.yml
+  href: https://artifacts.apis.io/ofcom/conventions/ofcom-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ofcom-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/data-model/ofcom-data-model.yml
+  href: https://artifacts.apis.io/ofcom/data-model/ofcom-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ofcom-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/rate-limits/ofcom-rate-limits.yml
+  href: https://artifacts.apis.io/ofcom/rate-limits/ofcom-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ofcom-rate-limits.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/sandbox/ofcom-sandbox.yml
+  href: https://artifacts.apis.io/ofcom/sandbox/ofcom-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/ofcom-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ofcom/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/arazzo/ofcom-postcode-connectivity-profile.yml
+  href: https://artifacts.apis.io/ofcom/arazzo/ofcom-postcode-connectivity-profile.yml
   title: ''
   type: Arazzo
   url: arazzo/ofcom-postcode-connectivity-profile.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/security/ofcom-domain-security.yml
+  href: https://artifacts.apis.io/ofcom/security/ofcom-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ofcom-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/authentication/ofcom-authentication.yml
+  href: https://artifacts.apis.io/ofcom/authentication/ofcom-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ofcom-authentication.yml
@@ -198,7 +209,7 @@ common:
   type: Plans
   url: https://api.ofcom.org.uk/products
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/plans/ofcom-plans.yml
+  href: https://artifacts.apis.io/ofcom/plans/ofcom-plans.yml
   title: ''
   type: Plans
   url: plans/ofcom-plans.yml
@@ -221,6 +232,14 @@ common:
 created: '2026-07-25'
 description: Ofcom is the Office of Communications, the United Kingdom's independent regulator and competition authority for telecommunications, spectrum, broadcasting, post, and online safety. It licenses UK spectrum, administers the national numbering plan, publishes the Connected Nations reports on fixed and mobile coverage, and supervises the operators (EE, VMO2, Vodafone, Three) rather than selling connectivity itself. Its position in the telecom value chain is therefore upstream of the market it measures — it is a data producer and rule-setter, not a network or a CPaaS aggregator. Its API posture is unusually good for a regulator and unusually narrow in scope. Ofcom runs a real, Ofcom-branded Azure API Management developer portal at api.ofcom.org.uk with open sign-up, an interactive console, published rate-limit tiers, and anonymously downloadable OpenAPI 3.0.1 documents for two APIs — the Connected Nations Broadband API and the Connected Nations Mobile API — both served from the live
   gateway at api-proxy.ofcom.org.uk and authenticated with an Azure APIM subscription key. Everything else Ofcom publishes (spectrum licence registers, numbering data, market research) is documents and datasets, not APIs, and the community has repeatedly built third-party APIs on top of those files. Ofcom appears once in the CAMARA project participant register but exposes no CAMARA network APIs and is not a GSMA Open Gateway participant — Open Gateway is an operator commitment programme and Ofcom is the regulator, not an operator.
+finops:
+- has_sources: true
+  method: derived
+  name: Ofcom Finops
+  primary_unit: ''
+  service_category: ''
+  slug: ofcom-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
 modified: '2026-07-25'
@@ -230,7 +249,10 @@ network: true
 overview: 'Ofcom publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Coverage API. Tagged areas include Telecommunications, United Kingdom, Regulator, Broadband, and Mobile Network Coverage.
 
 
-  Ofcom''s developer surface includes sandbox, authentication, documentation, signup flow, API reference, developer console, support, and 26 more developer resources.'
+  The Ofcom catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Ofcom''s developer surface includes sandbox, authentication, documentation, signup flow, API reference, developer console, support, and 27 more developer resources.'
 plans:
 - name: Ofcom Plans
   plan_count: 4
@@ -240,20 +262,33 @@ rate_limits:
 - limit_count: 8
   name: Ofcom Rate Limits
   slug: ofcom-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Ofcom API Rules
+  rule_count: 50
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 1
+  slug: ofcom-rules
 score:
   band: developing
-  composite: 45.1
+  composite: 46.7
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 61.0
+    artifact_dirs: 27
+    catalog_earned: 65.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 49.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 55.3
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 48.4
     developer_ergonomics: 51.8
     discoverability: 66.1
@@ -266,7 +301,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 45.1
+  previous_composite: 46.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -283,14 +318,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/ofcom/refs/heads/main/screenshots/ofcom-2026-08-07T190010.png
+screenshot: https://apis.io/screenshots/ofcom/ofcom-2026-08-07T190010.png
 security:
 - kind: authentication
   name: Ofcom Authentication
@@ -300,6 +335,12 @@ security:
   name: Ofcom Domain Security
   slug: ofcom-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Check UK fixed broadband coverage for a postcode
+  slug: ofcom-check-broadband-coverage
+- name: Check UK mobile network coverage for a postcode
+  slug: ofcom-check-mobile-coverage
 slug: ofcom
 tags:
 - Telecommunications

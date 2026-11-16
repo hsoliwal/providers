@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,35 +25,38 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: half
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 0.9
-  scored_at: '2026-10-17'
+  score: 2.9
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/boomerangmedical/refs/heads/main/hosts/boomerangmedical-hosts.yml
+  href: https://artifacts.apis.io/boomerangmedical/hosts/boomerangmedical-hosts.yml
   title: ''
   type: Hosts
   url: hosts/boomerangmedical-hosts.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boomerangmedical/refs/heads/main/security/boomerangmedical-domain-security.yml
+  href: https://artifacts.apis.io/boomerangmedical/security/boomerangmedical-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/boomerangmedical-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/boomerangmedical/refs/heads/main/mcp/boomerangmedical-mcp.yml
+  href: https://artifacts.apis.io/boomerangmedical/mcp/boomerangmedical-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/boomerangmedical-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/boomerangmedical/refs/heads/main/vendors/boomerangmedical-vendors.yml
+  href: https://artifacts.apis.io/boomerangmedical/vendors/boomerangmedical-vendors.yml
   title: ''
   type: Vendors
   url: vendors/boomerangmedical-vendors.yml
@@ -71,18 +84,18 @@ name: Boomerangmedical
 nav: Providers
 network: true
 overview: Boomerangmedical is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Startups, and Technology.
-random_paper: 1
+random_paper: 17
 score:
   band: minimal
   composite: 2.9
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 20.0
     catalog_earned_first_party: 0.0
     catalog_gap: 95.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -96,7 +109,7 @@ score:
     reasons:
     - owner: catalog
       reason: venue_as_website
-  previous_composite: 2.8
+  previous_composite: 2.9
   provenance:
     mcp: derived
   regulatory:
@@ -105,13 +118,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/boomerangmedical/boomerangmedical-2026-11-03T122238.png
 security:
 - kind: domain-security
   name: Boomerangmedical Domain Security

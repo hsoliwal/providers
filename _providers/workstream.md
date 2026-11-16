@@ -1,12 +1,14 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://public-api.workstream.us
@@ -96,11 +101,8 @@ apis:
   description: Team Members represent team members that are managed within your company.
   name: Workstream Team Members API
   slug: workstream-team-members-api
-artifact_total: 28
+artifact_total: 30
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Workstream Public Applicants API
   slug: open-workstream-applicants-api
@@ -138,23 +140,28 @@ collections:
   name: Workstream Public Applicants Team Members API
   slug: open-workstream-team-members-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/workstream/plans/workstream-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/workstream-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/workstream/refs/heads/main/capabilities/workstream-capability-edges.yml
+  href: https://artifacts.apis.io/workstream/capabilities/workstream-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/workstream-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workstream/refs/heads/main/security/workstream-domain-security.yml
+  href: https://artifacts.apis.io/workstream/security/workstream-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/workstream-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workstream/refs/heads/main/authentication/workstream-authentication.yml
+  href: https://artifacts.apis.io/workstream/authentication/workstream-authentication.yml
   title: ''
   type: Authentication
   url: authentication/workstream-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workstream/refs/heads/main/scopes/workstream-scopes.yml
+  href: https://artifacts.apis.io/workstream/scopes/workstream-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/workstream-scopes.yml
@@ -212,6 +219,14 @@ common:
   url: https://workstream-status.statuspage.io/
 created: '2026-07-17'
 description: Workstream is an all-in-one HR, hiring, and payroll platform built for hourly businesses, particularly multi-location restaurants, serving 46 of the top 50 restaurant brands including Taco Bell, Jimmy John's, and Culver's. The platform covers applicant tracking and sourcing, Voice AI screening, onboarding, team management, time and scheduling, compliance, and full-service payroll. Workstream publishes a public REST API (OAuth 2.0 access tokens scoped to positions, applicants, employees, locations, departments, and custom fields) documented at docs.workstream.us.
+finops:
+- has_sources: true
+  method: derived
+  name: Workstream Finops
+  primary_unit: ''
+  service_category: ''
+  slug: workstream-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/workstream.png
 layout: provider
 modified: '2026-07-21'
@@ -221,8 +236,28 @@ network: true
 overview: 'Workstream publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applicants API, Authorization API, Company Roles API, and 9 more. Tagged areas include Company, Human Resources, Hiring, Payroll, and Onboarding.
 
 
-  Workstream''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 10 more developer resources.'
-random_paper: 3
+  The Workstream catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Workstream''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 11 more developer resources.'
+plans:
+- name: Workstream Plans Pricing
+  plan_count: 7
+  slug: workstream-plans-pricing
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 117
+  extends:
+  - spectral:oas
+  name: Workstream API Rules
+  rule_count: 76
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 7
+    warn: 11
+  slug: workstream-rules
 scopes:
 - name: Workstream Scopes
   scope_count: 10
@@ -230,23 +265,23 @@ scopes:
   summary_line: 10 scopes · implicit
 score:
   band: developing
-  composite: 42.7
+  composite: 52.0
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 29
+    catalog_earned: 53.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 38.2
-    contract_governance: 0.0
+    access_clarity: 69.7
+    contract_governance: 13.6
     contract_quality: 44.8
     developer_ergonomics: 57.1
     discoverability: 73.2
-    operational_transparency: 15.8
-  previous_composite: 42.7
+    operational_transparency: 26.3
+  previous_composite: 52.0
   provenance:
     contracts:
       callable: 0.0
@@ -259,13 +294,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/workstream/refs/heads/main/screenshots/workstream-2026-08-17T082948.png
+screenshot: https://apis.io/screenshots/workstream/workstream-2026-08-17T082948.png
 security:
 - kind: authentication
   name: Workstream Authentication

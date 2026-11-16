@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Australian Capital Territory Open Data
@@ -41,12 +45,12 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/open-government-act/refs/heads/main/security/open-government-act-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/open-government-act/security/open-government-act-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/open-government-act-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/open-government-act/refs/heads/main/security/open-government-act-domain-security.yml
+  href: https://artifacts.apis.io/open-government-act/security/open-government-act-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/open-government-act-domain-security.yml
@@ -67,12 +71,12 @@ name: Open Government, ACT
 nav: Providers
 network: true
 overview: Open Government, ACT is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Government and Public APIs.
-random_paper: 15
+random_paper: 9
 score:
   band: minimal
-  composite: 6.3
+  composite: 7.7
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
@@ -85,22 +89,22 @@ score:
     contract_quality: 0.0
     developer_ergonomics: 9.5
     discoverability: 46.4
-    operational_transparency: 0.0
-  previous_composite: 6.3
+    operational_transparency: 10.5
+  previous_composite: 7.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/open-government-act/refs/heads/main/screenshots/open-government-act-2026-06-20T190748.png
+screenshot: https://apis.io/screenshots/open-government-act/open-government-act-2026-06-20T190748.png
 security:
 - kind: domain-security
   name: Open Government Act Domain Security

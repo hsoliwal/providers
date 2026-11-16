@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,13 +37,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Python interfaces for the core T-code components that drive a Trilobot fleet — Commands, Labware, Locations, Scripts — plus the T-code Servicer client for runtime control and the Integrator client for
   name: TCode API (tcode-api)
   slug: tcode-api-tcode-api
-artifact_total: 3
+artifact_total: 4
 common:
 - group: operate
   title: ''
@@ -94,17 +98,17 @@ common:
   type: TermsOfService
   url: https://www.trilo.bio/terms
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trilobio/refs/heads/main/llms/trilobio-llms.txt
+  href: https://artifacts.apis.io/trilobio/llms/trilobio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/trilobio-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trilobio/refs/heads/main/security/trilobio-domain-security.yml
+  href: https://artifacts.apis.io/trilobio/security/trilobio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trilobio-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trilobio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/trilobio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -120,12 +124,12 @@ overview: 'Trilobio is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Trilobio''s developer surface includes documentation, getting-started guide, API reference, engineering blog, signup flow, and 11 more developer resources.'
-random_paper: 10
+random_paper: 4
 score:
   band: thin
   composite: 29.8
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -151,14 +155,14 @@ score:
     regime: Health
     regime_id: health
     score: 15.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/trilobio/refs/heads/main/screenshots/trilobio-2026-09-02T164229.png
+screenshot: https://apis.io/screenshots/trilobio/trilobio-2026-09-02T164229.png
 security:
 - kind: authentication
   name: Trilobio Authentication
@@ -168,6 +172,10 @@ security:
   name: Trilobio Domain Security
   slug: trilobio-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: trilobio-connect-fleet
+  slug: trilobio-connect-fleet
 slug: trilobio
 tags:
 - Company

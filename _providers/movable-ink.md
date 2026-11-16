@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -28,7 +31,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: A write-only HTTP collector that ingests customer behavioral events in real time so Movable Ink Studio can use them for targeting and content generation. Callers POST Segment-shaped JSON events (type,
@@ -45,7 +51,7 @@ apis:
 - description: The OpenID Connect provider that fronts the Movable Ink Studio and Da Vinci web application at app.movableink.com. It publishes a full OIDC discovery document and an RFC 8414 authorization-server meta
   name: Movable Ink Platform Identity (OpenID Connect)
   slug: identity
-artifact_total: 10
+artifact_total: 11
 asyncapis:
 - description: ''
   name: Movable Ink Webhooks
@@ -56,12 +62,12 @@ common:
   type: BlogRSS
   url: https://movableink.com/blog/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/security/movable-ink-trust-center.yml
+  href: https://artifacts.apis.io/movable-ink/security/movable-ink-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/movable-ink-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/security/movable-ink-domain-security.yml
+  href: https://artifacts.apis.io/movable-ink/security/movable-ink-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/movable-ink-domain-security.yml
@@ -118,12 +124,12 @@ common:
   type: Compliance
   url: https://movableink.com/privacy-security-and-compliance
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/security/movable-ink-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/movable-ink/security/movable-ink-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/movable-ink-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/security/movable-ink-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/movable-ink/security/movable-ink-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/movable-ink-vulnerability-disclosure.yml
@@ -132,87 +138,95 @@ common:
   type: StatusPage
   url: https://status.movableink.com
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/changelog/movable-ink-changelog.yml
+  href: https://artifacts.apis.io/movable-ink/changelog/movable-ink-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/movable-ink-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/lifecycle/movable-ink-lifecycle.yml
+  href: https://artifacts.apis.io/movable-ink/lifecycle/movable-ink-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/movable-ink-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/packages/movable-ink-packages.yml
+  href: https://artifacts.apis.io/movable-ink/packages/movable-ink-packages.yml
   title: ''
   type: Packages
   url: packages/movable-ink-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/packages/movable-ink-packages.yml
+  href: https://artifacts.apis.io/movable-ink/packages/movable-ink-packages.yml
   title: ''
   type: SDKs
   url: packages/movable-ink-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/cli/movable-ink-cli.yml
+  href: https://artifacts.apis.io/movable-ink/cli/movable-ink-cli.yml
   title: ''
   type: CLI
   url: cli/movable-ink-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/well-known/movable-ink-well-known.yml
+  href: https://artifacts.apis.io/movable-ink/well-known/movable-ink-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/movable-ink-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/llms/movable-ink-llms.txt
+  href: https://artifacts.apis.io/movable-ink/llms/movable-ink-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/movable-ink-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/conformance/movable-ink-conformance.yml
+  href: https://artifacts.apis.io/movable-ink/conformance/movable-ink-conformance.yml
   title: ''
   type: Conformance
   url: conformance/movable-ink-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/conventions/movable-ink-conventions.yml
+  href: https://artifacts.apis.io/movable-ink/conventions/movable-ink-conventions.yml
   title: ''
   type: Conventions
   url: conventions/movable-ink-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/authentication/movable-ink-authentication.yml
+  href: https://artifacts.apis.io/movable-ink/authentication/movable-ink-authentication.yml
   title: ''
   type: Authentication
   url: authentication/movable-ink-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/scopes/movable-ink-scopes.yml
+  href: https://artifacts.apis.io/movable-ink/scopes/movable-ink-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/movable-ink-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/errors/movable-ink-problem-types.yml
+  href: https://artifacts.apis.io/movable-ink/errors/movable-ink-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/movable-ink-problem-types.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/plans/movable-ink-plans-pricing.yml
+  href: https://artifacts.apis.io/movable-ink/plans/movable-ink-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/movable-ink-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/rate-limits/movable-ink-rate-limits.yml
+  href: https://artifacts.apis.io/movable-ink/rate-limits/movable-ink-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/movable-ink-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/asyncapi/movable-ink-webhooks.yml
+  href: https://artifacts.apis.io/movable-ink/asyncapi/movable-ink-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/movable-ink-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/components/movable-ink-components.yml
+  href: https://artifacts.apis.io/movable-ink/components/movable-ink-components.yml
   title: ''
   type: Components
   url: components/movable-ink-components.yml
 created: '2026-08-04'
 description: Movable Ink is a New York-headquartered marketing technology company that turns customer data into personalized content across email, mobile and web. Its two products are Studio, which generates composite images and interactive content at the moment a message is opened, and Da Vinci, an AI decisioning layer that chooses what content each customer sees. The integration surface is a write-only Customer Data API that streams behavioral events into Studio, a family of native and wrapper mobile SDKs (iOS, Android, React Native, Cordova, Flutter, Expo), a Studio app toolchain built around the `movable` CLI and the cropduster library, and dozens of ESP/CDP connectors. API reference material is customer-gated; no OpenAPI is published.
+finops:
+- has_sources: true
+  method: derived
+  name: Movable Ink Finops
+  primary_unit: ''
+  service_category: ''
+  slug: movable-ink-finops
+  template: true
 image: https://cdn.prod.website-files.com/6601ecc67f6256b863e8143f/6655e1590788a6b11d9441a3_MovableInk-Share.jpeg
 layout: provider
 modified: '2026-10-06'
@@ -230,7 +244,7 @@ plans:
 - name: Movable Ink Plans Pricing
   plan_count: 0
   slug: movable-ink-plans-pricing
-random_paper: 9
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Movable Ink Rate Limits
@@ -244,7 +258,7 @@ score:
   band: developing
   composite: 51.6
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -274,14 +288,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/movable-ink/refs/heads/main/screenshots/movable-ink-2026-08-07T184344.png
+screenshot: https://apis.io/screenshots/movable-ink/movable-ink-2026-08-07T184344.png
 security:
 - kind: authentication
   name: Movable Ink Authentication

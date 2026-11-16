@@ -1,17 +1,18 @@
 ---
 access_model:
-  confidence: high
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-10-17'
+  score: 29.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -95,7 +99,7 @@ apis:
   description: Operations for creating, updating, expiring, and retrieving job postings on Indeed. Supports qualifications, working hours, salary, benefits, employer information, and Indeed Apply configuration.
   name: Indeed Jobs API
   slug: indeed-jobs-api
-artifact_total: 173
+artifact_total: 172
 collections:
 - collection_type: postman
   name: Indeed Employer Candidates API
@@ -106,9 +110,6 @@ collections:
 - collection_type: postman
   name: Indeed Employer Candidates Jobs API
   slug: postman-indeed-jobs-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Indeed Employer Candidates API
   slug: open-indeed-candidates-api
@@ -123,17 +124,17 @@ collections:
   slug: open-indeed-jobs-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/indeed/refs/heads/main/plans/indeed-plans-pricing.yml
+  href: https://artifacts.apis.io/indeed/plans/indeed-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/indeed-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/indeed/refs/heads/main/finops/indeed-finops.yml
+  href: https://artifacts.apis.io/indeed/finops/indeed-finops.yml
   title: ''
   type: FinOps
   url: finops/indeed-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/indeed/refs/heads/main/capabilities/indeed-capability-edges.yml
+  href: https://artifacts.apis.io/indeed/capabilities/indeed-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/indeed-capability-edges.yml
@@ -146,22 +147,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/indeed/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/indeed/refs/heads/main/agentic-access/indeed-agentic-access.yml
+  href: https://artifacts.apis.io/indeed/agentic-access/indeed-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/indeed-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/indeed/refs/heads/main/security/indeed-domain-security.yml
+  href: https://artifacts.apis.io/indeed/security/indeed-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/indeed-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/indeed/refs/heads/main/authentication/indeed-authentication.yml
+  href: https://artifacts.apis.io/indeed/authentication/indeed-authentication.yml
   title: ''
   type: Authentication
   url: authentication/indeed-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/indeed/refs/heads/main/scopes/indeed-scopes.yml
+  href: https://artifacts.apis.io/indeed/scopes/indeed-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/indeed-scopes.yml
@@ -339,7 +340,7 @@ finops:
 - has_sources: true
   method: generated
   name: Indeed Finops
-  primary_unit: ''
+  primary_unit: click
   service_category: Recruiting + Job Advertising
   slug: indeed-finops
   template: false
@@ -652,7 +653,7 @@ plans:
 - name: Indeed Plans Pricing
   plan_count: 2
   slug: indeed-plans-pricing
-random_paper: 1
+random_paper: 17
 rate_limits:
 - limit_count: 1
   name: Indeed Rate Limits
@@ -688,17 +689,17 @@ scopes:
   summary_line: 3 scopes · clientCredentials
 score:
   band: developing
-  composite: 44.4
+  composite: 46.0
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 58.9
+    artifact_dirs: 24
+    catalog_earned: 61.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.1
+    catalog_gap: 53.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
-    access_clarity: 18.4
+    access_clarity: 26.3
     contract_governance: 13.6
     contract_quality: 67.0
     developer_ergonomics: 56.0
@@ -718,13 +719,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/indeed/refs/heads/main/screenshots/indeed-2026-06-20T183344.png
+screenshot: https://apis.io/screenshots/indeed/indeed-2026-06-20T183344.png
 security:
 - kind: authentication
   name: Indeed Authentication

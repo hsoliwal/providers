@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-10-17'
+  score: 20.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -56,37 +59,38 @@ apis:
   description: The Orders API from Narvar — 3 operation(s) for orders.
   name: Narvar Orders API
   slug: narvar-orders-api
-artifact_total: 16
+artifact_total: 15
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Narvar Orders API
   slug: open-narvar-orders-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/narvar/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/capabilities/narvar-capability-edges.yml
+  href: https://artifacts.apis.io/narvar/capabilities/narvar-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/narvar-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/agentic-access/narvar-agentic-access.yml
+  href: https://artifacts.apis.io/narvar/agentic-access/narvar-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/narvar-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/security/narvar-trust-center.yml
+  href: https://artifacts.apis.io/narvar/security/narvar-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/narvar-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/security/narvar-domain-security.yml
+  href: https://artifacts.apis.io/narvar/security/narvar-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/narvar-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/authentication/narvar-authentication.yml
+  href: https://artifacts.apis.io/narvar/authentication/narvar-authentication.yml
   title: ''
   type: Authentication
   url: authentication/narvar-authentication.yml
@@ -119,27 +123,27 @@ common:
   type: StatusPage
   url: https://status.narvar.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/plans/narvar-plans-pricing.yml
+  href: https://artifacts.apis.io/narvar/plans/narvar-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/narvar-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/rate-limits/narvar-rate-limits.yml
+  href: https://artifacts.apis.io/narvar/rate-limits/narvar-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/narvar-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/finops/narvar-finops.yml
+  href: https://artifacts.apis.io/narvar/finops/narvar-finops.yml
   title: ''
   type: FinOps
   url: finops/narvar-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/vocabulary/narvar-vocabulary.yml
+  href: https://artifacts.apis.io/narvar/vocabulary/narvar-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/narvar-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/json-ld/narvar-context.jsonld
+  href: https://artifacts.apis.io/narvar/json-ld/narvar-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/narvar-context.jsonld
@@ -148,7 +152,7 @@ common:
   type: BlogRSS
   url: https://corp.narvar.com/blog/rss.xml
 - group: company
-  href: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/blogs/blogs.json
+  href: https://artifacts.apis.io/narvar/blogs/blogs.json
   title: ''
   type: BlogPosts
   url: blogs/blogs.json
@@ -187,12 +191,12 @@ overview: 'Narvar publishes 3 API contracts indexed on the [APIs.io](https://api
   The Narvar catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Narvar''s developer surface includes authentication, documentation, engineering blog, and 16 more developer resources.'
+  Narvar''s developer surface includes authentication, documentation, engineering blog, and 17 more developer resources.'
 plans:
 - name: Narvar Plans Pricing
   plan_count: 3
   slug: narvar-plans-pricing
-random_paper: 12
+random_paper: 2
 rate_limits:
 - limit_count: 2
   name: Narvar Rate Limits
@@ -211,23 +215,23 @@ rules:
   slug: narvar-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 38.1
+  composite: 38.3
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 66.2
     catalog_earned_first_party: 0.0
     catalog_gap: 48.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.4
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 23.5
     contract_quality: 64.7
-    developer_ergonomics: 23.8
+    developer_ergonomics: 25.0
     discoverability: 66.1
     operational_transparency: 15.8
-  previous_composite: 45.5
+  previous_composite: 38.3
   provenance:
     agentic_access: derived
     contracts:
@@ -241,13 +245,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/narvar/refs/heads/main/screenshots/narvar-2026-06-20T185948.png
+screenshot: https://apis.io/screenshots/narvar/narvar-2026-06-20T185948.png
 security:
 - kind: authentication
   name: Narvar Authentication

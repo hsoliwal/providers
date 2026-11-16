@@ -1,11 +1,19 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
-  public: false
-  source: []
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Open access
+  onboarding: open
+  pricing: paid
+  public: true
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.5
-  scored_at: '2026-10-17'
+  score: 34.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://www.characterquilt.com
@@ -48,11 +59,8 @@ apis:
 - description: 'CharacterQuilt''s hosted Model Context Protocol server, the agent-facing surface of its marketing agent runtime. Live and OAuth-protected at https://mcp.characterquilt.com/api/mcp: an anonymous request'
   name: CharacterQuilt MCP Server
   slug: characterquilt-mcp-server
-artifact_total: 13
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CharacterQuilt Brand Profiles Branding API
   slug: open-characterquilt-branding-api
@@ -61,12 +69,12 @@ collections:
   slug: open-characterquilt-discovery-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/capabilities/characterquilt-capability-edges.yml
+  href: https://artifacts.apis.io/characterquilt/capabilities/characterquilt-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/characterquilt-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/mcp/characterquilt-mcp.yml
+  href: https://artifacts.apis.io/characterquilt/mcp/characterquilt-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/characterquilt-mcp.yml
@@ -103,62 +111,62 @@ common:
   type: Support
   url: mailto:hello@characterquilt.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/security/characterquilt-domain-security.yml
+  href: https://artifacts.apis.io/characterquilt/security/characterquilt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/characterquilt-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/well-known/characterquilt-well-known.yml
+  href: https://artifacts.apis.io/characterquilt/well-known/characterquilt-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/characterquilt-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/authentication/characterquilt-authentication.yml
+  href: https://artifacts.apis.io/characterquilt/authentication/characterquilt-authentication.yml
   title: ''
   type: Authentication
   url: authentication/characterquilt-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/scopes/characterquilt-scopes.yml
+  href: https://artifacts.apis.io/characterquilt/scopes/characterquilt-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/characterquilt-scopes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/mcp/characterquilt-tool-crosswalk.yml
+  href: https://artifacts.apis.io/characterquilt/mcp/characterquilt-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/characterquilt-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/characterquilt/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/conventions/characterquilt-conventions.yml
+  href: https://artifacts.apis.io/characterquilt/conventions/characterquilt-conventions.yml
   title: ''
   type: Conventions
   url: conventions/characterquilt-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/conformance/characterquilt-conformance.yml
+  href: https://artifacts.apis.io/characterquilt/conformance/characterquilt-conformance.yml
   title: ''
   type: Conformance
   url: conformance/characterquilt-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/lifecycle/characterquilt-lifecycle.yml
+  href: https://artifacts.apis.io/characterquilt/lifecycle/characterquilt-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/characterquilt-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/rate-limits/characterquilt-rate-limits.yml
+  href: https://artifacts.apis.io/characterquilt/rate-limits/characterquilt-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/characterquilt-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/plans/characterquilt-plans-pricing.yml
+  href: https://artifacts.apis.io/characterquilt/plans/characterquilt-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/characterquilt-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/packages/characterquilt-packages.yml
+  href: https://artifacts.apis.io/characterquilt/packages/characterquilt-packages.yml
   title: ''
   type: Packages
   url: packages/characterquilt-packages.yml
@@ -176,6 +184,14 @@ common:
   url: https://twitter.com/characterquilt
 created: '2026-07-17'
 description: 'CharacterQuilt is an AI-native marketing infrastructure company (Y Combinator Spring 2026) building computer-use agents that design and deploy enterprise marketing campaigns end-to-end. Marketing teams submit a brief and CharacterQuilt''s agents handle audience segmentation, on-brand creative generation, brand validation, and direct deployment into existing tools such as HubSpot, Marketo, WordPress, and LinkedIn — collapsing work that once took multiple agencies, ten tools, and six weeks into roughly an hour. Alongside the product, CharacterQuilt publishes a public, machine-readable brand-profiles data surface at /branding/<slug>.json: colors, typography, logos, components, and personality extracted from thousands of companies'' live websites, intended for agents, designers, and AI tools. Founded by Bhairav Mehta (CEO) and Clint Burgess and based in San Francisco.'
+finops:
+- has_sources: true
+  method: derived
+  name: Characterquilt Finops
+  primary_unit: ''
+  service_category: ''
+  slug: characterquilt-finops
+  template: true
 image: https://cdn.prod.website-files.com/678e847c65f5a9cc363424b0/68d6b1531e1346581672508b_Open%20Graph%20Image.jpg
 layout: provider
 mcp_servers:
@@ -189,16 +205,32 @@ network: true
 overview: 'CharacterQuilt publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Branding API, Discovery API, and 1 more. Tagged areas include Company, Marketing, Artificial Intelligence, AI Agents, and Marketing Automation.
 
 
+  The CharacterQuilt catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   CharacterQuilt''s developer surface includes engineering blog, pricing, signup flow, support, authentication, and 20 more developer resources.'
 plans:
 - name: Characterquilt Plans Pricing
   plan_count: 3
   slug: characterquilt-plans-pricing
-random_paper: 4
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Characterquilt Rate Limits
   slug: characterquilt-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 84
+  extends:
+  - spectral:oas
+  name: CharacterQuilt API Rules
+  rule_count: 43
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 1
+    warn: 1
+  slug: characterquilt-rules
 scopes:
 - name: Characterquilt Scopes
   scope_count: 5
@@ -206,18 +238,18 @@ scopes:
   summary_line: 5 scopes
 score:
   band: developing
-  composite: 43.4
+  composite: 45.1
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 44.0
+    artifact_dirs: 28
+    catalog_earned: 48.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 71.0
+    catalog_gap: 66.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 76.3
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 45.9
     developer_ergonomics: 26.2
     discoverability: 64.3
@@ -229,7 +261,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 43.4
+  previous_composite: 45.1
   provenance:
     conformance: first-party
     contracts:
@@ -245,14 +277,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/characterquilt/refs/heads/main/screenshots/characterquilt-2026-07-25T205053.png
+screenshot: https://apis.io/screenshots/characterquilt/characterquilt-2026-07-25T205053.png
 security:
 - kind: authentication
   name: Characterquilt Authentication

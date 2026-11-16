@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,9 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.3
-  scored_at: '2026-10-17'
+  score: 31.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -105,11 +114,8 @@ arazzos:
 - description: Resolve a joined team, check for an existing channel, create it when missing, and post a kickoff message.
   name: Microsoft Office Provision a Teams Channel and Announce It
   slug: microsoft-office-teams-channel-provisioning-workflow
-artifact_total: 33
+artifact_total: 41
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Microsoft Graph API (Office 365 subset) Drive API
   slug: open-microsoft-office-drive-api
@@ -123,158 +129,203 @@ collections:
   name: Microsoft Graph API (Office 365 subset)
   slug: open-microsoft-office
 common:
+- group: design
+  href: https://artifacts.apis.io/microsoft-office/rules/microsoft-office-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-office-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-office/json-ld/microsoft-office-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/microsoft-office-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/microsoft-office/vocabulary/microsoft-office-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/microsoft-office-vocabulary.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://www.microsoft.com/en-us/trust-center
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://learn.microsoft.com/en-us/graph/versioning-and-support#deprecation
+- group: other
+  href: https://artifacts.apis.io/microsoft-office/hosts/microsoft-office-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/microsoft-office-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-office/vendors/microsoft-office-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/microsoft-office-vendors.yml
+- group: auth
+  title: ''
+  type: Security
+  url: https://www.microsoft.com/security
+- group: other
+  title: ''
+  type: Leadership
+  url: https://news.microsoft.com/leadership
+- group: start
+  title: ''
+  type: GettingStarted
+  url: https://learn.microsoft.com/en-us/adaptive-cards/sdk/rendering-cards/android/getting-started
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/plans/microsoft-office-plans-pricing.yml
+  href: https://artifacts.apis.io/microsoft-office/plans/microsoft-office-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/microsoft-office-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/rate-limits/microsoft-office-rate-limits.yml
+  href: https://artifacts.apis.io/microsoft-office/rate-limits/microsoft-office-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/microsoft-office-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/finops/microsoft-office-finops.yml
+  href: https://artifacts.apis.io/microsoft-office/finops/microsoft-office-finops.yml
   title: ''
   type: FinOps
   url: finops/microsoft-office-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/agentic-access/microsoft-office-agentic-access.yml
+  href: https://artifacts.apis.io/microsoft-office/agentic-access/microsoft-office-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/microsoft-office-agentic-access.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/packages/microsoft-office-packages.yml
+  href: https://artifacts.apis.io/microsoft-office/packages/microsoft-office-packages.yml
   title: ''
   type: Packages
   url: packages/microsoft-office-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/well-known/microsoft-office-well-known.yml
+  href: https://artifacts.apis.io/microsoft-office/well-known/microsoft-office-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/microsoft-office-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/mcp/microsoft-office-mcp.yml
+  href: https://artifacts.apis.io/microsoft-office/mcp/microsoft-office-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/microsoft-office-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/llms/microsoft-office-llms.txt
+  href: https://artifacts.apis.io/microsoft-office/llms/microsoft-office-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/microsoft-office-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/overlays/microsoft-office-openapi-overlay.yaml
+  href: https://artifacts.apis.io/microsoft-office/overlays/microsoft-office-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/microsoft-office-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/conformance/microsoft-office-conformance.yml
+  href: https://artifacts.apis.io/microsoft-office/conformance/microsoft-office-conformance.yml
   title: ''
   type: Conformance
   url: conformance/microsoft-office-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/errors/microsoft-office-problem-types.yml
+  href: https://artifacts.apis.io/microsoft-office/errors/microsoft-office-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/microsoft-office-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/lifecycle/microsoft-office-lifecycle.yml
+  href: https://artifacts.apis.io/microsoft-office/lifecycle/microsoft-office-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/microsoft-office-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/conventions/microsoft-office-conventions.yml
+  href: https://artifacts.apis.io/microsoft-office/conventions/microsoft-office-conventions.yml
   title: ''
   type: Conventions
   url: conventions/microsoft-office-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/changelog/microsoft-office-changelog.yml
+  href: https://artifacts.apis.io/microsoft-office/changelog/microsoft-office-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/microsoft-office-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/cli/microsoft-office-cli.yml
+  href: https://artifacts.apis.io/microsoft-office/cli/microsoft-office-cli.yml
   title: ''
   type: CLI
   url: cli/microsoft-office-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/components/microsoft-office-components.yml
+  href: https://artifacts.apis.io/microsoft-office/components/microsoft-office-components.yml
   title: ''
   type: Components
   url: components/microsoft-office-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/data-model/microsoft-office-data-model.yml
+  href: https://artifacts.apis.io/microsoft-office/data-model/microsoft-office-data-model.yml
   title: ''
   type: DataModel
   url: data-model/microsoft-office-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/sandbox/microsoft-office-sandbox.yml
+  href: https://artifacts.apis.io/microsoft-office/sandbox/microsoft-office-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/microsoft-office-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/security/microsoft-office-trust-center.yml
+  href: https://artifacts.apis.io/microsoft-office/security/microsoft-office-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/microsoft-office-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/security/microsoft-office-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/microsoft-office/security/microsoft-office-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/microsoft-office-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/security/microsoft-office-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-office/security/microsoft-office-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-office-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/authentication/microsoft-office-authentication.yml
+  href: https://artifacts.apis.io/microsoft-office/authentication/microsoft-office-authentication.yml
   title: ''
   type: Authentication
   url: authentication/microsoft-office-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/scopes/microsoft-office-scopes.yml
+  href: https://artifacts.apis.io/microsoft-office/scopes/microsoft-office-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/microsoft-office-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/arazzo/microsoft-office-mail-triage-and-respond-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office/arazzo/microsoft-office-mail-triage-and-respond-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-mail-triage-and-respond-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/arazzo/microsoft-office-mail-folder-message-export-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office/arazzo/microsoft-office-mail-folder-message-export-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-mail-folder-message-export-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/arazzo/microsoft-office-mail-to-teams-alert-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office/arazzo/microsoft-office-mail-to-teams-alert-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-mail-to-teams-alert-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/arazzo/microsoft-office-drive-file-discovery-download-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office/arazzo/microsoft-office-drive-file-discovery-download-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-drive-file-discovery-download-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/arazzo/microsoft-office-drive-file-update-roundtrip-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office/arazzo/microsoft-office-drive-file-update-roundtrip-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-drive-file-update-roundtrip-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/arazzo/microsoft-office-drive-file-to-teams-notification-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office/arazzo/microsoft-office-drive-file-to-teams-notification-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-drive-file-to-teams-notification-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/arazzo/microsoft-office-teams-channel-provisioning-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office/arazzo/microsoft-office-teams-channel-provisioning-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-teams-channel-provisioning-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/arazzo/microsoft-office-teams-channel-message-digest-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office/arazzo/microsoft-office-teams-channel-message-digest-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-teams-channel-message-digest-workflow.yml
@@ -325,14 +376,38 @@ common:
 created: '2024-01-01'
 description: A collection of APIs for Microsoft Office applications and services, providing programmatic access to Word, Excel, PowerPoint, Outlook, OneDrive, and Teams through Microsoft Graph and Office JavaScript APIs.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Microsoft Office Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: user
+  service_category: ''
   slug: microsoft-office-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-office.png
+json_schemas:
+- name: DriveItemCollection
+  property_count: 1
+  slug: microsoft-office-drive-item-collection
+- name: DriveItem
+  property_count: 7
+  slug: microsoft-office-drive-item
+- name: Drive
+  property_count: 4
+  slug: microsoft-office-drive
+- name: MessageCollection
+  property_count: 2
+  slug: microsoft-office-message-collection
+- name: Message
+  property_count: 6
+  slug: microsoft-office-message
+- name: SendMailRequest
+  property_count: 2
+  slug: microsoft-office-send-mail-request
+jsonld:
+- class_count: 6
+  name: Microsoft Office Context
+  property_count: 18
+  slug: microsoft-office-context
 layout: provider
 mcp_servers:
 - description: Microsoft ships an official Model Context Protocol server for Microsoft Graph (the API surface behind this Office 365 collection). "Microsoft MCP Server for Enterprise" is a read-only, RAG-assisted se
@@ -345,40 +420,59 @@ network: true
 overview: 'Microsoft Office is listed with 10 APIs on the [APIs.io](https://apis.io/) network, including Drive API, Mail API, Teams API, and 7 more. Tagged areas include Collaboration, Documents, Microsoft, Office, and Productivity.
 
 
-  Microsoft Office''s developer surface includes changelog, CLI, sandbox, authentication, developer portal, documentation, engineering blog, and 35 more developer resources.'
+  The Microsoft Office catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+
+
+  Microsoft Office''s developer surface includes getting-started guide, changelog, CLI, sandbox, authentication, developer portal, documentation, and 45 more developer resources.'
 plans:
 - name: Microsoft Office Plans Pricing
-  plan_count: 3
+  plan_count: 13
   slug: microsoft-office-plans-pricing
-random_paper: 19
+- name: Microsoft Office Price Estimates
+  plan_count: 0
+  slug: microsoft-office-price-estimates
+random_paper: 15
 rate_limits:
 - limit_count: 5
   name: Microsoft Office Rate Limits
   slug: microsoft-office-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Microsoft Office API Rules
+  rule_count: 51
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 2
+  slug: microsoft-office-rules
 scopes:
 - name: Microsoft Office Scopes
   scope_count: 16
   slug: microsoft-office-scopes
   summary_line: 16 scopes · authorizationCode
 score:
-  band: developing
-  composite: 53.4
+  band: exemplar
+  composite: 69.3
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 46.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    artifact_dirs: 36
+    catalog_earned: 83.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 31.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 6.6
   facets:
-    access_clarity: 47.4
-    contract_governance: 4.5
-    contract_quality: 45.6
+    access_clarity: 86.8
+    contract_governance: 22.0
+    contract_quality: 59.2
     developer_ergonomics: 78.6
-    discoverability: 80.0
-    operational_transparency: 34.2
-  previous_composite: 54.9
+    discoverability: 81.7
+    operational_transparency: 52.6
+  previous_composite: 62.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -394,13 +488,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-office/refs/heads/main/screenshots/microsoft-office-2026-06-20T185511.png
+screenshot: https://apis.io/screenshots/microsoft-office/microsoft-office-2026-06-20T185511.png
 security:
 - kind: authentication
   name: Microsoft Office Authentication

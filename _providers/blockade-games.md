@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.6
-  scored_at: '2026-10-17'
+  score: 38.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://backend.blockadelabs.com/api/v1
@@ -47,15 +51,12 @@ apis:
   description: The Skyboxes API from Blockade Games — 8 operation(s) for skyboxes.
   name: Blockade Games Skyboxes API
   slug: blockade-games-skyboxes-api
-artifact_total: 9
+artifact_total: 13
 asyncapis:
 - description: ''
   name: Blockade Games Webhooks
   slug: blockade-games-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Blockade Labs API Documentation Skybox Exports API
   slug: open-blockade-games-skybox-exports-api
@@ -63,8 +64,13 @@ collections:
   name: Blockade Labs API Documentation Skybox Exports Skyboxes API
   slug: open-blockade-games-skyboxes-api
 common:
+- group: other
+  href: https://artifacts.apis.io/blockade-games/capabilities/blockade-games-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/blockade-games-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/plans/blockade-games-plans-pricing.yml
+  href: https://artifacts.apis.io/blockade-games/plans/blockade-games-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/blockade-games-plans-pricing.yml
@@ -73,7 +79,7 @@ common:
   type: BlogRSS
   url: https://www.blockadelabs.com/blog-feed.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/overlays/blockade-games-skybox-overlay.yaml
+  href: https://artifacts.apis.io/blockade-games/overlays/blockade-games-skybox-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/blockade-games-skybox-overlay.yaml
@@ -142,82 +148,90 @@ common:
   type: StatusPage
   url: https://status.blockadelabs.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/authentication/blockade-games-authentication.yml
+  href: https://artifacts.apis.io/blockade-games/authentication/blockade-games-authentication.yml
   title: ''
   type: Authentication
   url: authentication/blockade-games-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/security/blockade-games-domain-security.yml
+  href: https://artifacts.apis.io/blockade-games/security/blockade-games-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/blockade-games-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/lifecycle/blockade-games-lifecycle.yml
+  href: https://artifacts.apis.io/blockade-games/lifecycle/blockade-games-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/blockade-games-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/conventions/blockade-games-conventions.yml
+  href: https://artifacts.apis.io/blockade-games/conventions/blockade-games-conventions.yml
   title: ''
   type: Conventions
   url: conventions/blockade-games-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/errors/blockade-games-problem-types.yml
+  href: https://artifacts.apis.io/blockade-games/errors/blockade-games-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/blockade-games-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/conformance/blockade-games-conformance.yml
+  href: https://artifacts.apis.io/blockade-games/conformance/blockade-games-conformance.yml
   title: ''
   type: Conformance
   url: conformance/blockade-games-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/data-model/blockade-games-data-model.yml
+  href: https://artifacts.apis.io/blockade-games/data-model/blockade-games-data-model.yml
   title: ''
   type: DataModel
   url: data-model/blockade-games-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/asyncapi/blockade-games-webhooks.yml
+  href: https://artifacts.apis.io/blockade-games/asyncapi/blockade-games-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/blockade-games-webhooks.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/packages/blockade-games-packages.yml
+  href: https://artifacts.apis.io/blockade-games/packages/blockade-games-packages.yml
   title: ''
   type: Packages
   url: packages/blockade-games-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/packages/blockade-games-packages.yml
+  href: https://artifacts.apis.io/blockade-games/packages/blockade-games-packages.yml
   title: ''
   type: SDKs
   url: packages/blockade-games-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/mcp/blockade-games-mcp.yml
+  href: https://artifacts.apis.io/blockade-games/mcp/blockade-games-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/blockade-games-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/llms/blockade-games-llms.txt
+  href: https://artifacts.apis.io/blockade-games/llms/blockade-games-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/blockade-games-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/well-known/blockade-games-well-known.yml
+  href: https://artifacts.apis.io/blockade-games/well-known/blockade-games-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/blockade-games-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/skills/blockade-games-generate-skybox.md
+  href: https://artifacts.apis.io/blockade-games/skills/blockade-games-generate-skybox.md
   title: ''
   type: AgentSkill
   url: skills/blockade-games-generate-skybox.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/skills/blockade-games-export-skybox.md
+  href: https://artifacts.apis.io/blockade-games/skills/blockade-games-export-skybox.md
   title: ''
   type: AgentSkill
   url: skills/blockade-games-export-skybox.md
 created: '2026-07-17'
 description: Blockade Games (operating as Blockade Labs) is the maker of Skybox AI, an AI-powered platform that generates production-ready 360 equirectangular panoramas and skyboxes from text prompts, along with depth maps for 3D scenes. It offers a public REST API for asynchronous skybox generation, style selection, remixing, history, and multi-format exports, with delivery via webhooks and Pusher realtime events. First-party SDKs ship for JavaScript/TypeScript (npm), PHP/Laravel (Packagist), and Unity (C#), plus engine and tool integrations for Blender, Unreal, Godot, Roblox, SketchUp, and Figma. The product serves game, VR/AR, film, e-commerce, and education teams.
+finops:
+- has_sources: true
+  method: derived
+  name: Blockade Games Finops
+  primary_unit: seat
+  service_category: ''
+  slug: blockade-games-finops
+  template: false
 image: https://static.wixstatic.com/media/8d6639_b2ee76a88e224659804c1ef09c7bc5da~mv2.jpg/v1/fit/w_2500,h_1330,al_c/8d6639_b2ee76a88e224659804c1ef09c7bc5da~mv2.jpg
 layout: provider
 modified: '2026-10-06'
@@ -227,34 +241,50 @@ network: true
 overview: 'Blockade Games publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Skybox Exports API and Skyboxes API. Tagged areas include Company, Artificial Intelligence, Image Generation, 3D, and Gaming.
 
 
-  The Blockade Games catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Blockade Games catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Blockade Games'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 27 more developer resources.'
+  Blockade Games'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 28 more developer resources.'
 plans:
 - name: Blockade Games Plans Pricing
   plan_count: 7
   slug: blockade-games-plans-pricing
-random_paper: 5
+- name: Blockade Games Price Estimates
+  plan_count: 0
+  slug: blockade-games-price-estimates
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Blockade Games API Rules
+  rule_count: 47
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 1
+    warn: 1
+  slug: blockade-games-rules
 score:
-  band: developing
-  composite: 53.0
+  band: strong
+  composite: 56.3
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 49.0
+    artifact_dirs: 28
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 5.9
+  delta: 0.0
   facets:
-    access_clarity: 76.3
-    contract_governance: 4.5
+    access_clarity: 84.2
+    contract_governance: 18.2
     contract_quality: 51.5
     developer_ergonomics: 63.7
     discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 47.1
+  previous_composite: 56.3
   provenance:
     conformance: derived
     contracts:
@@ -270,13 +300,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/blockade-games/refs/heads/main/screenshots/blockade-games-2026-07-25T203333.png
+screenshot: https://apis.io/screenshots/blockade-games/blockade-games-2026-07-25T203333.png
 security:
 - kind: authentication
   name: Blockade Games Authentication
@@ -286,6 +316,12 @@ security:
   name: Blockade Games Domain Security
   slug: blockade-games-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Export a completed Skybox
+  slug: blockade-games-export-skybox
+- name: Generate and retrieve a Skybox
+  slug: blockade-games-generate-skybox
 slug: blockade-games
 tags:
 - Company

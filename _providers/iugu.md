@@ -1,16 +1,17 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
-  - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -19,21 +20,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.0
-  scored_at: '2026-10-17'
+  score: 31.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 79
   human_in_the_loop: 0
@@ -261,62 +265,62 @@ apis:
 artifact_total: 50
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/agentic-access/iugu-agentic-access.yml
+  href: https://artifacts.apis.io/iugu/agentic-access/iugu-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/iugu-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/rules/iugu-rules.yml
+  href: https://artifacts.apis.io/iugu/rules/iugu-rules.yml
   title: ''
   type: Spectral
   url: rules/iugu-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/errors/iugu-problem-types.yml
+  href: https://artifacts.apis.io/iugu/errors/iugu-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/iugu-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/conformance/iugu-conformance.yml
+  href: https://artifacts.apis.io/iugu/conformance/iugu-conformance.yml
   title: ''
   type: Conformance
   url: conformance/iugu-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/llms/iugu-llms.txt
+  href: https://artifacts.apis.io/iugu/llms/iugu-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/iugu-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/well-known/iugu-status-security.txt
+  href: https://artifacts.apis.io/iugu/well-known/iugu-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/iugu-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/well-known/iugu-well-known.yml
+  href: https://artifacts.apis.io/iugu/well-known/iugu-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/iugu-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/hosts/iugu-hosts.yml
+  href: https://artifacts.apis.io/iugu/hosts/iugu-hosts.yml
   title: ''
   type: Hosts
   url: hosts/iugu-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/integrations/iugu-integration-edges.yml
+  href: https://artifacts.apis.io/iugu/integrations/iugu-integration-edges.yml
   title: ''
   type: IntegrationEdges
   url: integrations/iugu-integration-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/vendors/iugu-vendors.yml
+  href: https://artifacts.apis.io/iugu/vendors/iugu-vendors.yml
   title: ''
   type: Vendors
   url: vendors/iugu-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/packages/iugu-packages.yml
+  href: https://artifacts.apis.io/iugu/packages/iugu-packages.yml
   title: ''
   type: SDKs
   url: packages/iugu-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/packages/iugu-packages.yml
+  href: https://artifacts.apis.io/iugu/packages/iugu-packages.yml
   title: ''
   type: Packages
   url: packages/iugu-packages.yml
@@ -333,12 +337,12 @@ common:
   type: DeveloperPortal
   url: https://developer.iugu.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/authentication/iugu-authentication.yml
+  href: https://artifacts.apis.io/iugu/authentication/iugu-authentication.yml
   title: ''
   type: Authentication
   url: authentication/iugu-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/security/iugu-domain-security.yml
+  href: https://artifacts.apis.io/iugu/security/iugu-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/iugu-domain-security.yml
@@ -375,25 +379,25 @@ common:
   type: X
   url: https://x.com/iugu
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/plans/iugu-plans-pricing.yml
+  href: https://artifacts.apis.io/iugu/plans/iugu-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/iugu-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/rate-limits/iugu-rate-limits.yml
+  href: https://artifacts.apis.io/iugu/rate-limits/iugu-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/iugu-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/finops/iugu-finops.yml
+  href: https://artifacts.apis.io/iugu/finops/iugu-finops.yml
   title: ''
   type: FinOps
   url: finops/iugu-finops.yml
 created: '2026-06-13'
 description: Iugu is a Brazilian payment infrastructure platform offering REST APIs for invoicing, subscriptions, payment splits, boleto bancário generation, credit card processing, and marketplace payments. The platform enables businesses to automate financial operations including recurring billing, split payments for marketplaces, Pix instant payments, and sub-account management. Iugu operates as a Bacen-licensed Payment Institution and is PCI DSS compliant, serving e-commerce, SaaS, and marketplace companies across Brazil.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Iugu Finops
   primary_unit: ''
   service_category: ''
@@ -414,9 +418,9 @@ overview: 'Iugu publishes 43 API contracts indexed on the [APIs.io](https://apis
   Iugu''s developer surface includes support, authentication, documentation, engineering blog, pricing, and 23 more developer resources.'
 plans:
 - name: Iugu Plans Pricing
-  plan_count: 3
+  plan_count: 0
   slug: iugu-plans-pricing
-random_paper: 2
+random_paper: 10
 rate_limits:
 - limit_count: 1
   name: Iugu Rate Limits
@@ -435,23 +439,23 @@ rules:
     warn: 6
   slug: iugu-rules
 score:
-  band: developing
-  composite: 40.2
+  band: thin
+  composite: 38.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 49.5
+    artifact_dirs: 22
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 65.5
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 12.8
+  delta: -1.3
   facets:
-    access_clarity: 31.6
+    access_clarity: 17.1
     contract_governance: 18.2
-    contract_quality: 51.1
-    developer_ergonomics: 45.2
+    contract_quality: 56.6
+    developer_ergonomics: 38.1
     discoverability: 78.6
-    operational_transparency: 26.3
+    operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -459,7 +463,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 27.4
+  previous_composite: 40.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -475,13 +479,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/iugu/refs/heads/main/screenshots/iugu-2026-06-20T183637.png
+screenshot: https://apis.io/screenshots/iugu/iugu-2026-06-20T183637.png
 security:
 - kind: authentication
   name: Iugu Authentication

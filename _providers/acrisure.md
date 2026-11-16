@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Hosted Model Context Protocol server operated by Acrisure at https://api.acrisure.com/v1/mcp. Production and live, protected by Microsoft Entra ID via an authorization-code + PKCE flow carrying the si
@@ -44,12 +50,12 @@ apis:
 artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acrisure/refs/heads/main/security/acrisure-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/acrisure/security/acrisure-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/acrisure-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acrisure/refs/heads/main/security/acrisure-domain-security.yml
+  href: https://artifacts.apis.io/acrisure/security/acrisure-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/acrisure-domain-security.yml
@@ -94,12 +100,12 @@ common:
   type: SecondaryMarket
   url: https://forgeglobal.com/acrisure_stock/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acrisure/refs/heads/main/well-known/acrisure-well-known.yml
+  href: https://artifacts.apis.io/acrisure/well-known/acrisure-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/acrisure-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acrisure/refs/heads/main/well-known/acrisure-security.txt
+  href: https://artifacts.apis.io/acrisure/well-known/acrisure-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/acrisure-security.txt
@@ -108,22 +114,22 @@ common:
   type: Security
   url: https://www.acrisure.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acrisure/refs/heads/main/authentication/acrisure-authentication.yml
+  href: https://artifacts.apis.io/acrisure/authentication/acrisure-authentication.yml
   title: ''
   type: Authentication
   url: authentication/acrisure-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acrisure/refs/heads/main/scopes/acrisure-scopes.yml
+  href: https://artifacts.apis.io/acrisure/scopes/acrisure-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/acrisure-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acrisure/refs/heads/main/mcp/acrisure-mcp.yml
+  href: https://artifacts.apis.io/acrisure/mcp/acrisure-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/acrisure-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acrisure/refs/heads/main/conformance/acrisure-conformance.yml
+  href: https://artifacts.apis.io/acrisure/conformance/acrisure-conformance.yml
   title: ''
   type: Conformance
   url: conformance/acrisure-conformance.yml
@@ -163,7 +169,7 @@ overview: 'Acrisure is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Acrisure''s developer surface includes engineering blog, product news, support, signup flow, authentication, and 14 more developer resources.'
-random_paper: 4
+random_paper: 22
 scopes:
 - name: Acrisure Scopes
   scope_count: 2
@@ -204,14 +210,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 42.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/acrisure/refs/heads/main/screenshots/acrisure-2026-08-07T160845.png
+screenshot: https://apis.io/screenshots/acrisure/acrisure-2026-08-07T160845.png
 security:
 - kind: authentication
   name: Acrisure Authentication
@@ -236,8 +242,9 @@ tags:
 - Risk Management
 - Cybersecurity
 - Mortgage
-- Surety Bonds
+- Surety
 - MCP
+- OAuth
 - Authentication
 website: https://www.acrisure.com/
 ---

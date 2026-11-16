@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Anonymous Model Context Protocol endpoint served from the Cooler Heads web host. It is the Wix Site MCP surface (platform-provided, not a first-party Cooler Heads API): nine tools that let an agent re'
@@ -43,7 +46,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cooler-heads/refs/heads/main/security/cooler-heads-domain-security.yml
+  href: https://artifacts.apis.io/cooler-heads/security/cooler-heads-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cooler-heads-domain-security.yml
@@ -52,27 +55,27 @@ common:
   type: Website
   url: https://www.coolerheads.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cooler-heads/refs/heads/main/mcp/cooler-heads-mcp.yml
+  href: https://artifacts.apis.io/cooler-heads/mcp/cooler-heads-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/cooler-heads-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cooler-heads/refs/heads/main/llms/cooler-heads-llms.txt
+  href: https://artifacts.apis.io/cooler-heads/llms/cooler-heads-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cooler-heads-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cooler-heads/refs/heads/main/well-known/cooler-heads-well-known.yml
+  href: https://artifacts.apis.io/cooler-heads/well-known/cooler-heads-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cooler-heads-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cooler-heads/refs/heads/main/authentication/cooler-heads-authentication.yml
+  href: https://artifacts.apis.io/cooler-heads/authentication/cooler-heads-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cooler-heads-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cooler-heads/refs/heads/main/conformance/cooler-heads-conformance.yml
+  href: https://artifacts.apis.io/cooler-heads/conformance/cooler-heads-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cooler-heads-conformance.yml
@@ -116,12 +119,12 @@ overview: 'Cooler Heads is listed with 1 API on the [APIs.io](https://apis.io/) 
 
 
   Cooler Heads'' developer surface includes authentication, engineering blog, support, and 10 more developer resources.'
-random_paper: 18
+random_paper: 6
 score:
   band: emerging
   composite: 12.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -145,14 +148,14 @@ score:
     regime: Health
     regime_id: health
     score: 13.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cooler-heads/refs/heads/main/screenshots/cooler-heads-2026-09-02T145137.png
+screenshot: https://apis.io/screenshots/cooler-heads/cooler-heads-2026-09-02T145137.png
 security:
 - kind: authentication
   name: Cooler Heads Authentication

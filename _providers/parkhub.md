@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,30 +25,33 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-10-17'
+  score: 12.4
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/parkhub/refs/heads/main/security/parkhub-trust-center.yml
+  href: https://artifacts.apis.io/parkhub/security/parkhub-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/parkhub-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/parkhub/refs/heads/main/security/parkhub-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/parkhub/security/parkhub-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/parkhub-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/parkhub/refs/heads/main/security/parkhub-domain-security.yml
+  href: https://artifacts.apis.io/parkhub/security/parkhub-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/parkhub-domain-security.yml
@@ -83,12 +87,12 @@ overview: 'Parkhub is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Parkhub''s developer surface includes engineering blog and 6 more developer resources.'
-random_paper: 1
+random_paper: 5
 score:
   band: minimal
-  composite: 6.1
+  composite: 7.5
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
@@ -101,8 +105,8 @@ score:
     contract_quality: 0.0
     developer_ergonomics: 2.4
     discoverability: 43.3
-    operational_transparency: 2.6
-  previous_composite: 6.1
+    operational_transparency: 13.2
+  previous_composite: 7.5
   provenance:
     mcp: first-party
   regulatory:
@@ -111,14 +115,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/parkhub/refs/heads/main/screenshots/parkhub-2026-06-20T191416.png
+screenshot: https://apis.io/screenshots/parkhub/parkhub-2026-06-20T191416.png
 security:
 - kind: domain-security
   name: Parkhub Domain Security

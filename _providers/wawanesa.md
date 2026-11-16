@@ -1,11 +1,11 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   gated: partner
   gated_source:
   - tag:Partner Gated
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -30,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -38,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Broker-facing commercial small business API announced by Wawanesa on 2022-03-30, built with HUB International and described by Wawanesa as "fully aligned with CSIO data standards". Per the company ann
@@ -47,27 +50,27 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wawanesa/refs/heads/main/security/wawanesa-domain-security.yml
+  href: https://artifacts.apis.io/wawanesa/security/wawanesa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wawanesa-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wawanesa/refs/heads/main/authentication/wawanesa-authentication.yml
+  href: https://artifacts.apis.io/wawanesa/authentication/wawanesa-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wawanesa-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wawanesa/refs/heads/main/scopes/wawanesa-scopes.yml
+  href: https://artifacts.apis.io/wawanesa/scopes/wawanesa-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/wawanesa-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wawanesa/refs/heads/main/well-known/wawanesa-well-known.yml
+  href: https://artifacts.apis.io/wawanesa/well-known/wawanesa-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/wawanesa-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wawanesa/refs/heads/main/conformance/wawanesa-conformance.yml
+  href: https://artifacts.apis.io/wawanesa/conformance/wawanesa-conformance.yml
   title: ''
   type: Conformance
   url: conformance/wawanesa-conformance.yml
@@ -76,7 +79,7 @@ common:
   type: Compliance
   url: https://csio.com/news/wawanesa-insurance-achieves-api-security-standards-certification-safeguarding-data-and
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wawanesa/refs/heads/main/llms/wawanesa-llms.txt
+  href: https://artifacts.apis.io/wawanesa/llms/wawanesa-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/wawanesa-llms.txt
@@ -158,7 +161,7 @@ overview: 'Wawanesa Insurance is listed with 1 API on the [APIs.io](https://apis
 
 
   Wawanesa Insurance''s developer surface includes authentication, engineering blog, product news, support, YouTube channel, and 18 more developer resources.'
-random_paper: 19
+random_paper: 15
 scopes:
 - name: Wawanesa Scopes
   scope_count: 0
@@ -168,7 +171,7 @@ score:
   band: emerging
   composite: 25.2
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -198,14 +201,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 41.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/wawanesa/refs/heads/main/screenshots/wawanesa-2026-09-02T170501.png
+screenshot: https://apis.io/screenshots/wawanesa/wawanesa-2026-09-02T170501.png
 security:
 - kind: authentication
   name: Wawanesa Authentication

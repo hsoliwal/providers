@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: OAuth 2.0-authorized REST API that lets registered third-party applications read a consenting iHealth user's connected-device data (blood pressure and user-profile resources confirmed live). Developer
@@ -42,7 +47,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/andon-health/refs/heads/main/security/andon-health-domain-security.yml
+  href: https://artifacts.apis.io/andon-health/security/andon-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/andon-health-domain-security.yml
@@ -75,32 +80,32 @@ common:
   type: TermsOfService
   url: https://ihealthlabs.com/policies/terms-of-service
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/andon-health/refs/heads/main/authentication/andon-health-authentication.yml
+  href: https://artifacts.apis.io/andon-health/authentication/andon-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/andon-health-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/andon-health/refs/heads/main/scopes/andon-health-scopes.yml
+  href: https://artifacts.apis.io/andon-health/scopes/andon-health-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/andon-health-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/andon-health/refs/heads/main/conformance/andon-health-conformance.yml
+  href: https://artifacts.apis.io/andon-health/conformance/andon-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/andon-health-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/andon-health/refs/heads/main/well-known/andon-health-well-known.yml
+  href: https://artifacts.apis.io/andon-health/well-known/andon-health-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/andon-health-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/andon-health/refs/heads/main/mcp/andon-health-mcp.yml
+  href: https://artifacts.apis.io/andon-health/mcp/andon-health-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/andon-health-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/andon-health/refs/heads/main/llms/andon-health-llms.txt
+  href: https://artifacts.apis.io/andon-health/llms/andon-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/andon-health-llms.txt
@@ -120,7 +125,7 @@ overview: 'Andon Health is listed with 1 API on the [APIs.io](https://apis.io/) 
 
 
   Andon Health''s developer surface includes documentation, signup flow, support, authentication, and 10 more developer resources.'
-random_paper: 15
+random_paper: 3
 scopes:
 - name: Andon Health Scopes
   scope_count: 4
@@ -159,14 +164,14 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/andon-health/refs/heads/main/screenshots/andon-health-2026-07-25T200224.png
+screenshot: https://apis.io/screenshots/andon-health/andon-health-2026-07-25T200224.png
 security:
 - kind: authentication
   name: Andon Health Authentication

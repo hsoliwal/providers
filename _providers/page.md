@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/page/refs/heads/main/security/page-domain-security.yml
+  href: https://artifacts.apis.io/page/security/page-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/page-domain-security.yml
@@ -54,7 +58,7 @@ common:
   type: ChangeLog
   url: https://www.withpage.com/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/page/refs/heads/main/changelog/page-changelog.yml
+  href: https://artifacts.apis.io/page/changelog/page-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/page-changelog.yml
@@ -75,7 +79,7 @@ common:
   type: TrustCenter
   url: https://trust.withpage.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/page/refs/heads/main/security/page-trust-center.yml
+  href: https://artifacts.apis.io/page/security/page-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/page-trust-center.yml
@@ -95,12 +99,12 @@ overview: 'Page is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   Page''s developer surface includes engineering blog, changelog, signup flow, and 8 more developer resources.'
-random_paper: 17
+random_paper: 5
 score:
   band: emerging
   composite: 15.3
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -126,14 +130,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 13.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/page/refs/heads/main/screenshots/page-2026-08-07T191257.png
+screenshot: https://apis.io/screenshots/page/page-2026-08-07T191257.png
 security:
 - kind: domain-security
   name: Page Domain Security

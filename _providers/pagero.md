@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Pagero provides e‑invoicing and financial automation APIs, referenced from Thomson Reuters solution pages.
@@ -32,32 +45,32 @@ apis:
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pagero/refs/heads/main/well-known/pagero-status-security.txt
+  href: https://artifacts.apis.io/pagero/well-known/pagero-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/pagero-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pagero/refs/heads/main/well-known/pagero-well-known.yml
+  href: https://artifacts.apis.io/pagero/well-known/pagero-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/pagero-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pagero/refs/heads/main/hosts/pagero-hosts.yml
+  href: https://artifacts.apis.io/pagero/hosts/pagero-hosts.yml
   title: ''
   type: Hosts
   url: hosts/pagero-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pagero/refs/heads/main/vendors/pagero-vendors.yml
+  href: https://artifacts.apis.io/pagero/vendors/pagero-vendors.yml
   title: ''
   type: Vendors
   url: vendors/pagero-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pagero/refs/heads/main/packages/pagero-packages.yml
+  href: https://artifacts.apis.io/pagero/packages/pagero-packages.yml
   title: ''
   type: SDKs
   url: packages/pagero-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pagero/refs/heads/main/packages/pagero-packages.yml
+  href: https://artifacts.apis.io/pagero/packages/pagero-packages.yml
   title: ''
   type: Packages
   url: packages/pagero-packages.yml
@@ -102,7 +115,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/pagero
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pagero/refs/heads/main/security/pagero-domain-security.yml
+  href: https://artifacts.apis.io/pagero/security/pagero-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pagero-domain-security.yml
@@ -130,24 +143,26 @@ overview: 'Pagero is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Pagero''s developer surface includes support, documentation, engineering blog, and 15 more developer resources.'
-random_paper: 0
+random_paper: 14
 score:
   band: emerging
-  composite: 22.3
+  composite: 15.4
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 10
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.3
   facets:
-    access_clarity: 42.1
+    access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 23.8
-    discoverability: 58.9
+    developer_ergonomics: 15.5
+    discoverability: 58.0
     operational_transparency: 21.1
+  previous_composite: 23.7
   provenance:
     mcp: unknown
   regulatory:
@@ -155,13 +170,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/pagero/pagero-2026-11-03T140851.png
 security:
 - kind: domain-security
   name: Pagero Domain Security

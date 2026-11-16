@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: Authenticated REST surface behind the Forcelink mobile field-service ERP, served from the vendor-hosted za2.forcelink.net tenant alongside the Forcelink web login and the Forcelink Android/iOS apps. E
@@ -70,42 +84,42 @@ common:
   type: Login
   url: https://za2.forcelink.net/forcelink/login
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acumensoftware/refs/heads/main/llms/acumensoftware-llms.txt
+  href: https://artifacts.apis.io/acumensoftware/llms/acumensoftware-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/acumensoftware-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acumensoftware/refs/heads/main/mcp/acumensoftware-mcp.yml
+  href: https://artifacts.apis.io/acumensoftware/mcp/acumensoftware-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/acumensoftware-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acumensoftware/refs/heads/main/conformance/acumensoftware-conformance.yml
+  href: https://artifacts.apis.io/acumensoftware/conformance/acumensoftware-conformance.yml
   title: ''
   type: Conformance
   url: conformance/acumensoftware-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acumensoftware/refs/heads/main/conformance/acumensoftware-conformance.yml
+  href: https://artifacts.apis.io/acumensoftware/conformance/acumensoftware-conformance.yml
   title: ''
   type: Compliance
   url: conformance/acumensoftware-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acumensoftware/refs/heads/main/security/acumensoftware-domain-security.yml
+  href: https://artifacts.apis.io/acumensoftware/security/acumensoftware-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/acumensoftware-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/acumensoftware/refs/heads/main/packages/acumensoftware-packages.yml
+  href: https://artifacts.apis.io/acumensoftware/packages/acumensoftware-packages.yml
   title: ''
   type: Packages
   url: packages/acumensoftware-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/acumensoftware/refs/heads/main/plans/acumensoftware-plans-pricing.yml
+  href: https://artifacts.apis.io/acumensoftware/plans/acumensoftware-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/acumensoftware-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/acumensoftware/refs/heads/main/rate-limits/acumensoftware-rate-limits.yml
+  href: https://artifacts.apis.io/acumensoftware/rate-limits/acumensoftware-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/acumensoftware-rate-limits.yml
@@ -121,7 +135,7 @@ modified: '2026-10-06'
 name: Acumen Software
 nav: Providers
 network: true
-overview: 'Acumen Software is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Field Service, Workforce Management, Asset Management, ERP, and Smart Cities.
+overview: 'Acumen Software is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Field Service Management, Workforce Management, Asset Management, ERP, and Smart Cities.
 
 
   Acumen Software''s developer surface includes engineering blog, support, and 14 more developer resources.'
@@ -129,7 +143,7 @@ plans:
 - name: Acumensoftware Plans Pricing
   plan_count: 0
   slug: acumensoftware-plans-pricing
-random_paper: 12
+random_paper: 20
 rate_limits:
 - limit_count: 0
   name: Acumensoftware Rate Limits
@@ -138,7 +152,7 @@ score:
   band: emerging
   composite: 19.7
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -169,14 +183,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 19.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/acumensoftware/refs/heads/main/screenshots/acumensoftware-2026-10-11T092729.png
+screenshot: https://apis.io/screenshots/acumensoftware/acumensoftware-2026-10-11T092729.png
 security:
 - kind: domain-security
   name: Acumensoftware Domain Security
@@ -184,7 +198,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: acumensoftware
 tags:
-- Field Service
+- Field Service Management
 - Workforce Management
 - Asset Management
 - ERP

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: derived
     idempotency: false
     mcp_server: platform
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
-    rate_limit_signal: derived
+    rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.1
-  scored_at: '2026-10-17'
+  score: 36.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -50,37 +56,77 @@ apis:
   description: The DeepL Voice API provides real-time speech transcription and translation. A POST to /v3/voice/realtime issues an ephemeral token and WebSocket streaming URL; clients then open a WSS channel to stre
   name: DeepL Voice API
   slug: deepl-voice-api
-- baseURL: https://api.deepl.com/v2
+- baseURL: https://api.deepl.com/v3
   baseurl_source: declared
-  description: The Documents API from DeepL — 3 operation(s) for documents.
-  name: DeepL Documents API
-  slug: deepl-documents-api
-- baseURL: https://api.deepl.com/v2
+  description: Endpoints for organization administrators to manage API keys and retrieve usage analytics.
+  name: DeepL Admin API
+  slug: deepl-adminapi-api
+- baseURL: https://api.deepl.com/v3
   baseurl_source: declared
-  description: The Glossaries API from DeepL — 4 operation(s) for glossaries.
-  name: DeepL Glossaries API
-  slug: deepl-glossaries-api
-- baseURL: https://api.deepl.com/v2
+  description: The `correct` endpoint fixes spelling and grammar errors without broader rephrasing. Use it when you want a minimal-change correction pass rather than the broader rewriting performed by `rephrase`.
+  name: DeepL Correct Text API
+  slug: deepl-correcttext-api
+- baseURL: https://api.deepl.com/v3
   baseurl_source: declared
-  description: The Languages API from DeepL — 1 operation(s) for languages.
-  name: DeepL Languages API
-  slug: deepl-languages-api
-- baseURL: https://api.deepl.com/v2
+  description: Please note that this is the spec for the (old) v2 glossary endpoint. We recommend users switch to the newer v3 glossary endpoints, which support editability and multilinguality. The *glossary* functi
+  name: DeepL Manage Glossaries API
+  slug: deepl-manageglossaries-api
+- baseURL: https://api.deepl.com/v3
   baseurl_source: declared
-  description: The Translate API from DeepL — 1 operation(s) for translate.
-  name: DeepL Translate API
-  slug: deepl-translate-api
-- baseURL: https://api.deepl.com/v2
+  description: The *glossary* functions allow you to create, inspect, edit and delete glossaries. Glossaries created with the glossary function can be used in translate requests by specifying the `glossary_id` param
+  name: DeepL Manage Multilingual Glossaries API
+  slug: deepl-managemultilingualglossaries-api
+- baseURL: https://api.deepl.com/v3
   baseurl_source: declared
-  description: The Usage API from DeepL — 1 operation(s) for usage.
-  name: DeepL Usage API
-  slug: deepl-usage-api
-- baseURL: https://api.deepl.com/v2
+  description: 'The *Spoken Terms* functions allow you to create, inspect, edit and delete Spoken Terms collections. Spoken Terms improve speech recognition in the Voice API: they ensure specific words and phrases, s'
+  name: DeepL Manage Spoken Terms API
+  slug: deepl-managespokenterms-api
+- baseURL: https://api.deepl.com/v3
   baseurl_source: declared
-  description: The Write API from DeepL — 1 operation(s) for write.
-  name: DeepL Write API
-  slug: deepl-write-api
-artifact_total: 39
+  description: Information about API usage and value ranges
+  name: DeepL Meta Information API
+  slug: deepl-metainformation-api
+- baseURL: https://api.deepl.com/v3
+  baseurl_source: declared
+  description: '**Beta.** Retrieve a quality evaluation report for a document DeepL has translated. Reports are requested with `enable_quality_evaluation` on `POST /v2/document` and polled here. A report lists per-se'
+  name: DeepL Quality Evaluation API
+  slug: deepl-qualityevaluation-api
+- baseURL: https://api.deepl.com/v3
+  baseurl_source: declared
+  description: The `rephrase` endpoint is used to make corrections and adjustments to texts based on style or tone.
+  name: DeepL Rephrase Text API
+  slug: deepl-rephrasetext-api
+- baseURL: https://api.deepl.com/v3
+  baseurl_source: declared
+  description: The Style Rules API from DeepL — 5 operation(s) for style rules.
+  name: DeepL Style Rules API
+  slug: deepl-style-rules-api
+- baseURL: https://api.deepl.com/v3
+  baseurl_source: declared
+  description: 'The document translation API allows you to translate whole documents and supports the following file types and extensions: * `docx` - Microsoft Word Document * `pptx` - Microsoft PowerPoint Document *'
+  name: DeepL Translate Documents API
+  slug: deepl-translatedocuments-api
+- baseURL: https://api.deepl.com/v3
+  baseurl_source: declared
+  description: The text-translation API currently consists of a single endpoint, `translate`, which is described below.
+  name: DeepL Translate Text API
+  slug: deepl-translatetext-api
+- baseURL: https://api.deepl.com/v3
+  baseurl_source: declared
+  description: 'The translation memory endpoints allow you to manage your account''s translation memories, used to store and reuse previously created translations. You can list and retrieve translation memories, page '
+  name: DeepL Translation Memories API
+  slug: deepl-translationmemories-api
+- baseURL: https://api.deepl.com/v3
+  baseurl_source: declared
+  description: 'The Voice API provides real-time voice transcription and translation services. Use a two-step flow: first request a streaming URL via REST, then establish a WebSocket connection for streaming audio an'
+  name: DeepL Voice API
+  slug: deepl-voiceapi-api
+- baseURL: https://api.deepl.com/v3
+  baseurl_source: declared
+  description: '**Alpha.** Async voice translation jobs. This API may change without notice.'
+  name: DeepL Voice Translate Job API
+  slug: deepl-voicetranslatejob-api
+artifact_total: 47
 asyncapis:
 - description: WebSocket streaming API for real-time voice transcription and translation. After obtaining a streaming URL and token via the REST API (POST /v3/voice/realtime), establish a WebSocket connection to str
   name: DeepL Voice API - WebSocket Streaming
@@ -108,9 +154,6 @@ collections:
   name: DeepL Translation Documents Write API
   slug: postman-deepl-write-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: DeepL Translation Documents API
   slug: open-deepl-documents-api
 - collection_type: open
@@ -136,17 +179,17 @@ collections:
   slug: open-deepl-write-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/deepl/refs/heads/main/plans/deepl-plans-pricing.yml
+  href: https://artifacts.apis.io/deepl/plans/deepl-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/deepl-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/deepl/refs/heads/main/rate-limits/deepl-rate-limits.yml
+  href: https://artifacts.apis.io/deepl/rate-limits/deepl-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/deepl-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/deepl/refs/heads/main/finops/deepl-finops.yml
+  href: https://artifacts.apis.io/deepl/finops/deepl-finops.yml
   title: ''
   type: FinOps
   url: finops/deepl-finops.yml
@@ -155,27 +198,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/deepl/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deepl/refs/heads/main/agentic-access/deepl-agentic-access.yml
+  href: https://artifacts.apis.io/deepl/agentic-access/deepl-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/deepl-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deepl/refs/heads/main/security/deepl-trust-center.yml
+  href: https://artifacts.apis.io/deepl/security/deepl-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/deepl-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deepl/refs/heads/main/security/deepl-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/deepl/security/deepl-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/deepl-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deepl/refs/heads/main/security/deepl-domain-security.yml
+  href: https://artifacts.apis.io/deepl/security/deepl-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/deepl-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deepl/refs/heads/main/authentication/deepl-authentication.yml
+  href: https://artifacts.apis.io/deepl/authentication/deepl-authentication.yml
   title: ''
   type: Authentication
   url: authentication/deepl-authentication.yml
@@ -220,12 +263,12 @@ common:
   type: PrivacyPolicy
   url: https://www.deepl.com/privacy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deepl/refs/heads/main/json-ld/deepl-context.jsonld
+  href: https://artifacts.apis.io/deepl/json-ld/deepl-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/deepl-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deepl/refs/heads/main/vocabulary/deepl-vocabulary.yml
+  href: https://artifacts.apis.io/deepl/vocabulary/deepl-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/deepl-vocabulary.yml
@@ -240,13 +283,13 @@ common:
 created: '2024-11-07'
 description: DeepL is an AI-powered translation service that delivers high-quality machine translation between dozens of languages, with support for context-aware translation, document translation, glossaries, and rephrasing/improvement via DeepL Write. The DeepL API is offered in Pro and Free tiers and exposes endpoints for text translation, document translation, glossaries, language metadata, usage, and write/rephrase.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Deepl Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: user/month
+  service_category: ''
   slug: deepl-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/deepl.png
 json_schemas:
 - name: DeepL Glossary
@@ -269,7 +312,7 @@ modified: '2026-05-30'
 name: DeepL
 nav: Providers
 network: true
-overview: 'DeepL publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Voice API, Documents API, Glossaries API, and 4 more. Tagged areas include Artificial Intelligence, Deep Learning, Glossary, Localization, and Machine Learning.
+overview: 'DeepL publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Voice API, Admin API, Correct Text API, and 12 more. Tagged areas include Artificial Intelligence, Deep Learning, Glossary, Localization, and Machine Learning.
 
 
   The DeepL catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
@@ -278,9 +321,12 @@ overview: 'DeepL publishes 7 API contracts indexed on the [APIs.io](https://apis
   DeepL''s developer surface includes authentication, developer portal, documentation, pricing, engineering blog, and 18 more developer resources.'
 plans:
 - name: Deepl Plans Pricing
-  plan_count: 3
+  plan_count: 6
   slug: deepl-plans-pricing
-random_paper: 16
+- name: Deepl Price Estimates
+  plan_count: 0
+  slug: deepl-price-estimates
+random_paper: 18
 rate_limits:
 - limit_count: 5
   name: Deepl Rate Limits
@@ -322,31 +368,31 @@ rules:
     warn: 3
   slug: deepl-translation-api-rules
 score:
-  band: developing
-  composite: 48.5
+  band: strong
+  composite: 60.8
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 66.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 49.0
+    artifact_dirs: 22
+    catalog_earned: 78.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 37.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.0
   facets:
-    access_clarity: 47.4
+    access_clarity: 78.9
     contract_governance: 27.3
-    contract_quality: 62.1
+    contract_quality: 76.0
     developer_ergonomics: 48.8
     discoverability: 75.0
-    operational_transparency: 7.9
-  previous_composite: 50.0
+    operational_transparency: 18.4
+  previous_composite: 59.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 7
+      marker_coverage: 63.6
+      total: 22
     mcp: first-party
   regulatory:
     applies: true
@@ -354,13 +400,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/deepl/refs/heads/main/screenshots/deepl-2026-06-20T175808.png
+    score: 11.1
+screenshot: https://apis.io/screenshots/deepl/deepl-2026-06-20T175808.png
 security:
 - kind: authentication
   name: Deepl Authentication

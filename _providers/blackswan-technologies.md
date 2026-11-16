@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -62,27 +65,27 @@ common:
   type: Documentation
   url: https://bstlabs.github.io/py-dynacli/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/blackswan-technologies/refs/heads/main/packages/blackswan-technologies-packages.yml
+  href: https://artifacts.apis.io/blackswan-technologies/packages/blackswan-technologies-packages.yml
   title: ''
   type: Packages
   url: packages/blackswan-technologies-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/blackswan-technologies/refs/heads/main/cli/blackswan-technologies-cli.yml
+  href: https://artifacts.apis.io/blackswan-technologies/cli/blackswan-technologies-cli.yml
   title: ''
   type: CLI
   url: cli/blackswan-technologies-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/blackswan-technologies/refs/heads/main/changelog/blackswan-technologies-changelog.yml
+  href: https://artifacts.apis.io/blackswan-technologies/changelog/blackswan-technologies-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/blackswan-technologies-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blackswan-technologies/refs/heads/main/llms/blackswan-technologies-llms.txt
+  href: https://artifacts.apis.io/blackswan-technologies/llms/blackswan-technologies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/blackswan-technologies-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blackswan-technologies/refs/heads/main/security/blackswan-technologies-domain-security.yml
+  href: https://artifacts.apis.io/blackswan-technologies/security/blackswan-technologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/blackswan-technologies-domain-security.yml
@@ -99,18 +102,18 @@ overview: 'BlackSwan Technologies is profiled on the [APIs.io](https://apis.io/)
 
 
   BlackSwan Technologies'' developer surface includes documentation, CLI, changelog, and 8 more developer resources.'
-random_paper: 13
+random_paper: 23
 score:
   band: minimal
   composite: 10.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -126,15 +129,15 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 10.1
+  previous_composite: 10.2
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

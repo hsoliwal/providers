@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The OAuth 2.0 protected API behind the Lingvist learning platform. Lingvist publishes no reference documentation for it; the authorization, token and user-profile endpoints are documented in Lingvist'
@@ -90,47 +98,47 @@ common:
   type: Contact
   url: https://lingvist.com/contact/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lingvist/refs/heads/main/authentication/lingvist-authentication.yml
+  href: https://artifacts.apis.io/lingvist/authentication/lingvist-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lingvist-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lingvist/refs/heads/main/scopes/lingvist-scopes.yml
+  href: https://artifacts.apis.io/lingvist/scopes/lingvist-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/lingvist-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lingvist/refs/heads/main/errors/lingvist-problem-types.yml
+  href: https://artifacts.apis.io/lingvist/errors/lingvist-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/lingvist-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lingvist/refs/heads/main/conventions/lingvist-conventions.yml
+  href: https://artifacts.apis.io/lingvist/conventions/lingvist-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lingvist-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lingvist/refs/heads/main/lifecycle/lingvist-lifecycle.yml
+  href: https://artifacts.apis.io/lingvist/lifecycle/lingvist-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lingvist-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lingvist/refs/heads/main/conformance/lingvist-conformance.yml
+  href: https://artifacts.apis.io/lingvist/conformance/lingvist-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lingvist-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lingvist/refs/heads/main/packages/lingvist-packages.yml
+  href: https://artifacts.apis.io/lingvist/packages/lingvist-packages.yml
   title: ''
   type: Packages
   url: packages/lingvist-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lingvist/refs/heads/main/llms/lingvist-llms.txt
+  href: https://artifacts.apis.io/lingvist/llms/lingvist-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lingvist-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lingvist/refs/heads/main/security/lingvist-domain-security.yml
+  href: https://artifacts.apis.io/lingvist/security/lingvist-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lingvist-domain-security.yml
@@ -147,7 +155,7 @@ overview: 'Lingvist is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Lingvist''s developer surface includes documentation, support, engineering blog, pricing, signup flow, authentication, and 15 more developer resources.'
-random_paper: 0
+random_paper: 16
 scopes:
 - name: Lingvist Scopes
   scope_count: 1
@@ -157,7 +165,7 @@ score:
   band: emerging
   composite: 25.2
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -185,14 +193,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lingvist/refs/heads/main/screenshots/lingvist-2026-07-25T225247.png
+screenshot: https://apis.io/screenshots/lingvist/lingvist-2026-07-25T225247.png
 security:
 - kind: authentication
   name: Lingvist Authentication

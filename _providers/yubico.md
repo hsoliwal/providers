@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.yubico.com/wsapi/2.0
@@ -42,26 +45,27 @@ apis:
   description: Yubico OTP validation operations.
   name: Yubico Validation API
   slug: yubico-validation-api
-artifact_total: 7
+artifact_total: 8
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Yubico YubiCloud OTP Validation API
   slug: open-yubico-validation-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/yubico/overview
 - group: company
   title: ''
   type: BlogRSS
   url: https://www.yubico.com/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/capabilities/yubico-capability-edges.yml
+  href: https://artifacts.apis.io/yubico/capabilities/yubico-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/yubico-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/overlays/yubico-yubicloud-overlay.yaml
+  href: https://artifacts.apis.io/yubico/overlays/yubico-yubicloud-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/yubico-yubicloud-overlay.yaml
@@ -122,67 +126,67 @@ common:
   type: Deprecation
   url: https://support.yubico.com/hc/en-us/articles/360016614820
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/packages/yubico-packages.yml
+  href: https://artifacts.apis.io/yubico/packages/yubico-packages.yml
   title: ''
   type: Packages
   url: packages/yubico-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/packages/yubico-packages.yml
+  href: https://artifacts.apis.io/yubico/packages/yubico-packages.yml
   title: ''
   type: SDKs
   url: packages/yubico-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/cli/yubico-cli.yml
+  href: https://artifacts.apis.io/yubico/cli/yubico-cli.yml
   title: ''
   type: CLI
   url: cli/yubico-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/mcp/yubico-mcp.yml
+  href: https://artifacts.apis.io/yubico/mcp/yubico-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/yubico-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/yubico/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/llms/yubico-llms.txt
+  href: https://artifacts.apis.io/yubico/llms/yubico-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/yubico-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/well-known/yubico-well-known.yml
+  href: https://artifacts.apis.io/yubico/well-known/yubico-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/yubico-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/well-known/yubico-security.txt
+  href: https://artifacts.apis.io/yubico/well-known/yubico-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/yubico-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/authentication/yubico-authentication.yml
+  href: https://artifacts.apis.io/yubico/authentication/yubico-authentication.yml
   title: ''
   type: Authentication
   url: authentication/yubico-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/conventions/yubico-conventions.yml
+  href: https://artifacts.apis.io/yubico/conventions/yubico-conventions.yml
   title: ''
   type: Conventions
   url: conventions/yubico-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/errors/yubico-error-codes.yml
+  href: https://artifacts.apis.io/yubico/errors/yubico-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/yubico-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/lifecycle/yubico-lifecycle.yml
+  href: https://artifacts.apis.io/yubico/lifecycle/yubico-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/yubico-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/conformance/yubico-conformance.yml
+  href: https://artifacts.apis.io/yubico/conformance/yubico-conformance.yml
   title: ''
   type: Conformance
   url: conformance/yubico-conformance.yml
@@ -191,12 +195,12 @@ common:
   type: Compliance
   url: https://www.yubico.com/solutions/cybersecurity-compliance/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/security/yubico-domain-security.yml
+  href: https://artifacts.apis.io/yubico/security/yubico-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/yubico-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/security/yubico-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/yubico/security/yubico-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/yubico-vulnerability-disclosure.yml
@@ -205,7 +209,7 @@ common:
   type: Security
   url: https://www.yubico.com/support/issue-rating-system/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/security/yubico-trust-center.yml
+  href: https://artifacts.apis.io/yubico/security/yubico-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/yubico-trust-center.yml
@@ -220,27 +224,48 @@ network: true
 overview: 'Yubico publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Validation API. Tagged areas include Company, Enterprise, Authentication, Security, and Identity.
 
 
-  Yubico''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, pricing, and 28 more developer resources.'
-random_paper: 13
+  The Yubico catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Yubico''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, pricing, and 29 more developer resources.'
+random_paper: 3
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Yubico API Rules
+  rule_count: 61
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 1
+    warn: 1
+  slug: yubico-rules
 score:
   band: strong
-  composite: 56.5
+  composite: 58.3
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 60.5
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 49.6
-    developer_ergonomics: 73.2
+    developer_ergonomics: 74.4
     discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 56.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - sweden
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 58.3
   provenance:
     conformance: first-party
     contracts:
@@ -256,14 +281,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/yubico/refs/heads/main/screenshots/yubico-2026-08-17T083021.png
+screenshot: https://apis.io/screenshots/yubico/yubico-2026-08-17T083021.png
 security:
 - kind: authentication
   name: Yubico Authentication
@@ -281,6 +306,10 @@ security:
   name: Yubico Trust Center
   slug: yubico-trust-center
   summary_line: SOC 2 Type 2, FIPS 140-3, FIDO2, FIDO U2F, NIST SP 800-63-3 AAL3
+skill_count: 1
+skills:
+- name: Verify a Yubico OTP with YubiCloud
+  slug: yubico-verify-otp
 slug: yubico
 tags:
 - Company

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -88,9 +94,6 @@ apis:
 artifact_total: 24
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Entity Sport Cricket API V2 Authentication API
   slug: open-entitysport-authentication-api
 - collection_type: open
@@ -119,17 +122,17 @@ collections:
   slug: open-entitysport
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/entitysport/refs/heads/main/agentic-access/entitysport-agentic-access.yml
+  href: https://artifacts.apis.io/entitysport/agentic-access/entitysport-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/entitysport-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/entitysport/refs/heads/main/security/entitysport-domain-security.yml
+  href: https://artifacts.apis.io/entitysport/security/entitysport-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/entitysport-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/entitysport/refs/heads/main/authentication/entitysport-authentication.yml
+  href: https://artifacts.apis.io/entitysport/authentication/entitysport-authentication.yml
   title: ''
   type: Authentication
   url: authentication/entitysport-authentication.yml
@@ -150,17 +153,17 @@ common:
   type: Documentation
   url: https://www.doc.entitysport.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/entitysport/refs/heads/main/plans/entitysport-plans-pricing.yml
+  href: https://artifacts.apis.io/entitysport/plans/entitysport-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/entitysport-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/entitysport/refs/heads/main/rate-limits/entitysport-rate-limits.yml
+  href: https://artifacts.apis.io/entitysport/rate-limits/entitysport-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/entitysport-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/entitysport/refs/heads/main/finops/entitysport-finops.yml
+  href: https://artifacts.apis.io/entitysport/finops/entitysport-finops.yml
   title: ''
   type: FinOps
   url: finops/entitysport-finops.yml
@@ -187,35 +190,51 @@ network: true
 overview: 'Entity Sport publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Competitions API, Fantasy API, and 5 more. Tagged areas include Sports Data, Cricket, Live Scores, Fantasy, and Odds.
 
 
+  The Entity Sport catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Entity Sport''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Entitysport Plans Pricing
   plan_count: 8
   slug: entitysport-plans-pricing
-random_paper: 5
+random_paper: 13
 rate_limits:
 - limit_count: 4
   name: Entitysport Rate Limits
   slug: entitysport-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Entity Sport API Rules
+  rule_count: 65
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 3
+  slug: entitysport-rules
 score:
   band: emerging
-  composite: 22.8
+  composite: 24.4
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 15
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.2
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.2
     developer_ergonomics: 14.3
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 31.0
+  previous_composite: 24.4
   provenance:
     agentic_access: derived
     contracts:
@@ -229,13 +248,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/entitysport/refs/heads/main/screenshots/entitysport-2026-07-25T213432.png
+screenshot: https://apis.io/screenshots/entitysport/entitysport-2026-07-25T213432.png
 security:
 - kind: authentication
   name: Entitysport Authentication

@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -74,7 +78,7 @@ common:
   type: StatusPage
   url: https://natomalabs.statuspage.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/security/natoma-trust-center.yml
+  href: https://artifacts.apis.io/natoma/security/natoma-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/natoma-trust-center.yml
@@ -83,12 +87,12 @@ common:
   type: Compliance
   url: https://natoma.ai/trust
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/llms/natoma-llms.txt
+  href: https://artifacts.apis.io/natoma/llms/natoma-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/natoma-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/security/natoma-domain-security.yml
+  href: https://artifacts.apis.io/natoma/security/natoma-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/natoma-domain-security.yml
@@ -105,42 +109,42 @@ common:
   type: GitHubOrganization
   url: https://github.com/natomalabs
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/mcp/natoma-mcp.yml
+  href: https://artifacts.apis.io/natoma/mcp/natoma-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/natoma-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/packages/natoma-packages.yml
+  href: https://artifacts.apis.io/natoma/packages/natoma-packages.yml
   title: ''
   type: Packages
   url: packages/natoma-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/cli/natoma-cli.yml
+  href: https://artifacts.apis.io/natoma/cli/natoma-cli.yml
   title: ''
   type: CLI
   url: cli/natoma-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/authentication/natoma-authentication.yml
+  href: https://artifacts.apis.io/natoma/authentication/natoma-authentication.yml
   title: ''
   type: Authentication
   url: authentication/natoma-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/conformance/natoma-conformance.yml
+  href: https://artifacts.apis.io/natoma/conformance/natoma-conformance.yml
   title: ''
   type: Conformance
   url: conformance/natoma-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/data-model/natoma-data-model.yml
+  href: https://artifacts.apis.io/natoma/data-model/natoma-data-model.yml
   title: ''
   type: DataModel
   url: data-model/natoma-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/lifecycle/natoma-lifecycle.yml
+  href: https://artifacts.apis.io/natoma/lifecycle/natoma-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/natoma-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/well-known/natoma-well-known.yml
+  href: https://artifacts.apis.io/natoma/well-known/natoma-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/natoma-well-known.yml
@@ -160,7 +164,7 @@ overview: 'Natoma is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Natoma''s developer surface includes documentation, getting-started guide, engineering blog, pricing, signup flow, support, CLI, and 17 more developer resources.'
-random_paper: 2
+random_paper: 16
 score:
   band: thin
   composite: 35.8
@@ -171,7 +175,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
@@ -179,7 +183,7 @@ score:
     developer_ergonomics: 57.1
     discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 35.7
+  previous_composite: 35.8
   provenance:
     conformance: first-party
     mcp: first-party
@@ -195,14 +199,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/natoma/refs/heads/main/screenshots/natoma-2026-08-07T184657.png
+screenshot: https://apis.io/screenshots/natoma/natoma-2026-08-07T184657.png
 security:
 - kind: authentication
   name: Natoma Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -78,9 +84,6 @@ apis:
 artifact_total: 20
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: RateHawk / ETG API (WorldOta APIv3) Booking API
   slug: open-ratehawk-booking-api
 - collection_type: open
@@ -103,17 +106,17 @@ collections:
   slug: open-ratehawk
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ratehawk/refs/heads/main/agentic-access/ratehawk-agentic-access.yml
+  href: https://artifacts.apis.io/ratehawk/agentic-access/ratehawk-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ratehawk-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ratehawk/refs/heads/main/security/ratehawk-domain-security.yml
+  href: https://artifacts.apis.io/ratehawk/security/ratehawk-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ratehawk-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ratehawk/refs/heads/main/authentication/ratehawk-authentication.yml
+  href: https://artifacts.apis.io/ratehawk/authentication/ratehawk-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ratehawk-authentication.yml
@@ -134,17 +137,17 @@ common:
   type: Documentation
   url: https://docs.emergingtravel.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ratehawk/refs/heads/main/plans/ratehawk-plans-pricing.yml
+  href: https://artifacts.apis.io/ratehawk/plans/ratehawk-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ratehawk-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ratehawk/refs/heads/main/rate-limits/ratehawk-rate-limits.yml
+  href: https://artifacts.apis.io/ratehawk/rate-limits/ratehawk-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ratehawk-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ratehawk/refs/heads/main/finops/ratehawk-finops.yml
+  href: https://artifacts.apis.io/ratehawk/finops/ratehawk-finops.yml
   title: ''
   type: FinOps
   url: finops/ratehawk-finops.yml
@@ -171,35 +174,51 @@ network: true
 overview: 'RateHawk publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Booking API, Cancellation API, Hotel Content API, and 3 more. Tagged areas include Travel, Hotels, Booking, B2B, and Reservations.
 
 
+  The RateHawk catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   RateHawk''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Ratehawk Plans Pricing
   plan_count: 3
   slug: ratehawk-plans-pricing
-random_paper: 19
+random_paper: 15
 rate_limits:
 - limit_count: 4
   name: Ratehawk Rate Limits
   slug: ratehawk-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: RateHawk API Rules
+  rule_count: 54
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 2
+    warn: 1
+  slug: ratehawk-rules
 score:
   band: thin
-  composite: 26.9
+  composite: 28.5
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 48.4
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 35.2
+  previous_composite: 28.5
   provenance:
     agentic_access: derived
     contracts:
@@ -213,13 +232,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/ratehawk/refs/heads/main/screenshots/ratehawk-2026-09-02T152918.png
+screenshot: https://apis.io/screenshots/ratehawk/ratehawk-2026-09-02T152918.png
 security:
 - kind: authentication
   name: Ratehawk Authentication

@@ -1,13 +1,15 @@
 ---
 access_model:
-  confidence: high
-  label: No public API · Accredited travel agents only
-  onboarding: approval
+  confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
-  - agency-hub
-  - travel-agent-main-agreement
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,33 +28,46 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
-    rate_limit_signal: false
+    rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 0.0
-  scored_at: '2026-10-17'
+  score: 2.5
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 1
+artifact_total: 3
 common:
+- group: other
+  href: https://artifacts.apis.io/virgin-australia/hosts/virgin-australia-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/virgin-australia-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/virgin-australia/integrations/virgin-australia-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/virgin-australia-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/virgin-australia/vendors/virgin-australia-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/virgin-australia-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/virgin-australia/refs/heads/main/security/virgin-australia-domain-security.yml
+  href: https://artifacts.apis.io/virgin-australia/security/virgin-australia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/virgin-australia-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/virgin-australia/refs/heads/main/conformance/virgin-australia-conformance.yml
+  href: https://artifacts.apis.io/virgin-australia/conformance/virgin-australia-conformance.yml
   title: ''
   type: Conformance
   url: conformance/virgin-australia-conformance.yml
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/virgin-australia/refs/heads/main/llms/virgin-australia-llms.txt
-  title: ''
-  type: LLMsTxt
-  url: llms/virgin-australia-llms.txt
 - group: company
   title: ''
   type: Website
@@ -100,10 +115,6 @@ common:
 - group: docs
   title: ''
   type: Documentation
-  url: https://www.virginaustralia.com/au/en/fly-for-business/business-flyer/travel-trade/agent-faqs/
-- group: docs
-  title: ''
-  type: Documentation
   url: https://www.virginaustralia.com/au/en/travel-info/flying-with-us/agency-hub/policies-and-guides/
 - group: start
   title: ''
@@ -121,25 +132,53 @@ common:
   title: ''
   type: LinkedIn
   url: https://www.linkedin.com/company/virgin-australia
+- group: company
+  title: ''
+  type: InvestorRelations
+  url: https://www.virginaustralia.com/au/en/about-us/investor-relations/
+- group: company
+  title: ''
+  type: Careers
+  url: https://www.virginaustralia.com/au/en/about-us/careers/
+- group: other
+  title: ''
+  type: Accessibility
+  url: https://www.virginaustralia.com/au/en/help/accessibility/
+- group: company
+  title: ''
+  type: Twitter
+  url: https://twitter.com/VirginAustralia
+- group: company
+  title: ''
+  type: Instagram
+  url: https://www.instagram.com/virginaustralia/
 created: '2026-07-28'
 description: 'Virgin Australia (IATA code VA, ASX:VGN) is Australia''s second-largest airline group, founded in 2000 and headquartered in Brisbane, operating a domestic and short-haul international network alongside charter and cargo services with more than 8,000 team members and the 13-million-member Velocity Frequent Flyer loyalty program. It sits on the airline side of a concentrated Australian duopoly with Qantas, and reaches travel agents and travel management companies almost entirely through GDS intermediation — Amadeus, Sabre and Travelport/Galileo — rather than through any direct machine interface of its own. Virgin Australia selected Sabre as its preferred NDC IT technology provider in October 2023 and renewed a multi-year Amadeus distribution agreement covering EDIFACT today and NDC in future, but as of July 2026 no Virgin Australia NDC endpoint, developer portal or API documentation is published anywhere on virginaustralia.com. Its API posture is honestly stated as none-published:
   developer.virginaustralia.com, developers., api., apis. and docs. subdomains do not resolve; /developers, /api, /api-docs, /openapi.json and /swagger.json all return 404; and the only partner surface is the Agency Hub, whose Travel Agent Main Agreement requires current IATA or ATIS accreditation, GDS access for BSP sales, and Virgin Australia''s absolute discretion to approve an account. The one genuinely public programmatic-adjacent surface is the Virgin Australia app in ChatGPT, launched 10 June 2026 for flight and Velocity Reward Seat search only — it cannot book, amend, cancel or take payment, and its underlying interface is not documented.'
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://www.virginaustralia.com/content/dam/vaa/images/vaa-logo-grey.png/_jcr_content/renditions/cq5dam.web.1280.1280.png
 layout: provider
-modified: '2026-07-28'
+modified: '2026-10-20'
 name: Virgin Australia
 nav: Providers
 network: true
 overview: 'Virgin Australia is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Travel, Australia, Aviation, Airlines, and Distribution.
 
 
-  Virgin Australia''s developer surface includes engineering blog, privacy policy, legal docs, documentation, support, and 15 more developer resources.'
-random_paper: 16
+  Virgin Australia''s developer surface includes engineering blog, privacy policy, legal docs, documentation, support, and 21 more developer resources.'
+plans:
+- name: Virgin Australia Plans Pricing
+  plan_count: 0
+  slug: virgin-australia-plans-pricing
+random_paper: 10
+rate_limits:
+- limit_count: 0
+  name: Virgin Australia Rate Limits
+  slug: virgin-australia-rate-limits
 score:
   band: emerging
   composite: 11.7
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 15
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -163,20 +202,21 @@ score:
   previous_composite: 11.7
   provenance:
     conformance: derived
+    mcp: derived
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/virgin-australia/refs/heads/main/screenshots/virgin-australia-2026-09-02T170002.png
+screenshot: https://apis.io/screenshots/virgin-australia/virgin-australia-2026-09-02T170002.png
 security:
 - kind: domain-security
   name: Virgin Australia Domain Security

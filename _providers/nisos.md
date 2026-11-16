@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Credential-gated HTTPS API behind the Nisos Ascend human risk management platform. Its existence and base URL are established from Nisos''s own production build: the Ascend console''s configuration modu'
@@ -43,7 +46,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nisos/refs/heads/main/security/nisos-domain-security.yml
+  href: https://artifacts.apis.io/nisos/security/nisos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nisos-domain-security.yml
@@ -76,27 +79,27 @@ common:
   type: Login
   url: https://ascend.nisos.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nisos/refs/heads/main/llms/nisos-llms.txt
+  href: https://artifacts.apis.io/nisos/llms/nisos-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nisos-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nisos/refs/heads/main/packages/nisos-packages.yml
+  href: https://artifacts.apis.io/nisos/packages/nisos-packages.yml
   title: ''
   type: Packages
   url: packages/nisos-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nisos/refs/heads/main/conformance/nisos-conformance.yml
+  href: https://artifacts.apis.io/nisos/conformance/nisos-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nisos-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nisos/refs/heads/main/plans/nisos-plans-pricing.yml
+  href: https://artifacts.apis.io/nisos/plans/nisos-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/nisos-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nisos/refs/heads/main/rate-limits/nisos-rate-limits.yml
+  href: https://artifacts.apis.io/nisos/rate-limits/nisos-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/nisos-rate-limits.yml
@@ -135,7 +138,7 @@ plans:
 - name: Nisos Plans Pricing
   plan_count: 0
   slug: nisos-plans-pricing
-random_paper: 6
+random_paper: 4
 rate_limits:
 - limit_count: 0
   name: Nisos Rate Limits
@@ -144,7 +147,7 @@ score:
   band: emerging
   composite: 17.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -175,14 +178,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nisos/refs/heads/main/screenshots/nisos-2026-09-02T150757.png
+screenshot: https://apis.io/screenshots/nisos/nisos-2026-09-02T150757.png
 security:
 - kind: domain-security
   name: Nisos Domain Security

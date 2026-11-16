@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: 'The Web API plugin of the Forescout eyeExtend Connect Open Integration Module lets external systems query and act on the Forescout platform over HTTP. Clients authenticate at POST /api/login and pass '
@@ -93,37 +96,37 @@ common:
   type: PrivacyPolicy
   url: https://www.forescout.com/privacy-policy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/forescout/refs/heads/main/authentication/forescout-authentication.yml
+  href: https://artifacts.apis.io/forescout/authentication/forescout-authentication.yml
   title: ''
   type: Authentication
   url: authentication/forescout-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/forescout/refs/heads/main/conventions/forescout-conventions.yml
+  href: https://artifacts.apis.io/forescout/conventions/forescout-conventions.yml
   title: ''
   type: Conventions
   url: conventions/forescout-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/forescout/refs/heads/main/conformance/forescout-conformance.yml
+  href: https://artifacts.apis.io/forescout/conformance/forescout-conformance.yml
   title: ''
   type: Conformance
   url: conformance/forescout-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/forescout/refs/heads/main/security/forescout-domain-security.yml
+  href: https://artifacts.apis.io/forescout/security/forescout-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/forescout-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/forescout/refs/heads/main/mcp/forescout-mcp.yml
+  href: https://artifacts.apis.io/forescout/mcp/forescout-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/forescout-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/forescout/refs/heads/main/llms/forescout-llms.txt
+  href: https://artifacts.apis.io/forescout/llms/forescout-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/forescout-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/forescout/refs/heads/main/lifecycle/forescout-lifecycle.yml
+  href: https://artifacts.apis.io/forescout/lifecycle/forescout-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/forescout-lifecycle.yml
@@ -139,12 +142,12 @@ overview: 'Forescout is listed with 3 APIs on the [APIs.io](https://apis.io/) ne
 
 
   Forescout''s developer surface includes documentation, API reference, engineering blog, authentication, and 14 more developer resources.'
-random_paper: 18
+random_paper: 2
 score:
   band: emerging
   composite: 23.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -168,14 +171,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/forescout/refs/heads/main/screenshots/forescout-2026-07-25T214933.png
+screenshot: https://apis.io/screenshots/forescout/forescout-2026-07-25T214933.png
 security:
 - kind: authentication
   name: Forescout Authentication

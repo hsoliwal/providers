@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 0
 common:
@@ -58,7 +64,7 @@ name: Ark.com
 nav: Providers
 network: true
 overview: Ark.com is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Defunct, People Search, Social Search, and Search Engines.
-random_paper: 21
+random_paper: 13
 score:
   band: minimal
   composite: 0.0
@@ -93,14 +99,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/arkcom/refs/heads/main/screenshots/arkcom-2026-07-25T201157.png
+screenshot: https://apis.io/screenshots/arkcom/arkcom-2026-07-25T201157.png
 slug: arkcom
 tags:
 - Company

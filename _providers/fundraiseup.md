@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 48.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -53,11 +56,6 @@ apis:
   slug: fundraiseup-donations-api
 - baseURL: https://api.fundraiseup.com/v1
   baseurl_source: declared
-  description: Secure access-link generation for the self-service Donor Portal.
-  name: Fundraise Up Donor Portal API
-  slug: fundraiseup-donor-portal-api
-- baseURL: https://api.fundraiseup.com/v1
-  baseurl_source: declared
   description: Audit-log events across donations, recurring plans, tributes, and supporters.
   name: Fundraise Up Events API
   slug: fundraiseup-events-api
@@ -71,11 +69,43 @@ apis:
   description: Donor records (Fundraise Up calls donors "supporters").
   name: Fundraise Up Supporters API
   slug: fundraiseup-supporters-api
-artifact_total: 19
+- baseURL: https://api.fundraiseup.com/v1
+  baseurl_source: declared
+  description: The Access link object represents link that grant supporter access to their Donor Portal.
+  name: Fundraise Up Access links API
+  slug: fundraiseup-access-links-api
+- baseURL: https://api.fundraiseup.com/v1
+  baseurl_source: declared
+  description: The Campaign object represents a fundraising campaign. Every donation connects to a campaign. It includes settings such as enabled donation frequencies, designation mode, and status.
+  name: Fundraise Up Campaigns API
+  slug: fundraiseup-campaigns-api
+- baseURL: https://api.fundraiseup.com/v1
+  baseurl_source: declared
+  description: The Designation configuration object represents a single designation configuration.
+  name: Fundraise Up Designation configurations API
+  slug: fundraiseup-designation-configurations-api
+- baseURL: https://api.fundraiseup.com/v1
+  baseurl_source: declared
+  description: The Designation group object represents a container for related designations and other designation groups in your Fundraise Up account.
+  name: Fundraise Up Designation groups API
+  slug: fundraiseup-designation-groups-api
+- baseURL: https://api.fundraiseup.com/v1
+  baseurl_source: declared
+  description: The Designation object represents a fund allocation for a donation, such as restricted or unrestricted giving.
+  name: Fundraise Up Designations API
+  slug: fundraiseup-designations-api
+- baseURL: https://api.fundraiseup.com/v1
+  baseurl_source: declared
+  description: The Fundraiser object represents a supporter-created fundraising page linked to a campaign. You can create Fundraisers through the API, update them, and retrieve Fundraisers from your account.
+  name: Fundraise Up Fundraisers API
+  slug: fundraiseup-fundraisers-api
+- baseURL: https://api.fundraiseup.com/v1
+  baseurl_source: declared
+  description: The Upgrade link object represents a one-time link that directs a supporter to a page where they can start a recurring plan based on their original one-time donation.
+  name: Fundraise Up Upgrade links API
+  slug: fundraiseup-upgrade-links-api
+artifact_total: 25
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Fundraise Up REST Donations API
   slug: open-fundraiseup-donations-api
@@ -96,22 +126,22 @@ collections:
   slug: open-fundraiseup
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fundraiseup/refs/heads/main/capabilities/fundraiseup-capability-edges.yml
+  href: https://artifacts.apis.io/fundraiseup/capabilities/fundraiseup-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/fundraiseup-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fundraiseup/refs/heads/main/agentic-access/fundraiseup-agentic-access.yml
+  href: https://artifacts.apis.io/fundraiseup/agentic-access/fundraiseup-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fundraiseup-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fundraiseup/refs/heads/main/security/fundraiseup-domain-security.yml
+  href: https://artifacts.apis.io/fundraiseup/security/fundraiseup-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fundraiseup-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fundraiseup/refs/heads/main/authentication/fundraiseup-authentication.yml
+  href: https://artifacts.apis.io/fundraiseup/authentication/fundraiseup-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fundraiseup-authentication.yml
@@ -128,17 +158,17 @@ common:
   type: Documentation
   url: https://fundraiseup.com/docs/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fundraiseup/refs/heads/main/plans/fundraiseup-plans-pricing.yml
+  href: https://artifacts.apis.io/fundraiseup/plans/fundraiseup-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fundraiseup-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fundraiseup/refs/heads/main/rate-limits/fundraiseup-rate-limits.yml
+  href: https://artifacts.apis.io/fundraiseup/rate-limits/fundraiseup-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fundraiseup-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fundraiseup/refs/heads/main/finops/fundraiseup-finops.yml
+  href: https://artifacts.apis.io/fundraiseup/finops/fundraiseup-finops.yml
   title: ''
   type: FinOps
   url: finops/fundraiseup-finops.yml
@@ -147,7 +177,7 @@ common:
   type: Blog
   url: https://fundraiseup.com/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fundraiseup/refs/heads/main/ai-catalog/fundraiseup-ai-catalog.yml
+  href: https://artifacts.apis.io/fundraiseup/ai-catalog/fundraiseup-ai-catalog.yml
   title: ''
   type: AICatalog
   url: ai-catalog/fundraiseup-ai-catalog.yml
@@ -164,14 +194,17 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fundraiseup.png
 layout: provider
 mcp_servers:
-- description: Remote MCP server at mcp.fundraiseup.com over HTTP.
+- description: Remote MCP server at mcp.fundraiseup.com over HTTP; 8 tools listed.
   name: Fundraise Up MCP Server
   slug: fundraiseup
 modified: '2026-07-05'
 name: Fundraise Up
 nav: Providers
 network: true
-overview: 'Fundraise Up publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Donations API, Donor Portal API, Events API, and 2 more. Tagged areas include Fundraising, Donations, Non-Profit, Payments, and Recurring Giving.
+overview: 'Fundraise Up publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Donations API, Events API, Recurring Plans API, and 8 more. Tagged areas include Fundraising, Donations, Non-Profit, Payments, and Recurring Giving.
+
+
+  The Fundraise Up catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Fundraise Up''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
@@ -179,37 +212,50 @@ plans:
 - name: Fundraiseup Plans Pricing
   plan_count: 2
   slug: fundraiseup-plans-pricing
-random_paper: 2
+random_paper: 14
 rate_limits:
 - limit_count: 3
   name: Fundraiseup Rate Limits
   slug: fundraiseup-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Fundraise Up API Rules
+  rule_count: 63
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 1
+    warn: 10
+  slug: fundraiseup-rules
 score:
-  band: emerging
-  composite: 25.9
+  band: thin
+  composite: 27.5
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 42.0
+    artifact_dirs: 20
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.8
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 50.2
+    contract_governance: 13.6
+    contract_quality: 50.4
     developer_ergonomics: 32.1
     discoverability: 68.3
     operational_transparency: 7.9
-  previous_composite: 32.8
+  previous_composite: 26.7
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 35.3
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 64.7
+      total: 17
     mcp: first-party
   regulatory:
     applies: true
@@ -217,13 +263,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/fundraiseup/refs/heads/main/screenshots/fundraiseup-2026-07-25T215319.png
+screenshot: https://apis.io/screenshots/fundraiseup/fundraiseup-2026-07-25T215319.png
 security:
 - kind: authentication
   name: Fundraiseup Authentication

@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -81,27 +86,27 @@ common:
   type: SourceCode
   url: https://github.com/sailthru/sailthru-mobile-react-native-sdk
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/carnival-mobile/refs/heads/main/packages/carnival-mobile-packages.yml
+  href: https://artifacts.apis.io/carnival-mobile/packages/carnival-mobile-packages.yml
   title: ''
   type: Packages
   url: packages/carnival-mobile-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/carnival-mobile/refs/heads/main/packages/carnival-mobile-packages.yml
+  href: https://artifacts.apis.io/carnival-mobile/packages/carnival-mobile-packages.yml
   title: ''
   type: SDKs
   url: packages/carnival-mobile-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/carnival-mobile/refs/heads/main/llms/carnival-mobile-llms.txt
+  href: https://artifacts.apis.io/carnival-mobile/llms/carnival-mobile-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/carnival-mobile-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/carnival-mobile/refs/heads/main/lifecycle/carnival-mobile-lifecycle.yml
+  href: https://artifacts.apis.io/carnival-mobile/lifecycle/carnival-mobile-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/carnival-mobile-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/carnival-mobile/refs/heads/main/changelog/carnival-mobile-changelog.yml
+  href: https://artifacts.apis.io/carnival-mobile/changelog/carnival-mobile-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/carnival-mobile-changelog.yml
@@ -110,7 +115,7 @@ common:
   type: Deprecation
   url: https://sdkdevelopers.meetmarigold.com/docs/rebrand-migration-guide
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/carnival-mobile/refs/heads/main/sandbox/carnival-mobile-sandbox.yml
+  href: https://artifacts.apis.io/carnival-mobile/sandbox/carnival-mobile-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/carnival-mobile-sandbox.yml
@@ -119,7 +124,7 @@ common:
   type: TrustCenter
   url: https://trust.meetmarigold.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/carnival-mobile/refs/heads/main/security/carnival-mobile-domain-security.yml
+  href: https://artifacts.apis.io/carnival-mobile/security/carnival-mobile-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/carnival-mobile-domain-security.yml
@@ -144,25 +149,25 @@ overview: 'Carnival Mobile is profiled on the [APIs.io](https://apis.io/) networ
 
 
   Carnival Mobile''s developer surface includes developer portal, documentation, getting-started guide, support, changelog, sandbox, and 16 more developer resources.'
-random_paper: 7
+random_paper: 13
 score:
   band: emerging
-  composite: 22.1
+  composite: 24.8
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.7
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 36.9
+    developer_ergonomics: 47.6
     discoverability: 55.4
-    operational_transparency: 22.4
+    operational_transparency: 26.3
   previous_composite: 22.1
   regulatory:
     applies: true
@@ -170,14 +175,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/carnival-mobile/refs/heads/main/screenshots/carnival-mobile-2026-07-25T204624.png
+screenshot: https://apis.io/screenshots/carnival-mobile/carnival-mobile-2026-07-25T204624.png
 security:
 - kind: domain-security
   name: Carnival Mobile Domain Security

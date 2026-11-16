@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,27 +37,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/highbyte/refs/heads/main/plans/highbyte-plans-pricing.yml
+  href: https://artifacts.apis.io/highbyte/plans/highbyte-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/highbyte-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/highbyte/refs/heads/main/changelog/highbyte-changelog.yml
+  href: https://artifacts.apis.io/highbyte/changelog/highbyte-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/highbyte-changelog.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/highbyte/refs/heads/main/hosts/highbyte-hosts.yml
+  href: https://artifacts.apis.io/highbyte/hosts/highbyte-hosts.yml
   title: ''
   type: Hosts
   url: hosts/highbyte-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/highbyte/refs/heads/main/vendors/highbyte-vendors.yml
+  href: https://artifacts.apis.io/highbyte/vendors/highbyte-vendors.yml
   title: ''
   type: Vendors
   url: vendors/highbyte-vendors.yml
@@ -80,7 +94,7 @@ common:
   type: GettingStarted
   url: https://www.highbyte.com/getting-started-with-industrial-dataops
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/highbyte/refs/heads/main/security/highbyte-domain-security.yml
+  href: https://artifacts.apis.io/highbyte/security/highbyte-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/highbyte-domain-security.yml
@@ -116,24 +130,26 @@ plans:
 - name: Highbyte Plans Pricing
   plan_count: 4
   slug: highbyte-plans-pricing
-random_paper: 16
+random_paper: 12
 score:
   band: emerging
-  composite: 22.5
+  composite: 16.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 12
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.4
   facets:
-    access_clarity: 52.6
+    access_clarity: 42.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 28.6
-    discoverability: 50.0
-    operational_transparency: 15.8
+    developer_ergonomics: 14.3
+    discoverability: 49.1
+    operational_transparency: 7.9
+  previous_composite: 22.5
   provenance:
     mcp: derived
   regulatory:
@@ -141,13 +157,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 7.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/highbyte/highbyte-2026-11-03T133401.png
 security:
 - kind: domain-security
   name: Highbyte Domain Security

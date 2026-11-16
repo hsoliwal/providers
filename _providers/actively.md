@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Actively's hosted (remote) Model Context Protocol server, which connects its Per-Account Agents — per-account research, strategy and persistent memory — into external AI clients such as ChatGPT, Claud
@@ -45,77 +48,77 @@ apis:
 artifact_total: 9
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/conformance/actively-conformance.yml
+  href: https://artifacts.apis.io/actively/conformance/actively-conformance.yml
   title: ''
   type: Conformance
   url: conformance/actively-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/conformance/actively-conformance.yml
+  href: https://artifacts.apis.io/actively/conformance/actively-conformance.yml
   title: ''
   type: Compliance
   url: conformance/actively-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/mcp/actively-mcp.yml
+  href: https://artifacts.apis.io/actively/mcp/actively-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/actively-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/llms/actively-llms.txt
+  href: https://artifacts.apis.io/actively/llms/actively-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/actively-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/security/actively-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/actively/security/actively-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/actively-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/security/actively-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/actively/security/actively-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/actively-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/security/actively-domain-security.yml
+  href: https://artifacts.apis.io/actively/security/actively-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/actively-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/security/actively-trust-center.yml
+  href: https://artifacts.apis.io/actively/security/actively-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/actively-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/authentication/actively-authentication.yml
+  href: https://artifacts.apis.io/actively/authentication/actively-authentication.yml
   title: ''
   type: Authentication
   url: authentication/actively-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/scopes/actively-scopes.yml
+  href: https://artifacts.apis.io/actively/scopes/actively-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/actively-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/well-known/actively-well-known.yml
+  href: https://artifacts.apis.io/actively/well-known/actively-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/actively-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/conventions/actively-conventions.yml
+  href: https://artifacts.apis.io/actively/conventions/actively-conventions.yml
   title: ''
   type: Conventions
   url: conventions/actively-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/lifecycle/actively-lifecycle.yml
+  href: https://artifacts.apis.io/actively/lifecycle/actively-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/actively-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/plans/actively-plans-pricing.yml
+  href: https://artifacts.apis.io/actively/plans/actively-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/actively-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/rate-limits/actively-rate-limits.yml
+  href: https://artifacts.apis.io/actively/rate-limits/actively-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/actively-rate-limits.yml
@@ -163,7 +166,7 @@ plans:
 - name: Actively Plans Pricing
   plan_count: 0
   slug: actively-plans-pricing
-random_paper: 7
+random_paper: 1
 rate_limits:
 - limit_count: 0
   name: Actively Rate Limits
@@ -177,7 +180,7 @@ score:
   band: thin
   composite: 28.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -201,14 +204,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/actively/refs/heads/main/screenshots/actively-2026-07-25T181529.png
+screenshot: https://apis.io/screenshots/actively/actively-2026-07-25T181529.png
 security:
 - kind: authentication
   name: Actively Authentication
@@ -235,8 +238,9 @@ tags:
 - Sales
 - Go-To-Market
 - MCP
-- Authentication
+- OAuth
 - Sales Intelligence
 - Enterprise Software
+- Authentication
 website: https://www.actively.ai/
 ---

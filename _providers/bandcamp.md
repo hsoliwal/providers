@@ -1,13 +1,15 @@
 ---
 access_model:
   confidence: high
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 21.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -76,9 +81,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Bandcamp Account API
   slug: open-bandcamp-account-api
 - collection_type: open
@@ -99,27 +101,27 @@ common:
   type: Pricing
   url: https://get.bandcamp.help/en/articles/15263193-what-are-bandcamp-s-fees
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bandcamp/refs/heads/main/capabilities/bandcamp-capability-edges.yml
+  href: https://artifacts.apis.io/bandcamp/capabilities/bandcamp-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bandcamp-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bandcamp/refs/heads/main/agentic-access/bandcamp-agentic-access.yml
+  href: https://artifacts.apis.io/bandcamp/agentic-access/bandcamp-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bandcamp-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bandcamp/refs/heads/main/security/bandcamp-domain-security.yml
+  href: https://artifacts.apis.io/bandcamp/security/bandcamp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bandcamp-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bandcamp/refs/heads/main/authentication/bandcamp-authentication.yml
+  href: https://artifacts.apis.io/bandcamp/authentication/bandcamp-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bandcamp-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bandcamp/refs/heads/main/scopes/bandcamp-scopes.yml
+  href: https://artifacts.apis.io/bandcamp/scopes/bandcamp-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/bandcamp-scopes.yml
@@ -136,17 +138,17 @@ common:
   type: DeveloperPortal
   url: https://bandcamp.com/developer
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bandcamp/refs/heads/main/plans/bandcamp-plans-pricing.yml
+  href: https://artifacts.apis.io/bandcamp/plans/bandcamp-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bandcamp-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bandcamp/refs/heads/main/rate-limits/bandcamp-rate-limits.yml
+  href: https://artifacts.apis.io/bandcamp/rate-limits/bandcamp-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bandcamp-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bandcamp/refs/heads/main/finops/bandcamp-finops.yml
+  href: https://artifacts.apis.io/bandcamp/finops/bandcamp-finops.yml
   title: ''
   type: FinOps
   url: finops/bandcamp-finops.yml
@@ -173,6 +175,9 @@ network: true
 overview: 'Bandcamp publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Merch Orders API, Sales API, and 4 more. Tagged areas include Music, Marketplace, Indie, Audio, and Sales.
 
 
+  The Bandcamp catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Bandcamp''s developer surface includes pricing, authentication, engineering blog, and 10 more developer resources.'
 plans:
 - name: Bandcamp Plans Pricing
@@ -181,11 +186,24 @@ plans:
 - name: Bandcamp Price Estimates
   plan_count: 0
   slug: bandcamp-price-estimates
-random_paper: 8
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Bandcamp Rate Limits
   slug: bandcamp-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Bandcamp API Rules
+  rule_count: 51
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 3
+  slug: bandcamp-rules
 scopes:
 - name: Bandcamp Scopes
   scope_count: 0
@@ -193,23 +211,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 35.6
+  composite: 36.1
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 49.0
+    artifact_dirs: 17
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: -1.1
   facets:
-    access_clarity: 42.1
-    contract_governance: 0.0
+    access_clarity: 36.8
+    contract_governance: 13.6
     contract_quality: 43.3
     developer_ergonomics: 33.3
     discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 37.1
+  previous_composite: 37.2
   provenance:
     agentic_access: derived
     contracts:
@@ -223,13 +241,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/bandcamp/refs/heads/main/screenshots/bandcamp-2026-06-20T172941.png
+screenshot: https://apis.io/screenshots/bandcamp/bandcamp-2026-06-20T172941.png
 security:
 - kind: authentication
   name: Bandcamp Authentication

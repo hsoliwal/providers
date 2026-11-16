@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: high
-  label: Paid · Self-serve signup
-  onboarding: self-serve
+  label: Paid
+  onboarding: unknown
   pricing: paid
   public: false
   source:
@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -37,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST over HTTPS with JSON request/response (CSV supported on specific bulk-load endpoints) for integrating Guidewheel with external ERP, MES and CMMS systems. Covers devices and equipment details, min
@@ -90,67 +93,67 @@ common:
   type: StatusPage
   url: https://guidewheel.statuspage.io/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/changelog/guidewheel-changelog.yml
+  href: https://artifacts.apis.io/guidewheel/changelog/guidewheel-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/guidewheel-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/authentication/guidewheel-authentication.yml
+  href: https://artifacts.apis.io/guidewheel/authentication/guidewheel-authentication.yml
   title: ''
   type: Authentication
   url: authentication/guidewheel-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/rate-limits/guidewheel-rate-limits.yml
+  href: https://artifacts.apis.io/guidewheel/rate-limits/guidewheel-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/guidewheel-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/plans/guidewheel-plans.yml
+  href: https://artifacts.apis.io/guidewheel/plans/guidewheel-plans.yml
   title: ''
   type: Plans
   url: plans/guidewheel-plans.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/errors/guidewheel-problem-types.yml
+  href: https://artifacts.apis.io/guidewheel/errors/guidewheel-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/guidewheel-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/conventions/guidewheel-conventions.yml
+  href: https://artifacts.apis.io/guidewheel/conventions/guidewheel-conventions.yml
   title: ''
   type: Conventions
   url: conventions/guidewheel-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/lifecycle/guidewheel-lifecycle.yml
+  href: https://artifacts.apis.io/guidewheel/lifecycle/guidewheel-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/guidewheel-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/data-model/guidewheel-data-model.yml
+  href: https://artifacts.apis.io/guidewheel/data-model/guidewheel-data-model.yml
   title: ''
   type: DataModel
   url: data-model/guidewheel-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/sandbox/guidewheel-sandbox.yml
+  href: https://artifacts.apis.io/guidewheel/sandbox/guidewheel-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/guidewheel-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/conformance/guidewheel-conformance.yml
+  href: https://artifacts.apis.io/guidewheel/conformance/guidewheel-conformance.yml
   title: ''
   type: Conformance
   url: conformance/guidewheel-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/well-known/guidewheel-well-known.yml
+  href: https://artifacts.apis.io/guidewheel/well-known/guidewheel-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/guidewheel-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/llms/guidewheel-llms.txt
+  href: https://artifacts.apis.io/guidewheel/llms/guidewheel-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/guidewheel-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/security/guidewheel-domain-security.yml
+  href: https://artifacts.apis.io/guidewheel/security/guidewheel-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/guidewheel-domain-security.yml
@@ -180,8 +183,8 @@ rate_limits:
   name: Guidewheel Rate Limits
   slug: guidewheel-rate-limits
 score:
-  band: thin
-  composite: 38.6
+  band: developing
+  composite: 40.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 53.0
@@ -196,8 +199,8 @@ score:
     contract_quality: 0.0
     developer_ergonomics: 54.8
     discoverability: 73.2
-    operational_transparency: 52.6
-  previous_composite: 38.6
+    operational_transparency: 63.2
+  previous_composite: 40.0
   provenance:
     conformance: derived
   regulatory:
@@ -206,14 +209,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/guidewheel/refs/heads/main/screenshots/guidewheel-2026-08-07T165856.png
+screenshot: https://apis.io/screenshots/guidewheel/guidewheel-2026-08-07T165856.png
 security:
 - kind: authentication
   name: Guidewheel Authentication

@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,47 +37,47 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cloudian/refs/heads/main/cli/cloudian-cli.yml
+  href: https://artifacts.apis.io/cloudian/cli/cloudian-cli.yml
   title: ''
   type: CLI
   url: cli/cloudian-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudian/refs/heads/main/authentication/cloudian-authentication.yml
+  href: https://artifacts.apis.io/cloudian/authentication/cloudian-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloudian-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudian/refs/heads/main/conformance/cloudian-conformance.yml
+  href: https://artifacts.apis.io/cloudian/conformance/cloudian-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloudian-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudian/refs/heads/main/llms/cloudian-llms.txt
+  href: https://artifacts.apis.io/cloudian/llms/cloudian-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cloudian-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudian/refs/heads/main/hosts/cloudian-hosts.yml
+  href: https://artifacts.apis.io/cloudian/hosts/cloudian-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cloudian-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudian/refs/heads/main/vendors/cloudian-vendors.yml
+  href: https://artifacts.apis.io/cloudian/vendors/cloudian-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cloudian-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cloudian/refs/heads/main/packages/cloudian-packages.yml
+  href: https://artifacts.apis.io/cloudian/packages/cloudian-packages.yml
   title: ''
   type: SDKs
   url: packages/cloudian-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cloudian/refs/heads/main/packages/cloudian-packages.yml
+  href: https://artifacts.apis.io/cloudian/packages/cloudian-packages.yml
   title: ''
   type: Packages
   url: packages/cloudian-packages.yml
@@ -100,7 +114,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/cloudian
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudian/refs/heads/main/security/cloudian-domain-security.yml
+  href: https://artifacts.apis.io/cloudian/security/cloudian-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudian-domain-security.yml
@@ -124,28 +138,30 @@ modified: '2026-10-09'
 name: Cloudian
 nav: Providers
 network: true
-overview: 'Cloudian is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Storage, Object-Storage, Artificial Intelligence, and Enterprise.
+overview: 'Cloudian is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Storage, Object Storage, Artificial Intelligence, and Enterprise.
 
 
   Cloudian''s developer surface includes CLI, authentication, support, documentation, engineering blog, and 13 more developer resources.'
-random_paper: 11
+random_paper: 7
 score:
   band: emerging
-  composite: 22.4
+  composite: 17.0
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.4
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 42.9
-    discoverability: 64.3
-    operational_transparency: 15.8
+    developer_ergonomics: 34.5
+    discoverability: 63.4
+    operational_transparency: 7.9
+  previous_composite: 22.4
   provenance:
     conformance: first-party
     mcp: unknown
@@ -154,13 +170,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/cloudian/cloudian-2026-11-03T124523.png
 security:
 - kind: authentication
   name: Cloudian Authentication
@@ -174,7 +192,7 @@ slug: cloudian
 tags:
 - Company
 - Storage
-- Object-Storage
+- Object Storage
 - Artificial Intelligence
 - Enterprise
 website: https://cloudian.com

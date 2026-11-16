@@ -1,11 +1,15 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
   public: true
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: Provides access to the last 45 days of meteorological and oceanographic observations from NDBC moored buoys and C-MAN coastal stations. Data files are served via HTTPS at https://www.ndbc.noaa.gov/dat
@@ -57,7 +64,7 @@ common:
   type: Website
   url: https://www.noaa.gov/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ndbc/refs/heads/main/security/ndbc-domain-security.yml
+  href: https://artifacts.apis.io/ndbc/security/ndbc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ndbc-domain-security.yml
@@ -105,7 +112,7 @@ overview: 'NDBC — National Data Buoy Center is listed with 5 APIs on the [APIs
 
 
   NDBC — National Data Buoy Center''s developer surface includes developer portal, documentation, and 8 more developer resources.'
-random_paper: 11
+random_paper: 23
 score:
   band: emerging
   composite: 12.5
@@ -131,14 +138,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ndbc/refs/heads/main/screenshots/ndbc-2026-06-20T190220.png
+screenshot: https://apis.io/screenshots/ndbc/ndbc-2026-06-20T190220.png
 security:
 - kind: domain-security
   name: Ndbc Domain Security

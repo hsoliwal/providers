@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
-  label: Partner onboarding · Treasury API Banking (sandbox + OAuth2)
-  onboarding: unknown
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
   pricing: unknown
   public: false
   source:
-  - developer-portal
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: Move Money Transfer is First Horizon's RESTful payments-initiation API for Treasury Management clients, used to originate and manage funds transfers programmatically from an ERP, accounting, or treasu
@@ -138,7 +145,7 @@ common:
   type: CFPB1033Rule
   url: https://www.consumerfinance.gov/personal-financial-data-rights/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/first-horizon/refs/heads/main/security/first-horizon-domain-security.yml
+  href: https://artifacts.apis.io/first-horizon/security/first-horizon-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/first-horizon-domain-security.yml
@@ -167,17 +174,17 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/first-horizon-bank
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/first-horizon/refs/heads/main/authentication/first-horizon-authentication.yml
+  href: https://artifacts.apis.io/first-horizon/authentication/first-horizon-authentication.yml
   title: ''
   type: Authentication
   url: authentication/first-horizon-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/first-horizon/refs/heads/main/conformance/first-horizon-conformance.yml
+  href: https://artifacts.apis.io/first-horizon/conformance/first-horizon-conformance.yml
   title: ''
   type: Conformance
   url: conformance/first-horizon-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/first-horizon/refs/heads/main/llms/first-horizon-llms.txt
+  href: https://artifacts.apis.io/first-horizon/llms/first-horizon-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/first-horizon-llms.txt
@@ -193,12 +200,12 @@ overview: 'First Horizon is listed with 5 APIs on the [APIs.io](https://apis.io/
 
 
   First Horizon''s developer surface includes documentation, authentication, and 29 more developer resources.'
-random_paper: 10
+random_paper: 6
 score:
   band: emerging
   composite: 11.6
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -228,8 +235,8 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 13.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

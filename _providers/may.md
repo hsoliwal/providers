@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,22 +37,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/may/refs/heads/main/plans/may-plans-pricing.yml
+  href: https://artifacts.apis.io/may/plans/may-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/may-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/may/refs/heads/main/rate-limits/may-rate-limits.yml
+  href: https://artifacts.apis.io/may/rate-limits/may-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/may-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/may/refs/heads/main/security/may-domain-security.yml
+  href: https://artifacts.apis.io/may/security/may-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/may-domain-security.yml
@@ -90,12 +93,12 @@ common:
   type: Facebook
   url: https://www.facebook.com/MaySanteParentalite/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/may/refs/heads/main/llms/may-llms.txt
+  href: https://artifacts.apis.io/may/llms/may-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/may-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/may/refs/heads/main/conformance/may-conformance.yml
+  href: https://artifacts.apis.io/may/conformance/may-conformance.yml
   title: ''
   type: Conformance
   url: conformance/may-conformance.yml
@@ -140,7 +143,7 @@ plans:
 - name: May Plans Pricing
   plan_count: 0
   slug: may-plans-pricing
-random_paper: 19
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: May Rate Limits
@@ -149,7 +152,7 @@ score:
   band: emerging
   composite: 13.0
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -184,14 +187,14 @@ score:
     regime: Health
     regime_id: health
     score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/may/refs/heads/main/screenshots/may-2026-09-02T150443.png
+screenshot: https://apis.io/screenshots/may/may-2026-09-02T150443.png
 security:
 - kind: domain-security
   name: May Domain Security

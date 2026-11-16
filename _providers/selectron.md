@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -70,27 +73,27 @@ common:
   type: Security
   url: https://www.selectron.ch/en/services-and-support/cybersecurity-services/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/selectron/refs/heads/main/security/selectron-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/selectron/security/selectron-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/selectron-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/selectron/refs/heads/main/security/selectron-domain-security.yml
+  href: https://artifacts.apis.io/selectron/security/selectron-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/selectron-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/selectron/refs/heads/main/conformance/selectron-conformance.yml
+  href: https://artifacts.apis.io/selectron/conformance/selectron-conformance.yml
   title: ''
   type: Conformance
   url: conformance/selectron-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/selectron/refs/heads/main/llms/selectron-llms.txt
+  href: https://artifacts.apis.io/selectron/llms/selectron-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/selectron-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/selectron/refs/heads/main/plans/selectron-plans-pricing.yml
+  href: https://artifacts.apis.io/selectron/plans/selectron-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/selectron-plans-pricing.yml
@@ -128,7 +131,7 @@ plans:
 - name: Selectron Plans Pricing
   plan_count: 0
   slug: selectron-plans-pricing
-random_paper: 7
+random_paper: 15
 score:
   band: emerging
   composite: 19.0
@@ -164,14 +167,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/selectron/refs/heads/main/screenshots/selectron-2026-10-11T125656.png
+screenshot: https://apis.io/screenshots/selectron/selectron-2026-10-11T125656.png
 security:
 - kind: domain-security
   name: Selectron Domain Security

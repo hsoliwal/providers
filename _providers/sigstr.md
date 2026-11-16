@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -19,7 +22,7 @@ name: Sigstr
 nav: Providers
 network: true
 overview: Sigstr is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Email, Email Signature, Marketing, and Account Based Marketing.
-random_paper: 8
+random_paper: 20
 slug: sigstr
 tags:
 - Company

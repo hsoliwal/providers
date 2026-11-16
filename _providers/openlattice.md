@@ -1,15 +1,20 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
+  - rate-limits
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.openlattice.com
@@ -72,11 +80,8 @@ apis:
   description: API endpoints to search data.
   name: OpenLattice Search API
   slug: openlattice-search-api
-artifact_total: 20
+artifact_total: 23
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: OpenLattice authorizations API
   slug: open-openlattice-authorizations-api
@@ -100,7 +105,7 @@ collections:
   slug: open-openlattice-search-api
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/rate-limits/openlattice-rate-limits.yml
+  href: https://artifacts.apis.io/openlattice/rate-limits/openlattice-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/openlattice-rate-limits.yml
@@ -109,67 +114,67 @@ common:
   type: Pricing
   url: https://github.com/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/plans/openlattice-plans-pricing.yml
+  href: https://artifacts.apis.io/openlattice/plans/openlattice-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/openlattice-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/capabilities/openlattice-capability-edges.yml
+  href: https://artifacts.apis.io/openlattice/capabilities/openlattice-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/openlattice-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/overlays/openlattice-openapi-overlay.yaml
+  href: https://artifacts.apis.io/openlattice/overlays/openlattice-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/openlattice-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/security/openlattice-domain-security.yml
+  href: https://artifacts.apis.io/openlattice/security/openlattice-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/openlattice-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/authentication/openlattice-authentication.yml
+  href: https://artifacts.apis.io/openlattice/authentication/openlattice-authentication.yml
   title: ''
   type: Authentication
   url: authentication/openlattice-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/packages/openlattice-packages.yml
+  href: https://artifacts.apis.io/openlattice/packages/openlattice-packages.yml
   title: ''
   type: Packages
   url: packages/openlattice-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/packages/openlattice-packages.yml
+  href: https://artifacts.apis.io/openlattice/packages/openlattice-packages.yml
   title: ''
   type: SDKs
   url: packages/openlattice-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/components/openlattice-components.yml
+  href: https://artifacts.apis.io/openlattice/components/openlattice-components.yml
   title: ''
   type: Components
   url: components/openlattice-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/conventions/openlattice-conventions.yml
+  href: https://artifacts.apis.io/openlattice/conventions/openlattice-conventions.yml
   title: ''
   type: Conventions
   url: conventions/openlattice-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/data-model/openlattice-data-model.yml
+  href: https://artifacts.apis.io/openlattice/data-model/openlattice-data-model.yml
   title: ''
   type: DataModel
   url: data-model/openlattice-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/mcp/openlattice-mcp.yml
+  href: https://artifacts.apis.io/openlattice/mcp/openlattice-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/openlattice-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/llms/openlattice-llms.txt
+  href: https://artifacts.apis.io/openlattice/llms/openlattice-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/openlattice-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/openlattice/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -192,6 +197,9 @@ network: true
 overview: 'OpenLattice publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authorizations API, Data API, Edm API, and 4 more. Tagged areas include Company, Data Integration, Entity Data Model, Public Sector, and Analytics.
 
 
+  The OpenLattice catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   OpenLattice''s developer surface includes pricing, authentication, and 15 more developer resources.'
 plans:
 - name: Openlattice Plans Pricing
@@ -200,30 +208,43 @@ plans:
 - name: Openlattice Price Estimates
   plan_count: 0
   slug: openlattice-price-estimates
-random_paper: 10
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Openlattice Rate Limits
   slug: openlattice-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: OpenLattice API Rules
+  rule_count: 55
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 2
+    warn: 5
+  slug: openlattice-rules
 score:
   band: thin
-  composite: 31.8
+  composite: 33.4
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 49.0
+    artifact_dirs: 22
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 39.8
     developer_ergonomics: 28.0
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 31.8
+  previous_composite: 33.4
   provenance:
     contracts:
       callable: 0.0
@@ -238,13 +259,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/openlattice/refs/heads/main/screenshots/openlattice-2026-08-07T190610.png
+screenshot: https://apis.io/screenshots/openlattice/openlattice-2026-08-07T190610.png
 security:
 - kind: authentication
   name: Openlattice Authentication
@@ -254,6 +275,14 @@ security:
   name: Openlattice Domain Security
   slug: openlattice-domain-security
   summary_line: no transport/DNS hardening detected
+skill_count: 3
+skills:
+- name: explore-entity-data-model
+  slug: explore-entity-data-model
+- name: manage-organization-permissions
+  slug: manage-organization-permissions
+- name: search-entity-neighbors
+  slug: search-entity-neighbors
 slug: openlattice
 tags:
 - Company

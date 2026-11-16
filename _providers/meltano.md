@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -81,42 +85,42 @@ common:
   type: ChangeLogLink
   url: https://github.com/meltano/meltano/releases
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/meltano/refs/heads/main/packages/meltano-packages.yml
+  href: https://artifacts.apis.io/meltano/packages/meltano-packages.yml
   title: ''
   type: Packages
   url: packages/meltano-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/meltano/refs/heads/main/packages/meltano-packages.yml
+  href: https://artifacts.apis.io/meltano/packages/meltano-packages.yml
   title: ''
   type: SDKs
   url: packages/meltano-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/meltano/refs/heads/main/cli/meltano-cli.yml
+  href: https://artifacts.apis.io/meltano/cli/meltano-cli.yml
   title: ''
   type: CLI
   url: cli/meltano-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/meltano/refs/heads/main/changelog/meltano-changelog.yml
+  href: https://artifacts.apis.io/meltano/changelog/meltano-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/meltano-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/meltano/refs/heads/main/lifecycle/meltano-lifecycle.yml
+  href: https://artifacts.apis.io/meltano/lifecycle/meltano-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/meltano-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/meltano/refs/heads/main/conformance/meltano-conformance.yml
+  href: https://artifacts.apis.io/meltano/conformance/meltano-conformance.yml
   title: ''
   type: Conformance
   url: conformance/meltano-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meltano/refs/heads/main/security/meltano-domain-security.yml
+  href: https://artifacts.apis.io/meltano/security/meltano-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/meltano-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meltano/refs/heads/main/llms/meltano-llms.txt
+  href: https://artifacts.apis.io/meltano/llms/meltano-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/meltano-llms.txt
@@ -132,18 +136,18 @@ overview: 'Meltano is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Meltano''s developer surface includes documentation, getting-started guide, engineering blog, pricing, support, CLI, changelog, and 12 more developer resources.'
-random_paper: 4
+random_paper: 8
 score:
   band: emerging
   composite: 25.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
@@ -151,7 +155,7 @@ score:
     developer_ergonomics: 52.4
     discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 25.7
+  previous_composite: 25.8
   provenance:
     conformance: derived
   regulatory:
@@ -160,14 +164,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/meltano/refs/heads/main/screenshots/meltano-2026-08-07T172452.png
+screenshot: https://apis.io/screenshots/meltano/meltano-2026-08-07T172452.png
 security:
 - kind: domain-security
   name: Meltano Domain Security

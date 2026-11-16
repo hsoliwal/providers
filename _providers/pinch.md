@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +29,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.2
-  scored_at: '2026-10-17'
+  score: 23.7
+  scored_at: '2026-11-06'
 api_count: 16
 apis:
-- description: API for Pinch payments and medical spa services
+- baseURL: https://api.getpinch.com.au
+  baseurl_source: spec
+  description: API for Pinch payments and medical spa services
   name: Pinch API
-  slug: pinch-api-2
+  slug: pinch-api
 - baseURL: https://api.getpinch.com.au
   baseurl_source: declared
   description: The Calculate Fees API from Pinch — 1 operation(s) for calculate fees.
@@ -107,72 +126,72 @@ apis:
 artifact_total: 26
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/rules/pinch-rules.yml
+  href: https://artifacts.apis.io/pinch/rules/pinch-rules.yml
   title: ''
   type: Spectral
   url: rules/pinch-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/json-ld/pinch-context.jsonld
+  href: https://artifacts.apis.io/pinch/json-ld/pinch-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/pinch-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/vocabulary/pinch-vocabulary.yml
+  href: https://artifacts.apis.io/pinch/vocabulary/pinch-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/pinch-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/data-model/pinch-data-model.yml
+  href: https://artifacts.apis.io/pinch/data-model/pinch-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pinch-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/changelog/pinch-changelog.yml
+  href: https://artifacts.apis.io/pinch/changelog/pinch-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/pinch-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/conventions/pinch-conventions.yml
+  href: https://artifacts.apis.io/pinch/conventions/pinch-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pinch-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/authentication/pinch-authentication.yml
+  href: https://artifacts.apis.io/pinch/authentication/pinch-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pinch-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/lifecycle/pinch-lifecycle.yml
+  href: https://artifacts.apis.io/pinch/lifecycle/pinch-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pinch-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/conformance/pinch-conformance.yml
+  href: https://artifacts.apis.io/pinch/conformance/pinch-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pinch-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/llms/pinch-llms.txt
+  href: https://artifacts.apis.io/pinch/llms/pinch-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pinch-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/well-known/pinch-well-known.yml
+  href: https://artifacts.apis.io/pinch/well-known/pinch-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/pinch-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/hosts/pinch-hosts.yml
+  href: https://artifacts.apis.io/pinch/hosts/pinch-hosts.yml
   title: ''
   type: Hosts
   url: hosts/pinch-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/vendors/pinch-vendors.yml
+  href: https://artifacts.apis.io/pinch/vendors/pinch-vendors.yml
   title: ''
   type: Vendors
   url: vendors/pinch-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pinch/refs/heads/main/security/pinch-domain-security.yml
+  href: https://artifacts.apis.io/pinch/security/pinch-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pinch-domain-security.yml
@@ -260,7 +279,7 @@ modified: '2026-10-12'
 name: Pinch
 nav: Providers
 network: true
-overview: 'Pinch is listed with 16 APIs on the [APIs.io](https://apis.io/) network, including Calculate Fees API, Connect API, Fees API, and 13 more. Tagged areas include Company, Payments, MedicalSpa, and Health Tech.
+overview: 'Pinch is listed with 16 APIs on the [APIs.io](https://apis.io/) network, including Calculate Fees API, Connect API, and 14 more. Tagged areas include Company, Payments, Medical Spa, and Health Tech.
 
 
   The Pinch catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -283,21 +302,23 @@ rules:
   slug: pinch-rules
 score:
   band: thin
-  composite: 37.6
+  composite: 30.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 55.8
     catalog_earned_first_party: 0.0
     catalog_gap: 59.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.3
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 22.0
-    contract_quality: 25.7
-    developer_ergonomics: 57.1
+    contract_quality: 25.6
+    developer_ergonomics: 40.5
     discoverability: 60.7
-    operational_transparency: 21.1
+    operational_transparency: 18.4
+  previous_composite: 37.5
   provenance:
     conformance: derived
     contracts:
@@ -311,12 +332,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
+screenshot: https://apis.io/screenshots/pinch/pinch-2026-11-03T141223.png
 security:
 - kind: authentication
   name: Pinch Authentication
@@ -330,7 +353,7 @@ slug: pinch
 tags:
 - Company
 - Payments
-- MedicalSpa
+- Medical Spa
 - Health Tech
 website: https://bookpinch.com
 ---

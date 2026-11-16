@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-10-17'
+  score: 45.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -86,11 +90,8 @@ apis:
   description: The Tilesets API from Mapbox — 13 operation(s) for tilesets.
   name: Mapbox Tilesets API
   slug: mapbox-tilesets-api
-artifact_total: 39
+artifact_total: 40
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Mapbox Tiling Service Activity API
   slug: open-mapbox-activity-api
@@ -104,28 +105,33 @@ collections:
   name: Mapbox Tiling Service API
   slug: open-mapbox
 common:
+- group: other
+  href: https://artifacts.apis.io/mapbox/capabilities/mapbox-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mapbox-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mapbox/refs/heads/main/plans/mapbox-plans-pricing.yml
+  href: https://artifacts.apis.io/mapbox/plans/mapbox-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mapbox-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mapbox/refs/heads/main/finops/mapbox-finops.yml
+  href: https://artifacts.apis.io/mapbox/finops/mapbox-finops.yml
   title: ''
   type: FinOps
   url: finops/mapbox-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mapbox/refs/heads/main/agentic-access/mapbox-agentic-access.yml
+  href: https://artifacts.apis.io/mapbox/agentic-access/mapbox-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/mapbox-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mapbox/refs/heads/main/security/mapbox-trust-center.yml
+  href: https://artifacts.apis.io/mapbox/security/mapbox-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/mapbox-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mapbox/refs/heads/main/security/mapbox-domain-security.yml
+  href: https://artifacts.apis.io/mapbox/security/mapbox-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mapbox-domain-security.yml
@@ -241,10 +247,10 @@ features:
 - Map Matching API to snap GPS traces to road networks
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Mapbox Finops
-  primary_unit: ''
-  service_category: Location Services
+  primary_unit: 1,000 requests
+  service_category: ''
   slug: mapbox-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mapbox.png
@@ -260,35 +266,54 @@ network: true
 overview: 'Mapbox is listed with 12 APIs on the [APIs.io](https://apis.io/) network, including Activity API, Tiling Service API, Tilesets API, and 9 more. Tagged areas include Mapping, Maps, Geospatial, Location, and Geocoding.
 
 
-  Mapbox''s developer surface includes support, authentication, signup flow, privacy policy, getting-started guide, engineering blog, and 22 more developer resources.'
+  The Mapbox catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Mapbox''s developer surface includes support, authentication, signup flow, privacy policy, getting-started guide, engineering blog, and 23 more developer resources.'
 plans:
 - name: Mapbox Plans Pricing
-  plan_count: 8
+  plan_count: 16
   slug: mapbox-plans-pricing
-random_paper: 9
+- name: Mapbox Price Estimates
+  plan_count: 0
+  slug: mapbox-price-estimates
+random_paper: 23
 rate_limits:
 - limit_count: 6
   name: Mapbox Rate Limits
   slug: mapbox-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 74
+  extends:
+  - spectral:oas
+  name: Mapbox API Rules
+  rule_count: 33
+  severity_counts:
+    error: 30
+    hint: 0
+    info: 1
+    warn: 2
+  slug: mapbox-rules
 score:
   band: developing
-  composite: 41.3
+  composite: 49.3
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 46.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    artifact_dirs: 20
+    catalog_earned: 62.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 52.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 43.4
-    contract_governance: 0.0
+    access_clarity: 75.0
+    contract_governance: 13.6
     contract_quality: 38.6
     developer_ergonomics: 47.6
     discoverability: 80.0
     operational_transparency: 36.8
-  previous_composite: 42.8
+  previous_composite: 49.3
   provenance:
     agentic_access: derived
     contracts:
@@ -303,13 +328,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/mapbox/refs/heads/main/screenshots/mapbox-2026-06-20T184931.png
+screenshot: https://apis.io/screenshots/mapbox/mapbox-2026-06-20T184931.png
 security:
 - kind: domain-security
   name: Mapbox Domain Security

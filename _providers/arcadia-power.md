@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -18,24 +21,27 @@ agent_readiness:
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: bearer
+    auth_clarity: negotiable
     consent_identity: false
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: partial
+    mcp_tool_quality: na
+    openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-10-17'
+  score: 28.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -84,11 +90,6 @@ apis:
   slug: arcadia-power-meters-api
 - baseURL: https://api.arcadia.com/plug
   baseurl_source: declared
-  description: Top-level organization resource.
-  name: Arcadia Organizations API
-  slug: arcadia-power-organizations-api
-- baseURL: https://api.arcadia.com/plug
-  baseurl_source: declared
   description: Utility providers supported by the platform.
   name: Arcadia Providers API
   slug: arcadia-power-providers-api
@@ -109,10 +110,50 @@ apis:
   slug: arcadia-power-webhooks-api
 - baseURL: https://api.arcadia.com/plug
   baseurl_source: declared
-  description: Access token issuance.
-  name: Arcadia O Auth API
-  slug: arcadia-power-oauth-api
-artifact_total: 69
+  description: The API Keys API from Arcadia — 3 operation(s) for api keys.
+  name: Arcadia API Keys API
+  slug: arcadia-power-api-keys-api
+- baseURL: https://api.arcadia.com/plug
+  baseurl_source: declared
+  description: The Authentication API from Arcadia — 1 operation(s) for authentication.
+  name: Arcadia Authentication API
+  slug: arcadia-power-authentication-api
+- baseURL: https://api.arcadia.com/plug
+  baseurl_source: declared
+  description: The Business Units API from Arcadia — 4 operation(s) for business units.
+  name: Arcadia Business Units API
+  slug: arcadia-power-business-units-api
+- baseURL: https://api.arcadia.com/plug
+  baseurl_source: declared
+  description: The Custom Data API from Arcadia — 2 operation(s) for custom data.
+  name: Arcadia Custom Data API
+  slug: arcadia-power-custom-data-api
+- baseURL: https://api.arcadia.com/plug
+  baseurl_source: declared
+  description: The Deletion API from Arcadia — 6 operation(s) for deletion.
+  name: Arcadia Deletion API
+  slug: arcadia-power-deletion-api
+- baseURL: https://api.arcadia.com/plug
+  baseurl_source: declared
+  description: The Discovered Statements API from Arcadia — 5 operation(s) for discovered statements.
+  name: Arcadia Discovered Statements API
+  slug: arcadia-power-discovered-statements-api
+- baseURL: https://api.arcadia.com/plug
+  baseurl_source: declared
+  description: The Downloads API from Arcadia — 3 operation(s) for downloads.
+  name: Arcadia Downloads API
+  slug: arcadia-power-downloads-api
+- baseURL: https://api.arcadia.com/plug
+  baseurl_source: declared
+  description: The Expected Accounts API from Arcadia — 1 operation(s) for expected accounts.
+  name: Arcadia Expected Accounts API
+  slug: arcadia-power-expected-accounts-api
+- baseURL: https://api.arcadia.com/plug
+  baseurl_source: declared
+  description: The Sandbox Statements API from Arcadia — 1 operation(s) for sandbox statements.
+  name: Arcadia Sandbox Statements API
+  slug: arcadia-power-sandbox-statements-api
+artifact_total: 75
 collections:
 - collection_type: postman
   name: Arcadia Plug Accounts API
@@ -147,9 +188,6 @@ collections:
 - collection_type: postman
   name: Arcadia Plug Accounts Webhooks API
   slug: postman-arcadia-power-webhooks-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Arcadia Plug API
   slug: open-arcadia-plug-api
@@ -188,7 +226,7 @@ collections:
   slug: open-arcadia-power-webhooks-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arcadia-power/refs/heads/main/capabilities/arcadia-power-capability-edges.yml
+  href: https://artifacts.apis.io/arcadia-power/capabilities/arcadia-power-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/arcadia-power-capability-edges.yml
@@ -201,27 +239,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/arcadia/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arcadia-power/refs/heads/main/agentic-access/arcadia-power-agentic-access.yml
+  href: https://artifacts.apis.io/arcadia-power/agentic-access/arcadia-power-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/arcadia-power-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcadia-power/refs/heads/main/security/arcadia-power-trust-center.yml
+  href: https://artifacts.apis.io/arcadia-power/security/arcadia-power-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/arcadia-power-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcadia-power/refs/heads/main/security/arcadia-power-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/arcadia-power/security/arcadia-power-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/arcadia-power-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcadia-power/refs/heads/main/security/arcadia-power-domain-security.yml
+  href: https://artifacts.apis.io/arcadia-power/security/arcadia-power-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arcadia-power-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcadia-power/refs/heads/main/authentication/arcadia-power-authentication.yml
+  href: https://artifacts.apis.io/arcadia-power/authentication/arcadia-power-authentication.yml
   title: ''
   type: Authentication
   url: authentication/arcadia-power-authentication.yml
@@ -298,17 +336,17 @@ common:
   type: Documentation
   url: https://docs.arcadia.com/llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/arcadia-power/refs/heads/main/plans/arcadia-power-plans-pricing.yml
+  href: https://artifacts.apis.io/arcadia-power/plans/arcadia-power-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/arcadia-power-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/arcadia-power/refs/heads/main/rate-limits/arcadia-power-rate-limits.yml
+  href: https://artifacts.apis.io/arcadia-power/rate-limits/arcadia-power-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/arcadia-power-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/arcadia-power/refs/heads/main/finops/arcadia-power-finops.yml
+  href: https://artifacts.apis.io/arcadia-power/finops/arcadia-power-finops.yml
   title: ''
   type: FinOps
   url: finops/arcadia-power-finops.yml
@@ -361,7 +399,7 @@ modified: '2026-05-25'
 name: Arcadia
 nav: Providers
 network: true
-overview: 'Arcadia publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Credentials API, Files API, and 12 more. Tagged areas include Energy, Clean Energy, Utility Data, Climate, and Sustainability.
+overview: 'Arcadia publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Credentials API, Files API, and 19 more. Tagged areas include Energy, Clean Energy, Utility Data, Climate, and Sustainability.
 
 
   The Arcadia catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -372,7 +410,7 @@ plans:
 - name: Arcadia Power Plans Pricing
   plan_count: 4
   slug: arcadia-power-plans-pricing
-random_paper: 13
+random_paper: 15
 rate_limits:
 - limit_count: 5
   name: Arcadia Power Rate Limits
@@ -391,43 +429,43 @@ rules:
   slug: arcadia-power-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 39.3
+  composite: 42.8
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 58.3
     catalog_earned_first_party: 0.0
     catalog_gap: 56.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 1.9
   facets:
     access_clarity: 28.9
     contract_governance: 9.8
-    contract_quality: 56.9
-    developer_ergonomics: 40.5
+    contract_quality: 60.8
+    developer_ergonomics: 46.4
     discoverability: 58.0
-    operational_transparency: 26.3
-  previous_composite: 47.6
+    operational_transparency: 36.8
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 11
+      marker_coverage: 60.0
+      total: 30
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 23.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/arcadia-power/refs/heads/main/screenshots/arcadia-power-2026-06-20T172402.png
+screenshot: https://apis.io/screenshots/arcadia-power/arcadia-power-2026-06-20T172402.png
 security:
 - kind: authentication
   name: Arcadia Power Authentication

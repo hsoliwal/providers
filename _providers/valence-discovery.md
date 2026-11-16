@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -57,20 +61,28 @@ common:
   type: PrivacyPolicy
   url: https://www.valencelabs.com/privacy-policy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/valence-discovery/refs/heads/main/packages/valence-discovery-packages.yml
+  href: https://artifacts.apis.io/valence-discovery/packages/valence-discovery-packages.yml
   title: ''
   type: Packages
   url: packages/valence-discovery-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/valence-discovery/refs/heads/main/packages/valence-discovery-packages.yml
+  href: https://artifacts.apis.io/valence-discovery/packages/valence-discovery-packages.yml
   title: ''
   type: SDKs
   url: packages/valence-discovery-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/valence-discovery/refs/heads/main/security/valence-discovery-domain-security.yml
+  href: https://artifacts.apis.io/valence-discovery/security/valence-discovery-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/valence-discovery-domain-security.yml
+- group: build
+  title: ''
+  type: GitHubOrganization
+  url: https://github.com/mintlify
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://docs.valencediscovery.com/
 created: '2026-07-17'
 description: Valence Discovery is an AI-first drug discovery company, now operating as Valence Labs, the AI research engine of Recursion. Formed from the merger of Datamol and InVivo AI, the team builds machine-learning methods and foundation models for molecular design, cellular perturbation prediction, and biological discovery, trained on petabyte-scale phenomics and transcriptomics data. Rather than a public REST API, Valence's developer surface is a suite of first-party open-source Python libraries - datamol, molfeat, graphium, SAFE and OpenQDC - published under the datamol-io and valence-labs GitHub organizations for cheminformatics, molecular featurization, graph neural networks and ML-ready quantum datasets.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/valence-discovery.png
@@ -82,41 +94,41 @@ network: true
 overview: 'Valence Discovery is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Drug Discovery, Machine Learning, Cheminformatics, and Molecular Design.
 
 
-  Valence Discovery''s developer surface includes documentation, engineering blog, and 6 more developer resources.'
-random_paper: 3
+  Valence Discovery''s developer surface includes documentation, engineering blog, API reference, and 7 more developer resources.'
+random_paper: 11
 score:
-  band: minimal
-  composite: 10.4
+  band: emerging
+  composite: 11.1
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.7
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 19.0
+    developer_ergonomics: 22.6
     discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 10.3
+  previous_composite: 10.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
     score: 7.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/valence-discovery/refs/heads/main/screenshots/valence-discovery-2026-09-02T165313.png
+screenshot: https://apis.io/screenshots/valence-discovery/valence-discovery-2026-09-02T165313.png
 security:
 - kind: domain-security
   name: Valence Discovery Domain Security
@@ -133,5 +145,8 @@ tags:
 - Life Sciences
 - Open Source
 - Python
+- Data
+- Platform
+- Discovery
 website: https://www.valencelabs.com/
 ---

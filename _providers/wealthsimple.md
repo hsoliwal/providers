@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -85,22 +89,22 @@ common:
   type: StatusPage
   url: https://status.wealthsimple.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wealthsimple/refs/heads/main/well-known/wealthsimple-security.txt
+  href: https://artifacts.apis.io/wealthsimple/well-known/wealthsimple-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/wealthsimple-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wealthsimple/refs/heads/main/well-known/wealthsimple-well-known.yml
+  href: https://artifacts.apis.io/wealthsimple/well-known/wealthsimple-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/wealthsimple-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wealthsimple/refs/heads/main/security/wealthsimple-domain-security.yml
+  href: https://artifacts.apis.io/wealthsimple/security/wealthsimple-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wealthsimple-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wealthsimple/refs/heads/main/security/wealthsimple-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/wealthsimple/security/wealthsimple-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/wealthsimple-vulnerability-disclosure.yml
@@ -109,7 +113,7 @@ common:
   type: Security
   url: https://hackerone.com/wealthsimple
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wealthsimple/refs/heads/main/security/wealthsimple-trust-center.yml
+  href: https://artifacts.apis.io/wealthsimple/security/wealthsimple-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/wealthsimple-trust-center.yml
@@ -118,12 +122,12 @@ common:
   type: Compliance
   url: https://trust.wealthsimple.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wealthsimple/refs/heads/main/llms/wealthsimple-llms.txt
+  href: https://artifacts.apis.io/wealthsimple/llms/wealthsimple-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/wealthsimple-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/wealthsimple/refs/heads/main/packages/wealthsimple-packages.yml
+  href: https://artifacts.apis.io/wealthsimple/packages/wealthsimple-packages.yml
   title: ''
   type: Packages
   url: packages/wealthsimple-packages.yml
@@ -139,12 +143,12 @@ overview: 'Wealthsimple is profiled on the [APIs.io](https://apis.io/) network. 
 
 
   Wealthsimple''s developer surface includes pricing, signup flow, support, engineering blog, and 17 more developer resources.'
-random_paper: 19
+random_paper: 23
 score:
   band: emerging
   composite: 20.1
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -172,14 +176,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 19.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/wealthsimple/refs/heads/main/screenshots/wealthsimple-2026-09-02T170518.png
+screenshot: https://apis.io/screenshots/wealthsimple/wealthsimple-2026-09-02T170518.png
 security:
 - kind: domain-security
   name: Wealthsimple Domain Security

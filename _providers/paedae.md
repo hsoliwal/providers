@@ -31,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.3
-  scored_at: '2026-10-17'
+  score: 43.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://manager.gimbal.com/api
@@ -67,15 +70,12 @@ apis:
   description: The Places API from Paedae — 5 operation(s) for places.
   name: Paedae Places API
   slug: paedae-places-api
-artifact_total: 17
+artifact_total: 21
 asyncapis:
 - description: ''
   name: Paedae Webhooks
   slug: paedae-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Gimbal REST Applications API
   slug: open-paedae-applications-api
@@ -93,17 +93,17 @@ collections:
   slug: open-paedae-places-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/mcp/paedae-mcp.yml
+  href: https://artifacts.apis.io/paedae/mcp/paedae-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/paedae-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/security/paedae-domain-security.yml
+  href: https://artifacts.apis.io/paedae/security/paedae-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/paedae-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/scopes/paedae-scopes.yml
+  href: https://artifacts.apis.io/paedae/scopes/paedae-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/paedae-scopes.yml
@@ -140,52 +140,52 @@ common:
   type: StatusPage
   url: http://status.gimbal.com
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/packages/paedae-packages.yml
+  href: https://artifacts.apis.io/paedae/packages/paedae-packages.yml
   title: ''
   type: Packages
   url: packages/paedae-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/packages/paedae-packages.yml
+  href: https://artifacts.apis.io/paedae/packages/paedae-packages.yml
   title: ''
   type: SDKs
   url: packages/paedae-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/lifecycle/paedae-lifecycle.yml
+  href: https://artifacts.apis.io/paedae/lifecycle/paedae-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/paedae-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/paedae/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/well-known/paedae-well-known.yml
+  href: https://artifacts.apis.io/paedae/well-known/paedae-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/paedae-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/mcp/paedae-tool-crosswalk.yml
+  href: https://artifacts.apis.io/paedae/mcp/paedae-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/paedae-tool-crosswalk.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/changelog/paedae-changelog.yml
+  href: https://artifacts.apis.io/paedae/changelog/paedae-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/paedae-changelog.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/plans/paedae-plans-pricing.yml
+  href: https://artifacts.apis.io/paedae/plans/paedae-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/paedae-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/rate-limits/paedae-rate-limits.yml
+  href: https://artifacts.apis.io/paedae/rate-limits/paedae-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/paedae-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/llms/paedae-llms.txt
+  href: https://artifacts.apis.io/paedae/llms/paedae-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/paedae-llms.txt
@@ -207,6 +207,14 @@ common:
   url: https://infillion.com/terms-of-use/
 created: '2026-07-17'
 description: Paedae is the company behind the Gimbal proximity and location platform (a 500 Global portfolio company; paedae.com now redirects to gimbal.com, operated under Infillion). Gimbal provides beacons, geofencing, and a proximity SDK for iOS and Android, plus a Gimbal Manager REST API to manage applications, places, beacons, beacon configurations, and location-triggered communications. Beacon sighting events (Arrived/Departed/Sighted) are delivered via HTTP callbacks. This profile was enriched from the live Gimbal developer surface at docs.gimbal.com and manager.gimbal.com.
+finops:
+- has_sources: true
+  method: derived
+  name: Paedae Finops
+  primary_unit: ''
+  service_category: ''
+  slug: paedae-finops
+  template: true
 image: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/apis.yml
 layout: provider
 modified: '2026-08-13'
@@ -216,7 +224,7 @@ network: true
 overview: 'Paedae publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applications API, Beacon Configurations API, Beacons API, and 2 more. Tagged areas include Company, Proximity, Location, Beacons, and Geofencing.
 
 
-  The Paedae catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Paedae catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Paedae''s developer surface includes documentation, API reference, developer portal, signup flow, support, changelog, engineering blog, and 18 more developer resources.'
@@ -224,11 +232,24 @@ plans:
 - name: Paedae Plans Pricing
   plan_count: 0
   slug: paedae-plans-pricing
-random_paper: 14
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Paedae Rate Limits
   slug: paedae-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Paedae API Rules
+  rule_count: 55
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 1
+  slug: paedae-rules
 scopes:
 - name: Paedae Scopes
   scope_count: 0
@@ -236,23 +257,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 47.4
+  composite: 49.0
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 55.6
     developer_ergonomics: 54.2
     discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 47.3
+  previous_composite: 49.0
   provenance:
     conformance: first-party
     contracts:
@@ -268,13 +289,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/paedae/refs/heads/main/screenshots/paedae-2026-08-07T191301.png
+screenshot: https://apis.io/screenshots/paedae/paedae-2026-08-07T191301.png
 security:
 - kind: authentication
   name: Paedae Authentication
@@ -284,6 +305,14 @@ security:
   name: Paedae Domain Security
   slug: paedae-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: paedae-manage-places
+  slug: paedae-manage-places
+- name: paedae-page-through-inventory
+  slug: paedae-page-through-inventory
+- name: paedae-run-communication
+  slug: paedae-run-communication
 slug: paedae
 tags:
 - Company

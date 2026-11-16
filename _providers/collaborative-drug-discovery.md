@@ -1,6 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.2
-  scored_at: '2026-10-17'
+  score: 28.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 41
   human_in_the_loop: 2
@@ -188,35 +202,35 @@ apis:
   description: Vaults management
   name: Collaborative Drug Discovery Vaults API
   slug: collaborative-drug-discovery-vaults-api
-artifact_total: 38
+artifact_total: 43
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/agentic-access/collaborative-drug-discovery-agentic-access.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/agentic-access/collaborative-drug-discovery-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/collaborative-drug-discovery-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/rules/collaborative-drug-discovery-rules.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/rules/collaborative-drug-discovery-rules.yml
   title: ''
   type: Spectral
   url: rules/collaborative-drug-discovery-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/json-ld/collaborative-drug-discovery-context.jsonld
+  href: https://artifacts.apis.io/collaborative-drug-discovery/json-ld/collaborative-drug-discovery-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/collaborative-drug-discovery-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/vocabulary/collaborative-drug-discovery-vocabulary.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/vocabulary/collaborative-drug-discovery-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/collaborative-drug-discovery-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/data-model/collaborative-drug-discovery-data-model.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/data-model/collaborative-drug-discovery-data-model.yml
   title: ''
   type: DataModel
   url: data-model/collaborative-drug-discovery-data-model.yml
@@ -225,52 +239,52 @@ common:
   type: Compliance
   url: https://www.collaborativedrug.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/security/collaborative-drug-discovery-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/security/collaborative-drug-discovery-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/collaborative-drug-discovery-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/authentication/collaborative-drug-discovery-authentication.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/authentication/collaborative-drug-discovery-authentication.yml
   title: ''
   type: Authentication
   url: authentication/collaborative-drug-discovery-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/errors/collaborative-drug-discovery-problem-types.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/errors/collaborative-drug-discovery-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/collaborative-drug-discovery-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/conformance/collaborative-drug-discovery-conformance.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/conformance/collaborative-drug-discovery-conformance.yml
   title: ''
   type: Conformance
   url: conformance/collaborative-drug-discovery-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/llms/collaborative-drug-discovery-llms.txt
+  href: https://artifacts.apis.io/collaborative-drug-discovery/llms/collaborative-drug-discovery-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/collaborative-drug-discovery-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/well-known/collaborative-drug-discovery-eu-security.txt
+  href: https://artifacts.apis.io/collaborative-drug-discovery/well-known/collaborative-drug-discovery-eu-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/collaborative-drug-discovery-eu-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/well-known/collaborative-drug-discovery-app-security.txt
+  href: https://artifacts.apis.io/collaborative-drug-discovery/well-known/collaborative-drug-discovery-app-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/collaborative-drug-discovery-app-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/well-known/collaborative-drug-discovery-well-known.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/well-known/collaborative-drug-discovery-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/collaborative-drug-discovery-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/hosts/collaborative-drug-discovery-hosts.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/hosts/collaborative-drug-discovery-hosts.yml
   title: ''
   type: Hosts
   url: hosts/collaborative-drug-discovery-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/vendors/collaborative-drug-discovery-vendors.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/vendors/collaborative-drug-discovery-vendors.yml
   title: ''
   type: Vendors
   url: vendors/collaborative-drug-discovery-vendors.yml
@@ -291,17 +305,17 @@ common:
   type: APIReference
   url: https://docs.collaborativedrug.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/security/collaborative-drug-discovery-trust-center.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/security/collaborative-drug-discovery-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/collaborative-drug-discovery-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/security/collaborative-drug-discovery-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/security/collaborative-drug-discovery-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/collaborative-drug-discovery-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/collaborative-drug-discovery/refs/heads/main/security/collaborative-drug-discovery-domain-security.yml
+  href: https://artifacts.apis.io/collaborative-drug-discovery/security/collaborative-drug-discovery-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/collaborative-drug-discovery-domain-security.yml
@@ -340,7 +354,7 @@ overview: 'Collaborative Drug Discovery publishes 31 API contracts indexed on th
 
 
   Collaborative Drug Discovery''s developer surface includes authentication, support, getting-started guide, API reference, and 21 more developer resources.'
-random_paper: 9
+random_paper: 11
 rules:
 - authorship: generated
   effective_rule_count: 58
@@ -356,21 +370,23 @@ rules:
   slug: collaborative-drug-discovery-rules
 score:
   band: thin
-  composite: 37.9
+  composite: 34.3
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 53.8
     catalog_earned_first_party: 0.0
     catalog_gap: 61.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.6
   facets:
-    access_clarity: 15.8
+    access_clarity: 11.8
     contract_governance: 22.0
     contract_quality: 60.3
-    developer_ergonomics: 37.5
-    discoverability: 75.0
+    developer_ergonomics: 25.6
+    discoverability: 74.1
     operational_transparency: 10.5
+  previous_composite: 37.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -386,12 +402,14 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 25.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/collaborative-drug-discovery/collaborative-drug-discovery-2026-11-03T124841.png
 security:
 - kind: authentication
   name: Collaborative Drug Discovery Authentication
@@ -409,6 +427,18 @@ security:
   name: Collaborative Drug Discovery Trust Center
   slug: collaborative-drug-discovery-trust-center
   summary_line: SOC 2
+skill_count: 5
+skills:
+- name: collaborative-drug-discovery-batch-create-and-retrieve
+  slug: collaborative-drug-discovery-batch-create-and-retrieve
+- name: collaborative-drug-discovery-create-and-retrieve-molecule
+  slug: collaborative-drug-discovery-create-and-retrieve-molecule
+- name: collaborative-drug-discovery-create-and-retrieve-plate
+  slug: collaborative-drug-discovery-create-and-retrieve-plate
+- name: collaborative-drug-discovery-create-project
+  slug: collaborative-drug-discovery-create-project
+- name: collaborative-drug-discovery-inventory-samples-create-and-re
+  slug: collaborative-drug-discovery-inventory-samples-create-and-re
 slug: collaborative-drug-discovery
 tags:
 - Scientific Data Management

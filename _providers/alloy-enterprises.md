@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -106,17 +109,17 @@ common:
   type: SecondaryMarket
   url: https://www.nasdaqprivatemarket.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alloy-enterprises/refs/heads/main/security/alloy-enterprises-domain-security.yml
+  href: https://artifacts.apis.io/alloy-enterprises/security/alloy-enterprises-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/alloy-enterprises-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alloy-enterprises/refs/heads/main/llms/alloy-enterprises-llms.txt
+  href: https://artifacts.apis.io/alloy-enterprises/llms/alloy-enterprises-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/alloy-enterprises-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alloy-enterprises/refs/heads/main/well-known/alloy-enterprises-well-known.yml
+  href: https://artifacts.apis.io/alloy-enterprises/well-known/alloy-enterprises-well-known.yml
   title: ''
   type: WellKnownProbe
   url: well-known/alloy-enterprises-well-known.yml
@@ -149,12 +152,12 @@ overview: 'Alloy Enterprises is profiled on the [APIs.io](https://apis.io/) netw
 
 
   Alloy Enterprises'' developer surface includes engineering blog, FAQ, YouTube channel, and 17 more developer resources.'
-random_paper: 12
+random_paper: 18
 score:
   band: minimal
   composite: 9.6
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -175,14 +178,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/alloy-enterprises/refs/heads/main/screenshots/alloy-enterprises-2026-08-07T161230.png
+screenshot: https://apis.io/screenshots/alloy-enterprises/alloy-enterprises-2026-08-07T161230.png
 security:
 - kind: domain-security
   name: Alloy Enterprises Domain Security

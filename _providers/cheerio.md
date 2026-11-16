@@ -1,12 +1,14 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium
+  label: Free
   onboarding: unknown
-  pricing: freemium
+  pricing: free
   public: false
   source:
-  - plans
+  - finops
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Cheerio implements a subset of core jQuery designed for the server. It parses markup into a traversable, manipulable DOM-like data structure and exposes a familiar jQuery-style API for selecting eleme
@@ -42,57 +47,57 @@ apis:
 artifact_total: 38
 common:
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/packages/cheerio-packages.yml
+  href: https://artifacts.apis.io/cheerio/packages/cheerio-packages.yml
   title: ''
   type: Packages
   url: packages/cheerio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/packages/cheerio-packages.yml
+  href: https://artifacts.apis.io/cheerio/packages/cheerio-packages.yml
   title: ''
   type: SDKs
   url: packages/cheerio-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/llms/cheerio-llms.txt
+  href: https://artifacts.apis.io/cheerio/llms/cheerio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cheerio-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/conformance/cheerio-conformance.yml
+  href: https://artifacts.apis.io/cheerio/conformance/cheerio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cheerio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/conventions/cheerio-conventions.yml
+  href: https://artifacts.apis.io/cheerio/conventions/cheerio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cheerio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/lifecycle/cheerio-lifecycle.yml
+  href: https://artifacts.apis.io/cheerio/lifecycle/cheerio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cheerio-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/changelog/cheerio-changelog.yml
+  href: https://artifacts.apis.io/cheerio/changelog/cheerio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/cheerio-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/security/cheerio-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cheerio/security/cheerio-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cheerio-vulnerability-disclosure.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/plans/cheerio-plans-pricing.yml
+  href: https://artifacts.apis.io/cheerio/plans/cheerio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cheerio-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/rate-limits/cheerio-rate-limits.yml
+  href: https://artifacts.apis.io/cheerio/rate-limits/cheerio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cheerio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/finops/cheerio-finops.yml
+  href: https://artifacts.apis.io/cheerio/finops/cheerio-finops.yml
   title: ''
   type: FinOps
   url: finops/cheerio-finops.yml
@@ -121,7 +126,7 @@ common:
   type: SecurityPolicy
   url: https://github.com/cheeriojs/cheerio/blob/main/SECURITY.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/security/cheerio-domain-security.yml
+  href: https://artifacts.apis.io/cheerio/security/cheerio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cheerio-domain-security.yml
@@ -158,7 +163,7 @@ common:
   type: Issues
   url: https://github.com/cheeriojs/cheerio/issues
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/json-ld/cheerio-context.jsonld
+  href: https://artifacts.apis.io/cheerio/json-ld/cheerio-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cheerio-context.jsonld
@@ -221,7 +226,7 @@ plans:
 - name: Cheerio Plans Pricing
   plan_count: 0
   slug: cheerio-plans-pricing
-random_paper: 9
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: Cheerio Rate Limits
@@ -230,13 +235,13 @@ score:
   band: emerging
   composite: 22.1
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
@@ -244,7 +249,7 @@ score:
     developer_ergonomics: 42.9
     discoverability: 57.1
     operational_transparency: 28.9
-  previous_composite: 23.7
+  previous_composite: 22.1
   provenance:
     conformance: first-party
   regulatory:
@@ -253,14 +258,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cheerio/refs/heads/main/screenshots/cheerio-2026-06-20T174246.png
+screenshot: https://apis.io/screenshots/cheerio/cheerio-2026-06-20T174246.png
 security:
 - kind: domain-security
   name: Cheerio Domain Security

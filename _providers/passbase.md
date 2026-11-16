@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.9
-  scored_at: '2026-10-17'
+  score: 31.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -55,15 +58,12 @@ apis:
   description: Read project settings and verification configuration.
   name: Passbase Project API
   slug: passbase-project-api
-artifact_total: 9
+artifact_total: 11
 asyncapis:
 - description: ''
   name: Passbase Webhooks
   slug: passbase-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Passbase Verifications Identity API
   slug: open-passbase-identity-api
@@ -72,7 +72,7 @@ collections:
   slug: open-passbase-project-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/overlays/passbase-verification-overlay.yaml
+  href: https://artifacts.apis.io/passbase/overlays/passbase-verification-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/passbase-verification-overlay.yaml
@@ -85,72 +85,72 @@ common:
   type: GitHubOrganization
   url: https://github.com/passbase
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/packages/passbase-packages.yml
+  href: https://artifacts.apis.io/passbase/packages/passbase-packages.yml
   title: ''
   type: Packages
   url: packages/passbase-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/packages/passbase-packages.yml
+  href: https://artifacts.apis.io/passbase/packages/passbase-packages.yml
   title: ''
   type: SDKs
   url: packages/passbase-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/authentication/passbase-authentication.yml
+  href: https://artifacts.apis.io/passbase/authentication/passbase-authentication.yml
   title: ''
   type: Authentication
   url: authentication/passbase-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/mcp/passbase-mcp.yml
+  href: https://artifacts.apis.io/passbase/mcp/passbase-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/passbase-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/passbase/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/llms/passbase-llms.txt
+  href: https://artifacts.apis.io/passbase/llms/passbase-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/passbase-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/conventions/passbase-conventions.yml
+  href: https://artifacts.apis.io/passbase/conventions/passbase-conventions.yml
   title: ''
   type: Conventions
   url: conventions/passbase-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/errors/passbase-problem-types.yml
+  href: https://artifacts.apis.io/passbase/errors/passbase-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/passbase-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/conformance/passbase-conformance.yml
+  href: https://artifacts.apis.io/passbase/conformance/passbase-conformance.yml
   title: ''
   type: Conformance
   url: conformance/passbase-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/lifecycle/passbase-lifecycle.yml
+  href: https://artifacts.apis.io/passbase/lifecycle/passbase-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/passbase-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/data-model/passbase-data-model.yml
+  href: https://artifacts.apis.io/passbase/data-model/passbase-data-model.yml
   title: ''
   type: DataModel
   url: data-model/passbase-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/asyncapi/passbase-webhooks.yml
+  href: https://artifacts.apis.io/passbase/asyncapi/passbase-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/passbase-webhooks.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/security/passbase-domain-security.yml
+  href: https://artifacts.apis.io/passbase/security/passbase-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/passbase-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/agentic-access/passbase-agentic-access.yml
+  href: https://artifacts.apis.io/passbase/agentic-access/passbase-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/passbase-agentic-access.yml
@@ -165,30 +165,43 @@ network: true
 overview: 'Passbase publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Identity API and Project API. Tagged areas include Company, Security, Identity Verification, KYC, and Biometrics.
 
 
-  The Passbase catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Passbase catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Passbase''s developer surface includes authentication and 16 more developer resources.'
-random_paper: 14
+random_paper: 10
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Passbase API Rules
+  rule_count: 58
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 1
+  slug: passbase-rules
 score:
   band: thin
-  composite: 27.0
+  composite: 28.6
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.4
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 55.5
     developer_ergonomics: 20.8
     discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 27.4
+  previous_composite: 28.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -205,14 +218,14 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 16.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/passbase/refs/heads/main/screenshots/passbase-2026-08-07T191532.png
+screenshot: https://apis.io/screenshots/passbase/passbase-2026-08-07T191532.png
 security:
 - kind: authentication
   name: Passbase Authentication
@@ -222,6 +235,12 @@ security:
   name: Passbase Domain Security
   slug: passbase-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 2
+skills:
+- name: Fetch a verified identity and its resources
+  slug: passbase-fetch-verified-identity
+- name: Read project verification settings
+  slug: passbase-read-project-settings
 slug: passbase
 tags:
 - Company

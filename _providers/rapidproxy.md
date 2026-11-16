@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: http://YOUR_USERNAME:YOUR_PASSWORD@YOUR_PROXY_HOST:YOUR_PORT
@@ -34,37 +48,37 @@ apis:
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rapidproxy/refs/heads/main/plans/rapidproxy-plans-pricing.yml
+  href: https://artifacts.apis.io/rapidproxy/plans/rapidproxy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/rapidproxy-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rapidproxy/refs/heads/main/rules/rapidproxy-rules.yml
+  href: https://artifacts.apis.io/rapidproxy/rules/rapidproxy-rules.yml
   title: ''
   type: Spectral
   url: rules/rapidproxy-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rapidproxy/refs/heads/main/conformance/rapidproxy-conformance.yml
+  href: https://artifacts.apis.io/rapidproxy/conformance/rapidproxy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rapidproxy-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rapidproxy/refs/heads/main/llms/rapidproxy-llms.txt
+  href: https://artifacts.apis.io/rapidproxy/llms/rapidproxy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rapidproxy-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rapidproxy/refs/heads/main/well-known/rapidproxy-well-known.yml
+  href: https://artifacts.apis.io/rapidproxy/well-known/rapidproxy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rapidproxy-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rapidproxy/refs/heads/main/hosts/rapidproxy-hosts.yml
+  href: https://artifacts.apis.io/rapidproxy/hosts/rapidproxy-hosts.yml
   title: ''
   type: Hosts
   url: hosts/rapidproxy-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rapidproxy/refs/heads/main/vendors/rapidproxy-vendors.yml
+  href: https://artifacts.apis.io/rapidproxy/vendors/rapidproxy-vendors.yml
   title: ''
   type: Vendors
   url: vendors/rapidproxy-vendors.yml
@@ -89,7 +103,7 @@ common:
   type: GettingStarted
   url: https://docs.rapidproxy.io/proxies/getting-started
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rapidproxy/refs/heads/main/security/rapidproxy-domain-security.yml
+  href: https://artifacts.apis.io/rapidproxy/security/rapidproxy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rapidproxy-domain-security.yml
@@ -131,7 +145,7 @@ plans:
 - name: Rapidproxy Plans Pricing
   plan_count: 3
   slug: rapidproxy-plans-pricing
-random_paper: 6
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 49
@@ -146,22 +160,30 @@ rules:
     warn: 1
   slug: rapidproxy-rules
 score:
-  band: thin
-  composite: 31.3
+  band: emerging
+  composite: 23.8
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 14
     catalog_earned: 46.5
     catalog_earned_first_party: 12.0
     catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.5
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 18.2
     contract_quality: 9.9
-    developer_ergonomics: 23.8
+    developer_ergonomics: 11.9
     discoverability: 60.7
     operational_transparency: 0.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+    - united-kingdom-ireland
+  previous_composite: 31.3
   provenance:
     conformance: derived
     contracts:
@@ -175,13 +197,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/rapidproxy/rapidproxy-2026-11-03T141932.png
 security:
 - kind: domain-security
   name: Rapidproxy Domain Security

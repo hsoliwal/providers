@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.3
-  scored_at: '2026-10-17'
+  score: 28.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://status.utilita.co.uk/api/v2
@@ -57,7 +60,7 @@ apis:
   description: Overall page status and rolled-up summary.
   name: Utilita Status API
   slug: utilita-status-api
-artifact_total: 14
+artifact_total: 16
 asyncapis:
 - description: ''
   name: Utilita Status Webhooks
@@ -68,7 +71,7 @@ collections:
   slug: open-utilita-status
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/skills/utilita-check-service-status.md
+  href: https://artifacts.apis.io/utilita/skills/utilita-check-service-status.md
   title: ''
   type: AgentSkill
   url: skills/utilita-check-service-status.md
@@ -93,67 +96,67 @@ common:
   type: StatusPage
   url: https://status.utilita.co.uk/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/openapi/_original/utilita-status-openapi.yml
+  href: https://artifacts.apis.io/utilita/openapi/_original/utilita-status-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/utilita-status-openapi.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/examples/_index.yml
+  href: https://artifacts.apis.io/utilita/examples/_index.yml
   title: ''
   type: Examples
   url: examples/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/asyncapi/utilita-status-webhooks.yml
+  href: https://artifacts.apis.io/utilita/asyncapi/utilita-status-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/utilita-status-webhooks.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/authentication/utilita-authentication.yml
+  href: https://artifacts.apis.io/utilita/authentication/utilita-authentication.yml
   title: ''
   type: Authentication
   url: authentication/utilita-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/conventions/utilita-conventions.yml
+  href: https://artifacts.apis.io/utilita/conventions/utilita-conventions.yml
   title: ''
   type: Conventions
   url: conventions/utilita-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/errors/utilita-problem-types.yml
+  href: https://artifacts.apis.io/utilita/errors/utilita-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/utilita-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/data-model/utilita-data-model.yml
+  href: https://artifacts.apis.io/utilita/data-model/utilita-data-model.yml
   title: ''
   type: DataModel
   url: data-model/utilita-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/lifecycle/utilita-lifecycle.yml
+  href: https://artifacts.apis.io/utilita/lifecycle/utilita-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/utilita-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/conformance/utilita-conformance.yml
+  href: https://artifacts.apis.io/utilita/conformance/utilita-conformance.yml
   title: ''
   type: Conformance
   url: conformance/utilita-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/security/utilita-domain-security.yml
+  href: https://artifacts.apis.io/utilita/security/utilita-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/utilita-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/well-known/utilita-well-known.yml
+  href: https://artifacts.apis.io/utilita/well-known/utilita-well-known.yml
   title: ''
   type: WellKnownProbe
   url: well-known/utilita-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/utilita/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/llms/utilita-llms.txt
+  href: https://artifacts.apis.io/utilita/llms/utilita-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/utilita-llms.txt
@@ -241,29 +244,42 @@ network: true
 overview: 'Utilita publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Components API, Incidents API, Scheduled Maintenance API, and 1 more. Tagged areas include Energy, United Kingdom, Utilities, Electricity, and Gas.
 
 
-  The Utilita catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Utilita catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Utilita''s developer surface includes documentation, API reference, code examples, authentication, signup flow, pricing, support, and 25 more developer resources.'
-random_paper: 16
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Utilita API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: utilita-rules
 score:
   band: developing
-  composite: 45.2
+  composite: 45.9
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 37.0
+    artifact_dirs: 20
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
-    contract_quality: 59.2
+    contract_governance: 18.2
+    contract_quality: 56.2
     developer_ergonomics: 37.5
     discoverability: 67.0
-    operational_transparency: 23.7
+    operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -272,11 +288,11 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 45.2
+  previous_composite: 45.9
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 4
@@ -290,15 +306,15 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 37.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 27.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/utilita/refs/heads/main/screenshots/utilita-2026-08-17T082702.png
+screenshot: https://apis.io/screenshots/utilita/utilita-2026-08-17T082702.png
 security:
 - kind: authentication
   name: Utilita Authentication
@@ -308,6 +324,10 @@ security:
   name: Utilita Domain Security
   slug: utilita-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Check Utilita service status
+  slug: utilita-check-service-status
 slug: utilita
 tags:
 - Energy

@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
@@ -27,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.8
-  scored_at: '2026-10-17'
+  score: 22.8
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://app.strongdm.com
@@ -48,19 +52,24 @@ apis:
   description: The Admin API from StrongDM — 4 operation(s) for admin.
   name: StrongDM Admin API
   slug: strongdm-admin-api
-artifact_total: 9
+artifact_total: 11
 common:
+- group: commercial
+  href: https://artifacts.apis.io/strongdm/plans/strongdm-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/strongdm-plans-pricing.yml
 - group: company
   title: ''
   type: BlogRSS
   url: https://discover.strongdm.com/blog/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/security/strongdm-trust-center.yml
+  href: https://artifacts.apis.io/strongdm/security/strongdm-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/strongdm-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/security/strongdm-domain-security.yml
+  href: https://artifacts.apis.io/strongdm/security/strongdm-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/strongdm-domain-security.yml
@@ -109,47 +118,47 @@ common:
   type: StatusPage
   url: https://status.strongdm.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/packages/strongdm-packages.yml
+  href: https://artifacts.apis.io/strongdm/packages/strongdm-packages.yml
   title: ''
   type: Packages
   url: packages/strongdm-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/packages/strongdm-packages.yml
+  href: https://artifacts.apis.io/strongdm/packages/strongdm-packages.yml
   title: ''
   type: SDKs
   url: packages/strongdm-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/cli/strongdm-cli.yml
+  href: https://artifacts.apis.io/strongdm/cli/strongdm-cli.yml
   title: ''
   type: CLI
   url: cli/strongdm-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/authentication/strongdm-authentication.yml
+  href: https://artifacts.apis.io/strongdm/authentication/strongdm-authentication.yml
   title: ''
   type: Authentication
   url: authentication/strongdm-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/conventions/strongdm-conventions.yml
+  href: https://artifacts.apis.io/strongdm/conventions/strongdm-conventions.yml
   title: ''
   type: Conventions
   url: conventions/strongdm-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/rate-limits/strongdm-rate-limits.yml
+  href: https://artifacts.apis.io/strongdm/rate-limits/strongdm-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/strongdm-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/lifecycle/strongdm-lifecycle.yml
+  href: https://artifacts.apis.io/strongdm/lifecycle/strongdm-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/strongdm-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/changelog/strongdm-changelog.yml
+  href: https://artifacts.apis.io/strongdm/changelog/strongdm-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/strongdm-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/conformance/strongdm-conformance.yml
+  href: https://artifacts.apis.io/strongdm/conformance/strongdm-conformance.yml
   title: ''
   type: Conformance
   url: conformance/strongdm-conformance.yml
@@ -158,12 +167,20 @@ common:
   type: Compliance
   url: https://security.strongdm.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/llms/strongdm-llms.txt
+  href: https://artifacts.apis.io/strongdm/llms/strongdm-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/strongdm-llms.txt
 created: '2026-07-17'
 description: StrongDM is a Zero Trust Privileged Access Management (PAM) platform that brokers and governs access to infrastructure — databases, servers, Kubernetes clusters, cloud resources, network devices, and internal web apps — through a central control plane. It enforces policy and authorization continuously with adaptive action controls, full session recording and audit, and no standing privileges. Automation is exposed through the StrongDM Admin API, a gRPC-based control-plane API that first-party SDKs (Go, Java, Python, Ruby, C#) wrap with REST-like ergonomics and request signing, plus a Terraform provider and the sdm command-line client. This profile was enriched by the API Evangelist pipeline from StrongDM's public developer surface.
+finops:
+- has_sources: true
+  method: derived
+  name: Strongdm Finops
+  primary_unit: ''
+  service_category: ''
+  slug: strongdm-finops
+  template: true
 image: https://www.strongdm.com/hubfs/strongdm-logo.svg
 json_schemas:
 - name: GetAdminResourcesResourceidResponse
@@ -185,8 +202,12 @@ overview: 'StrongDM is listed with 2 APIs on the [APIs.io](https://apis.io/) net
   The StrongDM catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  StrongDM''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, signup flow, and 18 more developer resources.'
-random_paper: 20
+  StrongDM''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, signup flow, and 19 more developer resources.'
+plans:
+- name: Strongdm Plans Pricing
+  plan_count: 3
+  slug: strongdm-plans-pricing
+random_paper: 14
 rate_limits:
 - limit_count: 4
   name: Strongdm Rate Limits
@@ -206,23 +227,23 @@ rules:
   slug: strongdm-rules
 score:
   band: developing
-  composite: 43.7
+  composite: 50.0
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 58.5
-    catalog_earned_first_party: 12.0
-    catalog_gap: 56.5
+    artifact_dirs: 29
+    catalog_earned: 70.5
+    catalog_earned_first_party: 24.0
+    catalog_gap: 44.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -21.2
+  delta: 0.0
   facets:
-    access_clarity: 26.3
+    access_clarity: 57.9
     contract_governance: 31.8
     contract_quality: 13.9
     developer_ergonomics: 71.4
     discoverability: 73.2
     operational_transparency: 65.8
-  previous_composite: 64.9
+  previous_composite: 50.0
   provenance:
     conformance: first-party
     contracts:
@@ -241,14 +262,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/strongdm/refs/heads/main/screenshots/strongdm-2026-09-02T161023.png
+screenshot: https://apis.io/screenshots/strongdm/strongdm-2026-09-02T161023.png
 security:
 - kind: authentication
   name: Strongdm Authentication

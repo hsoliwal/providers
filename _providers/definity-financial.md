@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -37,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -110,42 +113,42 @@ common:
   type: Standard
   url: https://csio.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/definity-financial/refs/heads/main/conformance/definity-financial-conformance.yml
+  href: https://artifacts.apis.io/definity-financial/conformance/definity-financial-conformance.yml
   title: ''
   type: Conformance
   url: conformance/definity-financial-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/definity-financial/refs/heads/main/authentication/definity-financial-authentication.yml
+  href: https://artifacts.apis.io/definity-financial/authentication/definity-financial-authentication.yml
   title: ''
   type: Authentication
   url: authentication/definity-financial-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/definity-financial/refs/heads/main/lifecycle/definity-financial-lifecycle.yml
+  href: https://artifacts.apis.io/definity-financial/lifecycle/definity-financial-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/definity-financial-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/definity-financial/refs/heads/main/well-known/definity-financial-well-known.yml
+  href: https://artifacts.apis.io/definity-financial/well-known/definity-financial-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/definity-financial-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/definity-financial/refs/heads/main/security/definity-financial-domain-security.yml
+  href: https://artifacts.apis.io/definity-financial/security/definity-financial-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/definity-financial-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/definity-financial/refs/heads/main/llms/definity-financial-llms.txt
+  href: https://artifacts.apis.io/definity-financial/llms/definity-financial-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/definity-financial-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/definity-financial/refs/heads/main/llms/definity-financial-sonnet-llms.txt
+  href: https://artifacts.apis.io/definity-financial/llms/definity-financial-sonnet-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/definity-financial-sonnet-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/definity-financial/refs/heads/main/llms/definity-financial-economical-llms.txt
+  href: https://artifacts.apis.io/definity-financial/llms/definity-financial-economical-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/definity-financial-economical-llms.txt
@@ -163,7 +166,7 @@ overview: 'Definity Financial is profiled on the [APIs.io](https://apis.io/) net
 
 
   Definity Financial''s developer surface includes engineering blog, support, signup flow, authentication, and 21 more developer resources.'
-random_paper: 12
+random_paper: 14
 score:
   band: emerging
   composite: 21.9
@@ -198,14 +201,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 26.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/definity-financial/refs/heads/main/screenshots/definity-financial-2026-07-25T211640.png
+screenshot: https://apis.io/screenshots/definity-financial/definity-financial-2026-07-25T211640.png
 security:
 - kind: authentication
   name: Definity Financial Authentication

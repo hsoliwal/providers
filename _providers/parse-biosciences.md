@@ -1,11 +1,15 @@
 ---
 access_model:
   confidence: medium
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Open access
   onboarding: open
   pricing: unknown
-  public: true
+  public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
@@ -27,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -68,42 +75,42 @@ common:
   type: GitHubOrganization
   url: https://github.com/parse-biosciences
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/parse-biosciences/refs/heads/main/conformance/parse-biosciences-conformance.yml
+  href: https://artifacts.apis.io/parse-biosciences/conformance/parse-biosciences-conformance.yml
   title: ''
   type: Conformance
   url: conformance/parse-biosciences-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/parse-biosciences/refs/heads/main/conventions/parse-biosciences-conventions.yml
+  href: https://artifacts.apis.io/parse-biosciences/conventions/parse-biosciences-conventions.yml
   title: ''
   type: Conventions
   url: conventions/parse-biosciences-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/parse-biosciences/refs/heads/main/lifecycle/parse-biosciences-lifecycle.yml
+  href: https://artifacts.apis.io/parse-biosciences/lifecycle/parse-biosciences-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/parse-biosciences-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/parse-biosciences/refs/heads/main/packages/parse-biosciences-packages.yml
+  href: https://artifacts.apis.io/parse-biosciences/packages/parse-biosciences-packages.yml
   title: ''
   type: Packages
   url: packages/parse-biosciences-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/parse-biosciences/refs/heads/main/plans/parse-biosciences-plans-pricing.yml
+  href: https://artifacts.apis.io/parse-biosciences/plans/parse-biosciences-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/parse-biosciences-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/parse-biosciences/refs/heads/main/rate-limits/parse-biosciences-rate-limits.yml
+  href: https://artifacts.apis.io/parse-biosciences/rate-limits/parse-biosciences-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/parse-biosciences-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/parse-biosciences/refs/heads/main/llms/parse-biosciences-llms.txt
+  href: https://artifacts.apis.io/parse-biosciences/llms/parse-biosciences-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/parse-biosciences-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/parse-biosciences/refs/heads/main/security/parse-biosciences-domain-security.yml
+  href: https://artifacts.apis.io/parse-biosciences/security/parse-biosciences-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/parse-biosciences-domain-security.yml
@@ -137,7 +144,7 @@ plans:
 - name: Parse Biosciences Plans Pricing
   plan_count: 0
   slug: parse-biosciences-plans-pricing
-random_paper: 5
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: Parse Biosciences Rate Limits
@@ -146,13 +153,13 @@ score:
   band: emerging
   composite: 15.4
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
@@ -167,7 +174,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 15.3
+  previous_composite: 15.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -177,14 +184,14 @@ score:
     regime: Health
     regime_id: health
     score: 19.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/parse-biosciences/refs/heads/main/screenshots/parse-biosciences-2026-09-02T150911.png
+screenshot: https://apis.io/screenshots/parse-biosciences/parse-biosciences-2026-09-02T150911.png
 security:
 - kind: authentication
   name: Parse Biosciences Authentication

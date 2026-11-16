@@ -5,14 +5,15 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trialpay/refs/heads/main/security/trialpay-domain-security.yml
+  href: https://artifacts.apis.io/trialpay/security/trialpay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trialpay-domain-security.yml
@@ -25,7 +26,7 @@ name: TrialPay
 nav: Providers
 network: true
 overview: TrialPay is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Advertising, Monetization, and Offerwall.
-random_paper: 12
+random_paper: 6
 security:
 - kind: domain-security
   name: Trialpay Domain Security

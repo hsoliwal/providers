@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Agent-driven commerce surface served natively on the Shopify-powered Urtopia storefront: UCP discovery at /.well-known/ucp, MCP tools for catalog search, product details, cart management, policies/FAQ'
@@ -46,7 +51,7 @@ common:
   type: BlogRSS
   url: https://newurtopia.com/blogs/blog.atom
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/urtopia/refs/heads/main/security/urtopia-domain-security.yml
+  href: https://artifacts.apis.io/urtopia/security/urtopia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/urtopia-domain-security.yml
@@ -71,32 +76,32 @@ common:
   type: TermsOfService
   url: https://newurtopia.com/policies/terms-of-service
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/urtopia/refs/heads/main/mcp/urtopia-mcp.yml
+  href: https://artifacts.apis.io/urtopia/mcp/urtopia-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/urtopia-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/urtopia/refs/heads/main/llms/urtopia-llms.txt
+  href: https://artifacts.apis.io/urtopia/llms/urtopia-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/urtopia-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/urtopia/refs/heads/main/well-known/urtopia-well-known.yml
+  href: https://artifacts.apis.io/urtopia/well-known/urtopia-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/urtopia-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/urtopia/refs/heads/main/authentication/urtopia-authentication.yml
+  href: https://artifacts.apis.io/urtopia/authentication/urtopia-authentication.yml
   title: ''
   type: Authentication
   url: authentication/urtopia-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/urtopia/refs/heads/main/scopes/urtopia-scopes.yml
+  href: https://artifacts.apis.io/urtopia/scopes/urtopia-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/urtopia-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/urtopia/refs/heads/main/conformance/urtopia-conformance.yml
+  href: https://artifacts.apis.io/urtopia/conformance/urtopia-conformance.yml
   title: ''
   type: Conformance
   url: conformance/urtopia-conformance.yml
@@ -116,7 +121,7 @@ overview: 'Urtopia is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Urtopia''s developer surface includes support, engineering blog, authentication, and 10 more developer resources.'
-random_paper: 2
+random_paper: 4
 scopes:
 - name: Urtopia Scopes
   scope_count: 4
@@ -126,13 +131,13 @@ score:
   band: emerging
   composite: 22.5
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
@@ -140,7 +145,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 22.4
+  previous_composite: 22.5
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -150,14 +155,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/urtopia/refs/heads/main/screenshots/urtopia-2026-09-02T165222.png
+screenshot: https://apis.io/screenshots/urtopia/urtopia-2026-09-02T165222.png
 security:
 - kind: authentication
   name: Urtopia Authentication

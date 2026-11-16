@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +30,23 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 17.3
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: API for 0CodeKit low-code platform
   name: 0CodeKit API
-  slug: 0codekit-api-2
+  slug: 0codekit-api
 - description: The Ai API from relyon — 1 operation(s) for ai.
   name: relyon AI API
   slug: 0codekit-ai-api
@@ -44,65 +62,65 @@ apis:
 - description: The Pdf API from relyon — 1 operation(s) for pdf.
   name: relyon PDF API
   slug: 0codekit-pdf-api
-artifact_total: 17
+artifact_total: 19
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/plans/0codekit-plans-pricing.yml
+  href: https://artifacts.apis.io/0codekit/plans/0codekit-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/0codekit-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/rules/0codekit-rules.yml
+  href: https://artifacts.apis.io/0codekit/rules/0codekit-rules.yml
   title: ''
   type: Spectral
   url: rules/0codekit-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/json-ld/0codekit-context.jsonld
+  href: https://artifacts.apis.io/0codekit/json-ld/0codekit-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/0codekit-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/vocabulary/0codekit-vocabulary.yml
+  href: https://artifacts.apis.io/0codekit/vocabulary/0codekit-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/0codekit-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/data-model/0codekit-data-model.yml
+  href: https://artifacts.apis.io/0codekit/data-model/0codekit-data-model.yml
   title: ''
   type: DataModel
   url: data-model/0codekit-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/authentication/0codekit-authentication.yml
+  href: https://artifacts.apis.io/0codekit/authentication/0codekit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/0codekit-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/conformance/0codekit-conformance.yml
+  href: https://artifacts.apis.io/0codekit/conformance/0codekit-conformance.yml
   title: ''
   type: Conformance
   url: conformance/0codekit-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/well-known/0codekit-prod-security.txt
+  href: https://artifacts.apis.io/0codekit/well-known/0codekit-prod-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/0codekit-prod-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/well-known/0codekit-my-security.txt
+  href: https://artifacts.apis.io/0codekit/well-known/0codekit-my-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/0codekit-my-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/well-known/0codekit-well-known.yml
+  href: https://artifacts.apis.io/0codekit/well-known/0codekit-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/0codekit-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/hosts/0codekit-hosts.yml
+  href: https://artifacts.apis.io/0codekit/hosts/0codekit-hosts.yml
   title: ''
   type: Hosts
   url: hosts/0codekit-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/vendors/0codekit-vendors.yml
+  href: https://artifacts.apis.io/0codekit/vendors/0codekit-vendors.yml
   title: ''
   type: Vendors
   url: vendors/0codekit-vendors.yml
@@ -123,7 +141,7 @@ common:
   type: GettingStarted
   url: https://docs.0codekit.com/category/getting-started/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/0codekit/refs/heads/main/security/0codekit-domain-security.yml
+  href: https://artifacts.apis.io/0codekit/security/0codekit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/0codekit-domain-security.yml
@@ -160,6 +178,14 @@ coverage:
   state: none
 created: '2026-10-15'
 description: Relyon, operating under the brand 0CodeKit, offers a low‑code and no‑code platform enabling users to convert PDFs, execute code snippets, and integrate AI services without extensive programming. The suite includes PDF conversion, OCR, code execution in Python and JavaScript, image manipulation, and transcription tools, targeting tech‑savvy professionals and developers seeking rapid prototyping and automation.
+finops:
+- has_sources: true
+  method: derived
+  name: 0Codekit Finops
+  primary_unit: seat
+  service_category: ''
+  slug: 0codekit-finops
+  template: false
 image: https://cdn.prod.website-files.com/679e16442439d38e1efcc5c3/6867a7a1afbfac5e2a872223_Tutorial%20013.png
 json_schemas:
 - name: GetDocsResponse
@@ -190,7 +216,7 @@ modified: '2026-10-15'
 name: relyon
 nav: Providers
 network: true
-overview: 'relyon is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including AI API, Docs API, Image API, and 3 more. Tagged areas include Company, Low-Code, No-Code, PDF Tools, and AI Integration.
+overview: 'relyon is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including 0CodeKit API, AI API, Docs API, and 3 more. Tagged areas include Company, Low-Code, No-Code, PDF Tools, and AI Integration.
 
 
   The relyon catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -201,7 +227,10 @@ plans:
 - name: 0Codekit Plans Pricing
   plan_count: 8
   slug: 0codekit-plans-pricing
-random_paper: 17
+- name: 0Codekit Price Estimates
+  plan_count: 0
+  slug: 0codekit-price-estimates
+random_paper: 19
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -216,22 +245,24 @@ rules:
     warn: 1
   slug: 0codekit-rules
 score:
-  band: developing
-  composite: 41.4
+  band: thin
+  composite: 36.1
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 72.8
+    artifact_dirs: 22
+    catalog_earned: 75.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 42.3
+    catalog_gap: 39.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.2
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 35.6
     contract_quality: 24.4
-    developer_ergonomics: 40.5
+    developer_ergonomics: 26.2
     discoverability: 62.5
-    operational_transparency: 5.3
+    operational_transparency: 13.2
+  previous_composite: 44.3
   provenance:
     conformance: first-party
     contracts:
@@ -249,12 +280,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/0codekit/0codekit-2026-11-03T120302.png
 security:
 - kind: authentication
   name: 0Codekit Authentication

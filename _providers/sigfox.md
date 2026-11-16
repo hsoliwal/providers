@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: RESTful backend API for the Sigfox 0G network — manage devices, device types, contracts, groups, users and base stations; retrieve device messages; predict coverage; and configure callbacks that deliv
@@ -44,7 +47,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sigfox/refs/heads/main/security/sigfox-domain-security.yml
+  href: https://artifacts.apis.io/sigfox/security/sigfox-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sigfox-domain-security.yml
@@ -97,37 +100,37 @@ common:
   type: PrivacyPolicy
   url: https://sigfox.com/privacy-policy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sigfox/refs/heads/main/authentication/sigfox-authentication.yml
+  href: https://artifacts.apis.io/sigfox/authentication/sigfox-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sigfox-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sigfox/refs/heads/main/rate-limits/sigfox-rate-limits.yml
+  href: https://artifacts.apis.io/sigfox/rate-limits/sigfox-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sigfox-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sigfox/refs/heads/main/errors/sigfox-problem-types.yml
+  href: https://artifacts.apis.io/sigfox/errors/sigfox-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sigfox-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sigfox/refs/heads/main/conventions/sigfox-conventions.yml
+  href: https://artifacts.apis.io/sigfox/conventions/sigfox-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sigfox-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sigfox/refs/heads/main/lifecycle/sigfox-lifecycle.yml
+  href: https://artifacts.apis.io/sigfox/lifecycle/sigfox-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sigfox-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sigfox/refs/heads/main/conformance/sigfox-conformance.yml
+  href: https://artifacts.apis.io/sigfox/conformance/sigfox-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sigfox-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sigfox/refs/heads/main/llms/sigfox-llms.txt
+  href: https://artifacts.apis.io/sigfox/llms/sigfox-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sigfox-llms.txt
@@ -143,7 +146,7 @@ overview: 'Sigfox is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Sigfox''s developer surface includes documentation, API reference, getting-started guide, support, signup flow, authentication, and 14 more developer resources.'
-random_paper: 18
+random_paper: 8
 rate_limits:
 - limit_count: 12
   name: Sigfox Rate Limits
@@ -152,7 +155,7 @@ score:
   band: thin
   composite: 36.9
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -175,14 +178,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 20.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sigfox/refs/heads/main/screenshots/sigfox-2026-09-02T155418.png
+screenshot: https://apis.io/screenshots/sigfox/sigfox-2026-09-02T155418.png
 security:
 - kind: authentication
   name: Sigfox Authentication

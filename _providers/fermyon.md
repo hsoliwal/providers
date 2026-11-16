@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: medium
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
   - security
   - '{''url'': ''https://www.fermyon.com/'', ''status'': 301, ''note'': ''declared website redirects to https://www.akamai.com/products/akamai-functions — a different registrable domain (fermyon.com -> akamai.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
@@ -28,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 22.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 0
@@ -44,7 +51,7 @@ agentic_access:
   operation_count: 62
   slug: fermyon-agentic-access
   summary_line: 62 operations · 38 acting
-api_count: 4
+api_count: 2
 apis:
 - description: Fermyon Wasm Functions is a multi-tenant, hosted, globally distributed engine for serverless functions running on Akamai Cloud. Developers author functions with the Spin Framework and deploy them to a
   name: Fermyon Wasm Functions
@@ -119,11 +126,8 @@ apis:
   description: The variable-pairs API from Fermyon — 1 operation(s) for variable-pairs.
   name: Fermyon Variable Pairs API
   slug: fermyon-variable-pairs-api
-artifact_total: 38
+artifact_total: 43
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Fermyon Cloud accounts API
   slug: open-fermyon-accounts-api
@@ -171,27 +175,27 @@ collections:
   slug: open-fermyon
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/capabilities/fermyon-capability-edges.yml
+  href: https://artifacts.apis.io/fermyon/capabilities/fermyon-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/fermyon-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/agentic-access/fermyon-agentic-access.yml
+  href: https://artifacts.apis.io/fermyon/agentic-access/fermyon-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fermyon-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/security/fermyon-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fermyon/security/fermyon-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/fermyon-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/security/fermyon-domain-security.yml
+  href: https://artifacts.apis.io/fermyon/security/fermyon-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fermyon-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/authentication/fermyon-authentication.yml
+  href: https://artifacts.apis.io/fermyon/authentication/fermyon-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fermyon-authentication.yml
@@ -224,92 +228,92 @@ common:
   type: Website
   url: https://www.fermyon.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/packages/fermyon-packages.yml
+  href: https://artifacts.apis.io/fermyon/packages/fermyon-packages.yml
   title: ''
   type: Packages
   url: packages/fermyon-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/packages/fermyon-packages.yml
+  href: https://artifacts.apis.io/fermyon/packages/fermyon-packages.yml
   title: ''
   type: SDKs
   url: packages/fermyon-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/cli/fermyon-cli.yml
+  href: https://artifacts.apis.io/fermyon/cli/fermyon-cli.yml
   title: ''
   type: CLI
   url: cli/fermyon-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/well-known/fermyon-well-known.yml
+  href: https://artifacts.apis.io/fermyon/well-known/fermyon-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/fermyon-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/well-known/fermyon-security.txt
+  href: https://artifacts.apis.io/fermyon/well-known/fermyon-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/fermyon-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/security/fermyon-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fermyon/security/fermyon-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/fermyon-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/llms/fermyon-llms.txt
+  href: https://artifacts.apis.io/fermyon/llms/fermyon-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fermyon-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/mcp/fermyon-mcp.yml
+  href: https://artifacts.apis.io/fermyon/mcp/fermyon-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/fermyon-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/conformance/fermyon-conformance.yml
+  href: https://artifacts.apis.io/fermyon/conformance/fermyon-conformance.yml
   title: ''
   type: Conformance
   url: conformance/fermyon-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/conventions/fermyon-conventions.yml
+  href: https://artifacts.apis.io/fermyon/conventions/fermyon-conventions.yml
   title: ''
   type: Conventions
   url: conventions/fermyon-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/lifecycle/fermyon-lifecycle.yml
+  href: https://artifacts.apis.io/fermyon/lifecycle/fermyon-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/fermyon-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/data-model/fermyon-data-model.yml
+  href: https://artifacts.apis.io/fermyon/data-model/fermyon-data-model.yml
   title: ''
   type: DataModel
   url: data-model/fermyon-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/changelog/fermyon-changelog.yml
+  href: https://artifacts.apis.io/fermyon/changelog/fermyon-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/fermyon-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/fermyon/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/plans/fermyon-plans-pricing.yml
+  href: https://artifacts.apis.io/fermyon/plans/fermyon-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fermyon-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/rate-limits/fermyon-rate-limits.yml
+  href: https://artifacts.apis.io/fermyon/rate-limits/fermyon-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fermyon-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/finops/fermyon-finops.yml
+  href: https://artifacts.apis.io/fermyon/finops/fermyon-finops.yml
   title: ''
   type: FinOps
   url: finops/fermyon-finops.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/collections/fermyon.postman_collection.json
+  href: https://artifacts.apis.io/fermyon/collections/fermyon.postman_collection.json
   title: ''
   type: Postman
   url: collections/fermyon.postman_collection.json
@@ -352,13 +356,13 @@ common:
 created: '2025-02-08'
 description: Fermyon Wasm Functions is a multi-tenant, hosted, globally distributed engine for serverless functions running on Akamai Cloud, the most distributed cloud network. Fermyon is the company behind the Spin Framework and SpinKube, providing tools and runtimes for building and operating WebAssembly-based serverless applications.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Fermyon Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: subscription
+  service_category: ''
   slug: fermyon-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fermyon.png
 layout: provider
 modified: '2026-09-09'
@@ -368,42 +372,61 @@ network: true
 overview: 'Fermyon publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Apps API, Auth Tokens API, and 12 more. Tagged areas include Compute, Functions, WebAssembly, Serverless, and Edge Computing.
 
 
+  The Fermyon catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Fermyon''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, CLI, changelog, and 32 more developer resources.'
 plans:
 - name: Fermyon Plans Pricing
-  plan_count: 4
+  plan_count: 3
   slug: fermyon-plans-pricing
-random_paper: 20
+- name: Fermyon Price Estimates
+  plan_count: 0
+  slug: fermyon-price-estimates
+random_paper: 0
 rate_limits:
 - limit_count: 15
   name: Fermyon Rate Limits
   slug: fermyon-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Fermyon API Rules
+  rule_count: 45
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 1
+    warn: 4
+  slug: fermyon-rules
 score:
-  band: developing
-  composite: 52.8
+  band: strong
+  composite: 60.1
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 59.0
+    artifact_dirs: 29
+    catalog_earned: 63.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 56.0
+    catalog_gap: 51.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 4.6
   facets:
-    access_clarity: 69.7
-    contract_governance: 4.5
-    contract_quality: 41.9
-    developer_ergonomics: 67.3
-    discoverability: 69.6
-    operational_transparency: 44.7
-  previous_composite: 53.8
+    access_clarity: 77.6
+    contract_governance: 18.2
+    contract_quality: 46.4
+    developer_ergonomics: 74.4
+    discoverability: 64.3
+    operational_transparency: 60.5
+  previous_composite: 55.5
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 14
     mcp: derived
     skills: derived
@@ -413,13 +436,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/fermyon/refs/heads/main/screenshots/fermyon-2026-06-20T181140.png
+screenshot: https://apis.io/screenshots/fermyon/fermyon-2026-06-20T181140.png
 security:
 - kind: authentication
   name: Fermyon Authentication
@@ -433,6 +456,16 @@ security:
   name: Fermyon Vulnerability Disclosure
   slug: fermyon-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 4
+skills:
+- name: fermyon-authenticate-to-fermyon-cloud
+  slug: fermyon-authenticate-to-fermyon-cloud
+- name: fermyon-deploy-a-spin-application
+  slug: fermyon-deploy-a-spin-application
+- name: fermyon-provision-and-link-cloud-state
+  slug: fermyon-provision-and-link-cloud-state
+- name: fermyon-roll-back-a-deployment
+  slug: fermyon-roll-back-a-deployment
 slug: fermyon
 tags:
 - Compute

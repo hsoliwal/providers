@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Enterprise
   onboarding: unknown
   pricing: enterprise
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 17.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -63,11 +67,8 @@ apis:
   description: Service ticket operations
   name: Charter Communications Tickets API
   slug: charter-communications-tickets-api
-artifact_total: 20
+artifact_total: 19
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Charter Communications Bryte IQ API
   slug: open-charter-communications-bryte-iq-api
@@ -88,32 +89,32 @@ collections:
   slug: open-charter-communications-tickets-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/plans/charter-communications-plans-pricing.yml
+  href: https://artifacts.apis.io/charter-communications/plans/charter-communications-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/charter-communications-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/rate-limits/charter-communications-rate-limits.yml
+  href: https://artifacts.apis.io/charter-communications/rate-limits/charter-communications-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/charter-communications-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/finops/charter-communications-finops.yml
+  href: https://artifacts.apis.io/charter-communications/finops/charter-communications-finops.yml
   title: ''
   type: FinOps
   url: finops/charter-communications-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/capabilities/charter-communications-capability-edges.yml
+  href: https://artifacts.apis.io/charter-communications/capabilities/charter-communications-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/charter-communications-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/agentic-access/charter-communications-agentic-access.yml
+  href: https://artifacts.apis.io/charter-communications/agentic-access/charter-communications-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/charter-communications-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/security/charter-communications-domain-security.yml
+  href: https://artifacts.apis.io/charter-communications/security/charter-communications-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/charter-communications-domain-security.yml
@@ -158,17 +159,17 @@ common:
   type: PrivacyPolicy
   url: https://www.spectrum.com/policies/your-privacy-rights
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/json-ld/charter-communications-context.jsonld
+  href: https://artifacts.apis.io/charter-communications/json-ld/charter-communications-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/charter-communications-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/json-schema/charter-communications-ticket-schema.json
+  href: https://artifacts.apis.io/charter-communications/json-schema/charter-communications-ticket-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/charter-communications-ticket-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/json-schema/charter-communications-serviceability-schema.json
+  href: https://artifacts.apis.io/charter-communications/json-schema/charter-communications-serviceability-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/charter-communications-serviceability-schema.json
@@ -227,7 +228,7 @@ press:
 - date: ''
   title: 'AI Inside: Artificial Intelligence for Network and Customer ...'
   url: https://techexpo.scte.org/session/ai-inside-artificial-intelligence-for-network-and-customer-experience-innovation/
-random_paper: 15
+random_paper: 23
 rate_limits:
 - limit_count: 2
   name: Charter Communications Rate Limits
@@ -248,13 +249,13 @@ score:
   band: emerging
   composite: 22.5
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 49.3
     catalog_earned_first_party: 0.0
     catalog_gap: 65.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
@@ -262,7 +263,7 @@ score:
     developer_ergonomics: 4.8
     discoverability: 67.9
     operational_transparency: 5.3
-  previous_composite: 24.1
+  previous_composite: 22.5
   provenance:
     agentic_access: derived
     contracts:
@@ -276,13 +277,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/charter-communications/refs/heads/main/screenshots/charter-communications-2026-06-20T174233.png
+screenshot: https://apis.io/screenshots/charter-communications/charter-communications-2026-06-20T174233.png
 security:
 - kind: domain-security
   name: Charter Communications Domain Security

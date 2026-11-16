@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Undocumented private HTTP/JSON API at api.rightwayhealthcare.com that backs the Rightway member mobile apps (iOS/Android) and the member web app at member.rightwayhealthcare.com. The host is publicly '
@@ -42,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rightway/refs/heads/main/security/rightway-domain-security.yml
+  href: https://artifacts.apis.io/rightway/security/rightway-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rightway-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rightway/refs/heads/main/conformance/rightway-conformance.yml
+  href: https://artifacts.apis.io/rightway/conformance/rightway-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rightway-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rightway/refs/heads/main/lifecycle/rightway-lifecycle.yml
+  href: https://artifacts.apis.io/rightway/lifecycle/rightway-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rightway-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rightway/refs/heads/main/llms/rightway-llms.txt
+  href: https://artifacts.apis.io/rightway/llms/rightway-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rightway-llms.txt
@@ -129,12 +132,12 @@ overview: 'Rightway is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Rightway''s developer surface includes engineering blog, support, and 16 more developer resources.'
-random_paper: 21
+random_paper: 15
 score:
   band: emerging
   composite: 22.1
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -168,14 +171,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 27.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rightway/refs/heads/main/screenshots/rightway-2026-09-02T153819.png
+screenshot: https://apis.io/screenshots/rightway/rightway-2026-09-02T153819.png
 security:
 - kind: domain-security
   name: Rightway Domain Security

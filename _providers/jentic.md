@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.6
-  scored_at: '2026-10-17'
+  score: 45.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -44,7 +47,7 @@ agentic_access:
   operation_count: 4
   slug: jentic-agentic-access
   summary_line: 4 operations · 3 acting
-api_count: 1
+api_count: 2
 apis:
 - description: The Jentic Remote MCP Server is the hosted Model Context Protocol endpoint that exposes the Jentic catalog to MCP-capable clients (Claude Desktop, ChatGPT, Cursor, Windsurf, VS Code). It speaks the sa
   name: Jentic Remote MCP Server
@@ -76,7 +79,162 @@ apis:
   description: Semantic search over the Jentic API and workflow catalog using natural language queries.
   name: Jentic Search API
   slug: jentic-search-api
-artifact_total: 38
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: 'Actor-agnostic, multi-item access-request surface (Core / Access bounded context). When an agent''s brokered call is rejected by a permission rule — or the agent needs access it doesn''t yet have — the '
+  name: Jentic Access Requests API
+  slug: jentic-access-requests-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Unified actor directory — a lightweight read-only view across all actor types (users, agents, service accounts). Returns ID-to-name mappings for UI cache hydration so dashboards can display friendly n
+  name: Jentic Actors API
+  slug: jentic-actors-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Dynamic agent registration (RFC 7591-style) — register a new agent client, poll registration status, update, or delete a registration.
+  name: Jentic Agent Registration API
+  slug: jentic-agent-registration-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Agent actors — autonomous principals that call the Broker. Covers the agent lifecycle (list, read, approve / deny, enable / disable, archive) and the toolkits bound to each agent.
+  name: Jentic Agents API
+  slug: jentic-agents-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Sub-resource of **APIs** (Registry bounded context). Enumerate the operations exposed by a registered API — either the live (`current_revision_id`) view or a specific revision. Complements `Search` (r
+  name: Jentic API Operations API
+  slug: jentic-api-operations-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Sub-resource of **APIs** (Registry bounded context). Download the underlying OpenAPI document for a registered API — either the live (`current_revision_id`) view or a specific revision. Supports `appl
+  name: Jentic API Spec API
+  slug: jentic-api-spec-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: The `Api` aggregate root — what APIs are registered for this deployment, addressable by the loose `(vendor, name, version)` tuple. Every successful import lands a new immutable `ApiRevision`; the `Api
+  name: Jentic APIs API
+  slug: jentic-apis-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Append-only administrative audit trail — who did what, when. Distinct from `Executions` (brokered upstream calls); this records control-plane mutations.
+  name: Jentic Audit API
+  slug: jentic-audit-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: 'The public API **catalog** — a registry-side browse/preview/import surface over the Jentic public-APIs GitHub manifest. Powers the Discover experience: list importable APIs (`GET /catalog`, keyset cur'
+  name: Jentic Catalog API
+  slug: jentic-catalog-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Runtime, DB-backed platform configuration. Lets an operator set, read, and list configuration that previously required hand-editing backend YAML and restarting the server — starting with credential pr
+  name: Jentic Configuration API
+  slug: jentic-configuration-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Part of the **Core / Access** bounded context — the authoritative record of "who can call what, with which secret". A `Credential` is the auth secret + header configuration the Broker injects on the w
+  name: Jentic Credentials API
+  slug: jentic-credentials-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Unauthenticated metadata discovery — the JWKS document and OAuth authorization server metadata under `/.well-known/*`.
+  name: Jentic Discovery API
+  slug: jentic-discovery-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Curated, severity-tagged event stream surfaced to dashboards and operators. Each event is either **informational** (no action required, e.g. `import.completed`) or **actionable** (requires operator fo
+  name: Jentic Events API
+  slug: jentic-events-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Append-only audit log of every Broker call (sync or async) — timing, status, trace IDs, and the upstream API reference (`vendor:name:version`). Bodies are not stored. Records are written by the Broker
+  name: Jentic Executions API
+  slug: jentic-executions-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Identity introspection for the calling principal (human, agent, or service account) — `GET /me` returns the resolved subject, scopes, and permissions behind the presented token.
+  name: Jentic Identity API
+  slug: jentic-identity-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Resolve a single registered operation to its full structural detail — parameters, response schema, security scheme, server URL. Heavier than `Lookup` (which is the Broker hot path) and separate from `
+  name: Jentic Inspect API
+  slug: jentic-inspect-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: In-flight async-job tracker for both Registry import jobs and Broker async-execution jobs — one uniform `Job` shape keyed by `kind`. Lifecycle only — type-specific result payloads (the imported revisi
+  name: Jentic Jobs API
+  slug: jentic-jobs-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: MCP (Model Context Protocol) transport reporting. The `jentic mcp` stdio server terminates all MCP protocol traffic locally; the control plane only sees plain HTTP. This tag covers the small reporting
+  name: Jentic MCP API
+  slug: jentic-mcp-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Dashboard-oriented aggregation endpoints — execution volume, success/failure ratios, and top operations over a bounded time window. Results are cached in-process (TTL ~120 s) so concurrent dashboard v
+  name: Jentic Monitoring API
+  slug: jentic-monitoring-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Free-form annotations attached to registry resources — an `Api`, an `ApiRevision`, a registered `operation_id`, an `ExecutionRecord`, or a `Credential`. Used to capture human or agent observations abo
+  name: Jentic Notes API
+  slug: jentic-notes-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: OAuth 2.0 / OIDC endpoints exposed by the platform authorization server — the authorize, token, introspection, revocation, and assertion-mint endpoints plus the redirect callback.
+  name: Jentic OAuth API
+  slug: jentic-oauth-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Admin-managed registry of third-party OAuth clients (confidential, secret-bearing). Registered clients integrate with Jentic One via the standard Authorization Code + PKCE flow. Admins can create, lis
+  name: Jentic OAuth Clients API
+  slug: jentic-oauth-clients-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: OpenAPI Overlay 1.0 (`https://spec.openapis.org/overlay/v1.0.0`) documents that correct an imported spec without rewriting it. Overlays capture wrong required fields, missing security schemes, undocum
+  name: Jentic Overlays API
+  slug: jentic-overlays-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Part of the **Admin / Audit** bounded context — the catalogue of grantable permission strings. Permissions are namespaced `resource:action` strings (`users:write`, `capabilities:execute`, `credentials
+  name: Jentic Permissions API
+  slug: jentic-permissions-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Machine principals for non-interactive integrations — lifecycle (create, list, read, approve / deny, enable / disable, archive) mirroring the agent surface.
+  name: Jentic Service Accounts API
+  slug: jentic-service-accounts-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Operational endpoints for service health and platform tooling. Not part of any bounded context — surfaced here so orchestrators and load balancers have a stable probe target.
+  name: Jentic System API
+  slug: jentic-system-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Sub-resource of **Toolkits** (Core / Access bounded context). A toolkit doesn't own credentials directly — it **binds** to credentials that already exist in `/credentials`. The binding is the link rec
+  name: Jentic Toolkit Credentials API
+  slug: jentic-toolkit-credentials-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Sub-resource of **Toolkits** (Core / Access bounded context). A toolkit can hold many API keys at once — different agents, machines, or environments typically each get their own. Each key record (`ck_
+  name: Jentic Toolkit Keys API
+  slug: jentic-toolkit-keys-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: Sub-resource of **Toolkits** (Core / Access bounded context). The fine-grained PBAC tier — per-`(toolkit, credential)` allow / deny / require-approval rules evaluated server-side. Rules use a priority
+  name: Jentic Toolkit Permissions API
+  slug: jentic-toolkit-permissions-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: 'Part of the **Core / Access** bounded context — a `Toolkit` is a scoped bundle of credentials and permissions issued to an agent or service. This tag covers **toolkit lifecycle**: list, create, read, '
+  name: Jentic Toolkits API
+  slug: jentic-toolkits-api
+- baseURL: https://api.jentic.com/mcp
+  baseurl_source: declared
+  description: 'Part of the **Admin / Audit** bounded context — the human roster of the organisation. One organisation, many users; admin surfaces here cover create / list / read / update / delete plus the AIP-style '
+  name: Jentic Users API
+  slug: jentic-users-api
+artifact_total: 68
 collections:
 - collection_type: postman
   name: Jentic Authentication API
@@ -87,9 +245,6 @@ collections:
 - collection_type: postman
   name: Jentic Authentication Search API
   slug: postman-jentic-search-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Jentic Authentication API
   slug: open-jentic-authentication-api
@@ -103,18 +258,23 @@ collections:
   name: Jentic API
   slug: open-jentic
 common:
+- group: other
+  href: https://artifacts.apis.io/jentic/capabilities/jentic-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/jentic-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/plans/jentic-plans-pricing.yml
+  href: https://artifacts.apis.io/jentic/plans/jentic-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/jentic-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/rate-limits/jentic-rate-limits.yml
+  href: https://artifacts.apis.io/jentic/rate-limits/jentic-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/jentic-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/finops/jentic-finops.yml
+  href: https://artifacts.apis.io/jentic/finops/jentic-finops.yml
   title: ''
   type: FinOps
   url: finops/jentic-finops.yml
@@ -123,17 +283,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/jentic/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/agentic-access/jentic-agentic-access.yml
+  href: https://artifacts.apis.io/jentic/agentic-access/jentic-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/jentic-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/security/jentic-domain-security.yml
+  href: https://artifacts.apis.io/jentic/security/jentic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jentic-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/authentication/jentic-authentication.yml
+  href: https://artifacts.apis.io/jentic/authentication/jentic-authentication.yml
   title: ''
   type: Authentication
   url: authentication/jentic-authentication.yml
@@ -222,27 +382,27 @@ common:
   type: PythonPackage
   url: https://pypi.org/project/arazzo-runner/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/vocabulary/jentic-vocabulary.yml
+  href: https://artifacts.apis.io/jentic/vocabulary/jentic-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/jentic-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/json-ld/jentic-context.jsonld
+  href: https://artifacts.apis.io/jentic/json-ld/jentic-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/jentic-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/json-schema/jentic-operation-schema.json
+  href: https://artifacts.apis.io/jentic/json-schema/jentic-operation-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/jentic-operation-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/json-schema/jentic-agent-schema.json
+  href: https://artifacts.apis.io/jentic/json-schema/jentic-agent-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/jentic-agent-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/json-schema/jentic-workflow-schema.json
+  href: https://artifacts.apis.io/jentic/json-schema/jentic-workflow-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/jentic-workflow-schema.json
@@ -269,11 +429,11 @@ examples:
   name: Jentic Workflow Execute Example
   slug: jentic-workflow-execute-example
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Jentic Finops
   primary_unit: ''
-  service_category: AI Agent Platform
+  service_category: ''
   slug: jentic-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jentic.png
@@ -305,18 +465,18 @@ modified: '2026-05-19'
 name: Jentic
 nav: Providers
 network: true
-overview: 'Jentic publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Execution API, Search API, and 5 more. Tagged areas include AI Agents, Arazzo, OpenAPI, MCP, and Workflows.
+overview: 'Jentic publishes 39 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Execution API, Search API, and 36 more. Tagged areas include AI Agents, Arazzo, OpenAPI, MCP, and Workflows.
 
 
   The Jentic catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Jentic''s developer surface includes authentication, engineering blog, documentation, pricing, signup flow, developer console, YouTube channel, and 27 more developer resources.'
+  Jentic''s developer surface includes authentication, engineering blog, documentation, pricing, signup flow, developer console, YouTube channel, and 28 more developer resources.'
 plans:
 - name: Jentic Plans Pricing
-  plan_count: 2
+  plan_count: 3
   slug: jentic-plans-pricing
-random_paper: 21
+random_paper: 13
 rate_limits:
 - limit_count: 4
   name: Jentic Rate Limits
@@ -346,31 +506,31 @@ rules:
     warn: 5
   slug: jentic-rules
 score:
-  band: developing
-  composite: 52.4
+  band: strong
+  composite: 57.9
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 60.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    artifact_dirs: 24
+    catalog_earned: 70.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 45.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.4
   facets:
-    access_clarity: 50.0
+    access_clarity: 76.3
     contract_governance: 27.3
-    contract_quality: 66.7
+    contract_quality: 67.8
     developer_ergonomics: 62.4
     discoverability: 61.7
     operational_transparency: 23.7
-  previous_composite: 53.9
+  previous_composite: 57.5
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 18.4
       derived: 0
       marker_coverage: 0.0
-      total: 3
+      total: 38
     mcp: first-party
   regulatory:
     applies: true
@@ -378,13 +538,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/screenshots/jentic-2026-06-20T183721.png
+screenshot: https://apis.io/screenshots/jentic/jentic-2026-06-20T183721.png
 security:
 - kind: authentication
   name: Jentic Authentication

@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.0
-  scored_at: '2026-10-17'
+  score: 34.8
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://app2.logiless.com/api/v1
@@ -81,11 +89,8 @@ apis:
   description: 仕入先マスタ — supplier master
   name: Logiless Suppliers API
   slug: logiless-suppliers-api
-artifact_total: 23
+artifact_total: 26
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: LOGILESS Articles API
   slug: open-logiless-articles-api
@@ -115,77 +120,77 @@ collections:
   slug: open-logiless-suppliers-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/overlays/logiless-overlay.yaml
+  href: https://artifacts.apis.io/logiless/overlays/logiless-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/logiless-overlay.yaml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/openapi/_original/logiless-openapi.yml
+  href: https://artifacts.apis.io/logiless/openapi/_original/logiless-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/logiless-openapi.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/authentication/logiless-authentication.yml
+  href: https://artifacts.apis.io/logiless/authentication/logiless-authentication.yml
   title: ''
   type: Authentication
   url: authentication/logiless-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/scopes/logiless-scopes.yml
+  href: https://artifacts.apis.io/logiless/scopes/logiless-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/logiless-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/conventions/logiless-conventions.yml
+  href: https://artifacts.apis.io/logiless/conventions/logiless-conventions.yml
   title: ''
   type: Conventions
   url: conventions/logiless-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/errors/logiless-problem-types.yml
+  href: https://artifacts.apis.io/logiless/errors/logiless-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/logiless-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/rate-limits/logiless-rate-limits.yml
+  href: https://artifacts.apis.io/logiless/rate-limits/logiless-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/logiless-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/lifecycle/logiless-lifecycle.yml
+  href: https://artifacts.apis.io/logiless/lifecycle/logiless-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/logiless-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/changelog/logiless-changelog.yml
+  href: https://artifacts.apis.io/logiless/changelog/logiless-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/logiless-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/data-model/logiless-data-model.yml
+  href: https://artifacts.apis.io/logiless/data-model/logiless-data-model.yml
   title: ''
   type: DataModel
   url: data-model/logiless-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/conformance/logiless-conformance.yml
+  href: https://artifacts.apis.io/logiless/conformance/logiless-conformance.yml
   title: ''
   type: Conformance
   url: conformance/logiless-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/mcp/logiless-mcp.yml
+  href: https://artifacts.apis.io/logiless/mcp/logiless-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/logiless-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/llms/logiless-llms.txt
+  href: https://artifacts.apis.io/logiless/llms/logiless-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/logiless-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/logiless/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/security/logiless-domain-security.yml
+  href: https://artifacts.apis.io/logiless/security/logiless-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/logiless-domain-security.yml
@@ -252,31 +257,47 @@ network: true
 overview: 'Logiless publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Articles API, Inbound Deliveries API, Inter-Warehouse Transfers API, and 6 more. Tagged areas include Logistics, E-Commerce, Order Management, Warehouse Management, and Inventory.
 
 
+  The Logiless catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Logiless'' developer surface includes authentication, changelog, documentation, API reference, getting-started guide, support, engineering blog, and 21 more developer resources.'
-random_paper: 8
+random_paper: 2
 rate_limits:
 - limit_count: 1
   name: Logiless Rate Limits
   slug: logiless-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Logiless API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: logiless-rules
 scopes:
 - name: Logiless Scopes
   scope_count: 0
   slug: logiless-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: thin
-  composite: 38.4
+  band: developing
+  composite: 40.1
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 45.0
+    artifact_dirs: 23
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 11.6
     developer_ergonomics: 58.9
     discoverability: 73.2
@@ -288,7 +309,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 38.4
+  previous_composite: 40.1
   provenance:
     conformance: derived
     contracts:
@@ -304,13 +325,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/logiless/refs/heads/main/screenshots/logiless-2026-07-25T225502.png
+screenshot: https://apis.io/screenshots/logiless/logiless-2026-07-25T225502.png
 security:
 - kind: authentication
   name: Logiless Authentication
@@ -320,6 +341,14 @@ security:
   name: Logiless Domain Security
   slug: logiless-domain-security
   summary_line: TLSv1.2 · DMARC
+skill_count: 3
+skills:
+- name: Create and fulfill a sales order
+  slug: logiless-create-and-fulfill-order
+- name: Register and track inbound stock
+  slug: logiless-receive-inbound-stock
+- name: Sync products and read inventory
+  slug: logiless-sync-inventory
 slug: logiless
 tags:
 - Logistics

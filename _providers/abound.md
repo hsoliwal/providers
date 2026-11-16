@@ -23,10 +23,13 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: verified
-    event_surface_described: true
+    event_surface_described: derived
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -124,15 +127,12 @@ arazzos:
 - description: Run the full 1099-NEC lifecycle - create the document, file it with federal and state authorities, then mail the payee copy.
   name: Create, file and mail a Form 1099-NEC
   slug: abound-file-1099-nec.arazzo
-artifact_total: 35
+artifact_total: 39
 asyncapis:
 - description: 'The Abound webhook event surface: 44 HMAC-signed events covering Users, TIN Verifications, Mailings, Form 1099-INT/K/MISC/NEC and Forms W-9, W-8BEN and W-8BEN-E. Derived from the first-party Fern API '
   name: Abound API v4 - Webhooks
   slug: abound-webhooks-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Abound API - v4 1099-INT API
   slug: open-abound-1099-int-api
@@ -174,12 +174,12 @@ collections:
   slug: open-abound-w-9-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/capabilities/abound-capability-edges.yml
+  href: https://artifacts.apis.io/abound/capabilities/abound-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/abound-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/overlays/abound-v4-overlay.yaml
+  href: https://artifacts.apis.io/abound/overlays/abound-v4-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/abound-v4-overlay.yaml
@@ -188,102 +188,102 @@ common:
   type: Website
   url: https://withabound.com
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/packages/abound-packages.yml
+  href: https://artifacts.apis.io/abound/packages/abound-packages.yml
   title: ''
   type: Packages
   url: packages/abound-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/packages/abound-packages.yml
+  href: https://artifacts.apis.io/abound/packages/abound-packages.yml
   title: ''
   type: SDKs
   url: packages/abound-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/authentication/abound-authentication.yml
+  href: https://artifacts.apis.io/abound/authentication/abound-authentication.yml
   title: ''
   type: Authentication
   url: authentication/abound-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/conventions/abound-conventions.yml
+  href: https://artifacts.apis.io/abound/conventions/abound-conventions.yml
   title: ''
   type: Conventions
   url: conventions/abound-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/conventions/abound-conventions.yml
+  href: https://artifacts.apis.io/abound/conventions/abound-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/abound-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/errors/abound-problem-types.yml
+  href: https://artifacts.apis.io/abound/errors/abound-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/abound-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/lifecycle/abound-lifecycle.yml
+  href: https://artifacts.apis.io/abound/lifecycle/abound-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/abound-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/conformance/abound-conformance.yml
+  href: https://artifacts.apis.io/abound/conformance/abound-conformance.yml
   title: ''
   type: Conformance
   url: conformance/abound-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/data-model/abound-data-model.yml
+  href: https://artifacts.apis.io/abound/data-model/abound-data-model.yml
   title: ''
   type: DataModel
   url: data-model/abound-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/components/abound-components.yml
+  href: https://artifacts.apis.io/abound/components/abound-components.yml
   title: ''
   type: Components
   url: components/abound-components.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/sandbox/abound-sandbox.yml
+  href: https://artifacts.apis.io/abound/sandbox/abound-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/abound-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/asyncapi/abound-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/abound/asyncapi/abound-webhooks-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/abound-webhooks-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/abound/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/mcp/abound-mcp.yml
+  href: https://artifacts.apis.io/abound/mcp/abound-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/abound-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/llms/abound-llms.txt
+  href: https://artifacts.apis.io/abound/llms/abound-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/abound-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/security/abound-domain-security.yml
+  href: https://artifacts.apis.io/abound/security/abound-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/abound-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/agentic-access/abound-agentic-access.yml
+  href: https://artifacts.apis.io/abound/agentic-access/abound-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/abound-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/arazzo/abound-collect-w9-and-verify-tin.arazzo.yml
+  href: https://artifacts.apis.io/abound/arazzo/abound-collect-w9-and-verify-tin.arazzo.yml
   title: ''
   type: Arazzo
   url: arazzo/abound-collect-w9-and-verify-tin.arazzo.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/arazzo/abound-file-1099-nec.arazzo.yml
+  href: https://artifacts.apis.io/abound/arazzo/abound-file-1099-nec.arazzo.yml
   title: ''
   type: Arazzo
   url: arazzo/abound-file-1099-nec.arazzo.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abound/refs/heads/main/arazzo/abound-correct-or-void-1099.arazzo.yml
+  href: https://artifacts.apis.io/abound/arazzo/abound-correct-or-void-1099.arazzo.yml
   title: ''
   type: Arazzo
   url: arazzo/abound-correct-or-void-1099.arazzo.yml
@@ -298,19 +298,32 @@ network: true
 overview: 'Abound publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including 1099-INT API, 1099-K API, 1099-MISC API, and 11 more. Tagged areas include Company, Tax, Tax Compliance, Regulatory Compliance, and Financial Services.
 
 
-  The Abound catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Abound catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Abound''s developer surface includes authentication, sandbox, and 21 more developer resources.'
-random_paper: 17
+random_paper: 9
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Abound API Rules
+  rule_count: 57
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 2
+    warn: 5
+  slug: abound-rules
 score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -339,8 +352,8 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
@@ -354,6 +367,16 @@ security:
   name: Abound Domain Security
   slug: abound-domain-security
   summary_line: TLSv1.3 · DNSSEC · DMARC
+skill_count: 4
+skills:
+- name: Collect a W-9 and verify the payee TIN
+  slug: abound-collect-w9-and-verify-tin
+- name: Consume Abound webhooks
+  slug: abound-consume-webhooks
+- name: Correct or void a filed 1099
+  slug: abound-correct-or-void-1099
+- name: Create, file and mail a Form 1099-NEC
+  slug: abound-file-1099-nec
 slug: abound
 tags:
 - Company

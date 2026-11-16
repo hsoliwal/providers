@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.2
-  scored_at: '2026-10-17'
+  score: 43.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 0
@@ -94,9 +100,6 @@ apis:
 artifact_total: 28
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Streamkap Authentication API
   slug: open-streamkap-authentication-api
 - collection_type: open
@@ -127,32 +130,37 @@ collections:
   name: Streamkap API
   slug: open-streamkap
 common:
+- group: other
+  href: https://artifacts.apis.io/streamkap/capabilities/streamkap-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/streamkap-capability-edges.yml
 - group: company
   title: ''
   type: Blog
   url: https://streamkap.com/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/streamkap/refs/heads/main/a2a/streamkap-a2a.yml
+  href: https://artifacts.apis.io/streamkap/a2a/streamkap-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/streamkap-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/streamkap/refs/heads/main/agentic-access/streamkap-agentic-access.yml
+  href: https://artifacts.apis.io/streamkap/agentic-access/streamkap-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/streamkap-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/streamkap/refs/heads/main/security/streamkap-trust-center.yml
+  href: https://artifacts.apis.io/streamkap/security/streamkap-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/streamkap-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/streamkap/refs/heads/main/security/streamkap-domain-security.yml
+  href: https://artifacts.apis.io/streamkap/security/streamkap-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/streamkap-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/streamkap/refs/heads/main/authentication/streamkap-authentication.yml
+  href: https://artifacts.apis.io/streamkap/authentication/streamkap-authentication.yml
   title: ''
   type: Authentication
   url: authentication/streamkap-authentication.yml
@@ -173,17 +181,17 @@ common:
   type: Documentation
   url: https://docs.streamkap.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/streamkap/refs/heads/main/plans/streamkap-plans-pricing.yml
+  href: https://artifacts.apis.io/streamkap/plans/streamkap-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/streamkap-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/streamkap/refs/heads/main/rate-limits/streamkap-rate-limits.yml
+  href: https://artifacts.apis.io/streamkap/rate-limits/streamkap-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/streamkap-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/streamkap/refs/heads/main/finops/streamkap-finops.yml
+  href: https://artifacts.apis.io/streamkap/finops/streamkap-finops.yml
   title: ''
   type: FinOps
   url: finops/streamkap-finops.yml
@@ -210,35 +218,51 @@ network: true
 overview: 'Streamkap publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Connectors API, Destinations API, and 6 more. Tagged areas include Streaming, ETL, Change Data Capture, Kafka, and Flink.
 
 
-  Streamkap''s developer surface includes engineering blog, authentication, documentation, and 10 more developer resources.'
+  The Streamkap catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Streamkap''s developer surface includes engineering blog, authentication, documentation, and 11 more developer resources.'
 plans:
 - name: Streamkap Plans Pricing
   plan_count: 4
   slug: streamkap-plans-pricing
-random_paper: 0
+random_paper: 8
 rate_limits:
 - limit_count: 4
   name: Streamkap Rate Limits
   slug: streamkap-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Streamkap API Rules
+  rule_count: 57
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 2
+    warn: 3
+  slug: streamkap-rules
 score:
   band: emerging
-  composite: 17.8
+  composite: 19.4
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 43.0
+    artifact_dirs: 20
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.8
+  delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 1.9
     developer_ergonomics: 32.1
     discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 25.6
+  previous_composite: 19.4
   provenance:
     agentic_access: derived
     contracts:
@@ -253,13 +277,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/streamkap/refs/heads/main/screenshots/streamkap-2026-09-02T161001.png
+screenshot: https://apis.io/screenshots/streamkap/streamkap-2026-09-02T161001.png
 security:
 - kind: authentication
   name: Streamkap Authentication

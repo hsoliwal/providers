@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: OAuth2-secured wealth-data API covering the Connect flow (connectors, sessions, SCA resolution), Credentials, Entities, Aggregation, and Letters, returning standardized portfolios, investments, accoun
@@ -62,27 +70,27 @@ common:
   type: GettingStarted
   url: https://docs.flanks.io/pages/integration-example/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/authentication/flanks-authentication.yml
+  href: https://artifacts.apis.io/flanks/authentication/flanks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/flanks-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/mcp/flanks-mcp.yml
+  href: https://artifacts.apis.io/flanks/mcp/flanks-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/flanks-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/well-known/flanks-well-known.yml
+  href: https://artifacts.apis.io/flanks/well-known/flanks-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/flanks-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/well-known/flanks-security.txt
+  href: https://artifacts.apis.io/flanks/well-known/flanks-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/flanks-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/security/flanks-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/flanks/security/flanks-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/flanks-vulnerability-disclosure.yml
@@ -99,57 +107,57 @@ common:
   type: Compliance
   url: https://www.flanks.io/security-and-privacy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/conformance/flanks-conformance.yml
+  href: https://artifacts.apis.io/flanks/conformance/flanks-conformance.yml
   title: ''
   type: Conformance
   url: conformance/flanks-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/security/flanks-domain-security.yml
+  href: https://artifacts.apis.io/flanks/security/flanks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flanks-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/conventions/flanks-conventions.yml
+  href: https://artifacts.apis.io/flanks/conventions/flanks-conventions.yml
   title: ''
   type: Conventions
   url: conventions/flanks-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/changelog/flanks-changelog.yml
+  href: https://artifacts.apis.io/flanks/changelog/flanks-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/flanks-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/errors/flanks-problem-types.yml
+  href: https://artifacts.apis.io/flanks/errors/flanks-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/flanks-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/lifecycle/flanks-lifecycle.yml
+  href: https://artifacts.apis.io/flanks/lifecycle/flanks-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/flanks-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/sandbox/flanks-sandbox.yml
+  href: https://artifacts.apis.io/flanks/sandbox/flanks-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/flanks-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/data-model/flanks-data-model.yml
+  href: https://artifacts.apis.io/flanks/data-model/flanks-data-model.yml
   title: ''
   type: DataModel
   url: data-model/flanks-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/packages/flanks-packages.yml
+  href: https://artifacts.apis.io/flanks/packages/flanks-packages.yml
   title: ''
   type: Packages
   url: packages/flanks-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/packages/flanks-packages.yml
+  href: https://artifacts.apis.io/flanks/packages/flanks-packages.yml
   title: ''
   type: SDKs
   url: packages/flanks-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/llms/flanks-llms.txt
+  href: https://artifacts.apis.io/flanks/llms/flanks-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/flanks-llms.txt
@@ -193,12 +201,12 @@ overview: 'Flanks is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Flanks'' developer surface includes documentation, API reference, getting-started guide, authentication, changelog, sandbox, engineering blog, and 23 more developer resources.'
-random_paper: 1
+random_paper: 15
 score:
   band: thin
   composite: 28.6
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -236,14 +244,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 28.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/flanks/refs/heads/main/screenshots/flanks-2026-07-25T214706.png
+screenshot: https://apis.io/screenshots/flanks/flanks-2026-07-25T214706.png
 security:
 - kind: authentication
   name: Flanks Authentication

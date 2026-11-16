@@ -1,16 +1,20 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
   onboarding: self-serve
-  pricing: freemium
+  pricing: unknown
   public: false
   source:
-  - plans
   - authentication
+  - scopes
+  - rate-limits
   - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -27,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -58,11 +65,8 @@ apis:
   description: The Query API from Dimensions — 1 operation(s) for query.
   name: Dimensions Query API
   slug: dimensions-query-api
-artifact_total: 15
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Dimensions Analytics Authentication API
   slug: open-dimensions-authentication-api
@@ -73,6 +77,11 @@ collections:
   name: Dimensions Analytics API
   slug: open-dimensions
 common:
+- group: other
+  href: https://artifacts.apis.io/dimensions/capabilities/dimensions-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/dimensions-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -86,17 +95,17 @@ common:
   type: License
   url: https://github.com/digital-science/dimcli/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/agentic-access/dimensions-agentic-access.yml
+  href: https://artifacts.apis.io/dimensions/agentic-access/dimensions-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dimensions-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/security/dimensions-domain-security.yml
+  href: https://artifacts.apis.io/dimensions/security/dimensions-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dimensions-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/authentication/dimensions-authentication.yml
+  href: https://artifacts.apis.io/dimensions/authentication/dimensions-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dimensions-authentication.yml
@@ -149,108 +158,108 @@ common:
   type: Deprecation
   url: https://docs.dimensions.ai/dsl/releasenotes.html
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/changelog/dimensions-changelog.yml
+  href: https://artifacts.apis.io/dimensions/changelog/dimensions-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/dimensions-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/lifecycle/dimensions-lifecycle.yml
+  href: https://artifacts.apis.io/dimensions/lifecycle/dimensions-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/dimensions-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/packages/dimensions-packages.yml
+  href: https://artifacts.apis.io/dimensions/packages/dimensions-packages.yml
   title: ''
   type: Packages
   url: packages/dimensions-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/packages/dimensions-packages.yml
+  href: https://artifacts.apis.io/dimensions/packages/dimensions-packages.yml
   title: ''
   type: SDKs
   url: packages/dimensions-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/cli/dimensions-cli.yml
+  href: https://artifacts.apis.io/dimensions/cli/dimensions-cli.yml
   title: ''
   type: CLI
   url: cli/dimensions-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/components/dimensions-components.yml
+  href: https://artifacts.apis.io/dimensions/components/dimensions-components.yml
   title: ''
   type: Components
   url: components/dimensions-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/mcp/dimensions-mcp.yml
+  href: https://artifacts.apis.io/dimensions/mcp/dimensions-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/dimensions-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/mcp/dimensions-tool-crosswalk.yml
+  href: https://artifacts.apis.io/dimensions/mcp/dimensions-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/dimensions-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/dimensions/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/llms/dimensions-llms.txt
+  href: https://artifacts.apis.io/dimensions/llms/dimensions-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dimensions-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/well-known/dimensions-well-known.yml
+  href: https://artifacts.apis.io/dimensions/well-known/dimensions-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/dimensions-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/scopes/dimensions-scopes.yml
+  href: https://artifacts.apis.io/dimensions/scopes/dimensions-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/dimensions-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/conventions/dimensions-conventions.yml
+  href: https://artifacts.apis.io/dimensions/conventions/dimensions-conventions.yml
   title: ''
   type: Conventions
   url: conventions/dimensions-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/errors/dimensions-problem-types.yml
+  href: https://artifacts.apis.io/dimensions/errors/dimensions-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/dimensions-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/conformance/dimensions-conformance.yml
+  href: https://artifacts.apis.io/dimensions/conformance/dimensions-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dimensions-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/data-model/dimensions-data-model.yml
+  href: https://artifacts.apis.io/dimensions/data-model/dimensions-data-model.yml
   title: ''
   type: DataModel
   url: data-model/dimensions-data-model.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/plans/dimensions-plans-pricing.yml
+  href: https://artifacts.apis.io/dimensions/plans/dimensions-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dimensions-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/rate-limits/dimensions-rate-limits.yml
+  href: https://artifacts.apis.io/dimensions/rate-limits/dimensions-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dimensions-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/finops/dimensions-finops.yml
+  href: https://artifacts.apis.io/dimensions/finops/dimensions-finops.yml
   title: ''
   type: FinOps
   url: finops/dimensions-finops.yml
 created: '2025-02-06'
 description: Dimensions is a research data platform from Digital Science providing access to publications, grants, patents, clinical trials, datasets, and policy documents. The Dimensions Analytics API offers programmatic access to this research data via the Dimensions Search Language (DSL), enabling citation analysis, researcher discovery, organization benchmarking, and topic identification. The API is subscription-only and is not intended for bulk data extraction or to power dashboards or other derivative products.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Dimensions Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: dimensions-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dimensions.png
@@ -266,16 +275,32 @@ network: true
 overview: 'Dimensions publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Query API, and 1 more. Tagged areas include Analytics, Research, Publications, Grants, and Patents.
 
 
-  Dimensions'' developer surface includes authentication, documentation, support, engineering blog, API reference, getting-started guide, changelog, and 30 more developer resources.'
+  The Dimensions catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Dimensions'' developer surface includes authentication, documentation, support, engineering blog, API reference, getting-started guide, changelog, and 31 more developer resources.'
 plans:
 - name: Dimensions Plans Pricing
   plan_count: 0
   slug: dimensions-plans-pricing
-random_paper: 3
+random_paper: 1
 rate_limits:
 - limit_count: 1
   name: Dimensions Rate Limits
   slug: dimensions-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 80
+  extends:
+  - spectral:oas
+  name: Dimensions API Rules
+  rule_count: 39
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 1
+    warn: 1
+  slug: dimensions-rules
 scopes:
 - name: Dimensions Scopes
   scope_count: 1
@@ -283,18 +308,18 @@ scopes:
   summary_line: 1 scope · authorization_code/refresh_token
 score:
   band: developing
-  composite: 46.5
+  composite: 48.0
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 45.0
+    artifact_dirs: 31
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 27.6
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 42.9
     developer_ergonomics: 63.7
     discoverability: 68.3
@@ -302,7 +327,7 @@ score:
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 47.9
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -319,13 +344,13 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/dimensions/refs/heads/main/screenshots/dimensions-2026-06-20T180036.png
+screenshot: https://apis.io/screenshots/dimensions/dimensions-2026-06-20T180036.png
 security:
 - kind: authentication
   name: Dimensions Authentication
@@ -335,6 +360,14 @@ security:
   name: Dimensions Domain Security
   slug: dimensions-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: dimensions-authenticate-and-query
+  slug: dimensions-authenticate-and-query
+- name: dimensions-funding-and-impact-analytics
+  slug: dimensions-funding-and-impact-analytics
+- name: dimensions-literature-search
+  slug: dimensions-literature-search
 slug: dimensions
 tags:
 - Analytics

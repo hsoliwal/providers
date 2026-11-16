@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 15.1
+  scored_at: '2026-11-06'
 api_count: 21
 apis:
 - description: Workspace API provides programmatic access to Curiosity's enterprise knowledge graph, enabling data ingestion, search, embeddings, and AI agent operations.
@@ -129,35 +144,35 @@ apis:
   description: The Chat Completions API from Curiosity — 1 operation(s) for chat completions.
   name: Curiosity Chat Completions API
   slug: curiosity-chat-completions-api
-artifact_total: 33
+artifact_total: 34
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/plans/curiosity-plans-pricing.yml
+  href: https://artifacts.apis.io/curiosity/plans/curiosity-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/curiosity-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/rules/curiosity-rules.yml
+  href: https://artifacts.apis.io/curiosity/rules/curiosity-rules.yml
   title: ''
   type: Spectral
   url: rules/curiosity-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/json-ld/curiosity-context.jsonld
+  href: https://artifacts.apis.io/curiosity/json-ld/curiosity-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/curiosity-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/vocabulary/curiosity-vocabulary.yml
+  href: https://artifacts.apis.io/curiosity/vocabulary/curiosity-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/curiosity-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/data-model/curiosity-data-model.yml
+  href: https://artifacts.apis.io/curiosity/data-model/curiosity-data-model.yml
   title: ''
   type: DataModel
   url: data-model/curiosity-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/cli/curiosity-cli.yml
+  href: https://artifacts.apis.io/curiosity/cli/curiosity-cli.yml
   title: ''
   type: CLI
   url: cli/curiosity-cli.yml
@@ -166,47 +181,47 @@ common:
   type: Compliance
   url: https://security.curiosity.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/authentication/curiosity-authentication.yml
+  href: https://artifacts.apis.io/curiosity/authentication/curiosity-authentication.yml
   title: ''
   type: Authentication
   url: authentication/curiosity-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/lifecycle/curiosity-lifecycle.yml
+  href: https://artifacts.apis.io/curiosity/lifecycle/curiosity-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/curiosity-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/lifecycle/curiosity-lifecycle.yml
+  href: https://artifacts.apis.io/curiosity/lifecycle/curiosity-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/curiosity-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/conformance/curiosity-conformance.yml
+  href: https://artifacts.apis.io/curiosity/conformance/curiosity-conformance.yml
   title: ''
   type: Conformance
   url: conformance/curiosity-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/llms/curiosity-llms.txt
+  href: https://artifacts.apis.io/curiosity/llms/curiosity-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/curiosity-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/hosts/curiosity-hosts.yml
+  href: https://artifacts.apis.io/curiosity/hosts/curiosity-hosts.yml
   title: ''
   type: Hosts
   url: hosts/curiosity-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/vendors/curiosity-vendors.yml
+  href: https://artifacts.apis.io/curiosity/vendors/curiosity-vendors.yml
   title: ''
   type: Vendors
   url: vendors/curiosity-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/packages/curiosity-packages.yml
+  href: https://artifacts.apis.io/curiosity/packages/curiosity-packages.yml
   title: ''
   type: SDKs
   url: packages/curiosity-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/packages/curiosity-packages.yml
+  href: https://artifacts.apis.io/curiosity/packages/curiosity-packages.yml
   title: ''
   type: Packages
   url: packages/curiosity-packages.yml
@@ -219,12 +234,12 @@ common:
   type: GettingStarted
   url: https://docs.curiosity.ai/workspace/getting-started/build-your-first-enterprise-ai-app
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/security/curiosity-trust-center.yml
+  href: https://artifacts.apis.io/curiosity/security/curiosity-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/curiosity-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/security/curiosity-domain-security.yml
+  href: https://artifacts.apis.io/curiosity/security/curiosity-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/curiosity-domain-security.yml
@@ -262,6 +277,14 @@ coverage:
   state: unreadable
 created: '2026-10-12'
 description: Curiosity provides an AI‑powered enterprise knowledge graph platform that lets organizations connect, enrich, and query their data across systems. Built for on‑premises or private‑cloud deployment, Curiosity Studio enables users to build custom AI‑driven tools, search, embeddings, and agents while keeping data within their own infrastructure. The platform supports a REST API, SDKs for C# and Python, and extensive developer documentation covering data ingestion, security, and extensibility.
+finops:
+- has_sources: true
+  method: derived
+  name: Curiosity Finops
+  primary_unit: ''
+  service_category: ''
+  slug: curiosity-finops
+  template: true
 image: https://curiosity.ai/assets/social/home.png
 json_schemas:
 - name: PostApiEmbeddingsEmbeddingidRequest
@@ -292,7 +315,7 @@ modified: '2026-10-12'
 name: Curiosity
 nav: Providers
 network: true
-overview: 'Curiosity is listed with 21 APIs on the [APIs.io](https://apis.io/) network, including Admin Agent API, Build API, Cce API, and 18 more. Tagged areas include Artificial Intelligence, Knowledge-Graph, Enterprise, Data-Integration, and On-Premises.
+overview: 'Curiosity is listed with 21 APIs on the [APIs.io](https://apis.io/) network, including Admin Agent API, Build API, Cce API, and 18 more. Tagged areas include Artificial Intelligence, Knowledge Graph, Enterprise, Data Integration, and On-Premises.
 
 
   The Curiosity catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -303,7 +326,7 @@ plans:
 - name: Curiosity Plans Pricing
   plan_count: 2
   slug: curiosity-plans-pricing
-random_paper: 13
+random_paper: 19
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -318,22 +341,24 @@ rules:
     warn: 0
   slug: curiosity-rules
 score:
-  band: developing
-  composite: 43.2
+  band: thin
+  composite: 36.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 24
     catalog_earned: 68.0
     catalog_earned_first_party: 8.0
     catalog_gap: 47.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.0
   facets:
-    access_clarity: 47.4
+    access_clarity: 38.2
     contract_governance: 19.7
     contract_quality: 24.8
-    developer_ergonomics: 64.3
+    developer_ergonomics: 45.2
     discoverability: 69.6
-    operational_transparency: 23.7
+    operational_transparency: 15.8
+  previous_composite: 43.2
   provenance:
     conformance: derived
     contracts:
@@ -347,12 +372,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 17.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
+screenshot: https://apis.io/screenshots/curiosity/curiosity-2026-11-03T125858.png
 security:
 - kind: authentication
   name: Curiosity Authentication
@@ -369,9 +396,9 @@ security:
 slug: curiosity
 tags:
 - Artificial Intelligence
-- Knowledge-Graph
+- Knowledge Graph
 - Enterprise
-- Data-Integration
+- Data Integration
 - On-Premises
 - Company
 website: https://curiosity.ai

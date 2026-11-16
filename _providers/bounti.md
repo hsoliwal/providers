@@ -1,11 +1,15 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Freemium
   onboarding: unknown
-  pricing: unknown
+  pricing: freemium
   public: false
-  source: []
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
@@ -32,8 +39,8 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.8
-  scored_at: '2026-10-17'
-api_count: 4
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://bounti.ai
   baseurl_source: spec
@@ -45,11 +52,8 @@ apis:
   description: The Llms.txt API from Bounti — 1 operation(s) for llms.txt.
   name: Bounti Llms.txt API
   slug: bounti-llms-txt-api
-artifact_total: 10
+artifact_total: 15
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Bounti.ai Content Llms Full.txt API
   slug: open-bounti-llms-full-txt-api
@@ -62,7 +66,7 @@ common:
   type: BlogRSS
   url: https://bounti.ai/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/overlays/bounti-content-api-overlay.yaml
+  href: https://artifacts.apis.io/bounti/overlays/bounti-content-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bounti-content-api-overlay.yaml
@@ -107,93 +111,101 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/bounti-ai
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/well-known/bounti-well-known.yml
+  href: https://artifacts.apis.io/bounti/well-known/bounti-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bounti-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/llms/bounti-llms.txt
+  href: https://artifacts.apis.io/bounti/llms/bounti-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bounti-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/mcp/bounti-mcp.yml
+  href: https://artifacts.apis.io/bounti/mcp/bounti-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/bounti-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bounti/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/security/bounti-domain-security.yml
+  href: https://artifacts.apis.io/bounti/security/bounti-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bounti-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/well-known/bounti-security.txt
+  href: https://artifacts.apis.io/bounti/well-known/bounti-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bounti-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/security/bounti-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bounti/security/bounti-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/bounti-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/security/bounti-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bounti/security/bounti-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/bounti-vulnerability-disclosure.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/packages/bounti-packages.yml
+  href: https://artifacts.apis.io/bounti/packages/bounti-packages.yml
   title: ''
   type: Packages
   url: packages/bounti-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/mcp/bounti-tool-crosswalk.yml
+  href: https://artifacts.apis.io/bounti/mcp/bounti-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/bounti-tool-crosswalk.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/authentication/bounti-authentication.yml
+  href: https://artifacts.apis.io/bounti/authentication/bounti-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bounti-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/conventions/bounti-conventions.yml
+  href: https://artifacts.apis.io/bounti/conventions/bounti-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bounti-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/errors/bounti-problem-types.yml
+  href: https://artifacts.apis.io/bounti/errors/bounti-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bounti-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/lifecycle/bounti-lifecycle.yml
+  href: https://artifacts.apis.io/bounti/lifecycle/bounti-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bounti-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/conformance/bounti-conformance.yml
+  href: https://artifacts.apis.io/bounti/conformance/bounti-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bounti-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/plans/bounti-plans-pricing.yml
+  href: https://artifacts.apis.io/bounti/plans/bounti-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bounti-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/rate-limits/bounti-rate-limits.yml
+  href: https://artifacts.apis.io/bounti/rate-limits/bounti-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bounti-rate-limits.yml
 created: '2026-07-17'
 description: Bounti (Bounti Labs, bounti.ai) is an AI-powered real estate visualization and automation platform founded in 2023 by Ashar Rizqi and Matt Cooley and backed by GV (Google Ventures), Bloomberg Beta, Floodgate, Haystack, Octave Ventures and MS&AD. Its products include AI virtual staging and photo enhancement, cinematic listing-photo animation, automated marketing-video creation, before/after reveal videos, collaborative client studios, and B.Claw — an AI operating system that consolidates 13+ real estate tools (Gmail, calendar, CRM, WhatsApp, website builder) into one conversational interface. Bounti does not publish a general integration API, but it does expose an agent-facing, unauthenticated Content API (advertised via an AI-plugin manifest at /.well-known/ai-plugin.json, alongside an MCP discovery manifest at /.well-known/mcp.json) plus /llms.txt and /llms-full.txt so AI assistants can accurately answer questions about its products, pricing, and content. Bounti also publishes
   a catalog of 303 named B.Claw skills as machine-readable schema.org SoftwareApplication definitions at bounti.ai/skills, and 34 connector listings at bounti.ai/integrations — but those skills execute only inside the authenticated B.Claw product, whose API at claw.bounti.ai/api has no published contract.
+finops:
+- has_sources: true
+  method: derived
+  name: Bounti Finops
+  primary_unit: actions
+  service_category: ''
+  slug: bounti-finops
+  template: false
 image: https://bounti.ai/favicon.png
 layout: provider
 modified: '2026-10-06'
@@ -203,41 +215,60 @@ network: true
 overview: 'Bounti publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Llms Full.txt API and Llms.txt API. Tagged areas include Company, Real Estate, Artificial Intelligence, Marketing, and Sales Enablement.
 
 
+  The Bounti catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Bounti''s developer surface includes engineering blog, pricing, signup flow, support, authentication, and 24 more developer resources.'
 plans:
 - name: Bounti Plans Pricing
   plan_count: 5
   slug: bounti-plans-pricing
-random_paper: 19
+- name: Bounti Price Estimates
+  plan_count: 0
+  slug: bounti-price-estimates
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Bounti Rate Limits
   slug: bounti-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 68
+  extends:
+  - spectral:oas
+  name: Bounti API Rules
+  rule_count: 27
+  severity_counts:
+    error: 25
+    hint: 0
+    info: 1
+    warn: 1
+  slug: bounti-rules
 score:
   band: developing
-  composite: 42.0
+  composite: 45.8
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 47.0
+    artifact_dirs: 24
+    catalog_earned: 51.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 68.0
+    catalog_gap: 63.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 1.1
   facets:
-    access_clarity: 69.7
-    contract_governance: 4.5
-    contract_quality: 42.2
+    access_clarity: 77.6
+    contract_governance: 18.2
+    contract_quality: 46.9
     developer_ergonomics: 33.3
-    discoverability: 69.6
+    discoverability: 64.3
     operational_transparency: 10.5
-  previous_composite: 41.4
+  previous_composite: 44.7
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
     mcp: derived
     skills: first-party
@@ -247,14 +278,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 28.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/bounti/refs/heads/main/screenshots/bounti-2026-07-25T203646.png
+screenshot: https://apis.io/screenshots/bounti/bounti-2026-07-25T203646.png
 security:
 - kind: authentication
   name: Bounti Authentication
@@ -268,6 +299,14 @@ security:
   name: Bounti Vulnerability Disclosure
   slug: bounti-vulnerability-disclosure
   summary_line: Hackerone · security.txt · contact published
+skill_count: 3
+skills:
+- name: B.Claw — Comparative Market Analysis Runner skill
+  slug: bounti-bclaw-cma-runner
+- name: B.Claw — Daily Morning Briefing skill
+  slug: bounti-bclaw-daily-morning-briefing
+- name: Access Bounti.ai product content for agents
+  slug: bounti-content-access
 slug: bounti
 tags:
 - Company

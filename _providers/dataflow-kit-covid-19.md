@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: COVID-19 live statistics into sites per hour
@@ -41,7 +45,7 @@ apis:
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dataflow-kit-covid-19/refs/heads/main/security/dataflow-kit-covid-19-domain-security.yml
+  href: https://artifacts.apis.io/dataflow-kit-covid-19/security/dataflow-kit-covid-19-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dataflow-kit-covid-19-domain-security.yml
@@ -62,12 +66,12 @@ name: Dataflow Kit COVID-19
 nav: Providers
 network: true
 overview: Dataflow Kit COVID-19 is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Health and Public APIs.
-random_paper: 16
+random_paper: 8
 score:
   band: minimal
   composite: 5.4
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
@@ -88,14 +92,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/dataflow-kit-covid-19/refs/heads/main/screenshots/dataflow-kit-covid-19-2026-06-20T175644.png
+screenshot: https://apis.io/screenshots/dataflow-kit-covid-19/dataflow-kit-covid-19-2026-06-20T175644.png
 security:
 - kind: domain-security
   name: Dataflow Kit Covid 19 Domain Security

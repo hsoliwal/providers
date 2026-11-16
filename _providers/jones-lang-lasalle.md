@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -68,9 +71,6 @@ apis:
 artifact_total: 16
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: JLL Corrigo Enterprise REST Assets API
   slug: open-jones-lang-lasalle-assets-api
 - collection_type: open
@@ -87,17 +87,17 @@ collections:
   slug: open-jones-lang-lasalle-work-orders-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/plans/jones-lang-lasalle-plans-pricing.yml
+  href: https://artifacts.apis.io/jones-lang-lasalle/plans/jones-lang-lasalle-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/jones-lang-lasalle-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/rate-limits/jones-lang-lasalle-rate-limits.yml
+  href: https://artifacts.apis.io/jones-lang-lasalle/rate-limits/jones-lang-lasalle-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/jones-lang-lasalle-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/finops/jones-lang-lasalle-finops.yml
+  href: https://artifacts.apis.io/jones-lang-lasalle/finops/jones-lang-lasalle-finops.yml
   title: ''
   type: FinOps
   url: finops/jones-lang-lasalle-finops.yml
@@ -106,22 +106,22 @@ common:
   type: Blog
   url: https://www.jll.com/en-us/newsroom
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/capabilities/jones-lang-lasalle-capability-edges.yml
+  href: https://artifacts.apis.io/jones-lang-lasalle/capabilities/jones-lang-lasalle-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/jones-lang-lasalle-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/agentic-access/jones-lang-lasalle-agentic-access.yml
+  href: https://artifacts.apis.io/jones-lang-lasalle/agentic-access/jones-lang-lasalle-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/jones-lang-lasalle-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/security/jones-lang-lasalle-domain-security.yml
+  href: https://artifacts.apis.io/jones-lang-lasalle/security/jones-lang-lasalle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jones-lang-lasalle-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/authentication/jones-lang-lasalle-authentication.yml
+  href: https://artifacts.apis.io/jones-lang-lasalle/authentication/jones-lang-lasalle-authentication.yml
   title: ''
   type: Authentication
   url: authentication/jones-lang-lasalle-authentication.yml
@@ -160,6 +160,9 @@ network: true
 overview: 'Jones Lang LaSalle publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Contacts API, Locations API, and 1 more. Tagged areas include Commercial Real Estate, Facility Management, Asset Management, Work Orders, and Fortune 500.
 
 
+  The Jones Lang LaSalle catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Jones Lang LaSalle''s developer surface includes engineering blog, authentication, and 10 more developer resources.'
 plans:
 - name: Jones Lang Lasalle Plans Pricing
@@ -181,34 +184,47 @@ press:
 - date: ''
   title: JLL News and Press Releases
   url: https://www.prnewswire.com/news/jll/
-random_paper: 3
+random_paper: 9
 rate_limits:
 - limit_count: 1
   name: Jones Lang Lasalle Rate Limits
   slug: jones-lang-lasalle-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 77
+  extends:
+  - spectral:oas
+  name: Jones Lang LaSalle API Rules
+  rule_count: 36
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 1
+    warn: 1
+  slug: jones-lang-lasalle-rules
 score:
   band: emerging
-  composite: 22.5
+  composite: 23.3
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 41.0
+    artifact_dirs: 18
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 44.7
+    contract_governance: 13.6
+    contract_quality: 41.6
     developer_ergonomics: 19.0
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 23.5
+  previous_composite: 23.3
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 4
@@ -218,13 +234,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/screenshots/jones-lang-lasalle-2026-10-11T191024.png
+screenshot: https://apis.io/screenshots/jones-lang-lasalle/jones-lang-lasalle-2026-10-11T191024.png
 security:
 - kind: authentication
   name: Jones Lang Lasalle Authentication

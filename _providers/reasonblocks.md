@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 24.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 47
   slug: reasonblocks-agentic-access
   summary_line: 47 operations · 22 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://rb-api.reasonblocks.com
   baseurl_source: declared
@@ -90,11 +93,8 @@ apis:
   description: The Scoring API from ReasonBlocks — 1 operation(s) for scoring.
   name: ReasonBlocks Scoring API
   slug: reasonblocks-scoring-api
-artifact_total: 22
+artifact_total: 25
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ReasonBlocks Billing API
   slug: open-reasonblocks-billing-api
@@ -148,47 +148,47 @@ common:
   type: Website
   url: https://reasonblocks.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/authentication/reasonblocks-authentication.yml
+  href: https://artifacts.apis.io/reasonblocks/authentication/reasonblocks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/reasonblocks-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/packages/reasonblocks-packages.yml
+  href: https://artifacts.apis.io/reasonblocks/packages/reasonblocks-packages.yml
   title: ''
   type: Packages
   url: packages/reasonblocks-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/packages/reasonblocks-packages.yml
+  href: https://artifacts.apis.io/reasonblocks/packages/reasonblocks-packages.yml
   title: ''
   type: SDKs
   url: packages/reasonblocks-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/llms/reasonblocks-llms.txt
+  href: https://artifacts.apis.io/reasonblocks/llms/reasonblocks-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/reasonblocks-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/mcp/reasonblocks-mcp.yml
+  href: https://artifacts.apis.io/reasonblocks/mcp/reasonblocks-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/reasonblocks-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/overlays/reasonblocks-openapi-overlay.yaml
+  href: https://artifacts.apis.io/reasonblocks/overlays/reasonblocks-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/reasonblocks-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/conformance/reasonblocks-conformance.yml
+  href: https://artifacts.apis.io/reasonblocks/conformance/reasonblocks-conformance.yml
   title: ''
   type: Conformance
   url: conformance/reasonblocks-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/errors/reasonblocks-problem-types.yml
+  href: https://artifacts.apis.io/reasonblocks/errors/reasonblocks-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/reasonblocks-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/lifecycle/reasonblocks-lifecycle.yml
+  href: https://artifacts.apis.io/reasonblocks/lifecycle/reasonblocks-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/reasonblocks-lifecycle.yml
@@ -197,32 +197,32 @@ common:
   type: Deprecation
   url: https://docs.reasonblocks.com/api-reference/rest-api/versioning
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/conventions/reasonblocks-conventions.yml
+  href: https://artifacts.apis.io/reasonblocks/conventions/reasonblocks-conventions.yml
   title: ''
   type: Conventions
   url: conventions/reasonblocks-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/data-model/reasonblocks-data-model.yml
+  href: https://artifacts.apis.io/reasonblocks/data-model/reasonblocks-data-model.yml
   title: ''
   type: DataModel
   url: data-model/reasonblocks-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/sandbox/reasonblocks-sandbox.yml
+  href: https://artifacts.apis.io/reasonblocks/sandbox/reasonblocks-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/reasonblocks-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/security/reasonblocks-domain-security.yml
+  href: https://artifacts.apis.io/reasonblocks/security/reasonblocks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/reasonblocks-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/agentic-access/reasonblocks-agentic-access.yml
+  href: https://artifacts.apis.io/reasonblocks/agentic-access/reasonblocks-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/reasonblocks-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/reasonblocks/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -237,34 +237,50 @@ network: true
 overview: 'ReasonBlocks publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing API, Codebase Findings API, Health API, and 6 more. Tagged areas include Company, AI Agents, Agent Observability, LLM, and Developer Tools.
 
 
+  The ReasonBlocks catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   ReasonBlocks'' developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, and 17 more developer resources.'
-random_paper: 10
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: ReasonBlocks API Rules
+  rule_count: 51
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 1
+    warn: 5
+  slug: reasonblocks-rules
 score:
   band: thin
-  composite: 32.8
+  composite: 35.6
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.2
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 43.9
+    contract_governance: 18.2
+    contract_quality: 48.6
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 32.7
+  previous_composite: 34.4
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 9
     mcp: derived
     skills: derived
@@ -274,13 +290,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/reasonblocks/refs/heads/main/screenshots/reasonblocks-2026-09-02T153021.png
+screenshot: https://apis.io/screenshots/reasonblocks/reasonblocks-2026-09-02T153021.png
 security:
 - kind: authentication
   name: Reasonblocks Authentication
@@ -290,6 +306,14 @@ security:
   name: Reasonblocks Domain Security
   slug: reasonblocks-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Persist and recall codebase findings
+  slug: reasonblocks-codebase-memory
+- name: Track a monitored agent run with telemetry
+  slug: reasonblocks-monitor-run-telemetry
+- name: Retrieve steering patterns and submit a trace
+  slug: reasonblocks-retrieve-and-steer
 slug: reasonblocks
 tags:
 - Company

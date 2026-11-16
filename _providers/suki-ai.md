@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.1
-  scored_at: '2026-10-17'
+  score: 22.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -113,15 +119,12 @@ apis:
   description: Suki Hosted Form Templates
   name: Suki AI Templates API
   slug: suki-ai-templates-api
-artifact_total: 66
+artifact_total: 65
 asyncapis:
 - description: AsyncAPI description for the three WebSocket audio-streaming channels exposed by the Suki Speech Service (Suki for Partners). Each REST session-create call (Ambient, Dictation, Form Filling) returns a
   name: Suki Speech Service Streaming API
   slug: suki-ai-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Suki Ambient API
   slug: open-suki-ai-ambient-api
@@ -181,22 +184,22 @@ collections:
   slug: open-suki-ai
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/suki-ai/refs/heads/main/capabilities/suki-ai-capability-edges.yml
+  href: https://artifacts.apis.io/suki-ai/capabilities/suki-ai-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/suki-ai-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/suki-ai/refs/heads/main/agentic-access/suki-ai-agentic-access.yml
+  href: https://artifacts.apis.io/suki-ai/agentic-access/suki-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/suki-ai-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/suki-ai/refs/heads/main/security/suki-ai-domain-security.yml
+  href: https://artifacts.apis.io/suki-ai/security/suki-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/suki-ai-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/suki-ai/refs/heads/main/authentication/suki-ai-authentication.yml
+  href: https://artifacts.apis.io/suki-ai/authentication/suki-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/suki-ai-authentication.yml
@@ -333,27 +336,27 @@ common:
   type: AppStore
   url: https://apps.apple.com/us/app/suki/id1425102117
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/suki-ai/refs/heads/main/plans/suki-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/suki-ai/plans/suki-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/suki-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/suki-ai/refs/heads/main/rate-limits/suki-ai-rate-limits.yml
+  href: https://artifacts.apis.io/suki-ai/rate-limits/suki-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/suki-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/suki-ai/refs/heads/main/finops/suki-ai-finops.yml
+  href: https://artifacts.apis.io/suki-ai/finops/suki-ai-finops.yml
   title: ''
   type: FinOps
   url: finops/suki-ai-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/suki-ai/refs/heads/main/json-ld/suki-ai-context.jsonld
+  href: https://artifacts.apis.io/suki-ai/json-ld/suki-ai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/suki-ai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/suki-ai/refs/heads/main/vocabulary/suki-ai-vocabulary.yml
+  href: https://artifacts.apis.io/suki-ai/vocabulary/suki-ai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/suki-ai-vocabulary.yml
@@ -435,7 +438,7 @@ plans:
 - name: Suki Ai Plans Pricing
   plan_count: 1
   slug: suki-ai-plans-pricing
-random_paper: 9
+random_paper: 19
 rate_limits:
 - limit_count: 2
   name: Suki Ai Rate Limits
@@ -468,13 +471,13 @@ score:
   band: developing
   composite: 48.3
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 61.0
     catalog_earned_first_party: 0.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 27.3
@@ -482,7 +485,7 @@ score:
     developer_ergonomics: 57.1
     discoverability: 80.8
     operational_transparency: 21.1
-  previous_composite: 54.4
+  previous_composite: 48.3
   provenance:
     agentic_access: derived
     contracts:
@@ -497,13 +500,13 @@ score:
     regime: Health
     regime_id: health
     score: 23.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/suki-ai/refs/heads/main/screenshots/suki-ai-2026-06-20T194641.png
+screenshot: https://apis.io/screenshots/suki-ai/suki-ai-2026-06-20T194641.png
 security:
 - kind: authentication
   name: Suki Ai Authentication

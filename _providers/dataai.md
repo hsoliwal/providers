@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dataai/refs/heads/main/security/dataai-domain-security.yml
+  href: https://artifacts.apis.io/dataai/security/dataai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dataai-domain-security.yml
@@ -45,6 +49,10 @@ common:
   title: ''
   type: Website
   url: https://www.data.ai
+- group: company
+  title: ''
+  type: Website
+  url: https://www.data.ai/account/login/
 created: '2026-07-17'
 description: Data.ai (founded as App Annie in 2010, rebranded to data.ai in 2022) was a mobile app market-data and analytics provider, offering estimates of app downloads, revenue, usage, and competitive market intelligence across the iOS App Store and Google Play for publishers, brands, and investors. The company historically exposed a market-data API (api.data.ai) for programmatic access to app performance and store intelligence. Data.ai was acquired by Sensor Tower in 2024 and now operates as a Sensor Tower company; its standalone site is a gated login and the former public API host serves a default page, so its independent API surface has been consolidated into Sensor Tower and effectively retired. Surfaced in the API Evangelist network as an ivp portfolio company.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dataai.png
@@ -54,7 +62,7 @@ name: Data.ai
 nav: Providers
 network: true
 overview: Data.ai is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Mobile, App Store, and Market Data.
-random_paper: 18
+random_paper: 12
 score:
   band: minimal
   composite: 2.6
@@ -65,7 +73,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -73,15 +81,15 @@ score:
     developer_ergonomics: 0.0
     discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 2.5
+  previous_composite: 2.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 5.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
@@ -101,5 +109,7 @@ tags:
 - Market Data
 - Business Intelligence
 - App Analytics
+- Market Intelligence
+- Data
 website: https://www.data.ai
 ---

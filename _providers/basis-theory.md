@@ -1,15 +1,16 @@
 ---
 access_model:
-  confidence: high
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -22,19 +23,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 0
@@ -44,11 +48,6 @@ agentic_access:
   summary_line: 49 operations · 30 acting
 api_count: 1
 apis:
-- baseURL: https://api.basistheory.com
-  baseurl_source: declared
-  description: Create and authenticate 3D Secure sessions.
-  name: Basis Theory 3D Secure API
-  slug: basis-theory-3d-secure-api
 - baseURL: https://api.basistheory.com
   baseurl_source: declared
   description: Manage API credentials, permissions, and access rules.
@@ -61,11 +60,6 @@ apis:
   slug: basis-theory-logs-api
 - baseURL: https://api.basistheory.com
   baseurl_source: declared
-  description: Manage pre-configured proxies and invoke the detokenizing Proxy.
-  name: Basis Theory Proxy API
-  slug: basis-theory-proxy-api
-- baseURL: https://api.basistheory.com
-  baseurl_source: declared
   description: Manage and invoke serverless Reactor functions.
   name: Basis Theory Reactors API
   slug: basis-theory-reactors-api
@@ -76,29 +70,101 @@ apis:
   slug: basis-theory-tenants-api
 - baseURL: https://api.basistheory.com
   baseurl_source: declared
-  description: Short-lived intents that capture data before conversion to a token.
-  name: Basis Theory Token Intents API
-  slug: basis-theory-token-intents-api
-- baseURL: https://api.basistheory.com
-  baseurl_source: declared
-  description: Batch tokenization and detokenization.
-  name: Basis Theory Tokenize / Detokenize API
-  slug: basis-theory-tokenize-detokenize-api
-- baseURL: https://api.basistheory.com
-  baseurl_source: declared
   description: Create, retrieve, search, update, and delete tokens.
   name: Basis Theory Tokens API
   slug: basis-theory-tokens-api
 - baseURL: https://api.basistheory.com
   baseurl_source: declared
-  description: Register webhook URLs and subscribe to event types.
-  name: Basis Theory Webhooks API
-  slug: basis-theory-webhooks-api
-artifact_total: 29
+  description: The ApplicationKeys API from Basis Theory — 2 operation(s) for applicationkeys.
+  name: Basis Theory Application Keys API
+  slug: basis-theory-applicationkeys-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The ApplicationTemplates API from Basis Theory — 2 operation(s) for applicationtemplates.
+  name: Basis Theory Application Templates API
+  slug: basis-theory-applicationtemplates-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The Detokenize API from Basis Theory — 1 operation(s) for detokenize.
+  name: Basis Theory Detokenize API
+  slug: basis-theory-detokenize-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The Documents API from Basis Theory — 3 operation(s) for documents.
+  name: Basis Theory Documents API
+  slug: basis-theory-documents-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The Enrichments API from Basis Theory — 2 operation(s) for enrichments.
+  name: Basis Theory Enrichments API
+  slug: basis-theory-enrichments-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The FunctionSource API from Basis Theory — 1 operation(s) for functionsource.
+  name: Basis Theory Function Source API
+  slug: basis-theory-functionsource-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The GooglePay API from Basis Theory — 6 operation(s) for googlepay.
+  name: Basis Theory Google Pay API
+  slug: basis-theory-googlepay-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The Keys API from Basis Theory — 2 operation(s) for keys.
+  name: Basis Theory Keys API
+  slug: basis-theory-keys-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The NetworkTokens API from Basis Theory — 6 operation(s) for networktokens.
+  name: Basis Theory Network Tokens API
+  slug: basis-theory-networktokens-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The Permissions API from Basis Theory — 1 operation(s) for permissions.
+  name: Basis Theory Permissions API
+  slug: basis-theory-permissions-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The Proxies API from Basis Theory — 3 operation(s) for proxies.
+  name: Basis Theory Proxies API
+  slug: basis-theory-proxies-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The ReactorFormulas API from Basis Theory — 2 operation(s) for reactorformulas.
+  name: Basis Theory Reactor Formulas API
+  slug: basis-theory-reactorformulas-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The Roles API from Basis Theory — 1 operation(s) for roles.
+  name: Basis Theory Roles API
+  slug: basis-theory-roles-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The Sessions API from Basis Theory — 2 operation(s) for sessions.
+  name: Basis Theory Sessions API
+  slug: basis-theory-sessions-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The ThreeDS API from Basis Theory — 4 operation(s) for threeds.
+  name: Basis Theory Three DS API
+  slug: basis-theory-threeds-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The TokenIntents API from Basis Theory — 2 operation(s) for tokenintents.
+  name: Basis Theory Token Intents API
+  slug: basis-theory-tokenintents-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The Tokenize API from Basis Theory — 1 operation(s) for tokenize.
+  name: Basis Theory Tokenize API
+  slug: basis-theory-tokenize-api
+- baseURL: https://api.basistheory.com
+  baseurl_source: declared
+  description: The Apple Pay API from Basis Theory — 10 operation(s) for apple pay.
+  name: Basis Theory Apple Pay API
+  slug: basis-theory-apple-pay-api
+artifact_total: 43
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Basis Theory 3D Secure API
   slug: open-basis-theory-3d-secure-api
@@ -133,6 +199,11 @@ collections:
   name: Basis Theory API
   slug: open-basis-theory
 common:
+- group: other
+  href: https://artifacts.apis.io/basis-theory/capabilities/basis-theory-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/basis-theory-capability-edges.yml
 - group: auth
   title: ''
   type: Security
@@ -162,22 +233,22 @@ common:
   type: Signup
   url: https://portal.basistheory.com/register
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/basis-theory/refs/heads/main/agentic-access/basis-theory-agentic-access.yml
+  href: https://artifacts.apis.io/basis-theory/agentic-access/basis-theory-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/basis-theory-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/basis-theory/refs/heads/main/security/basis-theory-trust-center.yml
+  href: https://artifacts.apis.io/basis-theory/security/basis-theory-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/basis-theory-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/basis-theory/refs/heads/main/security/basis-theory-domain-security.yml
+  href: https://artifacts.apis.io/basis-theory/security/basis-theory-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/basis-theory-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/basis-theory/refs/heads/main/authentication/basis-theory-authentication.yml
+  href: https://artifacts.apis.io/basis-theory/authentication/basis-theory-authentication.yml
   title: ''
   type: Authentication
   url: authentication/basis-theory-authentication.yml
@@ -198,17 +269,17 @@ common:
   type: Documentation
   url: https://developers.basistheory.com/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/basis-theory/refs/heads/main/plans/basis-theory-plans-pricing.yml
+  href: https://artifacts.apis.io/basis-theory/plans/basis-theory-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/basis-theory-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/basis-theory/refs/heads/main/rate-limits/basis-theory-rate-limits.yml
+  href: https://artifacts.apis.io/basis-theory/rate-limits/basis-theory-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/basis-theory-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/basis-theory/refs/heads/main/finops/basis-theory-finops.yml
+  href: https://artifacts.apis.io/basis-theory/finops/basis-theory-finops.yml
   title: ''
   type: FinOps
   url: finops/basis-theory-finops.yml
@@ -220,10 +291,10 @@ created: '2026-06-20'
 description: Basis Theory is a PCI Level 1 compliant tokenization and data vault platform. Its API-first product lets developers tokenize, store, and use sensitive data - cardholder data, PII, PHI, and bank account numbers - without that data ever touching their own systems, using tokens, a detokenizing Proxy, serverless Reactors, and 3D Secure authentication.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Basis Theory Finops
-  primary_unit: ''
-  service_category: Security and Compliance
+  primary_unit: tokens
+  service_category: ''
   slug: basis-theory-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/basis-theory.png
@@ -232,58 +303,77 @@ modified: '2026-06-20'
 name: Basis Theory
 nav: Providers
 network: true
-overview: 'Basis Theory publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including 3D Secure API, Applications API, Logs API, and 7 more. Tagged areas include Tokenization, Data Vault, PCI Compliance, Payments, and Security.
+overview: 'Basis Theory publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applications API, Logs API, Reactors API, and 20 more. Tagged areas include Tokenization, Data Vault, PCI Compliance, Payments, and Security.
 
 
-  Basis Theory''s developer surface includes pricing, signup flow, authentication, documentation, engineering blog, and 14 more developer resources.'
+  The Basis Theory catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Basis Theory''s developer surface includes pricing, signup flow, authentication, documentation, engineering blog, and 15 more developer resources.'
 plans:
 - name: Basis Theory Plans Pricing
-  plan_count: 4
+  plan_count: 2
   slug: basis-theory-plans-pricing
-random_paper: 10
+- name: Basis Theory Price Estimates
+  plan_count: 0
+  slug: basis-theory-price-estimates
+random_paper: 18
 rate_limits:
 - limit_count: 4
   name: Basis Theory Rate Limits
   slug: basis-theory-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Basis Theory API Rules
+  rule_count: 53
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 10
+  slug: basis-theory-rules
 score:
   band: developing
-  composite: 43.6
+  composite: 49.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    artifact_dirs: 18
+    catalog_earned: 55.5
+    catalog_earned_first_party: 8.0
+    catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.9
   facets:
-    access_clarity: 60.5
-    contract_governance: 0.0
-    contract_quality: 51.3
+    access_clarity: 81.6
+    contract_governance: 13.6
+    contract_quality: 50.3
     developer_ergonomics: 39.3
     discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 51.9
+  previous_composite: 48.3
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 10
+      marker_coverage: 67.6
+      total: 34
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/basis-theory/refs/heads/main/screenshots/basis-theory-2026-06-20T173050.png
+screenshot: https://apis.io/screenshots/basis-theory/basis-theory-2026-06-20T173050.png
 security:
 - kind: authentication
   name: Basis Theory Authentication

@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,16 +27,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.0
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 38.9
+  scored_at: '2026-11-06'
+api_count: 3
 apis:
 - baseURL: https://www.public.ankorstore-sandbox.com
   baseurl_source: declared
@@ -141,15 +146,12 @@ apis:
   description: 'ℹ️ This section describes the API endpoints which can be used for managing webhook subscriptions. ## 💡 Overview In order to be able to manage Webhook Subscriptions via API you should understand the re'
   name: Ankorstore Webhooks API
   slug: ankorstore-webhooks-api
-artifact_total: 46
+artifact_total: 50
 asyncapis:
 - description: ''
   name: Ankorstore Webhooks
   slug: ankorstore-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Ankorstore Stock Tracking and Logistics Applications API
   slug: open-ankorstore-applications-api
@@ -215,12 +217,12 @@ collections:
   slug: open-ankorstore-webhooks-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/capabilities/ankorstore-capability-edges.yml
+  href: https://artifacts.apis.io/ankorstore/capabilities/ankorstore-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/ankorstore-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/overlays/ankorstore-astral-overlay.yaml
+  href: https://artifacts.apis.io/ankorstore/overlays/ankorstore-astral-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ankorstore-astral-overlay.yaml
@@ -249,92 +251,92 @@ common:
   type: Support
   url: mailto:api@ankorstore.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/authentication/ankorstore-authentication.yml
+  href: https://artifacts.apis.io/ankorstore/authentication/ankorstore-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ankorstore-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/conventions/ankorstore-conventions.yml
+  href: https://artifacts.apis.io/ankorstore/conventions/ankorstore-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ankorstore-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/conventions/ankorstore-conventions.yml
+  href: https://artifacts.apis.io/ankorstore/conventions/ankorstore-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/ankorstore-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/errors/ankorstore-problem-types.yml
+  href: https://artifacts.apis.io/ankorstore/errors/ankorstore-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ankorstore-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/errors/ankorstore-error-codes.yml
+  href: https://artifacts.apis.io/ankorstore/errors/ankorstore-error-codes.yml
   title: ''
   type: ErrorCodes
   url: errors/ankorstore-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/lifecycle/ankorstore-lifecycle.yml
+  href: https://artifacts.apis.io/ankorstore/lifecycle/ankorstore-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ankorstore-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/lifecycle/ankorstore-lifecycle.yml
+  href: https://artifacts.apis.io/ankorstore/lifecycle/ankorstore-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/ankorstore-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/changelog/ankorstore-changelog.yml
+  href: https://artifacts.apis.io/ankorstore/changelog/ankorstore-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/ankorstore-changelog.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/conventions/ankorstore-conventions.yml
+  href: https://artifacts.apis.io/ankorstore/conventions/ankorstore-conventions.yml
   title: ''
   type: RateLimits
   url: conventions/ankorstore-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/sandbox/ankorstore-sandbox.yml
+  href: https://artifacts.apis.io/ankorstore/sandbox/ankorstore-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/ankorstore-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/asyncapi/ankorstore-webhooks.yml
+  href: https://artifacts.apis.io/ankorstore/asyncapi/ankorstore-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/ankorstore-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/data-model/ankorstore-data-model.yml
+  href: https://artifacts.apis.io/ankorstore/data-model/ankorstore-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ankorstore-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/conformance/ankorstore-conformance.yml
+  href: https://artifacts.apis.io/ankorstore/conformance/ankorstore-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ankorstore-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/mcp/ankorstore-mcp.yml
+  href: https://artifacts.apis.io/ankorstore/mcp/ankorstore-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/ankorstore-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ankorstore/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/packages/ankorstore-packages.yml
+  href: https://artifacts.apis.io/ankorstore/packages/ankorstore-packages.yml
   title: ''
   type: Packages
   url: packages/ankorstore-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/llms/ankorstore-llms.txt
+  href: https://artifacts.apis.io/ankorstore/llms/ankorstore-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ankorstore-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/security/ankorstore-domain-security.yml
+  href: https://artifacts.apis.io/ankorstore/security/ankorstore-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ankorstore-domain-security.yml
@@ -353,36 +355,49 @@ network: true
 overview: 'Ankorstore publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applications API, Brands API, Catalog API, and 18 more. Tagged areas include Company, Retail, Wholesale, Marketplace, and E-Commerce.
 
 
-  The Ankorstore catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Ankorstore catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Ankorstore''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, authentication, changelog, and 20 more developer resources.'
-random_paper: 18
+random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 115
+  extends:
+  - spectral:oas
+  name: Ankorstore API Rules
+  rule_count: 74
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 4
+    warn: 25
+  slug: ankorstore-rules
 score:
   band: developing
-  composite: 43.3
+  composite: 45.0
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 40.0
+    artifact_dirs: 24
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.1
   facets:
     access_clarity: 13.2
-    contract_governance: 4.5
-    contract_quality: 58.6
+    contract_governance: 18.2
+    contract_quality: 58.9
     developer_ergonomics: 54.2
     discoverability: 78.6
     operational_transparency: 34.2
-  previous_composite: 43.2
+  previous_composite: 44.9
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 4.8
       total: 21
     mcp: derived
     skills: derived
@@ -392,13 +407,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/ankorstore/refs/heads/main/screenshots/ankorstore-2026-07-25T200257.png
+screenshot: https://apis.io/screenshots/ankorstore/ankorstore-2026-07-25T200257.png
 security:
 - kind: authentication
   name: Ankorstore Authentication
@@ -408,6 +423,16 @@ security:
   name: Ankorstore Domain Security
   slug: ankorstore-domain-security
   summary_line: TLSv1.3 · DNSSEC · DMARC
+skill_count: 4
+skills:
+- name: Sync catalog and stock
+  slug: ankorstore-catalog-sync
+- name: Replenish and track fulfillment
+  slug: ankorstore-fulfillment-replenishment
+- name: Process and ship an order
+  slug: ankorstore-order-processing
+- name: Subscribe to order webhooks
+  slug: ankorstore-webhook-subscription
 slug: ankorstore
 tags:
 - Company

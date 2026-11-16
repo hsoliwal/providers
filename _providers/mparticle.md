@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 48.4
-  scored_at: '2026-10-17'
+  score: 45.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 16
   slug: mparticle-agentic-access
   summary_line: 16 operations · 13 acting
-api_count: 4
+api_count: 3
 apis:
 - description: REST API for retrieving unified user profiles, identities, attributes, and audience memberships at scale to personalize downstream applications.
   name: mParticle Profile API
@@ -89,15 +92,12 @@ apis:
   description: The Modify API from mParticle — 1 operation(s) for modify.
   name: mParticle Modify API
   slug: mparticle-modify-api
-artifact_total: 25
+artifact_total: 29
 asyncapis:
 - description: ''
   name: Mparticle Webhooks
   slug: mparticle-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: mParticle Events Bulkevents API
   slug: open-mparticle-bulkevents-api
@@ -109,7 +109,7 @@ collections:
   slug: open-mparticle
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/capabilities/mparticle-capability-edges.yml
+  href: https://artifacts.apis.io/mparticle/capabilities/mparticle-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/mparticle-capability-edges.yml
@@ -118,32 +118,32 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/rokt/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/overlays/mparticle-events-overlay.yaml
+  href: https://artifacts.apis.io/mparticle/overlays/mparticle-events-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/mparticle-events-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/overlays/mparticle-identity-overlay.yaml
+  href: https://artifacts.apis.io/mparticle/overlays/mparticle-identity-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/mparticle-identity-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/overlays/mparticle-dataplanning-overlay.yaml
+  href: https://artifacts.apis.io/mparticle/overlays/mparticle-dataplanning-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/mparticle-dataplanning-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/agentic-access/mparticle-agentic-access.yml
+  href: https://artifacts.apis.io/mparticle/agentic-access/mparticle-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/mparticle-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/security/mparticle-trust-center.yml
+  href: https://artifacts.apis.io/mparticle/security/mparticle-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/mparticle-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/security/mparticle-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/mparticle/security/mparticle-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/mparticle-vulnerability-disclosure.yml
@@ -156,112 +156,112 @@ common:
   type: Compliance
   url: https://trust.mparticle.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/security/mparticle-domain-security.yml
+  href: https://artifacts.apis.io/mparticle/security/mparticle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mparticle-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/authentication/mparticle-authentication.yml
+  href: https://artifacts.apis.io/mparticle/authentication/mparticle-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mparticle-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/conformance/mparticle-conformance.yml
+  href: https://artifacts.apis.io/mparticle/conformance/mparticle-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mparticle-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/conventions/mparticle-conventions.yml
+  href: https://artifacts.apis.io/mparticle/conventions/mparticle-conventions.yml
   title: ''
   type: Conventions
   url: conventions/mparticle-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/errors/mparticle-problem-types.yml
+  href: https://artifacts.apis.io/mparticle/errors/mparticle-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/mparticle-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/lifecycle/mparticle-lifecycle.yml
+  href: https://artifacts.apis.io/mparticle/lifecycle/mparticle-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mparticle-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/changelog/mparticle-changelog.yml
+  href: https://artifacts.apis.io/mparticle/changelog/mparticle-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/mparticle-changelog.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/rate-limits/mparticle-rate-limits.yml
+  href: https://artifacts.apis.io/mparticle/rate-limits/mparticle-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/mparticle-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/plans/mparticle-plans-pricing.yml
+  href: https://artifacts.apis.io/mparticle/plans/mparticle-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mparticle-plans-pricing.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/sandbox/mparticle-sandbox.yml
+  href: https://artifacts.apis.io/mparticle/sandbox/mparticle-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/mparticle-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/data-model/mparticle-data-model.yml
+  href: https://artifacts.apis.io/mparticle/data-model/mparticle-data-model.yml
   title: ''
   type: DataModel
   url: data-model/mparticle-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/packages/mparticle-packages.yml
+  href: https://artifacts.apis.io/mparticle/packages/mparticle-packages.yml
   title: ''
   type: Packages
   url: packages/mparticle-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/packages/mparticle-packages.yml
+  href: https://artifacts.apis.io/mparticle/packages/mparticle-packages.yml
   title: ''
   type: SDKs
   url: packages/mparticle-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/cli/mparticle-cli.yml
+  href: https://artifacts.apis.io/mparticle/cli/mparticle-cli.yml
   title: ''
   type: CLI
   url: cli/mparticle-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/components/mparticle-components.yml
+  href: https://artifacts.apis.io/mparticle/components/mparticle-components.yml
   title: ''
   type: Components
   url: components/mparticle-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/asyncapi/mparticle-webhooks.yml
+  href: https://artifacts.apis.io/mparticle/asyncapi/mparticle-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/mparticle-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/mcp/mparticle-mcp.yml
+  href: https://artifacts.apis.io/mparticle/mcp/mparticle-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/mparticle-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/mparticle/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/well-known/mparticle-well-known.yml
+  href: https://artifacts.apis.io/mparticle/well-known/mparticle-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/mparticle-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/well-known/mparticle-security.txt
+  href: https://artifacts.apis.io/mparticle/well-known/mparticle-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/mparticle-security.txt
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/json-schema/mparticle-eventsapi-schema.json
+  href: https://artifacts.apis.io/mparticle/json-schema/mparticle-eventsapi-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/mparticle-eventsapi-schema.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/llms/mparticle-llms.txt
+  href: https://artifacts.apis.io/mparticle/llms/mparticle-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mparticle-llms.txt
@@ -323,6 +323,14 @@ common:
   url: https://www.mparticle.com/blog/
 created: '2026-05-11'
 description: mParticle is a customer data platform (CDP) that helps brands collect, unify, and activate customer data across mobile, web, OTT, and server sources, then forward it in real time to hundreds of analytics, marketing, and warehouse destinations. The mParticle developer platform exposes server Events, IDSync, Profile, Warehouse Sync, Calculated Attributes, Data Planning and Platform APIs that let teams ingest events, resolve identity, manage configurations, and orchestrate audiences using HTTP Basic, an HMAC request digest, and OAuth 2.0 client-credentials bearer tokens. mParticle was acquired by Rokt.
+finops:
+- has_sources: true
+  method: derived
+  name: Mparticle Finops
+  primary_unit: ''
+  service_category: ''
+  slug: mparticle-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mparticle.png
 json_schemas:
 - name: Mparticle Eventsapi Bulk
@@ -342,7 +350,7 @@ network: true
 overview: 'mParticle publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data Plan API, Data Plan Version API, Events API, and 7 more. Tagged areas include Customer Data Platform, CDP, Analytics, Identity Resolution, and Audiences.
 
 
-  The mParticle catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The mParticle catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   mParticle''s developer surface includes authentication, changelog, sandbox, CLI, documentation, API reference, getting-started guide, and 39 more developer resources.'
@@ -350,37 +358,55 @@ plans:
 - name: Mparticle Plans Pricing
   plan_count: 0
   slug: mparticle-plans-pricing
-random_paper: 15
+random_paper: 1
 rate_limits:
 - limit_count: 14
   name: Mparticle Rate Limits
   slug: mparticle-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: mParticle API Rules
+  rule_count: 47
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 2
+    warn: 1
+  slug: mparticle-rules
 score:
   band: strong
-  composite: 56.9
+  composite: 58.7
   coverage:
-    artifact_dirs: 29
-    catalog_earned: 57.4
+    artifact_dirs: 33
+    catalog_earned: 61.9
     catalog_earned_first_party: 12.0
-    catalog_gap: 57.6
+    catalog_gap: 53.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.2
   facets:
     access_clarity: 60.5
-    contract_governance: 18.2
-    contract_quality: 60.2
+    contract_governance: 31.8
+    contract_quality: 61.0
     developer_ergonomics: 42.3
     discoverability: 78.6
     operational_transparency: 68.4
-  previous_composite: 56.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 58.5
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 14.3
       total: 7
     mcp: derived
     skills: derived
@@ -390,13 +416,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/mparticle/refs/heads/main/screenshots/mparticle-2026-06-20T185839.png
+screenshot: https://apis.io/screenshots/mparticle/mparticle-2026-06-20T185839.png
 security:
 - kind: authentication
   name: Mparticle Authentication
@@ -414,6 +440,14 @@ security:
   name: Mparticle Trust Center
   slug: mparticle-trust-center
   summary_line: SOC 2, ISO 27001, GDPR
+skill_count: 3
+skills:
+- name: Govern mParticle data plans
+  slug: mparticle-govern-data-plans
+- name: Resolve a user identity with mParticle IDSync
+  slug: mparticle-resolve-identity
+- name: Send events to mParticle
+  slug: mparticle-send-events
 slug: mparticle
 tags:
 - Customer Data Platform

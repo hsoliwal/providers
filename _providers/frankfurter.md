@@ -1,16 +1,21 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Open access
   onboarding: open
   pricing: freemium
   public: true
   source:
   - plans
+  - security
   trial: false
   try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
-    rate_limit_signal: derived
+    rate_limit_signal: verified
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.6
-  scored_at: '2026-10-17'
+  score: 41.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -41,7 +49,7 @@ agentic_access:
   operation_count: 10
   slug: frankfurter-agentic-access
   summary_line: 10 operations
-api_count: 2
+api_count: 3
 apis:
 - baseURL: https://api.frankfurter.dev/v2
   baseurl_source: declared
@@ -73,11 +81,23 @@ apis:
   description: Blended currency exchange rates
   name: Frankfurter Rates API
   slug: frankfurter-rates-api
-artifact_total: 88
+- baseURL: https://api.frankfurter.dev/v2
+  baseurl_source: declared
+  description: The Coverage API from Frankfurter — 1 operation(s) for coverage.
+  name: Frankfurter Coverage API
+  slug: frankfurter-coverage-api
+- baseURL: https://api.frankfurter.dev/v2
+  baseurl_source: declared
+  description: The Currency API from Frankfurter — 1 operation(s) for currency.
+  name: Frankfurter Currency API
+  slug: frankfurter-currency-api
+- baseURL: https://api.frankfurter.dev/v2
+  baseurl_source: declared
+  description: The Rate API from Frankfurter — 1 operation(s) for rate.
+  name: Frankfurter Rate API
+  slug: frankfurter-rate-api
+artifact_total: 90
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Frankfurter Currencies API
   slug: open-frankfurter-currencies-api
@@ -103,17 +123,22 @@ collections:
   name: Frankfurter API
   slug: open-frankfurter-v2
 common:
+- group: other
+  href: https://artifacts.apis.io/frankfurter/capabilities/frankfurter-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/frankfurter-capability-edges.yml
 - group: operate
   title: ''
   type: Releases
   url: https://github.com/lineofflight/frankfurter/releases
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/frankfurter/refs/heads/main/agentic-access/frankfurter-agentic-access.yml
+  href: https://artifacts.apis.io/frankfurter/agentic-access/frankfurter-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/frankfurter-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/frankfurter/refs/heads/main/security/frankfurter-domain-security.yml
+  href: https://artifacts.apis.io/frankfurter/security/frankfurter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/frankfurter-domain-security.yml
@@ -174,22 +199,22 @@ common:
   type: Forums
   url: https://github.com/lineofflight/frankfurter/discussions
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/frankfurter/refs/heads/main/rules/frankfurter-spectral-rules.yml
+  href: https://artifacts.apis.io/frankfurter/rules/frankfurter-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/frankfurter-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/frankfurter/refs/heads/main/vocabulary/frankfurter-vocabulary.yml
+  href: https://artifacts.apis.io/frankfurter/vocabulary/frankfurter-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/frankfurter-vocabulary.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/frankfurter/refs/heads/main/plans/frankfurter-plans-pricing.yml
+  href: https://artifacts.apis.io/frankfurter/plans/frankfurter-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/frankfurter-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/frankfurter/refs/heads/main/rate-limits/frankfurter-rate-limits.yml
+  href: https://artifacts.apis.io/frankfurter/rate-limits/frankfurter-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/frankfurter-rate-limits.yml
@@ -359,18 +384,18 @@ modified: '2026-05-29'
 name: Frankfurter
 nav: Providers
 network: true
-overview: 'Frankfurter publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Currencies API, Current Rates API, Historical Rates API, and 3 more. Tagged areas include Foreign Exchange, Open Source, MIT, Self-Hosted, and Public APIs.
+overview: 'Frankfurter publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Currencies API, Current Rates API, Historical Rates API, and 6 more. Tagged areas include Foreign Exchange, Open Source, MIT, Self-Hosted, and Public APIs.
 
 
   The Frankfurter catalog on APIs.io includes 2 JSON-LD contexts and 2 Spectral governance rulesets.
 
 
-  Frankfurter''s developer surface includes documentation, tooling, and 19 more developer resources.'
+  Frankfurter''s developer surface includes documentation, tooling, and 20 more developer resources.'
 plans:
 - name: Frankfurter Plans Pricing
   plan_count: 2
   slug: frankfurter-plans-pricing
-random_paper: 6
+random_paper: 18
 rate_limits:
 - limit_count: 2
   name: Frankfurter Rate Limits
@@ -401,30 +426,30 @@ rules:
   slug: frankfurter-spectral-rules
 score:
   band: thin
-  composite: 32.7
+  composite: 33.5
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 67.0
+    artifact_dirs: 20
+    catalog_earned: 70.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.0
+    catalog_gap: 45.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.5
+  delta: 0.1
   facets:
     access_clarity: 5.3
     contract_governance: 27.3
-    contract_quality: 62.4
+    contract_quality: 63.4
     developer_ergonomics: 14.3
-    discoverability: 75.0
+    discoverability: 80.0
     operational_transparency: 23.7
-  previous_composite: 37.2
+  previous_composite: 33.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 6
+      total: 17
     mcp: first-party
   regulatory:
     applies: true
@@ -432,14 +457,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/frankfurter/refs/heads/main/screenshots/frankfurter-2026-06-20T181506.png
+screenshot: https://apis.io/screenshots/frankfurter/frankfurter-2026-06-20T181506.png
 security:
 - kind: domain-security
   name: Frankfurter Domain Security

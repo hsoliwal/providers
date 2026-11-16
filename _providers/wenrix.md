@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: Predictive price-assurance API that optimizes fares across EDIFACT, NDC, GDS, aggregators, and low-cost carriers, applying margin protection at both the search and post-booking stages.
@@ -51,7 +55,7 @@ common:
   type: BlogRSS
   url: https://www.wenrix.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wenrix/refs/heads/main/security/wenrix-domain-security.yml
+  href: https://artifacts.apis.io/wenrix/security/wenrix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wenrix-domain-security.yml
@@ -88,7 +92,7 @@ common:
   type: SignUp
   url: https://docs.wenrix.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wenrix/refs/heads/main/mcp/wenrix-mcp.yml
+  href: https://artifacts.apis.io/wenrix/mcp/wenrix-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/wenrix-mcp.yml
@@ -109,12 +113,12 @@ overview: 'Wenrix is listed with 3 APIs on the [APIs.io](https://apis.io/) netwo
 
 
   Wenrix''s developer surface includes documentation, engineering blog, signup flow, and 8 more developer resources.'
-random_paper: 9
+random_paper: 21
 score:
   band: emerging
   composite: 14.5
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -137,14 +141,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 12.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/wenrix/refs/heads/main/screenshots/wenrix-2026-09-02T170617.png
+screenshot: https://apis.io/screenshots/wenrix/wenrix-2026-09-02T170617.png
 security:
 - kind: domain-security
   name: Wenrix Domain Security

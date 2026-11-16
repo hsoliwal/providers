@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'REST API for managing Estimote devices (beacons): list and configure devices, associate cloud Attachments (custom key/value data) with a device, and read events reported by LTE beacons. Authenticated '
@@ -86,62 +90,62 @@ common:
   type: Pricing
   url: https://estimote.com/pricing
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/authentication/estimote-authentication.yml
+  href: https://artifacts.apis.io/estimote/authentication/estimote-authentication.yml
   title: ''
   type: Authentication
   url: authentication/estimote-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/packages/estimote-packages.yml
+  href: https://artifacts.apis.io/estimote/packages/estimote-packages.yml
   title: ''
   type: Packages
   url: packages/estimote-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/packages/estimote-packages.yml
+  href: https://artifacts.apis.io/estimote/packages/estimote-packages.yml
   title: ''
   type: SDKs
   url: packages/estimote-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/well-known/estimote-well-known.yml
+  href: https://artifacts.apis.io/estimote/well-known/estimote-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/estimote-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/mcp/estimote-mcp.yml
+  href: https://artifacts.apis.io/estimote/mcp/estimote-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/estimote-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/llms/estimote-llms.txt
+  href: https://artifacts.apis.io/estimote/llms/estimote-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/estimote-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/conformance/estimote-conformance.yml
+  href: https://artifacts.apis.io/estimote/conformance/estimote-conformance.yml
   title: ''
   type: Conformance
   url: conformance/estimote-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/lifecycle/estimote-lifecycle.yml
+  href: https://artifacts.apis.io/estimote/lifecycle/estimote-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/estimote-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/conventions/estimote-conventions.yml
+  href: https://artifacts.apis.io/estimote/conventions/estimote-conventions.yml
   title: ''
   type: Conventions
   url: conventions/estimote-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/data-model/estimote-data-model.yml
+  href: https://artifacts.apis.io/estimote/data-model/estimote-data-model.yml
   title: ''
   type: DataModel
   url: data-model/estimote-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/security/estimote-domain-security.yml
+  href: https://artifacts.apis.io/estimote/security/estimote-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/estimote-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/asyncapi/estimote-lte-events-webhooks.yml
+  href: https://artifacts.apis.io/estimote/asyncapi/estimote-lte-events-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/estimote-lte-events-webhooks.yml
@@ -176,12 +180,12 @@ overview: 'Estimote is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Estimote''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, pricing, and 19 more developer resources.'
-random_paper: 16
+random_paper: 10
 score:
   band: thin
   composite: 34.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -205,14 +209,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/estimote/refs/heads/main/screenshots/estimote-2026-07-25T213641.png
+screenshot: https://apis.io/screenshots/estimote/estimote-2026-07-25T213641.png
 security:
 - kind: authentication
   name: Estimote Authentication

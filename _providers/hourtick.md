@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-native
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.0
-  scored_at: '2026-10-17'
+  score: 38.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Hourtick REST API provides task, time tracking, and AI agent operations. Auth via personal API token.
@@ -89,40 +107,45 @@ apis:
   description: Timers and time entries. Link time to a task with `workItemId` on start, create or edit.
   name: Hourtick Time API
   slug: hourtick-time-api
-artifact_total: 23
+artifact_total: 25
 common:
+- group: other
+  href: https://artifacts.apis.io/hourtick/capabilities/hourtick-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hourtick-capability-edges.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/rules/hourtick-rules.yml
+  href: https://artifacts.apis.io/hourtick/rules/hourtick-rules.yml
   title: ''
   type: Spectral
   url: rules/hourtick-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/json-ld/hourtick-context.jsonld
+  href: https://artifacts.apis.io/hourtick/json-ld/hourtick-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/hourtick-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/vocabulary/hourtick-vocabulary.yml
+  href: https://artifacts.apis.io/hourtick/vocabulary/hourtick-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/hourtick-vocabulary.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/plans/hourtick-plans-pricing.yml
+  href: https://artifacts.apis.io/hourtick/plans/hourtick-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hourtick-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/data-model/hourtick-data-model.yml
+  href: https://artifacts.apis.io/hourtick/data-model/hourtick-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hourtick-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/conventions/hourtick-conventions.yml
+  href: https://artifacts.apis.io/hourtick/conventions/hourtick-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/hourtick-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/conventions/hourtick-conventions.yml
+  href: https://artifacts.apis.io/hourtick/conventions/hourtick-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hourtick-conventions.yml
@@ -131,37 +154,37 @@ common:
   type: Compliance
   url: https://hourtick.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/authentication/hourtick-authentication.yml
+  href: https://artifacts.apis.io/hourtick/authentication/hourtick-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hourtick-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/errors/hourtick-problem-types.yml
+  href: https://artifacts.apis.io/hourtick/errors/hourtick-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/hourtick-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/conformance/hourtick-conformance.yml
+  href: https://artifacts.apis.io/hourtick/conformance/hourtick-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hourtick-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/llms/hourtick-llms.txt
+  href: https://artifacts.apis.io/hourtick/llms/hourtick-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hourtick-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/mcp/hourtick-mcp.yml
+  href: https://artifacts.apis.io/hourtick/mcp/hourtick-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/hourtick-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/well-known/hourtick-well-known.yml
+  href: https://artifacts.apis.io/hourtick/well-known/hourtick-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/hourtick-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/hosts/hourtick-hosts.yml
+  href: https://artifacts.apis.io/hourtick/hosts/hourtick-hosts.yml
   title: ''
   type: Hosts
   url: hosts/hourtick-hosts.yml
@@ -198,17 +221,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/Hourtick
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/security/hourtick-trust-center.yml
+  href: https://artifacts.apis.io/hourtick/security/hourtick-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/hourtick-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/security/hourtick-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hourtick/security/hourtick-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hourtick-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hourtick/refs/heads/main/security/hourtick-domain-security.yml
+  href: https://artifacts.apis.io/hourtick/security/hourtick-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hourtick-domain-security.yml
@@ -231,6 +254,14 @@ coverage:
   state: gated
 created: '2026-10-08'
 description: Hourtick provides a collaborative platform for tasks, team chat, and time tracking enhanced with AI agents such as Claude, GPT, Grok, and Muse. It enables teams to assign work, monitor progress, and estimate costs using AI-driven insights. The service offers free plans for unlimited users, integrates with popular tools, and includes features like automated time logging, AI-powered task suggestions, and detailed reporting.
+finops:
+- has_sources: true
+  method: derived
+  name: Hourtick Finops
+  primary_unit: ''
+  service_category: ''
+  slug: hourtick-finops
+  template: true
 image: https://hourtick.com/opengraph-image-pwu6ef?d2b024fd2cd2caaf
 json_schemas:
 - name: TimeEntry
@@ -253,18 +284,21 @@ modified: '2026-10-08'
 name: Hourtick
 nav: Providers
 network: true
-overview: 'Hourtick publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Agents API, Billing API, and 10 more. Tagged areas include Company, Collaboration, Artificial Intelligence, TimeTracking, and Project Management.
+overview: 'Hourtick publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Agents API, Billing API, and 10 more. Tagged areas include Company, Collaboration, Artificial Intelligence, Time Tracking, and Project Management.
 
 
   The Hourtick catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Hourtick''s developer surface includes authentication, pricing, getting-started guide, API reference, documentation, and 23 more developer resources.'
+  Hourtick''s developer surface includes authentication, pricing, getting-started guide, API reference, documentation, and 24 more developer resources.'
 plans:
 - name: Hourtick Plans Pricing
   plan_count: 2
   slug: hourtick-plans-pricing
-random_paper: 15
+- name: Hourtick Price Estimates
+  plan_count: 0
+  slug: hourtick-price-estimates
+random_paper: 9
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -280,21 +314,23 @@ rules:
   slug: hourtick-rules
 score:
   band: developing
-  composite: 53.4
+  composite: 43.4
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 25
     catalog_earned: 62.8
     catalog_earned_first_party: 8.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.0
   facets:
-    access_clarity: 81.6
+    access_clarity: 55.3
     contract_governance: 35.6
     contract_quality: 56.3
-    developer_ergonomics: 40.5
+    developer_ergonomics: 26.2
     discoverability: 66.7
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  previous_composite: 53.4
   provenance:
     conformance: first-party
     contracts:
@@ -308,12 +344,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 26.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/hourtick/hourtick-2026-11-03T133500.png
 security:
 - kind: authentication
   name: Hourtick Authentication
@@ -336,7 +374,7 @@ tags:
 - Company
 - Collaboration
 - Artificial Intelligence
-- TimeTracking
+- Time Tracking
 - Project Management
 website: https://hourtick.com
 ---

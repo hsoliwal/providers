@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Open access
   onboarding: open
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.5
-  scored_at: '2026-10-17'
+  score: 48.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +50,7 @@ agentic_access:
   operation_count: 31
   slug: defillama-agentic-access
   summary_line: 31 operations
-api_count: 2
+api_count: 1
 apis:
 - description: Free, no-auth REST API exposing 31+ endpoints for protocol TVL, chain TVL, coin prices, stablecoin metrics, yield pools, DEX volumes, and fees. Underpins thousands of dashboards and integrations.
   name: DefiLlama Public API
@@ -84,9 +91,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: DefiLlama Public Coins API
   slug: open-defillama-coins-api
 - collection_type: open
@@ -117,17 +121,17 @@ common:
   type: Website
   url: https://www.defillama.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/defillama/refs/heads/main/agentic-access/defillama-agentic-access.yml
+  href: https://artifacts.apis.io/defillama/agentic-access/defillama-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/defillama-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/defillama/refs/heads/main/security/defillama-domain-security.yml
+  href: https://artifacts.apis.io/defillama/security/defillama-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/defillama-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/defillama/refs/heads/main/authentication/defillama-authentication.yml
+  href: https://artifacts.apis.io/defillama/authentication/defillama-authentication.yml
   title: ''
   type: Authentication
   url: authentication/defillama-authentication.yml
@@ -152,17 +156,17 @@ common:
   type: GitHub
   url: https://github.com/DefiLlama
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/defillama/refs/heads/main/plans/defillama-plans-pricing.yml
+  href: https://artifacts.apis.io/defillama/plans/defillama-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/defillama-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/defillama/refs/heads/main/rate-limits/defillama-rate-limits.yml
+  href: https://artifacts.apis.io/defillama/rate-limits/defillama-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/defillama-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/defillama/refs/heads/main/finops/defillama-finops.yml
+  href: https://artifacts.apis.io/defillama/finops/defillama-finops.yml
   title: ''
   type: FinOps
   url: finops/defillama-finops.yml
@@ -189,41 +193,57 @@ network: true
 overview: 'DefiLlama publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Coins API, Fees API, Stablecoins API, and 5 more. Tagged areas include Web3, DeFi, TVL, Cryptocurrency, and Stablecoins.
 
 
+  The DefiLlama catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   DefiLlama''s developer surface includes engineering blog, authentication, developer portal, documentation, pricing, GitHub presence, and 7 more developer resources.'
 plans:
 - name: Defillama Plans Pricing
   plan_count: 2
   slug: defillama-plans-pricing
-random_paper: 3
+random_paper: 15
 rate_limits:
 - limit_count: 2
   name: Defillama Rate Limits
   slug: defillama-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: DefiLlama API Rules
+  rule_count: 54
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 1
+    warn: 2
+  slug: defillama-rules
 score:
   band: thin
-  composite: 27.9
+  composite: 30.7
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 41.0
+    artifact_dirs: 17
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.1
+  delta: 1.1
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
-    contract_quality: 41.6
+    contract_governance: 13.6
+    contract_quality: 46.3
     developer_ergonomics: 33.3
     discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 29.0
+  previous_composite: 29.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 6
     mcp: first-party
   regulatory:
@@ -232,14 +252,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/defillama/refs/heads/main/screenshots/defillama-2026-06-20T175849.png
+screenshot: https://apis.io/screenshots/defillama/defillama-2026-06-20T175849.png
 security:
 - kind: authentication
   name: Defillama Authentication

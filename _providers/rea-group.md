@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-10-17'
+  score: 29.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -167,7 +170,7 @@ apis:
   description: The Oauth2 API from REA Group — 1 operation(s) for oauth2.
   name: REA Group Oauth2 API
   slug: rea-group-oauth2-api
-artifact_total: 40
+artifact_total: 45
 collections:
 - collection_type: open
   name: Address API
@@ -198,11 +201,45 @@ collections:
   slug: open-rea-group-transactions
 common:
 - group: commercial
+  href: https://artifacts.apis.io/rea-group/finops/rea-group-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/rea-group-finops.yml
+- group: design
+  href: https://artifacts.apis.io/rea-group/rules/rea-group-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/rea-group-rules.yml
+- group: design
+  href: https://artifacts.apis.io/rea-group/vocabulary/rea-group-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/rea-group-vocabulary.yml
+- group: design
+  href: https://artifacts.apis.io/rea-group/errors/rea-group-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/rea-group-problem-types.yml
+- group: other
+  href: https://artifacts.apis.io/rea-group/hosts/rea-group-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/rea-group-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/rea-group/vendors/rea-group-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/rea-group-vendors.yml
+- group: other
+  title: ''
+  type: Leadership
+  url: https://www.rea-group.com/about-us/our-people-and-story/leadership/
+- group: commercial
   title: ''
   type: Pricing
   url: https://developer.proptrack.com.au/docs/apis/api-trials
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/capabilities/rea-group-capability-edges.yml
+  href: https://artifacts.apis.io/rea-group/capabilities/rea-group-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/rea-group-capability-edges.yml
@@ -275,12 +312,12 @@ common:
   type: TermsOfService
   url: https://developer.proptrack.com.au/docs/apis/terms-of-use
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/authentication/rea-group-authentication.yml
+  href: https://artifacts.apis.io/rea-group/authentication/rea-group-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rea-group-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/conventions/rea-group-conventions.yml
+  href: https://artifacts.apis.io/rea-group/conventions/rea-group-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rea-group-conventions.yml
@@ -289,57 +326,57 @@ common:
   type: Pagination
   url: https://developer.proptrack.com.au/docs/apis/pagination
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/rate-limits/rea-group-rate-limits.yml
+  href: https://artifacts.apis.io/rea-group/rate-limits/rea-group-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rea-group-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/errors/rea-group-error-codes.yml
+  href: https://artifacts.apis.io/rea-group/errors/rea-group-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/rea-group-error-codes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/examples/rea-group-examples.yml
+  href: https://artifacts.apis.io/rea-group/examples/rea-group-examples.yml
   title: ''
   type: Examples
   url: examples/rea-group-examples.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/data-model/rea-group-data-model.yml
+  href: https://artifacts.apis.io/rea-group/data-model/rea-group-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rea-group-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/sandbox/rea-group-sandbox.yml
+  href: https://artifacts.apis.io/rea-group/sandbox/rea-group-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/rea-group-sandbox.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/plans/rea-group-plans.yml
+  href: https://artifacts.apis.io/rea-group/plans/rea-group-plans.yml
   title: ''
   type: Plans
   url: plans/rea-group-plans.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rea-group/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/agentic-access/rea-group-agentic-access.yml
+  href: https://artifacts.apis.io/rea-group/agentic-access/rea-group-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rea-group-agentic-access.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/overlays/rea-group-security-overlay.yaml
+  href: https://artifacts.apis.io/rea-group/overlays/rea-group-security-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rea-group-security-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/conformance/rea-group-conformance.yml
+  href: https://artifacts.apis.io/rea-group/conformance/rea-group-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rea-group-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/lifecycle/rea-group-lifecycle.yml
+  href: https://artifacts.apis.io/rea-group/lifecycle/rea-group-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rea-group-lifecycle.yml
@@ -348,22 +385,17 @@ common:
   type: Roadmap
   url: https://developer.proptrack.com.au/docs/apis/coming-soon
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/well-known/rea-group-well-known.yml
+  href: https://artifacts.apis.io/rea-group/well-known/rea-group-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rea-group-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/well-known/rea-group-security.txt
-  title: ''
-  type: SecurityTxt
-  url: well-known/rea-group-security.txt
-- group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/security/rea-group-domain-security.yml
+  href: https://artifacts.apis.io/rea-group/security/rea-group-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rea-group-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/security/rea-group-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rea-group/security/rea-group-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/rea-group-vulnerability-disclosure.yml
@@ -371,14 +403,17 @@ common:
   title: ''
   type: Security
   url: https://www.rea-group.com/security
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/llms/rea-group-llms.txt
-  title: ''
-  type: LLMsTxt
-  url: llms/rea-group-llms.txt
 created: '2026-07-20'
 description: REA Group Limited is an ASX-listed (ASX:REA) digital real estate advertising business headquartered in Melbourne, Australia and majority-owned by News Corp. It operates realestate.com.au and realcommercial.com.au, the property data and analytics brand PropTrack, the Mortgage Choice broking network, and REA India (Housing.com, PropTiger, and Makaan). REA Group's public developer surface is delivered through PropTrack, whose developer portal publishes nine OpenAPI 3.1 documents covering 32 operations - OAuth token issuance, address matching and suggestion, property summary, attributes, planning, tenure, listings and transactions, automated valuations (AVM Sale, Rent, Plus and Pro), PDF valuation and property reports, suburb-level market history, supply and demand, auction results and demographics, plus a Disclaimers API that serves the attribution text PropTrack contractually requires alongside its data. Every service also publishes a live, unauthenticated Stoplight mock server,
   so the contract can be exercised before a commercial agreement is signed. The APIs are documented publicly but are partner-gated - access requires a commercial agreement arranged through an Account Manager, and calls are authenticated with OAuth 2.0 client credentials exchanged for a one-hour JWT bearer token at data.proptrack.com. Alongside PropTrack, REA Group runs the realestate.com.au Partner Portal (partner.realestate.com.au), the integration surface for real estate agencies and their CRM / software providers to publish for-sale and for-rent listings onto realestate.com.au and realcommercial.com.au and to receive buyer and renter enquiries. Listing distribution uses REAXML, REA's long-standing industry-standard XML property feed (schema published at reaxml.realestate.com.au), which the majority of Australian agency CRMs implement, with partner onboarding, API credentials (Client ID + secret) and enquiry delivery managed through the partner portal.
+finops:
+- has_sources: true
+  method: derived
+  name: Rea Group Finops
+  primary_unit: ''
+  service_category: ''
+  slug: rea-group-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rea-group.png
 layout: provider
 modified: '2026-07-27T12:00:00Z'
@@ -388,33 +423,49 @@ network: true
 overview: 'REA Group publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Attributes API, Auction Results API, AVM API, and 22 more. Tagged areas include Real Estate, Property Data, Valuation, AVM, and Market Insights.
 
 
-  REA Group''s developer surface includes pricing, documentation, API reference, getting-started guide, YouTube channel, engineering blog, support, and 33 more developer resources.'
+  The REA Group catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  REA Group''s developer surface includes pricing, documentation, API reference, getting-started guide, YouTube channel, engineering blog, support, and 38 more developer resources.'
 plans:
 - name: Rea Group Plans
-  plan_count: 2
+  plan_count: 0
   slug: rea-group-plans
-random_paper: 12
+random_paper: 2
 rate_limits:
 - limit_count: 16
   name: Rea Group Rate Limits
   slug: rea-group-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: REA Group API Rules
+  rule_count: 53
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 2
+    warn: 13
+  slug: rea-group-rules
 score:
   band: developing
-  composite: 53.8
+  composite: 50.9
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 60.0
-    catalog_earned_first_party: 20.0
-    catalog_gap: 55.0
+    artifact_dirs: 31
+    catalog_earned: 57.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.1
+  delta: -0.4
   facets:
-    access_clarity: 60.5
-    contract_governance: 4.5
+    access_clarity: 34.2
+    contract_governance: 22.0
     contract_quality: 52.2
     developer_ergonomics: 62.5
-    discoverability: 78.6
+    discoverability: 80.4
     operational_transparency: 50.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -423,7 +474,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 51.7
+  previous_composite: 51.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -440,13 +491,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 28.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rea-group/refs/heads/main/screenshots/rea-group-2026-07-27T125400.png
+screenshot: https://apis.io/screenshots/rea-group/rea-group-2026-07-27T125400.png
 security:
 - kind: authentication
   name: Rea Group Authentication
@@ -460,6 +511,14 @@ security:
   name: Rea Group Vulnerability Disclosure
   slug: rea-group-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 3
+skills:
+- name: Order a PropTrack AVM valuation and retrieve the report
+  slug: rea-group-order-avm-valuation
+- name: Resolve an Australian address to a PropTrack property profile
+  slug: rea-group-resolve-address-to-property
+- name: Search PropTrack listings, sold transactions and suburb market trends
+  slug: rea-group-search-listings-and-market
 slug: rea-group
 tags:
 - Real Estate

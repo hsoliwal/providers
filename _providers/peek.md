@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.8
-  scored_at: '2026-10-17'
+  score: 35.5
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Peek Pro's implementation of the OCTO API specification, the open API standard for the experiences industry. Resellers list a supplier's products, check the availability calendar and per-departure ava
@@ -45,7 +51,7 @@ apis:
 - description: A free, public, anonymous remote MCP server that gives AI assistants access to Peek.com's catalog of 300,000+ verified experiences with real-time availability and pricing. Six tools cover experience s
   name: Peek Experiences MCP Server
   slug: peek-experiences-mcp-server
-artifact_total: 9
+artifact_total: 10
 asyncapis:
 - description: ''
   name: Peek Octo Webhooks
@@ -96,112 +102,120 @@ common:
   type: PrivacyPolicy
   url: https://www.peekpro.com/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/llms/peek-llms.txt
+  href: https://artifacts.apis.io/peek/llms/peek-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/peek-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/mcp/peek-mcp.yml
+  href: https://artifacts.apis.io/peek/mcp/peek-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/peek-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/packages/peek-packages.yml
+  href: https://artifacts.apis.io/peek/packages/peek-packages.yml
   title: ''
   type: Packages
   url: packages/peek-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/packages/peek-packages.yml
+  href: https://artifacts.apis.io/peek/packages/peek-packages.yml
   title: ''
   type: SDKs
   url: packages/peek-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/cli/peek-cli.yml
+  href: https://artifacts.apis.io/peek/cli/peek-cli.yml
   title: ''
   type: CLI
   url: cli/peek-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/well-known/peek-well-known.yml
+  href: https://artifacts.apis.io/peek/well-known/peek-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/peek-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/well-known/peek-security.txt
+  href: https://artifacts.apis.io/peek/well-known/peek-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/peek-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/security/peek-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/peek/security/peek-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/peek-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/security/peek-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/peek/security/peek-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/peek-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/security/peek-domain-security.yml
+  href: https://artifacts.apis.io/peek/security/peek-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/peek-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/conformance/peek-conformance.yml
+  href: https://artifacts.apis.io/peek/conformance/peek-conformance.yml
   title: ''
   type: Conformance
   url: conformance/peek-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/authentication/peek-authentication.yml
+  href: https://artifacts.apis.io/peek/authentication/peek-authentication.yml
   title: ''
   type: Authentication
   url: authentication/peek-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/errors/peek-problem-types.yml
+  href: https://artifacts.apis.io/peek/errors/peek-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/peek-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/lifecycle/peek-lifecycle.yml
+  href: https://artifacts.apis.io/peek/lifecycle/peek-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/peek-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/conventions/peek-conventions.yml
+  href: https://artifacts.apis.io/peek/conventions/peek-conventions.yml
   title: ''
   type: Conventions
   url: conventions/peek-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/asyncapi/peek-octo-webhooks.yml
+  href: https://artifacts.apis.io/peek/asyncapi/peek-octo-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/peek-octo-webhooks.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/plans/peek-plans-pricing.yml
+  href: https://artifacts.apis.io/peek/plans/peek-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/peek-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/rate-limits/peek-rate-limits.yml
+  href: https://artifacts.apis.io/peek/rate-limits/peek-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/peek-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/data-model/peek-data-model.yml
+  href: https://artifacts.apis.io/peek/data-model/peek-data-model.yml
   title: ''
   type: DataModel
   url: data-model/peek-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/changelog/peek-changelog.yml
+  href: https://artifacts.apis.io/peek/changelog/peek-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/peek-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/sandbox/peek-sandbox.yml
+  href: https://artifacts.apis.io/peek/sandbox/peek-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/peek-sandbox.yml
 created: '2026-08-26'
 description: 'Peek is a San Francisco-based travel technology company founded in 2012 by Ruzwana Bashir and Oskar Bruening. It operates two connected surfaces: peek.com, a consumer marketplace of 300,000+ bookable tours, activities, rentals and attractions, and Peek Pro, the booking and back-office operating system used by tour, activity, rental and attraction operators for reservations, capacity and inventory, waivers, payments, dynamic pricing and reporting. Its public API surface is the Peek Reseller API — an implementation of the OCTO (Open Connectivity for Tourism) open standard for the experiences industry, covering products, availability, booking, pricing and booking webhooks — plus a free public remote MCP server at mcp.peek.com that gives AI assistants live experience search, detail and availability, and a Developer Hub with app SDKs, a CLI and an n8n connector for building apps embedded inside Peek Pro.'
+finops:
+- has_sources: true
+  method: derived
+  name: Peek Finops
+  primary_unit: ''
+  service_category: ''
+  slug: peek-finops
+  template: true
 image: https://cdn.prod.website-files.com/63c9874aa33ce9a6f0ab0e91/63c9874aa33ce95c4eab0ecc_peek-pro-logo.svg
 layout: provider
 mcp_servers:
@@ -223,7 +237,7 @@ plans:
 - name: Peek Plans Pricing
   plan_count: 0
   slug: peek-plans-pricing
-random_paper: 3
+random_paper: 13
 rate_limits:
 - limit_count: 0
   name: Peek Rate Limits
@@ -232,7 +246,7 @@ score:
   band: developing
   composite: 48.0
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -263,14 +277,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 27.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/peek/refs/heads/main/screenshots/peek-2026-09-02T150936.png
+screenshot: https://apis.io/screenshots/peek/peek-2026-09-02T150936.png
 security:
 - kind: authentication
   name: Peek Authentication

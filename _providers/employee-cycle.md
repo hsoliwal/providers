@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -69,12 +73,12 @@ common:
   type: TrustCenter
   url: https://www.employeecycle.com/features/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/employee-cycle/refs/heads/main/security/employee-cycle-trust-center.yml
+  href: https://artifacts.apis.io/employee-cycle/security/employee-cycle-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/employee-cycle-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/employee-cycle/refs/heads/main/security/employee-cycle-domain-security.yml
+  href: https://artifacts.apis.io/employee-cycle/security/employee-cycle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/employee-cycle-domain-security.yml
@@ -91,12 +95,12 @@ overview: 'Employee Cycle is profiled on the [APIs.io](https://apis.io/) network
 
 
   Employee Cycle''s developer surface includes engineering blog, support, and 8 more developer resources.'
-random_paper: 7
+random_paper: 21
 score:
   band: emerging
   composite: 14.9
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -117,14 +121,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/employee-cycle/refs/heads/main/screenshots/employee-cycle-2026-07-25T213254.png
+screenshot: https://apis.io/screenshots/employee-cycle/employee-cycle-2026-07-25T213254.png
 security:
 - kind: domain-security
   name: Employee Cycle Domain Security

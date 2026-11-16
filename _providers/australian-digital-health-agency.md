@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Government · Gated onboarding (registration + NASH PKI)
+  confidence: low
+  label: Unknown
   onboarding: unknown
-  pricing: free
+  pricing: unknown
   public: false
   source:
   - authentication
-  - documentation
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: The business-to-business FHIR Gateway for connecting conformant clinical software to the My Health Record national shared health record. Exposes FHIR-based read and upload interactions for clinical do
@@ -55,10 +59,10 @@ apis:
 - description: The national Healthcare Identifiers Service, providing unique identifiers for individuals (IHI), healthcare providers (HPI-I) and organisations (HPI-O) that underpin My Health Record, electronic presc
   name: Healthcare Identifiers (HI) Service
   slug: healthcare-identifiers-service
-artifact_total: 9
+artifact_total: 12
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/security/australian-digital-health-agency-domain-security.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/security/australian-digital-health-agency-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/australian-digital-health-agency-domain-security.yml
@@ -99,72 +103,72 @@ common:
   type: GitHubOrganization
   url: https://github.com/AuDigitalHealth
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/packages/australian-digital-health-agency-packages.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/packages/australian-digital-health-agency-packages.yml
   title: ''
   type: Packages
   url: packages/australian-digital-health-agency-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/packages/australian-digital-health-agency-packages.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/packages/australian-digital-health-agency-packages.yml
   title: ''
   type: SDKs
   url: packages/australian-digital-health-agency-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/well-known/australian-digital-health-agency-well-known.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/well-known/australian-digital-health-agency-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/australian-digital-health-agency-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/authentication/australian-digital-health-agency-authentication.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/authentication/australian-digital-health-agency-authentication.yml
   title: ''
   type: Authentication
   url: authentication/australian-digital-health-agency-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/scopes/australian-digital-health-agency-scopes.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/scopes/australian-digital-health-agency-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/australian-digital-health-agency-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/conformance/australian-digital-health-agency-conformance.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/conformance/australian-digital-health-agency-conformance.yml
   title: ''
   type: Conformance
   url: conformance/australian-digital-health-agency-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/conventions/australian-digital-health-agency-conventions.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/conventions/australian-digital-health-agency-conventions.yml
   title: ''
   type: Conventions
   url: conventions/australian-digital-health-agency-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/conventions/australian-digital-health-agency-conventions.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/conventions/australian-digital-health-agency-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/australian-digital-health-agency-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/errors/australian-digital-health-agency-problem-types.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/errors/australian-digital-health-agency-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/australian-digital-health-agency-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/lifecycle/australian-digital-health-agency-lifecycle.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/lifecycle/australian-digital-health-agency-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/australian-digital-health-agency-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/mcp/australian-digital-health-agency-mcp.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/mcp/australian-digital-health-agency-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/australian-digital-health-agency-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/llms/australian-digital-health-agency-llms.txt
+  href: https://artifacts.apis.io/australian-digital-health-agency/llms/australian-digital-health-agency-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/australian-digital-health-agency-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/data-model/australian-digital-health-agency-data-model.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/data-model/australian-digital-health-agency-data-model.yml
   title: ''
   type: DataModel
   url: data-model/australian-digital-health-agency-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/australian-digital-health-agency/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -181,7 +185,7 @@ overview: 'Australian Digital Health Agency is listed with 6 APIs on the [APIs.i
 
 
   Australian Digital Health Agency''s developer surface includes developer portal, documentation, API reference, getting-started guide, authentication, support, and 18 more developer resources.'
-random_paper: 16
+random_paper: 14
 scopes:
 - name: Australian Digital Health Agency Scopes
   scope_count: 2
@@ -191,13 +195,13 @@ score:
   band: thin
   composite: 30.8
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
@@ -212,7 +216,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 30.7
+  previous_composite: 30.8
   provenance:
     conformance: first-party
     mcp: derived
@@ -223,14 +227,14 @@ score:
     regime: Health
     regime_id: health
     score: 37.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/australian-digital-health-agency/refs/heads/main/screenshots/australian-digital-health-agency-2026-10-11T181234.png
+screenshot: https://apis.io/screenshots/australian-digital-health-agency/australian-digital-health-agency-2026-10-11T181234.png
 security:
 - kind: authentication
   name: Australian Digital Health Agency Authentication
@@ -240,6 +244,14 @@ security:
   name: Australian Digital Health Agency Domain Security
   slug: australian-digital-health-agency-domain-security
   summary_line: TLSv1.3 · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Expand a value set on the NCTS FHIR terminology server
+  slug: australian-digital-health-agency-expand-valueset
+- name: Download terminology releases from the NCTS syndication feed
+  slug: australian-digital-health-agency-syndicate-terminology
+- name: Validate a code against a value set (NCTS)
+  slug: australian-digital-health-agency-validate-code
 slug: australian-digital-health-agency
 tags:
 - Healthcare

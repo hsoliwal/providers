@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,13 +11,15 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: false
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: negotiable
@@ -22,19 +27,22 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: false
+    mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-10-17'
+  score: 36.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -175,7 +183,7 @@ arazzos:
 - description: Resolve an application by name, read it, then patch its web redirect URIs and description.
   name: Active Directory Update Application Redirect URIs
   slug: active-directory-update-application-redirect-uris-workflow
-artifact_total: 96
+artifact_total: 100
 collections:
 - collection_type: postman
   name: Microsoft Graph Applications and Service Principals API
@@ -186,9 +194,6 @@ collections:
 - collection_type: postman
   name: Microsoft Graph Users API
   slug: postman-active-directory-users
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Microsoft Graph Applications and Service Principals App Role Assignments API
   slug: open-active-directory-app-role-assignments-api
@@ -211,18 +216,139 @@ collections:
   name: Microsoft Graph Applications and Service Principals App Role Assignments Users API
   slug: open-active-directory-users-api
 common:
+- group: agent
+  href: https://artifacts.apis.io/active-directory/skills/_index.yml
+  title: ''
+  type: AgentSkill
+  url: skills/_index.yml
+- group: auth
+  href: https://artifacts.apis.io/active-directory/well-known/active-directory-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/active-directory-security.txt
+- group: agent
+  href: https://artifacts.apis.io/active-directory/well-known/active-directory-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/active-directory-well-known.yml
+- group: design
+  href: https://artifacts.apis.io/active-directory/rules/active-directory-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/active-directory-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/active-directory/rules/active-directory-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/active-directory-rules.yml
+- group: design
+  href: https://artifacts.apis.io/active-directory/rules/active-directory-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/active-directory-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/active-directory/vocabulary/active-directory-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/active-directory-vocabulary.yml
+- group: design
+  href: https://artifacts.apis.io/active-directory/data-model/active-directory-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/active-directory-data-model.yml
+- group: operate
+  href: https://artifacts.apis.io/active-directory/changelog/active-directory-changelog.yml
+  title: ''
+  type: ChangeLog
+  url: changelog/active-directory-changelog.yml
+- group: design
+  href: https://artifacts.apis.io/active-directory/conventions/active-directory-conventions.yml
+  title: ''
+  type: Conventions
+  url: conventions/active-directory-conventions.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://www.microsoft.com/en-us/trust-center
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://learn.microsoft.com/en-us/graph/versioning-and-support
+- group: design
+  href: https://artifacts.apis.io/active-directory/lifecycle/active-directory-lifecycle.yml
+  title: ''
+  type: Lifecycle
+  url: lifecycle/active-directory-lifecycle.yml
+- group: design
+  href: https://artifacts.apis.io/active-directory/errors/active-directory-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/active-directory-problem-types.yml
+- group: design
+  href: https://artifacts.apis.io/active-directory/conformance/active-directory-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/active-directory-conformance.yml
+- group: agent
+  href: https://artifacts.apis.io/active-directory/llms/active-directory-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/active-directory-llms.txt
+- group: build
+  href: https://artifacts.apis.io/active-directory/mcp/active-directory-tool-crosswalk.yml
+  title: ''
+  type: ToolCrosswalk
+  url: mcp/active-directory-tool-crosswalk.yml
+- group: agent
+  href: https://artifacts.apis.io/active-directory/mcp/active-directory-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/active-directory-mcp.yml
+- group: other
+  href: https://artifacts.apis.io/active-directory/hosts/active-directory-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/active-directory-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/active-directory/integrations/active-directory-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/active-directory-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/active-directory/vendors/active-directory-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/active-directory-vendors.yml
+- group: build
+  href: https://artifacts.apis.io/active-directory/packages/active-directory-packages.yml
+  title: ''
+  type: Packages
+  url: packages/active-directory-packages.yml
+- group: auth
+  title: ''
+  type: Security
+  url: https://www.microsoft.com/security
+- group: other
+  title: ''
+  type: Leadership
+  url: https://news.microsoft.com/leadership
+- group: auth
+  href: https://artifacts.apis.io/active-directory/security/active-directory-trust-center.yml
+  title: ''
+  type: TrustCenter
+  url: security/active-directory-trust-center.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/finops/active-directory-finops.yml
+  href: https://artifacts.apis.io/active-directory/finops/active-directory-finops.yml
   title: ''
   type: FinOps
   url: finops/active-directory-finops.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/rate-limits/active-directory-rate-limits.yml
+  href: https://artifacts.apis.io/active-directory/rate-limits/active-directory-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/active-directory-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/plans/active-directory-plans-pricing.yml
+  href: https://artifacts.apis.io/active-directory/plans/active-directory-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/active-directory-plans-pricing.yml
@@ -235,32 +361,32 @@ common:
   type: Website
   url: https://www.microsoft.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/capabilities/active-directory-capability-edges.yml
+  href: https://artifacts.apis.io/active-directory/capabilities/active-directory-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/active-directory-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/agentic-access/active-directory-agentic-access.yml
+  href: https://artifacts.apis.io/active-directory/agentic-access/active-directory-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/active-directory-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/security/active-directory-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/active-directory/security/active-directory-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/active-directory-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/security/active-directory-domain-security.yml
+  href: https://artifacts.apis.io/active-directory/security/active-directory-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/active-directory-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/authentication/active-directory-authentication.yml
+  href: https://artifacts.apis.io/active-directory/authentication/active-directory-authentication.yml
   title: ''
   type: Authentication
   url: authentication/active-directory-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/scopes/active-directory-scopes.yml
+  href: https://artifacts.apis.io/active-directory/scopes/active-directory-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/active-directory-scopes.yml
@@ -269,67 +395,67 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/microsoft-active-directory/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-audit-user-group-memberships-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-audit-user-group-memberships-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-audit-user-group-memberships-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-create-group-and-add-members-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-create-group-and-add-members-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-create-group-and-add-members-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-create-m365-group-with-owner-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-create-m365-group-with-owner-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-create-m365-group-with-owner-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-decommission-application-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-decommission-application-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-decommission-application-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-find-user-and-update-profile-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-find-user-and-update-profile-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-find-user-and-update-profile-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-offboard-user-from-group-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-offboard-user-from-group-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-offboard-user-from-group-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-onboard-user-to-existing-group-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-onboard-user-to-existing-group-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-onboard-user-to-existing-group-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-provision-application-with-membership-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-provision-application-with-membership-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-provision-application-with-membership-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-provision-user-into-new-group-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-provision-user-into-new-group-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-provision-user-into-new-group-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-rename-group-and-list-members-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-rename-group-and-list-members-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-rename-group-and-list-members-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-self-service-profile-review-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-self-service-profile-review-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-self-service-profile-review-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-transfer-user-between-groups-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-transfer-user-between-groups-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-transfer-user-between-groups-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/arazzo/active-directory-update-application-redirect-uris-workflow.yml
+  href: https://artifacts.apis.io/active-directory/arazzo/active-directory-update-application-redirect-uris-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/active-directory-update-application-redirect-uris-workflow.yml
@@ -340,7 +466,7 @@ common:
 - group: start
   title: ''
   type: GettingStarted
-  url: https://learn.microsoft.com/en-us/graph/get-started
+  url: https://learn.microsoft.com/en-us/graph/use-the-api
 - group: docs
   title: ''
   type: Documentation
@@ -392,15 +518,11 @@ common:
 - group: operate
   title: ''
   type: ChangeLog
-  url: https://learn.microsoft.com/en-us/graph/changelog
+  url: https://developer.microsoft.com/en-us/graph/changelog
 - group: build
   title: ''
   type: GitHubOrganization
   url: https://github.com/microsoftgraph
-- group: build
-  title: ''
-  type: GitHubRepository
-  url: https://github.com/microsoftgraph/microsoft-graph-openapi
 - group: operate
   title: ''
   type: StackOverflow
@@ -410,17 +532,17 @@ common:
   type: Training
   url: https://learn.microsoft.com/en-us/training/paths/m365-msgraph-associate/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/rules/active-directory-spectral-rules.yml
+  href: https://artifacts.apis.io/active-directory/rules/active-directory-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/active-directory-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/vocabulary/active-directory-vocabulary.yaml
+  href: https://artifacts.apis.io/active-directory/vocabulary/active-directory-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/active-directory-vocabulary.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/json-ld/active-directory-context.jsonld
+  href: https://artifacts.apis.io/active-directory/json-ld/active-directory-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/active-directory-context.jsonld
@@ -459,10 +581,10 @@ features:
   name: Identity Governance
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Active Directory Finops
-  primary_unit: ''
-  service_category: Identity / Directory Services
+  primary_unit: user
+  service_category: ''
   slug: active-directory-finops
   template: false
 image: https://learn.microsoft.com/en-us/entra/media/index/active-directory.svg
@@ -513,6 +635,10 @@ jsonld:
   property_count: 69
   slug: active-directory-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.svc.cloud.microsoft requiring OAuth; 3 tools listed.
+  name: Microsoft MCP Server for Enterprise
+  slug: microsoft-mcp-server-for-enterprise
 modified: '2026-09-16'
 name: Microsoft Active Directory
 nav: Providers
@@ -520,10 +646,10 @@ network: true
 overview: 'Microsoft Active Directory publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including App Role Assignments API, Applications API, Groups API, and 22 more. Tagged areas include Active Directory, Authentication, Authorization, Directory Services, and Identity and Access Management.
 
 
-  The Microsoft Active Directory catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+  The Microsoft Active Directory catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  Microsoft Active Directory''s developer surface includes authentication, developer portal, getting-started guide, documentation, API reference, CLI, engineering blog, and 40 more developer resources.'
+  Microsoft Active Directory''s developer surface includes changelog, authentication, developer portal, getting-started guide, documentation, API reference, CLI, and 64 more developer resources.'
 plans:
 - name: Active Directory Plans Pricing
   plan_count: 11
@@ -531,7 +657,7 @@ plans:
 - name: Active Directory Price Estimates
   plan_count: 0
   slug: active-directory-price-estimates
-random_paper: 12
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Active Directory Rate Limits
@@ -548,6 +674,18 @@ rules:
     info: 2
     warn: 3
   slug: active-directory-jsonschema-spectral-rules
+- authorship: generated
+  effective_rule_count: 108
+  extends:
+  - spectral:oas
+  name: Microsoft Active Directory API Rules
+  rule_count: 67
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 4
+    warn: 9
+  slug: active-directory-rules
 - authorship: generated
   effective_rule_count: 80
   extends:
@@ -566,44 +704,47 @@ scopes:
   slug: active-directory-scopes
   summary_line: 11 scopes · authorizationCode/clientCredentials
 score:
-  band: strong
-  composite: 60.5
+  band: exemplar
+  composite: 68.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 73.0
+    artifact_dirs: 38
+    catalog_earned: 76.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 42.0
+    catalog_gap: 39.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 4.8
   facets:
-    access_clarity: 63.2
-    contract_governance: 27.3
+    access_clarity: 86.8
+    contract_governance: 31.8
     contract_quality: 70.5
-    developer_ergonomics: 72.6
-    discoverability: 69.6
-    operational_transparency: 18.4
-  previous_composite: 62.0
+    developer_ergonomics: 74.4
+    discoverability: 70.0
+    operational_transparency: 28.9
+  previous_composite: 63.4
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 8
+    mcp: first-party
+    skills: derived
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 45.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/active-directory/refs/heads/main/screenshots/active-directory-2026-07-25T181526.png
+screenshot: https://apis.io/screenshots/active-directory/active-directory-2026-07-25T181526.png
 security:
 - kind: authentication
   name: Active Directory Authentication
@@ -617,6 +758,16 @@ security:
   name: Active Directory Vulnerability Disclosure
   slug: active-directory-vulnerability-disclosure
   summary_line: security.txt · contact published
+- kind: trust-center
+  name: Active Directory Trust Center
+  slug: active-directory-trust-center
+  summary_line: GDPR
+skill_count: 2
+skills:
+- name: offboard-user
+  slug: active-directory-offboard-user
+- name: onboard-user
+  slug: active-directory-onboard-user
 slug: active-directory
 tags:
 - Active Directory

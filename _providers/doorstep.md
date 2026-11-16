@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -111,12 +114,12 @@ overview: 'Doorstep is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   Doorstep''s developer surface includes documentation, getting-started guide, support, authentication, and 11 more developer resources.'
-random_paper: 0
+random_paper: 16
 score:
   band: emerging
   composite: 21.7
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -137,14 +140,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/doorstep/refs/heads/main/screenshots/doorstep-2026-07-25T212303.png
+screenshot: https://apis.io/screenshots/doorstep/doorstep-2026-07-25T212303.png
 security:
 - kind: authentication
   name: Doorstep Authentication

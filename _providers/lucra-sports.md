@@ -14,6 +14,7 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: true
@@ -28,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.4
-  scored_at: '2026-10-17'
+  score: 40.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://forge.lucrasports.com
@@ -84,19 +88,19 @@ apis:
   description: 'Manage webhook configurations to receive real-time event notifications via HTTP POST requests. --- ## Available Event Types | Event | Description | |-------|-------------| | `UserSignedUp` | New user '
   name: Lucra Sports Webhooks API
   slug: lucra-sports-webhooks-api
-artifact_total: 14
+artifact_total: 24
 asyncapis:
 - description: ''
   name: Lucra Sports Webhooks
   slug: lucra-sports-webhooks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/capabilities/lucra-sports-capability-edges.yml
+  href: https://artifacts.apis.io/lucra-sports/capabilities/lucra-sports-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/lucra-sports-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/overlays/lucra-sports-forge-overlay.yaml
+  href: https://artifacts.apis.io/lucra-sports/overlays/lucra-sports-forge-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/lucra-sports-forge-overlay.yaml
@@ -157,107 +161,115 @@ common:
   type: CaseStudies
   url: https://www.playlucra.com/case-studies
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/plans/lucra-sports-plans-pricing.yml
+  href: https://artifacts.apis.io/lucra-sports/plans/lucra-sports-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/lucra-sports-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/rate-limits/lucra-sports-rate-limits.yml
+  href: https://artifacts.apis.io/lucra-sports/rate-limits/lucra-sports-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/lucra-sports-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/packages/lucra-sports-packages.yml
+  href: https://artifacts.apis.io/lucra-sports/packages/lucra-sports-packages.yml
   title: ''
   type: Packages
   url: packages/lucra-sports-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/packages/lucra-sports-packages.yml
+  href: https://artifacts.apis.io/lucra-sports/packages/lucra-sports-packages.yml
   title: ''
   type: SDKs
   url: packages/lucra-sports-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/llms/lucra-sports-llms.txt
+  href: https://artifacts.apis.io/lucra-sports/llms/lucra-sports-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lucra-sports-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/lucra-sports/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/mcp/lucra-sports-mcp.yml
+  href: https://artifacts.apis.io/lucra-sports/mcp/lucra-sports-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/lucra-sports-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/mcp/lucra-sports-tool-crosswalk.yml
+  href: https://artifacts.apis.io/lucra-sports/mcp/lucra-sports-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/lucra-sports-tool-crosswalk.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/conventions/lucra-sports-conventions.yml
+  href: https://artifacts.apis.io/lucra-sports/conventions/lucra-sports-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lucra-sports-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/conformance/lucra-sports-conformance.yml
+  href: https://artifacts.apis.io/lucra-sports/conformance/lucra-sports-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lucra-sports-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/conformance/lucra-sports-conformance.yml
+  href: https://artifacts.apis.io/lucra-sports/conformance/lucra-sports-conformance.yml
   title: ''
   type: Compliance
   url: conformance/lucra-sports-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/lifecycle/lucra-sports-lifecycle.yml
+  href: https://artifacts.apis.io/lucra-sports/lifecycle/lucra-sports-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lucra-sports-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/changelog/lucra-sports-changelog.yml
+  href: https://artifacts.apis.io/lucra-sports/changelog/lucra-sports-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/lucra-sports-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/components/lucra-sports-components.yml
+  href: https://artifacts.apis.io/lucra-sports/components/lucra-sports-components.yml
   title: ''
   type: Components
   url: components/lucra-sports-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/data-model/lucra-sports-data-model.yml
+  href: https://artifacts.apis.io/lucra-sports/data-model/lucra-sports-data-model.yml
   title: ''
   type: DataModel
   url: data-model/lucra-sports-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/sandbox/lucra-sports-sandbox.yml
+  href: https://artifacts.apis.io/lucra-sports/sandbox/lucra-sports-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/lucra-sports-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/errors/lucra-sports-problem-types.yml
+  href: https://artifacts.apis.io/lucra-sports/errors/lucra-sports-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/lucra-sports-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/asyncapi/lucra-sports-webhooks.yml
+  href: https://artifacts.apis.io/lucra-sports/asyncapi/lucra-sports-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/lucra-sports-webhooks.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/authentication/lucra-sports-authentication.yml
+  href: https://artifacts.apis.io/lucra-sports/authentication/lucra-sports-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lucra-sports-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/security/lucra-sports-domain-security.yml
+  href: https://artifacts.apis.io/lucra-sports/security/lucra-sports-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lucra-sports-domain-security.yml
 created: '2026-08-25'
 description: 'Lucra (Lucra Sports, Inc.) is a competitive-loyalty and gamification platform that embeds real-money, free-to-play and peer-to-peer contests into third-party consumer apps and websites through a white-label SDK. Partners integrate Games You Play (head-to-head recreational matchups), Sports You Watch (prediction contests), Tournaments, Mini Games and Achievements without building the regulated infrastructure themselves: Lucra acts as merchant of record and operates the KYC, geolocation, age verification, payments, fraud monitoring, prize settlement and responsible-gaming controls behind the experience. The developer surface is a tenant-scoped server-to-server REST API (the Forge gateway) plus iOS, Android, React Native and JavaScript client SDKs, a signed webhook event stream, and a sandbox environment.'
+finops:
+- has_sources: true
+  method: derived
+  name: Lucra Sports Finops
+  primary_unit: ''
+  service_category: ''
+  slug: lucra-sports-finops
+  template: true
 image: https://framerusercontent.com/images/ig8OHgXmBzrkMRo5krWVBCgcrhI.png
 layout: provider
 modified: '2026-08-25'
@@ -267,7 +279,7 @@ network: true
 overview: 'Lucra Sports publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Health API, Locations API, Recreational Games API, and 6 more. Tagged areas include Gaming, Sports, Gamification, Loyalty, and Tournaments.
 
 
-  The Lucra Sports catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Lucra Sports catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Lucra Sports'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 29 more developer resources.'
@@ -275,30 +287,43 @@ plans:
 - name: Lucra Sports Plans Pricing
   plan_count: 0
   slug: lucra-sports-plans-pricing
-random_paper: 9
+random_paper: 15
 rate_limits:
 - limit_count: 1
   name: Lucra Sports Rate Limits
   slug: lucra-sports-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Lucra Sports API Rules
+  rule_count: 60
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 6
+    warn: 7
+  slug: lucra-sports-rules
 score:
-  band: developing
-  composite: 53.5
+  band: strong
+  composite: 55.1
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 45.0
+    artifact_dirs: 29
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 56.6
     developer_ergonomics: 78.6
     discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 53.5
+  previous_composite: 55.1
   provenance:
     conformance: derived
     contracts:
@@ -314,13 +339,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 32.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/lucra-sports/refs/heads/main/screenshots/lucra-sports-2026-09-02T150330.png
+screenshot: https://apis.io/screenshots/lucra-sports/lucra-sports-2026-09-02T150330.png
 security:
 - kind: authentication
   name: Lucra Sports Authentication
@@ -330,6 +355,24 @@ security:
   name: Lucra Sports Domain Security
   slug: lucra-sports-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 8
+skills:
+- name: lucra-android-errors
+  slug: lucra-sports-lucra-android-errors
+- name: lucra-android-events
+  slug: lucra-sports-lucra-android-events
+- name: lucra-android-minigames
+  slug: lucra-sports-lucra-android-minigames
+- name: lucra-android-provisioning
+  slug: lucra-sports-lucra-android-provisioning
+- name: lucra-android-start
+  slug: lucra-sports-lucra-android-start
+- name: lucra-react-native-expo
+  slug: lucra-sports-lucra-react-native-expo
+- name: lucra-react-native-minigames
+  slug: lucra-sports-lucra-react-native-minigames
+- name: lucra-react-native-start
+  slug: lucra-sports-lucra-react-native-start
 slug: lucra-sports
 tags:
 - Gaming

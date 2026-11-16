@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Coast's stable v2 REST API for programmatic access to fleet and fuel expense data — cards, drivers, vehicles, transactions, receipts, and spending controls. The API reference is served via a gated (OI
@@ -93,12 +97,12 @@ common:
   type: StatusPage
   url: https://status.coastpay.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coast/refs/heads/main/lifecycle/coast-lifecycle.yml
+  href: https://artifacts.apis.io/coast/lifecycle/coast-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/coast-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coast/refs/heads/main/security/coast-domain-security.yml
+  href: https://artifacts.apis.io/coast/security/coast-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coast-domain-security.yml
@@ -110,7 +114,7 @@ modified: '2026-07-18'
 name: Coast
 nav: Providers
 network: true
-overview: 'Coast is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Fintech, Fleet, and Fuel Cards.
+overview: 'Coast is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Fintech, Fleet Management, and Fuel Cards.
 
 
   Coast''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, and 9 more developer resources.'
@@ -119,7 +123,7 @@ score:
   band: emerging
   composite: 18.7
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -140,14 +144,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/coast/refs/heads/main/screenshots/coast-2026-07-25T205831.png
+screenshot: https://apis.io/screenshots/coast/coast-2026-07-25T205831.png
 security:
 - kind: domain-security
   name: Coast Domain Security
@@ -158,7 +162,7 @@ tags:
 - Company
 - Payments
 - Fintech
-- Fleet
+- Fleet Management
 - Fuel Cards
 - Corporate Cards
 - Expense Management

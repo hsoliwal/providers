@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Lumin Digital's platform API and SDK surface, used by financial institutions and by ecosystem partners to integrate third-party products into the digital banking experience and to move data between th
@@ -96,72 +99,72 @@ common:
   type: TrustCenter
   url: https://trust.lumindigital.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/conformance/lumin-digital-conformance.yml
+  href: https://artifacts.apis.io/lumin-digital/conformance/lumin-digital-conformance.yml
   title: ''
   type: Compliance
   url: conformance/lumin-digital-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/conformance/lumin-digital-conformance.yml
+  href: https://artifacts.apis.io/lumin-digital/conformance/lumin-digital-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lumin-digital-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/well-known/lumin-digital-security.txt
+  href: https://artifacts.apis.io/lumin-digital/well-known/lumin-digital-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/lumin-digital-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/well-known/lumin-digital-well-known.yml
+  href: https://artifacts.apis.io/lumin-digital/well-known/lumin-digital-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lumin-digital-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/security/lumin-digital-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/lumin-digital/security/lumin-digital-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/lumin-digital-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/security/lumin-digital-domain-security.yml
+  href: https://artifacts.apis.io/lumin-digital/security/lumin-digital-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lumin-digital-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/packages/lumin-digital-packages.yml
+  href: https://artifacts.apis.io/lumin-digital/packages/lumin-digital-packages.yml
   title: ''
   type: Packages
   url: packages/lumin-digital-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/cli/lumin-digital-cli.yml
+  href: https://artifacts.apis.io/lumin-digital/cli/lumin-digital-cli.yml
   title: ''
   type: CLI
   url: cli/lumin-digital-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/lifecycle/lumin-digital-lifecycle.yml
+  href: https://artifacts.apis.io/lumin-digital/lifecycle/lumin-digital-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lumin-digital-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/conventions/lumin-digital-conventions.yml
+  href: https://artifacts.apis.io/lumin-digital/conventions/lumin-digital-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lumin-digital-conventions.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/plans/lumin-digital-plans-pricing.yml
+  href: https://artifacts.apis.io/lumin-digital/plans/lumin-digital-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/lumin-digital-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/rate-limits/lumin-digital-rate-limits.yml
+  href: https://artifacts.apis.io/lumin-digital/rate-limits/lumin-digital-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/lumin-digital-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/components/lumin-digital-components.yml
+  href: https://artifacts.apis.io/lumin-digital/components/lumin-digital-components.yml
   title: ''
   type: Components
   url: components/lumin-digital-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/llms/lumin-digital-llms.txt
+  href: https://artifacts.apis.io/lumin-digital/llms/lumin-digital-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lumin-digital-llms.txt
@@ -204,7 +207,7 @@ score:
   band: emerging
   composite: 18.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -233,14 +236,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 19.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lumin-digital/refs/heads/main/screenshots/lumin-digital-2026-09-02T150347.png
+screenshot: https://apis.io/screenshots/lumin-digital/lumin-digital-2026-09-02T150347.png
 security:
 - kind: domain-security
   name: Lumin Digital Domain Security

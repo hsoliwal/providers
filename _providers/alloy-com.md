@@ -1,13 +1,17 @@
 ---
 access_model:
-  confidence: high
-  label: Free · Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: free
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.2
-  scored_at: '2026-10-17'
+  score: 27.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 69
   human_in_the_loop: 0
@@ -139,11 +146,8 @@ apis:
   description: These endpoints allow the API to be used by OAuth clients. They convert (application token) + (application secret) credentials into OAuth bearer tokens that can be used with any other API endpoint.
   name: Alloy O Auth API
   slug: alloy-com-oauth-api
-artifact_total: 86
+artifact_total: 85
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Alloy Bank Accounts API
   slug: open-alloy-com-bank-accounts-api
@@ -203,7 +207,7 @@ collections:
   slug: open-alloy
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alloy-com/refs/heads/main/capabilities/alloy-com-capability-edges.yml
+  href: https://artifacts.apis.io/alloy-com/capabilities/alloy-com-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/alloy-com-capability-edges.yml
@@ -212,17 +216,17 @@ common:
   type: GettingStarted
   url: https://developer.alloy.com/public/docs/getting-started
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alloy-com/refs/heads/main/agentic-access/alloy-com-agentic-access.yml
+  href: https://artifacts.apis.io/alloy-com/agentic-access/alloy-com-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/alloy-com-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alloy-com/refs/heads/main/security/alloy-com-domain-security.yml
+  href: https://artifacts.apis.io/alloy-com/security/alloy-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/alloy-com-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alloy-com/refs/heads/main/authentication/alloy-com-authentication.yml
+  href: https://artifacts.apis.io/alloy-com/authentication/alloy-com-authentication.yml
   title: ''
   type: Authentication
   url: authentication/alloy-com-authentication.yml
@@ -299,17 +303,17 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/alloy/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/alloy-com/refs/heads/main/plans/alloy-plans-pricing.yml
+  href: https://artifacts.apis.io/alloy-com/plans/alloy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/alloy-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/alloy-com/refs/heads/main/rate-limits/alloy-rate-limits.yml
+  href: https://artifacts.apis.io/alloy-com/rate-limits/alloy-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/alloy-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/alloy-com/refs/heads/main/finops/alloy-finops.yml
+  href: https://artifacts.apis.io/alloy-com/finops/alloy-finops.yml
   title: ''
   type: FinOps
   url: finops/alloy-finops.yml
@@ -318,7 +322,7 @@ common:
   type: Certifications
   url: ''
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alloy-com/refs/heads/main/scopes/alloy-com-scopes.yml
+  href: https://artifacts.apis.io/alloy-com/scopes/alloy-com-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/alloy-com-scopes.yml
@@ -445,7 +449,7 @@ plans:
 - name: Alloy Plans Pricing
   plan_count: 2
   slug: alloy-plans-pricing
-random_paper: 7
+random_paper: 21
 rate_limits:
 - limit_count: 0
   name: Alloy Com Rate Limits
@@ -474,13 +478,13 @@ score:
   band: developing
   composite: 50.4
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 53.3
     catalog_earned_first_party: 0.0
     catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.3
+  delta: 0.0
   facets:
     access_clarity: 43.4
     contract_governance: 9.8
@@ -495,7 +499,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 54.7
+  previous_composite: 50.4
   provenance:
     agentic_access: derived
     contracts:
@@ -509,13 +513,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 33.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/alloy-com/refs/heads/main/screenshots/alloy-com-2026-06-20T171540.png
+screenshot: https://apis.io/screenshots/alloy-com/alloy-com-2026-06-20T171540.png
 security:
 - kind: authentication
   name: Alloy Com Authentication

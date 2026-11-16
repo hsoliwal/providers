@@ -1,12 +1,14 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.4
-  scored_at: '2026-10-17'
+  score: 45.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://m-api.eu.phas.io/api/manufacturer/v1
@@ -196,15 +201,12 @@ apis:
   description: API for retrieving shipping rates for parts
   name: Phasio Shipping Rates API
   slug: phasio-shipping-rates-api
-artifact_total: 71
+artifact_total: 74
 asyncapis:
 - description: ''
   name: Phasio Webhooks
   slug: phasio-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Phasio Addresses API
   slug: open-phasio-addresses-api
@@ -303,17 +305,17 @@ collections:
   slug: open-phasio-webhooks-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/plans/phasio-plans-pricing.yml
+  href: https://artifacts.apis.io/phasio/plans/phasio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/phasio-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/capabilities/phasio-capability-edges.yml
+  href: https://artifacts.apis.io/phasio/capabilities/phasio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/phasio-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/overlays/phasio-manufacturer-overlay.yaml
+  href: https://artifacts.apis.io/phasio/overlays/phasio-manufacturer-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/phasio-manufacturer-overlay.yaml
@@ -366,42 +368,42 @@ common:
   type: Support
   url: https://phas.io/contact
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/authentication/phasio-authentication.yml
+  href: https://artifacts.apis.io/phasio/authentication/phasio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/phasio-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/well-known/phasio-well-known.yml
+  href: https://artifacts.apis.io/phasio/well-known/phasio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/phasio-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/conventions/phasio-conventions.yml
+  href: https://artifacts.apis.io/phasio/conventions/phasio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/phasio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/conventions/phasio-conventions.yml
+  href: https://artifacts.apis.io/phasio/conventions/phasio-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/phasio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/errors/phasio-problem-types.yml
+  href: https://artifacts.apis.io/phasio/errors/phasio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/phasio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/lifecycle/phasio-lifecycle.yml
+  href: https://artifacts.apis.io/phasio/lifecycle/phasio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/phasio-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/data-model/phasio-data-model.yml
+  href: https://artifacts.apis.io/phasio/data-model/phasio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/phasio-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/conformance/phasio-conformance.yml
+  href: https://artifacts.apis.io/phasio/conformance/phasio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/phasio-conformance.yml
@@ -410,42 +412,50 @@ common:
   type: Compliance
   url: https://phas.io/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/security/phasio-trust-center.yml
+  href: https://artifacts.apis.io/phasio/security/phasio-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/phasio-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/security/phasio-domain-security.yml
+  href: https://artifacts.apis.io/phasio/security/phasio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/phasio-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/asyncapi/phasio-webhooks.yml
+  href: https://artifacts.apis.io/phasio/asyncapi/phasio-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/phasio-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/mcp/phasio-mcp.yml
+  href: https://artifacts.apis.io/phasio/mcp/phasio-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/phasio-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/llms/phasio-llms.txt
+  href: https://artifacts.apis.io/phasio/llms/phasio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/phasio-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/skills/phasio-create-and-track-order.md
+  href: https://artifacts.apis.io/phasio/skills/phasio-create-and-track-order.md
   title: ''
   type: AgentSkill
   url: skills/phasio-create-and-track-order.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/skills/phasio-subscribe-to-webhooks.md
+  href: https://artifacts.apis.io/phasio/skills/phasio-subscribe-to-webhooks.md
   title: ''
   type: AgentSkill
   url: skills/phasio-subscribe-to-webhooks.md
 created: '2026-07-17'
 description: Phasio is an operating platform for manufacturing service providers that unifies intelligent quoting, production operations, connected back-office/ERP integration, part intelligence, and white-labeled customer storefronts. It serves contract manufacturers across additive manufacturing, CNC machining, and injection molding, generating CAD-based quotes in seconds and managing shop-floor routing and scheduling. The Phasio Manufacturer REST API (v1, base /api/manufacturer/v1) is published as an OpenAPI 3.2 contract of 130 operations across 32 resource groups covering orders, carts, customers and customer organisations, addresses, part revisions and specifications, requisitions and work orders, production steps and routing templates, documents, payments, shipments and shipping rates, and webhooks, authenticated with a Bearer API key created under Settings > API Keys.
+finops:
+- has_sources: true
+  method: derived
+  name: Phasio Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: phasio-finops
+  template: false
 image: https://phas.io/icon.svg
 layout: provider
 modified: '2026-10-06'
@@ -455,7 +465,7 @@ network: true
 overview: 'Phasio publishes 32 API contracts indexed on the [APIs.io](https://apis.io/) network, including Addresses API, Cart Resource API, Manufacturer Activity Controller API, and 29 more. Tagged areas include Company, Manufacturing, 3D Printing, CNC Machining, and Quoting.
 
 
-  The Phasio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Phasio catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Phasio''s developer surface includes documentation, API reference, getting-started guide, pricing, engineering blog, signup flow, support, and 24 more developer resources.'
@@ -466,30 +476,43 @@ plans:
 - name: Phasio Price Estimates
   plan_count: 0
   slug: phasio-price-estimates
-random_paper: 6
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Phasio API Rules
+  rule_count: 65
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 6
+    warn: 17
+  slug: phasio-rules
 score:
   band: strong
-  composite: 58.1
+  composite: 60.5
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 45.0
+    artifact_dirs: 26
+    catalog_earned: 52.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.3
+  delta: 0.0
   facets:
-    access_clarity: 81.6
-    contract_governance: 18.2
-    contract_quality: 58.7
+    access_clarity: 89.5
+    contract_governance: 31.8
+    contract_quality: 55.7
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 57.8
+  previous_composite: 60.5
   provenance:
     conformance: first-party
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 32
@@ -505,13 +528,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/phasio/refs/heads/main/screenshots/phasio-2026-08-17T081204.png
+screenshot: https://apis.io/screenshots/phasio/phasio-2026-08-17T081204.png
 security:
 - kind: authentication
   name: Phasio Authentication
@@ -525,6 +548,12 @@ security:
   name: Phasio Trust Center
   slug: phasio-trust-center
   summary_line: SOC 2, GDPR
+skill_count: 2
+skills:
+- name: Create and track a Phasio manufacturing order
+  slug: phasio-create-and-track-order
+- name: Subscribe to Phasio order and quote webhooks
+  slug: phasio-subscribe-to-webhooks
 slug: phasio
 tags:
 - Company

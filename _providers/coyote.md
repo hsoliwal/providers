@@ -1,13 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Enterprise
+  confidence: low
+  label: Freemium
   onboarding: unknown
-  pricing: enterprise
+  pricing: freemium
   public: false
   source:
   - plans
-  - '{''url'': ''https://coyote.com/'', ''status'': 301, ''note'': ''declared website redirects to https://rxo.com/ — a different registrable domain (coyote.com -> rxo.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.7
-  scored_at: '2026-10-17'
+  score: 25.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 22
   slug: coyote-agentic-access
   summary_line: 22 operations · 10 acting
-api_count: 2
+api_count: 1
 apis:
 - description: The primary REST API for Coyote Logistics enabling shippers and carriers to integrate freight operations directly into their TMS, WMS, ERP, or accounting systems. Provides real-time freight quotes for
   name: CoyoteGO API
@@ -87,11 +90,8 @@ apis:
   description: The Shipper - Tracking APIs API from Coyote Logistics — 4 operation(s) for shipper - tracking apis.
   name: Coyote Logistics Shipper - Tracking APIs API
   slug: coyote-shipper-tracking-apis-api
-artifact_total: 145
+artifact_total: 144
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CoyoteGO Associated Entities API API
   slug: open-coyote-associated-entities-api-api
@@ -122,17 +122,17 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/rxo/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coyote/refs/heads/main/capabilities/coyote-capability-edges.yml
+  href: https://artifacts.apis.io/coyote/capabilities/coyote-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/coyote-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coyote/refs/heads/main/agentic-access/coyote-agentic-access.yml
+  href: https://artifacts.apis.io/coyote/agentic-access/coyote-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/coyote-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coyote/refs/heads/main/security/coyote-domain-security.yml
+  href: https://artifacts.apis.io/coyote/security/coyote-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coyote-domain-security.yml
@@ -169,17 +169,17 @@ common:
   type: X
   url: https://x.com/CoyoteLogistics
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/coyote/refs/heads/main/plans/coyote-plans-pricing.yml
+  href: https://artifacts.apis.io/coyote/plans/coyote-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/coyote-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/coyote/refs/heads/main/rate-limits/coyote-rate-limits.yml
+  href: https://artifacts.apis.io/coyote/rate-limits/coyote-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/coyote-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/coyote/refs/heads/main/finops/coyote-finops.yml
+  href: https://artifacts.apis.io/coyote/finops/coyote-finops.yml
   title: ''
   type: FinOps
   url: finops/coyote-finops.yml
@@ -577,7 +577,7 @@ plans:
 - name: Coyote Plans Pricing
   plan_count: 3
   slug: coyote-plans-pricing
-random_paper: 21
+random_paper: 11
 rate_limits:
 - limit_count: 3
   name: Coyote Rate Limits
@@ -596,29 +596,29 @@ rules:
   slug: coyote-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 29.0
+  composite: 30.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 51.3
     catalog_earned_first_party: 0.0
     catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.4
+  delta: 1.4
   facets:
     access_clarity: 13.2
     contract_governance: 9.8
-    contract_quality: 52.5
+    contract_quality: 58.0
     developer_ergonomics: 28.6
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 37.4
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 8
   regulatory:
     applies: true
@@ -626,13 +626,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 14.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/coyote/refs/heads/main/screenshots/coyote-2026-06-20T175149.png
+screenshot: https://apis.io/screenshots/coyote/coyote-2026-06-20T175149.png
 security:
 - kind: domain-security
   name: Coyote Domain Security

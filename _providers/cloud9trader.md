@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +26,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.9
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
-- description: Unified API for algorithmic cryptocurrency and forex trading, providing REST and WebSocket endpoints for market data, order execution, and account management.
+- baseURL: https://api.cloud9trader.com
+  baseurl_source: spec
+  description: Unified API for algorithmic cryptocurrency and forex trading, providing REST and WebSocket endpoints for market data, order execution, and account management.
   name: Cloud9Trader API
-  slug: cloud9trader-api-2
+  slug: cloud9trader-api
 - baseURL: https://api.cloud9trader.com
   baseurl_source: declared
   description: The Cloud9trader API API from Cloud9trader — 1 operation(s) for cloud9trader api.
@@ -42,37 +58,37 @@ apis:
 artifact_total: 10
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloud9trader/refs/heads/main/plans/cloud9trader-plans-pricing.yml
+  href: https://artifacts.apis.io/cloud9trader/plans/cloud9trader-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cloud9trader-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloud9trader/refs/heads/main/rules/cloud9trader-rules.yml
+  href: https://artifacts.apis.io/cloud9trader/rules/cloud9trader-rules.yml
   title: ''
   type: Spectral
   url: rules/cloud9trader-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloud9trader/refs/heads/main/json-ld/cloud9trader-context.jsonld
+  href: https://artifacts.apis.io/cloud9trader/json-ld/cloud9trader-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cloud9trader-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloud9trader/refs/heads/main/vocabulary/cloud9trader-vocabulary.yml
+  href: https://artifacts.apis.io/cloud9trader/vocabulary/cloud9trader-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cloud9trader-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloud9trader/refs/heads/main/data-model/cloud9trader-data-model.yml
+  href: https://artifacts.apis.io/cloud9trader/data-model/cloud9trader-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cloud9trader-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloud9trader/refs/heads/main/conformance/cloud9trader-conformance.yml
+  href: https://artifacts.apis.io/cloud9trader/conformance/cloud9trader-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloud9trader-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloud9trader/refs/heads/main/hosts/cloud9trader-hosts.yml
+  href: https://artifacts.apis.io/cloud9trader/hosts/cloud9trader-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cloud9trader-hosts.yml
@@ -97,7 +113,7 @@ common:
   type: APIReference
   url: https://www.cloud9trader.com/documentation/algorithmic-trading/api-reference
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloud9trader/refs/heads/main/security/cloud9trader-domain-security.yml
+  href: https://artifacts.apis.io/cloud9trader/security/cloud9trader-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloud9trader-domain-security.yml
@@ -150,7 +166,7 @@ plans:
 - name: Cloud9Trader Plans Pricing
   plan_count: 4
   slug: cloud9trader-plans-pricing
-random_paper: 2
+random_paper: 10
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -165,22 +181,24 @@ rules:
     warn: 1
   slug: cloud9trader-rules
 score:
-  band: thin
-  composite: 28.0
+  band: emerging
+  composite: 23.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 64.8
     catalog_earned_first_party: 12.0
     catalog_gap: 50.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.4
   facets:
-    access_clarity: 55.3
+    access_clarity: 43.4
     contract_governance: 22.0
-    contract_quality: 22.4
-    developer_ergonomics: 16.7
+    contract_quality: 22.5
+    developer_ergonomics: 8.3
     discoverability: 53.6
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  previous_composite: 28.0
   provenance:
     conformance: derived
     contracts:
@@ -195,12 +213,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/cloud9trader/cloud9trader-2026-11-03T124459.png
 security:
 - kind: domain-security
   name: Cloud9Trader Domain Security

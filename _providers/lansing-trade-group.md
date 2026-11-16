@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://www.lansingtradegroup.com'', ''status'': 302, ''note'': ''declared website redirects to https://www.andersonsgrain.com/ — a different registrable domain (lansingtradegroup.com -> andersonsgrain.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lansing-trade-group/refs/heads/main/security/lansing-trade-group-domain-security.yml
+  href: https://artifacts.apis.io/lansing-trade-group/security/lansing-trade-group-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lansing-trade-group-domain-security.yml
@@ -90,7 +94,7 @@ press:
 - date: ''
   title: The Andersons, Inc. Completes Acquisition of Lansing ...
   url: https://www.prnewswire.com/news-releases/the-andersons-inc-completes-acquisition-of-lansing-trade-group-llc-announces-inducement-grants-under-nasdaq-listing-rule-5635-300771803.html
-random_paper: 9
+random_paper: 3
 score:
   band: minimal
   composite: 3.7
@@ -116,14 +120,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 4.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lansing-trade-group/refs/heads/main/screenshots/lansing-trade-group-2026-06-20T184313.png
+screenshot: https://apis.io/screenshots/lansing-trade-group/lansing-trade-group-2026-06-20T184313.png
 security:
 - kind: domain-security
   name: Lansing Trade Group Domain Security

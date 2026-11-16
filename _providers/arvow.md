@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API for Arvow's AI-powered SEO tools
@@ -32,27 +46,27 @@ apis:
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/arvow/refs/heads/main/plans/arvow-plans-pricing.yml
+  href: https://artifacts.apis.io/arvow/plans/arvow-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/arvow-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arvow/refs/heads/main/llms/arvow-llms.txt
+  href: https://artifacts.apis.io/arvow/llms/arvow-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/arvow-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arvow/refs/heads/main/well-known/arvow-well-known.yml
+  href: https://artifacts.apis.io/arvow/well-known/arvow-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/arvow-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arvow/refs/heads/main/hosts/arvow-hosts.yml
+  href: https://artifacts.apis.io/arvow/hosts/arvow-hosts.yml
   title: ''
   type: Hosts
   url: hosts/arvow-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arvow/refs/heads/main/vendors/arvow-vendors.yml
+  href: https://artifacts.apis.io/arvow/vendors/arvow-vendors.yml
   title: ''
   type: Vendors
   url: vendors/arvow-vendors.yml
@@ -89,7 +103,7 @@ common:
   type: GettingStarted
   url: https://docs.arvow.com/articles/6716184-getting-started-with-arvow
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arvow/refs/heads/main/security/arvow-domain-security.yml
+  href: https://artifacts.apis.io/arvow/security/arvow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arvow-domain-security.yml
@@ -126,24 +140,26 @@ plans:
 - name: Arvow Plans Pricing
   plan_count: 5
   slug: arvow-plans-pricing
-random_paper: 9
+random_paper: 7
 score:
-  band: thin
-  composite: 28.3
+  band: emerging
+  composite: 20.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 44.0
     catalog_earned_first_party: 12.0
     catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.1
   facets:
-    access_clarity: 63.2
+    access_clarity: 47.4
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 28.6
+    developer_ergonomics: 14.3
     discoverability: 64.3
-    operational_transparency: 23.7
+    operational_transparency: 11.8
+  previous_composite: 28.3
   provenance:
     mcp: first-party
   regulatory:
@@ -151,13 +167,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/arvow/arvow-2026-11-03T121144.png
 security:
 - kind: domain-security
   name: Arvow Domain Security

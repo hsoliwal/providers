@@ -1,13 +1,12 @@
 ---
 access_model:
-  confidence: medium
-  label: Enterprise business APIs (advisor onboarding) + self-serve informational APIs on the developer portal
-  onboarding: approval
-  pricing: enterprise
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
   public: false
   source:
-  - authentication
-  - documentation
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 9
 apis:
 - description: Self-serve informational API on the RBC External Developer Portal that accepts a postal code or keyword search and returns the address and hours of operation of the closest RBC branch, or a list of ne
@@ -67,7 +69,7 @@ apis:
 artifact_total: 10
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rbc/refs/heads/main/security/rbc-domain-security.yml
+  href: https://artifacts.apis.io/rbc/security/rbc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rbc-domain-security.yml
@@ -116,7 +118,7 @@ common:
   type: APIReference
   url: https://developer.rbc.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rbc/refs/heads/main/llms/rbc-llms.txt
+  href: https://artifacts.apis.io/rbc/llms/rbc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rbc-llms.txt
@@ -133,12 +135,12 @@ overview: 'Royal Bank of Canada is listed with 9 APIs on the [APIs.io](https://a
 
 
   Royal Bank of Canada''s developer surface includes documentation, engineering blog, getting-started guide, signup flow, API reference, and 8 more developer resources.'
-random_paper: 3
+random_paper: 23
 score:
   band: emerging
   composite: 20.8
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -166,14 +168,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 11.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rbc/refs/heads/main/screenshots/rbc-2026-09-02T152934.png
+screenshot: https://apis.io/screenshots/rbc/rbc-2026-09-02T152934.png
 security:
 - kind: domain-security
   name: Rbc Domain Security

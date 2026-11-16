@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.9
-  scored_at: '2026-10-17'
+  score: 28.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 143
   human_in_the_loop: 0
@@ -388,11 +392,8 @@ apis:
   description: The Yeasts API from Labguru — 2 operation(s) for yeasts.
   name: Labguru Yeasts API
   slug: labguru-yeasts-api
-artifact_total: 329
+artifact_total: 328
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Labguru Antibodies API
   slug: open-labguru-antibodies-api
@@ -602,17 +603,17 @@ collections:
   slug: open-labguru-yeasts-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/capabilities/labguru-capability-edges.yml
+  href: https://artifacts.apis.io/labguru/capabilities/labguru-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/labguru-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/agentic-access/labguru-agentic-access.yml
+  href: https://artifacts.apis.io/labguru/agentic-access/labguru-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/labguru-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/security/labguru-domain-security.yml
+  href: https://artifacts.apis.io/labguru/security/labguru-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/labguru-domain-security.yml
@@ -645,17 +646,17 @@ common:
   type: X
   url: https://twitter.com/labguru
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/plans/labguru-plans-pricing.yml
+  href: https://artifacts.apis.io/labguru/plans/labguru-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/labguru-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/rate-limits/labguru-rate-limits.yml
+  href: https://artifacts.apis.io/labguru/rate-limits/labguru-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/labguru-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/finops/labguru-finops.yml
+  href: https://artifacts.apis.io/labguru/finops/labguru-finops.yml
   title: ''
   type: FinOps
   url: finops/labguru-finops.yml
@@ -836,7 +837,7 @@ json_schemas:
   property_count: 2
   slug: addElement
 - name: addExperiment
-  property_count: 0
+  property_count: 1
   slug: addExperiment
 - name: Add item
   property_count: 2
@@ -854,28 +855,28 @@ json_schemas:
   property_count: 2
   slug: assignItemToDataset
 - name: createAntibody
-  property_count: 0
+  property_count: 1
   slug: createAntibody
 - name: createAttachment
   property_count: 5
   slug: createAttachment
 - name: createBacterium
-  property_count: 0
+  property_count: 1
   slug: createBacterium
 - name: createBox
-  property_count: 0
+  property_count: 1
   slug: createBox
 - name: createCellLine
-  property_count: 0
+  property_count: 1
   slug: createCellLine
 - name: createComment
   property_count: 2
   slug: createComment
 - name: createCompany
-  property_count: 0
+  property_count: 1
   slug: createCompany
 - name: createCompound
-  property_count: 0
+  property_count: 1
   slug: createCompound
 - name: Create consume sample pooling event
   property_count: 2
@@ -887,82 +888,82 @@ json_schemas:
   property_count: 2
   slug: createDataset
 - name: createDocument
-  property_count: 0
+  property_count: 1
   slug: createDocument
 - name: createEquipment
-  property_count: 0
+  property_count: 1
   slug: createEquipment
 - name: createEvent
-  property_count: 0
+  property_count: 1
   slug: createEvent
 - name: Create fixed sample pooling event
   property_count: 2
   slug: createFixedSamplePoolingEvent
 - name: createFlag
-  property_count: 0
+  property_count: 1
   slug: createFlag
 - name: createFly
-  property_count: 0
+  property_count: 1
   slug: createFly
 - name: createFolder
   property_count: 2
   slug: createFolder
 - name: createFungus
-  property_count: 0
+  property_count: 1
   slug: createFungus
 - name: createGene
-  property_count: 0
+  property_count: 1
   slug: createGene
 - name: createGenericItem
-  property_count: 0
+  property_count: 1
   slug: createGenericItem
 - name: createLink
-  property_count: 0
+  property_count: 1
   slug: createLink
 - name: createLipid
-  property_count: 0
+  property_count: 1
   slug: createLipid
 - name: createMaintenance
   property_count: 2
   slug: createMaintenance
 - name: createMaintenanceEvent
-  property_count: 0
+  property_count: 1
   slug: createMaintenanceEvent
 - name: createMaintenanceTemplate
-  property_count: 0
+  property_count: 1
   slug: createMaintenanceTemplate
 - name: createMaintenanceType
   property_count: 2
   slug: createMaintenanceType
 - name: createMaterial
-  property_count: 0
+  property_count: 1
   slug: createMaterial
 - name: createNote
-  property_count: 0
+  property_count: 1
   slug: createNote
 - name: createPaper
-  property_count: 0
+  property_count: 1
   slug: createPaper
 - name: createPlant
-  property_count: 0
+  property_count: 1
   slug: createPlant
 - name: createPlasmid
-  property_count: 0
+  property_count: 1
   slug: createPlasmid
 - name: createPrimer
-  property_count: 0
+  property_count: 1
   slug: createPrimer
 - name: createProject
-  property_count: 0
+  property_count: 1
   slug: createProject
 - name: createProtein
-  property_count: 0
+  property_count: 1
   slug: createProtein
 - name: createProtocol
   property_count: 2
   slug: createProtocol
 - name: createReport
-  property_count: 0
+  property_count: 1
   slug: createReport
 - name: createRequest
   property_count: 2
@@ -971,43 +972,43 @@ json_schemas:
   property_count: 2
   slug: createRequestTemplate
 - name: createRodentCage
-  property_count: 0
+  property_count: 1
   slug: createRodentCage
 - name: createRodentSpecimen
-  property_count: 0
+  property_count: 1
   slug: createRodentSpecimen
 - name: createRodentStrain
-  property_count: 0
+  property_count: 1
   slug: createRodentStrain
 - name: createSOP
-  property_count: 0
+  property_count: 1
   slug: createSOP
 - name: createSection
   property_count: 2
   slug: createSection
 - name: createSeed
-  property_count: 0
+  property_count: 1
   slug: createSeed
 - name: createSequence
-  property_count: 0
+  property_count: 1
   slug: createSequence
 - name: createSession
   property_count: 3
   slug: createSession
 - name: createStock
-  property_count: 0
+  property_count: 1
   slug: createStock
 - name: createStorage
-  property_count: 0
+  property_count: 1
   slug: createStorage
 - name: createTag
   property_count: 2
   slug: createTag
 - name: createTask
-  property_count: 0
+  property_count: 1
   slug: createTask
 - name: createTissue
-  property_count: 0
+  property_count: 1
   slug: createTissue
 - name: createUnit
   property_count: 2
@@ -1016,7 +1017,7 @@ json_schemas:
   property_count: 3
   slug: createVector
 - name: createVirus
-  property_count: 0
+  property_count: 1
   slug: createVirus
 - name: createVisualization
   property_count: 2
@@ -1025,10 +1026,10 @@ json_schemas:
   property_count: 2
   slug: createWebhook
 - name: createWorm
-  property_count: 0
+  property_count: 1
   slug: createWorm
 - name: createYeast
-  property_count: 0
+  property_count: 1
   slug: createYeast
 - name: deleteTag
   property_count: 2
@@ -1244,7 +1245,7 @@ plans:
 - name: Labguru Plans Pricing
   plan_count: 3
   slug: labguru-plans-pricing
-random_paper: 6
+random_paper: 10
 rate_limits:
 - limit_count: 3
   name: Labguru Rate Limits
@@ -1265,13 +1266,13 @@ score:
   band: thin
   composite: 30.8
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 20
     catalog_earned: 57.3
     catalog_earned_first_party: 0.0
     catalog_gap: 57.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 9.8
@@ -1279,7 +1280,7 @@ score:
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 39.1
+  previous_composite: 30.8
   provenance:
     agentic_access: derived
     contracts:
@@ -1293,13 +1294,13 @@ score:
     regime: Health
     regime_id: health
     score: 13.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/screenshots/labguru-2026-06-20T184239.png
+screenshot: https://apis.io/screenshots/labguru/labguru-2026-06-20T184239.png
 security:
 - kind: domain-security
   name: Labguru Domain Security

@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,32 +27,20 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 28.8
-  scored_at: '2026-10-17'
+  score: 29.3
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
-- baseURL: https://api.kugelaudio.com
-  baseurl_source: declared
-  description: The 11labs API from KugelAudio — 6 operation(s) for 11labs.
-  name: KugelAudio 11labs API
-  slug: kugelaudio-11labs-api
-- baseURL: https://api.kugelaudio.com
-  baseurl_source: declared
-  description: The Audio API from KugelAudio — 1 operation(s) for audio.
-  name: KugelAudio Audio API
-  slug: kugelaudio-audio-api
-- baseURL: https://api.kugelaudio.com
-  baseurl_source: declared
-  description: The billing API from KugelAudio — 2 operation(s) for billing.
-  name: KugelAudio Billing API
-  slug: kugelaudio-billing-api
 - baseURL: https://api.kugelaudio.com
   baseurl_source: declared
   description: The Dictionaries API from KugelAudio — 5 operation(s) for dictionaries.
@@ -59,63 +48,35 @@ apis:
   slug: kugelaudio-dictionaries-api
 - baseURL: https://api.kugelaudio.com
   baseurl_source: declared
-  description: The Health API from KugelAudio — 1 operation(s) for health.
-  name: KugelAudio Health API
-  slug: kugelaudio-health-api
-- baseURL: https://api.kugelaudio.com
-  baseurl_source: declared
-  description: The license API from KugelAudio — 12 operation(s) for license.
-  name: KugelAudio License API
-  slug: kugelaudio-license-api
-- baseURL: https://api.kugelaudio.com
-  baseurl_source: declared
   description: The Models API from KugelAudio — 1 operation(s) for models.
   name: KugelAudio Models API
   slug: kugelaudio-models-api
 - baseURL: https://api.kugelaudio.com
   baseurl_source: declared
-  description: The Normalize API from KugelAudio — 1 operation(s) for normalize.
-  name: KugelAudio Normalize API
-  slug: kugelaudio-normalize-api
-- baseURL: https://api.kugelaudio.com
-  baseurl_source: declared
-  description: The Post Overrides API from KugelAudio — 1 operation(s) for post overrides.
-  name: KugelAudio Post Overrides API
-  slug: kugelaudio-post-overrides-api
-- baseURL: https://api.kugelaudio.com
-  baseurl_source: declared
-  description: The Predict API from KugelAudio — 1 operation(s) for predict.
-  name: KugelAudio Predict API
-  slug: kugelaudio-predict-api
-- baseURL: https://api.kugelaudio.com
-  baseurl_source: declared
-  description: The Ready API from KugelAudio — 1 operation(s) for ready.
-  name: KugelAudio Ready API
-  slug: kugelaudio-ready-api
-- baseURL: https://api.kugelaudio.com
-  baseurl_source: declared
-  description: The Tts API from KugelAudio — 1 operation(s) for tts.
-  name: KugelAudio Tts API
-  slug: kugelaudio-tts-api
-- baseURL: https://api.kugelaudio.com
-  baseurl_source: declared
-  description: The Vapi API from KugelAudio — 1 operation(s) for vapi.
-  name: KugelAudio Vapi API
-  slug: kugelaudio-vapi-api
-- baseURL: https://api.kugelaudio.com
-  baseurl_source: declared
   description: The Voices API from KugelAudio — 6 operation(s) for voices.
   name: KugelAudio Voices API
   slug: kugelaudio-voices-api
-artifact_total: 33
+- baseURL: https://api.kugelaudio.com
+  baseurl_source: declared
+  description: The ElevenLabs compatible API from KugelAudio — 5 operation(s) for elevenlabs compatible.
+  name: KugelAudio ElevenLabs compatible API
+  slug: kugelaudio-elevenlabs-compatible-api
+- baseURL: https://api.kugelaudio.com
+  baseurl_source: declared
+  description: The Projects API from KugelAudio — 4 operation(s) for projects.
+  name: KugelAudio Projects API
+  slug: kugelaudio-projects-api
+- baseURL: https://api.kugelaudio.com
+  baseurl_source: declared
+  description: The Text to Speech API from KugelAudio — 1 operation(s) for text to speech.
+  name: KugelAudio Text to Speech API
+  slug: kugelaudio-text-to-speech-api
+artifact_total: 27
 asyncapis:
 - description: API Evangelist description of KugelAudio's documented WebSocket streaming surface. KugelAudio publishes no AsyncAPI document of its own; this file is GENERATED from the provider's own published wire-f
   name: KugelAudio TTS Streaming API
   slug: kugelaudio-tts-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: KugelAudio TTS 11labs API
   slug: open-kugelaudio-11labs-api
@@ -160,7 +121,7 @@ collections:
   slug: open-kugelaudio-voices-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/plans/kugelaudio-plans-pricing.yml
+  href: https://artifacts.apis.io/kugelaudio/plans/kugelaudio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kugelaudio-plans-pricing.yml
@@ -169,22 +130,22 @@ common:
   type: Blog
   url: https://www.kugelaudio.com/en/articles
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/capabilities/kugelaudio-capability-edges.yml
+  href: https://artifacts.apis.io/kugelaudio/capabilities/kugelaudio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/kugelaudio-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/mcp/kugelaudio-mcp.yml
+  href: https://artifacts.apis.io/kugelaudio/mcp/kugelaudio-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/kugelaudio-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/overlays/kugelaudio-tts-overlay.yaml
+  href: https://artifacts.apis.io/kugelaudio/overlays/kugelaudio-tts-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kugelaudio-tts-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/security/kugelaudio-domain-security.yml
+  href: https://artifacts.apis.io/kugelaudio/security/kugelaudio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kugelaudio-domain-security.yml
@@ -245,73 +206,81 @@ common:
   type: Deprecation
   url: https://docs.kugelaudio.com/api-reference/introduction
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/authentication/kugelaudio-authentication.yml
+  href: https://artifacts.apis.io/kugelaudio/authentication/kugelaudio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kugelaudio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/errors/kugelaudio-error-codes.yml
+  href: https://artifacts.apis.io/kugelaudio/errors/kugelaudio-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/kugelaudio-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/conventions/kugelaudio-conventions.yml
+  href: https://artifacts.apis.io/kugelaudio/conventions/kugelaudio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kugelaudio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/lifecycle/kugelaudio-lifecycle.yml
+  href: https://artifacts.apis.io/kugelaudio/lifecycle/kugelaudio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kugelaudio-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/conformance/kugelaudio-conformance.yml
+  href: https://artifacts.apis.io/kugelaudio/conformance/kugelaudio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kugelaudio-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/packages/kugelaudio-packages.yml
+  href: https://artifacts.apis.io/kugelaudio/packages/kugelaudio-packages.yml
   title: ''
   type: Packages
   url: packages/kugelaudio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/packages/kugelaudio-packages.yml
+  href: https://artifacts.apis.io/kugelaudio/packages/kugelaudio-packages.yml
   title: ''
   type: SDKs
   url: packages/kugelaudio-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/well-known/kugelaudio-well-known.yml
+  href: https://artifacts.apis.io/kugelaudio/well-known/kugelaudio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kugelaudio-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/well-known/kugelaudio-api-catalog.json
+  href: https://artifacts.apis.io/kugelaudio/well-known/kugelaudio-api-catalog.json
   title: ''
   type: APICatalog
   url: well-known/kugelaudio-api-catalog.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kugelaudio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/llms/kugelaudio-llms.txt
+  href: https://artifacts.apis.io/kugelaudio/llms/kugelaudio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kugelaudio-llms.txt
 created: '2026-07-17'
 description: KugelAudio is a Y Combinator-backed, Germany-based voice AI company (KugelAudio GmbH) offering low-latency text-to-speech built, trained, and hosted entirely in the European Union. Its kugel-3 and kugel-2-turbo models produce natural speech in 26+ languages with accent and dialect coverage, voice cloning from a short reference sample, per-project pronunciation dictionaries with IPA support, word-level timestamps, and inline break, spell, and prosody tags. The platform positions EU data sovereignty as its core differentiator, operating outside the reach of the US CLOUD Act and offering a direct EU endpoint plus on-premise and dedicated deployment. The developer surface is a REST API for generation, voices, models, and dictionaries plus three WebSocket streaming channels tuned for real-time voice agents, including token-by-token input, barge-in, and up to 20 concurrent contexts per connection. Drop-in compatibility surfaces let ElevenLabs-compatible SDKs, LiveKit, PipeCat, and
   Vapi integrations point at KugelAudio without rewrites.
+finops:
+- has_sources: true
+  method: derived
+  name: Kugelaudio Finops
+  primary_unit: audio minute
+  service_category: ''
+  slug: kugelaudio-finops
+  template: false
 image: https://www.kugelaudio.com/icon.png
 layout: provider
 modified: '2026-10-06'
 name: KugelAudio
 nav: Providers
 network: true
-overview: 'KugelAudio publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including 11labs API, Audio API, Billing API, and 11 more. Tagged areas include Voice, Text-to-Speech, Speech Synthesis, Voice AI, and Voice Cloning.
+overview: 'KugelAudio publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Dictionaries API, Models API, Voices API, and 3 more. Tagged areas include Voice, Text-to-Speech, Speech Synthesis, Voice AI, and Voice Cloning.
 
 
-  The KugelAudio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The KugelAudio catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   KugelAudio''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 24 more developer resources.'
@@ -320,21 +289,34 @@ plans:
   plan_count: 3
   slug: kugelaudio-plans-pricing
 random_paper: 10
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: KugelAudio API Rules
+  rule_count: 57
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 6
+  slug: kugelaudio-rules
 score:
-  band: developing
-  composite: 52.8
+  band: strong
+  composite: 57.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 49.0
+    artifact_dirs: 27
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.4
   facets:
-    access_clarity: 71.1
-    contract_governance: 4.5
-    contract_quality: 48.2
+    access_clarity: 78.9
+    contract_governance: 18.2
+    contract_quality: 59.7
     developer_ergonomics: 71.4
     discoverability: 73.2
     operational_transparency: 26.3
@@ -345,14 +327,14 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 46.5
+  previous_composite: 57.4
   provenance:
     conformance: derived
     contracts:
-      callable: 0.0
+      callable: 30.0
       derived: 0
-      marker_coverage: 0.0
-      total: 14
+      marker_coverage: 30.0
+      total: 20
     mcp: derived
     skills: first-party
   regulatory:
@@ -361,13 +343,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 21.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
-    score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/screenshots/kugelaudio-2026-07-25T224326.png
+    score: 0.0
+screenshot: https://apis.io/screenshots/kugelaudio/kugelaudio-2026-07-25T224326.png
 security:
 - kind: authentication
   name: Kugelaudio Authentication
@@ -377,6 +359,10 @@ security:
   name: Kugelaudio Domain Security
   slug: kugelaudio-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 1
+skills:
+- name: kugelaudio-api
+  slug: kugelaudio-api
 slug: kugelaudio
 tags:
 - Voice

@@ -1,29 +1,43 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
     agentic_access: false
     agentic_commerce: false
-    auth_clarity: served
+    auth_clarity: false
     consent_identity: false
-    delegated_identity: served
+    delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
-    well_known_catalog: false
+    well_known_catalog: true
   schema_version: '0.2'
-  score: 10.8
-  scored_at: '2026-10-17'
+  score: 2.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Coefficient API provides programmatic access to its no‑code data platform, enabling integration with spreadsheets and custom connectors.
@@ -32,27 +46,27 @@ apis:
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/coefficient/refs/heads/main/plans/coefficient-plans-pricing.yml
+  href: https://artifacts.apis.io/coefficient/plans/coefficient-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/coefficient-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coefficient/refs/heads/main/llms/coefficient-llms.txt
+  href: https://artifacts.apis.io/coefficient/llms/coefficient-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/coefficient-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coefficient/refs/heads/main/well-known/coefficient-well-known.yml
+  href: https://artifacts.apis.io/coefficient/well-known/coefficient-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/coefficient-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coefficient/refs/heads/main/hosts/coefficient-hosts.yml
+  href: https://artifacts.apis.io/coefficient/hosts/coefficient-hosts.yml
   title: ''
   type: Hosts
   url: hosts/coefficient-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coefficient/refs/heads/main/vendors/coefficient-vendors.yml
+  href: https://artifacts.apis.io/coefficient/vendors/coefficient-vendors.yml
   title: ''
   type: Vendors
   url: vendors/coefficient-vendors.yml
@@ -85,7 +99,7 @@ common:
   type: Documentation
   url: https://dev.coefficient.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coefficient/refs/heads/main/security/coefficient-domain-security.yml
+  href: https://artifacts.apis.io/coefficient/security/coefficient-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coefficient-domain-security.yml
@@ -117,36 +131,40 @@ plans:
 - name: Coefficient Plans Pricing
   plan_count: 4
   slug: coefficient-plans-pricing
-random_paper: 7
+random_paper: 23
 score:
   band: emerging
-  composite: 25.5
+  composite: 23.1
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 9
     catalog_earned: 44.0
     catalog_earned_first_party: 12.0
     catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.4
   facets:
     access_clarity: 63.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 28.6
+    developer_ergonomics: 21.4
     discoverability: 64.3
     operational_transparency: 0.0
+  previous_composite: 25.5
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 13.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/coefficient/coefficient-2026-11-03T124738.png
 security:
 - kind: domain-security
   name: Coefficient Domain Security

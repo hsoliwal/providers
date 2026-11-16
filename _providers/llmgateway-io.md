@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.3
-  scored_at: '2026-10-17'
+  score: 48.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -32,7 +50,7 @@ agentic_access:
   operation_count: 21
   slug: llmgateway-io-agentic-access
   summary_line: 21 operations · 14 acting
-api_count: 2
+api_count: 1
 apis:
 - description: Model Context Protocol server (Streamable HTTP) at /mcp, as stated in the OpenAPI info.description; not probed further.
   name: LLM Gateway MCP Server
@@ -117,35 +135,40 @@ apis:
   description: The Chat Completions API from LLM Gateway — 1 operation(s) for chat completions.
   name: LLM Gateway Chat Completions API
   slug: llmgateway-io-chat-completions-api
-artifact_total: 24
+artifact_total: 26
 common:
+- group: commercial
+  href: https://artifacts.apis.io/llmgateway-io/plans/llmgateway-io-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/llmgateway-io-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/capabilities/llmgateway-io-capability-edges.yml
+  href: https://artifacts.apis.io/llmgateway-io/capabilities/llmgateway-io-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/llmgateway-io-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/agentic-access/llmgateway-io-agentic-access.yml
+  href: https://artifacts.apis.io/llmgateway-io/agentic-access/llmgateway-io-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/llmgateway-io-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/rules/llmgateway-io-rules.yml
+  href: https://artifacts.apis.io/llmgateway-io/rules/llmgateway-io-rules.yml
   title: ''
   type: Spectral
   url: rules/llmgateway-io-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/json-ld/llmgateway-io-context.jsonld
+  href: https://artifacts.apis.io/llmgateway-io/json-ld/llmgateway-io-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/llmgateway-io-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/vocabulary/llmgateway-io-vocabulary.yml
+  href: https://artifacts.apis.io/llmgateway-io/vocabulary/llmgateway-io-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/llmgateway-io-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/data-model/llmgateway-io-data-model.yml
+  href: https://artifacts.apis.io/llmgateway-io/data-model/llmgateway-io-data-model.yml
   title: ''
   type: DataModel
   url: data-model/llmgateway-io-data-model.yml
@@ -154,27 +177,27 @@ common:
   type: Compliance
   url: https://security.llmgateway.io/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/errors/llmgateway-io-problem-types.yml
+  href: https://artifacts.apis.io/llmgateway-io/errors/llmgateway-io-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/llmgateway-io-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/conformance/llmgateway-io-conformance.yml
+  href: https://artifacts.apis.io/llmgateway-io/conformance/llmgateway-io-conformance.yml
   title: ''
   type: Conformance
   url: conformance/llmgateway-io-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/llms/llmgateway-io-llms.txt
+  href: https://artifacts.apis.io/llmgateway-io/llms/llmgateway-io-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/llmgateway-io-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/well-known/llmgateway-io-well-known.yml
+  href: https://artifacts.apis.io/llmgateway-io/well-known/llmgateway-io-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/llmgateway-io-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/hosts/llmgateway-io-hosts.yml
+  href: https://artifacts.apis.io/llmgateway-io/hosts/llmgateway-io-hosts.yml
   title: ''
   type: Hosts
   url: hosts/llmgateway-io-hosts.yml
@@ -211,17 +234,17 @@ common:
   type: DeveloperPortal
   url: https://docs.llmgateway.io
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/authentication/llmgateway-io-authentication.yml
+  href: https://artifacts.apis.io/llmgateway-io/authentication/llmgateway-io-authentication.yml
   title: ''
   type: Authentication
   url: authentication/llmgateway-io-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/security/llmgateway-io-trust-center.yml
+  href: https://artifacts.apis.io/llmgateway-io/security/llmgateway-io-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/llmgateway-io-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/llmgateway-io/refs/heads/main/security/llmgateway-io-domain-security.yml
+  href: https://artifacts.apis.io/llmgateway-io/security/llmgateway-io-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/llmgateway-io-domain-security.yml
@@ -251,6 +274,14 @@ common:
   url: https://github.com/theopenco/llmgateway
 created: '2026-10-12'
 description: 'LLM Gateway is an OpenAI-compatible LLM gateway: one API key routes chat completions, embeddings, images, audio, video, moderation, OCR, rerank, web search and typed decisions across model providers. It publishes an OpenAPI 3.0 contract at https://api.llmgateway.io/openapi.json, which includes POST /v1/decisions (OpenAI-compatible typed, probabilistic decisions) and POST /v1/systemone (the TypeSafe System One-compatible endpoint, documented as legacy and to be deprecated in favor of /v1/decisions). An MCP server (Streamable HTTP) is served at /mcp with OAuth metadata at /.well-known/oauth-authorization-server and /.well-known/oauth-protected-resource.'
+finops:
+- has_sources: true
+  method: derived
+  name: Llmgateway Io Finops
+  primary_unit: ''
+  service_category: ''
+  slug: llmgateway-io-finops
+  template: true
 image: https://llmgateway.io/opengraph-image?6e44604ced30de3d
 jsonld:
 - class_count: 2
@@ -272,7 +303,11 @@ overview: 'LLM Gateway publishes 17 API contracts indexed on the [APIs.io](https
   The LLM Gateway catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  LLM Gateway''s developer surface includes engineering blog, pricing, getting-started guide, authentication, documentation, changelog, and 23 more developer resources.'
+  LLM Gateway''s developer surface includes engineering blog, pricing, getting-started guide, authentication, documentation, changelog, and 24 more developer resources.'
+plans:
+- name: Llmgateway Io Plans Pricing
+  plan_count: 2
+  slug: llmgateway-io-plans-pricing
 random_paper: 20
 rules:
 - authorship: generated
@@ -289,21 +324,23 @@ rules:
   slug: llmgateway-io-rules
 score:
   band: developing
-  composite: 47.6
+  composite: 40.9
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 47.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 67.3
+    artifact_dirs: 23
+    catalog_earned: 55.8
+    catalog_earned_first_party: 8.0
+    catalog_gap: 59.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.9
   facets:
-    access_clarity: 60.5
+    access_clarity: 55.3
     contract_governance: 22.0
     contract_quality: 50.4
-    developer_ergonomics: 45.2
+    developer_ergonomics: 28.6
     discoverability: 73.2
-    operational_transparency: 21.1
+    operational_transparency: 10.5
+  previous_composite: 51.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -318,12 +355,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/llmgateway-io/llmgateway-io-2026-11-03T134952.png
 security:
 - kind: authentication
   name: Llmgateway Io Authentication

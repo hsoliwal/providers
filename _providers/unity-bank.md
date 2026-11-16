@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -78,11 +83,8 @@ apis:
   description: Banking Product endpoints
   name: Unity Bank Banking Products API
   slug: unity-bank-banking-products-api
-artifact_total: 20
+artifact_total: 21
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CDR Banking Banking Account Balances API
   slug: open-unity-bank-banking-account-balances-api
@@ -106,47 +108,47 @@ collections:
   slug: open-unity-bank-banking-products-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/plans/unity-bank-plans-pricing.yml
+  href: https://artifacts.apis.io/unity-bank/plans/unity-bank-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/unity-bank-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/capabilities/unity-bank-capability-edges.yml
+  href: https://artifacts.apis.io/unity-bank/capabilities/unity-bank-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/unity-bank-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/agentic-access/unity-bank-agentic-access.yml
+  href: https://artifacts.apis.io/unity-bank/agentic-access/unity-bank-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/unity-bank-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/security/unity-bank-domain-security.yml
+  href: https://artifacts.apis.io/unity-bank/security/unity-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unity-bank-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/authentication/unity-bank-authentication.yml
+  href: https://artifacts.apis.io/unity-bank/authentication/unity-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/unity-bank-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/scopes/unity-bank-scopes.yml
+  href: https://artifacts.apis.io/unity-bank/scopes/unity-bank-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/unity-bank-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/conventions/unity-bank-conventions.yml
+  href: https://artifacts.apis.io/unity-bank/conventions/unity-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/unity-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/errors/unity-bank-problem-types.yml
+  href: https://artifacts.apis.io/unity-bank/errors/unity-bank-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/unity-bank-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/lifecycle/unity-bank-lifecycle.yml
+  href: https://artifacts.apis.io/unity-bank/lifecycle/unity-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/unity-bank-lifecycle.yml
@@ -155,32 +157,32 @@ common:
   type: Deprecation
   url: https://consumerdatastandardsaustralia.github.io/standards/#versioning
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/conformance/unity-bank-conformance.yml
+  href: https://artifacts.apis.io/unity-bank/conformance/unity-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/unity-bank-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/data-model/unity-bank-data-model.yml
+  href: https://artifacts.apis.io/unity-bank/data-model/unity-bank-data-model.yml
   title: ''
   type: DataModel
   url: data-model/unity-bank-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/mcp/unity-bank-mcp.yml
+  href: https://artifacts.apis.io/unity-bank/mcp/unity-bank-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/unity-bank-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/llms/unity-bank-llms.txt
+  href: https://artifacts.apis.io/unity-bank/llms/unity-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/unity-bank-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/overlays/unity-bank-cds-banking-products-overlay.yaml
+  href: https://artifacts.apis.io/unity-bank/overlays/unity-bank-cds-banking-products-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/unity-bank-cds-banking-products-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/unity-bank/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -227,12 +229,28 @@ network: true
 overview: 'Unity Bank publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Data Right.
 
 
+  The Unity Bank catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Unity Bank''s developer surface includes authentication, developer portal, documentation, engineering blog, pricing, support, and 18 more developer resources.'
 plans:
 - name: Unity Bank Plans Pricing
   plan_count: 0
   slug: unity-bank-plans-pricing
-random_paper: 14
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: Unity Bank API Rules
+  rule_count: 68
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 5
+  slug: unity-bank-rules
 scopes:
 - name: Unity Bank Scopes
   scope_count: 5
@@ -240,18 +258,18 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: thin
-  composite: 37.0
+  composite: 38.6
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 31.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 44.7
     developer_ergonomics: 47.0
     discoverability: 73.2
@@ -263,7 +281,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 37.0
+  previous_composite: 38.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -280,13 +298,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 33.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/unity-bank/refs/heads/main/screenshots/unity-bank-2026-07-21T114754.png
+screenshot: https://apis.io/screenshots/unity-bank/unity-bank-2026-07-21T114754.png
 security:
 - kind: authentication
   name: Unity Bank Authentication
@@ -296,6 +314,10 @@ security:
   name: Unity Bank Domain Security
   slug: unity-bank-domain-security
   summary_line: TLSv1.2 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Unity Bank product reference lookup
+  slug: unity-bank-product-reference-lookup
 slug: unity-bank
 tags:
 - Finance

@@ -1,9 +1,12 @@
 ---
 access_model:
   confidence: medium
-  label: Free · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: free
+  pricing: freemium
   public: false
   source:
   - plans
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 37
   human_in_the_loop: 0
@@ -113,9 +119,6 @@ apis:
 artifact_total: 34
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Open Dental Accounts & Ledger API
   slug: open-opendental-accounts-ledger-api
 - collection_type: open
@@ -159,22 +162,22 @@ collections:
   slug: open-opendental
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/opendental/refs/heads/main/capabilities/opendental-capability-edges.yml
+  href: https://artifacts.apis.io/opendental/capabilities/opendental-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/opendental-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opendental/refs/heads/main/agentic-access/opendental-agentic-access.yml
+  href: https://artifacts.apis.io/opendental/agentic-access/opendental-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/opendental-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opendental/refs/heads/main/security/opendental-domain-security.yml
+  href: https://artifacts.apis.io/opendental/security/opendental-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/opendental-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opendental/refs/heads/main/authentication/opendental-authentication.yml
+  href: https://artifacts.apis.io/opendental/authentication/opendental-authentication.yml
   title: ''
   type: Authentication
   url: authentication/opendental-authentication.yml
@@ -195,17 +198,17 @@ common:
   type: Documentation
   url: https://www.opendental.com/site/apispecification.html
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/opendental/refs/heads/main/plans/opendental-plans-pricing.yml
+  href: https://artifacts.apis.io/opendental/plans/opendental-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/opendental-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/opendental/refs/heads/main/rate-limits/opendental-rate-limits.yml
+  href: https://artifacts.apis.io/opendental/rate-limits/opendental-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/opendental-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/opendental/refs/heads/main/finops/opendental-finops.yml
+  href: https://artifacts.apis.io/opendental/finops/opendental-finops.yml
   title: ''
   type: FinOps
   url: finops/opendental-finops.yml
@@ -232,6 +235,9 @@ network: true
 overview: 'Open Dental publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts & Ledger API, Appointments API, Claims API, and 10 more. Tagged areas include Dental, Practice Management, Healthcare, Electronic Health Records, and Patient Records.
 
 
+  The Open Dental catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Open Dental''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Opendental Plans Pricing
@@ -242,25 +248,38 @@ rate_limits:
 - limit_count: 4
   name: Opendental Rate Limits
   slug: opendental-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Open Dental API Rules
+  rule_count: 55
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 1
+    warn: 2
+  slug: opendental-rules
 score:
   band: thin
-  composite: 26.9
+  composite: 28.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 17
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 49.2
     developer_ergonomics: 31.0
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 35.3
+  previous_composite: 28.6
   provenance:
     agentic_access: derived
     contracts:
@@ -274,13 +293,13 @@ score:
     regime: Health
     regime_id: health
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/opendental/refs/heads/main/screenshots/opendental-2026-08-07T190545.png
+screenshot: https://apis.io/screenshots/opendental/opendental-2026-08-07T190545.png
 security:
 - kind: authentication
   name: Opendental Authentication

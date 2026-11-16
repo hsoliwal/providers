@@ -24,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 0
 common:
@@ -64,7 +67,7 @@ overview: 'Myu is profiled on the [APIs.io](https://apis.io/) network. Tagged ar
 
 
   Myu''s developer surface includes support and 3 more developer resources.'
-random_paper: 17
+random_paper: 11
 score:
   band: minimal
   composite: 7.0
@@ -96,14 +99,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 3.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/myu/refs/heads/main/screenshots/myu-2026-08-07T184550.png
+screenshot: https://apis.io/screenshots/myu/myu-2026-08-07T184550.png
 slug: myu
 tags:
 - Company

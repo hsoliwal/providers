@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,22 +36,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blacklaketechnologies/refs/heads/main/llms/blacklaketechnologies-llms.txt
+  href: https://artifacts.apis.io/blacklaketechnologies/llms/blacklaketechnologies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/blacklaketechnologies-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blacklaketechnologies/refs/heads/main/hosts/blacklaketechnologies-hosts.yml
+  href: https://artifacts.apis.io/blacklaketechnologies/hosts/blacklaketechnologies-hosts.yml
   title: ''
   type: Hosts
   url: hosts/blacklaketechnologies-hosts.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blacklaketechnologies/refs/heads/main/security/blacklaketechnologies-domain-security.yml
+  href: https://artifacts.apis.io/blacklaketechnologies/security/blacklaketechnologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/blacklaketechnologies-domain-security.yml
@@ -62,12 +75,12 @@ name: Blacklaketechnologies
 nav: Providers
 network: true
 overview: Blacklaketechnologies is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Manufacturing, Industrial, and Platform.
-random_paper: 6
+random_paper: 22
 score:
   band: minimal
   composite: 3.7
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
@@ -90,13 +103,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/blacklaketechnologies/blacklaketechnologies-2026-11-03T121848.png
 security:
 - kind: domain-security
   name: Blacklaketechnologies Domain Security

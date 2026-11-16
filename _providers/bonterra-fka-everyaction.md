@@ -8,11 +8,10 @@ access_model:
   source:
   - authentication
   - security
-  - '{''url'': ''https://www.everyaction.com/'', ''status'': 301, ''note'': ''declared website redirects to https://www.bonterratech.com/?utm_source=everyaction&utm_medium=redirect — a different registrable domain (everyaction.com -> bonterratech.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.5
-  scored_at: '2026-10-17'
+  score: 27.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 94
   human_in_the_loop: 0
@@ -348,42 +350,42 @@ apis:
 artifact_total: 64
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/capabilities/bonterra-fka-everyaction-capability-edges.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/capabilities/bonterra-fka-everyaction-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bonterra-fka-everyaction-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/agentic-access/bonterra-fka-everyaction-agentic-access.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/agentic-access/bonterra-fka-everyaction-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bonterra-fka-everyaction-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/rules/bonterra-fka-everyaction-rules.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/rules/bonterra-fka-everyaction-rules.yml
   title: ''
   type: Spectral
   url: rules/bonterra-fka-everyaction-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/conventions/bonterra-fka-everyaction-conventions.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/conventions/bonterra-fka-everyaction-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/bonterra-fka-everyaction-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/errors/bonterra-fka-everyaction-problem-types.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/errors/bonterra-fka-everyaction-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bonterra-fka-everyaction-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/conformance/bonterra-fka-everyaction-conformance.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/conformance/bonterra-fka-everyaction-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bonterra-fka-everyaction-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/hosts/bonterra-fka-everyaction-hosts.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/hosts/bonterra-fka-everyaction-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bonterra-fka-everyaction-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/vendors/bonterra-fka-everyaction-vendors.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/vendors/bonterra-fka-everyaction-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bonterra-fka-everyaction-vendors.yml
@@ -404,7 +406,7 @@ common:
   type: Blog
   url: https://www.bonterratech.com/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/security/bonterra-fka-everyaction-domain-security.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/security/bonterra-fka-everyaction-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bonterra-fka-everyaction-domain-security.yml
@@ -437,37 +439,37 @@ common:
   type: GitHubOrganization
   url: https://github.com/NGPVAN
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/authentication/bonterra-fka-everyaction-authentication.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/authentication/bonterra-fka-everyaction-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bonterra-fka-everyaction-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/conventions/bonterra-fka-everyaction-conventions.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/conventions/bonterra-fka-everyaction-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bonterra-fka-everyaction-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/lifecycle/bonterra-fka-everyaction-lifecycle.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/lifecycle/bonterra-fka-everyaction-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bonterra-fka-everyaction-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/lifecycle/bonterra-fka-everyaction-lifecycle.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/lifecycle/bonterra-fka-everyaction-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/bonterra-fka-everyaction-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/changelog/bonterra-fka-everyaction-changelog.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/changelog/bonterra-fka-everyaction-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/bonterra-fka-everyaction-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/llms/bonterra-fka-everyaction-llms.txt
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/llms/bonterra-fka-everyaction-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bonterra-fka-everyaction-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/mcp/bonterra-fka-everyaction-mcp.yml
+  href: https://artifacts.apis.io/bonterra-fka-everyaction/mcp/bonterra-fka-everyaction-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/bonterra-fka-everyaction-mcp.yml
@@ -486,7 +488,7 @@ overview: 'Bonterra (fka EveryAction) publishes 60 API contracts indexed on the 
 
 
   Bonterra (fka EveryAction)''s developer surface includes support, engineering blog, documentation, API reference, getting-started guide, changelog, authentication, and 20 more developer resources.'
-random_paper: 8
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -501,24 +503,24 @@ rules:
     warn: 3
   slug: bonterra-fka-everyaction-rules
 score:
-  band: thin
-  composite: 37.0
+  band: developing
+  composite: 39.4
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 41.5
     catalog_earned_first_party: 0.0
     catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 20.7
+  delta: 2.4
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 18.2
-    contract_quality: 52.2
-    developer_ergonomics: 42.9
-    discoverability: 75.0
+    contract_quality: 57.9
+    developer_ergonomics: 54.8
+    discoverability: 74.1
     operational_transparency: 18.4
-  previous_composite: 16.3
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -533,14 +535,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/bonterra-fka-everyaction/refs/heads/main/screenshots/bonterra-fka-everyaction-2026-07-25T203601.png
+screenshot: https://apis.io/screenshots/bonterra-fka-everyaction/bonterra-fka-everyaction-2026-07-25T203601.png
 security:
 - kind: authentication
   name: Bonterra Fka Everyaction Authentication

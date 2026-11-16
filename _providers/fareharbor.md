@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-10-17'
+  score: 20.3
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: FareHarbor Integration Center API
@@ -82,32 +95,32 @@ apis:
 artifact_total: 22
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/rules/fareharbor-rules.yml
+  href: https://artifacts.apis.io/fareharbor/rules/fareharbor-rules.yml
   title: ''
   type: Spectral
   url: rules/fareharbor-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/json-ld/fareharbor-context.jsonld
+  href: https://artifacts.apis.io/fareharbor/json-ld/fareharbor-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/fareharbor-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/vocabulary/fareharbor-vocabulary.yml
+  href: https://artifacts.apis.io/fareharbor/vocabulary/fareharbor-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/fareharbor-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/conformance/fareharbor-conformance.yml
+  href: https://artifacts.apis.io/fareharbor/conformance/fareharbor-conformance.yml
   title: ''
   type: Conformance
   url: conformance/fareharbor-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/vendors/fareharbor-vendors.yml
+  href: https://artifacts.apis.io/fareharbor/vendors/fareharbor-vendors.yml
   title: ''
   type: Vendors
   url: vendors/fareharbor-vendors.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/data-model/fareharbor-data-model.yml
+  href: https://artifacts.apis.io/fareharbor/data-model/fareharbor-data-model.yml
   title: ''
   type: DataModel
   url: data-model/fareharbor-data-model.yml
@@ -116,37 +129,37 @@ common:
   type: Compliance
   url: https://trust.fareharbor.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/security/fareharbor-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fareharbor/security/fareharbor-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/fareharbor-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/errors/fareharbor-problem-types.yml
+  href: https://artifacts.apis.io/fareharbor/errors/fareharbor-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/fareharbor-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/llms/fareharbor-llms.txt
+  href: https://artifacts.apis.io/fareharbor/llms/fareharbor-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fareharbor-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/well-known/fareharbor-status-security.txt
+  href: https://artifacts.apis.io/fareharbor/well-known/fareharbor-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/fareharbor-status-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/well-known/fareharbor-security.txt
+  href: https://artifacts.apis.io/fareharbor/well-known/fareharbor-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/fareharbor-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/well-known/fareharbor-well-known.yml
+  href: https://artifacts.apis.io/fareharbor/well-known/fareharbor-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/fareharbor-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/hosts/fareharbor-hosts.yml
+  href: https://artifacts.apis.io/fareharbor/hosts/fareharbor-hosts.yml
   title: ''
   type: Hosts
   url: hosts/fareharbor-hosts.yml
@@ -175,17 +188,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/FareHarbor
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/security/fareharbor-trust-center.yml
+  href: https://artifacts.apis.io/fareharbor/security/fareharbor-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/fareharbor-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/security/fareharbor-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fareharbor/security/fareharbor-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/fareharbor-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fareharbor/refs/heads/main/security/fareharbor-domain-security.yml
+  href: https://artifacts.apis.io/fareharbor/security/fareharbor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fareharbor-domain-security.yml
@@ -245,7 +258,7 @@ overview: 'FareHarbor publishes 11 API contracts indexed on the [APIs.io](https:
 
 
   FareHarbor''s developer surface includes support, signup flow, documentation, API reference, and 20 more developer resources.'
-random_paper: 18
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -260,22 +273,24 @@ rules:
     warn: 0
   slug: fareharbor-rules
 score:
-  band: developing
-  composite: 42.1
+  band: thin
+  composite: 36.1
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 62.0
     catalog_earned_first_party: 0.0
     catalog_gap: 53.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 18.4
     contract_governance: 19.7
     contract_quality: 60.9
-    developer_ergonomics: 21.4
+    developer_ergonomics: 10.7
     discoverability: 73.2
-    operational_transparency: 31.6
+    operational_transparency: 21.1
+  previous_composite: 42.1
   provenance:
     conformance: derived
     contracts:
@@ -289,12 +304,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
+screenshot: https://apis.io/screenshots/fareharbor/fareharbor-2026-11-03T131841.png
 security:
 - kind: domain-security
   name: Fareharbor Domain Security

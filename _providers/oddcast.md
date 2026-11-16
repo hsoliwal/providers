@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Vocalware is Oddcast's cloud text-to-speech service. It exposes a pay-as-you-go HTTP/REST API (suitable for mobile and server-side/standalone apps) and a JavaScript/HTML5 API (for in-browser playback)
@@ -90,27 +93,27 @@ common:
   type: PrivacyPolicy
   url: https://www.oddcast.com/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oddcast/refs/heads/main/authentication/oddcast-authentication.yml
+  href: https://artifacts.apis.io/oddcast/authentication/oddcast-authentication.yml
   title: ''
   type: Authentication
   url: authentication/oddcast-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oddcast/refs/heads/main/conventions/oddcast-conventions.yml
+  href: https://artifacts.apis.io/oddcast/conventions/oddcast-conventions.yml
   title: ''
   type: Conventions
   url: conventions/oddcast-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oddcast/refs/heads/main/components/oddcast-components.yml
+  href: https://artifacts.apis.io/oddcast/components/oddcast-components.yml
   title: ''
   type: Components
   url: components/oddcast-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oddcast/refs/heads/main/llms/oddcast-llms.txt
+  href: https://artifacts.apis.io/oddcast/llms/oddcast-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/oddcast-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oddcast/refs/heads/main/security/oddcast-domain-security.yml
+  href: https://artifacts.apis.io/oddcast/security/oddcast-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/oddcast-domain-security.yml
@@ -126,7 +129,7 @@ overview: 'Oddcast is listed with 2 APIs on the [APIs.io](https://apis.io/) netw
 
 
   Oddcast''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 9 more developer resources.'
-random_paper: 12
+random_paper: 18
 score:
   band: thin
   composite: 27.4
@@ -159,14 +162,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/oddcast/refs/heads/main/screenshots/oddcast-2026-08-07T185949.png
+screenshot: https://apis.io/screenshots/oddcast/oddcast-2026-08-07T185949.png
 security:
 - kind: authentication
   name: Oddcast Authentication

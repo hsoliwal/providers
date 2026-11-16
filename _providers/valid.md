@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'A live first-party Model Context Protocol server that lets a Valid managed-service client query their whole advertising account — spend, channels, creative performance, attribution — in plain English '
@@ -43,12 +46,12 @@ apis:
 artifact_total: 7
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/valid/refs/heads/main/rate-limits/valid-rate-limits.yml
+  href: https://artifacts.apis.io/valid/rate-limits/valid-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/valid-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/valid/refs/heads/main/security/valid-domain-security.yml
+  href: https://artifacts.apis.io/valid/security/valid-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/valid-domain-security.yml
@@ -85,27 +88,27 @@ common:
   type: Support
   url: mailto:support@valid.co
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/valid/refs/heads/main/well-known/valid-well-known.yml
+  href: https://artifacts.apis.io/valid/well-known/valid-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/valid-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/valid/refs/heads/main/llms/valid-llms.txt
+  href: https://artifacts.apis.io/valid/llms/valid-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/valid-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/valid/refs/heads/main/conformance/valid-conformance.yml
+  href: https://artifacts.apis.io/valid/conformance/valid-conformance.yml
   title: ''
   type: Conformance
   url: conformance/valid-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/valid/refs/heads/main/lifecycle/valid-lifecycle.yml
+  href: https://artifacts.apis.io/valid/lifecycle/valid-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/valid-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/valid/refs/heads/main/plans/valid-plans-pricing.yml
+  href: https://artifacts.apis.io/valid/plans/valid-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/valid-plans-pricing.yml
@@ -150,7 +153,7 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
@@ -165,7 +168,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.8
+  previous_composite: 20.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -175,14 +178,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/valid/refs/heads/main/screenshots/valid-2026-09-02T165318.png
+screenshot: https://apis.io/screenshots/valid/valid-2026-09-02T165318.png
 security:
 - kind: authentication
   name: Valid Authentication

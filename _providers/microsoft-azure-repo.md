@@ -1,15 +1,16 @@
 ---
 access_model:
-  confidence: high
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -89,11 +93,8 @@ apis:
   description: Operations for retrieving branch statistics such as commit counts ahead and behind relative to the default branch.
   name: Azure Repos Stats API
   slug: microsoft-azure-repo-stats-api
-artifact_total: 27
+artifact_total: 28
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Azure Repos Git API
   slug: open-azure-repo-git-api
@@ -123,42 +124,42 @@ collections:
   slug: open-microsoft-azure-repo-stats-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-repo/refs/heads/main/plans/microsoft-azure-repo-plans-pricing.yml
+  href: https://artifacts.apis.io/microsoft-azure-repo/plans/microsoft-azure-repo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/microsoft-azure-repo-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-repo/refs/heads/main/finops/microsoft-azure-repo-finops.yml
+  href: https://artifacts.apis.io/microsoft-azure-repo/finops/microsoft-azure-repo-finops.yml
   title: ''
   type: FinOps
   url: finops/microsoft-azure-repo-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-repo/refs/heads/main/capabilities/microsoft-azure-repo-capability-edges.yml
+  href: https://artifacts.apis.io/microsoft-azure-repo/capabilities/microsoft-azure-repo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/microsoft-azure-repo-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-repo/refs/heads/main/agentic-access/microsoft-azure-repo-agentic-access.yml
+  href: https://artifacts.apis.io/microsoft-azure-repo/agentic-access/microsoft-azure-repo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/microsoft-azure-repo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-repo/refs/heads/main/security/microsoft-azure-repo-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/microsoft-azure-repo/security/microsoft-azure-repo-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/microsoft-azure-repo-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-repo/refs/heads/main/security/microsoft-azure-repo-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-azure-repo/security/microsoft-azure-repo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-azure-repo-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-repo/refs/heads/main/authentication/microsoft-azure-repo-authentication.yml
+  href: https://artifacts.apis.io/microsoft-azure-repo/authentication/microsoft-azure-repo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/microsoft-azure-repo-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-repo/refs/heads/main/scopes/microsoft-azure-repo-scopes.yml
+  href: https://artifacts.apis.io/microsoft-azure-repo/scopes/microsoft-azure-repo-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/microsoft-azure-repo-scopes.yml
@@ -246,10 +247,10 @@ created: '2024-01-01'
 description: Azure Repos is a set of version control tools that you can use to manage your code. Whether your software project is large or small, using version control as soon as possible is a good idea.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Microsoft Azure Repo Finops
-  primary_unit: ''
-  service_category: Developer Tools / Source Control
+  primary_unit: user
+  service_category: ''
   slug: microsoft-azure-repo-finops
   template: false
 image: https://docs.microsoft.com/en-us/azure/devops/repos/media/index/repos.svg
@@ -258,19 +259,38 @@ modified: '2026-05-19'
 name: Azure Repos
 nav: Providers
 network: true
-overview: 'Azure Repos publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Commits API, Items API, Pull Request Reviewers API, and 6 more. Tagged areas include Developer Tools, DevOps, Git, Repositories, and Version Control.
+overview: 'Azure Repos publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Commits API, Items API, Pull Request Reviewers API, and 6 more. Tagged areas include Developer Tools, DevOps, Version Control, Repositories, and TFVC.
+
+
+  The Azure Repos catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Azure Repos'' developer surface includes authentication, developer portal, getting-started guide, documentation, pricing, changelog, engineering blog, and 21 more developer resources.'
 plans:
 - name: Microsoft Azure Repo Plans Pricing
-  plan_count: 5
+  plan_count: 8
   slug: microsoft-azure-repo-plans-pricing
-random_paper: 15
+- name: Microsoft Azure Repo Price Estimates
+  plan_count: 0
+  slug: microsoft-azure-repo-price-estimates
+random_paper: 21
 rate_limits:
 - limit_count: 3
   name: Microsoft Azure Repo Rate Limits
   slug: microsoft-azure-repo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 115
+  extends:
+  - spectral:oas
+  name: Azure Repos API Rules
+  rule_count: 74
+  severity_counts:
+    error: 67
+    hint: 0
+    info: 1
+    warn: 6
+  slug: microsoft-azure-repo-rules
 scopes:
 - name: Microsoft Azure Repo Scopes
   scope_count: 3
@@ -278,23 +298,23 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: strong
-  composite: 55.2
+  composite: 64.5
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 38.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    artifact_dirs: 16
+    catalog_earned: 54.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 60.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 52.6
-    contract_governance: 0.0
+    access_clarity: 84.2
+    contract_governance: 13.6
     contract_quality: 55.9
     developer_ergonomics: 71.4
     discoverability: 64.3
-    operational_transparency: 42.1
-  previous_composite: 56.7
+    operational_transparency: 52.6
+  previous_composite: 64.5
   provenance:
     agentic_access: derived
     contracts:
@@ -308,13 +328,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-repo/refs/heads/main/screenshots/microsoft-azure-repo-2026-06-20T185433.png
+screenshot: https://apis.io/screenshots/microsoft-azure-repo/microsoft-azure-repo-2026-06-20T185433.png
 security:
 - kind: authentication
   name: Microsoft Azure Repo Authentication
@@ -332,9 +352,8 @@ slug: microsoft-azure-repo
 tags:
 - Developer Tools
 - DevOps
-- Git
-- Repositories
 - Version Control
+- Repositories
 - TFVC
 website: https://azure.microsoft.com/en-us/services/devops/repos/
 ---

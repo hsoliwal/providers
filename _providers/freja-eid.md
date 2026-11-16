@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Freja eID provides a digital identity platform with authentication and signing capabilities. The developer portal is at the developers section page.
@@ -32,17 +45,17 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/freja-eid/refs/heads/main/llms/freja-eid-llms.txt
+  href: https://artifacts.apis.io/freja-eid/llms/freja-eid-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/freja-eid-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/freja-eid/refs/heads/main/well-known/freja-eid-well-known.yml
+  href: https://artifacts.apis.io/freja-eid/well-known/freja-eid-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/freja-eid-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/freja-eid/refs/heads/main/hosts/freja-eid-hosts.yml
+  href: https://artifacts.apis.io/freja-eid/hosts/freja-eid-hosts.yml
   title: ''
   type: Hosts
   url: hosts/freja-eid-hosts.yml
@@ -67,7 +80,7 @@ common:
   type: Newsroom
   url: https://frejaeid.com/en/newsroom/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/freja-eid/refs/heads/main/security/freja-eid-domain-security.yml
+  href: https://artifacts.apis.io/freja-eid/security/freja-eid-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/freja-eid-domain-security.yml
@@ -103,28 +116,35 @@ modified: '2026-10-15'
 name: Freja eID
 nav: Providers
 network: true
-overview: 'Freja eID is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Identity, Authentication, DigitalSignature, EU, and EEA.
+overview: 'Freja eID is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Identity, Authentication, Digital Signature, EU, and EEA.
 
 
   Freja eID''s developer surface includes support, signup flow, documentation, API reference, and 9 more developer resources.'
-random_paper: 13
+random_paper: 7
 score:
   band: emerging
-  composite: 19.0
+  composite: 12.5
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.5
   facets:
-    access_clarity: 23.7
+    access_clarity: 11.8
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 31.0
-    discoverability: 66.1
-    operational_transparency: 10.5
+    developer_ergonomics: 15.5
+    discoverability: 65.2
+    operational_transparency: 5.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+  previous_composite: 19.0
   provenance:
     mcp: unknown
   regulatory:
@@ -132,13 +152,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 13.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/freja-eid/freja-eid-2026-11-03T132341.png
 security:
 - kind: domain-security
   name: Freja Eid Domain Security
@@ -148,7 +170,7 @@ slug: freja-eid
 tags:
 - Identity
 - Authentication
-- DigitalSignature
+- Digital Signature
 - EU
 - EEA
 website: https://frejaeid.com/

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/metlife/refs/heads/main/security/metlife-domain-security.yml
+  href: https://artifacts.apis.io/metlife/security/metlife-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/metlife-domain-security.yml
@@ -82,12 +86,12 @@ press:
 - date: ''
   title: MetLife Study Finds AI Acceleration Is Creating New ...
   url: https://www.metlife.com/about-us/newsroom/2026/march/metlife-study-finds-ai-acceleration-is-creating-new-concerns-in-todays-workplace/
-random_paper: 16
+random_paper: 22
 score:
   band: minimal
   composite: 3.3
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
@@ -108,14 +112,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 5.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/metlife/refs/heads/main/screenshots/metlife-2026-06-20T185258.png
+screenshot: https://apis.io/screenshots/metlife/metlife-2026-06-20T185258.png
 security:
 - kind: domain-security
   name: Metlife Domain Security

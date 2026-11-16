@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Planday's REST API secured by OAuth2 bearer tokens, separated into domains (HR, Absence, Pay, Payroll, Portal, Punchclock, Reports, Revenue, Schedule, Contract Rules, Security Group Membership). Reque
@@ -46,7 +51,7 @@ common:
   type: Website
   url: https://www.planday.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planday/refs/heads/main/security/planday-domain-security.yml
+  href: https://artifacts.apis.io/planday/security/planday-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/planday-domain-security.yml
@@ -103,22 +108,22 @@ common:
   type: PrivacyPolicy
   url: https://www.planday.com/legal/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/planday/refs/heads/main/well-known/planday-well-known.yml
+  href: https://artifacts.apis.io/planday/well-known/planday-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/planday-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planday/refs/heads/main/authentication/planday-authentication.yml
+  href: https://artifacts.apis.io/planday/authentication/planday-authentication.yml
   title: ''
   type: Authentication
   url: authentication/planday-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planday/refs/heads/main/scopes/planday-scopes.yml
+  href: https://artifacts.apis.io/planday/scopes/planday-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/planday-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planday/refs/heads/main/conformance/planday-conformance.yml
+  href: https://artifacts.apis.io/planday/conformance/planday-conformance.yml
   title: ''
   type: Conformance
   url: conformance/planday-conformance.yml
@@ -127,27 +132,27 @@ common:
   type: Compliance
   url: https://www.planday.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planday/refs/heads/main/lifecycle/planday-lifecycle.yml
+  href: https://artifacts.apis.io/planday/lifecycle/planday-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/planday-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planday/refs/heads/main/conventions/planday-conventions.yml
+  href: https://artifacts.apis.io/planday/conventions/planday-conventions.yml
   title: ''
   type: Conventions
   url: conventions/planday-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planday/refs/heads/main/data-model/planday-data-model.yml
+  href: https://artifacts.apis.io/planday/data-model/planday-data-model.yml
   title: ''
   type: DataModel
   url: data-model/planday-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/planday/refs/heads/main/mcp/planday-mcp.yml
+  href: https://artifacts.apis.io/planday/mcp/planday-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/planday-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/planday/refs/heads/main/llms/planday-llms.txt
+  href: https://artifacts.apis.io/planday/llms/planday-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/planday-llms.txt
@@ -163,7 +168,7 @@ overview: 'Planday is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Planday''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 18 more developer resources.'
-random_paper: 19
+random_paper: 1
 scopes:
 - name: Planday Scopes
   scope_count: 78
@@ -197,14 +202,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/planday/refs/heads/main/screenshots/planday-2026-09-02T151402.png
+screenshot: https://apis.io/screenshots/planday/planday-2026-09-02T151402.png
 security:
 - kind: authentication
   name: Planday Authentication
@@ -226,6 +231,7 @@ tags:
 - Hospitality
 - Retail
 - REST
+- OAuth
 - Authentication
 website: https://www.planday.com/
 ---

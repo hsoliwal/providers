@@ -1,4 +1,20 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +32,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 38.7
-  scored_at: '2026-10-17'
+  score: 40.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 2
@@ -32,7 +51,7 @@ agentic_access:
   operation_count: 42
   slug: arcadiapower2-agentic-access
   summary_line: 42 operations · 21 acting · 2 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.arcadia.com
   baseurl_source: declared
@@ -89,74 +108,74 @@ apis:
   description: The Webhooks API from Arcadiapower2 — 7 operation(s) for webhooks.
   name: Arcadiapower2 Webhooks API
   slug: arcadiapower2-webhooks-api
-artifact_total: 26
+artifact_total: 31
 asyncapis:
 - description: ''
   name: Arcadiapower2 Webhooks
   slug: arcadiapower2-webhooks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/capabilities/arcadiapower2-capability-edges.yml
+  href: https://artifacts.apis.io/arcadiapower2/capabilities/arcadiapower2-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/arcadiapower2-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/vendors/arcadiapower2-vendors.yml
+  href: https://artifacts.apis.io/arcadiapower2/vendors/arcadiapower2-vendors.yml
   title: ''
   type: Vendors
   url: vendors/arcadiapower2-vendors.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/agentic-access/arcadiapower2-agentic-access.yml
+  href: https://artifacts.apis.io/arcadiapower2/agentic-access/arcadiapower2-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/arcadiapower2-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/rate-limits/arcadiapower2-rate-limits.yml
+  href: https://artifacts.apis.io/arcadiapower2/rate-limits/arcadiapower2-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/arcadiapower2-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/rules/arcadiapower2-rules.yml
+  href: https://artifacts.apis.io/arcadiapower2/rules/arcadiapower2-rules.yml
   title: ''
   type: Spectral
   url: rules/arcadiapower2-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/json-ld/arcadiapower2-context.jsonld
+  href: https://artifacts.apis.io/arcadiapower2/json-ld/arcadiapower2-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/arcadiapower2-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/vocabulary/arcadiapower2-vocabulary.yml
+  href: https://artifacts.apis.io/arcadiapower2/vocabulary/arcadiapower2-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/arcadiapower2-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/arcadiapower2/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/asyncapi/arcadiapower2-webhooks.yml
+  href: https://artifacts.apis.io/arcadiapower2/asyncapi/arcadiapower2-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/arcadiapower2-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/data-model/arcadiapower2-data-model.yml
+  href: https://artifacts.apis.io/arcadiapower2/data-model/arcadiapower2-data-model.yml
   title: ''
   type: DataModel
   url: data-model/arcadiapower2-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/changelog/arcadiapower2-changelog.yml
+  href: https://artifacts.apis.io/arcadiapower2/changelog/arcadiapower2-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/arcadiapower2-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/conventions/arcadiapower2-conventions.yml
+  href: https://artifacts.apis.io/arcadiapower2/conventions/arcadiapower2-conventions.yml
   title: ''
   type: Conventions
   url: conventions/arcadiapower2-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/sandbox/arcadiapower2-sandbox.yml
+  href: https://artifacts.apis.io/arcadiapower2/sandbox/arcadiapower2-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/arcadiapower2-sandbox.yml
@@ -165,32 +184,32 @@ common:
   type: Compliance
   url: https://www.arcadia.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/authentication/arcadiapower2-authentication.yml
+  href: https://artifacts.apis.io/arcadiapower2/authentication/arcadiapower2-authentication.yml
   title: ''
   type: Authentication
   url: authentication/arcadiapower2-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/errors/arcadiapower2-problem-types.yml
+  href: https://artifacts.apis.io/arcadiapower2/errors/arcadiapower2-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/arcadiapower2-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/conformance/arcadiapower2-conformance.yml
+  href: https://artifacts.apis.io/arcadiapower2/conformance/arcadiapower2-conformance.yml
   title: ''
   type: Conformance
   url: conformance/arcadiapower2-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/llms/arcadiapower2-llms.txt
+  href: https://artifacts.apis.io/arcadiapower2/llms/arcadiapower2-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/arcadiapower2-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/well-known/arcadiapower2-well-known.yml
+  href: https://artifacts.apis.io/arcadiapower2/well-known/arcadiapower2-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/arcadiapower2-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/hosts/arcadiapower2-hosts.yml
+  href: https://artifacts.apis.io/arcadiapower2/hosts/arcadiapower2-hosts.yml
   title: ''
   type: Hosts
   url: hosts/arcadiapower2-hosts.yml
@@ -219,17 +238,17 @@ common:
   type: Documentation
   url: https://docs.arcadia.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/security/arcadiapower2-trust-center.yml
+  href: https://artifacts.apis.io/arcadiapower2/security/arcadiapower2-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/arcadiapower2-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/security/arcadiapower2-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/arcadiapower2/security/arcadiapower2-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/arcadiapower2-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/security/arcadiapower2-domain-security.yml
+  href: https://artifacts.apis.io/arcadiapower2/security/arcadiapower2-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arcadiapower2-domain-security.yml
@@ -276,7 +295,7 @@ overview: 'Arcadiapower2 publishes 11 API contracts indexed on the [APIs.io](htt
 
 
   Arcadiapower2''s developer surface includes changelog, sandbox, authentication, engineering blog, getting-started guide, documentation, and 24 more developer resources.'
-random_paper: 18
+random_paper: 20
 rate_limits:
 - limit_count: 4
   name: Arcadiapower2 Rate Limits
@@ -296,30 +315,30 @@ rules:
   slug: arcadiapower2-rules
 score:
   band: developing
-  composite: 51.3
+  composite: 50.6
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 74.8
     catalog_earned_first_party: 12.0
     catalog_gap: 40.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 28.9
+    access_clarity: 22.4
     contract_governance: 22.0
-    contract_quality: 68.7
-    developer_ergonomics: 44.6
-    discoverability: 75.0
+    contract_quality: 76.2
+    developer_ergonomics: 38.7
+    discoverability: 74.1
     operational_transparency: 65.8
-  previous_composite: 51.3
+  previous_composite: 52.1
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 81.8
       total: 11
     mcp: unknown
     skills: derived
@@ -329,13 +348,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 23.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/arcadiapower2/refs/heads/main/screenshots/arcadiapower2-2026-10-11T100143.png
+screenshot: https://apis.io/screenshots/arcadiapower2/arcadiapower2-2026-10-11T100143.png
 security:
 - kind: authentication
   name: Arcadiapower2 Authentication
@@ -353,6 +372,18 @@ security:
   name: Arcadiapower2 Trust Center
   slug: arcadiapower2-trust-center
   summary_line: SOC 2, ISO 27001
+skill_count: 5
+skills:
+- name: arcadiapower2-authenticate
+  slug: arcadiapower2-authenticate
+- name: arcadiapower2-create-and-test-webhook
+  slug: arcadiapower2-create-and-test-webhook
+- name: arcadiapower2-enroll-and-create-utility-remittance
+  slug: arcadiapower2-enroll-and-create-utility-remittance
+- name: arcadiapower2-retrieve-utility-credentials
+  slug: arcadiapower2-retrieve-utility-credentials
+- name: arcadiapower2-spark-optimized-tariff-scenario
+  slug: arcadiapower2-spark-optimized-tariff-scenario
 slug: arcadiapower2
 tags:
 - Energy

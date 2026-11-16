@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 18
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/american-family-insurance/refs/heads/main/security/american-family-insurance-domain-security.yml
+  href: https://artifacts.apis.io/american-family-insurance/security/american-family-insurance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/american-family-insurance-domain-security.yml
@@ -70,17 +75,17 @@ common:
   type: BlogRSS
   url: https://newsroom.amfam.com/feed/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/american-family-insurance/refs/heads/main/llms/american-family-insurance-llms.txt
+  href: https://artifacts.apis.io/american-family-insurance/llms/american-family-insurance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/american-family-insurance-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/american-family-insurance/refs/heads/main/plans/american-family-insurance-plans-pricing.yml
+  href: https://artifacts.apis.io/american-family-insurance/plans/american-family-insurance-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/american-family-insurance-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/american-family-insurance/refs/heads/main/rate-limits/american-family-insurance-rate-limits.yml
+  href: https://artifacts.apis.io/american-family-insurance/rate-limits/american-family-insurance-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/american-family-insurance-rate-limits.yml
@@ -165,7 +170,7 @@ press:
 - date: ''
   title: American Family Insurance and AWS Team Up to Drive ...
   url: https://www.businesswire.com/news/home/20221201005413/en/American-Family-Insurance-and-AWS-Team-Up-to-Drive-Innovation-in-the-Insurance-Industry
-random_paper: 2
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: American Family Insurance Rate Limits
@@ -174,7 +179,7 @@ score:
   band: minimal
   composite: 8.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -202,14 +207,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 8.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/american-family-insurance/refs/heads/main/screenshots/american-family-insurance-2026-06-20T171911.png
+screenshot: https://apis.io/screenshots/american-family-insurance/american-family-insurance-2026-06-20T171911.png
 security:
 - kind: domain-security
   name: American Family Insurance Domain Security

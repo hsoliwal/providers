@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
+  confidence: high
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +28,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,20 +39,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Reform's public integration surface. It is not a REST management API — no endpoint exists to create, read or update forms and submissions. What Reform publishes is the hosted form host (forms.reform.a
   name: Reform Forms
   slug: reform-forms
-artifact_total: 9
+artifact_total: 10
 asyncapis:
 - description: ''
   name: Reform Webhooks
   slug: reform-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/security/reform-domain-security.yml
+  href: https://artifacts.apis.io/reform/security/reform-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/reform-domain-security.yml
@@ -103,57 +109,57 @@ common:
   type: X
   url: https://x.com/heyreform
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/llms/reform-llms.txt
+  href: https://artifacts.apis.io/reform/llms/reform-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/reform-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/asyncapi/reform-webhooks.yml
+  href: https://artifacts.apis.io/reform/asyncapi/reform-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/reform-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/components/reform-components.yml
+  href: https://artifacts.apis.io/reform/components/reform-components.yml
   title: ''
   type: Components
   url: components/reform-components.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/packages/reform-packages.yml
+  href: https://artifacts.apis.io/reform/packages/reform-packages.yml
   title: ''
   type: Packages
   url: packages/reform-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/conventions/reform-conventions.yml
+  href: https://artifacts.apis.io/reform/conventions/reform-conventions.yml
   title: ''
   type: Conventions
   url: conventions/reform-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/authentication/reform-authentication.yml
+  href: https://artifacts.apis.io/reform/authentication/reform-authentication.yml
   title: ''
   type: Authentication
   url: authentication/reform-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/data-model/reform-data-model.yml
+  href: https://artifacts.apis.io/reform/data-model/reform-data-model.yml
   title: ''
   type: DataModel
   url: data-model/reform-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/conformance/reform-conformance.yml
+  href: https://artifacts.apis.io/reform/conformance/reform-conformance.yml
   title: ''
   type: Conformance
   url: conformance/reform-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/lifecycle/reform-lifecycle.yml
+  href: https://artifacts.apis.io/reform/lifecycle/reform-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/reform-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/security/reform-trust-center.yml
+  href: https://artifacts.apis.io/reform/security/reform-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/reform-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/security/reform-trust-center.yml
+  href: https://artifacts.apis.io/reform/security/reform-trust-center.yml
   title: ''
   type: Compliance
   url: security/reform-trust-center.yml
@@ -175,7 +181,7 @@ finops:
 - has_sources: true
   method: derived
   name: Reform Finops
-  primary_unit: ''
+  primary_unit: subscription
   service_category: ''
   slug: reform-finops
   template: false
@@ -199,26 +205,29 @@ overview: 'Reform is listed with 1 API on the [APIs.io](https://apis.io/) networ
   Reform''s developer surface includes documentation, support, getting-started guide, engineering blog, pricing, signup flow, authentication, and 21 more developer resources.'
 plans:
 - name: Reform Plans Pricing
-  plan_count: 4
+  plan_count: 7
   slug: reform-plans-pricing
-random_paper: 13
+- name: Reform Price Estimates
+  plan_count: 0
+  slug: reform-price-estimates
+random_paper: 3
 rate_limits:
 - limit_count: 0
   name: Reform Rate Limits
   slug: reform-rate-limits
 score:
   band: developing
-  composite: 48.9
+  composite: 50.4
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 57.0
+    artifact_dirs: 20
+    catalog_earned: 60.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 58.0
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 81.6
+    access_clarity: 89.5
     contract_governance: 18.2
     contract_quality: 49.4
     developer_ergonomics: 40.5
@@ -237,14 +246,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/reform/refs/heads/main/screenshots/reform-2026-06-20T192748.png
+screenshot: https://apis.io/screenshots/reform/reform-2026-06-20T192748.png
 security:
 - kind: authentication
   name: Reform Authentication

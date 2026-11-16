@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.0
-  scored_at: '2026-10-17'
+  score: 26.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 45
   human_in_the_loop: 0
@@ -87,9 +94,6 @@ apis:
 artifact_total: 26
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Formance Platform Auth API
   slug: open-formance-auth-api
 - collection_type: open
@@ -118,32 +122,32 @@ collections:
   slug: open-formance
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/formance/refs/heads/main/capabilities/formance-capability-edges.yml
+  href: https://artifacts.apis.io/formance/capabilities/formance-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/formance-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/formance/refs/heads/main/agentic-access/formance-agentic-access.yml
+  href: https://artifacts.apis.io/formance/agentic-access/formance-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/formance-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/formance/refs/heads/main/security/formance-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/formance/security/formance-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/formance-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/formance/refs/heads/main/security/formance-domain-security.yml
+  href: https://artifacts.apis.io/formance/security/formance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/formance-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/formance/refs/heads/main/authentication/formance-authentication.yml
+  href: https://artifacts.apis.io/formance/authentication/formance-authentication.yml
   title: ''
   type: Authentication
   url: authentication/formance-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/formance/refs/heads/main/scopes/formance-scopes.yml
+  href: https://artifacts.apis.io/formance/scopes/formance-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/formance-scopes.yml
@@ -164,17 +168,17 @@ common:
   type: Documentation
   url: https://docs.formance.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/formance/refs/heads/main/plans/formance-plans-pricing.yml
+  href: https://artifacts.apis.io/formance/plans/formance-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/formance-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/formance/refs/heads/main/rate-limits/formance-rate-limits.yml
+  href: https://artifacts.apis.io/formance/rate-limits/formance-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/formance-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/formance/refs/heads/main/finops/formance-finops.yml
+  href: https://artifacts.apis.io/formance/finops/formance-finops.yml
   title: ''
   type: FinOps
   url: finops/formance-finops.yml
@@ -198,7 +202,10 @@ modified: '2026-07-01'
 name: Formance
 nav: Providers
 network: true
-overview: 'Formance publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Ledger API, Orchestration API, and 5 more. Tagged areas include Financial Infrastructure, Ledger, double-entry-accounting, Payments, and Orchestration.
+overview: 'Formance publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Ledger API, Orchestration API, and 5 more. Tagged areas include Financial Infrastructure, Ledger, Double-Entry, Payments, and Orchestration.
+
+
+  The Formance catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Formance''s developer surface includes authentication, documentation, engineering blog, and 11 more developer resources.'
@@ -206,11 +213,24 @@ plans:
 - name: Formance Plans Pricing
   plan_count: 3
   slug: formance-plans-pricing
-random_paper: 7
+random_paper: 3
 rate_limits:
 - limit_count: 3
   name: Formance Rate Limits
   slug: formance-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Formance API Rules
+  rule_count: 59
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 3
+  slug: formance-rules
 scopes:
 - name: Formance Scopes
   scope_count: 6
@@ -218,23 +238,23 @@ scopes:
   summary_line: 6 scopes · clientCredentials
 score:
   band: thin
-  composite: 26.2
+  composite: 29.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 18
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.2
     developer_ergonomics: 25.0
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 34.6
+    operational_transparency: 21.1
+  previous_composite: 29.2
   provenance:
     agentic_access: derived
     contracts:
@@ -248,13 +268,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 25.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/formance/refs/heads/main/screenshots/formance-2026-07-25T214946.png
+screenshot: https://apis.io/screenshots/formance/formance-2026-07-25T214946.png
 security:
 - kind: authentication
   name: Formance Authentication
@@ -272,7 +292,7 @@ slug: formance
 tags:
 - Financial Infrastructure
 - Ledger
-- double-entry-accounting
+- Double-Entry
 - Payments
 - Orchestration
 - Money Movement

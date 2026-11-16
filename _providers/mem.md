@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 61.3
-  scored_at: '2026-10-17'
+  score: 59.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -53,11 +59,8 @@ apis:
   description: The external API from Mem — 53 operation(s) for external.
   name: Mem External API
   slug: mem-external-api
-artifact_total: 14
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Mem Public Client CoreApi__service-info API
   slug: open-mem-coreapi-service-info-api
@@ -135,92 +138,92 @@ common:
   type: TrustCenter
   url: https://trust.mem.ai/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/openapi/_original/mem-openapi-original.json
+  href: https://artifacts.apis.io/mem/openapi/_original/mem-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/mem-openapi-original.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/mcp/mem-mcp.yml
+  href: https://artifacts.apis.io/mem/mcp/mem-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/mem-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/llms/mem-llms.txt
+  href: https://artifacts.apis.io/mem/llms/mem-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mem-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/well-known/mem-well-known.yml
+  href: https://artifacts.apis.io/mem/well-known/mem-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/mem-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/authentication/mem-authentication.yml
+  href: https://artifacts.apis.io/mem/authentication/mem-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mem-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/scopes/mem-scopes.yml
+  href: https://artifacts.apis.io/mem/scopes/mem-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/mem-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/agentic-access/mem-agentic-access.yml
+  href: https://artifacts.apis.io/mem/agentic-access/mem-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/mem-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/security/mem-domain-security.yml
+  href: https://artifacts.apis.io/mem/security/mem-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mem-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/conventions/mem-conventions.yml
+  href: https://artifacts.apis.io/mem/conventions/mem-conventions.yml
   title: ''
   type: Conventions
   url: conventions/mem-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/conventions/mem-conventions.yml
+  href: https://artifacts.apis.io/mem/conventions/mem-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/mem-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/rate-limits/mem-rate-limits.yml
+  href: https://artifacts.apis.io/mem/rate-limits/mem-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/mem-rate-limits.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/changelog/mem-changelog.yml
+  href: https://artifacts.apis.io/mem/changelog/mem-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/mem-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/lifecycle/mem-lifecycle.yml
+  href: https://artifacts.apis.io/mem/lifecycle/mem-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mem-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/errors/mem-problem-types.yml
+  href: https://artifacts.apis.io/mem/errors/mem-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/mem-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/conformance/mem-conformance.yml
+  href: https://artifacts.apis.io/mem/conformance/mem-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mem-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/data-model/mem-data-model.yml
+  href: https://artifacts.apis.io/mem/data-model/mem-data-model.yml
   title: ''
   type: DataModel
   url: data-model/mem-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/overlays/mem-openapi-overlay.yaml
+  href: https://artifacts.apis.io/mem/overlays/mem-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/mem-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/mem/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -239,12 +242,28 @@ network: true
 overview: 'Mem publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: CoreApi__service-info API and External API. Tagged areas include Company, Notes, Knowledge Management, Productivity, and Artificial Intelligence.
 
 
+  The Mem catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Mem''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 26 more developer resources.'
-random_paper: 11
+random_paper: 7
 rate_limits:
 - limit_count: 4
   name: Mem Rate Limits
   slug: mem-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Mem API Rules
+  rule_count: 55
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 2
+    warn: 14
+  slug: mem-rules
 scopes:
 - name: Mem Scopes
   scope_count: 4
@@ -252,23 +271,23 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 42.5
+  composite: 44.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 49.0
+    artifact_dirs: 24
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 44.1
     developer_ergonomics: 58.9
     discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 42.5
+  previous_composite: 44.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -285,13 +304,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/mem/refs/heads/main/screenshots/mem-2026-08-07T172453.png
+screenshot: https://apis.io/screenshots/mem/mem-2026-08-07T172453.png
 security:
 - kind: authentication
   name: Mem Authentication
@@ -301,6 +320,14 @@ security:
   name: Mem Domain Security
   slug: mem-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Capture a note and file it into a collection
+  slug: mem-capture-and-organize-note
+- name: Capture anything with Mem It (asynchronous intelligent save)
+  slug: mem-it-capture
+- name: Search and retrieve notes with semantic + attachment context
+  slug: mem-search-and-retrieve
 slug: mem
 tags:
 - Company

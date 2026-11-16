@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,13 +37,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Programmatic access to onepot CORE for make-on-demand molecule discovery and synthesis. Run similarity (Tanimoto) and substructure (SMILES/SMARTS) search, optional retrosynthetic decomposition with bu
   name: Onepot API
   slug: onepot-api
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -71,42 +74,42 @@ common:
   type: Research
   url: https://www.onepot.ai/research
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/onepot/refs/heads/main/packages/onepot-packages.yml
+  href: https://artifacts.apis.io/onepot/packages/onepot-packages.yml
   title: ''
   type: Packages
   url: packages/onepot-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/onepot/refs/heads/main/packages/onepot-packages.yml
+  href: https://artifacts.apis.io/onepot/packages/onepot-packages.yml
   title: ''
   type: SDKs
   url: packages/onepot-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onepot/refs/heads/main/authentication/onepot-authentication.yml
+  href: https://artifacts.apis.io/onepot/authentication/onepot-authentication.yml
   title: ''
   type: Authentication
   url: authentication/onepot-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/onepot/refs/heads/main/conventions/onepot-conventions.yml
+  href: https://artifacts.apis.io/onepot/conventions/onepot-conventions.yml
   title: ''
   type: Conventions
   url: conventions/onepot-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onepot/refs/heads/main/mcp/onepot-mcp.yml
+  href: https://artifacts.apis.io/onepot/mcp/onepot-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/onepot-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onepot/refs/heads/main/llms/onepot-llms.txt
+  href: https://artifacts.apis.io/onepot/llms/onepot-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/onepot-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/onepot/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/onepot/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/onepot/refs/heads/main/security/onepot-domain-security.yml
+  href: https://artifacts.apis.io/onepot/security/onepot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/onepot-domain-security.yml
@@ -122,7 +125,7 @@ overview: 'Onepot is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Onepot''s developer surface includes documentation, API reference, getting-started guide, engineering blog, authentication, and 10 more developer resources.'
-random_paper: 1
+random_paper: 13
 score:
   band: emerging
   composite: 18.2
@@ -158,14 +161,14 @@ score:
     regime: Health
     regime_id: health
     score: 8.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/onepot/refs/heads/main/screenshots/onepot-2026-08-07T190333.png
+screenshot: https://apis.io/screenshots/onepot/onepot-2026-08-07T190333.png
 security:
 - kind: authentication
   name: Onepot Authentication
@@ -175,6 +178,10 @@ security:
   name: Onepot Domain Security
   slug: onepot-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 1
+skills:
+- name: Search and order make-on-demand molecules with onepot
+  slug: onepot-search-and-order
 slug: onepot
 tags:
 - Company

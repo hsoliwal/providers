@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: RestSharp is a simple REST and HTTP API client library for .NET, wrapping HttpClient with a fluent API for making HTTP requests with automatic serialization and deserialization of request and response
@@ -42,17 +46,17 @@ apis:
 artifact_total: 14
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/restsharp/refs/heads/main/plans/restsharp-plans-pricing.yml
+  href: https://artifacts.apis.io/restsharp/plans/restsharp-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/restsharp-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/restsharp/refs/heads/main/rate-limits/restsharp-rate-limits.yml
+  href: https://artifacts.apis.io/restsharp/rate-limits/restsharp-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/restsharp-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/restsharp/refs/heads/main/finops/restsharp-finops.yml
+  href: https://artifacts.apis.io/restsharp/finops/restsharp-finops.yml
   title: ''
   type: FinOps
   url: finops/restsharp-finops.yml
@@ -61,7 +65,7 @@ common:
   type: Blog
   url: https://restsharp.dev/blog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/restsharp/refs/heads/main/security/restsharp-domain-security.yml
+  href: https://artifacts.apis.io/restsharp/security/restsharp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/restsharp-domain-security.yml
@@ -105,7 +109,7 @@ finops:
 - has_sources: false
   method: generated
   name: Restsharp Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: restsharp-finops
   template: true
@@ -145,7 +149,7 @@ plans:
 - name: Restsharp Plans Pricing
   plan_count: 3
   slug: restsharp-plans-pricing
-random_paper: 20
+random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Restsharp Rate Limits
@@ -166,13 +170,13 @@ score:
   band: emerging
   composite: 19.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 49.3
     catalog_earned_first_party: 0.0
     catalog_gap: 65.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.1
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 9.8
@@ -180,21 +184,21 @@ score:
     developer_ergonomics: 28.6
     discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 20.7
+  previous_composite: 19.6
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/restsharp/refs/heads/main/screenshots/restsharp-2026-06-20T193032.png
+screenshot: https://apis.io/screenshots/restsharp/restsharp-2026-06-20T193032.png
 security:
 - kind: domain-security
   name: Restsharp Domain Security

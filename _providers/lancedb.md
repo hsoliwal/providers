@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.5
-  scored_at: '2026-10-17'
+  score: 24.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 0
@@ -88,11 +95,8 @@ apis:
   description: Operations that are related to a transaction
   name: LanceDB Transaction API
   slug: lancedb-transaction-api
-artifact_total: 41
+artifact_total: 40
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Lance Namespace Specification Data API
   slug: open-lancedb-data-api
@@ -119,17 +123,17 @@ collections:
   slug: open-lancedb-transaction-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/plans/lancedb-plans-pricing.yml
+  href: https://artifacts.apis.io/lancedb/plans/lancedb-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/lancedb-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/rate-limits/lancedb-rate-limits.yml
+  href: https://artifacts.apis.io/lancedb/rate-limits/lancedb-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/lancedb-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/finops/lancedb-finops.yml
+  href: https://artifacts.apis.io/lancedb/finops/lancedb-finops.yml
   title: ''
   type: FinOps
   url: finops/lancedb-finops.yml
@@ -142,27 +146,27 @@ common:
   type: ContributionGuide
   url: https://github.com/lance-format/lance/blob/main/CONTRIBUTING.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/agentic-access/lancedb-agentic-access.yml
+  href: https://artifacts.apis.io/lancedb/agentic-access/lancedb-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/lancedb-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/security/lancedb-trust-center.yml
+  href: https://artifacts.apis.io/lancedb/security/lancedb-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/lancedb-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/security/lancedb-domain-security.yml
+  href: https://artifacts.apis.io/lancedb/security/lancedb-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lancedb-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/authentication/lancedb-authentication.yml
+  href: https://artifacts.apis.io/lancedb/authentication/lancedb-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lancedb-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/scopes/lancedb-scopes.yml
+  href: https://artifacts.apis.io/lancedb/scopes/lancedb-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/lancedb-scopes.yml
@@ -269,7 +273,7 @@ modified: '2026-05-25'
 name: LanceDB
 nav: Providers
 network: true
-overview: 'LanceDB publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including MaterializedView API, Namespace API, Table API, and 9 more. Tagged areas include Vector Database, Multi-Modal, Lance Format, Lakehouse, and RAG.
+overview: 'LanceDB publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including MaterializedView API, Namespace API, Table API, and 9 more. Tagged areas include Vector Search, Multi-Modal, Lance Format, Lakehouse, and RAG.
 
 
   The LanceDB catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -280,7 +284,7 @@ plans:
 - name: Lancedb Plans Pricing
   plan_count: 4
   slug: lancedb-plans-pricing
-random_paper: 9
+random_paper: 17
 rate_limits:
 - limit_count: 1
   name: Lancedb Rate Limits
@@ -318,13 +322,13 @@ score:
   band: developing
   composite: 41.5
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 54.0
     catalog_earned_first_party: 0.0
     catalog_gap: 61.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.1
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 27.3
@@ -335,7 +339,7 @@ score:
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 48.6
+  previous_composite: 41.5
   provenance:
     agentic_access: derived
     contracts:
@@ -349,13 +353,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 29.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/screenshots/lancedb-2026-06-20T184404.png
+screenshot: https://apis.io/screenshots/lancedb/lancedb-2026-06-20T184404.png
 security:
 - kind: authentication
   name: Lancedb Authentication
@@ -371,7 +375,7 @@ security:
   summary_line: SOC 2, HIPAA, GDPR
 slug: lancedb
 tags:
-- Vector Database
+- Vector Search
 - Multi-Modal
 - Lance Format
 - Lakehouse
@@ -384,6 +388,5 @@ tags:
 - Columnar Storage
 - Arrow
 - AI Infrastructure
-- Vector Search
 website: https://lancedb.com/
 ---

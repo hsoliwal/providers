@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -21,21 +24,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.0
-  scored_at: '2026-10-17'
+  score: 33.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 165
   human_in_the_loop: 8
@@ -65,11 +71,6 @@ apis:
   description: The Agents API from Coder — 28 operation(s) for agents.
   name: Coder Agents API
   slug: coder-agents-api
-- baseURL: https://coder.example.com/api/v2
-  baseurl_source: declared
-  description: The AI Bridge API from Coder — 4 operation(s) for ai bridge.
-  name: Coder AI Bridge API
-  slug: coder-ai-bridge-api
 - baseURL: https://coder.example.com/api/v2
   baseurl_source: declared
   description: The AI Providers API from Coder — 2 operation(s) for ai providers.
@@ -172,11 +173,6 @@ apis:
   slug: coder-secrets-api
 - baseURL: https://coder.example.com/api/v2
   baseurl_source: declared
-  description: The Tasks API from Coder — 9 operation(s) for tasks.
-  name: Coder Tasks API
-  slug: coder-tasks-api
-- baseURL: https://coder.example.com/api/v2
-  baseurl_source: declared
   description: The Templates API from Coder — 33 operation(s) for templates.
   name: Coder Templates API
   slug: coder-templates-api
@@ -195,11 +191,23 @@ apis:
   description: The Workspaces API from Coder — 20 operation(s) for workspaces.
   name: Coder Workspaces API
   slug: coder-workspaces-api
+- baseURL: https://coder.example.com/api/v2
+  baseurl_source: declared
+  description: The AI Gateway API from Coder — 5 operation(s) for ai gateway.
+  name: Coder AI Gateway API
+  slug: coder-ai-gateway-api
+- baseURL: https://coder.example.com/api/v2
+  baseurl_source: declared
+  description: The MCP API from Coder — 7 operation(s) for mcp.
+  name: Coder MCP API
+  slug: coder-mcp-api
+- baseURL: https://coder.example.com/api/v2
+  baseurl_source: declared
+  description: The TemplateBuilder API from Coder — 5 operation(s) for templatebuilder.
+  name: Coder Template Builder API
+  slug: coder-templatebuilder-api
 artifact_total: 83
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Coder Agents API
   slug: open-coder-agents-api
@@ -283,32 +291,32 @@ collections:
   slug: open-coder-workspaces-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coder/refs/heads/main/capabilities/coder-capability-edges.yml
+  href: https://artifacts.apis.io/coder/capabilities/coder-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/coder-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coder/refs/heads/main/agentic-access/coder-agentic-access.yml
+  href: https://artifacts.apis.io/coder/agentic-access/coder-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/coder-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coder/refs/heads/main/security/coder-trust-center.yml
+  href: https://artifacts.apis.io/coder/security/coder-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/coder-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coder/refs/heads/main/security/coder-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/coder/security/coder-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/coder-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coder/refs/heads/main/security/coder-domain-security.yml
+  href: https://artifacts.apis.io/coder/security/coder-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coder-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coder/refs/heads/main/authentication/coder-authentication.yml
+  href: https://artifacts.apis.io/coder/authentication/coder-authentication.yml
   title: ''
   type: Authentication
   url: authentication/coder-authentication.yml
@@ -349,17 +357,17 @@ common:
   type: CLI
   url: https://coder.com/docs/reference/cli
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/coder/refs/heads/main/plans/coder-plans-pricing.yml
+  href: https://artifacts.apis.io/coder/plans/coder-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/coder-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/coder/refs/heads/main/rate-limits/coder-rate-limits.yml
+  href: https://artifacts.apis.io/coder/rate-limits/coder-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/coder-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/coder/refs/heads/main/finops/coder-finops.yml
+  href: https://artifacts.apis.io/coder/finops/coder-finops.yml
   title: ''
   type: FinOps
   url: finops/coder-finops.yml
@@ -425,7 +433,7 @@ modified: '2026-06-12'
 name: Coder
 nav: Providers
 network: true
-overview: 'Coder publishes 32 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, AI Bridge API, AI Providers API, and 29 more. Tagged areas include Developer Tools, Remote Development, Cloud Development Environments, AI Agents, and Infrastructure.
+overview: 'Coder publishes 33 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, AI Providers API, Applications API, and 30 more. Tagged areas include Developer Tools, Remote Development, Cloud Development Environments, AI Agents, and Infrastructure.
 
 
   The Coder catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -436,7 +444,7 @@ plans:
 - name: Coder Plans Pricing
   plan_count: 2
   slug: coder-plans-pricing
-random_paper: 19
+random_paper: 21
 rate_limits:
 - limit_count: 4
   name: Coder Rate Limits
@@ -455,43 +463,43 @@ rules:
   slug: coder-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 37.2
+  composite: 38.7
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 51.3
     catalog_earned_first_party: 0.0
     catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.6
   facets:
     access_clarity: 23.7
     contract_governance: 9.8
-    contract_quality: 50.3
+    contract_quality: 50.7
     developer_ergonomics: 31.0
     discoverability: 57.1
-    operational_transparency: 26.3
-  previous_composite: 44.1
+    operational_transparency: 36.8
+  previous_composite: 38.1
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
-      total: 27
+      marker_coverage: 50.0
+      total: 56
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/coder/refs/heads/main/screenshots/coder-2026-06-20T174705.png
+screenshot: https://apis.io/screenshots/coder/coder-2026-06-20T174705.png
 security:
 - kind: authentication
   name: Coder Authentication

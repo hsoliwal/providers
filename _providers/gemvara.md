@@ -24,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 0
 common:
@@ -49,7 +52,7 @@ name: Gemvara
 nav: Providers
 network: true
 overview: Gemvara is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Jewelry, E-Commerce, Retail, and Custom Manufacturing.
-random_paper: 13
+random_paper: 19
 score:
   band: minimal
   composite: 0.0
@@ -89,8 +92,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
   public: true
   source:
   - plans
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 18.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -76,9 +83,6 @@ apis:
 artifact_total: 19
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: ReccoBeats Album API
   slug: open-reccobeats-album-api
 - collection_type: open
@@ -101,17 +105,17 @@ collections:
   slug: open-reccobeats
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/reccobeats/refs/heads/main/capabilities/reccobeats-capability-edges.yml
+  href: https://artifacts.apis.io/reccobeats/capabilities/reccobeats-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/reccobeats-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reccobeats/refs/heads/main/agentic-access/reccobeats-agentic-access.yml
+  href: https://artifacts.apis.io/reccobeats/agentic-access/reccobeats-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/reccobeats-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reccobeats/refs/heads/main/security/reccobeats-domain-security.yml
+  href: https://artifacts.apis.io/reccobeats/security/reccobeats-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/reccobeats-domain-security.yml
@@ -128,17 +132,17 @@ common:
   type: Documentation
   url: https://reccobeats.com/docs/documentation/introduction
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/reccobeats/refs/heads/main/plans/reccobeats-plans-pricing.yml
+  href: https://artifacts.apis.io/reccobeats/plans/reccobeats-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/reccobeats-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/reccobeats/refs/heads/main/rate-limits/reccobeats-rate-limits.yml
+  href: https://artifacts.apis.io/reccobeats/rate-limits/reccobeats-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/reccobeats-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/reccobeats/refs/heads/main/finops/reccobeats-finops.yml
+  href: https://artifacts.apis.io/reccobeats/finops/reccobeats-finops.yml
   title: ''
   type: FinOps
   url: finops/reccobeats-finops.yml
@@ -161,35 +165,51 @@ network: true
 overview: 'ReccoBeats publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Album API, Artist API, Audio Analysis API, and 3 more. Tagged areas include Music, Recommendations, Audio Features, Audio Analysis, and Music Database.
 
 
+  The ReccoBeats catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   ReccoBeats'' developer surface includes engineering blog, documentation, and 7 more developer resources.'
 plans:
 - name: Reccobeats Plans Pricing
   plan_count: 1
   slug: reccobeats-plans-pricing
-random_paper: 17
+random_paper: 19
 rate_limits:
 - limit_count: 3
   name: Reccobeats Rate Limits
   slug: reccobeats-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: ReccoBeats API Rules
+  rule_count: 61
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 1
+    warn: 1
+  slug: reccobeats-rules
 score:
   band: emerging
-  composite: 22.1
+  composite: 23.8
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 42.0
+    artifact_dirs: 15
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.9
     developer_ergonomics: 20.2
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 29.0
+  previous_composite: 23.8
   provenance:
     agentic_access: derived
     contracts:
@@ -203,13 +223,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/reccobeats/refs/heads/main/screenshots/reccobeats-2026-09-02T153043.png
+screenshot: https://apis.io/screenshots/reccobeats/reccobeats-2026-09-02T153043.png
 security:
 - kind: domain-security
   name: Reccobeats Domain Security

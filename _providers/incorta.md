@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Tenant-scoped REST API for loading schemas, querying business views, extracting data to external tables, scheduling dashboard reports, and administration. Authenticated with a bearer Personal Access T
@@ -86,77 +90,77 @@ common:
   type: PrivacyPolicy
   url: https://www.incorta.com/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/security/incorta-trust-center.yml
+  href: https://artifacts.apis.io/incorta/security/incorta-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/incorta-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/authentication/incorta-authentication.yml
+  href: https://artifacts.apis.io/incorta/authentication/incorta-authentication.yml
   title: ''
   type: Authentication
   url: authentication/incorta-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/conventions/incorta-conventions.yml
+  href: https://artifacts.apis.io/incorta/conventions/incorta-conventions.yml
   title: ''
   type: Conventions
   url: conventions/incorta-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/errors/incorta-problem-types.yml
+  href: https://artifacts.apis.io/incorta/errors/incorta-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/incorta-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/lifecycle/incorta-lifecycle.yml
+  href: https://artifacts.apis.io/incorta/lifecycle/incorta-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/incorta-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/lifecycle/incorta-lifecycle.yml
+  href: https://artifacts.apis.io/incorta/lifecycle/incorta-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/incorta-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/changelog/incorta-changelog.yml
+  href: https://artifacts.apis.io/incorta/changelog/incorta-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/incorta-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/conformance/incorta-conformance.yml
+  href: https://artifacts.apis.io/incorta/conformance/incorta-conformance.yml
   title: ''
   type: Conformance
   url: conformance/incorta-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/packages/incorta-packages.yml
+  href: https://artifacts.apis.io/incorta/packages/incorta-packages.yml
   title: ''
   type: Packages
   url: packages/incorta-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/packages/incorta-packages.yml
+  href: https://artifacts.apis.io/incorta/packages/incorta-packages.yml
   title: ''
   type: SDKs
   url: packages/incorta-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/cli/incorta-cli.yml
+  href: https://artifacts.apis.io/incorta/cli/incorta-cli.yml
   title: ''
   type: CLI
   url: cli/incorta-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/components/incorta-components.yml
+  href: https://artifacts.apis.io/incorta/components/incorta-components.yml
   title: ''
   type: Components
   url: components/incorta-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/mcp/incorta-mcp.yml
+  href: https://artifacts.apis.io/incorta/mcp/incorta-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/incorta-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/llms/incorta-llms.txt
+  href: https://artifacts.apis.io/incorta/llms/incorta-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/incorta-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/security/incorta-domain-security.yml
+  href: https://artifacts.apis.io/incorta/security/incorta-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/incorta-domain-security.yml
@@ -172,12 +176,12 @@ overview: 'Incorta is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Incorta''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 19 more developer resources.'
-random_paper: 4
+random_paper: 8
 score:
   band: thin
   composite: 35.5
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -201,14 +205,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/incorta/refs/heads/main/screenshots/incorta-2026-07-25T222238.png
+screenshot: https://apis.io/screenshots/incorta/incorta-2026-07-25T222238.png
 security:
 - kind: authentication
   name: Incorta Authentication

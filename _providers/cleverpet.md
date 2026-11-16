@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -97,22 +101,22 @@ common:
   type: Login
   url: https://clever.pet/account/login
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cleverpet/refs/heads/main/packages/cleverpet-packages.yml
+  href: https://artifacts.apis.io/cleverpet/packages/cleverpet-packages.yml
   title: ''
   type: Packages
   url: packages/cleverpet-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cleverpet/refs/heads/main/packages/cleverpet-packages.yml
+  href: https://artifacts.apis.io/cleverpet/packages/cleverpet-packages.yml
   title: ''
   type: SDKs
   url: packages/cleverpet-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cleverpet/refs/heads/main/well-known/cleverpet-well-known.yml
+  href: https://artifacts.apis.io/cleverpet/well-known/cleverpet-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cleverpet-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cleverpet/refs/heads/main/security/cleverpet-domain-security.yml
+  href: https://artifacts.apis.io/cleverpet/security/cleverpet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cleverpet-domain-security.yml
@@ -128,18 +132,18 @@ overview: 'CleverPet is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   CleverPet''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, and 14 more developer resources.'
-random_paper: 2
+random_paper: 10
 score:
   band: emerging
   composite: 22.2
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
@@ -150,21 +154,21 @@ score:
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 22.1
+  previous_composite: 22.2
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cleverpet/refs/heads/main/screenshots/cleverpet-2026-07-25T205607.png
+screenshot: https://apis.io/screenshots/cleverpet/cleverpet-2026-07-25T205607.png
 security:
 - kind: domain-security
   name: Cleverpet Domain Security

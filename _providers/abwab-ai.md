@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Versioned REST API for MSME credit assessment and decisioning. Submits applications for real-time scoring and returns a decision, risk flags, and pricing (e.g. POST /v1/assessments). Supports webhook '
@@ -45,7 +49,7 @@ asyncapis:
   slug: abwab-ai-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/abwab-ai/refs/heads/main/security/abwab-ai-domain-security.yml
+  href: https://artifacts.apis.io/abwab-ai/security/abwab-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/abwab-ai-domain-security.yml
@@ -86,17 +90,17 @@ common:
   type: Compliance
   url: https://abwab.ai/platform/compliance
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abwab-ai/refs/heads/main/conformance/abwab-ai-conformance.yml
+  href: https://artifacts.apis.io/abwab-ai/conformance/abwab-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/abwab-ai-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/abwab-ai/refs/heads/main/lifecycle/abwab-ai-lifecycle.yml
+  href: https://artifacts.apis.io/abwab-ai/lifecycle/abwab-ai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/abwab-ai-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/abwab-ai/refs/heads/main/llms/abwab-ai-llms.txt
+  href: https://artifacts.apis.io/abwab-ai/llms/abwab-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/abwab-ai-llms.txt
@@ -115,12 +119,12 @@ overview: 'Abwab Ai is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Abwab Ai''s developer surface includes documentation, API reference, engineering blog, support, and 9 more developer resources.'
-random_paper: 8
+random_paper: 12
 score:
   band: thin
   composite: 33.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -151,14 +155,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/abwab-ai/refs/heads/main/screenshots/abwab-ai-2026-07-25T181413.png
+screenshot: https://apis.io/screenshots/abwab-ai/abwab-ai-2026-07-25T181413.png
 security:
 - kind: domain-security
   name: Abwab Ai Domain Security

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.5
-  scored_at: '2026-10-17'
+  score: 48.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 76
   slug: hootsuite-agentic-access
   summary_line: 76 operations · 35 acting
-api_count: 12
+api_count: 8
 apis:
 - description: A remote Model Context Protocol endpoint served from Hootsuite's own ReadMe-hosted developer documentation site. Reachable and real, but gated — initialize and tools/list both return HTTP 401 "Authori
   name: Hootsuite Developer Documentation MCP
@@ -148,15 +151,12 @@ apis:
   description: '### Webhook authentication When setting up a virtual agent, you received a secret key that you can use to verify whether an incoming webhook request really comes from Inbox 2.0 without alterations. In'
   name: Hootsuite Vai Webhooks API
   slug: hootsuite-vai-webhooks-api
-artifact_total: 36
+artifact_total: 42
 asyncapis:
 - description: ''
   name: Hootsuite Webhooks
   slug: hootsuite-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Hootsuite Amplify REST API
   slug: open-hootsuite-amplify-api
@@ -174,97 +174,97 @@ collections:
   slug: open-hootsuite
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/capabilities/hootsuite-capability-edges.yml
+  href: https://artifacts.apis.io/hootsuite/capabilities/hootsuite-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/hootsuite-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/overlays/hootsuite-rest-api-overlay.yaml
+  href: https://artifacts.apis.io/hootsuite/overlays/hootsuite-rest-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hootsuite-rest-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/overlays/hootsuite-analytics-api-overlay.yaml
+  href: https://artifacts.apis.io/hootsuite/overlays/hootsuite-analytics-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hootsuite-analytics-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/overlays/hootsuite-inbox-api-overlay.yaml
+  href: https://artifacts.apis.io/hootsuite/overlays/hootsuite-inbox-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hootsuite-inbox-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/overlays/hootsuite-amplify-api-overlay.yaml
+  href: https://artifacts.apis.io/hootsuite/overlays/hootsuite-amplify-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hootsuite-amplify-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/well-known/hootsuite-well-known.yml
+  href: https://artifacts.apis.io/hootsuite/well-known/hootsuite-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/hootsuite-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/well-known/hootsuite-api-catalog.json
+  href: https://artifacts.apis.io/hootsuite/well-known/hootsuite-api-catalog.json
   title: ''
   type: APICatalog
   url: well-known/hootsuite-api-catalog.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/agentic-access/hootsuite-agentic-access.yml
+  href: https://artifacts.apis.io/hootsuite/agentic-access/hootsuite-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hootsuite-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/security/hootsuite-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hootsuite/security/hootsuite-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hootsuite-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/security/hootsuite-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hootsuite/security/hootsuite-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/hootsuite-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/security/hootsuite-domain-security.yml
+  href: https://artifacts.apis.io/hootsuite/security/hootsuite-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hootsuite-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/authentication/hootsuite-authentication.yml
+  href: https://artifacts.apis.io/hootsuite/authentication/hootsuite-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hootsuite-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/scopes/hootsuite-scopes.yml
+  href: https://artifacts.apis.io/hootsuite/scopes/hootsuite-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/hootsuite-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/conventions/hootsuite-conventions.yml
+  href: https://artifacts.apis.io/hootsuite/conventions/hootsuite-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hootsuite-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/conformance/hootsuite-conformance.yml
+  href: https://artifacts.apis.io/hootsuite/conformance/hootsuite-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hootsuite-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/conformance/hootsuite-conformance.yml
+  href: https://artifacts.apis.io/hootsuite/conformance/hootsuite-conformance.yml
   title: ''
   type: Compliance
   url: conformance/hootsuite-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/errors/hootsuite-problem-types.yml
+  href: https://artifacts.apis.io/hootsuite/errors/hootsuite-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/hootsuite-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/lifecycle/hootsuite-lifecycle.yml
+  href: https://artifacts.apis.io/hootsuite/lifecycle/hootsuite-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hootsuite-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/lifecycle/hootsuite-lifecycle.yml
+  href: https://artifacts.apis.io/hootsuite/lifecycle/hootsuite-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/hootsuite-lifecycle.yml
@@ -273,62 +273,62 @@ common:
   type: StatusPage
   url: https://status.hootsuite.com
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/changelog/hootsuite-changelog.yml
+  href: https://artifacts.apis.io/hootsuite/changelog/hootsuite-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/hootsuite-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/data-model/hootsuite-data-model.yml
+  href: https://artifacts.apis.io/hootsuite/data-model/hootsuite-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hootsuite-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/rate-limits/hootsuite-rate-limits.yml
+  href: https://artifacts.apis.io/hootsuite/rate-limits/hootsuite-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hootsuite-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/plans/hootsuite-plans-pricing.yml
+  href: https://artifacts.apis.io/hootsuite/plans/hootsuite-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hootsuite-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/packages/hootsuite-packages.yml
+  href: https://artifacts.apis.io/hootsuite/packages/hootsuite-packages.yml
   title: ''
   type: Packages
   url: packages/hootsuite-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/packages/hootsuite-packages.yml
+  href: https://artifacts.apis.io/hootsuite/packages/hootsuite-packages.yml
   title: ''
   type: SDKs
   url: packages/hootsuite-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/components/hootsuite-components.yml
+  href: https://artifacts.apis.io/hootsuite/components/hootsuite-components.yml
   title: ''
   type: Components
   url: components/hootsuite-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/asyncapi/hootsuite-webhooks.yml
+  href: https://artifacts.apis.io/hootsuite/asyncapi/hootsuite-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/hootsuite-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/mcp/hootsuite-mcp.yml
+  href: https://artifacts.apis.io/hootsuite/mcp/hootsuite-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/hootsuite-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/mcp/hootsuite-tool-crosswalk.yml
+  href: https://artifacts.apis.io/hootsuite/mcp/hootsuite-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/hootsuite-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/hootsuite/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/llms/hootsuite-llms.txt
+  href: https://artifacts.apis.io/hootsuite/llms/hootsuite-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hootsuite-llms.txt
@@ -398,6 +398,14 @@ common:
   url: https://www.hootsuite.com/legal/privacy
 created: '2026-05-11'
 description: Hootsuite is a social media management platform that lets organizations schedule posts, monitor conversations, run paid campaigns, and analyze performance across LinkedIn, X (Twitter), Facebook, Instagram, TikTok, YouTube, and Pinterest from a single dashboard. The platform serves marketers, agencies, and enterprises with collaboration, approval, and governance workflows. Hootsuite publishes four first-party machine-readable API contracts on platform.hootsuite.com — a 48-operation REST API for messages, media, social profiles, members, teams and SCIM 2.0 provisioning; an Analytics API for organic and paid metrics; the Inbox 2.0 (Sparkcentral) API for CRM, virtual agents, queues and proactive messaging; and the Amplify employee-advocacy API — all authenticated with OAuth 2.0. It also serves an RFC 9727 API catalog, RFC 8414 authorization server metadata and RFC 9728 protected resource metadata.
+finops:
+- has_sources: true
+  method: derived
+  name: Hootsuite Finops
+  primary_unit: user/month
+  service_category: ''
+  slug: hootsuite-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hootsuite.png
 layout: provider
 mcp_servers:
@@ -411,7 +419,7 @@ network: true
 overview: 'Hootsuite publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analytics API, Authentication API, Comments API, and 18 more. Tagged areas include Social Media, Social Media Management, Marketing, Content Scheduling, and Analytics.
 
 
-  The Hootsuite catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Hootsuite catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Hootsuite''s developer surface includes authentication, changelog, documentation, API reference, getting-started guide, signup flow, pricing, and 41 more developer resources.'
@@ -419,32 +427,48 @@ plans:
 - name: Hootsuite Plans Pricing
   plan_count: 4
   slug: hootsuite-plans-pricing
-random_paper: 6
+- name: Hootsuite Price Estimates
+  plan_count: 0
+  slug: hootsuite-price-estimates
+random_paper: 12
 rate_limits:
 - limit_count: 2
   name: Hootsuite Rate Limits
   slug: hootsuite-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Hootsuite API Rules
+  rule_count: 65
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 4
+    warn: 19
+  slug: hootsuite-rules
 scopes:
 - name: Hootsuite Scopes
   scope_count: 2
   slug: hootsuite-scopes
   summary_line: 2 scopes · authorizationCode/clientCredentials
 score:
-  band: strong
-  composite: 63.9
+  band: exemplar
+  composite: 72.7
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 60.0
+    artifact_dirs: 32
+    catalog_earned: 67.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 55.0
+    catalog_gap: 47.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 5.1
   facets:
-    access_clarity: 77.6
-    contract_governance: 4.5
-    contract_quality: 62.3
-    developer_ergonomics: 49.4
+    access_clarity: 85.5
+    contract_governance: 18.2
+    contract_quality: 67.6
+    developer_ergonomics: 70.8
     discoverability: 80.0
     operational_transparency: 81.6
   jurisdiction:
@@ -454,14 +478,14 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 63.8
+  previous_composite: 67.6
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 50.0
+      marker_coverage: 60.0
       total: 20
     mcp: first-party
     skills: derived
@@ -471,13 +495,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/hootsuite/refs/heads/main/screenshots/hootsuite-2026-06-20T182835.png
+screenshot: https://apis.io/screenshots/hootsuite/hootsuite-2026-06-20T182835.png
 security:
 - kind: authentication
   name: Hootsuite Authentication
@@ -491,6 +515,16 @@ security:
   name: Hootsuite Vulnerability Disclosure
   slug: hootsuite-vulnerability-disclosure
   summary_line: Hackerone · security.txt
+skill_count: 4
+skills:
+- name: hootsuite-approval-workflow
+  slug: hootsuite-approval-workflow
+- name: hootsuite-provision-users-scim
+  slug: hootsuite-provision-users-scim
+- name: hootsuite-pull-analytics
+  slug: hootsuite-pull-analytics
+- name: hootsuite-schedule-social-post
+  slug: hootsuite-schedule-social-post
 slug: hootsuite
 tags:
 - Social Media
@@ -503,9 +537,10 @@ tags:
 - Employee Advocacy
 - Customer Service
 - SCIM
-- Authentication
+- OAuth
 - Webhook
 - Scheduling
 - Canada
+- Authentication
 website: https://www.hootsuite.com
 ---

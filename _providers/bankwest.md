@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -78,11 +83,8 @@ apis:
   description: Banking Product endpoints
   name: Bankwest Banking Products API
   slug: bankwest-banking-products-api
-artifact_total: 19
+artifact_total: 21
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CDR Banking Banking Account Balances API
   slug: open-bankwest-banking-account-balances-api
@@ -106,42 +108,42 @@ collections:
   slug: open-bankwest-banking-products-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/capabilities/bankwest-capability-edges.yml
+  href: https://artifacts.apis.io/bankwest/capabilities/bankwest-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bankwest-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/security/bankwest-domain-security.yml
+  href: https://artifacts.apis.io/bankwest/security/bankwest-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bankwest-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/agentic-access/bankwest-agentic-access.yml
+  href: https://artifacts.apis.io/bankwest/agentic-access/bankwest-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bankwest-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/authentication/bankwest-authentication.yml
+  href: https://artifacts.apis.io/bankwest/authentication/bankwest-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bankwest-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/scopes/bankwest-scopes.yml
+  href: https://artifacts.apis.io/bankwest/scopes/bankwest-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/bankwest-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/conventions/bankwest-conventions.yml
+  href: https://artifacts.apis.io/bankwest/conventions/bankwest-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bankwest-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/errors/bankwest-problem-types.yml
+  href: https://artifacts.apis.io/bankwest/errors/bankwest-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bankwest-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/lifecycle/bankwest-lifecycle.yml
+  href: https://artifacts.apis.io/bankwest/lifecycle/bankwest-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bankwest-lifecycle.yml
@@ -150,32 +152,32 @@ common:
   type: StatusPage
   url: https://www.bankwest.com.au/support/payments/payment-services-availability
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/conformance/bankwest-conformance.yml
+  href: https://artifacts.apis.io/bankwest/conformance/bankwest-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bankwest-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/data-model/bankwest-data-model.yml
+  href: https://artifacts.apis.io/bankwest/data-model/bankwest-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bankwest-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/mcp/bankwest-mcp.yml
+  href: https://artifacts.apis.io/bankwest/mcp/bankwest-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/bankwest-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/overlays/bankwest-cds-banking-products-overlay.yaml
+  href: https://artifacts.apis.io/bankwest/overlays/bankwest-cds-banking-products-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bankwest-cds-banking-products-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/llms/bankwest-llms.txt
+  href: https://artifacts.apis.io/bankwest/llms/bankwest-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bankwest-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bankwest/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -222,8 +224,24 @@ network: true
 overview: 'Bankwest publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
+  The Bankwest catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Bankwest''s developer surface includes authentication, documentation, API reference, support, and 19 more developer resources.'
-random_paper: 5
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: Bankwest API Rules
+  rule_count: 68
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 5
+  slug: bankwest-rules
 scopes:
 - name: Bankwest Scopes
   scope_count: 5
@@ -231,18 +249,18 @@ scopes:
   summary_line: 5 scopes
 score:
   band: thin
-  composite: 35.4
+  composite: 37.1
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 44.7
     developer_ergonomics: 44.6
     discoverability: 73.2
@@ -254,7 +272,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 35.4
+  previous_composite: 37.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -271,13 +289,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 33.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bankwest/refs/heads/main/screenshots/bankwest-2026-07-21T114718.png
+screenshot: https://apis.io/screenshots/bankwest/bankwest-2026-07-21T114718.png
 security:
 - kind: authentication
   name: Bankwest Authentication
@@ -287,6 +305,12 @@ security:
   name: Bankwest Domain Security
   slug: bankwest-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Get Bankwest product detail
+  slug: bankwest-get-product-detail
+- name: List Bankwest banking products
+  slug: bankwest-list-products
 slug: bankwest
 tags:
 - Finance

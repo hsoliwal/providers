@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -62,9 +65,6 @@ asyncapis:
   slug: scratchpay-partner-webhooks
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Partner Borrower application API
   slug: open-scratchpay-borrower-application-api
 - collection_type: open
@@ -72,7 +72,7 @@ collections:
   slug: open-scratchpay-borrower-application-result-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/overlays/scratchpay-care-credit-overlay.yaml
+  href: https://artifacts.apis.io/scratchpay/overlays/scratchpay-care-credit-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/scratchpay-care-credit-overlay.yaml
@@ -113,57 +113,57 @@ common:
   type: PrivacyPolicy
   url: https://scratchpay.com/legal/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/authentication/scratchpay-authentication.yml
+  href: https://artifacts.apis.io/scratchpay/authentication/scratchpay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/scratchpay-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/errors/scratchpay-problem-types.yml
+  href: https://artifacts.apis.io/scratchpay/errors/scratchpay-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/scratchpay-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/conventions/scratchpay-conventions.yml
+  href: https://artifacts.apis.io/scratchpay/conventions/scratchpay-conventions.yml
   title: ''
   type: Conventions
   url: conventions/scratchpay-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/asyncapi/scratchpay-partner-webhooks.yml
+  href: https://artifacts.apis.io/scratchpay/asyncapi/scratchpay-partner-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/scratchpay-partner-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/data-model/scratchpay-data-model.yml
+  href: https://artifacts.apis.io/scratchpay/data-model/scratchpay-data-model.yml
   title: ''
   type: DataModel
   url: data-model/scratchpay-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/conformance/scratchpay-conformance.yml
+  href: https://artifacts.apis.io/scratchpay/conformance/scratchpay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/scratchpay-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/sandbox/scratchpay-sandbox.yml
+  href: https://artifacts.apis.io/scratchpay/sandbox/scratchpay-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/scratchpay-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/mcp/scratchpay-mcp.yml
+  href: https://artifacts.apis.io/scratchpay/mcp/scratchpay-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/scratchpay-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/llms/scratchpay-llms.txt
+  href: https://artifacts.apis.io/scratchpay/llms/scratchpay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/scratchpay-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/agentic-access/scratchpay-agentic-access.yml
+  href: https://artifacts.apis.io/scratchpay/agentic-access/scratchpay-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/scratchpay-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/security/scratchpay-domain-security.yml
+  href: https://artifacts.apis.io/scratchpay/security/scratchpay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/scratchpay-domain-security.yml
@@ -178,30 +178,43 @@ network: true
 overview: 'Scratchpay publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Borrower application API and Borrower application result API. Tagged areas include Company, Financing, Payments, Lending, and Veterinary.
 
 
-  The Scratchpay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Scratchpay catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Scratchpay''s developer surface includes documentation, API reference, support, engineering blog, authentication, sandbox, and 15 more developer resources.'
 random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 77
+  extends:
+  - spectral:oas
+  name: Scratchpay API Rules
+  rule_count: 36
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 1
+    warn: 1
+  slug: scratchpay-rules
 score:
   band: thin
-  composite: 34.3
+  composite: 37.9
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 40.0
+    artifact_dirs: 21
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.9
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 47.9
-    developer_ergonomics: 33.3
+    developer_ergonomics: 42.9
     discoverability: 78.6
     operational_transparency: 10.5
-  previous_composite: 34.3
+  previous_composite: 36.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -217,13 +230,13 @@ score:
     regime: Health
     regime_id: health
     score: 19.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/scratchpay/refs/heads/main/screenshots/scratchpay-2026-09-02T154604.png
+screenshot: https://apis.io/screenshots/scratchpay/scratchpay-2026-09-02T154604.png
 security:
 - kind: authentication
   name: Scratchpay Authentication

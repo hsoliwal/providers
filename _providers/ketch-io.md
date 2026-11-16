@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.4
-  scored_at: '2026-10-17'
+  score: 17.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -75,9 +79,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Ketch Web Configuration API
   slug: open-ketch-io-configuration-api
 - collection_type: open
@@ -94,22 +95,22 @@ collections:
   slug: open-ketch-io
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ketch-io/refs/heads/main/plans/ketch-io-plans-pricing.yml
+  href: https://artifacts.apis.io/ketch-io/plans/ketch-io-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ketch-io-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ketch-io/refs/heads/main/rate-limits/ketch-io-rate-limits.yml
+  href: https://artifacts.apis.io/ketch-io/rate-limits/ketch-io-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ketch-io-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ketch-io/refs/heads/main/finops/ketch-io-finops.yml
+  href: https://artifacts.apis.io/ketch-io/finops/ketch-io-finops.yml
   title: ''
   type: FinOps
   url: finops/ketch-io-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ketch-io/refs/heads/main/capabilities/ketch-io-capability-edges.yml
+  href: https://artifacts.apis.io/ketch-io/capabilities/ketch-io-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/ketch-io-capability-edges.yml
@@ -138,12 +139,12 @@ common:
   type: License
   url: https://github.com/ketch-sdk/ketch-web-api/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ketch-io/refs/heads/main/agentic-access/ketch-io-agentic-access.yml
+  href: https://artifacts.apis.io/ketch-io/agentic-access/ketch-io-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ketch-io-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ketch-io/refs/heads/main/security/ketch-io-domain-security.yml
+  href: https://artifacts.apis.io/ketch-io/security/ketch-io-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ketch-io-domain-security.yml
@@ -190,38 +191,54 @@ network: true
 overview: 'Ketch publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Configuration API, Consent API, Preferences API, and 4 more. Tagged areas include Ketch, Privacy, Consent, Preference Management, and DSR.
 
 
+  The Ketch catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Ketch''s developer surface includes documentation, pricing, engineering blog, and 15 more developer resources.'
 plans:
 - name: Ketch Io Plans Pricing
   plan_count: 1
   slug: ketch-io-plans-pricing
-random_paper: 18
+random_paper: 20
 rate_limits:
 - limit_count: 2
   name: Ketch Io Rate Limits
   slug: ketch-io-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Ketch API Rules
+  rule_count: 49
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 1
+  slug: ketch-io-rules
 score:
   band: thin
-  composite: 33.9
+  composite: 36.9
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 36.0
+    artifact_dirs: 15
+    catalog_earned: 40.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 74.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.4
+  delta: 1.5
   facets:
     access_clarity: 28.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 41.9
-    developer_ergonomics: 10.7
+    developer_ergonomics: 19.0
     discoverability: 57.1
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 39.3
+  previous_composite: 35.4
   provenance:
     agentic_access: derived
     contracts:
@@ -235,13 +252,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/ketch-io/refs/heads/main/screenshots/ketch-io-2026-06-20T183959.png
+screenshot: https://apis.io/screenshots/ketch-io/ketch-io-2026-06-20T183959.png
 security:
 - kind: domain-security
   name: Ketch Io Domain Security

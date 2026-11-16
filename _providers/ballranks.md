@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: documented
+    mcp_tool_quality: three_quarters
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 43.6
-  scored_at: '2026-10-17'
+  score: 46.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -41,53 +55,58 @@ apis:
   slug: ballranks-rankings-and-projections-api
 artifact_total: 7
 common:
+- group: other
+  href: https://artifacts.apis.io/ballranks/capabilities/ballranks-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ballranks-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/well-known/ballranks-well-known.yml
+  href: https://artifacts.apis.io/ballranks/well-known/ballranks-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ballranks-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/agentic-access/ballranks-agentic-access.yml
+  href: https://artifacts.apis.io/ballranks/agentic-access/ballranks-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ballranks-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/rules/ballranks-rules.yml
+  href: https://artifacts.apis.io/ballranks/rules/ballranks-rules.yml
   title: ''
   type: Spectral
   url: rules/ballranks-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/errors/ballranks-problem-types.yml
+  href: https://artifacts.apis.io/ballranks/errors/ballranks-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ballranks-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/conformance/ballranks-conformance.yml
+  href: https://artifacts.apis.io/ballranks/conformance/ballranks-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ballranks-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/llms/ballranks-llms.txt
+  href: https://artifacts.apis.io/ballranks/llms/ballranks-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ballranks-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/hosts/ballranks-hosts.yml
+  href: https://artifacts.apis.io/ballranks/hosts/ballranks-hosts.yml
   title: ''
   type: Hosts
   url: hosts/ballranks-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/vendors/ballranks-vendors.yml
+  href: https://artifacts.apis.io/ballranks/vendors/ballranks-vendors.yml
   title: ''
   type: Vendors
   url: vendors/ballranks-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/authentication/ballranks-authentication.yml
+  href: https://artifacts.apis.io/ballranks/authentication/ballranks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ballranks-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/security/ballranks-domain-security.yml
+  href: https://artifacts.apis.io/ballranks/security/ballranks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ballranks-domain-security.yml
@@ -132,7 +151,7 @@ common:
   type: ChangeLog
   url: https://ballranks.com/developers#changelog
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/plans/ballranks-access.json
+  href: https://artifacts.apis.io/ballranks/plans/ballranks-access.json
   title: ''
   type: Plans
   url: plans/ballranks-access.json
@@ -149,22 +168,22 @@ common:
   type: VulnerabilityDisclosure
   url: https://ballranks.com/developers#security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/well-known/ballranks-security.txt
+  href: https://artifacts.apis.io/ballranks/well-known/ballranks-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ballranks-security.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/well-known/ballranks-api-catalog.json
+  href: https://artifacts.apis.io/ballranks/well-known/ballranks-api-catalog.json
   title: ''
   type: APICatalog
   url: well-known/ballranks-api-catalog.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/mcp/ballranks-mcp.yml
+  href: https://artifacts.apis.io/ballranks/mcp/ballranks-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/ballranks-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ballranks/refs/heads/main/skills/ball-ranks/SKILL.md
+  href: https://artifacts.apis.io/ballranks/skills/ball-ranks/SKILL.md
   title: ''
   type: AgentSkill
   url: skills/ball-ranks/SKILL.md
@@ -190,8 +209,8 @@ overview: 'Ball Ranks publishes 1 API contract indexed on the [APIs.io](https://
   The Ball Ranks catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Ball Ranks'' developer surface includes authentication, documentation, API reference, support, engineering blog, signup flow, getting-started guide, and 22 more developer resources.'
-random_paper: 8
+  Ball Ranks'' developer surface includes authentication, documentation, API reference, support, engineering blog, signup flow, getting-started guide, and 23 more developer resources.'
+random_paper: 18
 rules:
 - authorship: generated
   effective_rule_count: 58
@@ -207,28 +226,30 @@ rules:
   slug: ballranks-rules
 score:
   band: developing
-  composite: 48.5
+  composite: 40.7
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 21
     catalog_earned: 41.5
     catalog_earned_first_party: 0.0
     catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.5
   facets:
-    access_clarity: 44.7
+    access_clarity: 22.4
     contract_governance: 18.2
-    contract_quality: 53.9
-    developer_ergonomics: 58.3
+    contract_quality: 59.9
+    developer_ergonomics: 37.4
     discoverability: 75.0
-    operational_transparency: 21.1
+    operational_transparency: 23.7
+  previous_composite: 49.2
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
     mcp: first-party
   regulatory:
@@ -236,13 +257,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 28.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/ballranks/ballranks-2026-11-03T121526.png
 security:
 - kind: authentication
   name: Ballranks Authentication

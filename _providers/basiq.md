@@ -1,21 +1,27 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium · Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Free · Self-serve signup
   onboarding: self-serve
-  pricing: freemium
+  pricing: free
   public: false
   source:
   - plans
   - authentication
+  - rate-limits
   - security
+  - sandbox
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: false
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -23,19 +29,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
-    mcp_server: platform
-    openapi_examples: false
+    mcp_server: documented
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
-    rate_limit_signal: derived
+    rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
-    well_known_catalog: false
+    well_known_catalog: true
   schema_version: '0.2'
-  score: 20.1
-  scored_at: '2026-10-17'
+  score: 39.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -43,18 +52,13 @@ agentic_access:
   operation_count: 14
   slug: basiq-agentic-access
   summary_line: 14 operations · 5 acting
-api_count: 1
+api_count: 10
 apis:
 - baseURL: https://au-api.basiq.io
   baseurl_source: declared
   description: The Accounts API from Basiq — 2 operation(s) for accounts.
   name: Basiq Accounts API
   slug: basiq-accounts-api
-- baseURL: https://au-api.basiq.io
-  baseurl_source: declared
-  description: The Affordability API from Basiq — 2 operation(s) for affordability.
-  name: Basiq Affordability API
-  slug: basiq-affordability-api
 - baseURL: https://au-api.basiq.io
   baseurl_source: declared
   description: The Authentication API from Basiq — 1 operation(s) for authentication.
@@ -75,11 +79,88 @@ apis:
   description: The Users API from Basiq — 2 operation(s) for users.
   name: Basiq Users API
   slug: basiq-users-api
-artifact_total: 84
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Consents API from Basiq — 2 operation(s) for consents.
+  name: Basiq Consents API
+  slug: basiq-consents-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Jobs API from Basiq — 3 operation(s) for jobs.
+  name: Basiq Jobs API
+  slug: basiq-jobs-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Affordability API from Basiq — 3 operation(s) for affordability.
+  name: Basiq Affordability API
+  slug: basiq-affordability-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Analytics API from Basiq — 2 operation(s) for analytics.
+  name: Basiq Analytics API
+  slug: basiq-analytics-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The AuthLinks API from Basiq — 1 operation(s) for authlinks.
+  name: Basiq Auth Links API
+  slug: basiq-authlinks-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Connectors API from Basiq — 2 operation(s) for connectors.
+  name: Basiq Connectors API
+  slug: basiq-connectors-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Enrich API from Basiq — 3 operation(s) for enrich.
+  name: Basiq Enrich API
+  slug: basiq-enrich-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Events API from Basiq — 4 operation(s) for events.
+  name: Basiq Events API
+  slug: basiq-events-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Expenses API from Basiq — 2 operation(s) for expenses.
+  name: Basiq Expenses API
+  slug: basiq-expenses-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Identities API from Basiq — 2 operation(s) for identities.
+  name: Basiq Identities API
+  slug: basiq-identities-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Income API from Basiq — 2 operation(s) for income.
+  name: Basiq Income API
+  slug: basiq-income-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Insights API from Basiq — 10 operation(s) for insights.
+  name: Basiq Insights API
+  slug: basiq-insights-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Payees API from Basiq — 2 operation(s) for payees.
+  name: Basiq Payees API
+  slug: basiq-payees-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Reports API from Basiq — 5 operation(s) for reports.
+  name: Basiq Reports API
+  slug: basiq-reports-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: The Statements API from Basiq — 1 operation(s) for statements.
+  name: Basiq Statements API
+  slug: basiq-statements-api
+- baseURL: https://au-api.basiq.io
+  baseurl_source: declared
+  description: Basiq Webhooks
+  name: Basiq Webhooks API
+  slug: basiq-webhooks-api
+artifact_total: 115
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Basiq Accounts API
   slug: open-basiq-accounts-api
@@ -102,89 +183,267 @@ collections:
   name: Basiq Accounts Users API
   slug: open-basiq-users-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/basiq/overview
+- group: design
+  href: https://artifacts.apis.io/basiq/rules/basiq-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/basiq-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/basiq/rules/basiq-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/basiq-rules.yml
+- group: design
+  href: https://artifacts.apis.io/basiq/rules/basiq-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/basiq-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/basiq/vocabulary/basiq-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/basiq-vocabulary.yml
+- group: agent
+  href: https://artifacts.apis.io/basiq/skills/_index.yml
+  title: ''
+  type: AgentSkill
+  url: skills/_index.yml
+- group: design
+  href: https://artifacts.apis.io/basiq/components/basiq-components.yml
+  title: ''
+  type: Components
+  url: components/basiq-components.yml
+- group: operate
+  href: https://artifacts.apis.io/basiq/changelog/basiq-changelog.yml
+  title: ''
+  type: ChangeLog
+  url: changelog/basiq-changelog.yml
+- group: design
+  href: https://artifacts.apis.io/basiq/conventions/basiq-conventions.yml
+  title: ''
+  type: Conventions
+  url: conventions/basiq-conventions.yml
+- group: start
+  href: https://artifacts.apis.io/basiq/sandbox/basiq-sandbox.yml
+  title: ''
+  type: Sandbox
+  url: sandbox/basiq-sandbox.yml
+- group: operate
+  href: https://artifacts.apis.io/basiq/lifecycle/basiq-lifecycle.yml
+  title: ''
+  type: Deprecation
+  url: lifecycle/basiq-lifecycle.yml
+- group: design
+  href: https://artifacts.apis.io/basiq/lifecycle/basiq-lifecycle.yml
+  title: ''
+  type: Lifecycle
+  url: lifecycle/basiq-lifecycle.yml
+- group: design
+  href: https://artifacts.apis.io/basiq/errors/basiq-error-codes.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/basiq-error-codes.yml
+- group: design
+  href: https://artifacts.apis.io/basiq/errors/basiq-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/basiq-problem-types.yml
+- group: design
+  href: https://artifacts.apis.io/basiq/conformance/basiq-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/basiq-conformance.yml
+- group: other
+  href: https://artifacts.apis.io/basiq/overlays/basiq-accounts-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/basiq-accounts-api-overlay.yaml
+- group: agent
+  href: https://artifacts.apis.io/basiq/llms/basiq-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/basiq-llms.txt
+- group: build
+  href: https://artifacts.apis.io/basiq/mcp/basiq-tool-crosswalk.yml
+  title: ''
+  type: ToolCrosswalk
+  url: mcp/basiq-tool-crosswalk.yml
+- group: agent
+  href: https://artifacts.apis.io/basiq/mcp/basiq-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/basiq-mcp.yml
+- group: auth
+  href: https://artifacts.apis.io/basiq/well-known/basiq-status-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/basiq-status-security.txt
+- group: auth
+  href: https://artifacts.apis.io/basiq/well-known/basiq-docs-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/basiq-docs-security.txt
+- group: agent
+  href: https://artifacts.apis.io/basiq/well-known/basiq-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/basiq-well-known.yml
+- group: other
+  href: https://artifacts.apis.io/basiq/hosts/basiq-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/basiq-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/basiq/integrations/basiq-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/basiq-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/basiq/vendors/basiq-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/basiq-vendors.yml
+- group: build
+  href: https://artifacts.apis.io/basiq/packages/basiq-packages.yml
+  title: ''
+  type: SDKs
+  url: packages/basiq-packages.yml
+- group: build
+  href: https://artifacts.apis.io/basiq/packages/basiq-packages.yml
+  title: ''
+  type: Packages
+  url: packages/basiq-packages.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://blog.basiq.io
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/basiq/refs/heads/main/plans/basiq-plans-pricing.yml
+  href: https://artifacts.apis.io/basiq/plans/basiq-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/basiq-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/basiq/refs/heads/main/rate-limits/basiq-rate-limits.yml
+  href: https://artifacts.apis.io/basiq/rate-limits/basiq-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/basiq-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/basiq/refs/heads/main/finops/basiq-finops.yml
+  href: https://artifacts.apis.io/basiq/finops/basiq-finops.yml
   title: ''
   type: FinOps
   url: finops/basiq-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/basiq/refs/heads/main/capabilities/basiq-capability-edges.yml
+  href: https://artifacts.apis.io/basiq/capabilities/basiq-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/basiq-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/basiq/refs/heads/main/agentic-access/basiq-agentic-access.yml
+  href: https://artifacts.apis.io/basiq/agentic-access/basiq-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/basiq-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/basiq/refs/heads/main/security/basiq-domain-security.yml
+  href: https://artifacts.apis.io/basiq/security/basiq-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/basiq-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/basiq/refs/heads/main/authentication/basiq-authentication.yml
+  href: https://artifacts.apis.io/basiq/authentication/basiq-authentication.yml
   title: ''
   type: Authentication
   url: authentication/basiq-authentication.yml
 - group: company
   title: ''
-  type: LinkedIn
-  url: https://www.linkedin.com/company/basiq-i-o
-- group: company
-  title: ''
   type: Website
-  url: https://basiq.io/
+  url: https://www.basiq.io/
+- group: start
+  title: ''
+  type: DeveloperPortal
+  url: https://api.basiq.io/docs
 - group: docs
   title: ''
   type: Documentation
+  url: https://api.basiq.io/docs
+- group: docs
+  title: ''
+  type: APIReference
   url: https://api.basiq.io/reference
-- group: company
+- group: start
   title: ''
-  type: Website
+  type: GettingStarted
+  url: https://api.basiq.io/docs/getting-started
+- group: operate
+  title: ''
+  type: ChangeLog
+  url: https://api.basiq.io/changelog
+- group: operate
+  title: ''
+  type: StatusPage
+  url: https://status.basiq.io/
+- group: operate
+  title: ''
+  type: HelpCenter
+  url: https://docs.basiq.io/en/
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://www.basiq.io/pricing.html
+- group: start
+  title: ''
+  type: SignUp
+  url: https://dashboard.basiq.io/register
+- group: start
+  title: ''
+  type: Login
+  url: https://dashboard.basiq.io/login
+- group: other
+  title: ''
+  type: Dashboard
   url: https://dashboard.basiq.io/
-- group: company
+- group: build
   title: ''
-  type: Website
-  url: https://basiq.io/pricing/
-- group: company
-  title: ''
-  type: Blog
-  url: https://basiq.io/blog/
-- group: company
-  title: ''
-  type: Website
+  type: GitHubOrganization
   url: https://github.com/basiqio
+- group: auth
+  title: ''
+  type: Security
+  url: https://www.basiq.io/data-security.html
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://docs.basiq.io/en/articles/5088017-consumer-data-right-cdr-policy
+- group: company
+  title: ''
+  type: About
+  url: https://www.basiq.io/company/about.html
+- group: operate
+  title: ''
+  type: Contact
+  url: https://www.basiq.io/contact.html
 - group: commercial
   title: ''
   type: TermsOfService
-  url: https://basiq.io/legal/terms-of-use/
+  url: https://docs.basiq.io/en/articles/415750-basiq-terms-of-service
 - group: commercial
   title: ''
   type: PrivacyPolicy
-  url: https://basiq.io/legal/privacy-policy/
+  url: https://docs.basiq.io/en/articles/382581-basiq-privacy-policy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/basiq/refs/heads/main/rules/basiq-spectral-rules.yml
+  href: https://artifacts.apis.io/basiq/rules/basiq-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/basiq-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/basiq/refs/heads/main/vocabulary/basiq-vocabulary.yaml
+  href: https://artifacts.apis.io/basiq/vocabulary/basiq-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/basiq-vocabulary.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/basiq/refs/heads/main/json-ld/basiq-context.jsonld
+  href: https://artifacts.apis.io/basiq/json-ld/basiq-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/basiq-context.jsonld
@@ -193,7 +452,7 @@ common:
   type: LlmsText
   url: https://api.basiq.io/llms.txt
 created: '2026-03-27'
-description: Basiq is an Australian open banking and financial data API platform providing unified access to bank account data and enrichment services. It enables fintechs, lenders, and financial service providers to connect to 180+ Australian and New Zealand banks via CDR (Consumer Data Right) and third-party connectors. The Basiq API provides user management, bank connections, account balances, transaction history, income verification, and expense categorization. Uses JWT Bearer token authentication.
+description: Basiq is an Australian open banking and financial data API platform providing unified access to bank account data and enrichment services. It enables fintechs, lenders, and financial service providers to connect to 180+ Australian and New Zealand banks via CDR (Consumer Data Right) and third-party connectors. The Basiq API provides user management, bank connections, account balances, transaction history, income verification, and expense categorization. Uses JWT Bearer token authentication. Basiq Pty Ltd (ABN 95 616 592 011) is an accredited data recipient under the CDR and a wholly-owned but non-guaranteed subsidiary of Cuscal Limited.
 examples:
 - key_count: 5
   name: Account
@@ -253,7 +512,7 @@ finops:
 - has_sources: false
   method: generated
   name: Basiq Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: basiq-finops
   template: true
@@ -274,6 +533,45 @@ json_schemas:
 - name: AccountListResponse
   property_count: 3
   slug: accountlistresponse
+- name: AccountInsightResponse
+  property_count: 6
+  slug: basiq-account-insight-response
+- name: AnalyticsResponse
+  property_count: 6
+  slug: basiq-analytics-response
+- name: ConnectionAnalyticsResponse
+  property_count: 6
+  slug: basiq-connection-analytics-response
+- name: ExpenseRatioInsightResponse
+  property_count: 6
+  slug: basiq-expense-ratio-insight-response
+- name: Insight
+  property_count: 7
+  slug: basiq-insight
+- name: InsightTypeItem
+  property_count: 6
+  slug: basiq-insight-type-item
+- name: MerchantDetails
+  property_count: 8
+  slug: basiq-merchant-details
+- name: PayeeDetailsResponse
+  property_count: 12
+  slug: basiq-payee-details-response
+- name: PayeesListResponse
+  property_count: 5
+  slug: basiq-payees-list-response
+- name: PostInsightsRequest
+  property_count: 3
+  slug: basiq-post-insights-request
+- name: PostInsightsResponse
+  property_count: 7
+  slug: basiq-post-insights-response
+- name: SingleMerchantResponse
+  property_count: 5
+  slug: basiq-single-merchant-response
+- name: WebhookStats
+  property_count: 7
+  slug: basiq-webhook-stats
 - name: Connection
   property_count: 4
   slug: connection
@@ -354,27 +652,27 @@ jsonld:
   slug: basiq-context
 layout: provider
 mcp_servers:
-- description: Remote MCP server at api.basiq.io over HTTP; 7 tools listed.
-  name: Basiq MCP Server
-  slug: basiq
-modified: '2026-05-19'
+- description: Remote MCP server at api.basiq.io over streamable HTTP; 5 tools listed.
+  name: Basiq API MCP Server
+  slug: basiq-api
+modified: '2026-10-21'
 name: Basiq
 nav: Providers
 network: true
-overview: 'Basiq publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Affordability API, Authentication API, and 3 more. Tagged areas include Australia, Banking, CDR, Financial Data, and Fintech.
+overview: 'Basiq publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Authentication API, Connections API, and 18 more. Tagged areas include Australia, Banking, CDR, Financial Data, and Fintech.
 
 
-  The Basiq catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+  The Basiq catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  Basiq''s developer surface includes authentication, documentation, engineering blog, and 17 more developer resources.'
+  Basiq''s developer surface includes changelog, sandbox, engineering blog, authentication, documentation, API reference, getting-started guide, and 51 more developer resources.'
 plans:
 - name: Basiq Plans Pricing
-  plan_count: 3
+  plan_count: 2
   slug: basiq-plans-pricing
 random_paper: 0
 rate_limits:
-- limit_count: 5
+- limit_count: 6
   name: Basiq Rate Limits
   slug: basiq-rate-limits
 rules:
@@ -390,6 +688,18 @@ rules:
     warn: 3
   slug: basiq-jsonschema-spectral-rules
 - authorship: generated
+  effective_rule_count: 57
+  extends:
+  - spectral:oas
+  name: Basiq API Rules
+  rule_count: 16
+  severity_counts:
+    error: 15
+    hint: 0
+    info: 1
+    warn: 0
+  slug: basiq-rules
+- authorship: generated
   effective_rule_count: 63
   extends:
   - spectral:oas
@@ -402,23 +712,23 @@ rules:
     warn: 15
   slug: basiq-spectral-rules
 score:
-  band: thin
-  composite: 29.9
+  band: strong
+  composite: 61.1
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 63.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 52.0
+    artifact_dirs: 37
+    catalog_earned: 89.0
+    catalog_earned_first_party: 20.0
+    catalog_gap: 26.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: -5.5
   facets:
-    access_clarity: 7.9
-    contract_governance: 27.3
-    contract_quality: 57.7
-    developer_ergonomics: 19.0
-    discoverability: 75.0
-    operational_transparency: 7.9
+    access_clarity: 47.4
+    contract_governance: 45.5
+    contract_quality: 68.6
+    developer_ergonomics: 60.1
+    discoverability: 80.0
+    operational_transparency: 63.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -426,37 +736,47 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 31.4
+  previous_composite: 66.6
   provenance:
     agentic_access: derived
+    conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 6
+      marker_coverage: 25.0
+      total: 28
     mcp: first-party
+    skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 13.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 30.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/basiq/refs/heads/main/screenshots/basiq-2026-06-20T173039.png
+screenshot: https://apis.io/screenshots/basiq/basiq-2026-06-20T173039.png
 security:
 - kind: authentication
   name: Basiq Authentication
   slug: basiq-authentication
-  summary_line: http · 1 scheme
+  summary_line: apiKey/http · 2 schemes
 - kind: domain-security
   name: Basiq Domain Security
   slug: basiq-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: basiq-manage-connections-and-consent
+  slug: basiq-manage-connections-and-consent
+- name: basiq-onboard-user
+  slug: basiq-onboard-user
+- name: basiq-read-financial-data
+  slug: basiq-read-financial-data
 slug: basiq
 tags:
 - Australia
@@ -466,6 +786,8 @@ tags:
 - Fintech
 - Open Banking
 - Transaction
+- Lending
+- Account Verification
 use_cases:
 - description: Use income verification and expense data to assess creditworthiness and affordability.
   name: Lending and Credit Assessment
@@ -479,5 +801,5 @@ use_cases:
   name: Financial Advisory
 - description: Verify bank account ownership for payment and identity verification workflows.
   name: Account Verification
-website: https://basiq.io/
+website: https://www.basiq.io/
 ---

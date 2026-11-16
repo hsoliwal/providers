@@ -1,0 +1,173 @@
+---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
+agent_readiness:
+  band: human-only
+  dimensions:
+    agent_card: false
+    agent_skills: false
+    agentic_access: false
+    agentic_commerce: false
+    auth_clarity: false
+    consent_identity: false
+    delegated_identity: false
+    dry_run_mode: false
+    dynamic_client_registration: false
+    error_semantics: false
+    event_surface_described: false
+    idempotency: false
+    mcp_server: false
+    mcp_tool_quality: na
+    openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
+    protected_resource_metadata: false
+    rate_limit_signal: false
+    reversibility_documented: false
+    spec_presence: false
+    well_known_catalog: false
+  schema_version: '0.2'
+  score: 0.0
+  scored_at: '2026-11-06'
+api_count: 0
+artifact_total: 3
+common:
+- group: commercial
+  href: https://artifacts.apis.io/stepsize/plans/stepsize-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/stepsize-plans-pricing.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://stepsize.com/security
+- group: other
+  href: https://artifacts.apis.io/stepsize/hosts/stepsize-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/stepsize-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/stepsize/vendors/stepsize-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/stepsize-vendors.yml
+- group: auth
+  href: https://artifacts.apis.io/stepsize/security/stepsize-trust-center.yml
+  title: ''
+  type: TrustCenter
+  url: security/stepsize-trust-center.yml
+- group: auth
+  href: https://artifacts.apis.io/stepsize/security/stepsize-domain-security.yml
+  title: ''
+  type: DomainSecurity
+  url: security/stepsize-domain-security.yml
+- group: company
+  title: ''
+  type: Website
+  url: https://stepsize.com/
+- group: company
+  title: ''
+  type: Blog
+  url: https://stepsize.com/blog
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://stepsize.com/ai/pricing
+- group: operate
+  title: ''
+  type: Support
+  url: https://stepsize.com/security
+coverage:
+  checked: '2026-10-29'
+  detail: Stepsize provides AI‑driven dashboards but its site offers no public OpenAPI, AsyncAPI, GraphQL, gRPC or WSDL specifications.
+  evidence:
+  - status: 200
+    url: https://stepsize.com/
+  reason: no-machine-readable-spec
+  state: unreadable
+created: '2026-10-29'
+description: Stepsize AI provides automated Jira and Linear dashboards that generate themselves using AI. The platform offers AI‑generated reports, technical debt tracking, daily standup summaries, team sync updates, sprint and kanban reports, and executive summaries. It aims to keep software teams aligned by turning product development data into actionable insights, with a free first report and paid plans for deeper analytics. The company is backed by Crane Venture Partners and positioned as a tool for modern software engineering management.
+image: https://2270361.fs1.hubspotusercontent-na1.net/hubfs/2270361/meta/meta-stepsize-ai-image-2310-1.png
+layout: provider
+modified: '2026-10-29'
+name: Stepsize
+nav: Providers
+network: true
+overview: 'Stepsize is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Dashboards, Jira, and Linear.
+
+
+  Stepsize''s developer surface includes engineering blog, pricing, support, and 7 more developer resources.'
+plans:
+- name: Stepsize Plans Pricing
+  plan_count: 2
+  slug: stepsize-plans-pricing
+random_paper: 23
+score:
+  band: emerging
+  composite: 12.1
+  coverage:
+    artifact_dirs: 10
+    catalog_earned: 35.0
+    catalog_earned_first_party: 8.0
+    catalog_gap: 80.0
+    catalog_max: 115.0
+    note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.9
+  facets:
+    access_clarity: 38.2
+    contract_governance: 0.0
+    contract_quality: 0.0
+    developer_ergonomics: 3.6
+    discoverability: 48.2
+    operational_transparency: 0.0
+  needs_work:
+    note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
+    owner: catalog
+    reasons:
+    - owner: catalog
+      reason: not_a_repo
+  previous_composite: 15.0
+  provenance:
+    mcp: unknown
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 7.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
+  upsert:
+    applies: false
+    note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
+    reason: no_specs
+screenshot: https://apis.io/screenshots/stepsize/stepsize-2026-11-03T143819.png
+security:
+- kind: domain-security
+  name: Stepsize Domain Security
+  slug: stepsize-domain-security
+  summary_line: TLSv1.3 · HSTS
+- kind: trust-center
+  name: Stepsize Trust Center
+  slug: stepsize-trust-center
+  summary_line: SOC 2
+slug: stepsize
+tags:
+- Company
+- Artificial Intelligence
+- Dashboards
+- Jira
+- Linear
+- Software-Management
+website: https://stepsize.com/
+---

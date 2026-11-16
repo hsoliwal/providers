@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Paid · Self-serve signup
   onboarding: self-serve
   pricing: paid
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST API for the Koalaboox / Cegid Click & Finance invoicing and invoice-financing platform. Resource-oriented URLs, JSON-encoded requests and responses, standard HTTP status codes, and OAuth 2.0 auth
@@ -47,7 +54,7 @@ common:
   type: Blog
   url: https://www.cegid.com/fr/insights/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/security/koalaboox-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/koalaboox/security/koalaboox-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/koalaboox-vulnerability-disclosure.yml
@@ -56,17 +63,17 @@ common:
   type: Security
   url: https://vdp.cegid.com/p/Policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/security/koalaboox-domain-security.yml
+  href: https://artifacts.apis.io/koalaboox/security/koalaboox-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/koalaboox-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/well-known/koalaboox-security.txt
+  href: https://artifacts.apis.io/koalaboox/well-known/koalaboox-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/koalaboox-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/well-known/koalaboox-well-known.yml
+  href: https://artifacts.apis.io/koalaboox/well-known/koalaboox-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/koalaboox-well-known.yml
@@ -107,52 +114,52 @@ common:
   type: PrivacyPolicy
   url: https://www.cegid.com/fr/mentions-legales/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/plans/koalaboox-plans.yml
+  href: https://artifacts.apis.io/koalaboox/plans/koalaboox-plans.yml
   title: ''
   type: Plans
   url: plans/koalaboox-plans.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/authentication/koalaboox-authentication.yml
+  href: https://artifacts.apis.io/koalaboox/authentication/koalaboox-authentication.yml
   title: ''
   type: Authentication
   url: authentication/koalaboox-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/conventions/koalaboox-conventions.yml
+  href: https://artifacts.apis.io/koalaboox/conventions/koalaboox-conventions.yml
   title: ''
   type: Conventions
   url: conventions/koalaboox-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/errors/koalaboox-problem-types.yml
+  href: https://artifacts.apis.io/koalaboox/errors/koalaboox-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/koalaboox-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/conformance/koalaboox-conformance.yml
+  href: https://artifacts.apis.io/koalaboox/conformance/koalaboox-conformance.yml
   title: ''
   type: Conformance
   url: conformance/koalaboox-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/lifecycle/koalaboox-lifecycle.yml
+  href: https://artifacts.apis.io/koalaboox/lifecycle/koalaboox-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/koalaboox-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/data-model/koalaboox-data-model.yml
+  href: https://artifacts.apis.io/koalaboox/data-model/koalaboox-data-model.yml
   title: ''
   type: DataModel
   url: data-model/koalaboox-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/packages/koalaboox-packages.yml
+  href: https://artifacts.apis.io/koalaboox/packages/koalaboox-packages.yml
   title: ''
   type: Packages
   url: packages/koalaboox-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/mcp/koalaboox-mcp.yml
+  href: https://artifacts.apis.io/koalaboox/mcp/koalaboox-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/koalaboox-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/llms/koalaboox-llms.txt
+  href: https://artifacts.apis.io/koalaboox/llms/koalaboox-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/koalaboox-llms.txt
@@ -172,23 +179,23 @@ plans:
 - name: Koalaboox Plans
   plan_count: 4
   slug: koalaboox-plans
-random_paper: 14
+random_paper: 0
 score:
   band: thin
-  composite: 30.1
+  composite: 33.7
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 3.6
   facets:
-    access_clarity: 55.3
+    access_clarity: 65.8
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 33.3
+    developer_ergonomics: 38.1
     discoverability: 73.2
     operational_transparency: 13.2
   jurisdiction:
@@ -201,7 +208,7 @@ score:
     - benelux
     - europe
     - france-iberia
-  previous_composite: 29.5
+  previous_composite: 30.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -210,15 +217,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 26.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/koalaboox/refs/heads/main/screenshots/koalaboox-2026-07-25T224027.png
+screenshot: https://apis.io/screenshots/koalaboox/koalaboox-2026-07-25T224027.png
 security:
 - kind: authentication
   name: Koalaboox Authentication
@@ -245,6 +252,7 @@ tags:
 - Fintech
 - Belgium
 - Spain
+- OAuth
 - Authentication
 website: https://www.cegid.com/be/fr/produits/cegid-invoice-financing/
 ---

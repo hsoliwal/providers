@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Flask is a lightweight WSGI web application framework for Python. It is commonly used as a foundation for building HTTP APIs and web services. While Flask itself does not expose an HTTP API, it ships '
@@ -42,17 +46,17 @@ apis:
 artifact_total: 7
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flask/refs/heads/main/plans/flask-plans-pricing.yml
+  href: https://artifacts.apis.io/flask/plans/flask-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/flask-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/flask/refs/heads/main/rate-limits/flask-rate-limits.yml
+  href: https://artifacts.apis.io/flask/rate-limits/flask-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/flask-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flask/refs/heads/main/finops/flask-finops.yml
+  href: https://artifacts.apis.io/flask/finops/flask-finops.yml
   title: ''
   type: FinOps
   url: finops/flask-finops.yml
@@ -73,7 +77,7 @@ common:
   type: ContributionGuide
   url: https://github.com/pallets/flask/blob/main/docs/contributing.rst
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flask/refs/heads/main/security/flask-domain-security.yml
+  href: https://artifacts.apis.io/flask/security/flask-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flask-domain-security.yml
@@ -123,7 +127,7 @@ finops:
 - has_sources: false
   method: generated
   name: Flask Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: flask-finops
   template: true
@@ -137,7 +141,7 @@ modified: '2026-04-28'
 name: Flask
 nav: Providers
 network: true
-overview: 'Flask is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Framework, Lightweight, Microframework, pallets, and Python.
+overview: 'Flask is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Framework, Microframework, pallets, Python, and Web Framework.
 
 
   The Flask catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -169,13 +173,13 @@ score:
   band: emerging
   composite: 21.7
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 46.7
     catalog_earned_first_party: 0.0
     catalog_gap: 68.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 9.8
@@ -186,21 +190,21 @@ score:
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 23.1
+  previous_composite: 21.7
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/flask/refs/heads/main/screenshots/flask-2026-06-20T181302.png
+screenshot: https://apis.io/screenshots/flask/flask-2026-06-20T181302.png
 security:
 - kind: domain-security
   name: Flask Domain Security
@@ -209,7 +213,6 @@ security:
 slug: flask
 tags:
 - Framework
-- Lightweight
 - Microframework
 - pallets
 - Python

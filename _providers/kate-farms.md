@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: derived
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The Shopify Storefront GraphQL API as deployed on Kate Farms' own host. Anonymous introspection succeeded on 2026-08-04, returning 424 types, 35 root query fields and 41 mutations covering products, c
@@ -45,7 +48,7 @@ apis:
 - description: Kate Farms' storefront advertises the Universal Commerce Protocol (UCP) at /.well-known/ucp and exposes an MCP endpoint for agent-driven commerce — catalog search and lookup, cart, discount, fulfillme
   name: Kate Farms UCP Agentic Commerce (MCP)
   slug: kate-farms-ucp-agentic-commerce-mcp
-artifact_total: 7
+artifact_total: 10
 common:
 - group: company
   title: ''
@@ -64,67 +67,67 @@ common:
   type: GettingStarted
   url: https://shop.katefarms.com/agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/llms/kate-farms-llms.txt
+  href: https://artifacts.apis.io/kate-farms/llms/kate-farms-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kate-farms-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/well-known/kate-farms-well-known.yml
+  href: https://artifacts.apis.io/kate-farms/well-known/kate-farms-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kate-farms-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/authentication/kate-farms-authentication.yml
+  href: https://artifacts.apis.io/kate-farms/authentication/kate-farms-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kate-farms-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/scopes/kate-farms-scopes.yml
+  href: https://artifacts.apis.io/kate-farms/scopes/kate-farms-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/kate-farms-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/conventions/kate-farms-conventions.yml
+  href: https://artifacts.apis.io/kate-farms/conventions/kate-farms-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kate-farms-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/conventions/kate-farms-conventions.yml
+  href: https://artifacts.apis.io/kate-farms/conventions/kate-farms-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/kate-farms-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/errors/kate-farms-problem-types.yml
+  href: https://artifacts.apis.io/kate-farms/errors/kate-farms-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/kate-farms-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/lifecycle/kate-farms-lifecycle.yml
+  href: https://artifacts.apis.io/kate-farms/lifecycle/kate-farms-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kate-farms-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/data-model/kate-farms-data-model.yml
+  href: https://artifacts.apis.io/kate-farms/data-model/kate-farms-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kate-farms-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/conformance/kate-farms-conformance.yml
+  href: https://artifacts.apis.io/kate-farms/conformance/kate-farms-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kate-farms-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/security/kate-farms-domain-security.yml
+  href: https://artifacts.apis.io/kate-farms/security/kate-farms-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kate-farms-domain-security.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/rate-limits/kate-farms-rate-limits.yml
+  href: https://artifacts.apis.io/kate-farms/rate-limits/kate-farms-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kate-farms-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kate-farms/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -188,7 +191,7 @@ overview: 'Kate Farms is listed with 2 APIs on the [APIs.io](https://apis.io/) n
 
 
   Kate Farms'' developer surface includes engineering blog, documentation, getting-started guide, authentication, support, signup flow, and 22 more developer resources.'
-random_paper: 13
+random_paper: 19
 rate_limits:
 - limit_count: 0
   name: Kate Farms Rate Limits
@@ -208,7 +211,7 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
@@ -216,7 +219,7 @@ score:
     developer_ergonomics: 49.4
     discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 31.3
+  previous_composite: 31.8
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -227,14 +230,14 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kate-farms/refs/heads/main/screenshots/kate-farms-2026-08-07T171111.png
+screenshot: https://apis.io/screenshots/kate-farms/kate-farms-2026-08-07T171111.png
 security:
 - kind: authentication
   name: Kate Farms Authentication
@@ -244,6 +247,14 @@ security:
   name: Kate Farms Domain Security
   slug: kate-farms-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Transact with Kate Farms over UCP / MCP
+  slug: kate-farms-agentic-commerce-ucp
+- name: Browse the Kate Farms catalog
+  slug: kate-farms-browse-catalog
+- name: Build a Kate Farms cart and take it to checkout
+  slug: kate-farms-build-cart-and-checkout
 slug: kate-farms
 tags:
 - Company

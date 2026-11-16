@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,20 +29,25 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: three_quarters
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.0
-  scored_at: '2026-10-17'
+  score: 47.6
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
-- description: API for SymphonyOS platform, documented at https://symphonyos.co/docs
+- baseURL: https://api.symphonyos.co
+  baseurl_source: spec
+  description: API for SymphonyOS platform, documented at https://symphonyos.co/docs
   name: SymphonyOS API
-  slug: symphonyos-api-2
+  slug: symphonyos-api
 - baseURL: https://api.symphonyos.co
   baseurl_source: declared
   description: The Campaigns API from SymphonyOS — 2 operation(s) for campaigns.
@@ -40,89 +58,89 @@ apis:
   description: The Sym API from SymphonyOS — 3 operation(s) for sym.
   name: SymphonyOS Sym API
   slug: symphonyos-sym-api
-artifact_total: 17
+artifact_total: 19
 asyncapis:
 - description: ''
   name: Symphonyos Webhooks
   slug: symphonyos-webhooks
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/rate-limits/symphonyos-rate-limits.yml
+  href: https://artifacts.apis.io/symphonyos/rate-limits/symphonyos-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/symphonyos-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/plans/symphonyos-plans-pricing.yml
+  href: https://artifacts.apis.io/symphonyos/plans/symphonyos-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/symphonyos-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/rules/symphonyos-rules.yml
+  href: https://artifacts.apis.io/symphonyos/rules/symphonyos-rules.yml
   title: ''
   type: Spectral
   url: rules/symphonyos-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/json-ld/symphonyos-context.jsonld
+  href: https://artifacts.apis.io/symphonyos/json-ld/symphonyos-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/symphonyos-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/vocabulary/symphonyos-vocabulary.yml
+  href: https://artifacts.apis.io/symphonyos/vocabulary/symphonyos-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/symphonyos-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/asyncapi/symphonyos-webhooks.yml
+  href: https://artifacts.apis.io/symphonyos/asyncapi/symphonyos-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/symphonyos-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/data-model/symphonyos-data-model.yml
+  href: https://artifacts.apis.io/symphonyos/data-model/symphonyos-data-model.yml
   title: ''
   type: DataModel
   url: data-model/symphonyos-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/authentication/symphonyos-authentication.yml
+  href: https://artifacts.apis.io/symphonyos/authentication/symphonyos-authentication.yml
   title: ''
   type: Authentication
   url: authentication/symphonyos-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/lifecycle/symphonyos-lifecycle.yml
+  href: https://artifacts.apis.io/symphonyos/lifecycle/symphonyos-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/symphonyos-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/conformance/symphonyos-conformance.yml
+  href: https://artifacts.apis.io/symphonyos/conformance/symphonyos-conformance.yml
   title: ''
   type: Conformance
   url: conformance/symphonyos-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/llms/symphonyos-llms.txt
+  href: https://artifacts.apis.io/symphonyos/llms/symphonyos-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/symphonyos-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/mcp/symphonyos-mcp.yml
+  href: https://artifacts.apis.io/symphonyos/mcp/symphonyos-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/symphonyos-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/well-known/symphonyos-support-security.txt
+  href: https://artifacts.apis.io/symphonyos/well-known/symphonyos-support-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/symphonyos-support-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/well-known/symphonyos-well-known.yml
+  href: https://artifacts.apis.io/symphonyos/well-known/symphonyos-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/symphonyos-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/hosts/symphonyos-hosts.yml
+  href: https://artifacts.apis.io/symphonyos/hosts/symphonyos-hosts.yml
   title: ''
   type: Hosts
   url: hosts/symphonyos-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/vendors/symphonyos-vendors.yml
+  href: https://artifacts.apis.io/symphonyos/vendors/symphonyos-vendors.yml
   title: ''
   type: Vendors
   url: vendors/symphonyos-vendors.yml
@@ -135,7 +153,7 @@ common:
   type: GettingStarted
   url: https://docs.symphonyos.co/docs/getting-started
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/symphonyos/refs/heads/main/security/symphonyos-domain-security.yml
+  href: https://artifacts.apis.io/symphonyos/security/symphonyos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/symphonyos-domain-security.yml
@@ -173,6 +191,14 @@ coverage:
   state: unreadable
 created: '2026-10-12'
 description: SymphonyOS is an AI‑powered music‑industry platform that provides a suite of autonomous agents to manage every aspect of music release and promotion. Founded in 2016, it combines data‑driven marketing, royalty accounting, fan engagement, and creative campaign tools into a single service, enabling artists and labels to focus on creation while the platform handles distribution, advertising, and business operations. With a growing roster of specialized agents, SymphonyOS aims to streamline the complex workflow of modern music production and monetization.
+finops:
+- has_sources: true
+  method: derived
+  name: Symphonyos Finops
+  primary_unit: ''
+  service_category: ''
+  slug: symphonyos-finops
+  template: true
 image: https://symphonyos.co/og.png
 json_schemas:
 - name: DeleteApiSymV2Webhooks3Response
@@ -218,7 +244,10 @@ plans:
 - name: Symphonyos Plans Pricing
   plan_count: 3
   slug: symphonyos-plans-pricing
-random_paper: 7
+- name: Symphonyos Price Estimates
+  plan_count: 0
+  slug: symphonyos-price-estimates
+random_paper: 1
 rate_limits:
 - limit_count: 1
   name: Symphonyos Rate Limits
@@ -237,22 +266,24 @@ rules:
     warn: 1
   slug: symphonyos-rules
 score:
-  band: developing
-  composite: 44.7
+  band: thin
+  composite: 38.6
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 22
     catalog_earned: 77.8
     catalog_earned_first_party: 20.0
     catalog_gap: 37.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.5
   facets:
-    access_clarity: 63.2
+    access_clarity: 47.4
     contract_governance: 22.0
-    contract_quality: 31.8
-    developer_ergonomics: 40.5
+    contract_quality: 31.9
+    developer_ergonomics: 26.2
     discoverability: 71.7
-    operational_transparency: 44.7
+    operational_transparency: 47.4
+  previous_composite: 46.1
   provenance:
     conformance: derived
     contracts:
@@ -266,12 +297,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/symphonyos/symphonyos-2026-11-03T144227.png
 security:
 - kind: authentication
   name: Symphonyos Authentication

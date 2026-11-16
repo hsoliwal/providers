@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -60,32 +74,32 @@ common:
   type: YouTube
   url: https://www.youtube.com/channel/UCZDBeAKUrpjCoPahqrhKswQ
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/marand/refs/heads/main/conformance/marand-conformance.yml
+  href: https://artifacts.apis.io/marand/conformance/marand-conformance.yml
   title: ''
   type: Conformance
   url: conformance/marand-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/marand/refs/heads/main/conformance/marand-conformance.yml
+  href: https://artifacts.apis.io/marand/conformance/marand-conformance.yml
   title: ''
   type: Compliance
   url: conformance/marand-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/marand/refs/heads/main/security/marand-domain-security.yml
+  href: https://artifacts.apis.io/marand/security/marand-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/marand-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/marand/refs/heads/main/plans/marand-plans-pricing.yml
+  href: https://artifacts.apis.io/marand/plans/marand-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/marand-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/marand/refs/heads/main/rate-limits/marand-rate-limits.yml
+  href: https://artifacts.apis.io/marand/rate-limits/marand-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/marand-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/marand/refs/heads/main/llms/marand-llms.txt
+  href: https://artifacts.apis.io/marand/llms/marand-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/marand-llms.txt
@@ -120,7 +134,7 @@ plans:
 - name: Marand Plans Pricing
   plan_count: 0
   slug: marand-plans-pricing
-random_paper: 11
+random_paper: 3
 rate_limits:
 - limit_count: 0
   name: Marand Rate Limits
@@ -129,7 +143,7 @@ score:
   band: emerging
   composite: 12.1
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -145,6 +159,8 @@ score:
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - slovenia
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - cee
@@ -158,14 +174,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 21.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/marand/refs/heads/main/screenshots/marand-2026-10-11T110755.png
+screenshot: https://apis.io/screenshots/marand/marand-2026-10-11T110755.png
 security:
 - kind: domain-security
   name: Marand Domain Security

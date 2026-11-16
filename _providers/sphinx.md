@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -83,42 +86,42 @@ common:
   type: TrustCenter
   url: https://trust.sphinx.ai
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sphinx/refs/heads/main/security/sphinx-trust-center.yml
+  href: https://artifacts.apis.io/sphinx/security/sphinx-trust-center.yml
   title: ''
   type: Compliance
   url: security/sphinx-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sphinx/refs/heads/main/llms/sphinx-llms.txt
+  href: https://artifacts.apis.io/sphinx/llms/sphinx-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sphinx-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sphinx/refs/heads/main/packages/sphinx-packages.yml
+  href: https://artifacts.apis.io/sphinx/packages/sphinx-packages.yml
   title: ''
   type: Packages
   url: packages/sphinx-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sphinx/refs/heads/main/packages/sphinx-packages.yml
+  href: https://artifacts.apis.io/sphinx/packages/sphinx-packages.yml
   title: ''
   type: SDKs
   url: packages/sphinx-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sphinx/refs/heads/main/cli/sphinx-cli.yml
+  href: https://artifacts.apis.io/sphinx/cli/sphinx-cli.yml
   title: ''
   type: CLI
   url: cli/sphinx-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sphinx/refs/heads/main/authentication/sphinx-authentication.yml
+  href: https://artifacts.apis.io/sphinx/authentication/sphinx-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sphinx-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sphinx/refs/heads/main/conventions/sphinx-conventions.yml
+  href: https://artifacts.apis.io/sphinx/conventions/sphinx-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sphinx-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sphinx/refs/heads/main/security/sphinx-domain-security.yml
+  href: https://artifacts.apis.io/sphinx/security/sphinx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sphinx-domain-security.yml
@@ -139,12 +142,12 @@ overview: 'Sphinx is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Sphinx''s developer surface includes documentation, getting-started guide, engineering blog, support, signup flow, CLI, authentication, and 12 more developer resources.'
-random_paper: 6
+random_paper: 18
 score:
   band: emerging
   composite: 24.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -167,14 +170,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sphinx/refs/heads/main/screenshots/sphinx-2026-09-02T160420.png
+screenshot: https://apis.io/screenshots/sphinx/sphinx-2026-09-02T160420.png
 security:
 - kind: authentication
   name: Sphinx Authentication

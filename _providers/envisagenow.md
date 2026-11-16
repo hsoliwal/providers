@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   - '{''url'': ''https://envisagenow.com'', ''status'': 301, ''note'': ''declared website redirects to https://www.acadis.com/ — a different registrable domain (envisagenow.com -> acadis.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -26,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -63,32 +68,32 @@ common:
   type: Portal
   url: https://community.envisagenow.com/cares/s/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/envisagenow/refs/heads/main/well-known/envisagenow-well-known.yml
+  href: https://artifacts.apis.io/envisagenow/well-known/envisagenow-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/envisagenow-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/envisagenow/refs/heads/main/authentication/envisagenow-authentication.yml
+  href: https://artifacts.apis.io/envisagenow/authentication/envisagenow-authentication.yml
   title: ''
   type: Authentication
   url: authentication/envisagenow-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/envisagenow/refs/heads/main/scopes/envisagenow-scopes.yml
+  href: https://artifacts.apis.io/envisagenow/scopes/envisagenow-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/envisagenow-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/envisagenow/refs/heads/main/conformance/envisagenow-conformance.yml
+  href: https://artifacts.apis.io/envisagenow/conformance/envisagenow-conformance.yml
   title: ''
   type: Conformance
   url: conformance/envisagenow-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/envisagenow/refs/heads/main/security/envisagenow-domain-security.yml
+  href: https://artifacts.apis.io/envisagenow/security/envisagenow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/envisagenow-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/envisagenow/refs/heads/main/security/envisagenow-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/envisagenow/security/envisagenow-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/envisagenow-vulnerability-disclosure.yml
@@ -97,7 +102,7 @@ common:
   type: Security
   url: https://www.acadis.com/acadis-security-issue-reporting/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/envisagenow/refs/heads/main/llms/envisagenow-llms.txt
+  href: https://artifacts.apis.io/envisagenow/llms/envisagenow-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/envisagenow-llms.txt
@@ -114,7 +119,7 @@ overview: 'Envisagenow is profiled on the [APIs.io](https://apis.io/) network. T
 
 
   Envisagenow''s developer surface includes engineering blog, support, developer portal, authentication, and 10 more developer resources.'
-random_paper: 2
+random_paper: 14
 scopes:
 - name: Envisagenow Scopes
   scope_count: 36
@@ -147,14 +152,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 36.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/envisagenow/refs/heads/main/screenshots/envisagenow-2026-07-25T213448.png
+screenshot: https://apis.io/screenshots/envisagenow/envisagenow-2026-07-25T213448.png
 security:
 - kind: authentication
   name: Envisagenow Authentication

@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: RESTful API for the Venzee / Jasper PIM platform. Manage products, variants, categories, brands, attributes and options, channel-specific pricing and inventory, and digital assets; subscribe to webhoo
@@ -88,37 +91,37 @@ common:
   type: PrivacyPolicy
   url: https://www.jasperpim.com/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/venzee/refs/heads/main/authentication/venzee-authentication.yml
+  href: https://artifacts.apis.io/venzee/authentication/venzee-authentication.yml
   title: ''
   type: Authentication
   url: authentication/venzee-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venzee/refs/heads/main/conventions/venzee-conventions.yml
+  href: https://artifacts.apis.io/venzee/conventions/venzee-conventions.yml
   title: ''
   type: Conventions
   url: conventions/venzee-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venzee/refs/heads/main/errors/venzee-error-codes.yml
+  href: https://artifacts.apis.io/venzee/errors/venzee-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/venzee-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venzee/refs/heads/main/lifecycle/venzee-lifecycle.yml
+  href: https://artifacts.apis.io/venzee/lifecycle/venzee-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/venzee-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venzee/refs/heads/main/asyncapi/venzee-webhooks.yml
+  href: https://artifacts.apis.io/venzee/asyncapi/venzee-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/venzee-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venzee/refs/heads/main/data-model/venzee-data-model.yml
+  href: https://artifacts.apis.io/venzee/data-model/venzee-data-model.yml
   title: ''
   type: DataModel
   url: data-model/venzee-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/venzee/refs/heads/main/security/venzee-domain-security.yml
+  href: https://artifacts.apis.io/venzee/security/venzee-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/venzee-domain-security.yml
@@ -137,7 +140,7 @@ overview: 'Venzee is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Venzee''s developer surface includes documentation, API reference, pricing, engineering blog, support, authentication, and 11 more developer resources.'
-random_paper: 15
+random_paper: 5
 score:
   band: thin
   composite: 34.7
@@ -163,14 +166,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/venzee/refs/heads/main/screenshots/venzee-2026-09-02T165653.png
+screenshot: https://apis.io/screenshots/venzee/venzee-2026-09-02T165653.png
 security:
 - kind: authentication
   name: Venzee Authentication

@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.qentaz.com
@@ -69,27 +72,27 @@ common:
   type: GettingStarted
   url: https://docs.qentaz.com/documentation/autenticacion/token
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/llms/qentaz-llms.txt
+  href: https://artifacts.apis.io/qentaz/llms/qentaz-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/qentaz-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/authentication/qentaz-authentication.yml
+  href: https://artifacts.apis.io/qentaz/authentication/qentaz-authentication.yml
   title: ''
   type: Authentication
   url: authentication/qentaz-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/conventions/qentaz-conventions.yml
+  href: https://artifacts.apis.io/qentaz/conventions/qentaz-conventions.yml
   title: ''
   type: Conventions
   url: conventions/qentaz-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/errors/qentaz-error-codes.yml
+  href: https://artifacts.apis.io/qentaz/errors/qentaz-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/qentaz-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/lifecycle/qentaz-lifecycle.yml
+  href: https://artifacts.apis.io/qentaz/lifecycle/qentaz-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/qentaz-lifecycle.yml
@@ -98,32 +101,32 @@ common:
   type: StatusPage
   url: https://status.qentaz.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/asyncapi/qentaz-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/qentaz/asyncapi/qentaz-webhooks-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/qentaz-webhooks-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/asyncapi/qentaz-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/qentaz/asyncapi/qentaz-webhooks-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/qentaz-webhooks-asyncapi.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/security/qentaz-domain-security.yml
+  href: https://artifacts.apis.io/qentaz/security/qentaz-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/qentaz-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/security/qentaz-trust-center.yml
+  href: https://artifacts.apis.io/qentaz/security/qentaz-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/qentaz-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/conformance/qentaz-conformance.yml
+  href: https://artifacts.apis.io/qentaz/conformance/qentaz-conformance.yml
   title: ''
   type: Conformance
   url: conformance/qentaz-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/data-model/qentaz-data-model.yml
+  href: https://artifacts.apis.io/qentaz/data-model/qentaz-data-model.yml
   title: ''
   type: DataModel
   url: data-model/qentaz-data-model.yml
@@ -170,12 +173,12 @@ overview: 'Qentaz is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Qentaz''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 17 more developer resources.'
-random_paper: 21
+random_paper: 11
 score:
   band: developing
   composite: 41.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -205,14 +208,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 26.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/qentaz/refs/heads/main/screenshots/qentaz-2026-08-17T081414.png
+screenshot: https://apis.io/screenshots/qentaz/qentaz-2026-08-17T081414.png
 security:
 - kind: authentication
   name: Qentaz Authentication

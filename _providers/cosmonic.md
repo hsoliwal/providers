@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 12.9
-  scored_at: '2026-10-17'
+  score: 14.8
+  scored_at: '2026-11-06'
 api_count: 11
 apis:
 - description: API reference for Cosmonic Control custom resource definitions across the control.cosmonic.io and runtime.wasmcloud.dev API groups.
@@ -82,42 +95,42 @@ apis:
 artifact_total: 18
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cosmonic/refs/heads/main/rules/cosmonic-rules.yml
+  href: https://artifacts.apis.io/cosmonic/rules/cosmonic-rules.yml
   title: ''
   type: Spectral
   url: rules/cosmonic-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cosmonic/refs/heads/main/json-ld/cosmonic-context.jsonld
+  href: https://artifacts.apis.io/cosmonic/json-ld/cosmonic-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cosmonic-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cosmonic/refs/heads/main/vocabulary/cosmonic-vocabulary.yml
+  href: https://artifacts.apis.io/cosmonic/vocabulary/cosmonic-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cosmonic-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cosmonic/refs/heads/main/data-model/cosmonic-data-model.yml
+  href: https://artifacts.apis.io/cosmonic/data-model/cosmonic-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cosmonic-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cosmonic/refs/heads/main/conformance/cosmonic-conformance.yml
+  href: https://artifacts.apis.io/cosmonic/conformance/cosmonic-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cosmonic-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cosmonic/refs/heads/main/llms/cosmonic-llms.txt
+  href: https://artifacts.apis.io/cosmonic/llms/cosmonic-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cosmonic-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cosmonic/refs/heads/main/hosts/cosmonic-hosts.yml
+  href: https://artifacts.apis.io/cosmonic/hosts/cosmonic-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cosmonic-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cosmonic/refs/heads/main/vendors/cosmonic-vendors.yml
+  href: https://artifacts.apis.io/cosmonic/vendors/cosmonic-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cosmonic-vendors.yml
@@ -146,7 +159,7 @@ common:
   type: Documentation
   url: https://docs.cosmonic.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cosmonic/refs/heads/main/security/cosmonic-domain-security.yml
+  href: https://artifacts.apis.io/cosmonic/security/cosmonic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cosmonic-domain-security.yml
@@ -195,7 +208,7 @@ overview: 'Cosmonic is listed with 11 APIs on the [APIs.io](https://apis.io/) ne
 
 
   Cosmonic''s developer surface includes engineering blog, API reference, getting-started guide, documentation, and 12 more developer resources.'
-random_paper: 1
+random_paper: 19
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -211,21 +224,23 @@ rules:
   slug: cosmonic-rules
 score:
   band: emerging
-  composite: 23.2
+  composite: 18.5
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 57.8
     catalog_earned_first_party: 0.0
     catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.7
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 22.0
     contract_quality: 22.3
-    developer_ergonomics: 31.0
+    developer_ergonomics: 15.5
     discoverability: 69.6
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  previous_composite: 23.2
   provenance:
     conformance: derived
     contracts:
@@ -239,12 +254,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 13.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 11.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cosmonic/cosmonic-2026-11-03T125424.png
 security:
 - kind: domain-security
   name: Cosmonic Domain Security

@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -14,7 +14,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -29,16 +29,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.5
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 33.0
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL: https://electricitynorthwest.opendatasoft.com/api/explore/v2.1
   baseurl_source: declared
@@ -50,7 +53,7 @@ apis:
   description: API to work on records
   name: Electricity North West Dataset API
   slug: electricity-north-west-dataset-api
-artifact_total: 15
+artifact_total: 19
 collections:
 - collection_type: open
   name: Explore API
@@ -59,13 +62,17 @@ collections:
   name: Explore API
   slug: open-electricity-north-west-explore-api-v2-1
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/electricity-north-west/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/overlays/electricity-north-west-explore-api-v2-1-overlay.yaml
+  href: https://artifacts.apis.io/electricity-north-west/overlays/electricity-north-west-explore-api-v2-1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/electricity-north-west-explore-api-v2-1-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/overlays/electricity-north-west-explore-api-v2-0-overlay.yaml
+  href: https://artifacts.apis.io/electricity-north-west/overlays/electricity-north-west-explore-api-v2-0-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/electricity-north-west-explore-api-v2-0-overlay.yaml
@@ -94,7 +101,7 @@ common:
   type: GettingStarted
   url: https://help.huwise.com/apis/ods-explore-v2/#section/Getting-Started
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/sandbox/electricity-north-west-sandbox.yml
+  href: https://artifacts.apis.io/electricity-north-west/sandbox/electricity-north-west-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/electricity-north-west-sandbox.yml
@@ -143,37 +150,37 @@ common:
   type: Data
   url: https://electricitynorthwest.opendatasoft.com/api/explore/v2.1/catalog/exports/dcat
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/authentication/electricity-north-west-authentication.yml
+  href: https://artifacts.apis.io/electricity-north-west/authentication/electricity-north-west-authentication.yml
   title: ''
   type: Authentication
   url: authentication/electricity-north-west-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/scopes/electricity-north-west-scopes.yml
+  href: https://artifacts.apis.io/electricity-north-west/scopes/electricity-north-west-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/electricity-north-west-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/conventions/electricity-north-west-conventions.yml
+  href: https://artifacts.apis.io/electricity-north-west/conventions/electricity-north-west-conventions.yml
   title: ''
   type: Conventions
   url: conventions/electricity-north-west-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/conventions/electricity-north-west-conventions.yml
+  href: https://artifacts.apis.io/electricity-north-west/conventions/electricity-north-west-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/electricity-north-west-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/rate-limits/electricity-north-west-rate-limits.yml
+  href: https://artifacts.apis.io/electricity-north-west/rate-limits/electricity-north-west-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/electricity-north-west-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/errors/electricity-north-west-problem-types.yml
+  href: https://artifacts.apis.io/electricity-north-west/errors/electricity-north-west-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/electricity-north-west-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/lifecycle/electricity-north-west-lifecycle.yml
+  href: https://artifacts.apis.io/electricity-north-west/lifecycle/electricity-north-west-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/electricity-north-west-lifecycle.yml
@@ -186,77 +193,77 @@ common:
   type: Deprecation
   url: https://help.huwise.com/apis/ods-explore-v2/#section/Versioning/Deprecation-warnings
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/changelog/electricity-north-west-changelog.yml
+  href: https://artifacts.apis.io/electricity-north-west/changelog/electricity-north-west-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/electricity-north-west-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/data-model/electricity-north-west-data-model.yml
+  href: https://artifacts.apis.io/electricity-north-west/data-model/electricity-north-west-data-model.yml
   title: ''
   type: DataModel
   url: data-model/electricity-north-west-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/conformance/electricity-north-west-conformance.yml
+  href: https://artifacts.apis.io/electricity-north-west/conformance/electricity-north-west-conformance.yml
   title: ''
   type: Conformance
   url: conformance/electricity-north-west-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/packages/electricity-north-west-packages.yml
+  href: https://artifacts.apis.io/electricity-north-west/packages/electricity-north-west-packages.yml
   title: ''
   type: Packages
   url: packages/electricity-north-west-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/packages/electricity-north-west-packages.yml
+  href: https://artifacts.apis.io/electricity-north-west/packages/electricity-north-west-packages.yml
   title: ''
   type: SDKs
   url: packages/electricity-north-west-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/components/electricity-north-west-components.yml
+  href: https://artifacts.apis.io/electricity-north-west/components/electricity-north-west-components.yml
   title: ''
   type: Components
   url: components/electricity-north-west-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/mcp/electricity-north-west-mcp.yml
+  href: https://artifacts.apis.io/electricity-north-west/mcp/electricity-north-west-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/electricity-north-west-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/mcp/electricity-north-west-tool-crosswalk.yml
+  href: https://artifacts.apis.io/electricity-north-west/mcp/electricity-north-west-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/electricity-north-west-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/electricity-north-west/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/examples/_index.yml
+  href: https://artifacts.apis.io/electricity-north-west/examples/_index.yml
   title: ''
   type: Examples
   url: examples/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/llms/electricity-north-west-llms.txt
+  href: https://artifacts.apis.io/electricity-north-west/llms/electricity-north-west-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/electricity-north-west-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/well-known/electricity-north-west-well-known.yml
+  href: https://artifacts.apis.io/electricity-north-west/well-known/electricity-north-west-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/electricity-north-west-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/well-known/electricity-north-west-security.txt
+  href: https://artifacts.apis.io/electricity-north-west/well-known/electricity-north-west-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/electricity-north-west-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/security/electricity-north-west-domain-security.yml
+  href: https://artifacts.apis.io/electricity-north-west/security/electricity-north-west-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/electricity-north-west-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/security/electricity-north-west-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/electricity-north-west/security/electricity-north-west-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/electricity-north-west-vulnerability-disclosure.yml
@@ -300,12 +307,28 @@ network: true
 overview: 'Electricity North West publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Catalog API and Dataset API. Tagged areas include Energy, United Kingdom, Utilities, Electricity, and Grid.
 
 
-  Electricity North West''s developer surface includes developer portal, documentation, API reference, getting-started guide, sandbox, developer console, signup flow, and 39 more developer resources.'
-random_paper: 15
+  The Electricity North West catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Electricity North West''s developer surface includes developer portal, documentation, API reference, getting-started guide, sandbox, developer console, signup flow, and 40 more developer resources.'
+random_paper: 1
 rate_limits:
 - limit_count: 3
   name: Electricity North West Rate Limits
   slug: electricity-north-west-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Electricity North West API Rules
+  rule_count: 57
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 2
+    warn: 2
+  slug: electricity-north-west-rules
 scopes:
 - name: Electricity North West Scopes
   scope_count: 1
@@ -313,21 +336,21 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 59.3
+  composite: 62.7
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 52.0
+    artifact_dirs: 28
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 1.5
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 54.2
-    developer_ergonomics: 73.2
-    discoverability: 78.6
+    contract_governance: 18.2
+    contract_quality: 59.9
+    developer_ergonomics: 77.5
+    discoverability: 73.2
     operational_transparency: 84.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -337,13 +360,13 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 58.7
+  previous_composite: 61.2
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
     mcp: derived
     skills: derived
@@ -353,14 +376,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 45.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/electricity-north-west/refs/heads/main/screenshots/electricity-north-west-2026-08-07T164817.png
+screenshot: https://apis.io/screenshots/electricity-north-west/electricity-north-west-2026-08-07T164817.png
 security:
 - kind: authentication
   name: Electricity North West Authentication
@@ -374,6 +397,14 @@ security:
   name: Electricity North West Vulnerability Disclosure
   slug: electricity-north-west-vulnerability-disclosure
   summary_line: Hackerone · security.txt · contact published
+skill_count: 3
+skills:
+- name: Bulk-export datasets and the catalogue
+  slug: electricity-north-west-bulk-export
+- name: Discover SP Electricity North West open datasets
+  slug: electricity-north-west-discover-datasets
+- name: Query and aggregate network dataset records
+  slug: electricity-north-west-query-network-records
 slug: electricity-north-west
 tags:
 - Energy

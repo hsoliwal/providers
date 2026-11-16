@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: 'REST API for importing and querying event data used to train prediction engines. Authenticated with a per-app access key passed as the accessKey query parameter; JSON request/response with .json path '
@@ -69,37 +72,37 @@ common:
   type: GitHubOrganization
   url: https://github.com/apache/predictionio
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/predictionio/refs/heads/main/packages/predictionio-packages.yml
+  href: https://artifacts.apis.io/predictionio/packages/predictionio-packages.yml
   title: ''
   type: SDKs
   url: packages/predictionio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/predictionio/refs/heads/main/packages/predictionio-packages.yml
+  href: https://artifacts.apis.io/predictionio/packages/predictionio-packages.yml
   title: ''
   type: Packages
   url: packages/predictionio-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/predictionio/refs/heads/main/authentication/predictionio-authentication.yml
+  href: https://artifacts.apis.io/predictionio/authentication/predictionio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/predictionio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/predictionio/refs/heads/main/conventions/predictionio-conventions.yml
+  href: https://artifacts.apis.io/predictionio/conventions/predictionio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/predictionio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/predictionio/refs/heads/main/lifecycle/predictionio-lifecycle.yml
+  href: https://artifacts.apis.io/predictionio/lifecycle/predictionio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/predictionio-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/predictionio/refs/heads/main/lifecycle/predictionio-lifecycle.yml
+  href: https://artifacts.apis.io/predictionio/lifecycle/predictionio-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/predictionio-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/predictionio/refs/heads/main/well-known/predictionio-well-known.yml
+  href: https://artifacts.apis.io/predictionio/well-known/predictionio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/predictionio-well-known.yml
@@ -115,7 +118,7 @@ overview: 'PredictionIO is listed with 2 APIs on the [APIs.io](https://apis.io/)
 
 
   PredictionIO''s developer surface includes documentation, API reference, getting-started guide, authentication, and 9 more developer resources.'
-random_paper: 13
+random_paper: 17
 score:
   band: minimal
   composite: 0.0
@@ -142,14 +145,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/predictionio/refs/heads/main/screenshots/predictionio-2026-09-02T151912.png
+screenshot: https://apis.io/screenshots/predictionio/predictionio-2026-09-02T151912.png
 security:
 - kind: authentication
   name: Predictionio Authentication

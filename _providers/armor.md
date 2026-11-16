@@ -1,19 +1,22 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - scopes
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,21 +25,24 @@ agent_readiness:
     auth_clarity: negotiable
     consent_identity: false
     delegated_identity: documented
-    dry_run_mode: true
+    dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.4
-  scored_at: '2026-10-17'
+  score: 36.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 166
   human_in_the_loop: 4
@@ -44,7 +50,7 @@ agentic_access:
   operation_count: 426
   slug: armor-agentic-access
   summary_line: 426 operations · 166 acting · 4 human-in-the-loop
-api_count: 16
+api_count: 17
 apis:
 - baseURL: https://api.armor.com
   baseurl_source: declared
@@ -373,11 +379,6 @@ apis:
   slug: armor-trend-api
 - baseURL: https://api.armor.com
   baseurl_source: declared
-  description: User profile and account information
-  name: Armor User API
-  slug: armor-user-api
-- baseURL: https://api.armor.com
-  baseurl_source: declared
   description: The Utilization API from Armor — 2 operation(s) for utilization.
   name: Armor Utilization API
   slug: armor-utilization-api
@@ -396,15 +397,32 @@ apis:
   description: Vulnerability scanning operations
   name: Armor Vulnerability Scanning API
   slug: armor-vulnerability-scanning-api
-artifact_total: 148
+- baseURL: https://api.armor.com
+  baseurl_source: declared
+  description: The ContextSensitiveHelp API from Armor — 1 operation(s) for contextsensitivehelp.
+  name: Armor Context Sensitive Help API
+  slug: armor-contextsensitivehelp-api
+- baseURL: https://api.armor.com
+  baseurl_source: declared
+  description: The EdrHealth API from Armor — 1 operation(s) for edrhealth.
+  name: Armor Edr Health API
+  slug: armor-edrhealth-api
+- baseURL: https://api.armor.com
+  baseurl_source: declared
+  description: The Health Monitoring API from Armor — 8 operation(s) for health monitoring.
+  name: Armor Health Monitoring API
+  slug: armor-health-monitoring-api
+- baseURL: https://api.armor.com
+  baseurl_source: declared
+  description: The Security Services API from Armor — 8 operation(s) for security services.
+  name: Armor Security Services API
+  slug: armor-security-services-api
+artifact_total: 162
 asyncapis:
 - description: ''
   name: Armor Webhooks Events
   slug: armor-webhooks-events
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Armor Log Management Access Control Lists API
   slug: open-armor-access-control-lists-api
@@ -617,37 +635,37 @@ collections:
   slug: open-armor-vulnerability-scanning-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/plans/armor-plans-pricing.yml
+  href: https://artifacts.apis.io/armor/plans/armor-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/armor-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/capabilities/armor-capability-edges.yml
+  href: https://artifacts.apis.io/armor/capabilities/armor-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/armor-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/mcp/armor-mcp.yml
+  href: https://artifacts.apis.io/armor/mcp/armor-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/armor-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/overlays/armor-accounts-overlay.yaml
+  href: https://artifacts.apis.io/armor/overlays/armor-accounts-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/armor-accounts-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/agentic-access/armor-agentic-access.yml
+  href: https://artifacts.apis.io/armor/agentic-access/armor-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/armor-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/security/armor-domain-security.yml
+  href: https://artifacts.apis.io/armor/security/armor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/armor-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/scopes/armor-scopes.yml
+  href: https://artifacts.apis.io/armor/scopes/armor-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/armor-scopes.yml
@@ -704,73 +722,81 @@ common:
   type: StatusPage
   url: https://status.armor.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/llms/armor-llms.txt
+  href: https://artifacts.apis.io/armor/llms/armor-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/armor-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/authentication/armor-authentication.yml
+  href: https://artifacts.apis.io/armor/authentication/armor-authentication.yml
   title: ''
   type: Authentication
   url: authentication/armor-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/packages/armor-packages.yml
+  href: https://artifacts.apis.io/armor/packages/armor-packages.yml
   title: ''
   type: Packages
   url: packages/armor-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/packages/armor-packages.yml
+  href: https://artifacts.apis.io/armor/packages/armor-packages.yml
   title: ''
   type: SDKs
   url: packages/armor-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/conventions/armor-conventions.yml
+  href: https://artifacts.apis.io/armor/conventions/armor-conventions.yml
   title: ''
   type: Conventions
   url: conventions/armor-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/errors/armor-problem-types.yml
+  href: https://artifacts.apis.io/armor/errors/armor-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/armor-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/lifecycle/armor-lifecycle.yml
+  href: https://artifacts.apis.io/armor/lifecycle/armor-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/armor-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/conformance/armor-conformance.yml
+  href: https://artifacts.apis.io/armor/conformance/armor-conformance.yml
   title: ''
   type: Conformance
   url: conformance/armor-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/data-model/armor-data-model.yml
+  href: https://artifacts.apis.io/armor/data-model/armor-data-model.yml
   title: ''
   type: DataModel
   url: data-model/armor-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/asyncapi/armor-webhooks-events.yml
+  href: https://artifacts.apis.io/armor/asyncapi/armor-webhooks-events.yml
   title: ''
   type: Webhooks
   url: asyncapi/armor-webhooks-events.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/armor/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-08-06'
 description: 'Armor (legal name Armor Defense Inc.) is a cybersecurity company headquartered in Plano, Texas, founded as FireHost in 2009 by Chris Drake and rebranded as Armor as its portfolio expanded from secure cloud hosting into managed security. Armor sells vendor-agnostic, cloud-native managed detection and response (Armor MDR), compliant managed private cloud (Armor Enterprise Cloud), the Armor Agent workload protection agent (formerly Armor Anywhere), and compliance and offensive-security professional services, to more than 1,700 organizations across 40 countries with a 24/7 follow-the-sun SOC operating from Plano, London, Singapore and Pune. Armor publishes a public developer portal at developer.armor.com that serves sixteen machine-readable contracts through ReDoc: four Swagger 2.0 documents for the original v1 Armor Services API on api.armor.com (account management, infrastructure, security and support, 254 operations) and twelve OpenAPI 3.0.3 documents for the v2 platform on
   *.api.secure-prod.services (accounts, agent management, compliance and CSPM, container security, incident management, infrastructure management, log management, notifications, webhooks, the unified MDR public API, and the ARMOR-PSK and FH-AUTH authentication contracts). Armor also publishes a detailed first-party llms.txt at armor.com/llms.txt and holds SOC 2 Type II, HITRUST CSF, PCI DSS Level 1 Service Provider, ISO 27001, TX-RAMP Level 2, HIPAA and Data Privacy Framework attestations.'
+finops:
+- has_sources: true
+  method: derived
+  name: Armor Finops
+  primary_unit: endpoint
+  service_category: ''
+  slug: armor-finops
+  template: false
 image: https://framerusercontent.com/images/iwYUUtUgg7arqxZ6LH5PMsmFouE.png
 layout: provider
 modified: '2026-08-06'
 name: Armor
 nav: Providers
 network: true
-overview: 'Armor publishes 70 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Control Lists API, Account API, Account Management API, and 67 more. Tagged areas include Company, Cybersecurity, Managed Detection and Response, Cloud Security, and Compliance.
+overview: 'Armor publishes 73 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Control Lists API, Account API, Account Management API, and 70 more. Tagged areas include Company, Cybersecurity, Managed Detection and Response, Cloud Security, and Compliance.
 
 
-  The Armor catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Armor catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Armor''s developer surface includes documentation, API reference, engineering blog, support, pricing, signup flow, authentication, and 24 more developer resources.'
@@ -782,6 +808,19 @@ plans:
   plan_count: 0
   slug: armor-price-estimates
 random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Armor API Rules
+  rule_count: 60
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 4
+    warn: 17
+  slug: armor-rules
 scopes:
 - name: Armor Scopes
   scope_count: 4
@@ -789,19 +828,19 @@ scopes:
   summary_line: 4 scopes · clientCredentials/authorizationCode
 score:
   band: strong
-  composite: 60.0
+  composite: 64.4
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 52.0
+    artifact_dirs: 29
+    catalog_earned: 59.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.2
   facets:
-    access_clarity: 71.1
-    contract_governance: 18.2
-    contract_quality: 58.4
+    access_clarity: 85.5
+    contract_governance: 31.8
+    contract_quality: 58.1
     developer_ergonomics: 54.2
     discoverability: 78.6
     operational_transparency: 18.4
@@ -812,7 +851,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 59.9
+  previous_composite: 63.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -820,7 +859,7 @@ score:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 70
+      total: 108
     mcp: derived
     skills: derived
   regulatory:
@@ -829,13 +868,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 50.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/armor/refs/heads/main/screenshots/armor-2026-08-07T161726.png
+screenshot: https://apis.io/screenshots/armor/armor-2026-08-07T161726.png
 security:
 - kind: authentication
   name: Armor Authentication
@@ -845,6 +884,28 @@ security:
   name: Armor Domain Security
   slug: armor-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 10
+skills:
+- name: Contain a machine through Microsoft Defender
+  slug: armor-contain-defender-machine
+- name: Manage the Armor Agent fleet
+  slug: armor-manage-agent-fleet
+- name: Retrieve the Armor monthly security report and metrics
+  slug: armor-monthly-security-report
+- name: Onboard a log source into Armor SIEM
+  slug: armor-onboard-log-source
+- name: Run a CSPM report and remediate a failing control
+  slug: armor-run-cspm-report
+- name: Connect a container registry to Armor container security
+  slug: armor-secure-container-registry
+- name: Subscribe to Armor security detections over webhooks
+  slug: armor-subscribe-detection-webhook
+- name: Pull Armor threat intelligence
+  slug: armor-threat-intelligence
+- name: Triage an Armor MDR incident
+  slug: armor-triage-mdr-incident
+- name: Review and exclude vulnerability-scan findings
+  slug: armor-triage-vulnerabilities
 slug: armor
 tags:
 - Company

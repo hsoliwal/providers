@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flexpoint/refs/heads/main/security/flexpoint-domain-security.yml
+  href: https://artifacts.apis.io/flexpoint/security/flexpoint-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flexpoint-domain-security.yml
@@ -74,17 +78,17 @@ common:
   type: Compliance
   url: https://www.getflexpoint.com/company/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flexpoint/refs/heads/main/security/flexpoint-trust-center.yml
+  href: https://artifacts.apis.io/flexpoint/security/flexpoint-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/flexpoint-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flexpoint/refs/heads/main/conformance/flexpoint-conformance.yml
+  href: https://artifacts.apis.io/flexpoint/conformance/flexpoint-conformance.yml
   title: ''
   type: Conformance
   url: conformance/flexpoint-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flexpoint/refs/heads/main/llms/flexpoint-llms.txt
+  href: https://artifacts.apis.io/flexpoint/llms/flexpoint-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/flexpoint-llms.txt
@@ -100,7 +104,7 @@ overview: 'FlexPoint is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   FlexPoint''s developer surface includes pricing, support, engineering blog, and 9 more developer resources.'
-random_paper: 17
+random_paper: 1
 score:
   band: emerging
   composite: 20.0
@@ -128,14 +132,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 28.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/flexpoint/refs/heads/main/screenshots/flexpoint-2026-07-25T214752.png
+screenshot: https://apis.io/screenshots/flexpoint/flexpoint-2026-07-25T214752.png
 security:
 - kind: domain-security
   name: Flexpoint Domain Security

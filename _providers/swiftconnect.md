@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The SwiftConnect Developer API provides programmatic access to access credentials, permissions, people, buildings, readers and devices across the connected access network, so provisioning workflows ca
@@ -49,7 +52,7 @@ common:
   type: BlogRSS
   url: https://swiftconnect.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/swiftconnect/refs/heads/main/security/swiftconnect-domain-security.yml
+  href: https://artifacts.apis.io/swiftconnect/security/swiftconnect-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/swiftconnect-domain-security.yml
@@ -90,47 +93,47 @@ common:
   type: StatusPage
   url: https://swiftconnect.statuspage.io/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/swiftconnect/refs/heads/main/lifecycle/swiftconnect-lifecycle.yml
+  href: https://artifacts.apis.io/swiftconnect/lifecycle/swiftconnect-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/swiftconnect-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/swiftconnect/refs/heads/main/authentication/swiftconnect-authentication.yml
+  href: https://artifacts.apis.io/swiftconnect/authentication/swiftconnect-authentication.yml
   title: ''
   type: Authentication
   url: authentication/swiftconnect-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/swiftconnect/refs/heads/main/conventions/swiftconnect-conventions.yml
+  href: https://artifacts.apis.io/swiftconnect/conventions/swiftconnect-conventions.yml
   title: ''
   type: Conventions
   url: conventions/swiftconnect-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/swiftconnect/refs/heads/main/errors/swiftconnect-problem-types.yml
+  href: https://artifacts.apis.io/swiftconnect/errors/swiftconnect-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/swiftconnect-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/swiftconnect/refs/heads/main/rate-limits/swiftconnect-rate-limits.yml
+  href: https://artifacts.apis.io/swiftconnect/rate-limits/swiftconnect-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/swiftconnect-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/swiftconnect/refs/heads/main/plans/swiftconnect-plans-pricing.yml
+  href: https://artifacts.apis.io/swiftconnect/plans/swiftconnect-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/swiftconnect-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/swiftconnect/refs/heads/main/packages/swiftconnect-packages.yml
+  href: https://artifacts.apis.io/swiftconnect/packages/swiftconnect-packages.yml
   title: ''
   type: Packages
   url: packages/swiftconnect-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/swiftconnect/refs/heads/main/conformance/swiftconnect-conformance.yml
+  href: https://artifacts.apis.io/swiftconnect/conformance/swiftconnect-conformance.yml
   title: ''
   type: Conformance
   url: conformance/swiftconnect-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/swiftconnect/refs/heads/main/llms/swiftconnect-llms.txt
+  href: https://artifacts.apis.io/swiftconnect/llms/swiftconnect-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/swiftconnect-llms.txt
@@ -165,7 +168,7 @@ plans:
 - name: Swiftconnect Plans Pricing
   plan_count: 0
   slug: swiftconnect-plans-pricing
-random_paper: 5
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Swiftconnect Rate Limits
@@ -174,7 +177,7 @@ score:
   band: emerging
   composite: 21.5
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -205,14 +208,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/swiftconnect/refs/heads/main/screenshots/swiftconnect-2026-09-02T161355.png
+screenshot: https://apis.io/screenshots/swiftconnect/swiftconnect-2026-09-02T161355.png
 security:
 - kind: authentication
   name: Swiftconnect Authentication

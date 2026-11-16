@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -93,7 +99,7 @@ apis:
   description: OGC Web Map Service 1.3.0
   name: Landgate WMS API
   slug: landgate-wms-api
-artifact_total: 20
+artifact_total: 24
 collections:
 - collection_type: open
   name: Data WA CKAN Action API (operated by Landgate)
@@ -115,32 +121,32 @@ collections:
   slug: open-landgate-slip-public-services-folder
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/overlays/landgate-slip-public-arcgis-overlay.yaml
+  href: https://artifacts.apis.io/landgate/overlays/landgate-slip-public-arcgis-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/landgate-slip-public-arcgis-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/overlays/landgate-slip-public-ogc-overlay.yaml
+  href: https://artifacts.apis.io/landgate/overlays/landgate-slip-public-ogc-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/landgate-slip-public-ogc-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/overlays/landgate-data-wa-ckan-overlay.yaml
+  href: https://artifacts.apis.io/landgate/overlays/landgate-data-wa-ckan-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/landgate-data-wa-ckan-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/mcp/landgate-mcp.yml
+  href: https://artifacts.apis.io/landgate/mcp/landgate-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/landgate-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/agentic-access/landgate-agentic-access.yml
+  href: https://artifacts.apis.io/landgate/agentic-access/landgate-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/landgate-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/security/landgate-domain-security.yml
+  href: https://artifacts.apis.io/landgate/security/landgate-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/landgate-domain-security.yml
@@ -181,37 +187,37 @@ common:
   type: WellKnown
   url: https://sign-on.app.landgate.wa.gov.au/.well-known/openid-configuration
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/authentication/landgate-authentication.yml
+  href: https://artifacts.apis.io/landgate/authentication/landgate-authentication.yml
   title: ''
   type: Authentication
   url: authentication/landgate-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/scopes/landgate-scopes.yml
+  href: https://artifacts.apis.io/landgate/scopes/landgate-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/landgate-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/well-known/landgate-well-known.yml
+  href: https://artifacts.apis.io/landgate/well-known/landgate-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/landgate-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/conventions/landgate-conventions.yml
+  href: https://artifacts.apis.io/landgate/conventions/landgate-conventions.yml
   title: ''
   type: Conventions
   url: conventions/landgate-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/errors/landgate-problem-types.yml
+  href: https://artifacts.apis.io/landgate/errors/landgate-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/landgate-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/lifecycle/landgate-lifecycle.yml
+  href: https://artifacts.apis.io/landgate/lifecycle/landgate-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/landgate-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/changelog/landgate-changelog.yml
+  href: https://artifacts.apis.io/landgate/changelog/landgate-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/landgate-changelog.yml
@@ -220,27 +226,27 @@ common:
   type: ChangeLog
   url: https://www.landgate.wa.gov.au/about-us/customer-news-and-media/news-and-media-articles/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/conformance/landgate-conformance.yml
+  href: https://artifacts.apis.io/landgate/conformance/landgate-conformance.yml
   title: ''
   type: Conformance
   url: conformance/landgate-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/data-model/landgate-data-model.yml
+  href: https://artifacts.apis.io/landgate/data-model/landgate-data-model.yml
   title: ''
   type: DataModel
   url: data-model/landgate-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/packages/landgate-packages.yml
+  href: https://artifacts.apis.io/landgate/packages/landgate-packages.yml
   title: ''
   type: Packages
   url: packages/landgate-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/llms/landgate-llms.txt
+  href: https://artifacts.apis.io/landgate/llms/landgate-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/landgate-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/landgate/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -276,8 +282,24 @@ network: true
 overview: 'Landgate is listed with 10 APIs on the [APIs.io](https://apis.io/) network, including Datasets API, Discovery API, Organizations API, and 7 more. Tagged areas include Real Estate, Australia, Land Registry, Title, and Valuation.
 
 
+  The Landgate catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Landgate''s developer surface includes documentation, pricing, support, developer portal, authentication, changelog, engineering blog, and 26 more developer resources.'
-random_paper: 18
+random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Landgate API Rules
+  rule_count: 52
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 2
+    warn: 5
+  slug: landgate-rules
 scopes:
 - name: Landgate Scopes
   scope_count: 6
@@ -285,18 +307,18 @@ scopes:
   summary_line: 6 scopes · authorizationCode
 score:
   band: thin
-  composite: 36.1
+  composite: 37.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 40.0
+    artifact_dirs: 25
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.1
+  delta: 0.0
   facets:
     access_clarity: 38.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 14.5
     developer_ergonomics: 47.0
     discoverability: 82.1
@@ -308,7 +330,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 36.2
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -325,14 +347,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 42.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/landgate/refs/heads/main/screenshots/landgate-2026-07-27T125338.png
+screenshot: https://apis.io/screenshots/landgate/landgate-2026-07-27T125338.png
 security:
 - kind: authentication
   name: Landgate Authentication
@@ -342,6 +364,14 @@ security:
   name: Landgate Domain Security
   slug: landgate-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Consume Landgate SLIP data through OGC WMS and WFS
+  slug: landgate-consume-slip-ogc-services
+- name: Find Western Australian open data through Data WA
+  slug: landgate-find-wa-open-data
+- name: Query Western Australian boundaries and cadastral layers on SLIP
+  slug: landgate-query-slip-boundaries
 slug: landgate
 tags:
 - Real Estate

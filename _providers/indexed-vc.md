@@ -1,6 +1,21 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 28.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -31,7 +49,7 @@ agentic_access:
   operation_count: 19
   slug: indexed-vc-agentic-access
   summary_line: 19 operations · 8 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://indexed.vc/api/v1
   baseurl_source: declared
@@ -73,80 +91,80 @@ apis:
   description: The Webhooks API from Indexed — 4 operation(s) for webhooks.
   name: Indexed Webhooks API
   slug: indexed-vc-webhooks-api
-artifact_total: 20
+artifact_total: 23
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/capabilities/indexed-vc-capability-edges.yml
+  href: https://artifacts.apis.io/indexed-vc/capabilities/indexed-vc-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/indexed-vc-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/agentic-access/indexed-vc-agentic-access.yml
+  href: https://artifacts.apis.io/indexed-vc/agentic-access/indexed-vc-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/indexed-vc-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/plans/indexed-vc-plans-pricing.yml
+  href: https://artifacts.apis.io/indexed-vc/plans/indexed-vc-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/indexed-vc-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/rules/indexed-vc-rules.yml
+  href: https://artifacts.apis.io/indexed-vc/rules/indexed-vc-rules.yml
   title: ''
   type: Spectral
   url: rules/indexed-vc-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/json-ld/indexed-vc-context.jsonld
+  href: https://artifacts.apis.io/indexed-vc/json-ld/indexed-vc-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/indexed-vc-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/vocabulary/indexed-vc-vocabulary.yml
+  href: https://artifacts.apis.io/indexed-vc/vocabulary/indexed-vc-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/indexed-vc-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/indexed-vc/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/data-model/indexed-vc-data-model.yml
+  href: https://artifacts.apis.io/indexed-vc/data-model/indexed-vc-data-model.yml
   title: ''
   type: DataModel
   url: data-model/indexed-vc-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/errors/indexed-vc-problem-types.yml
+  href: https://artifacts.apis.io/indexed-vc/errors/indexed-vc-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/indexed-vc-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/conformance/indexed-vc-conformance.yml
+  href: https://artifacts.apis.io/indexed-vc/conformance/indexed-vc-conformance.yml
   title: ''
   type: Conformance
   url: conformance/indexed-vc-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/llms/indexed-vc-llms.txt
+  href: https://artifacts.apis.io/indexed-vc/llms/indexed-vc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/indexed-vc-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/hosts/indexed-vc-hosts.yml
+  href: https://artifacts.apis.io/indexed-vc/hosts/indexed-vc-hosts.yml
   title: ''
   type: Hosts
   url: hosts/indexed-vc-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/vendors/indexed-vc-vendors.yml
+  href: https://artifacts.apis.io/indexed-vc/vendors/indexed-vc-vendors.yml
   title: ''
   type: Vendors
   url: vendors/indexed-vc-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/authentication/indexed-vc-authentication.yml
+  href: https://artifacts.apis.io/indexed-vc/authentication/indexed-vc-authentication.yml
   title: ''
   type: Authentication
   url: authentication/indexed-vc-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/security/indexed-vc-domain-security.yml
+  href: https://artifacts.apis.io/indexed-vc/security/indexed-vc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/indexed-vc-domain-security.yml
@@ -176,6 +194,14 @@ common:
   url: https://indexed.vc/contact
 created: '2026-10-02'
 description: Indexed provides a private-company intelligence platform offering searchable data on companies, investors, and funding rounds. Users can look up companies by name or domain, explore detailed funding histories, investor relationships, and export data via a REST API. The service includes tiered pricing with free credits and paid plans for higher usage, API keys for authentication, and features such as bulk enrichment, webhooks, and scheduled exports.
+finops:
+- has_sources: true
+  method: derived
+  name: Indexed Vc Finops
+  primary_unit: seat
+  service_category: ''
+  slug: indexed-vc-finops
+  template: false
 image: https://indexed.vc/opengraph-image?2ed8c04617ed383e
 json_schemas:
 - name: CompanyCard
@@ -217,7 +243,10 @@ plans:
 - name: Indexed Vc Plans Pricing
   plan_count: 5
   slug: indexed-vc-plans-pricing
-random_paper: 9
+- name: Indexed Vc Price Estimates
+  plan_count: 0
+  slug: indexed-vc-price-estimates
+random_paper: 15
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -233,30 +262,30 @@ rules:
   slug: indexed-vc-rules
 score:
   band: developing
-  composite: 44.8
+  composite: 42.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 69.8
+    artifact_dirs: 22
+    catalog_earned: 72.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 45.3
+    catalog_gap: 42.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -3.8
   facets:
-    access_clarity: 63.2
+    access_clarity: 55.3
     contract_governance: 22.0
-    contract_quality: 67.1
-    developer_ergonomics: 28.0
+    contract_quality: 72.8
+    developer_ergonomics: 20.8
     discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 44.7
+  previous_composite: 46.4
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 8
     mcp: derived
     skills: derived
@@ -265,14 +294,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/indexed-vc/refs/heads/main/screenshots/indexed-vc-2026-10-11T105655.png
+screenshot: https://apis.io/screenshots/indexed-vc/indexed-vc-2026-10-11T105655.png
 security:
 - kind: authentication
   name: Indexed Vc Authentication
@@ -282,6 +311,10 @@ security:
   name: Indexed Vc Domain Security
   slug: indexed-vc-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: indexed-vc-search-and-retrieve-company
+  slug: indexed-vc-search-and-retrieve-company
 slug: indexed-vc
 tags:
 - Company

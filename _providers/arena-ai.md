@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arena-ai/refs/heads/main/security/arena-ai-domain-security.yml
+  href: https://artifacts.apis.io/arena-ai/security/arena-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arena-ai-domain-security.yml
@@ -61,6 +65,10 @@ common:
   title: ''
   type: PrivacyPolicy
   url: https://arenaphysica.com/privacy-policy
+- group: company
+  title: ''
+  type: Website
+  url: https://www.arenaphysica.com/
 created: '2026-07-17'
 description: Arena AI (now operating as Arena Physica) is a New York-headquartered applied-research company building what it calls "electromagnetic superintelligence." Its flagship product, Atlas, is an AI-powered hardware-engineering platform that pairs general intelligence with deterministic physics models to accelerate the design, verification, and debugging of electronic and RF hardware. Atlas ingests telemetry, schematics, CAD files, and firmware, then connects via API or MCP (Model Context Protocol) to engineering toolchains such as Jira, GitHub, Altium, Cadence, and SPICE simulators, and to test equipment from vendors like Keysight and Tektronix. Atlas RF Studio, the company's RF design tool, is currently in beta. The company operates from New York City (HQ), San Francisco, and Los Angeles.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/arena-ai.png
@@ -72,19 +80,19 @@ network: true
 overview: 'Arena AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise Saas, Artificial Intelligence, Hardware Engineering, and Radio Frequency.
 
 
-  Arena AI''s developer surface includes engineering blog and 5 more developer resources.'
-random_paper: 18
+  Arena AI''s developer surface includes engineering blog and 6 more developer resources.'
+random_paper: 22
 score:
   band: minimal
   composite: 9.2
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
@@ -99,21 +107,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 9.1
+  previous_composite: 9.2
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 12.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/arena-ai/refs/heads/main/screenshots/arena-ai-2026-07-25T201121.png
+screenshot: https://apis.io/screenshots/arena-ai/arena-ai-2026-07-25T201121.png
 security:
 - kind: domain-security
   name: Arena Ai Domain Security
@@ -130,5 +138,8 @@ tags:
 - MCP
 - Applied Research
 - Semiconductors
+- Enterprise
+- Data
+- Analytics
 website: https://arenaphysica.com/
 ---

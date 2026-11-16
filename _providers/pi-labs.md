@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,13 +36,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'OpenAPI-compatible REST API for scoring, calibrating, and optimizing LLM outputs against rubrics of natural-language questions. Authenticated with an API key (WITHPI_API_KEY) sent as an Authorization '
   name: Pi Scoring API
   slug: pi-scoring-api
-artifact_total: 2
+artifact_total: 3
 common:
 - group: other
   title: ''
@@ -70,32 +73,32 @@ common:
   type: ChangeLog
   url: https://withpi.ai/release-notes
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pi-labs/refs/heads/main/packages/pi-labs-packages.yml
+  href: https://artifacts.apis.io/pi-labs/packages/pi-labs-packages.yml
   title: ''
   type: Packages
   url: packages/pi-labs-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pi-labs/refs/heads/main/packages/pi-labs-packages.yml
+  href: https://artifacts.apis.io/pi-labs/packages/pi-labs-packages.yml
   title: ''
   type: SDKs
   url: packages/pi-labs-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pi-labs/refs/heads/main/authentication/pi-labs-authentication.yml
+  href: https://artifacts.apis.io/pi-labs/authentication/pi-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pi-labs-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pi-labs/refs/heads/main/conventions/pi-labs-conventions.yml
+  href: https://artifacts.apis.io/pi-labs/conventions/pi-labs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pi-labs-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pi-labs/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pi-labs/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pi-labs/refs/heads/main/llms/pi-labs-llms.txt
+  href: https://artifacts.apis.io/pi-labs/llms/pi-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pi-labs-llms.txt
@@ -111,7 +114,7 @@ overview: 'Pi Labs is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Pi Labs'' developer surface includes documentation, API reference, getting-started guide, changelog, authentication, and 8 more developer resources.'
-random_paper: 20
+random_paper: 8
 score:
   band: emerging
   composite: 15.2
@@ -139,8 +142,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
@@ -151,6 +154,10 @@ security:
   name: Pi Labs Authentication
   slug: pi-labs-authentication
   summary_line: apiKey · 1 scheme
+skill_count: 1
+skills:
+- name: Score an LLM output with Pi Labs
+  slug: pi-labs-score-llm-output
 slug: pi-labs
 tags:
 - Company

@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.5
-  scored_at: '2026-10-17'
+  score: 36.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 0
@@ -148,85 +153,90 @@ apis:
   description: The Vendors API from DoorLoop — 2 operation(s) for vendors.
   name: DoorLoop Vendors API
   slug: doorloop-vendors-api
-artifact_total: 37
+artifact_total: 38
 common:
+- group: other
+  href: https://artifacts.apis.io/doorloop/capabilities/doorloop-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/doorloop-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/agentic-access/doorloop-agentic-access.yml
+  href: https://artifacts.apis.io/doorloop/agentic-access/doorloop-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/doorloop-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/rules/doorloop-rules.yml
+  href: https://artifacts.apis.io/doorloop/rules/doorloop-rules.yml
   title: ''
   type: Spectral
   url: rules/doorloop-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/json-ld/doorloop-context.jsonld
+  href: https://artifacts.apis.io/doorloop/json-ld/doorloop-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/doorloop-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/vocabulary/doorloop-vocabulary.yml
+  href: https://artifacts.apis.io/doorloop/vocabulary/doorloop-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/doorloop-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/data-model/doorloop-data-model.yml
+  href: https://artifacts.apis.io/doorloop/data-model/doorloop-data-model.yml
   title: ''
   type: DataModel
   url: data-model/doorloop-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/errors/doorloop-problem-types.yml
+  href: https://artifacts.apis.io/doorloop/errors/doorloop-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/doorloop-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/conformance/doorloop-conformance.yml
+  href: https://artifacts.apis.io/doorloop/conformance/doorloop-conformance.yml
   title: ''
   type: Conformance
   url: conformance/doorloop-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/llms/doorloop-llms.txt
+  href: https://artifacts.apis.io/doorloop/llms/doorloop-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/doorloop-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/mcp/doorloop-mcp.yml
+  href: https://artifacts.apis.io/doorloop/mcp/doorloop-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/doorloop-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/well-known/doorloop-status-security.txt
+  href: https://artifacts.apis.io/doorloop/well-known/doorloop-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/doorloop-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/well-known/doorloop-well-known.yml
+  href: https://artifacts.apis.io/doorloop/well-known/doorloop-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/doorloop-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/hosts/doorloop-hosts.yml
+  href: https://artifacts.apis.io/doorloop/hosts/doorloop-hosts.yml
   title: ''
   type: Hosts
   url: hosts/doorloop-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/integrations/doorloop-integration-edges.yml
+  href: https://artifacts.apis.io/doorloop/integrations/doorloop-integration-edges.yml
   title: ''
   type: IntegrationEdges
   url: integrations/doorloop-integration-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/vendors/doorloop-vendors.yml
+  href: https://artifacts.apis.io/doorloop/vendors/doorloop-vendors.yml
   title: ''
   type: Vendors
   url: vendors/doorloop-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/packages/doorloop-packages.yml
+  href: https://artifacts.apis.io/doorloop/packages/doorloop-packages.yml
   title: ''
   type: SDKs
   url: packages/doorloop-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/packages/doorloop-packages.yml
+  href: https://artifacts.apis.io/doorloop/packages/doorloop-packages.yml
   title: ''
   type: Packages
   url: packages/doorloop-packages.yml
@@ -255,17 +265,17 @@ common:
   type: Login
   url: https://www.doorloop.com/login
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/authentication/doorloop-authentication.yml
+  href: https://artifacts.apis.io/doorloop/authentication/doorloop-authentication.yml
   title: ''
   type: Authentication
   url: authentication/doorloop-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/security/doorloop-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/doorloop/security/doorloop-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/doorloop-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/security/doorloop-domain-security.yml
+  href: https://artifacts.apis.io/doorloop/security/doorloop-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/doorloop-domain-security.yml
@@ -302,30 +312,30 @@ common:
   type: X
   url: https://x.com/doorloopapp
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/plans/doorloop-plans-pricing.yml
+  href: https://artifacts.apis.io/doorloop/plans/doorloop-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/doorloop-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/rate-limits/doorloop-rate-limits.yml
+  href: https://artifacts.apis.io/doorloop/rate-limits/doorloop-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/doorloop-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/finops/doorloop-finops.yml
+  href: https://artifacts.apis.io/doorloop/finops/doorloop-finops.yml
   title: ''
   type: FinOps
   url: finops/doorloop-finops.yml
 created: '2026-06-13'
 description: DoorLoop is property management software with a REST API for managing properties, units, leases, rent collection, maintenance requests, accounting, and tenant communication. The API provides two-way access to read and write data across nearly every DoorLoop feature, with predictable resource-oriented URLs, JSON-encoded request and response bodies, and standard HTTP response codes. API access is included on the Premium plan.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Doorloop Finops
-  primary_unit: ''
+  primary_unit: unit
   service_category: ''
   slug: doorloop-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/doorloop.png
 json_schemas:
 - name: fullLeaseCreateRequest
@@ -338,10 +348,10 @@ json_schemas:
   property_count: 12
   slug: doorloop-property
 - name: task
-  property_count: 0
+  property_count: 21
   slug: doorloop-task
 - name: tenant
-  property_count: 0
+  property_count: 25
   slug: doorloop-tenant
 - name: unit
   property_count: 15
@@ -366,12 +376,15 @@ overview: 'DoorLoop publishes 21 API contracts indexed on the [APIs.io](https://
   The DoorLoop catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  DoorLoop''s developer surface includes support, authentication, documentation, engineering blog, pricing, and 31 more developer resources.'
+  DoorLoop''s developer surface includes support, authentication, documentation, engineering blog, pricing, and 32 more developer resources.'
 plans:
 - name: Doorloop Plans Pricing
-  plan_count: 4
+  plan_count: 3
   slug: doorloop-plans-pricing
-random_paper: 20
+- name: Doorloop Price Estimates
+  plan_count: 0
+  slug: doorloop-price-estimates
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Doorloop Rate Limits
@@ -390,24 +403,24 @@ rules:
     warn: 6
   slug: doorloop-rules
 score:
-  band: developing
-  composite: 51.6
+  band: strong
+  composite: 56.3
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 65.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 49.3
+    artifact_dirs: 27
+    catalog_earned: 77.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 37.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 29.7
+  delta: -1.7
   facets:
-    access_clarity: 52.6
+    access_clarity: 67.1
     contract_governance: 22.0
-    contract_quality: 69.3
-    developer_ergonomics: 25.0
-    discoverability: 76.7
-    operational_transparency: 31.6
-  previous_composite: 21.9
+    contract_quality: 75.1
+    developer_ergonomics: 33.3
+    discoverability: 75.8
+    operational_transparency: 26.3
+  previous_composite: 58.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -422,14 +435,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 26.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/doorloop/refs/heads/main/screenshots/doorloop-2026-06-20T180153.png
+screenshot: https://apis.io/screenshots/doorloop/doorloop-2026-06-20T180153.png
 security:
 - kind: authentication
   name: Doorloop Authentication

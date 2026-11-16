@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Paid · Self-serve signup
   onboarding: self-serve
   pricing: paid
@@ -8,13 +11,16 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: false
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
@@ -26,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 31.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 48
   human_in_the_loop: 0
@@ -190,7 +199,7 @@ arazzos:
 - description: Find a contact by email and update it if it exists, otherwise create it.
   name: Microsoft Exchange Upsert a Contact
   slug: microsoft-exchange-upsert-contact-workflow
-artifact_total: 130
+artifact_total: 155
 collections:
 - collection_type: postman
   name: Microsoft Exchange Exchange Online Admin API
@@ -210,9 +219,6 @@ collections:
 - collection_type: postman
   name: Microsoft Exchange Microsoft Graph People API
   slug: postman-microsoft-exchange-graph-people
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Microsoft Exchange Exchange Online Admin Accepted Domains API
   slug: open-microsoft-exchange-accepted-domains-api
@@ -283,113 +289,170 @@ collections:
   name: Microsoft Exchange Exchange Online Admin Accepted Domains Scheduling API
   slug: open-microsoft-exchange-scheduling-api
 common:
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://learn.microsoft.com/en-us/graph/versioning-and-deprecation
+- group: design
+  href: https://artifacts.apis.io/microsoft-exchange/rules/microsoft-exchange-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-exchange-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-exchange/rules/microsoft-exchange-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-exchange-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-exchange/json-ld/microsoft-exchange-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/microsoft-exchange-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/microsoft-exchange/vocabulary/microsoft-exchange-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/microsoft-exchange-vocabulary.yml
+- group: agent
+  href: https://artifacts.apis.io/microsoft-exchange/skills/_index.yml
+  title: ''
+  type: AgentSkill
+  url: skills/_index.yml
+- group: build
+  href: https://artifacts.apis.io/microsoft-exchange/mcp/microsoft-exchange-tool-crosswalk.yml
+  title: ''
+  type: ToolCrosswalk
+  url: mcp/microsoft-exchange-tool-crosswalk.yml
+- group: agent
+  href: https://artifacts.apis.io/microsoft-exchange/mcp/microsoft-exchange-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/microsoft-exchange-mcp.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-exchange/hosts/microsoft-exchange-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/microsoft-exchange-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-exchange/vendors/microsoft-exchange-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/microsoft-exchange-vendors.yml
+- group: auth
+  title: ''
+  type: Security
+  url: https://www.microsoft.com/security
+- group: other
+  title: ''
+  type: Leadership
+  url: https://news.microsoft.com/leadership
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/plans/microsoft-exchange-plans-pricing.yml
+  href: https://artifacts.apis.io/microsoft-exchange/plans/microsoft-exchange-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/microsoft-exchange-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/rate-limits/microsoft-exchange-rate-limits.yml
+  href: https://artifacts.apis.io/microsoft-exchange/rate-limits/microsoft-exchange-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/microsoft-exchange-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/finops/microsoft-exchange-finops.yml
+  href: https://artifacts.apis.io/microsoft-exchange/finops/microsoft-exchange-finops.yml
   title: ''
   type: FinOps
   url: finops/microsoft-exchange-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/overlays/microsoft-exchange-admin-api-overlay.yaml
+  href: https://artifacts.apis.io/microsoft-exchange/overlays/microsoft-exchange-admin-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/microsoft-exchange-admin-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/agentic-access/microsoft-exchange-agentic-access.yml
+  href: https://artifacts.apis.io/microsoft-exchange/agentic-access/microsoft-exchange-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/microsoft-exchange-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/security/microsoft-exchange-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/microsoft-exchange/security/microsoft-exchange-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/microsoft-exchange-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/security/microsoft-exchange-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-exchange/security/microsoft-exchange-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-exchange-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/authentication/microsoft-exchange-authentication.yml
+  href: https://artifacts.apis.io/microsoft-exchange/authentication/microsoft-exchange-authentication.yml
   title: ''
   type: Authentication
   url: authentication/microsoft-exchange-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/scopes/microsoft-exchange-scopes.yml
+  href: https://artifacts.apis.io/microsoft-exchange/scopes/microsoft-exchange-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/microsoft-exchange-scopes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/packages/microsoft-exchange-packages.yml
+  href: https://artifacts.apis.io/microsoft-exchange/packages/microsoft-exchange-packages.yml
   title: ''
   type: Packages
   url: packages/microsoft-exchange-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/well-known/microsoft-exchange-well-known.yml
+  href: https://artifacts.apis.io/microsoft-exchange/well-known/microsoft-exchange-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/microsoft-exchange-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/well-known/microsoft-exchange-security.txt
+  href: https://artifacts.apis.io/microsoft-exchange/well-known/microsoft-exchange-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/microsoft-exchange-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/mcp/microsoft-exchange-mcp.yml
+  href: https://artifacts.apis.io/microsoft-exchange/mcp/microsoft-exchange-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/microsoft-exchange-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/llms/microsoft-exchange-llms.txt
+  href: https://artifacts.apis.io/microsoft-exchange/llms/microsoft-exchange-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/microsoft-exchange-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/conformance/microsoft-exchange-conformance.yml
+  href: https://artifacts.apis.io/microsoft-exchange/conformance/microsoft-exchange-conformance.yml
   title: ''
   type: Conformance
   url: conformance/microsoft-exchange-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/errors/microsoft-exchange-problem-types.yml
+  href: https://artifacts.apis.io/microsoft-exchange/errors/microsoft-exchange-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/microsoft-exchange-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/lifecycle/microsoft-exchange-lifecycle.yml
+  href: https://artifacts.apis.io/microsoft-exchange/lifecycle/microsoft-exchange-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/microsoft-exchange-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/conventions/microsoft-exchange-conventions.yml
+  href: https://artifacts.apis.io/microsoft-exchange/conventions/microsoft-exchange-conventions.yml
   title: ''
   type: Conventions
   url: conventions/microsoft-exchange-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/changelog/microsoft-exchange-changelog.yml
+  href: https://artifacts.apis.io/microsoft-exchange/changelog/microsoft-exchange-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/microsoft-exchange-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/cli/microsoft-exchange-cli.yml
+  href: https://artifacts.apis.io/microsoft-exchange/cli/microsoft-exchange-cli.yml
   title: ''
   type: CLI
   url: cli/microsoft-exchange-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/data-model/microsoft-exchange-data-model.yml
+  href: https://artifacts.apis.io/microsoft-exchange/data-model/microsoft-exchange-data-model.yml
   title: ''
   type: DataModel
   url: data-model/microsoft-exchange-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/sandbox/microsoft-exchange-sandbox.yml
+  href: https://artifacts.apis.io/microsoft-exchange/sandbox/microsoft-exchange-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/microsoft-exchange-sandbox.yml
@@ -398,87 +461,87 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/microsoft-exchange/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-audit-message-attachments-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-audit-message-attachments-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-audit-message-attachments-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-audit-org-and-domains-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-audit-org-and-domains-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-audit-org-and-domains-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-compose-attach-send-mail-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-compose-attach-send-mail-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-compose-attach-send-mail-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-discover-mailbox-content-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-discover-mailbox-content-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-discover-mailbox-content-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-find-times-and-book-meeting-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-find-times-and-book-meeting-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-find-times-and-book-meeting-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-grant-folder-permission-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-grant-folder-permission-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-grant-folder-permission-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-inspect-and-delegate-mailbox-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-inspect-and-delegate-mailbox-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-inspect-and-delegate-mailbox-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-migrate-mailbox-item-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-migrate-mailbox-item-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-migrate-mailbox-item-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-organize-contacts-folder-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-organize-contacts-folder-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-organize-contacts-folder-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-organize-folder-and-file-message-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-organize-folder-and-file-message-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-organize-folder-and-file-message-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-prepare-and-send-forward-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-prepare-and-send-forward-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-prepare-and-send-forward-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-provision-calendar-and-add-event-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-provision-calendar-and-add-event-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-provision-calendar-and-add-event-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-reply-to-latest-from-sender-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-reply-to-latest-from-sender-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-reply-to-latest-from-sender-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-review-and-respond-to-invite-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-review-and-respond-to-invite-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-review-and-respond-to-invite-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-schedule-event-with-attachment-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-schedule-event-with-attachment-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-schedule-event-with-attachment-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-triage-and-move-message-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-triage-and-move-message-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-triage-and-move-message-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/arazzo/microsoft-exchange-upsert-contact-workflow.yml
+  href: https://artifacts.apis.io/microsoft-exchange/arazzo/microsoft-exchange-upsert-contact-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-exchange-upsert-contact-workflow.yml
@@ -555,37 +618,37 @@ common:
   type: Graph Explorer
   url: https://developer.microsoft.com/en-us/graph/graph-explorer
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/json-ld/microsoft-exchange-context.jsonld
+  href: https://artifacts.apis.io/microsoft-exchange/json-ld/microsoft-exchange-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/microsoft-exchange-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/json-schema/microsoft-exchange-message-schema.json
+  href: https://artifacts.apis.io/microsoft-exchange/json-schema/microsoft-exchange-message-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/microsoft-exchange-message-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/json-schema/microsoft-exchange-event-schema.json
+  href: https://artifacts.apis.io/microsoft-exchange/json-schema/microsoft-exchange-event-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/microsoft-exchange-event-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/json-schema/microsoft-exchange-contact-schema.json
+  href: https://artifacts.apis.io/microsoft-exchange/json-schema/microsoft-exchange-contact-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/microsoft-exchange-contact-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/json-schema/microsoft-exchange-calendar-schema.json
+  href: https://artifacts.apis.io/microsoft-exchange/json-schema/microsoft-exchange-calendar-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/microsoft-exchange-calendar-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/json-schema/microsoft-exchange-mail-folder-schema.json
+  href: https://artifacts.apis.io/microsoft-exchange/json-schema/microsoft-exchange-mail-folder-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/microsoft-exchange-mail-folder-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/json-schema/microsoft-exchange-person-schema.json
+  href: https://artifacts.apis.io/microsoft-exchange/json-schema/microsoft-exchange-person-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/microsoft-exchange-person-schema.json
@@ -603,25 +666,49 @@ image: https://learn.microsoft.com/en-us/media/logos/logo-ms-social.png
 json_schemas:
 - name: AdminApiResponse
   property_count: 3
+  slug: microsoft-exchange-admin-api-response
+- name: AdminApiResponse
+  property_count: 3
   slug: microsoft-exchange-adminapiresponse
+- name: AttachmentCollectionResponse
+  property_count: 2
+  slug: microsoft-exchange-attachment-collection-response
 - name: Attachment
   property_count: 8
   slug: microsoft-exchange-attachment
 - name: AttachmentCollectionResponse
   property_count: 2
   slug: microsoft-exchange-attachmentcollectionresponse
+- name: AttendeeBase
+  property_count: 2
+  slug: microsoft-exchange-attendee-base
 - name: Attendee
   property_count: 4
   slug: microsoft-exchange-attendee
 - name: AttendeeBase
   property_count: 2
   slug: microsoft-exchange-attendeebase
+- name: CalendarCollectionResponse
+  property_count: 3
+  slug: microsoft-exchange-calendar-collection-response
 - name: Microsoft Exchange Calendar
   property_count: 14
   slug: microsoft-exchange-calendar
 - name: CalendarCollectionResponse
   property_count: 3
   slug: microsoft-exchange-calendarcollectionresponse
+- name: ContactCollectionResponse
+  property_count: 3
+  slug: microsoft-exchange-contact-collection-response
+- name: ContactDeltaResponse
+  property_count: 4
+  slug: microsoft-exchange-contact-delta-response
+- name: ContactFolderCollectionResponse
+  property_count: 3
+  slug: microsoft-exchange-contact-folder-collection-response
+- name: ContactFolder
+  property_count: 3
+  slug: microsoft-exchange-contact-folder
 - name: Microsoft Exchange Contact
   property_count: 38
   slug: microsoft-exchange-contact
@@ -639,10 +726,16 @@ json_schemas:
   slug: microsoft-exchange-contactfoldercollectionresponse
 - name: DateTimeTimeZone
   property_count: 2
+  slug: microsoft-exchange-date-time-time-zone
+- name: DateTimeTimeZone
+  property_count: 2
   slug: microsoft-exchange-datetimetimezone
 - name: EmailAddress
   property_count: 2
   slug: microsoft-exchange-emailaddress
+- name: EventCollectionResponse
+  property_count: 3
+  slug: microsoft-exchange-event-collection-response
 - name: Microsoft Exchange Calendar Event
   property_count: 40
   slug: microsoft-exchange-event
@@ -658,6 +751,9 @@ json_schemas:
 - name: ItemBody
   property_count: 2
   slug: microsoft-exchange-itembody
+- name: LocationConstraint
+  property_count: 3
+  slug: microsoft-exchange-location-constraint
 - name: Location
   property_count: 8
   slug: microsoft-exchange-location
@@ -667,9 +763,18 @@ json_schemas:
 - name: LocationConstraintItem
   property_count: 3
   slug: microsoft-exchange-locationconstraintitem
+- name: MailFolderCollectionResponse
+  property_count: 3
+  slug: microsoft-exchange-mail-folder-collection-response
 - name: Microsoft Exchange Mail Folder
   property_count: 7
   slug: microsoft-exchange-mail-folder
+- name: MailboxFolder
+  property_count: 7
+  slug: microsoft-exchange-mailbox-folder
+- name: MailboxItem
+  property_count: 8
+  slug: microsoft-exchange-mailbox-item
 - name: Mailbox
   property_count: 6
   slug: microsoft-exchange-mailbox
@@ -685,12 +790,18 @@ json_schemas:
 - name: MailFolderCollectionResponse
   property_count: 3
   slug: microsoft-exchange-mailfoldercollectionresponse
+- name: MeetingTimeSuggestionsResult
+  property_count: 3
+  slug: microsoft-exchange-meeting-time-suggestions-result
 - name: MeetingTimeSuggestion
   property_count: 7
   slug: microsoft-exchange-meetingtimesuggestion
 - name: MeetingTimeSuggestionsResult
   property_count: 3
   slug: microsoft-exchange-meetingtimesuggestionsresult
+- name: MessageCollectionResponse
+  property_count: 3
+  slug: microsoft-exchange-message-collection-response
 - name: Microsoft Exchange Message
   property_count: 31
   slug: microsoft-exchange-message
@@ -709,6 +820,9 @@ json_schemas:
 - name: PatternedRecurrence
   property_count: 2
   slug: microsoft-exchange-patternedrecurrence
+- name: PersonCollectionResponse
+  property_count: 3
+  slug: microsoft-exchange-person-collection-response
 - name: Microsoft Exchange Person
   property_count: 20
   slug: microsoft-exchange-person
@@ -738,6 +852,9 @@ json_schemas:
   slug: microsoft-exchange-responsestatus
 - name: ScheduleInformation
   property_count: 5
+  slug: microsoft-exchange-schedule-information
+- name: ScheduleInformation
+  property_count: 5
   slug: microsoft-exchange-scheduleinformation
 - name: ScheduleItem
   property_count: 6
@@ -745,6 +862,12 @@ json_schemas:
 - name: ScoredEmailAddress
   property_count: 3
   slug: microsoft-exchange-scoredemailaddress
+- name: TimeConstraint
+  property_count: 2
+  slug: microsoft-exchange-time-constraint
+- name: TimeSlot
+  property_count: 2
+  slug: microsoft-exchange-time-slot
 - name: TimeConstraint
   property_count: 2
   slug: microsoft-exchange-timeconstraint
@@ -767,6 +890,10 @@ jsonld:
   property_count: 13
   slug: microsoft-exchange-context
 layout: provider
+mcp_servers:
+- description: Microsoft documents a hosted, tenant-level Mail Tools MCP server (Server ID mcp_MailTools) in the Agent 365 / Copilot Studio MCP server reference (preview), exposing Microsoft Graph mail operations ag
+  name: Microsoft Exchange MCP Server
+  slug: microsoft-exchange
 modified: '2026-06-20'
 name: Microsoft Exchange
 nav: Providers
@@ -774,10 +901,10 @@ network: true
 overview: 'Microsoft Exchange publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accepted Domains API, Attachments API, Calendars API, and 17 more. Tagged areas include Calendar, Collaboration, Contacts, Email, and Enterprise.
 
 
-  The Microsoft Exchange catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+  The Microsoft Exchange catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Microsoft Exchange''s developer surface includes authentication, changelog, CLI, sandbox, developer portal, documentation, getting-started guide, and 58 more developer resources.'
+  Microsoft Exchange''s developer surface includes authentication, changelog, CLI, sandbox, developer portal, documentation, getting-started guide, and 70 more developer resources.'
 plans:
 - name: Microsoft Exchange Plans Pricing
   plan_count: 4
@@ -799,6 +926,18 @@ rules:
     info: 2
     warn: 4
   slug: microsoft-exchange-jsonschema-spectral-rules
+- authorship: generated
+  effective_rule_count: 114
+  extends:
+  - spectral:oas
+  name: Microsoft Exchange API Rules
+  rule_count: 73
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 3
+    warn: 8
+  slug: microsoft-exchange-rules
 scopes:
 - name: Microsoft Exchange Scopes
   scope_count: 18
@@ -806,23 +945,23 @@ scopes:
   summary_line: 18 scopes · clientCredentials/authorizationCode
 score:
   band: strong
-  composite: 57.4
+  composite: 62.7
   coverage:
-    artifact_dirs: 33
-    catalog_earned: 57.3
+    artifact_dirs: 39
+    catalog_earned: 68.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 57.8
+    catalog_gap: 46.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 4.0
   facets:
     access_clarity: 40.8
-    contract_governance: 14.4
-    contract_quality: 64.6
-    developer_ergonomics: 79.8
-    discoverability: 78.6
-    operational_transparency: 34.2
-  previous_composite: 58.9
+    contract_governance: 22.0
+    contract_quality: 70.7
+    developer_ergonomics: 81.5
+    discoverability: 80.4
+    operational_transparency: 52.6
+  previous_composite: 58.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -831,20 +970,21 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 17
-    mcp: derived
+    mcp: first-party
+    skills: derived
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-exchange/refs/heads/main/screenshots/microsoft-exchange-2026-06-20T185501.png
+screenshot: https://apis.io/screenshots/microsoft-exchange/microsoft-exchange-2026-06-20T185501.png
 security:
 - kind: authentication
   name: Microsoft Exchange Authentication
@@ -858,6 +998,16 @@ security:
   name: Microsoft Exchange Vulnerability Disclosure
   slug: microsoft-exchange-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 4
+skills:
+- name: microsoft-exchange-manage-contacts
+  slug: microsoft-exchange-manage-contacts
+- name: microsoft-exchange-schedule-meeting
+  slug: microsoft-exchange-schedule-meeting
+- name: microsoft-exchange-send-mail
+  slug: microsoft-exchange-send-mail
+- name: microsoft-exchange-triage-inbox
+  slug: microsoft-exchange-triage-inbox
 slug: microsoft-exchange
 tags:
 - Calendar

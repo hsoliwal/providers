@@ -1,6 +1,7 @@
 ---
 access_model:
   confidence: low
+  gated_conflict: 'x-api-posture: private but 1 published API entry'
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The HTTP API behind the Percepto AIM (Autonomous Inspection and Monitoring) console at drones.percepto.co. The application is a Django/Django-REST-Framework deployment: /api/schema/ and /api/docs/ are'
@@ -43,7 +47,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/security/percepto-domain-security.yml
+  href: https://artifacts.apis.io/percepto/security/percepto-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/percepto-domain-security.yml
@@ -76,32 +80,32 @@ common:
   type: Compliance
   url: https://percepto.co/your-drone-inspection-data-is-secure/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/packages/percepto-packages.yml
+  href: https://artifacts.apis.io/percepto/packages/percepto-packages.yml
   title: ''
   type: Packages
   url: packages/percepto-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/conformance/percepto-conformance.yml
+  href: https://artifacts.apis.io/percepto/conformance/percepto-conformance.yml
   title: ''
   type: Conformance
   url: conformance/percepto-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/lifecycle/percepto-lifecycle.yml
+  href: https://artifacts.apis.io/percepto/lifecycle/percepto-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/percepto-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/plans/percepto-plans-pricing.yml
+  href: https://artifacts.apis.io/percepto/plans/percepto-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/percepto-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/rate-limits/percepto-rate-limits.yml
+  href: https://artifacts.apis.io/percepto/rate-limits/percepto-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/percepto-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/llms/percepto-llms.txt
+  href: https://artifacts.apis.io/percepto/llms/percepto-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/percepto-llms.txt
@@ -136,7 +140,7 @@ plans:
 - name: Percepto Plans Pricing
   plan_count: 0
   slug: percepto-plans-pricing
-random_paper: 8
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Percepto Rate Limits
@@ -145,7 +149,7 @@ score:
   band: emerging
   composite: 17.9
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -176,14 +180,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 15.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/percepto/refs/heads/main/screenshots/percepto-2026-09-02T151035.png
+screenshot: https://apis.io/screenshots/percepto/percepto-2026-09-02T151035.png
 security:
 - kind: domain-security
   name: Percepto Domain Security

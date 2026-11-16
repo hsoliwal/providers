@@ -1,7 +1,10 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium (free trial) · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
   public: false
@@ -9,7 +12,7 @@ access_model:
   - plans
   - authentication
   - security
-  trial: true
+  trial: false
   try_now: true
 agent_readiness:
   band: agent-aware
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 27.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -75,11 +81,6 @@ apis:
   description: The Knowledge Bank API from Convai — 4 operation(s) for knowledge bank.
   name: Convai Knowledge Bank API
   slug: convai-com-knowledge-bank-api
-- baseURL: https://live.convai.com
-  baseurl_source: spec
-  description: The Live API from Convai — 1 operation(s) for live.
-  name: Convai Live API
-  slug: convai-com-live-api
 - baseURL: https://api.convai.com
   baseurl_source: spec
   description: The Narrative API from Convai — 11 operation(s) for narrative.
@@ -95,7 +96,19 @@ apis:
   description: The TTS API from Convai — 3 operation(s) for tts.
   name: Convai TTS API
   slug: convai-com-tts-api
-artifact_total: 51
+- description: The app API from Convai — 12 operation(s) for app.
+  name: Convai App API
+  slug: convai-com-app-api
+- description: The Disconnect API from Convai — 1 operation(s) for disconnect.
+  name: Convai Disconnect API
+  slug: convai-com-disconnect-api
+- description: The Healthz API from Convai — 1 operation(s) for healthz.
+  name: Convai Healthz API
+  slug: convai-com-healthz-api
+- description: The latency API from Convai — 1 operation(s) for latency.
+  name: Convai Latency API
+  slug: convai-com-latency-api
+artifact_total: 54
 collections:
 - collection_type: postman
   name: Convai Character Characters API
@@ -127,9 +140,6 @@ collections:
 - collection_type: postman
   name: Convai Character Characters TTS API
   slug: postman-convai-com-tts-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Convai Character API
   slug: open-convai-character-api
@@ -191,8 +201,13 @@ collections:
   name: Convai Text-to-Speech API
   slug: open-convai-tts-api
 common:
+- group: other
+  href: https://artifacts.apis.io/convai-com/capabilities/convai-com-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/convai-com-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/convai-com/refs/heads/main/plans/convai-plans-pricing.yml
+  href: https://artifacts.apis.io/convai-com/plans/convai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/convai-plans-pricing.yml
@@ -209,17 +224,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/convai/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/convai-com/refs/heads/main/agentic-access/convai-com-agentic-access.yml
+  href: https://artifacts.apis.io/convai-com/agentic-access/convai-com-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/convai-com-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/convai-com/refs/heads/main/security/convai-com-domain-security.yml
+  href: https://artifacts.apis.io/convai-com/security/convai-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/convai-com-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/convai-com/refs/heads/main/authentication/convai-com-authentication.yml
+  href: https://artifacts.apis.io/convai-com/authentication/convai-com-authentication.yml
   title: ''
   type: Authentication
   url: authentication/convai-com-authentication.yml
@@ -308,17 +323,17 @@ common:
   type: Tools
   url: https://github.com/Conv-AI/Convai-UnrealEngine-PakManager
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/convai-com/refs/heads/main/plans/convai-plans-pricing.yml
+  href: https://artifacts.apis.io/convai-com/plans/convai-plans-pricing.yml
   title: ''
   type: Pricing
   url: plans/convai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/convai-com/refs/heads/main/rate-limits/convai-rate-limits.yml
+  href: https://artifacts.apis.io/convai-com/rate-limits/convai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/convai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/convai-com/refs/heads/main/finops/convai-finops.yml
+  href: https://artifacts.apis.io/convai-com/finops/convai-finops.yml
   title: ''
   type: FinOps
   url: finops/convai-finops.yml
@@ -326,10 +341,10 @@ created: '2026-05-25'
 description: Convai builds conversational AI for interactive characters in games and virtual worlds. Its API covers character creation and configuration, chat sessions and history, knowledge banks, speech and text-to-speech, custom LLM integration and evaluation.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Convai Finops
-  primary_unit: interaction
-  service_category: AI and Machine Learning
+  primary_unit: subscription
+  service_category: ''
   slug: convai-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/convai-com.png
@@ -350,18 +365,21 @@ modified: '2026-09-15'
 name: Convai
 nav: Providers
 network: true
-overview: 'Convai publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Characters API, Chat History API, Custom LLM API, and 7 more. Tagged areas include Artificial Intelligence, Conversational AI, Characters, NPCs, and Virtual Worlds.
+overview: 'Convai publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Characters API, Chat History API, Custom LLM API, and 10 more. Tagged areas include Artificial Intelligence, Conversational AI, Characters, NPCs, and Virtual Worlds.
 
 
   The Convai catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Convai''s developer surface includes pricing, authentication, developer portal, sandbox, documentation, engineering blog, tooling, and 24 more developer resources.'
+  Convai''s developer surface includes pricing, authentication, developer portal, sandbox, documentation, engineering blog, tooling, and 25 more developer resources.'
 plans:
+- name: Convai Com Price Estimates
+  plan_count: 0
+  slug: convai-com-price-estimates
 - name: Convai Plans Pricing
   plan_count: 10
   slug: convai-plans-pricing
-random_paper: 14
+random_paper: 20
 rate_limits:
 - limit_count: 7
   name: Convai Rate Limits
@@ -380,43 +398,43 @@ rules:
   slug: convai-com-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 49.3
+  composite: 41.8
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 70.3
-    catalog_earned_first_party: 12.0
-    catalog_gap: 44.8
+    artifact_dirs: 19
+    catalog_earned: 58.3
+    catalog_earned_first_party: 0.0
+    catalog_gap: 56.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.3
+  delta: -0.8
   facets:
-    access_clarity: 71.1
+    access_clarity: 34.2
     contract_governance: 9.8
-    contract_quality: 53.1
+    contract_quality: 52.7
     developer_ergonomics: 63.1
     discoverability: 62.5
     operational_transparency: 13.2
-  previous_composite: 51.6
+  previous_composite: 42.6
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 73.3
       derived: 0
-      marker_coverage: 0.0
-      total: 10
+      marker_coverage: 26.7
+      total: 15
   regulatory:
     applies: true
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/convai-com/refs/heads/main/screenshots/convai-com-2026-06-20T174957.png
+screenshot: https://apis.io/screenshots/convai-com/convai-com-2026-06-20T174957.png
 security:
 - kind: authentication
   name: Convai Com Authentication
@@ -436,7 +454,7 @@ tags:
 - Games
 - Avatars
 - Speech
-- TTS
+- Text-to-Speech
 - WebRTC
 website: https://www.convai.com/
 ---

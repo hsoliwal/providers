@@ -1,6 +1,6 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
   label: Freemium · Requires approval
   onboarding: approval
   pricing: freemium
@@ -8,6 +8,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 23.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -97,9 +101,6 @@ apis:
 artifact_total: 29
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: TrainingPeaks Partners Athlete API
   slug: open-trainingpeaks-athlete-api
 - collection_type: open
@@ -134,27 +135,27 @@ collections:
   slug: open-trainingpeaks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/trainingpeaks/refs/heads/main/capabilities/trainingpeaks-capability-edges.yml
+  href: https://artifacts.apis.io/trainingpeaks/capabilities/trainingpeaks-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/trainingpeaks-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trainingpeaks/refs/heads/main/agentic-access/trainingpeaks-agentic-access.yml
+  href: https://artifacts.apis.io/trainingpeaks/agentic-access/trainingpeaks-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/trainingpeaks-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trainingpeaks/refs/heads/main/security/trainingpeaks-domain-security.yml
+  href: https://artifacts.apis.io/trainingpeaks/security/trainingpeaks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trainingpeaks-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trainingpeaks/refs/heads/main/authentication/trainingpeaks-authentication.yml
+  href: https://artifacts.apis.io/trainingpeaks/authentication/trainingpeaks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/trainingpeaks-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trainingpeaks/refs/heads/main/scopes/trainingpeaks-scopes.yml
+  href: https://artifacts.apis.io/trainingpeaks/scopes/trainingpeaks-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/trainingpeaks-scopes.yml
@@ -175,17 +176,17 @@ common:
   type: Documentation
   url: https://github.com/TrainingPeaks/PartnersAPI/wiki
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/trainingpeaks/refs/heads/main/plans/trainingpeaks-plans-pricing.yml
+  href: https://artifacts.apis.io/trainingpeaks/plans/trainingpeaks-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/trainingpeaks-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/trainingpeaks/refs/heads/main/rate-limits/trainingpeaks-rate-limits.yml
+  href: https://artifacts.apis.io/trainingpeaks/rate-limits/trainingpeaks-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/trainingpeaks-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/trainingpeaks/refs/heads/main/finops/trainingpeaks-finops.yml
+  href: https://artifacts.apis.io/trainingpeaks/finops/trainingpeaks-finops.yml
   title: ''
   type: FinOps
   url: finops/trainingpeaks-finops.yml
@@ -212,16 +213,32 @@ network: true
 overview: 'TrainingPeaks publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Athlete API, Coach API, Events API, and 7 more. Tagged areas include Fitness, Endurance Training, Workouts, Coaching, and Sports.
 
 
+  The TrainingPeaks catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   TrainingPeaks'' developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Trainingpeaks Plans Pricing
   plan_count: 6
   slug: trainingpeaks-plans-pricing
-random_paper: 6
+random_paper: 0
 rate_limits:
 - limit_count: 4
   name: Trainingpeaks Rate Limits
   slug: trainingpeaks-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 112
+  extends:
+  - spectral:oas
+  name: TrainingPeaks API Rules
+  rule_count: 71
+  severity_counts:
+    error: 67
+    hint: 0
+    info: 1
+    warn: 3
+  slug: trainingpeaks-rules
 scopes:
 - name: Trainingpeaks Scopes
   scope_count: 17
@@ -229,23 +246,23 @@ scopes:
   summary_line: 17 scopes · authorizationCode
 score:
   band: thin
-  composite: 28.6
+  composite: 30.2
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 43.0
+    artifact_dirs: 18
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 47.0
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 36.9
+  previous_composite: 30.2
   provenance:
     agentic_access: derived
     contracts:
@@ -259,13 +276,13 @@ score:
     regime: Health
     regime_id: health
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/trainingpeaks/refs/heads/main/screenshots/trainingpeaks-2026-09-02T164108.png
+screenshot: https://apis.io/screenshots/trainingpeaks/trainingpeaks-2026-09-02T164108.png
 security:
 - kind: authentication
   name: Trainingpeaks Authentication

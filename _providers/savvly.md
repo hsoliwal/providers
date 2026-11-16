@@ -25,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 39.8
-  scored_at: '2026-10-17'
+  score: 42.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -41,7 +44,7 @@ agentic_access:
   operation_count: 12
   slug: savvly-agentic-access
   summary_line: 12 operations
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.savvly.com
   baseurl_source: spec
@@ -58,11 +61,8 @@ apis:
   description: The Projections API from Savvly — 4 operation(s) for projections.
   name: Savvly Projections API
   slug: savvly-projections-api
-artifact_total: 10
+artifact_total: 12
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Savvly Public Comparisons API
   slug: open-savvly-comparisons-api
@@ -74,22 +74,22 @@ collections:
   slug: open-savvly-projections-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/savvly/refs/heads/main/skills/savvly-compare-and-explain.md
+  href: https://artifacts.apis.io/savvly/skills/savvly-compare-and-explain.md
   title: ''
   type: AgentSkill
   url: skills/savvly-compare-and-explain.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/savvly/refs/heads/main/mcp/savvly-mcp.yml
+  href: https://artifacts.apis.io/savvly/mcp/savvly-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/savvly-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/savvly/refs/heads/main/overlays/savvly-openapi-overlay.yaml
+  href: https://artifacts.apis.io/savvly/overlays/savvly-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/savvly-openapi-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/savvly/refs/heads/main/a2a/savvly-a2a.yml
+  href: https://artifacts.apis.io/savvly/a2a/savvly-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/savvly-a2a.yml
@@ -108,34 +108,50 @@ modified: '2026-07-17'
 name: Savvly
 nav: Providers
 network: true
-overview: 'Savvly publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Comparisons API, Product API, and Projections API. Tagged areas include Company and A2A.'
-random_paper: 17
+overview: 'Savvly publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Comparisons API, Product API, and Projections API. Tagged areas include Company and A2A.
+
+
+  The Savvly catalog on APIs.io includes 1 Spectral governance ruleset.'
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Savvly API Rules
+  rule_count: 45
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 2
+  slug: savvly-rules
 score:
   band: emerging
-  composite: 13.4
+  composite: 16.3
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 15.0
+    artifact_dirs: 21
+    catalog_earned: 19.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 85.0
+    catalog_gap: 80.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.2
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 43.9
+    contract_governance: 18.2
+    contract_quality: 48.8
     developer_ergonomics: 1.8
     discoverability: 38.3
     operational_transparency: 0.0
-  previous_composite: 13.4
+  previous_composite: 15.1
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
     mcp: first-party
     skills: derived
@@ -145,19 +161,25 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/savvly/refs/heads/main/screenshots/savvly-2026-09-02T154449.png
+screenshot: https://apis.io/screenshots/savvly/savvly-2026-09-02T154449.png
 security:
 - kind: domain-security
   name: Savvly Domain Security
   slug: savvly-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Compare Savvly and explain the product
+  slug: savvly-compare-and-explain
+- name: Project a retirement scenario with Savvly
+  slug: savvly-project-retirement
 slug: savvly
 tags:
 - Company

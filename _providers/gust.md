@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,12 +37,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
-- description: Gust provides a developer portal and documentation at gust.helpscoutdocs.com, but no machine‑readable contract was found.
+- baseURL: https://api.inspectall.com
+  baseurl_source: spec
+  description: Gust provides a developer portal and documentation at gust.helpscoutdocs.com, but no machine‑readable contract was found.
   name: Gust API
-  slug: gust-api-2
+  slug: gust-api
 - baseURL: https://api.inspectall.com
   baseurl_source: declared
   description: The Accounts API from Gust — 1 operation(s) for accounts.
@@ -41,37 +57,37 @@ asyncapis:
   slug: gust-webhooks
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gust/refs/heads/main/plans/gust-plans-pricing.yml
+  href: https://artifacts.apis.io/gust/plans/gust-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gust-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gust/refs/heads/main/rules/gust-rules.yml
+  href: https://artifacts.apis.io/gust/rules/gust-rules.yml
   title: ''
   type: Spectral
   url: rules/gust-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gust/refs/heads/main/asyncapi/gust-webhooks.yml
+  href: https://artifacts.apis.io/gust/asyncapi/gust-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/gust-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gust/refs/heads/main/conformance/gust-conformance.yml
+  href: https://artifacts.apis.io/gust/conformance/gust-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gust-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gust/refs/heads/main/hosts/gust-hosts.yml
+  href: https://artifacts.apis.io/gust/hosts/gust-hosts.yml
   title: ''
   type: Hosts
   url: hosts/gust-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gust/refs/heads/main/vendors/gust-vendors.yml
+  href: https://artifacts.apis.io/gust/vendors/gust-vendors.yml
   title: ''
   type: Vendors
   url: vendors/gust-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gust/refs/heads/main/security/gust-domain-security.yml
+  href: https://artifacts.apis.io/gust/security/gust-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gust-domain-security.yml
@@ -144,7 +160,7 @@ plans:
 - name: Gust Plans Pricing
   plan_count: 3
   slug: gust-plans-pricing
-random_paper: 11
+random_paper: 19
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -160,21 +176,23 @@ rules:
   slug: gust-rules
 score:
   band: thin
-  composite: 36.4
+  composite: 27.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 16
     catalog_earned: 46.5
     catalog_earned_first_party: 12.0
     catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.8
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 18.2
     contract_quality: 18.6
-    developer_ergonomics: 33.3
+    developer_ergonomics: 16.7
     discoverability: 53.6
-    operational_transparency: 13.2
+    operational_transparency: 10.5
+  previous_composite: 36.4
   provenance:
     conformance: derived
     contracts:
@@ -188,13 +206,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/gust/gust-2026-11-03T133124.png
 security:
 - kind: domain-security
   name: Gust Domain Security

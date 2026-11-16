@@ -1,9 +1,12 @@
 ---
 access_model:
   confidence: high
-  label: Free · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: free
+  pricing: freemium
   public: false
   source:
   - plans
@@ -29,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: platform
-    openapi_examples: partial
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.2
-  scored_at: '2026-10-17'
+  score: 36.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 4
@@ -49,53 +55,28 @@ api_count: 1
 apis:
 - baseURL: https://app.kardinal.ai/api/v2
   baseurl_source: declared
-  description: How to authenticate, and manage the access and refresh tokens.
-  name: Kardinal Authenticate API
-  slug: kardinal-authenticate-api
-- baseURL: https://app.kardinal.ai/api/v2
-  baseurl_source: declared
-  description: The Core API from Kardinal — 4 operation(s) for core.
-  name: Kardinal Core API
-  slug: kardinal-core-api
-- baseURL: https://app.kardinal.ai/api/v2
-  baseurl_source: declared
-  description: The Management API from Kardinal — 5 operation(s) for management.
-  name: Kardinal Management API
-  slug: kardinal-management-api
-- baseURL: https://app.kardinal.ai/api/v2
-  baseurl_source: declared
-  description: How to create, retrieve, update and delete orders in a plan.
-  name: Kardinal Order API
-  slug: kardinal-order-api
-- baseURL: https://app.kardinal.ai/api/v2
-  baseurl_source: declared
   description: How to create, retrieve, update and delete plans.
   name: Kardinal Plan API
   slug: kardinal-plan-api
 - baseURL: https://app.kardinal.ai/api/v2
   baseurl_source: declared
-  description: How to create, retrieve, update and delete resources in a plan.
-  name: Kardinal Resource API
-  slug: kardinal-resource-api
-- baseURL: https://app.kardinal.ai/api/v2
-  baseurl_source: declared
-  description: How to create a plan through the use of a simple plan.
-  name: Kardinal Simple Plan API
-  slug: kardinal-simpleplan-api
-- baseURL: https://app.kardinal.ai/api/v2
-  baseurl_source: declared
   description: The Solution API from Kardinal — 2 operation(s) for solution.
   name: Kardinal Solution API
   slug: kardinal-solution-api
-artifact_total: 14
+- baseURL: https://app.kardinal.ai/api/v2
+  baseurl_source: declared
+  description: How to register, retrieve, update, and delete plan webhooks, and inspect their delivery results.
+  name: Kardinal Webhook API
+  slug: kardinal-webhook-api
+artifact_total: 15
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/rate-limits/kardinal-rate-limits.yml
+  href: https://artifacts.apis.io/kardinal/rate-limits/kardinal-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kardinal-rate-limits.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/capabilities/kardinal-capability-edges.yml
+  href: https://artifacts.apis.io/kardinal/capabilities/kardinal-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/kardinal-capability-edges.yml
@@ -156,87 +137,87 @@ common:
   type: FAQ
   url: https://kardinal.ai/fr/faq-route-optimization/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/mcp/kardinal-mcp.yml
+  href: https://artifacts.apis.io/kardinal/mcp/kardinal-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/kardinal-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/mcp/kardinal-tool-crosswalk.yml
+  href: https://artifacts.apis.io/kardinal/mcp/kardinal-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/kardinal-tool-crosswalk.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/a2a/kardinal-a2a.yml
+  href: https://artifacts.apis.io/kardinal/a2a/kardinal-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/kardinal-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kardinal/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/llms/kardinal-llms.txt
+  href: https://artifacts.apis.io/kardinal/llms/kardinal-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kardinal-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/authentication/kardinal-authentication.yml
+  href: https://artifacts.apis.io/kardinal/authentication/kardinal-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kardinal-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/conventions/kardinal-conventions.yml
+  href: https://artifacts.apis.io/kardinal/conventions/kardinal-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kardinal-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/conventions/kardinal-conventions.yml
+  href: https://artifacts.apis.io/kardinal/conventions/kardinal-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/kardinal-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/errors/kardinal-error-codes.yml
+  href: https://artifacts.apis.io/kardinal/errors/kardinal-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/kardinal-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/lifecycle/kardinal-lifecycle.yml
+  href: https://artifacts.apis.io/kardinal/lifecycle/kardinal-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kardinal-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/conformance/kardinal-conformance.yml
+  href: https://artifacts.apis.io/kardinal/conformance/kardinal-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kardinal-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/data-model/kardinal-data-model.yml
+  href: https://artifacts.apis.io/kardinal/data-model/kardinal-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kardinal-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/sandbox/kardinal-sandbox.yml
+  href: https://artifacts.apis.io/kardinal/sandbox/kardinal-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/kardinal-sandbox.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/plans/kardinal-plans-pricing.yml
+  href: https://artifacts.apis.io/kardinal/plans/kardinal-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kardinal-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/overlays/kardinal-aro-overlay.yaml
+  href: https://artifacts.apis.io/kardinal/overlays/kardinal-aro-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kardinal-aro-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/agentic-access/kardinal-agentic-access.yml
+  href: https://artifacts.apis.io/kardinal/agentic-access/kardinal-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kardinal-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/security/kardinal-domain-security.yml
+  href: https://artifacts.apis.io/kardinal/security/kardinal-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kardinal-domain-security.yml
@@ -246,6 +227,14 @@ common:
   url: mailto:contact@kardinal.ai
 created: '2026-08-17'
 description: Kardinal is a Paris-based logistics optimization company whose Always-on Route Optimization (ARO) API solves vehicle routing problems for last-mile delivery, post and parcel, waste and bulk transport, fresh delivery, field services and retail operators. Integrators submit a plan — resources (vehicles), orders (stops) and constraints such as capacities, time windows, driver skills and breaks — with a single idempotent PUT, and the engine optimizes it continuously rather than in a nightly batch, so new orders, cancellations, traffic and field updates are absorbed into the running solution instead of forcing a rerun. The REST API is documented with a published OpenAPI 3.0.3 definition covering 40 operations across authentication, plans, resources, orders and solutions, and is reachable per customer environment at https://<env>.kardinal.ai/api/v2 using short-lived JWT bearer tokens.
+finops:
+- has_sources: true
+  method: derived
+  name: Kardinal Finops
+  primary_unit: addresses
+  service_category: ''
+  slug: kardinal-finops
+  template: false
 image: https://kardinal.ai/wp-content/uploads/2020/01/cropped-Icon-blue-270x270.png
 layout: provider
 mcp_servers:
@@ -256,7 +245,10 @@ modified: '2026-08-17'
 name: Kardinal
 nav: Providers
 network: true
-overview: 'Kardinal publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authenticate API, Core API, Management API, and 5 more. Tagged areas include Company, Software-as-a-Service, Route Optimization, Vehicle Routing, and Last Mile Delivery.
+overview: 'Kardinal publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Plan API, Solution API, and Webhook API. Tagged areas include Company, Software-as-a-Service, Route Optimization, Vehicle Routing, and Last Mile Delivery.
+
+
+  The Kardinal catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Kardinal''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, FAQ, and 27 more developer resources.'
@@ -264,26 +256,39 @@ plans:
 - name: Kardinal Plans Pricing
   plan_count: 2
   slug: kardinal-plans-pricing
-random_paper: 2
+random_paper: 22
 rate_limits:
 - limit_count: 0
   name: Kardinal Rate Limits
   slug: kardinal-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Kardinal API Rules
+  rule_count: 55
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 4
+  slug: kardinal-rules
 score:
   band: developing
-  composite: 47.5
+  composite: 50.8
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 45.0
+    artifact_dirs: 30
+    catalog_earned: 52.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.3
   facets:
-    access_clarity: 52.6
-    contract_governance: 4.5
-    contract_quality: 45.4
+    access_clarity: 60.5
+    contract_governance: 18.2
+    contract_quality: 54.8
     developer_ergonomics: 71.4
     discoverability: 75.0
     operational_transparency: 2.6
@@ -295,15 +300,15 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 47.4
+  previous_composite: 50.5
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 0.0
+      callable: 25.0
       derived: 0
-      marker_coverage: 0.0
-      total: 8
+      marker_coverage: 25.0
+      total: 12
     mcp: first-party
     skills: first-party
   regulatory:
@@ -312,13 +317,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/kardinal/refs/heads/main/screenshots/kardinal-2026-09-02T150130.png
+    score: 0.0
+screenshot: https://apis.io/screenshots/kardinal/kardinal-2026-09-02T150130.png
 security:
 - kind: authentication
   name: Kardinal Authentication
@@ -328,6 +333,16 @@ security:
   name: Kardinal Domain Security
   slug: kardinal-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Authenticate against the Kardinal ARO API and keep the token alive
+  slug: kardinal-authenticate-and-refresh
+- name: Create a Kardinal plan and retrieve its optimized solution
+  slug: kardinal-create-plan-and-get-solution
+- name: Re-optimize a running Kardinal plan after a field disruption
+  slug: kardinal-realtime-reoptimization
+- name: Kardinal
+  slug: kardinal-route-optimization
 slug: kardinal
 tags:
 - Company

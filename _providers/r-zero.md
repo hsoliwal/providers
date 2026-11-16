@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: CoWorkr's standard REST API for pulling workplace analytical data - historical and current occupancy, utilization and device records for WorkPoints, WorkSpace Counters, WorkHubs, WorkPlaces, FloorPlan
@@ -45,12 +48,12 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/r-zero/refs/heads/main/security/r-zero-trust-center.yml
+  href: https://artifacts.apis.io/r-zero/security/r-zero-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/r-zero-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/r-zero/refs/heads/main/security/r-zero-domain-security.yml
+  href: https://artifacts.apis.io/r-zero/security/r-zero-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/r-zero-domain-security.yml
@@ -115,37 +118,37 @@ common:
   type: Careers
   url: https://rzero.com/careers/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/r-zero/refs/heads/main/lifecycle/r-zero-lifecycle.yml
+  href: https://artifacts.apis.io/r-zero/lifecycle/r-zero-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/r-zero-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/r-zero/refs/heads/main/conformance/r-zero-conformance.yml
+  href: https://artifacts.apis.io/r-zero/conformance/r-zero-conformance.yml
   title: ''
   type: Conformance
   url: conformance/r-zero-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/r-zero/refs/heads/main/conventions/r-zero-conventions.yml
+  href: https://artifacts.apis.io/r-zero/conventions/r-zero-conventions.yml
   title: ''
   type: Conventions
   url: conventions/r-zero-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/r-zero/refs/heads/main/data-model/r-zero-data-model.yml
+  href: https://artifacts.apis.io/r-zero/data-model/r-zero-data-model.yml
   title: ''
   type: DataModel
   url: data-model/r-zero-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/r-zero/refs/heads/main/vocabulary/r-zero-vocabulary.yml
+  href: https://artifacts.apis.io/r-zero/vocabulary/r-zero-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/r-zero-vocabulary.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/r-zero/refs/heads/main/packages/r-zero-packages.yml
+  href: https://artifacts.apis.io/r-zero/packages/r-zero-packages.yml
   title: ''
   type: Packages
   url: packages/r-zero-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/r-zero/refs/heads/main/llms/r-zero-llms.txt
+  href: https://artifacts.apis.io/r-zero/llms/r-zero-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/r-zero-llms.txt
@@ -162,18 +165,18 @@ overview: 'R-Zero is listed with 2 APIs on the [APIs.io](https://apis.io/) netwo
 
 
   R-Zero''s developer surface includes documentation, API reference, support, engineering blog, and 20 more developer resources.'
-random_paper: 13
+random_paper: 7
 score:
   band: thin
   composite: 26.8
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 42.0
     catalog_earned_first_party: 5.0
     catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 43.4
     contract_governance: 33.3
@@ -181,7 +184,7 @@ score:
     developer_ergonomics: 23.8
     discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 26.7
+  previous_composite: 26.8
   provenance:
     conformance: first-party
   regulatory:
@@ -190,14 +193,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 19.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/r-zero/refs/heads/main/screenshots/r-zero-2026-09-02T152732.png
+screenshot: https://apis.io/screenshots/r-zero/r-zero-2026-09-02T152732.png
 security:
 - kind: domain-security
   name: R Zero Domain Security

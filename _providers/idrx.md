@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.9
-  scored_at: '2026-10-17'
+  score: 28.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -59,15 +62,12 @@ apis:
   description: The IDRX API API from IDRX — 0 operation(s) for idrx api.
   name: IDRX API
   slug: idrx-idrx-api-api
-artifact_total: 10
+artifact_total: 13
 asyncapis:
 - description: ''
   name: Idrx Callback Webhooks
   slug: idrx-callback-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: IDRX Onboarding API
   slug: open-idrx-onboarding-api
@@ -80,7 +80,7 @@ common:
   type: Website
   url: https://idrx.co/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/overlays/idrx-openapi-overlay.yaml
+  href: https://artifacts.apis.io/idrx/overlays/idrx-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/idrx-openapi-overlay.yaml
@@ -121,62 +121,62 @@ common:
   type: Whitepaper
   url: https://docs.idrx.co/introduction/idrx-whitepaper
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/authentication/idrx-authentication.yml
+  href: https://artifacts.apis.io/idrx/authentication/idrx-authentication.yml
   title: ''
   type: Authentication
   url: authentication/idrx-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/conventions/idrx-conventions.yml
+  href: https://artifacts.apis.io/idrx/conventions/idrx-conventions.yml
   title: ''
   type: Conventions
   url: conventions/idrx-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/errors/idrx-problem-types.yml
+  href: https://artifacts.apis.io/idrx/errors/idrx-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/idrx-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/data-model/idrx-data-model.yml
+  href: https://artifacts.apis.io/idrx/data-model/idrx-data-model.yml
   title: ''
   type: DataModel
   url: data-model/idrx-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/conformance/idrx-conformance.yml
+  href: https://artifacts.apis.io/idrx/conformance/idrx-conformance.yml
   title: ''
   type: Conformance
   url: conformance/idrx-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/lifecycle/idrx-lifecycle.yml
+  href: https://artifacts.apis.io/idrx/lifecycle/idrx-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/idrx-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/asyncapi/idrx-callback-webhooks.yml
+  href: https://artifacts.apis.io/idrx/asyncapi/idrx-callback-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/idrx-callback-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/mcp/idrx-mcp.yml
+  href: https://artifacts.apis.io/idrx/mcp/idrx-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/idrx-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/idrx/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/agentic-access/idrx-agentic-access.yml
+  href: https://artifacts.apis.io/idrx/agentic-access/idrx-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/idrx-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/security/idrx-domain-security.yml
+  href: https://artifacts.apis.io/idrx/security/idrx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/idrx-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/llms/idrx-llms.txt
+  href: https://artifacts.apis.io/idrx/llms/idrx-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/idrx-llms.txt
@@ -191,26 +191,39 @@ network: true
 overview: 'IDRX publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Onboarding API, Transaction API, and 1 more. Tagged areas include Stablecoins, Cryptocurrency, Payments, Blockchain, and Fintech.
 
 
-  The IDRX catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The IDRX catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   IDRX''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, support, authentication, and 16 more developer resources.'
-random_paper: 21
+random_paper: 7
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: IDRX API Rules
+  rule_count: 60
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 6
+  slug: idrx-rules
 score:
   band: thin
-  composite: 34.7
+  composite: 39.2
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 37.0
+    artifact_dirs: 20
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.4
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
-    contract_quality: 53.6
+    contract_governance: 18.2
+    contract_quality: 65.2
     developer_ergonomics: 56.5
     discoverability: 73.2
     operational_transparency: 10.5
@@ -221,7 +234,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 34.6
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -238,13 +251,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/idrx/refs/heads/main/screenshots/idrx-2026-07-25T222044.png
+screenshot: https://apis.io/screenshots/idrx/idrx-2026-07-25T222044.png
 security:
 - kind: authentication
   name: Idrx Authentication
@@ -254,6 +267,14 @@ security:
   name: Idrx Domain Security
   slug: idrx-domain-security
   summary_line: TLSv1.3
+skill_count: 3
+skills:
+- name: Mint IDRX with hosted checkout
+  slug: idrx-mint
+- name: Onboard a user and register a bank account
+  slug: idrx-onboard
+- name: Redeem IDRX to a bank account
+  slug: idrx-redeem
 slug: idrx
 tags:
 - Stablecoins

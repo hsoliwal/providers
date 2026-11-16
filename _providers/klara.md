@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,17 +38,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/klara/refs/heads/main/security/klara-domain-security.yml
+  href: https://artifacts.apis.io/klara/security/klara-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/klara-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/klara/refs/heads/main/conformance/klara-conformance.yml
+  href: https://artifacts.apis.io/klara/conformance/klara-conformance.yml
   title: ''
   type: Conformance
   url: conformance/klara-conformance.yml
@@ -54,42 +57,42 @@ common:
   type: Compliance
   url: https://www.modmed.com/what-we-do/patient-communication/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/klara/refs/heads/main/llms/klara-llms.txt
+  href: https://artifacts.apis.io/klara/llms/klara-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/klara-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/klara/refs/heads/main/well-known/klara-well-known.yml
+  href: https://artifacts.apis.io/klara/well-known/klara-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/klara-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/klara/refs/heads/main/packages/klara-packages.yml
+  href: https://artifacts.apis.io/klara/packages/klara-packages.yml
   title: ''
   type: Packages
   url: packages/klara-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/klara/refs/heads/main/lifecycle/klara-lifecycle.yml
+  href: https://artifacts.apis.io/klara/lifecycle/klara-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/klara-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/klara/refs/heads/main/components/klara-components.yml
+  href: https://artifacts.apis.io/klara/components/klara-components.yml
   title: ''
   type: Components
   url: components/klara-components.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/klara/refs/heads/main/plans/klara-plans-pricing.yml
+  href: https://artifacts.apis.io/klara/plans/klara-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/klara-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/klara/refs/heads/main/rate-limits/klara-rate-limits.yml
+  href: https://artifacts.apis.io/klara/rate-limits/klara-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/klara-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/klara/refs/heads/main/security/klara-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/klara/security/klara-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/klara-vulnerability-disclosure.yml
@@ -165,7 +168,7 @@ plans:
 - name: Klara Plans Pricing
   plan_count: 0
   slug: klara-plans-pricing
-random_paper: 17
+random_paper: 19
 rate_limits:
 - limit_count: 0
   name: Klara Rate Limits
@@ -208,14 +211,14 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/klara/refs/heads/main/screenshots/klara-2026-07-25T223943.png
+screenshot: https://apis.io/screenshots/klara/klara-2026-07-25T223943.png
 security:
 - kind: domain-security
   name: Klara Domain Security

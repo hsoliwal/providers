@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,16 +37,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Jelly's GraphQL API for costing and kitchen management. Single POST endpoint at api.getjelly.co.uk with bearer-token auth and public introspection; exposes kitchens, ingredients, recipes, dishes, menu
   name: Jelly GraphQL API
   slug: jelly-graphql-api
-artifact_total: 4
+artifact_total: 7
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/security/jelly-domain-security.yml
+  href: https://artifacts.apis.io/jelly/security/jelly-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jelly-domain-security.yml
@@ -84,62 +87,62 @@ common:
   type: Security
   url: https://www.getjelly.co.uk/security
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/graphql/jelly-api.graphql
+  href: https://artifacts.apis.io/jelly/graphql/jelly-api.graphql
   title: ''
   type: GraphQL
   url: graphql/jelly-api.graphql
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/authentication/jelly-authentication.yml
+  href: https://artifacts.apis.io/jelly/authentication/jelly-authentication.yml
   title: ''
   type: Authentication
   url: authentication/jelly-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/conventions/jelly-conventions.yml
+  href: https://artifacts.apis.io/jelly/conventions/jelly-conventions.yml
   title: ''
   type: Conventions
   url: conventions/jelly-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/errors/jelly-error-codes.yml
+  href: https://artifacts.apis.io/jelly/errors/jelly-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/jelly-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/data-model/jelly-data-model.yml
+  href: https://artifacts.apis.io/jelly/data-model/jelly-data-model.yml
   title: ''
   type: DataModel
   url: data-model/jelly-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/packages/jelly-packages.yml
+  href: https://artifacts.apis.io/jelly/packages/jelly-packages.yml
   title: ''
   type: Packages
   url: packages/jelly-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/components/jelly-components.yml
+  href: https://artifacts.apis.io/jelly/components/jelly-components.yml
   title: ''
   type: Components
   url: components/jelly-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/mcp/jelly-mcp.yml
+  href: https://artifacts.apis.io/jelly/mcp/jelly-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/jelly-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/jelly/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/conformance/jelly-conformance.yml
+  href: https://artifacts.apis.io/jelly/conformance/jelly-conformance.yml
   title: ''
   type: Conformance
   url: conformance/jelly-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/security/jelly-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/jelly/security/jelly-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/jelly-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/llms/jelly-llms.txt
+  href: https://artifacts.apis.io/jelly/llms/jelly-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/jelly-llms.txt
@@ -185,14 +188,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/jelly/refs/heads/main/screenshots/jelly-2026-07-25T223126.png
+screenshot: https://apis.io/screenshots/jelly/jelly-2026-07-25T223126.png
 security:
 - kind: authentication
   name: Jelly Authentication
@@ -206,6 +209,14 @@ security:
   name: Jelly Vulnerability Disclosure
   slug: jelly-vulnerability-disclosure
   summary_line: Hackerone · contact published
+skill_count: 3
+skills:
+- name: Build a menu in Jelly
+  slug: jelly-build-a-menu
+- name: Cost a recipe in Jelly
+  slug: jelly-cost-a-recipe
+- name: Process a supplier invoice in Jelly
+  slug: jelly-process-supplier-invoice
 slug: jelly
 tags:
 - Company

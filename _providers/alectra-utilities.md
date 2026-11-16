@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -26,16 +29,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.6
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 27.4
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://sandbox.greenbuttonalliance.org:8443/DataCustodian
   baseurl_source: spec
@@ -57,49 +63,49 @@ apis:
   description: Usage Point endpoints
   name: Alectra Utilities Usage Point API
   slug: alectra-utilities-usagepoint-api
-artifact_total: 8
+artifact_total: 12
 collections:
 - collection_type: open
   name: Green Button API Documentation
   slug: open-alectra-utilities-green-button-espi
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alectra-utilities/refs/heads/main/overlays/alectra-utilities-green-button-espi-overlay.yaml
+  href: https://artifacts.apis.io/alectra-utilities/overlays/alectra-utilities-green-button-espi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/alectra-utilities-green-button-espi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alectra-utilities/refs/heads/main/mcp/alectra-utilities-mcp.yml
+  href: https://artifacts.apis.io/alectra-utilities/mcp/alectra-utilities-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/alectra-utilities-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alectra-utilities/refs/heads/main/security/alectra-utilities-domain-security.yml
+  href: https://artifacts.apis.io/alectra-utilities/security/alectra-utilities-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/alectra-utilities-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alectra-utilities/refs/heads/main/conformance/alectra-utilities-conformance.yml
+  href: https://artifacts.apis.io/alectra-utilities/conformance/alectra-utilities-conformance.yml
   title: ''
   type: Conformance
   url: conformance/alectra-utilities-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alectra-utilities/refs/heads/main/lifecycle/alectra-utilities-lifecycle.yml
+  href: https://artifacts.apis.io/alectra-utilities/lifecycle/alectra-utilities-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/alectra-utilities-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/alectra-utilities/refs/heads/main/packages/alectra-utilities-packages.yml
+  href: https://artifacts.apis.io/alectra-utilities/packages/alectra-utilities-packages.yml
   title: ''
   type: Packages
   url: packages/alectra-utilities-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alectra-utilities/refs/heads/main/llms/alectra-utilities-llms.txt
+  href: https://artifacts.apis.io/alectra-utilities/llms/alectra-utilities-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/alectra-utilities-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alectra-utilities/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/alectra-utilities/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -164,8 +170,24 @@ network: true
 overview: 'Alectra Utilities publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Application Information API, Authorization API, Batch API, and 1 more. Tagged areas include Energy, Canada, Utilities, Electricity, and Ontario.
 
 
+  The Alectra Utilities catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Alectra Utilities'' developer surface includes documentation, developer portal, support, engineering blog, and 16 more developer resources.'
-random_paper: 5
+random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Alectra Utilities API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: alectra-utilities-rules
 scopes:
 - name: Alectra Utilities Scopes
   scope_count: 0
@@ -173,18 +195,18 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 27.7
+  composite: 29.4
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 32.0
+    artifact_dirs: 23
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 11.1
     developer_ergonomics: 39.9
     discoverability: 64.3
@@ -196,7 +218,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 27.7
+  previous_composite: 29.4
   provenance:
     conformance: derived
     contracts:
@@ -212,14 +234,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 34.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/alectra-utilities/refs/heads/main/screenshots/alectra-utilities-2026-08-07T161155.png
+screenshot: https://apis.io/screenshots/alectra-utilities/alectra-utilities-2026-08-07T161155.png
 security:
 - kind: authentication
   name: Alectra Utilities Authentication
@@ -229,6 +251,14 @@ security:
   name: Alectra Utilities Domain Security
   slug: alectra-utilities-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Pull a Green Button bulk transfer from Alectra's data custodian
+  slug: alectra-utilities-bulk-transfer
+- name: Read an authorised Alectra customer's Green Button usage data
+  slug: alectra-utilities-read-customer-usage
+- name: Verify your third-party registration with Alectra's Green Button data custodian
+  slug: alectra-utilities-verify-registration
 slug: alectra-utilities
 tags:
 - Energy

@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: verified
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 57.0
-  scored_at: '2026-10-17'
+  score: 55.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 76
   human_in_the_loop: 6
@@ -282,68 +296,82 @@ asyncapis:
   name: WhiteBit Market Trades
   slug: whitebit-public-trades-asyncapi
 common:
+- group: build
+  href: https://artifacts.apis.io/whitebit/integrations/whitebit-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/whitebit-integration-edges.yml
+- group: operate
+  title: ''
+  type: ChangeLog
+  url: https://docs.whitebit.com/changelog
+- group: other
+  href: https://artifacts.apis.io/whitebit/capabilities/whitebit-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/whitebit-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/agentic-access/whitebit-agentic-access.yml
+  href: https://artifacts.apis.io/whitebit/agentic-access/whitebit-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/whitebit-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/rules/whitebit-rules.yml
+  href: https://artifacts.apis.io/whitebit/rules/whitebit-rules.yml
   title: ''
   type: Spectral
   url: rules/whitebit-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/json-ld/whitebit-context.jsonld
+  href: https://artifacts.apis.io/whitebit/json-ld/whitebit-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/whitebit-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/vocabulary/whitebit-vocabulary.yml
+  href: https://artifacts.apis.io/whitebit/vocabulary/whitebit-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/whitebit-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/data-model/whitebit-data-model.yml
+  href: https://artifacts.apis.io/whitebit/data-model/whitebit-data-model.yml
   title: ''
   type: DataModel
   url: data-model/whitebit-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/conventions/whitebit-conventions.yml
+  href: https://artifacts.apis.io/whitebit/conventions/whitebit-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/whitebit-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/conventions/whitebit-conventions.yml
+  href: https://artifacts.apis.io/whitebit/conventions/whitebit-conventions.yml
   title: ''
   type: Conventions
   url: conventions/whitebit-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/errors/whitebit-problem-types.yml
+  href: https://artifacts.apis.io/whitebit/errors/whitebit-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/whitebit-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/conformance/whitebit-conformance.yml
+  href: https://artifacts.apis.io/whitebit/conformance/whitebit-conformance.yml
   title: ''
   type: Conformance
   url: conformance/whitebit-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/llms/whitebit-llms.txt
+  href: https://artifacts.apis.io/whitebit/llms/whitebit-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/whitebit-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/well-known/whitebit-well-known.yml
+  href: https://artifacts.apis.io/whitebit/well-known/whitebit-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/whitebit-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/hosts/whitebit-hosts.yml
+  href: https://artifacts.apis.io/whitebit/hosts/whitebit-hosts.yml
   title: ''
   type: Hosts
   url: hosts/whitebit-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/vendors/whitebit-vendors.yml
+  href: https://artifacts.apis.io/whitebit/vendors/whitebit-vendors.yml
   title: ''
   type: Vendors
   url: vendors/whitebit-vendors.yml
@@ -372,12 +400,12 @@ common:
   type: SignUp
   url: https://whitebit.com/auth/register
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/authentication/whitebit-authentication.yml
+  href: https://artifacts.apis.io/whitebit/authentication/whitebit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/whitebit-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/security/whitebit-domain-security.yml
+  href: https://artifacts.apis.io/whitebit/security/whitebit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/whitebit-domain-security.yml
@@ -418,7 +446,7 @@ common:
   type: SourceCode
   url: https://github.com/whitebit-exchange/docs
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/mcp/whitebit-mcp.yml
+  href: https://artifacts.apis.io/whitebit/mcp/whitebit-mcp.yml
   title: ''
   type: MCP
   url: mcp/whitebit-mcp.yml
@@ -427,17 +455,17 @@ common:
   type: MCPServer
   url: https://docs.whitebit.com/mcp
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/packages/whitebit-packages.yml
+  href: https://artifacts.apis.io/whitebit/packages/whitebit-packages.yml
   title: ''
   type: Packages
   url: packages/whitebit-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/packages/whitebit-packages.yml
+  href: https://artifacts.apis.io/whitebit/packages/whitebit-packages.yml
   title: ''
   type: SDKs
   url: packages/whitebit-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/whitebit/refs/heads/main/cli/whitebit-cli.yml
+  href: https://artifacts.apis.io/whitebit/cli/whitebit-cli.yml
   title: ''
   type: CLI
   url: cli/whitebit-cli.yml
@@ -525,38 +553,40 @@ overview: 'WhiteBIT publishes 25 API contracts indexed on the [APIs.io](https://
   The WhiteBIT catalog on APIs.io includes 41 event-driven AsyncAPI specifications, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  WhiteBIT''s developer surface includes engineering blog, signup flow, authentication, documentation, API reference, getting-started guide, support, and 28 more developer resources.'
-random_paper: 6
+  WhiteBIT''s developer surface includes changelog, engineering blog, signup flow, authentication, documentation, API reference, getting-started guide, and 31 more developer resources.'
+random_paper: 0
 rules:
 - authorship: generated
-  effective_rule_count: 55
+  effective_rule_count: 113
   extends:
   - spectral:oas
   name: WhiteBIT API Rules
-  rule_count: 14
+  rule_count: 72
   severity_counts:
-    error: 7
+    error: 55
     hint: 0
-    info: 3
-    warn: 4
+    info: 4
+    warn: 13
   slug: whitebit-rules
 score:
   band: developing
-  composite: 51.5
+  composite: 44.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 26
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.0
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 22.0
     contract_quality: 68.5
-    developer_ergonomics: 61.9
-    discoverability: 73.3
-    operational_transparency: 21.1
+    developer_ergonomics: 44.0
+    discoverability: 72.5
+    operational_transparency: 26.3
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -571,12 +601,14 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 23.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
+screenshot: https://apis.io/screenshots/whitebit/whitebit-2026-11-03T150153.png
 security:
 - kind: authentication
   name: Whitebit Authentication

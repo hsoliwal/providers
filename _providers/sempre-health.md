@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
@@ -43,7 +46,7 @@ common:
   type: BlogRSS
   url: https://www.semprehealth.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sempre-health/refs/heads/main/security/sempre-health-domain-security.yml
+  href: https://artifacts.apis.io/sempre-health/security/sempre-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sempre-health-domain-security.yml
@@ -76,37 +79,37 @@ common:
   type: SecondaryMarket
   url: https://www.hiive.com/securities/sempre-health-stock
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sempre-health/refs/heads/main/llms/sempre-health-llms.txt
+  href: https://artifacts.apis.io/sempre-health/llms/sempre-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sempre-health-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sempre-health/refs/heads/main/packages/sempre-health-packages.yml
+  href: https://artifacts.apis.io/sempre-health/packages/sempre-health-packages.yml
   title: ''
   type: Packages
   url: packages/sempre-health-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sempre-health/refs/heads/main/conformance/sempre-health-conformance.yml
+  href: https://artifacts.apis.io/sempre-health/conformance/sempre-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sempre-health-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sempre-health/refs/heads/main/conformance/sempre-health-conformance.yml
+  href: https://artifacts.apis.io/sempre-health/conformance/sempre-health-conformance.yml
   title: ''
   type: Compliance
   url: conformance/sempre-health-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sempre-health/refs/heads/main/security/sempre-health-trust-center.yml
+  href: https://artifacts.apis.io/sempre-health/security/sempre-health-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/sempre-health-trust-center.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sempre-health/refs/heads/main/plans/sempre-health-plans-pricing.yml
+  href: https://artifacts.apis.io/sempre-health/plans/sempre-health-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sempre-health-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sempre-health/refs/heads/main/rate-limits/sempre-health-rate-limits.yml
+  href: https://artifacts.apis.io/sempre-health/rate-limits/sempre-health-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sempre-health-rate-limits.yml
@@ -153,7 +156,7 @@ score:
   band: emerging
   composite: 17.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -182,14 +185,14 @@ score:
     regime: Health
     regime_id: health
     score: 23.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sempre-health/refs/heads/main/screenshots/sempre-health-2026-09-02T154832.png
+screenshot: https://apis.io/screenshots/sempre-health/sempre-health-2026-09-02T154832.png
 security:
 - kind: domain-security
   name: Sempre Health Domain Security

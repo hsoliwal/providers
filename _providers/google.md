@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: medium
-  label: Free · Self-serve signup
-  onboarding: self-serve
-  pricing: free
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
@@ -26,17 +26,20 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: true
-    idempotency: false
+    idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.1
-  scored_at: '2026-10-17'
+  score: 48.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 139
   human_in_the_loop: 10
@@ -46,6 +49,9 @@ agentic_access:
   summary_line: 221 operations · 139 acting · 10 human-in-the-loop
 api_count: 9
 apis:
+- description: Managed remote MCP server from Google Maps Platform (Maps Experience agent tools) exposing search_places, lookup_weather, compute_routes, resolve_names and resolve_maps_urls tools to AI agents; tools/
+  name: Google Maps Grounding Lite MCP Server
+  slug: google-maps-grounding-lite-mcp-server
 - description: API Gateway enables you to provide secure access to your backend services through a well-defined REST API that is consistent across all of your services, regardless of the service implementation. Clie
   name: Google Cloud API Gateway
   slug: google-cloud-api-gateway
@@ -181,350 +187,347 @@ apis:
 - description: The Google Vault API provides programmatic access to Vault functionality, enabling retention management, legal hold management, and data export for compliance and eDiscovery purposes.
   name: Google Vault API
   slug: google-vault-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/drive/v3
   baseurl_source: declared
   description: Operations related to About
   name: Google About API
   slug: google-about-api
-- baseURL: https://api.example.com
+- baseURL: https://driveactivity.googleapis.com
   baseurl_source: declared
   description: Operations related to Activity
   name: Google Activity API
   slug: google-activity-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Address
   name: Google Address API
   slug: google-address-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Addresses
   name: Google Addresses API
   slug: google-addresses-api
-- baseURL: https://api.example.com
+- baseURL: https://sheets.googleapis.com
   baseurl_source: declared
   description: Operations related to Append
   name: Google Append API
   slug: google-append-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/drive/v3
   baseurl_source: declared
   description: The Applications API from Google — 2 operation(s) for applications.
   name: Google Applications API
   slug: google-applications-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Attachments
   name: Google Attachments API
   slug: google-attachments-api
-- baseURL: https://api.example.com
+- baseURL: https://generativelanguage.googleapis.com/v1beta
   baseurl_source: declared
   description: Operations related to Audio Understanding
   name: Google Audio Understanding API
   slug: google-audio-understanding-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Auto
   name: Google Auto API
   slug: google-auto-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Batch
   name: Google Batch API
   slug: google-batch-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/books/v1
   baseurl_source: declared
   description: The Bookshelves API from Google — 3 operation(s) for bookshelves.
   name: Google Bookshelves API
   slug: google-bookshelves-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/calendar/v3
   baseurl_source: declared
   description: The Calendar ACL Rules API from Google — 1 operation(s) for calendar acl rules.
   name: Google Calendar ACL Rules API
   slug: google-calendar-acl-rules-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/calendar/v3
   baseurl_source: declared
   description: The Calendar ACLs API from Google — 2 operation(s) for calendar acls.
   name: Google Calendar ACLs API
   slug: google-calendar-acls-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/calendar/v3
   baseurl_source: declared
   description: Operations related to Calendarscalendaridevents
   name: Google Calendar Events API
   slug: google-calendar-events-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/calendar/v3
   baseurl_source: declared
   description: Operations related to Calendars
   name: Google Calendars API
   slug: google-calendars-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/drive/v3
   baseurl_source: declared
   description: Operations related to Changes
   name: Google Changes API
   slug: google-changes-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/calendar/v3
   baseurl_source: declared
   description: The Channels API from Google — 1 operation(s) for channels.
   name: Google Channels API
   slug: google-channels-api
-- baseURL: https://api.example.com
+- baseURL: https://sheets.googleapis.com
   baseurl_source: declared
   description: Operations related to Clear
   name: Google Clear API
   slug: google-clear-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/calendar/v3
   baseurl_source: declared
   description: Operations related to Default
   name: Google Colors API
   slug: google-colors-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/drive/v3
   baseurl_source: declared
   description: Operations related to Comments
   name: Google Comments API
   slug: google-comments-api
-- baseURL: https://api.example.com
+- baseURL: https://generativelanguage.googleapis.com/v1beta
   baseurl_source: declared
   description: Operations related to Content Generation
   name: Google Content Generation API
   slug: google-content-generation-api
-- baseURL: https://api.example.com
+- baseURL: https://sheets.googleapis.com
   baseurl_source: declared
   description: Operations related to Copy
   name: Google Copy API
   slug: google-copy-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Create
   name: Google Create API
   slug: google-create-api
-- baseURL: https://api.example.com
+- baseURL: https://sheets.googleapis.com
   baseurl_source: declared
   description: Operations related to Data
   name: Google Data API
   slug: google-data-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Delegates
   name: Google Delegates API
   slug: google-delegates-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Deletes
   name: Google Deletes API
   slug: google-deletes-api
-- baseURL: https://api.example.com
+- baseURL: https://sheets.googleapis.com
   baseurl_source: declared
   description: Operations related to Developer
   name: Google Developer API
   slug: google-developer-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Disables
   name: Google Disables API
   slug: google-disables-api
-- baseURL: https://api.example.com
+- baseURL: https://docs.googleapis.com
   baseurl_source: declared
   description: Operations related to Documents
   name: Google Documents API
   slug: google-documents-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Drafts
   name: Google Drafts API
   slug: google-drafts-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/drive/v3
   baseurl_source: declared
   description: Operations related to Drives
   name: Google Drives API
   slug: google-drives-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Enables
   name: Google Enables API
   slug: google-enables-api
-- baseURL: https://api.example.com
+- baseURL: https://generativelanguage.googleapis.com/v1beta
   baseurl_source: declared
   description: Operations related to File Api
   name: Google File Api
   slug: google-file-api-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/drive/v3
   baseurl_source: declared
   description: Operations related to Files
   name: Google Files API
   slug: google-files-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/calendar/v3
   baseurl_source: declared
   description: The Free Busy API from Google — 1 operation(s) for free busy.
   name: Google Free Busy API
   slug: google-free-busy-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Get
   name: Google Get API
   slug: google-get-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to History
   name: Google History API
   slug: google-history-api
-- baseURL: https://api.example.com
+- baseURL: https://generativelanguage.googleapis.com/v1beta
   baseurl_source: declared
   description: Operations related to Image Generation
   name: Google Image Generation API
   slug: google-image-generation-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Import
   name: Google Import API
   slug: google-import-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Info
   name: Google Info API
   slug: google-info-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Insert
   name: Google Insert API
   slug: google-insert-api
-- baseURL: https://api.example.com
+- baseURL: https://drivelabels.googleapis.com
   baseurl_source: declared
   description: Operations related to Labels
   name: Google Labels API
   slug: google-labels-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Language
   name: Google Language API
   slug: google-language-api
-- baseURL: https://api.example.com
+- baseURL: https://drivelabels.googleapis.com
   baseurl_source: declared
   description: Operations related to Limits
   name: Google Limits API
   slug: google-limits-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Lists
   name: Google Lists API
   slug: google-lists-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Messages
   name: Google Messages API
   slug: google-messages-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Modify
   name: Google Modify API
   slug: google-modify-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/books/v1
   baseurl_source: declared
   description: The My Library API from Google — 7 operation(s) for my library.
   name: Google My Library API
   slug: google-my-library-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Notifications
   name: Google Notifications API
   slug: google-notifications-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Obliterate
   name: Google Obliterate API
   slug: google-obliterate-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Patch
   name: Google Patch API
   slug: google-patch-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/drive/v3
   baseurl_source: declared
   description: Operations related to Permissions
   name: Google Permissions API
   slug: google-permissions-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Pop
   name: Google Pop API
   slug: google-pop-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/drive/v3
   baseurl_source: declared
   description: Operations related to Replies
   name: Google Replies API
   slug: google-replies-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/drive/v3
   baseurl_source: declared
   description: Operations related to Revisions
   name: Google Revisions API
   slug: google-revisions-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Send
   name: Google Send API
   slug: google-send-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Sets
   name: Google Sets API
   slug: google-sets-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Settings
   name: Google Settings API
   slug: google-settings-api
-- baseURL: https://api.example.com
+- baseURL: https://generativelanguage.googleapis.com/v1beta
   baseurl_source: declared
   description: Operations related to Speech Generation
   name: Google Speech Generation API
   slug: google-speech-generation-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/drive/v3
   baseurl_source: declared
   description: Operations related to Teamdrives
   name: Google Team Drives API
   slug: google-team-drives-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Threads
   name: Google Threads API
   slug: google-threads-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Trash
   name: Google Trash API
   slug: google-trash-api
-- baseURL: https://api.example.com
+- baseURL: https://gmail.googleapis.com
   baseurl_source: declared
   description: Operations related to Update
   name: Google Update API
   slug: google-update-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/calendar/v3
   baseurl_source: declared
   description: Operations related to Usersmecalendarlist
   name: Google User Calendars API
   slug: google-user-calendars-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/calendar/v3
   baseurl_source: declared
   description: Operations related to Usersmesettings
   name: Google User Settings API
   slug: google-user-settings-api
-- baseURL: https://api.example.com
+- baseURL: https://drivelabels.googleapis.com
   baseurl_source: declared
   description: Operations related to Users
   name: Google Users API
   slug: google-users-api
-- baseURL: https://api.example.com
+- baseURL: https://www.googleapis.com/books/v1
   baseurl_source: declared
   description: The Volumes API from Google — 2 operation(s) for volumes.
   name: Google Volumes API
   slug: google-volumes-api
-artifact_total: 378
+artifact_total: 441
 asyncapis:
 - description: ''
   name: Google Webhooks
   slug: google-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Google Books API
   slug: open-books-api
@@ -793,83 +796,117 @@ collections:
   name: Google Books About Watch API
   slug: open-google-watch-api
 common:
+- group: build
+  href: https://artifacts.apis.io/google/cli/google-cli.yml
+  title: ''
+  type: CLI
+  url: cli/google-cli.yml
+- group: design
+  href: https://artifacts.apis.io/google/conventions/google-conventions.yml
+  title: ''
+  type: Idempotency
+  url: conventions/google-conventions.yml
+- group: design
+  href: https://artifacts.apis.io/google/conventions/google-conventions.yml
+  title: ''
+  type: Conventions
+  url: conventions/google-conventions.yml
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://cloud.google.com/terms/deprecation
+- group: design
+  href: https://artifacts.apis.io/google/lifecycle/google-lifecycle.yml
+  title: ''
+  type: Lifecycle
+  url: lifecycle/google-lifecycle.yml
+- group: agent
+  href: https://artifacts.apis.io/google/llms/google-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/google-llms.txt
+- group: agent
+  href: https://artifacts.apis.io/google/mcp/google-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/google-mcp.yml
+- group: build
+  href: https://artifacts.apis.io/google/integrations/google-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/google-integration-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/finops/google-finops.yml
+  href: https://artifacts.apis.io/google/finops/google-finops.yml
   title: ''
   type: FinOps
   url: finops/google-finops.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/rate-limits/google-rate-limits.yml
+  href: https://artifacts.apis.io/google/rate-limits/google-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/google-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/rules/google-rules.yml
+  href: https://artifacts.apis.io/google/rules/google-rules.yml
   title: ''
   type: Spectral
   url: rules/google-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/json-ld/google-context.jsonld
+  href: https://artifacts.apis.io/google/json-ld/google-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/google-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/vocabulary/google-vocabulary.yml
+  href: https://artifacts.apis.io/google/vocabulary/google-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/google-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/google/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/asyncapi/google-webhooks.yml
+  href: https://artifacts.apis.io/google/asyncapi/google-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/google-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/data-model/google-data-model.yml
+  href: https://artifacts.apis.io/google/data-model/google-data-model.yml
   title: ''
   type: DataModel
   url: data-model/google-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/changelog/google-changelog.yml
+  href: https://artifacts.apis.io/google/changelog/google-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/google-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/errors/google-problem-types.yml
+  href: https://artifacts.apis.io/google/errors/google-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/google-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/conformance/google-conformance.yml
+  href: https://artifacts.apis.io/google/conformance/google-conformance.yml
   title: ''
   type: Conformance
   url: conformance/google-conformance.yml
-- group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/well-known/google-www-security.txt
-  title: ''
-  type: SecurityTxt
-  url: well-known/google-www-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/well-known/google-well-known.yml
+  href: https://artifacts.apis.io/google/well-known/google-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/google-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/hosts/google-hosts.yml
+  href: https://artifacts.apis.io/google/hosts/google-hosts.yml
   title: ''
   type: Hosts
   url: hosts/google-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/packages/google-packages.yml
+  href: https://artifacts.apis.io/google/packages/google-packages.yml
   title: ''
   type: SDKs
   url: packages/google-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/packages/google-packages.yml
+  href: https://artifacts.apis.io/google/packages/google-packages.yml
   title: ''
   type: Packages
   url: packages/google-packages.yml
@@ -890,7 +927,7 @@ common:
   type: Pricing
   url: https://cloud.google.com/pubsub/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/plans/google-plans-pricing.yml
+  href: https://artifacts.apis.io/google/plans/google-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/google-plans-pricing.yml
@@ -899,32 +936,32 @@ common:
   type: Website
   url: https://www.google.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/capabilities/google-capability-edges.yml
+  href: https://artifacts.apis.io/google/capabilities/google-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/google-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/agentic-access/google-agentic-access.yml
+  href: https://artifacts.apis.io/google/agentic-access/google-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/google-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/security/google-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/google/security/google-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/google-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/security/google-domain-security.yml
+  href: https://artifacts.apis.io/google/security/google-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/google-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/authentication/google-authentication.yml
+  href: https://artifacts.apis.io/google/authentication/google-authentication.yml
   title: ''
   type: Authentication
   url: authentication/google-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/scopes/google-scopes.yml
+  href: https://artifacts.apis.io/google/scopes/google-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/google-scopes.yml
@@ -1000,14 +1037,6 @@ common:
   title: ''
   type: RateLimits
   url: https://ai.google.dev/gemini-api/docs/rate-limits#current-rate-limits
-- group: start
-  title: ''
-  type: GettingStarted
-  url: https://developers.google.com/get-started
-- group: operate
-  title: ''
-  type: Support
-  url: https://developers.google.com/support
 - group: operate
   title: ''
   type: StatusPage
@@ -1032,6 +1061,14 @@ common:
   title: ''
   type: Signup
   url: https://console.cloud.google.com/
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://docs.cloud.google.com/mcp/overview
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://cloud.google.com/sdk/gcloud
 - group: other
   title: ''
   type: APIExplorer
@@ -1045,7 +1082,7 @@ common:
   type: DataPolicy
   url: https://developers.google.com/terms/api-services-user-data-policy
 created: '2023-11-08'
-description: Google Docs is an online word processing and PDF editing tool that is part of Google Workspace. It provides cloud‑based document creation, real‑time collaboration, and AI‑powered features such as Gemini in Docs for drafting and formatting. The service is offered to individuals, small businesses, startups, and enterprise customers for secure, cloud‑native productivity.
+description: Google is the parent of the Google API estate, publishing public APIs across Google Cloud (compute, data, AI and the Apigee API platform), Google Workspace (Gmail, Drive, Docs, Calendar, Meet), Maps, YouTube, Ads, Analytics, Firebase and Android. Its APIs are documented at developers.google.com and described machine-readably through the Google APIs Discovery Service.
 features:
 - 'Google (Cloud + Ads + Workspace + Maps + YouTube): hundreds of services across Cloud + Ads + Productivity'
 - 'Detailed pricing: see https://cloud.google.com/pricing'
@@ -1097,10 +1134,10 @@ features:
 - 'Service: Google Maps Platform'
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Google Finops
-  primary_unit: ''
-  service_category: Cloud + Ads + Productivity
+  primary_unit: tib
+  service_category: ''
   slug: google-finops
   template: false
 image: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
@@ -1267,12 +1304,48 @@ json_schemas:
 - name: GmailUsersLabelsPostResponse
   property_count: 10
   slug: google-gmail-users-labels-post-response
+- name: GmailUsersMessagesGetResponse
+  property_count: 3
+  slug: google-gmail-users-messages-get-response
 - name: GmailUsersMessagesPostRequest
   property_count: 0
   slug: google-gmail-users-messages-post-request
 - name: GmailUsersThreadsGetResponse
   property_count: 4
   slug: google-gmail-users-threads-get-response
+- name: GmailUsersThreadsGetResponse1
+  property_count: 3
+  slug: google-gmail-users-threads-get-response1
+- name: GmailUsersWatchPostRequest
+  property_count: 0
+  slug: google-gmail-users-watch-post-request
+- name: GmailUsersWatchPostResponse
+  property_count: 2
+  slug: google-gmail-users-watch-post-response
+- name: GoogleAppsDriveLabelsV2DeltaUpdateLabelRequest
+  property_count: 5
+  slug: google-google-apps-drive-labels-v2-delta-update-label-request
+- name: GoogleAppsDriveLabelsV2DisableLabelRequest
+  property_count: 5
+  slug: google-google-apps-drive-labels-v2-disable-label-request
+- name: GoogleAppsDriveLabelsV2LabelLimits
+  property_count: 7
+  slug: google-google-apps-drive-labels-v2-label-limits
+- name: GoogleAppsDriveLabelsV2LabelPermission
+  property_count: 6
+  slug: google-google-apps-drive-labels-v2-label-permission
+- name: GoogleAppsDriveLabelsV2Label
+  property_count: 22
+  slug: google-google-apps-drive-labels-v2-label
+- name: GoogleAppsDriveLabelsV2PublishLabelRequest
+  property_count: 3
+  slug: google-google-apps-drive-labels-v2-publish-label-request
+- name: GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequest
+  property_count: 4
+  slug: google-google-apps-drive-labels-v2-update-label-copy-mode-request
+- name: GoogleAppsDriveLabelsV2UserCapabilities
+  property_count: 5
+  slug: google-google-apps-drive-labels-v2-user-capabilities
 - name: ImageGenerationRequest
   property_count: 2
   slug: google-image-generation-request
@@ -1282,6 +1355,12 @@ json_schemas:
 - name: LabelList
   property_count: 3
   slug: google-label-list
+- name: MeSettingsWatchPostRequest
+  property_count: 0
+  slug: google-me-settings-watch-post-request
+- name: MeSettingsWatchPostResponse
+  property_count: 10
+  slug: google-me-settings-watch-post-response
 - name: ModelsPostRequest
   property_count: 1
   slug: google-models-post-request
@@ -1291,21 +1370,54 @@ json_schemas:
 - name: ModifyLabelsRequest
   property_count: 2
   slug: google-modify-labels-request
+- name: PermissionList
+  property_count: 3
+  slug: google-permission-list
+- name: Permission
+  property_count: 15
+  slug: google-permission
 - name: QueryDriveActivityRequest
   property_count: 6
   slug: google-query-drive-activity-request
 - name: QueryDriveActivityResponse
   property_count: 2
   slug: google-query-drive-activity-response
+- name: ReplyList
+  property_count: 3
+  slug: google-reply-list
+- name: Reply
+  property_count: 9
+  slug: google-reply
+- name: RevisionList
+  property_count: 3
+  slug: google-revision-list
+- name: Revision
+  property_count: 14
+  slug: google-revision
+- name: SettingsCseIdentitiesGetResponse
+  property_count: 2
+  slug: google-settings-cse-identities-get-response
+- name: SettingsCseIdentitiesPatchRequest
+  property_count: 0
+  slug: google-settings-cse-identities-patch-request
+- name: SettingsCseIdentitiesPatchResponse
+  property_count: 3
+  slug: google-settings-cse-identities-patch-response
 - name: SettingsCseKeypairsGetResponse
   property_count: 7
   slug: google-settings-cse-keypairs-get-response
+- name: SettingsCseKeypairsGetResponse1
+  property_count: 2
+  slug: google-settings-cse-keypairs-get-response1
 - name: SettingsCseKeypairsPostRequest
   property_count: 0
   slug: google-settings-cse-keypairs-post-request
 - name: SettingsCseKeypairsPostRequest1
   property_count: 0
   slug: google-settings-cse-keypairs-post-request1
+- name: SettingsCseKeypairsPostRequest2
+  property_count: 0
+  slug: google-settings-cse-keypairs-post-request2
 - name: SettingsCseKeypairsPostRequest3
   property_count: 0
   slug: google-settings-cse-keypairs-post-request3
@@ -1327,6 +1439,12 @@ json_schemas:
 - name: SettingsSendAsSmimeInfoPostResponse
   property_count: 7
   slug: google-settings-send-as-smime-info-post-response
+- name: SpeechGenerationRequest
+  property_count: 2
+  slug: google-speech-generation-request
+- name: SpeechGenerationResponse
+  property_count: 2
+  slug: google-speech-generation-response
 - name: SpreadsheetsDeveloperMetadataGetResponse
   property_count: 5
   slug: google-spreadsheets-developer-metadata-get-response
@@ -1375,6 +1493,12 @@ json_schemas:
 - name: SpreadsheetsValuesPostResponse1
   property_count: 2
   slug: google-spreadsheets-values-post-response1
+- name: SpreadsheetsValuesPutRequest
+  property_count: 0
+  slug: google-spreadsheets-values-put-request
+- name: SpreadsheetsValuesPutResponse
+  property_count: 0
+  slug: google-spreadsheets-values-put-response
 - name: SpreadsheetsValuesbatchClearByDataFilterPostRequest
   property_count: 0
   slug: google-spreadsheets-valuesbatch-clear-by-data-filter-post-request
@@ -1399,12 +1523,39 @@ json_schemas:
 - name: StartPageToken
   property_count: 2
   slug: google-start-page-token
+- name: TeamDriveList
+  property_count: 3
+  slug: google-team-drive-list
+- name: TeamDrive
+  property_count: 11
+  slug: google-team-drive
+- name: UsersCalendarListGetResponse
+  property_count: 5
+  slug: google-users-calendar-list-get-response
 - name: UsersDraftsSendPostRequest
   property_count: 0
   slug: google-users-drafts-send-post-request
 - name: UsersDraftsSendPostResponse
   property_count: 9
   slug: google-users-drafts-send-post-response
+- name: UsersMeCalendarListPatchRequest
+  property_count: 0
+  slug: google-users-me-calendar-list-patch-request
+- name: UsersMeCalendarListPatchResponse
+  property_count: 19
+  slug: google-users-me-calendar-list-patch-response
+- name: UsersMeCalendarListPostRequest
+  property_count: 0
+  slug: google-users-me-calendar-list-post-request
+- name: UsersMeCalendarListPostResponse
+  property_count: 19
+  slug: google-users-me-calendar-list-post-response
+- name: UsersMeCalendarListPutRequest
+  property_count: 0
+  slug: google-users-me-calendar-list-put-request
+- name: UsersMeSettingsGetResponse
+  property_count: 5
+  slug: google-users-me-settings-get-response
 - name: UsersMessagesAttachmentsGetResponse
   property_count: 3
   slug: google-users-messages-attachments-get-response
@@ -1417,6 +1568,24 @@ json_schemas:
 - name: UsersMessagesImportPostResponse
   property_count: 9
   slug: google-users-messages-import-post-response
+- name: UsersMessagesModifyPostRequest
+  property_count: 0
+  slug: google-users-messages-modify-post-request
+- name: UsersMessagesModifyPostResponse
+  property_count: 9
+  slug: google-users-messages-modify-post-response
+- name: UsersMessagesSendPostRequest
+  property_count: 0
+  slug: google-users-messages-send-post-request
+- name: UsersMessagesSendPostResponse
+  property_count: 9
+  slug: google-users-messages-send-post-response
+- name: UsersMessagesTrashPostResponse
+  property_count: 9
+  slug: google-users-messages-trash-post-response
+- name: UsersMessagesUntrashPostResponse
+  property_count: 9
+  slug: google-users-messages-untrash-post-response
 - name: UsersSettingsAutoForwardingGetResponse
   property_count: 3
   slug: google-users-settings-auto-forwarding-get-response
@@ -1432,6 +1601,9 @@ json_schemas:
 - name: UsersSettingsDelegatesGetResponse1
   property_count: 1
   slug: google-users-settings-delegates-get-response1
+- name: UsersSettingsFiltersGetResponse1
+  property_count: 1
+  slug: google-users-settings-filters-get-response1
 - name: UsersSettingsFiltersPostRequest
   property_count: 0
   slug: google-users-settings-filters-post-request
@@ -1447,12 +1619,60 @@ json_schemas:
 - name: UsersSettingsForwardingAddressesPostResponse
   property_count: 2
   slug: google-users-settings-forwarding-addresses-post-response
+- name: UsersSettingsImapPutRequest
+  property_count: 0
+  slug: google-users-settings-imap-put-request
+- name: UsersSettingsImapPutResponse
+  property_count: 4
+  slug: google-users-settings-imap-put-response
+- name: UsersSettingsLanguagePutRequest
+  property_count: 0
+  slug: google-users-settings-language-put-request
+- name: UsersSettingsLanguagePutResponse
+  property_count: 1
+  slug: google-users-settings-language-put-response
+- name: UsersSettingsPopPutRequest
+  property_count: 0
+  slug: google-users-settings-pop-put-request
+- name: UsersSettingsPopPutResponse
+  property_count: 2
+  slug: google-users-settings-pop-put-response
 - name: UsersSettingsSendAsGetResponse
   property_count: 9
   slug: google-users-settings-send-as-get-response
 - name: UsersSettingsSendAsGetResponse1
   property_count: 1
   slug: google-users-settings-send-as-get-response1
+- name: UsersSettingsSendAsPatchRequest
+  property_count: 0
+  slug: google-users-settings-send-as-patch-request
+- name: UsersSettingsSendAsPatchResponse
+  property_count: 9
+  slug: google-users-settings-send-as-patch-response
+- name: UsersSettingsSendAsPutRequest
+  property_count: 0
+  slug: google-users-settings-send-as-put-request
+- name: UsersSettingsSendAsPutResponse
+  property_count: 9
+  slug: google-users-settings-send-as-put-response
+- name: UsersSettingsVacationPutRequest
+  property_count: 0
+  slug: google-users-settings-vacation-put-request
+- name: UsersSettingsVacationPutResponse
+  property_count: 8
+  slug: google-users-settings-vacation-put-response
+- name: UsersThreadsModifyPostRequest
+  property_count: 0
+  slug: google-users-threads-modify-post-request
+- name: UsersThreadsModifyPostResponse
+  property_count: 4
+  slug: google-users-threads-modify-post-response
+- name: UsersThreadsTrashPostResponse
+  property_count: 4
+  slug: google-users-threads-trash-post-response
+- name: Volume
+  property_count: 9
+  slug: google-volume
 - name: VolumesResponse
   property_count: 3
   slug: google-volumes-response
@@ -1462,63 +1682,72 @@ jsonld:
   property_count: 259
   slug: google-context
 layout: provider
+mcp_servers:
+- description: Google publishes managed remote MCP servers. Google Cloud documents remote MCP servers (supporting MCP version 2026-07-28) at docs.cloud.google.com/mcp/overview; Google Maps Platform documents the Map
+  name: Google MCP servers
+  slug: google-mcp-servers
 modified: '2026-09-16'
 name: Google
 nav: Providers
 network: true
-overview: 'Google publishes 112 API contracts indexed on the [APIs.io](https://apis.io/) network, including About API, Activity API, Address API, and 109 more. Tagged areas include Advertising, Cloud, Developers, Google, and Platform.
+overview: 'Google publishes 113 API contracts indexed on the [APIs.io](https://apis.io/) network, including About API, Activity API, Address API, and 110 more. Tagged areas include Advertising, Cloud, Developers, Google, and Platform.
 
 
   The Google catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Google''s developer surface includes changelog, documentation, pricing, authentication, engineering blog, developer console, developer portal, and 50 more developer resources.'
+  Google''s developer surface includes CLI, changelog, documentation, pricing, authentication, engineering blog, developer console, and 57 more developer resources.'
 plans:
 - name: Google Plans Pricing
   plan_count: 10
   slug: google-plans-pricing
-random_paper: 21
+random_paper: 13
 rate_limits:
 - limit_count: 2
   name: Google Rate Limits
   slug: google-rate-limits
 rules:
 - authorship: generated
-  effective_rule_count: 58
+  effective_rule_count: 111
   extends:
   - spectral:oas
   name: Google API Rules
-  rule_count: 17
+  rule_count: 70
   severity_counts:
-    error: 9
+    error: 50
     hint: 0
-    info: 3
-    warn: 5
+    info: 4
+    warn: 16
   slug: google-rules
 scopes:
 - name: Google Scopes
   scope_count: 18
   slug: google-scopes
-  summary_line: 18 scopes · authorizationCode/implicit
+  summary_line: 18 scopes · implicit/authorizationCode
 score:
   band: exemplar
-  composite: 68.6
+  composite: 68.8
   coverage:
-    artifact_dirs: 31
-    catalog_earned: 70.8
+    artifact_dirs: 37
+    catalog_earned: 63.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 44.3
+    catalog_gap: 51.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -9.3
+  delta: -1.3
   facets:
-    access_clarity: 76.3
+    access_clarity: 77.6
     contract_governance: 22.0
     contract_quality: 67.4
-    developer_ergonomics: 73.2
-    discoverability: 71.4
-    operational_transparency: 60.5
-  previous_composite: 77.9
+    developer_ergonomics: 80.4
+    discoverability: 53.6
+    operational_transparency: 63.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 70.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -1527,7 +1756,7 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 80
-    mcp: derived
+    mcp: first-party
     skills: derived
   regulatory:
     applies: true
@@ -1535,13 +1764,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/google/refs/heads/main/screenshots/google-2026-06-20T182002.png
+screenshot: https://apis.io/screenshots/google/google-2026-06-20T182002.png
 security:
 - kind: authentication
   name: Google Authentication
@@ -1555,6 +1784,10 @@ security:
   name: Google Vulnerability Disclosure
   slug: google-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 1
+skills:
+- name: google-data-get-and-update-sheet-by-data-filter
+  slug: google-data-get-and-update-sheet-by-data-filter
 slug: google
 tags:
 - Advertising

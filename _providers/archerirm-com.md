@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Archer provides a regulatory change management platform with an API referenced on the pricing page.
@@ -32,17 +45,17 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/archerirm-com/refs/heads/main/llms/archerirm-com-llms.txt
+  href: https://artifacts.apis.io/archerirm-com/llms/archerirm-com-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/archerirm-com-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/archerirm-com/refs/heads/main/hosts/archerirm-com-hosts.yml
+  href: https://artifacts.apis.io/archerirm-com/hosts/archerirm-com-hosts.yml
   title: ''
   type: Hosts
   url: hosts/archerirm-com-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/archerirm-com/refs/heads/main/vendors/archerirm-com-vendors.yml
+  href: https://artifacts.apis.io/archerirm-com/vendors/archerirm-com-vendors.yml
   title: ''
   type: Vendors
   url: vendors/archerirm-com-vendors.yml
@@ -59,7 +72,7 @@ common:
   type: PrivacyPolicy
   url: https://www.archerirm.com/company/privacy-statement
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/archerirm-com/refs/heads/main/security/archerirm-com-domain-security.yml
+  href: https://artifacts.apis.io/archerirm-com/security/archerirm-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/archerirm-com-domain-security.yml
@@ -97,22 +110,24 @@ overview: 'Archer is listed with 1 API on the [APIs.io](https://apis.io/) networ
   Archer''s developer surface includes support, pricing, engineering blog, and 7 more developer resources.'
 random_paper: 1
 score:
-  band: emerging
-  composite: 14.0
+  band: minimal
+  composite: 9.5
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.5
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 7.1
+    developer_ergonomics: 3.6
     discoverability: 64.3
     operational_transparency: 0.0
+  previous_composite: 14.0
   provenance:
     mcp: unknown
   regulatory:
@@ -120,13 +135,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 9.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/archerirm-com/archerirm-com-2026-11-03T121106.png
 security:
 - kind: domain-security
   name: Archerirm Com Domain Security

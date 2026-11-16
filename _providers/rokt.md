@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - description: Comprehensive reporting API for querying account and campaign performance data with flexible filtering, metrics selection, and date range specification.
@@ -59,12 +63,12 @@ apis:
 artifact_total: 13
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rokt/refs/heads/main/security/rokt-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rokt/security/rokt-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/rokt-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rokt/refs/heads/main/security/rokt-domain-security.yml
+  href: https://artifacts.apis.io/rokt/security/rokt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rokt-domain-security.yml
@@ -97,17 +101,17 @@ common:
   type: X
   url: https://x.com/rokt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rokt/refs/heads/main/plans/rokt-plans-pricing.yml
+  href: https://artifacts.apis.io/rokt/plans/rokt-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/rokt-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rokt/refs/heads/main/rate-limits/rokt-rate-limits.yml
+  href: https://artifacts.apis.io/rokt/rate-limits/rokt-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rokt-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rokt/refs/heads/main/finops/rokt-finops.yml
+  href: https://artifacts.apis.io/rokt/finops/rokt-finops.yml
   title: ''
   type: FinOps
   url: finops/rokt-finops.yml
@@ -143,44 +147,49 @@ plans:
 - name: Rokt Plans Pricing
   plan_count: 0
   slug: rokt-plans-pricing
-random_paper: 8
+random_paper: 16
 rate_limits:
 - limit_count: 2
   name: Rokt Rate Limits
   slug: rokt-rate-limits
 score:
   band: emerging
-  composite: 21.9
+  composite: 23.3
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 50.0
     catalog_earned_first_party: 0.0
     catalog_gap: 65.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.3
+  delta: 0.0
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 34.7
     developer_ergonomics: 11.9
     discoverability: 71.4
-    operational_transparency: 10.5
-  previous_composite: 25.2
+    operational_transparency: 21.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 23.3
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rokt/refs/heads/main/screenshots/rokt-2026-06-20T193204.png
+screenshot: https://apis.io/screenshots/rokt/rokt-2026-06-20T193204.png
 security:
 - kind: domain-security
   name: Rokt Domain Security

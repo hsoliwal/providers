@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,9 +36,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 3
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -65,7 +69,7 @@ common:
   type: Support
   url: mailto:founders@usepolymorph.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polymorph/refs/heads/main/security/polymorph-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/polymorph/security/polymorph-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/polymorph-vulnerability-disclosure.yml
@@ -74,7 +78,7 @@ common:
   type: Security
   url: https://usepolymorph.com/legal/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polymorph/refs/heads/main/security/polymorph-domain-security.yml
+  href: https://artifacts.apis.io/polymorph/security/polymorph-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/polymorph-domain-security.yml
@@ -82,10 +86,6 @@ created: '2026-07-17'
 description: Polymorph is a Y Combinator (Winter 2026) startup building adaptive consumer internet infrastructure that personalizes user experiences with AI agents. Founded in San Francisco by Andrew Sy, the platform runs thousands of continuous product and lifecycle-engagement experiments for its customers, each carrying the craft of that product's direction and brand, so consumer teams can scale experimentation in product surfaces without being bottlenecked by headcount or design capacity. Its stated vision is to make the consumer internet polymorphic — one that adapts to each user and optimizes for delightful experiences. As of this profile the company operates a marketing site only; it publishes no public API, developer documentation, SDKs, or developer portal.
 image: https://usepolymorph.com/polymorph-mark.png
 layout: provider
-mcp_servers:
-- description: Remote MCP server at api.usepolymorph.com over HTTP.
-  name: Polymorph MCP Server
-  slug: polymorph
 modified: '2026-07-20'
 name: Polymorph
 nav: Providers
@@ -94,18 +94,18 @@ overview: 'Polymorph is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Polymorph''s developer surface includes legal docs, support, and 8 more developer resources.'
-random_paper: 12
+random_paper: 18
 score:
   band: emerging
   composite: 12.2
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
@@ -113,7 +113,7 @@ score:
     developer_ergonomics: 4.8
     discoverability: 51.7
     operational_transparency: 10.5
-  previous_composite: 12.1
+  previous_composite: 12.2
   provenance:
     mcp: first-party
   regulatory:
@@ -122,14 +122,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/polymorph/refs/heads/main/screenshots/polymorph-2026-09-02T151711.png
+screenshot: https://apis.io/screenshots/polymorph/polymorph-2026-09-02T151711.png
 security:
 - kind: domain-security
   name: Polymorph Domain Security

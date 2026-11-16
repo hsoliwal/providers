@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 19
 common:
@@ -41,7 +45,7 @@ common:
   type: BlogRSS
   url: https://www.transdigm.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/transdigm/refs/heads/main/security/transdigm-domain-security.yml
+  href: https://artifacts.apis.io/transdigm/security/transdigm-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/transdigm-domain-security.yml
@@ -74,17 +78,17 @@ common:
   type: PrivacyPolicy
   url: https://www.transdigm.com/privacy-policy/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/transdigm/refs/heads/main/json-ld/transdigm-context.jsonld
+  href: https://artifacts.apis.io/transdigm/json-ld/transdigm-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/transdigm-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/transdigm/refs/heads/main/json-schema/transdigm-component-schema.json
+  href: https://artifacts.apis.io/transdigm/json-schema/transdigm-component-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/transdigm-component-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/transdigm/refs/heads/main/vocabulary/transdigm-vocabulary.yml
+  href: https://artifacts.apis.io/transdigm/vocabulary/transdigm-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/transdigm-vocabulary.yml
@@ -149,7 +153,7 @@ press:
 - date: ''
   title: TransDigm Group Incorporated 8-K 2026-04-07
   url: https://www.sec.gov/ix?doc=/Archives/edgar/data/1260221/000126022126000031/tdg-20260407.htm
-random_paper: 1
+random_paper: 9
 rules:
 - authorship: generated
   effective_rule_count: 5
@@ -166,13 +170,13 @@ score:
   band: emerging
   composite: 11.6
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 42.8
     catalog_earned_first_party: 0.0
     catalog_gap: 72.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 23.5
@@ -180,21 +184,21 @@ score:
     developer_ergonomics: 9.5
     discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 11.5
+  previous_composite: 11.6
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/transdigm/refs/heads/main/screenshots/transdigm-2026-06-20T195542.png
+screenshot: https://apis.io/screenshots/transdigm/transdigm-2026-06-20T195542.png
 security:
 - kind: domain-security
   name: Transdigm Domain Security

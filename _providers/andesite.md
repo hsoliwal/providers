@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -69,22 +73,22 @@ common:
   type: Compliance
   url: https://compliancehigh.andesite.ai/home
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/andesite/refs/heads/main/conformance/andesite-conformance.yml
+  href: https://artifacts.apis.io/andesite/conformance/andesite-conformance.yml
   title: ''
   type: Conformance
   url: conformance/andesite-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/andesite/refs/heads/main/security/andesite-trust-center.yml
+  href: https://artifacts.apis.io/andesite/security/andesite-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/andesite-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/andesite/refs/heads/main/security/andesite-domain-security.yml
+  href: https://artifacts.apis.io/andesite/security/andesite-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/andesite-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/andesite/refs/heads/main/llms/andesite-llms.txt
+  href: https://artifacts.apis.io/andesite/llms/andesite-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/andesite-llms.txt
@@ -100,12 +104,12 @@ overview: 'Andesite is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   Andesite''s developer surface includes engineering blog, support, and 10 more developer resources.'
-random_paper: 9
+random_paper: 5
 score:
   band: emerging
   composite: 11.3
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -128,14 +132,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 13.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/andesite/refs/heads/main/screenshots/andesite-2026-07-25T200222.png
+screenshot: https://apis.io/screenshots/andesite/andesite-2026-07-25T200222.png
 security:
 - kind: domain-security
   name: Andesite Domain Security

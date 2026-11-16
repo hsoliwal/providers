@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.4
-  scored_at: '2026-10-17'
+  score: 36.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 1
@@ -125,11 +128,8 @@ apis:
   description: Manage and verify member work experiences (organization affiliations).
   name: Crowd.dev Work Experiences API
   slug: crowddev-work-experiences-api
-artifact_total: 39
+artifact_total: 42
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CDP → Akrites External Advisories API
   slug: open-crowddev-advisories-api
@@ -184,7 +184,7 @@ common:
   type: Pricing
   url: https://docs.linuxfoundation.org/lfx/community-management
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/capabilities/crowddev-capability-edges.yml
+  href: https://artifacts.apis.io/crowddev/capabilities/crowddev-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/crowddev-capability-edges.yml
@@ -201,22 +201,22 @@ common:
   type: ContributionGuide
   url: https://github.com/linuxfoundation/crowd.dev/blob/main/CONTRIBUTING.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/security/crowddev-domain-security.yml
+  href: https://artifacts.apis.io/crowddev/security/crowddev-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/crowddev-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/agentic-access/crowddev-agentic-access.yml
+  href: https://artifacts.apis.io/crowddev/agentic-access/crowddev-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/crowddev-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/scopes/crowddev-scopes.yml
+  href: https://artifacts.apis.io/crowddev/scopes/crowddev-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/crowddev-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/authentication/crowddev-authentication.yml
+  href: https://artifacts.apis.io/crowddev/authentication/crowddev-authentication.yml
   title: ''
   type: Authentication
   url: authentication/crowddev-authentication.yml
@@ -277,42 +277,42 @@ common:
   type: StatusPage
   url: https://status.lfx.dev
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/lifecycle/crowddev-lifecycle.yml
+  href: https://artifacts.apis.io/crowddev/lifecycle/crowddev-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/crowddev-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/conventions/crowddev-conventions.yml
+  href: https://artifacts.apis.io/crowddev/conventions/crowddev-conventions.yml
   title: ''
   type: Conventions
   url: conventions/crowddev-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/errors/crowddev-problem-types.yml
+  href: https://artifacts.apis.io/crowddev/errors/crowddev-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/crowddev-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/data-model/crowddev-data-model.yml
+  href: https://artifacts.apis.io/crowddev/data-model/crowddev-data-model.yml
   title: ''
   type: DataModel
   url: data-model/crowddev-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/mcp/crowddev-mcp.yml
+  href: https://artifacts.apis.io/crowddev/mcp/crowddev-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/crowddev-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/conformance/crowddev-conformance.yml
+  href: https://artifacts.apis.io/crowddev/conformance/crowddev-conformance.yml
   title: ''
   type: Conformance
   url: conformance/crowddev-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/overlays/crowddev-cdp-public-overlay.yaml
+  href: https://artifacts.apis.io/crowddev/overlays/crowddev-cdp-public-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/crowddev-cdp-public-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/llms/crowddev-llms.txt
+  href: https://artifacts.apis.io/crowddev/llms/crowddev-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/crowddev-llms.txt
@@ -321,37 +321,45 @@ common:
   type: LLMsTxt
   url: https://docs.linuxfoundation.org/lfx/llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/crowddev/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/changelog/crowddev-changelog.yml
+  href: https://artifacts.apis.io/crowddev/changelog/crowddev-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/crowddev-changelog.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/plans/crowddev-plans-pricing.yml
+  href: https://artifacts.apis.io/crowddev/plans/crowddev-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/crowddev-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/rate-limits/crowddev-rate-limits.yml
+  href: https://artifacts.apis.io/crowddev/rate-limits/crowddev-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/crowddev-rate-limits.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/sandbox/crowddev-sandbox.yml
+  href: https://artifacts.apis.io/crowddev/sandbox/crowddev-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/crowddev-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/cli/crowddev-cli.yml
+  href: https://artifacts.apis.io/crowddev/cli/crowddev-cli.yml
   title: ''
   type: CLI
   url: cli/crowddev-cli.yml
 created: '2026-07-17'
 description: Crowd.dev is an open-source developer data platform that centralizes community, product, and commercial data to unify contributor identities, resolve who is engaging with an open-source project, and activate that data for developer relations and community-led growth. Founded in Berlin and backed by Seedcamp, crowd.dev was acquired by the Linux Foundation in April 2024 and now powers the LFX Community Data Platform (CDP). The codebase is Apache-2.0 open source at github.com/CrowdDotDev (now linuxfoundation/crowd.dev), and the CDP Public API exposes transactional REST endpoints for member and organization profiles, identity verification, work-experience and project-affiliation management, contributor affiliation lookups, and open-source package/stewardship intelligence.
+finops:
+- has_sources: true
+  method: derived
+  name: Crowddev Finops
+  primary_unit: ''
+  service_category: ''
+  slug: crowddev-finops
+  template: true
 image: https://avatars.githubusercontent.com/u/85551972?v=4
 layout: provider
 modified: '2026-09-16'
@@ -361,16 +369,32 @@ network: true
 overview: 'Crowd.dev publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Advisories API, Affiliations API, Contacts API, and 13 more. Tagged areas include Company, Community, Developer Relations, Developer Data Platform, and Identity Resolution.
 
 
+  The Crowd.dev catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Crowd.dev''s developer surface includes pricing, authentication, documentation, getting-started guide, API reference, support, signup flow, and 31 more developer resources.'
 plans:
 - name: Crowddev Plans Pricing
   plan_count: 1
   slug: crowddev-plans-pricing
-random_paper: 4
+random_paper: 22
 rate_limits:
 - limit_count: 4
   name: Crowddev Rate Limits
   slug: crowddev-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Crowd.dev API Rules
+  rule_count: 65
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 7
+    warn: 6
+  slug: crowddev-rules
 scopes:
 - name: Crowddev Scopes
   scope_count: 17
@@ -378,23 +402,23 @@ scopes:
   summary_line: 17 scopes · clientCredentials
 score:
   band: strong
-  composite: 56.4
+  composite: 58.1
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 60.0
+    artifact_dirs: 31
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 55.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.2
+  delta: 0.0
   facets:
     access_clarity: 52.6
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 52.1
     developer_ergonomics: 70.8
     discoverability: 78.6
     operational_transparency: 50.0
-  previous_composite: 54.2
+  previous_composite: 58.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -411,13 +435,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/screenshots/crowddev-2026-07-25T210805.png
+screenshot: https://apis.io/screenshots/crowddev/crowddev-2026-07-25T210805.png
 security:
 - kind: authentication
   name: Crowddev Authentication
@@ -427,6 +451,12 @@ security:
   name: Crowddev Domain Security
   slug: crowddev-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Look up contributor affiliations by GitHub handle
+  slug: crowddev-contributor-affiliation-lookup
+- name: Resolve and verify a member identity
+  slug: crowddev-resolve-and-verify-identity
 slug: crowddev
 tags:
 - Company

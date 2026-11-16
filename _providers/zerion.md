@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.1
-  scored_at: '2026-10-17'
+  score: 38.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -44,7 +50,7 @@ agentic_access:
   operation_count: 39
   slug: zerion-agentic-access
   summary_line: 39 operations · 8 acting · 1 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.zerion.io
   baseurl_source: declared
@@ -98,7 +104,7 @@ arazzos:
 - description: Pull a wallet's portfolio, positions, transaction history, and PnL in one flow.
   name: Zerion wallet overview
   slug: zerion-wallet-overview.arazzo
-artifact_total: 37
+artifact_total: 43
 asyncapis:
 - description: ''
   name: Zerion Transactions Webhooks
@@ -132,9 +138,6 @@ collections:
   name: REST chains wallets API
   slug: postman-zerion-wallets-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: REST chains API
   slug: open-zerion-chains-api
 - collection_type: open
@@ -163,7 +166,7 @@ collections:
   slug: open-zerion-wallets-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/capabilities/zerion-capability-edges.yml
+  href: https://artifacts.apis.io/zerion/capabilities/zerion-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/zerion-capability-edges.yml
@@ -216,62 +219,62 @@ common:
   type: PrivacyPolicy
   url: https://zerion.io/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/authentication/zerion-authentication.yml
+  href: https://artifacts.apis.io/zerion/authentication/zerion-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zerion-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/packages/zerion-packages.yml
+  href: https://artifacts.apis.io/zerion/packages/zerion-packages.yml
   title: ''
   type: Packages
   url: packages/zerion-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/packages/zerion-packages.yml
+  href: https://artifacts.apis.io/zerion/packages/zerion-packages.yml
   title: ''
   type: SDKs
   url: packages/zerion-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/cli/zerion-cli.yml
+  href: https://artifacts.apis.io/zerion/cli/zerion-cli.yml
   title: ''
   type: CLI
   url: cli/zerion-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/mcp/zerion-mcp.yml
+  href: https://artifacts.apis.io/zerion/mcp/zerion-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/zerion-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/zerion/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/llms/zerion-llms.txt
+  href: https://artifacts.apis.io/zerion/llms/zerion-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zerion-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/well-known/zerion-well-known.yml
+  href: https://artifacts.apis.io/zerion/well-known/zerion-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/zerion-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/conventions/zerion-conventions.yml
+  href: https://artifacts.apis.io/zerion/conventions/zerion-conventions.yml
   title: ''
   type: Conventions
   url: conventions/zerion-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/errors/zerion-problem-types.yml
+  href: https://artifacts.apis.io/zerion/errors/zerion-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/zerion-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/lifecycle/zerion-lifecycle.yml
+  href: https://artifacts.apis.io/zerion/lifecycle/zerion-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zerion-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/changelog/zerion-changelog.yml
+  href: https://artifacts.apis.io/zerion/changelog/zerion-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/zerion-changelog.yml
@@ -280,57 +283,65 @@ common:
   type: Deprecation
   url: https://developers.zerion.io/changelog
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/conformance/zerion-conformance.yml
+  href: https://artifacts.apis.io/zerion/conformance/zerion-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zerion-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/data-model/zerion-data-model.yml
+  href: https://artifacts.apis.io/zerion/data-model/zerion-data-model.yml
   title: ''
   type: DataModel
   url: data-model/zerion-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/security/zerion-domain-security.yml
+  href: https://artifacts.apis.io/zerion/security/zerion-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zerion-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/asyncapi/zerion-transactions-webhooks.yml
+  href: https://artifacts.apis.io/zerion/asyncapi/zerion-transactions-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/zerion-transactions-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/agentic-access/zerion-agentic-access.yml
+  href: https://artifacts.apis.io/zerion/agentic-access/zerion-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zerion-agentic-access.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/overlays/zerion-api-overlay.yaml
+  href: https://artifacts.apis.io/zerion/overlays/zerion-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zerion-api-overlay.yaml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/rate-limits/zerion-rate-limits.yml
+  href: https://artifacts.apis.io/zerion/rate-limits/zerion-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/zerion-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/plans/zerion-plans.yml
+  href: https://artifacts.apis.io/zerion/plans/zerion-plans.yml
   title: ''
   type: Plans
   url: plans/zerion-plans.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/arazzo/zerion-wallet-overview.arazzo.yml
+  href: https://artifacts.apis.io/zerion/arazzo/zerion-wallet-overview.arazzo.yml
   title: ''
   type: Arazzo
   url: arazzo/zerion-wallet-overview.arazzo.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/arazzo/zerion-wallet-activity-subscription.arazzo.yml
+  href: https://artifacts.apis.io/zerion/arazzo/zerion-wallet-activity-subscription.arazzo.yml
   title: ''
   type: Arazzo
   url: arazzo/zerion-wallet-activity-subscription.arazzo.yml
 created: '2026-07-17'
 description: Zerion is an Ethereum and Solana wallet and developer platform focused on making onchain data easy to use. The Zerion API delivers clean, normalized wallet data, token analytics, DeFi positions, transaction history, PnL, NFTs, gas prices, swap and bridge quotes, and real-time transaction webhooks across EVM chains and Solana. The same infrastructure powers the Zerion wallet app used by millions. It is a JSON:API REST service with HTTP Basic (API key) authentication plus pay-per-request x402 (Base/Solana USDC) and MPP (Tempo USDC) options aimed at AI agents, an open-source CLI, six packaged agent skills, a hosted MCP server, and Kafka streaming for high-throughput pipelines.
+finops:
+- has_sources: true
+  method: derived
+  name: Zerion Finops
+  primary_unit: ''
+  service_category: ''
+  slug: zerion-finops
+  template: true
 image: https://developers.zerion.io/logo/dark.svg
 layout: provider
 mcp_servers:
@@ -344,7 +355,7 @@ network: true
 overview: 'Zerion publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Chains API, Dapps API, Fungibles API, and 6 more. Tagged areas include Company, Web3, Blockchain, Cryptocurrency, and DeFi.
 
 
-  The Zerion catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Zerion catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Zerion''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, authentication, and 29 more developer resources.'
@@ -352,37 +363,50 @@ plans:
 - name: Zerion Plans
   plan_count: 5
   slug: zerion-plans
-random_paper: 3
+random_paper: 15
 rate_limits:
 - limit_count: 5
   name: Zerion Rate Limits
   slug: zerion-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Zerion API Rules
+  rule_count: 61
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 1
+    warn: 8
+  slug: zerion-rules
 score:
   band: strong
-  composite: 60.8
+  composite: 63.9
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 61.0
+    artifact_dirs: 33
+    catalog_earned: 65.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 49.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.5
   facets:
     access_clarity: 76.3
-    contract_governance: 4.5
-    contract_quality: 59.9
+    contract_governance: 18.2
+    contract_quality: 65.7
     developer_ergonomics: 69.6
     discoverability: 75.0
     operational_transparency: 68.4
-  previous_composite: 60.8
+  previous_composite: 62.4
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 9
     mcp: first-party
     skills: derived
@@ -392,13 +416,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/screenshots/zerion-2026-08-17T083053.png
+screenshot: https://apis.io/screenshots/zerion/zerion-2026-08-17T083053.png
 security:
 - kind: authentication
   name: Zerion Authentication
@@ -408,6 +432,18 @@ security:
   name: Zerion Domain Security
   slug: zerion-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 5
+skills:
+- name: Read a wallet NFT portfolio
+  slug: zerion-nft-portfolio
+- name: Get swap and bridge quotes
+  slug: zerion-swap-and-bridge
+- name: Fetch and interpret wallet transaction history
+  slug: zerion-transaction-history
+- name: Subscribe to real-time wallet activity webhooks
+  slug: zerion-wallet-activity-webhooks
+- name: Read a wallet portfolio and PnL
+  slug: zerion-wallet-portfolio
 slug: zerion
 tags:
 - Company

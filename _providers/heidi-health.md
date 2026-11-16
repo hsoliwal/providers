@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-10-17'
+  score: 20.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -97,7 +104,7 @@ apis:
   description: Audio upload and transcript retrieval.
   name: Heidi Health Transcription API
   slug: heidi-health-transcription-api
-artifact_total: 74
+artifact_total: 73
 collections:
 - collection_type: postman
   name: Heidi Health Ask Heidi API
@@ -129,9 +136,6 @@ collections:
 - collection_type: postman
   name: Heidi Health Ask Heidi Transcription API
   slug: postman-heidi-health-transcription-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Heidi Health Ask Heidi API
   slug: open-heidi-health-ask-heidi-api
@@ -167,7 +171,7 @@ collections:
   slug: open-heidi-health
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/capabilities/heidi-health-capability-edges.yml
+  href: https://artifacts.apis.io/heidi-health/capabilities/heidi-health-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/heidi-health-capability-edges.yml
@@ -176,22 +180,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/heidi-health/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/agentic-access/heidi-health-agentic-access.yml
+  href: https://artifacts.apis.io/heidi-health/agentic-access/heidi-health-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/heidi-health-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/security/heidi-health-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/heidi-health/security/heidi-health-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/heidi-health-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/security/heidi-health-domain-security.yml
+  href: https://artifacts.apis.io/heidi-health/security/heidi-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/heidi-health-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/authentication/heidi-health-authentication.yml
+  href: https://artifacts.apis.io/heidi-health/authentication/heidi-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/heidi-health-authentication.yml
@@ -324,32 +328,32 @@ common:
   type: ROICalculator
   url: https://www.heidihealth.com/roi-calculator
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/plans/heidi-health-plans-pricing.yml
+  href: https://artifacts.apis.io/heidi-health/plans/heidi-health-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/heidi-health-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/rate-limits/heidi-health-rate-limits.yml
+  href: https://artifacts.apis.io/heidi-health/rate-limits/heidi-health-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/heidi-health-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/finops/heidi-health-finops.yml
+  href: https://artifacts.apis.io/heidi-health/finops/heidi-health-finops.yml
   title: ''
   type: FinOps
   url: finops/heidi-health-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/json-ld/heidi-health-context.jsonld
+  href: https://artifacts.apis.io/heidi-health/json-ld/heidi-health-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/heidi-health-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/vocabulary/heidi-health-vocabulary.yml
+  href: https://artifacts.apis.io/heidi-health/vocabulary/heidi-health-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/heidi-health-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/rules/heidi-health-rules.yml
+  href: https://artifacts.apis.io/heidi-health/rules/heidi-health-rules.yml
   title: ''
   type: SpectralRules
   url: rules/heidi-health-rules.yml
@@ -443,7 +447,7 @@ plans:
 - name: Heidi Health Plans Pricing
   plan_count: 4
   slug: heidi-health-plans-pricing
-random_paper: 2
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Heidi Health Rate Limits
@@ -473,23 +477,23 @@ rules:
     warn: 5
   slug: heidi-health-rules
 score:
-  band: thin
-  composite: 39.0
+  band: developing
+  composite: 40.3
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 61.0
     catalog_earned_first_party: 0.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.0
   facets:
     access_clarity: 22.4
     contract_governance: 27.3
     contract_quality: 61.7
     developer_ergonomics: 36.9
     discoverability: 58.0
-    operational_transparency: 15.8
+    operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -497,7 +501,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 44.6
+  previous_composite: 40.3
   provenance:
     agentic_access: derived
     contracts:
@@ -511,13 +515,13 @@ score:
     regime: Health
     regime_id: health
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/heidi-health/refs/heads/main/screenshots/heidi-health-2026-06-20T182614.png
+screenshot: https://apis.io/screenshots/heidi-health/heidi-health-2026-06-20T182614.png
 security:
 - kind: authentication
   name: Heidi Health Authentication

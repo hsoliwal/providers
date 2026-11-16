@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-10-17'
+  score: 26.8
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - baseURL: https://messaging.mittoapi.com
@@ -67,57 +81,57 @@ common:
   type: GettingStarted
   url: https://documentation.mitto.ch/getting-started/quickstart
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/rules/mitto-ch-rules.yml
+  href: https://artifacts.apis.io/mitto-ch/rules/mitto-ch-rules.yml
   title: ''
   type: Spectral
   url: rules/mitto-ch-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/json-ld/mitto-ch-context.jsonld
+  href: https://artifacts.apis.io/mitto-ch/json-ld/mitto-ch-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/mitto-ch-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/vocabulary/mitto-ch-vocabulary.yml
+  href: https://artifacts.apis.io/mitto-ch/vocabulary/mitto-ch-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/mitto-ch-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/data-model/mitto-ch-data-model.yml
+  href: https://artifacts.apis.io/mitto-ch/data-model/mitto-ch-data-model.yml
   title: ''
   type: DataModel
   url: data-model/mitto-ch-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/authentication/mitto-ch-authentication.yml
+  href: https://artifacts.apis.io/mitto-ch/authentication/mitto-ch-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mitto-ch-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/conformance/mitto-ch-conformance.yml
+  href: https://artifacts.apis.io/mitto-ch/conformance/mitto-ch-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mitto-ch-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/llms/mitto-ch-llms.txt
+  href: https://artifacts.apis.io/mitto-ch/llms/mitto-ch-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mitto-ch-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/well-known/mitto-ch-status-security.txt
+  href: https://artifacts.apis.io/mitto-ch/well-known/mitto-ch-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/mitto-ch-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/well-known/mitto-ch-well-known.yml
+  href: https://artifacts.apis.io/mitto-ch/well-known/mitto-ch-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/mitto-ch-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/hosts/mitto-ch-hosts.yml
+  href: https://artifacts.apis.io/mitto-ch/hosts/mitto-ch-hosts.yml
   title: ''
   type: Hosts
   url: hosts/mitto-ch-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/vendors/mitto-ch-vendors.yml
+  href: https://artifacts.apis.io/mitto-ch/vendors/mitto-ch-vendors.yml
   title: ''
   type: Vendors
   url: vendors/mitto-ch-vendors.yml
@@ -134,7 +148,7 @@ common:
   type: SignUp
   url: https://dashboard.mitto.ch/signup
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/security/mitto-ch-domain-security.yml
+  href: https://artifacts.apis.io/mitto-ch/security/mitto-ch-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mitto-ch-domain-security.yml
@@ -225,23 +239,23 @@ rules:
   slug: mitto-ch-rules
 score:
   band: thin
-  composite: 36.2
+  composite: 29.3
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -12.4
+  delta: -8.3
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 35.6
     contract_quality: 25.9
-    developer_ergonomics: 47.6
+    developer_ergonomics: 29.8
     discoverability: 69.6
-    operational_transparency: 15.8
-  previous_composite: 48.6
+    operational_transparency: 18.4
+  previous_composite: 37.6
   provenance:
     conformance: first-party
     contracts:
@@ -259,14 +273,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/mitto-ch/refs/heads/main/screenshots/mitto-ch-2026-10-11T111145.png
+screenshot: https://apis.io/screenshots/mitto-ch/mitto-ch-2026-10-11T111145.png
 security:
 - kind: authentication
   name: Mitto Ch Authentication

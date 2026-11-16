@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: documented
+    reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -72,19 +75,11 @@ apis:
   slug: coalesce-runs-api
 - baseURL: https://app.coalescesoftware.io/api/v1
   baseurl_source: declared
-  description: Start, stop, retry, and monitor pipeline runs
-  name: Coalesce Scheduler API
-  slug: coalesce-scheduler-api
-- baseURL: https://app.coalescesoftware.io/api/v1
-  baseurl_source: declared
   description: Manage organization users and roles
   name: Coalesce Users API
   slug: coalesce-users-api
-artifact_total: 29
+artifact_total: 27
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Coalesce Environments API
   slug: open-coalesce-environments-api
@@ -108,22 +103,22 @@ collections:
   slug: open-coalesce-users-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coalesce/refs/heads/main/agentic-access/coalesce-agentic-access.yml
+  href: https://artifacts.apis.io/coalesce/agentic-access/coalesce-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/coalesce-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coalesce/refs/heads/main/security/coalesce-trust-center.yml
+  href: https://artifacts.apis.io/coalesce/security/coalesce-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/coalesce-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coalesce/refs/heads/main/security/coalesce-domain-security.yml
+  href: https://artifacts.apis.io/coalesce/security/coalesce-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coalesce-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coalesce/refs/heads/main/authentication/coalesce-authentication.yml
+  href: https://artifacts.apis.io/coalesce/authentication/coalesce-authentication.yml
   title: ''
   type: Authentication
   url: authentication/coalesce-authentication.yml
@@ -164,17 +159,17 @@ common:
   type: X
   url: https://x.com/coalesceIO
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/coalesce/refs/heads/main/plans/coalesce-plans-pricing.yml
+  href: https://artifacts.apis.io/coalesce/plans/coalesce-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/coalesce-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/coalesce/refs/heads/main/rate-limits/coalesce-rate-limits.yml
+  href: https://artifacts.apis.io/coalesce/rate-limits/coalesce-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/coalesce-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/coalesce/refs/heads/main/finops/coalesce-finops.yml
+  href: https://artifacts.apis.io/coalesce/finops/coalesce-finops.yml
   title: ''
   type: FinOps
   url: finops/coalesce-finops.yml
@@ -216,7 +211,7 @@ modified: '2026-06-13'
 name: Coalesce
 nav: Providers
 network: true
-overview: 'Coalesce publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Environments API, Git Accounts API, Nodes API, and 4 more. Tagged areas include Data Transformation, Snowflake, Data Pipeline, Data Catalog, and Data Quality.
+overview: 'Coalesce publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Environments API, Git Accounts API, Nodes API, and 3 more. Tagged areas include Data Transformation, Snowflake, Data Pipeline, Data Catalog, and Data Quality.
 
 
   The Coalesce catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -227,7 +222,7 @@ plans:
 - name: Coalesce Plans Pricing
   plan_count: 3
   slug: coalesce-plans-pricing
-random_paper: 17
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: Coalesce Rate Limits
@@ -246,43 +241,43 @@ rules:
   slug: coalesce-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 35.8
+  composite: 36.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 51.3
     catalog_earned_first_party: 0.0
     catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.6
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
-    contract_quality: 60.9
+    contract_quality: 62.1
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 41.4
+  previous_composite: 35.5
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 7
+      marker_coverage: 42.9
+      total: 14
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/coalesce/refs/heads/main/screenshots/coalesce-2026-06-20T174640.png
+screenshot: https://apis.io/screenshots/coalesce/coalesce-2026-06-20T174640.png
 security:
 - kind: authentication
   name: Coalesce Authentication

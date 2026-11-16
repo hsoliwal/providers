@@ -6,6 +6,8 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - rate-limits
+  - security
   - '{''url'': ''https://www.adcolony.com/'', ''status'': 308, ''note'': ''declared website redirects to https://www.digitalturbine.com/ — a different registrable domain (adcolony.com -> digitalturbine.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 asyncapis:
@@ -58,67 +63,67 @@ common:
   type: SourceCode
   url: https://github.com/AdColony/AdColony-iOS-SDK
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/packages/adcolony-packages.yml
+  href: https://artifacts.apis.io/adcolony/packages/adcolony-packages.yml
   title: ''
   type: Packages
   url: packages/adcolony-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/packages/adcolony-packages.yml
+  href: https://artifacts.apis.io/adcolony/packages/adcolony-packages.yml
   title: ''
   type: SDKs
   url: packages/adcolony-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/lifecycle/adcolony-lifecycle.yml
+  href: https://artifacts.apis.io/adcolony/lifecycle/adcolony-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/adcolony-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/lifecycle/adcolony-lifecycle.yml
+  href: https://artifacts.apis.io/adcolony/lifecycle/adcolony-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/adcolony-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/security/adcolony-domain-security.yml
+  href: https://artifacts.apis.io/adcolony/security/adcolony-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/adcolony-domain-security.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/changelog/adcolony-changelog.yml
+  href: https://artifacts.apis.io/adcolony/changelog/adcolony-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/adcolony-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/asyncapi/adcolony-v4vc-webhooks.yml
+  href: https://artifacts.apis.io/adcolony/asyncapi/adcolony-v4vc-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/adcolony-v4vc-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/conformance/adcolony-conformance.yml
+  href: https://artifacts.apis.io/adcolony/conformance/adcolony-conformance.yml
   title: ''
   type: Conformance
   url: conformance/adcolony-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/conformance/adcolony-conformance.yml
+  href: https://artifacts.apis.io/adcolony/conformance/adcolony-conformance.yml
   title: ''
   type: Compliance
   url: conformance/adcolony-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/conventions/adcolony-conventions.yml
+  href: https://artifacts.apis.io/adcolony/conventions/adcolony-conventions.yml
   title: ''
   type: Conventions
   url: conventions/adcolony-conventions.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/plans/adcolony-plans-pricing.yml
+  href: https://artifacts.apis.io/adcolony/plans/adcolony-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/adcolony-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/rate-limits/adcolony-rate-limits.yml
+  href: https://artifacts.apis.io/adcolony/rate-limits/adcolony-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/adcolony-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/llms/adcolony-llms.txt
+  href: https://artifacts.apis.io/adcolony/llms/adcolony-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/adcolony-llms.txt
@@ -167,7 +172,7 @@ plans:
 - name: Adcolony Plans Pricing
   plan_count: 0
   slug: adcolony-plans-pricing
-random_paper: 21
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Adcolony Rate Limits
@@ -176,13 +181,13 @@ score:
   band: thin
   composite: 31.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
@@ -190,7 +195,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 48.2
     operational_transparency: 34.2
-  previous_composite: 31.2
+  previous_composite: 31.3
   provenance:
     conformance: first-party
   regulatory:
@@ -199,14 +204,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/adcolony/refs/heads/main/screenshots/adcolony-2026-07-25T181608.png
+screenshot: https://apis.io/screenshots/adcolony/adcolony-2026-07-25T181608.png
 security:
 - kind: domain-security
   name: Adcolony Domain Security

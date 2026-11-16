@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.1
-  scored_at: '2026-10-17'
+  score: 18.2
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.gather.town
@@ -52,11 +55,8 @@ apis:
   description: Create and manage Gather spaces
   name: Gather Spaces API
   slug: gather-spaces-api
-artifact_total: 9
+artifact_total: 11
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Gather HTTP Guestlist API
   slug: open-gather-guestlist-api
@@ -68,62 +68,62 @@ collections:
   slug: open-gather-spaces-api
 common:
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/openapi/_original/gather-http-api-openapi.yml
+  href: https://artifacts.apis.io/gather/openapi/_original/gather-http-api-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/gather-http-api-openapi.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/authentication/gather-authentication.yml
+  href: https://artifacts.apis.io/gather/authentication/gather-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gather-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/security/gather-domain-security.yml
+  href: https://artifacts.apis.io/gather/security/gather-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gather-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/packages/gather-packages.yml
+  href: https://artifacts.apis.io/gather/packages/gather-packages.yml
   title: ''
   type: Packages
   url: packages/gather-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/packages/gather-packages.yml
+  href: https://artifacts.apis.io/gather/packages/gather-packages.yml
   title: ''
   type: SDKs
   url: packages/gather-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/well-known/gather-well-known.yml
+  href: https://artifacts.apis.io/gather/well-known/gather-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/gather-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/mcp/gather-mcp.yml
+  href: https://artifacts.apis.io/gather/mcp/gather-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/gather-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/llms/gather-llms.txt
+  href: https://artifacts.apis.io/gather/llms/gather-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gather-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/overlays/gather-http-api-overlay.yaml
+  href: https://artifacts.apis.io/gather/overlays/gather-http-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/gather-http-api-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/conformance/gather-conformance.yml
+  href: https://artifacts.apis.io/gather/conformance/gather-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gather-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/errors/gather-problem-types.yml
+  href: https://artifacts.apis.io/gather/errors/gather-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/gather-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/lifecycle/gather-lifecycle.yml
+  href: https://artifacts.apis.io/gather/lifecycle/gather-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/gather-lifecycle.yml
@@ -132,17 +132,17 @@ common:
   type: StatusPage
   url: https://status.gather.town/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/conventions/gather-conventions.yml
+  href: https://artifacts.apis.io/gather/conventions/gather-conventions.yml
   title: ''
   type: Conventions
   url: conventions/gather-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/data-model/gather-data-model.yml
+  href: https://artifacts.apis.io/gather/data-model/gather-data-model.yml
   title: ''
   type: DataModel
   url: data-model/gather-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/gather/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -205,27 +205,43 @@ network: true
 overview: 'Gather publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Guestlist API, Maps API, and Spaces API. Tagged areas include Company, Future Of Work, Virtual Office, Video Conferencing, and Collaboration.
 
 
+  The Gather catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Gather''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 21 more developer resources.'
-random_paper: 19
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Gather API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: gather-rules
 score:
   band: thin
-  composite: 27.2
+  composite: 28.9
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 10.5
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 13.9
     developer_ergonomics: 56.5
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 27.2
+  previous_composite: 28.9
   provenance:
     conformance: derived
     contracts:
@@ -241,13 +257,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/gather/refs/heads/main/screenshots/gather-2026-07-25T215458.png
+screenshot: https://apis.io/screenshots/gather/gather-2026-07-25T215458.png
 security:
 - kind: authentication
   name: Gather Authentication
@@ -257,6 +273,12 @@ security:
   name: Gather Domain Security
   slug: gather-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Manage Gather email guestlist
+  slug: gather-manage-guestlist
+- name: Manage Gather space maps
+  slug: gather-manage-space-maps
 slug: gather
 tags:
 - Company

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -52,9 +58,6 @@ apis:
   slug: arbiscan-accounts-api
 artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Arbiscan Accounts API
   slug: open-arbiscan-accounts-api
@@ -81,17 +84,17 @@ collections:
   slug: open-arbiscan-transactions-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/arbiscan/refs/heads/main/plans/arbiscan-plans-pricing.yml
+  href: https://artifacts.apis.io/arbiscan/plans/arbiscan-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/arbiscan-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/arbiscan/refs/heads/main/rate-limits/arbiscan-rate-limits.yml
+  href: https://artifacts.apis.io/arbiscan/rate-limits/arbiscan-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/arbiscan-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/arbiscan/refs/heads/main/finops/arbiscan-finops.yml
+  href: https://artifacts.apis.io/arbiscan/finops/arbiscan-finops.yml
   title: ''
   type: FinOps
   url: finops/arbiscan-finops.yml
@@ -100,22 +103,22 @@ common:
   type: Website
   url: https://www.arbiscan.io/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arbiscan/refs/heads/main/agentic-access/arbiscan-agentic-access.yml
+  href: https://artifacts.apis.io/arbiscan/agentic-access/arbiscan-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/arbiscan-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arbiscan/refs/heads/main/security/arbiscan-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/arbiscan/security/arbiscan-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/arbiscan-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arbiscan/refs/heads/main/security/arbiscan-domain-security.yml
+  href: https://artifacts.apis.io/arbiscan/security/arbiscan-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arbiscan-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arbiscan/refs/heads/main/authentication/arbiscan-authentication.yml
+  href: https://artifacts.apis.io/arbiscan/authentication/arbiscan-authentication.yml
   title: ''
   type: Authentication
   url: authentication/arbiscan-authentication.yml
@@ -153,7 +156,7 @@ finops:
 - has_sources: false
   method: generated
   name: Arbiscan Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: arbiscan-finops
   template: true
@@ -171,7 +174,7 @@ network: true
 overview: 'Arbiscan publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Accounts API. Tagged areas include Blockchain, Cryptocurrency, Arbitrum, Layer 2, and EVM.
 
 
-  The Arbiscan catalog on APIs.io includes 1 JSON-LD context.
+  The Arbiscan catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Arbiscan''s developer surface includes authentication, developer portal, documentation, pricing, signup flow, and 10 more developer resources.'
@@ -179,30 +182,43 @@ plans:
 - name: Arbiscan Plans Pricing
   plan_count: 7
   slug: arbiscan-plans-pricing
-random_paper: 21
+random_paper: 19
 rate_limits:
 - limit_count: 14
   name: Arbiscan Rate Limits
   slug: arbiscan-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 108
+  extends:
+  - spectral:oas
+  name: Arbiscan API Rules
+  rule_count: 67
+  severity_counts:
+    error: 65
+    hint: 0
+    info: 1
+    warn: 1
+  slug: arbiscan-rules
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 41.8
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 55.5
+    artifact_dirs: 16
+    catalog_earned: 60.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.5
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 13.6
+    contract_governance: 27.3
     contract_quality: 56.3
     developer_ergonomics: 21.4
     discoverability: 73.2
-    operational_transparency: 10.5
-  previous_composite: 47.1
+    operational_transparency: 21.1
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     contracts:
@@ -216,14 +232,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/arbiscan/refs/heads/main/screenshots/arbiscan-2026-06-20T172358.png
+screenshot: https://apis.io/screenshots/arbiscan/arbiscan-2026-06-20T172358.png
 security:
 - kind: authentication
   name: Arbiscan Authentication
@@ -245,6 +261,5 @@ tags:
 - Layer 2
 - EVM
 - Web3
-- L2
 website: https://www.arbiscan.io/
 ---

@@ -24,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -69,7 +72,7 @@ common:
   type: PrivacyPolicy
   url: https://www.joinheard.com/privacy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/heard/refs/heads/main/llms/heard-llms.txt
+  href: https://artifacts.apis.io/heard/llms/heard-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/heard-llms.txt
@@ -89,12 +92,12 @@ overview: 'Heard is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 
 
   Heard''s developer surface includes getting-started guide, support, pricing, signup flow, engineering blog, and 4 more developer resources.'
-random_paper: 10
+random_paper: 12
 score:
   band: emerging
   composite: 13.8
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -124,14 +127,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 6.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/heard/refs/heads/main/screenshots/heard-2026-07-25T220845.png
+screenshot: https://apis.io/screenshots/heard/heard-2026-07-25T220845.png
 slug: heard
 tags:
 - Company

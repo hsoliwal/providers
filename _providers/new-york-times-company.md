@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-10-17'
+  score: 24.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 27
   slug: new-york-times-company-agentic-access
   summary_line: 27 operations
-api_count: 20
+api_count: 11
 apis:
 - baseURL: https://api.nytimes.com/svc/search/v2
   baseurl_source: declared
@@ -120,11 +126,8 @@ apis:
   description: The User Content API from The New York Times Company — 4 operation(s) for user content.
   name: The New York Times Company User Content API
   slug: new-york-times-company-user-content-api
-artifact_total: 69
+artifact_total: 68
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Archive
   slug: open-archive-api
@@ -199,32 +202,32 @@ collections:
   slug: open-top-stories-v2
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/plans/new-york-times-company-plans-pricing.yml
+  href: https://artifacts.apis.io/new-york-times-company/plans/new-york-times-company-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/new-york-times-company-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/capabilities/new-york-times-company-capability-edges.yml
+  href: https://artifacts.apis.io/new-york-times-company/capabilities/new-york-times-company-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/new-york-times-company-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/agentic-access/new-york-times-company-agentic-access.yml
+  href: https://artifacts.apis.io/new-york-times-company/agentic-access/new-york-times-company-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/new-york-times-company-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/security/new-york-times-company-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/new-york-times-company/security/new-york-times-company-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/new-york-times-company-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/security/new-york-times-company-domain-security.yml
+  href: https://artifacts.apis.io/new-york-times-company/security/new-york-times-company-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/new-york-times-company-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/authentication/new-york-times-company-authentication.yml
+  href: https://artifacts.apis.io/new-york-times-company/authentication/new-york-times-company-authentication.yml
   title: ''
   type: Authentication
   url: authentication/new-york-times-company-authentication.yml
@@ -293,32 +296,32 @@ common:
   type: AboutGames
   url: https://www.nytco.com/products/games/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/rules/new-york-times-rules.yml
+  href: https://artifacts.apis.io/new-york-times-company/rules/new-york-times-rules.yml
   title: ''
   type: SpectralRules
   url: rules/new-york-times-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/vocabulary/new-york-times-company-vocabulary.yml
+  href: https://artifacts.apis.io/new-york-times-company/vocabulary/new-york-times-company-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/new-york-times-company-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/json-ld/new-york-times-company-context.jsonld
+  href: https://artifacts.apis.io/new-york-times-company/json-ld/new-york-times-company-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/new-york-times-company-context.jsonld
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/plans/new-york-times-company-plans-pricing.yml
+  href: https://artifacts.apis.io/new-york-times-company/plans/new-york-times-company-plans-pricing.yml
   title: ''
   type: PlansPricing
   url: plans/new-york-times-company-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/rate-limits/new-york-times-company-rate-limits.yml
+  href: https://artifacts.apis.io/new-york-times-company/rate-limits/new-york-times-company-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/new-york-times-company-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/finops/new-york-times-company-finops.yml
+  href: https://artifacts.apis.io/new-york-times-company/finops/new-york-times-company-finops.yml
   title: ''
   type: FinOps
   url: finops/new-york-times-company-finops.yml
@@ -422,7 +425,7 @@ plans:
 - name: New York Times Company Plans Pricing
   plan_count: 1
   slug: new-york-times-company-plans-pricing
-random_paper: 1
+random_paper: 15
 rate_limits:
 - limit_count: 4
   name: New York Times Company Rate Limits
@@ -453,29 +456,29 @@ rules:
   slug: new-york-times-rules
 score:
   band: thin
-  composite: 35.9
+  composite: 38.3
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 74.0
     catalog_earned_first_party: 0.0
     catalog_gap: 41.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 1.0
   facets:
     access_clarity: 18.4
     contract_governance: 27.3
-    contract_quality: 58.7
+    contract_quality: 62.7
     developer_ergonomics: 14.3
     discoverability: 85.7
-    operational_transparency: 13.2
-  previous_composite: 42.8
+    operational_transparency: 23.7
+  previous_composite: 37.3
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 86.7
       total: 15
   regulatory:
     applies: true
@@ -483,14 +486,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/new-york-times-company/refs/heads/main/screenshots/new-york-times-company-2026-06-20T190234.png
+screenshot: https://apis.io/screenshots/new-york-times-company/new-york-times-company-2026-06-20T190234.png
 security:
 - kind: authentication
   name: New York Times Company Authentication

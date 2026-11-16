@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.9
-  scored_at: '2026-10-17'
+  score: 35.3
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://partner-api.orangehealth.in
@@ -58,15 +61,12 @@ apis:
   description: The Orange Health Partner API API from Orange Health — 0 operation(s) for orange health partner api.
   name: Orange Health Orange Health Partner API
   slug: orange-health-orange-health-partner-api-api
-artifact_total: 12
+artifact_total: 14
 asyncapis:
 - description: ''
   name: Orange Health Webhooks
   slug: orange-health-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Orange Health Partner Orders API
   slug: open-orange-health-orders-api
@@ -78,7 +78,7 @@ collections:
   slug: open-orange-health-serviceability-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/orange-health/refs/heads/main/overlays/orange-health-partner-overlay.yaml
+  href: https://artifacts.apis.io/orange-health/overlays/orange-health-partner-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/orange-health-partner-overlay.yaml
@@ -111,42 +111,42 @@ common:
   type: PrivacyPolicy
   url: https://www.orangehealth.in/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/orange-health/refs/heads/main/authentication/orange-health-authentication.yml
+  href: https://artifacts.apis.io/orange-health/authentication/orange-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/orange-health-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/orange-health/refs/heads/main/security/orange-health-domain-security.yml
+  href: https://artifacts.apis.io/orange-health/security/orange-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/orange-health-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/orange-health/refs/heads/main/security/orange-health-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/orange-health/security/orange-health-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/orange-health-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/orange-health/refs/heads/main/security/orange-health-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/orange-health/security/orange-health-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/orange-health-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orange-health/refs/heads/main/well-known/orange-health-well-known.yml
+  href: https://artifacts.apis.io/orange-health/well-known/orange-health-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/orange-health-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orange-health/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/orange-health/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/orange-health/refs/heads/main/asyncapi/orange-health-webhooks.yml
+  href: https://artifacts.apis.io/orange-health/asyncapi/orange-health-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/orange-health-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orange-health/refs/heads/main/mcp/orange-health-mcp.yml
+  href: https://artifacts.apis.io/orange-health/mcp/orange-health-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/orange-health-mcp.yml
@@ -161,26 +161,39 @@ network: true
 overview: 'Orange Health publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Orders API, Results API, Serviceability API, and 1 more. Tagged areas include Company, Mobile, Healthcare, Diagnostics, and Lab Testing.
 
 
-  The Orange Health catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Orange Health catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Orange Health''s developer surface includes documentation, API reference, engineering blog, support, authentication, and 11 more developer resources.'
-random_paper: 13
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Orange Health API Rules
+  rule_count: 61
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 1
+    warn: 1
+  slug: orange-health-rules
 score:
   band: emerging
-  composite: 21.5
+  composite: 23.5
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 21.0
+    contract_governance: 18.2
+    contract_quality: 22.2
     developer_ergonomics: 29.2
     discoverability: 73.2
     operational_transparency: 18.4
@@ -191,7 +204,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 21.5
+  previous_composite: 23.5
   provenance:
     conformance: derived
     contracts:
@@ -207,13 +220,13 @@ score:
     regime: Health
     regime_id: health
     score: 18.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/orange-health/refs/heads/main/screenshots/orange-health-2026-08-07T190830.png
+screenshot: https://apis.io/screenshots/orange-health/orange-health-2026-08-07T190830.png
 security:
 - kind: authentication
   name: Orange Health Authentication
@@ -227,6 +240,12 @@ security:
   name: Orange Health Vulnerability Disclosure
   slug: orange-health-vulnerability-disclosure
   summary_line: contact published
+skill_count: 2
+skills:
+- name: Book an at-home diagnostic collection
+  slug: orange-health-book-home-collection
+- name: Reschedule, add-on, or cancel a collection order
+  slug: orange-health-manage-order-lifecycle
 slug: orange-health
 tags:
 - Company

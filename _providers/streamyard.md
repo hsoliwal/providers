@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 25.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -59,7 +66,7 @@ apis:
   description: Access recorded broadcasts. Once a broadcast ends, recordings become available for download.
   name: StreamYard Recordings API
   slug: streamyard-recordings-api
-artifact_total: 25
+artifact_total: 24
 collections:
 - collection_type: postman
   name: StreamYard Broadcasts API
@@ -70,9 +77,6 @@ collections:
 - collection_type: postman
   name: StreamYard Broadcasts Recordings API
   slug: postman-streamyard-recordings-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: StreamYard Broadcasts API
   slug: open-streamyard-broadcasts-api
@@ -87,17 +91,17 @@ collections:
   slug: open-streamyard
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/streamyard/refs/heads/main/plans/streamyard-plans-pricing.yml
+  href: https://artifacts.apis.io/streamyard/plans/streamyard-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/streamyard-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/streamyard/refs/heads/main/rate-limits/streamyard-rate-limits.yml
+  href: https://artifacts.apis.io/streamyard/rate-limits/streamyard-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/streamyard-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/streamyard/refs/heads/main/finops/streamyard-finops.yml
+  href: https://artifacts.apis.io/streamyard/finops/streamyard-finops.yml
   title: ''
   type: FinOps
   url: finops/streamyard-finops.yml
@@ -106,22 +110,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/streamyard/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/streamyard/refs/heads/main/agentic-access/streamyard-agentic-access.yml
+  href: https://artifacts.apis.io/streamyard/agentic-access/streamyard-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/streamyard-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/streamyard/refs/heads/main/security/streamyard-domain-security.yml
+  href: https://artifacts.apis.io/streamyard/security/streamyard-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/streamyard-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/streamyard/refs/heads/main/authentication/streamyard-authentication.yml
+  href: https://artifacts.apis.io/streamyard/authentication/streamyard-authentication.yml
   title: ''
   type: Authentication
   url: authentication/streamyard-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/streamyard/refs/heads/main/scopes/streamyard-scopes.yml
+  href: https://artifacts.apis.io/streamyard/scopes/streamyard-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/streamyard-scopes.yml
@@ -206,7 +210,7 @@ finops:
 - has_sources: false
   method: generated
   name: Streamyard Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: streamyard-finops
   template: true
@@ -240,7 +244,7 @@ plans:
 - name: Streamyard Plans Pricing
   plan_count: 3
   slug: streamyard-plans-pricing
-random_paper: 6
+random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Streamyard Rate Limits
@@ -278,13 +282,13 @@ score:
   band: thin
   composite: 30.5
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 52.5
     catalog_earned_first_party: 0.0
     catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 14.5
     contract_governance: 13.6
@@ -292,7 +296,7 @@ score:
     developer_ergonomics: 1.2
     discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 32.0
+  previous_composite: 30.5
   provenance:
     agentic_access: derived
     contracts:
@@ -306,13 +310,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/streamyard/refs/heads/main/screenshots/streamyard-2026-06-20T194622.png
+screenshot: https://apis.io/screenshots/streamyard/streamyard-2026-06-20T194622.png
 security:
 - kind: authentication
   name: Streamyard Authentication

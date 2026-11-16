@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
@@ -28,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.3
-  scored_at: '2026-10-17'
+  score: 36.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 25
@@ -106,15 +110,12 @@ apis:
   description: The Transaction API from Sibill — 2 operation(s) for transaction.
   name: Sibill Transaction API
   slug: sibill-transaction-api
-artifact_total: 30
+artifact_total: 35
 asyncapis:
 - description: ''
   name: Sibill Webhooks
   slug: sibill-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Sibill Integration Account API
   slug: open-sibill-account-api
@@ -152,8 +153,13 @@ collections:
   name: Sibill Integration Account Transaction API
   slug: open-sibill-transaction-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/sibill/plans/sibill-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/sibill-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/capabilities/sibill-capability-edges.yml
+  href: https://artifacts.apis.io/sibill/capabilities/sibill-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/sibill-capability-edges.yml
@@ -202,92 +208,92 @@ common:
   type: PrivacyPolicy
   url: https://www.iubenda.com/privacy-policy/16454324
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/authentication/sibill-authentication.yml
+  href: https://artifacts.apis.io/sibill/authentication/sibill-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sibill-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/changelog/sibill-changelog.yml
+  href: https://artifacts.apis.io/sibill/changelog/sibill-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/sibill-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/lifecycle/sibill-lifecycle.yml
+  href: https://artifacts.apis.io/sibill/lifecycle/sibill-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sibill-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/rate-limits/sibill-rate-limits.yml
+  href: https://artifacts.apis.io/sibill/rate-limits/sibill-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sibill-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/conventions/sibill-conventions.yml
+  href: https://artifacts.apis.io/sibill/conventions/sibill-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sibill-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/errors/sibill-problem-types.yml
+  href: https://artifacts.apis.io/sibill/errors/sibill-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sibill-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/data-model/sibill-data-model.yml
+  href: https://artifacts.apis.io/sibill/data-model/sibill-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sibill-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/conformance/sibill-conformance.yml
+  href: https://artifacts.apis.io/sibill/conformance/sibill-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sibill-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/sandbox/sibill-sandbox.yml
+  href: https://artifacts.apis.io/sibill/sandbox/sibill-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/sibill-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/asyncapi/sibill-webhooks.yml
+  href: https://artifacts.apis.io/sibill/asyncapi/sibill-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/sibill-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/mcp/sibill-mcp.yml
+  href: https://artifacts.apis.io/sibill/mcp/sibill-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/sibill-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/sibill/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/packages/sibill-packages.yml
+  href: https://artifacts.apis.io/sibill/packages/sibill-packages.yml
   title: ''
   type: Packages
   url: packages/sibill-packages.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/overlays/sibill-openapi-overlay.yaml
+  href: https://artifacts.apis.io/sibill/overlays/sibill-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/sibill-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/well-known/sibill-well-known.yml
+  href: https://artifacts.apis.io/sibill/well-known/sibill-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sibill-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/llms/sibill-llms.txt
+  href: https://artifacts.apis.io/sibill/llms/sibill-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sibill-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/security/sibill-domain-security.yml
+  href: https://artifacts.apis.io/sibill/security/sibill-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sibill-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/agentic-access/sibill-agentic-access.yml
+  href: https://artifacts.apis.io/sibill/agentic-access/sibill-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sibill-agentic-access.yml
@@ -297,6 +303,14 @@ common:
   url: https://sibill.com/
 created: '2026-07-17'
 description: Sibill is an Italian fintech platform that centralizes financial and administrative management for small and medium-sized businesses (PMI). It unifies electronic invoicing (submitted to the Agenzia delle Entrate SDI), treasury and cash-flow monitoring, payments, business accounts and debit cards, and AI-assisted reconciliation of bank transactions against invoices and deadlines. The Sibill Integration API exposes companies, bank accounts, categories, counterparts, documents, payment flows, reconciliations, products and transactions over a REST interface secured with Bearer API keys, with cursor pagination, field expansion, and Document/Flow webhooks. Backed by Creandum.
+finops:
+- has_sources: true
+  method: derived
+  name: Sibill Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: sibill-finops
+  template: false
 image: https://sibill.com/wp-content/uploads/2025/10/monogramma_purple.jpg
 layout: provider
 modified: '2026-07-21'
@@ -306,29 +320,46 @@ network: true
 overview: 'Sibill publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Category API, Company API, and 9 more. Tagged areas include Company, Fintech, Invoicing, Payments, and Reconciliation.
 
 
-  The Sibill catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Sibill catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Sibill''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
-random_paper: 1
+  Sibill''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 25 more developer resources.'
+plans:
+- name: Sibill Plans Pricing
+  plan_count: 3
+  slug: sibill-plans-pricing
+random_paper: 15
 rate_limits:
 - limit_count: 1
   name: Sibill Rate Limits
   slug: sibill-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Sibill API Rules
+  rule_count: 57
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 6
+  slug: sibill-rules
 score:
-  band: developing
-  composite: 46.9
+  band: strong
+  composite: 56.4
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 45.0
-    catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    artifact_dirs: 30
+    catalog_earned: 64.5
+    catalog_earned_first_party: 20.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 38.2
-    contract_governance: 4.5
+    access_clarity: 77.6
+    contract_governance: 18.2
     contract_quality: 52.6
     developer_ergonomics: 66.1
     discoverability: 73.2
@@ -341,7 +372,7 @@ score:
     regions:
     - europe
     - italy-southern-europe
-  previous_composite: 46.8
+  previous_composite: 56.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -358,13 +389,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 19.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sibill/refs/heads/main/screenshots/sibill-2026-08-17T081842.png
+screenshot: https://apis.io/screenshots/sibill/sibill-2026-08-17T081842.png
 security:
 - kind: authentication
   name: Sibill Authentication
@@ -374,6 +405,14 @@ security:
   name: Sibill Domain Security
   slug: sibill-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Issue and send an electronic invoice
+  slug: sibill-issue-and-send-invoice
+- name: Manage counterparts (customers and suppliers)
+  slug: sibill-manage-counterparts
+- name: Reconcile a bank transaction to a payment flow
+  slug: sibill-reconcile-transaction
 slug: sibill
 tags:
 - Company

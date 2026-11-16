@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,22 +36,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/algorized/refs/heads/main/llms/algorized-llms.txt
+  href: https://artifacts.apis.io/algorized/llms/algorized-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/algorized-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/algorized/refs/heads/main/hosts/algorized-hosts.yml
+  href: https://artifacts.apis.io/algorized/hosts/algorized-hosts.yml
   title: ''
   type: Hosts
   url: hosts/algorized-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/algorized/refs/heads/main/vendors/algorized-vendors.yml
+  href: https://artifacts.apis.io/algorized/vendors/algorized-vendors.yml
   title: ''
   type: Vendors
   url: vendors/algorized-vendors.yml
@@ -47,7 +60,7 @@ common:
   type: Newsroom
   url: https://www.algorized.com/news
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/algorized/refs/heads/main/security/algorized-domain-security.yml
+  href: https://artifacts.apis.io/algorized/security/algorized-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/algorized-domain-security.yml
@@ -72,26 +85,26 @@ name: Algorized
 nav: Providers
 network: true
 overview: Algorized is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Edge Computing, Robotics, and Safety.
-random_paper: 15
+random_paper: 1
 score:
   band: minimal
-  composite: 4.3
+  composite: 4.2
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.0
+  delta: -0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.1
+    discoverability: 56.3
     operational_transparency: 0.0
-  previous_composite: 0.3
+  previous_composite: 4.3
   provenance:
     mcp: unknown
   regulatory:
@@ -100,13 +113,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/algorized/algorized-2026-11-03T120619.png
 security:
 - kind: domain-security
   name: Algorized Domain Security

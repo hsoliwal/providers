@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: verified
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 57.7
-  scored_at: '2026-10-17'
+  score: 57.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 67
   human_in_the_loop: 1
@@ -80,16 +86,6 @@ apis:
   slug: dash0-manage-sampling-rules-api
 - baseURL: https://api.eu-west-1.aws.dash0.com
   baseurl_source: declared
-  description: The Manage Signal To Metrics (BETA) API from Dash0 — 4 operation(s) for manage signal to metrics (beta).
-  name: Dash0 Manage Signal To Metrics (BETA) API
-  slug: dash0-manage-signal-to-metrics-beta-api
-- baseURL: https://api.eu-west-1.aws.dash0.com
-  baseurl_source: declared
-  description: The Manage SLOs (Private BETA) API from Dash0 — 2 operation(s) for manage slos (private beta).
-  name: Dash0 Manage SLOs (Private BETA) API
-  slug: dash0-manage-slos-private-beta-api
-- baseURL: https://api.eu-west-1.aws.dash0.com
-  baseurl_source: declared
   description: The Manage Spam Filters API from Dash0 — 2 operation(s) for manage spam filters.
   name: Dash0 Manage Spam Filters API
   slug: dash0-manage-spam-filters-api
@@ -103,11 +99,6 @@ apis:
   description: The Manage Teams and Members API from Dash0 — 7 operation(s) for manage teams and members.
   name: Dash0 Manage Teams and Members API
   slug: dash0-manage-teams-and-members-api
-- baseURL: https://api.eu-west-1.aws.dash0.com
-  baseurl_source: declared
-  description: The Manage Time Series Aggregations (Private BETA) API from Dash0 — 2 operation(s) for manage time series aggregations (private beta).
-  name: Dash0 Manage Time Series Aggregations (Private BETA) API
-  slug: dash0-manage-time-series-aggregations-private-beta-api
 - baseURL: https://api.eu-west-1.aws.dash0.com
   baseurl_source: declared
   description: The Manage Views API from Dash0 — 3 operation(s) for manage views.
@@ -133,15 +124,37 @@ apis:
   description: The Query Telemetry API from Dash0 — 4 operation(s) for query telemetry.
   name: Dash0 Query Telemetry API
   slug: dash0-query-telemetry-api
-artifact_total: 45
+- baseURL: https://api.eu-west-1.aws.dash0.com
+  baseurl_source: declared
+  description: The Manage Auth Tokens API from Dash0 — 2 operation(s) for manage auth tokens.
+  name: Dash0 Manage Auth Tokens API
+  slug: dash0-manage-auth-tokens-api
+- baseURL: https://api.eu-west-1.aws.dash0.com
+  baseurl_source: declared
+  description: The Manage Datasets API from Dash0 — 2 operation(s) for manage datasets.
+  name: Dash0 Manage Datasets API
+  slug: dash0-manage-datasets-api
+- baseURL: https://api.eu-west-1.aws.dash0.com
+  baseurl_source: declared
+  description: The Manage Signal To Metrics API from Dash0 — 4 operation(s) for manage signal to metrics.
+  name: Dash0 Manage Signal To Metrics API
+  slug: dash0-manage-signal-to-metrics-api
+- baseURL: https://api.eu-west-1.aws.dash0.com
+  baseurl_source: declared
+  description: The Manage SLOs API from Dash0 — 3 operation(s) for manage slos.
+  name: Dash0 Manage SLOs API
+  slug: dash0-manage-slos-api
+- baseURL: https://api.eu-west-1.aws.dash0.com
+  baseurl_source: declared
+  description: The Manage Time Series Aggregations API from Dash0 — 2 operation(s) for manage time series aggregations.
+  name: Dash0 Manage Time Series Aggregations API
+  slug: dash0-manage-time-series-aggregations-api
+artifact_total: 53
 asyncapis:
 - description: ''
   name: Dash0 Webhooks
   slug: dash0-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Dash0 Edge Collectors API
   slug: open-dash0-edge-collectors-api
@@ -197,18 +210,27 @@ collections:
   name: Dash0 Edge Collectors Query Telemetry API
   slug: open-dash0-query-telemetry-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/dash0/plans/dash0-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/dash0-plans-pricing.yml
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/dash0/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/capabilities/dash0-capability-edges.yml
+  href: https://artifacts.apis.io/dash0/capabilities/dash0-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/dash0-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/overlays/dash0-openapi-overlay.yaml
+  href: https://artifacts.apis.io/dash0/overlays/dash0-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/dash0-openapi-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/a2a/dash0-a2a.yml
+  href: https://artifacts.apis.io/dash0/a2a/dash0-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/dash0-a2a.yml
@@ -281,117 +303,125 @@ common:
   type: Compliance
   url: https://trust.dash0.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/llms/dash0-llms.txt
+  href: https://artifacts.apis.io/dash0/llms/dash0-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dash0-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/packages/dash0-packages.yml
+  href: https://artifacts.apis.io/dash0/packages/dash0-packages.yml
   title: ''
   type: Packages
   url: packages/dash0-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/packages/dash0-packages.yml
+  href: https://artifacts.apis.io/dash0/packages/dash0-packages.yml
   title: ''
   type: SDKs
   url: packages/dash0-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/cli/dash0-cli.yml
+  href: https://artifacts.apis.io/dash0/cli/dash0-cli.yml
   title: ''
   type: CLI
   url: cli/dash0-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/mcp/dash0-mcp.yml
+  href: https://artifacts.apis.io/dash0/mcp/dash0-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/dash0-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/dash0/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/well-known/dash0-well-known.yml
+  href: https://artifacts.apis.io/dash0/well-known/dash0-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/dash0-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/well-known/dash0-security.txt
+  href: https://artifacts.apis.io/dash0/well-known/dash0-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/dash0-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/authentication/dash0-authentication.yml
+  href: https://artifacts.apis.io/dash0/authentication/dash0-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dash0-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/scopes/dash0-scopes.yml
+  href: https://artifacts.apis.io/dash0/scopes/dash0-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/dash0-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/conventions/dash0-conventions.yml
+  href: https://artifacts.apis.io/dash0/conventions/dash0-conventions.yml
   title: ''
   type: Conventions
   url: conventions/dash0-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/conventions/dash0-conventions.yml
+  href: https://artifacts.apis.io/dash0/conventions/dash0-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/dash0-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/errors/dash0-problem-types.yml
+  href: https://artifacts.apis.io/dash0/errors/dash0-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/dash0-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/lifecycle/dash0-lifecycle.yml
+  href: https://artifacts.apis.io/dash0/lifecycle/dash0-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/dash0-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/changelog/dash0-changelog.yml
+  href: https://artifacts.apis.io/dash0/changelog/dash0-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/dash0-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/conformance/dash0-conformance.yml
+  href: https://artifacts.apis.io/dash0/conformance/dash0-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dash0-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/data-model/dash0-data-model.yml
+  href: https://artifacts.apis.io/dash0/data-model/dash0-data-model.yml
   title: ''
   type: DataModel
   url: data-model/dash0-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/asyncapi/dash0-webhooks.yml
+  href: https://artifacts.apis.io/dash0/asyncapi/dash0-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/dash0-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/agentic-access/dash0-agentic-access.yml
+  href: https://artifacts.apis.io/dash0/agentic-access/dash0-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dash0-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/security/dash0-trust-center.yml
+  href: https://artifacts.apis.io/dash0/security/dash0-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/dash0-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/security/dash0-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/dash0/security/dash0-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/dash0-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/security/dash0-domain-security.yml
+  href: https://artifacts.apis.io/dash0/security/dash0-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dash0-domain-security.yml
 created: '2026-07-17'
 description: Dash0 is an OpenTelemetry-native observability platform for engineering teams who want full visibility into logs, metrics, traces, profiles and events without operating complex pipelines or proprietary agents. Founded in 2023 (Series B, $110M, 2026), Dash0 ingests OTLP natively, correlates signals automatically, and offers dashboards, PromQL-based alerting, SLOs, synthetic and website monitoring, a service map, transparent cost controls, and Agent0 AI SRE agents. Its public API is a 108-operation OpenAPI 3.1 surface (regional AWS/GCP hosts) covering Observability-as-Code (dashboards, check/recording/ sampling rules, views, spam filters, notification channels, synthetic checks, automations), telemetry query (spans/logs/traces/SQL), and a Prometheus HTTP API, plus an OAuth-protected MCP server, a Go CLI and a Terraform provider.
+finops:
+- has_sources: true
+  method: derived
+  name: Dash0 Finops
+  primary_unit: million
+  service_category: ''
+  slug: dash0-finops
+  template: false
 image: https://www.dash0.com/images/og-image.png
 layout: provider
 mcp_servers:
@@ -402,46 +432,66 @@ modified: '2026-09-16'
 name: Dash0
 nav: Providers
 network: true
-overview: 'Dash0 publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Edge Collectors API, Manage Agent0 Automations API, Manage Alerting API, and 15 more. Tagged areas include Observability, OpenTelemetry, Monitoring, Logs, and Metrics.
+overview: 'Dash0 publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Edge Collectors API, Manage Agent0 Automations API, Manage Alerting API, and 17 more. Tagged areas include Observability, OpenTelemetry, Monitoring, Logs, and Metrics.
 
 
-  The Dash0 catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Dash0 catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Dash0''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 35 more developer resources.'
-random_paper: 2
+  Dash0''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 37 more developer resources.'
+plans:
+- name: Dash0 Plans Pricing
+  plan_count: 11
+  slug: dash0-plans-pricing
+- name: Dash0 Price Estimates
+  plan_count: 0
+  slug: dash0-price-estimates
+random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: Dash0 API Rules
+  rule_count: 47
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 1
+    warn: 12
+  slug: dash0-rules
 scopes:
 - name: Dash0 Scopes
   scope_count: 1
   slug: dash0-scopes
   summary_line: 1 scope · authorizationCode/refreshToken
 score:
-  band: strong
-  composite: 63.1
+  band: exemplar
+  composite: 72.9
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 33
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.1
   facets:
-    access_clarity: 60.5
-    contract_governance: 18.2
-    contract_quality: 53.9
-    developer_ergonomics: 69.6
+    access_clarity: 100.0
+    contract_governance: 31.8
+    contract_quality: 56.6
+    developer_ergonomics: 67.3
     discoverability: 75.0
     operational_transparency: 52.6
-  previous_composite: 63.1
+  previous_composite: 73.0
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 18
+      marker_coverage: 51.3
+      total: 39
     mcp: first-party
     skills: derived
   regulatory:
@@ -454,13 +504,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/screenshots/dash0-2026-07-25T211225.png
+screenshot: https://apis.io/screenshots/dash0/dash0-2026-07-25T211225.png
 security:
 - kind: authentication
   name: Dash0 Authentication
@@ -478,6 +528,14 @@ security:
   name: Dash0 Trust Center
   slug: dash0-trust-center
   summary_line: SOC 2, ISO 27001, PCI DSS, HIPAA, GDPR
+skill_count: 3
+skills:
+- name: Create Dash0 alerting check rules
+  slug: dash0-alerting-check-rules
+- name: Manage Dash0 dashboards as code
+  slug: dash0-manage-dashboards-as-code
+- name: Query Dash0 telemetry
+  slug: dash0-query-telemetry
 slug: dash0
 tags:
 - Observability

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 24.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -66,9 +69,6 @@ apis:
 artifact_total: 15
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Spurwing Appointment Scheduling Appointments API
   slug: open-spurwing-appointments-api
 - collection_type: open
@@ -82,17 +82,17 @@ collections:
   slug: open-spurwing
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spurwing/refs/heads/main/agentic-access/spurwing-agentic-access.yml
+  href: https://artifacts.apis.io/spurwing/agentic-access/spurwing-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/spurwing-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spurwing/refs/heads/main/security/spurwing-domain-security.yml
+  href: https://artifacts.apis.io/spurwing/security/spurwing-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/spurwing-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spurwing/refs/heads/main/authentication/spurwing-authentication.yml
+  href: https://artifacts.apis.io/spurwing/authentication/spurwing-authentication.yml
   title: ''
   type: Authentication
   url: authentication/spurwing-authentication.yml
@@ -113,17 +113,17 @@ common:
   type: Documentation
   url: https://docs.spurwing.io/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/spurwing/refs/heads/main/plans/spurwing-plans-pricing.yml
+  href: https://artifacts.apis.io/spurwing/plans/spurwing-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/spurwing-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/spurwing/refs/heads/main/rate-limits/spurwing-rate-limits.yml
+  href: https://artifacts.apis.io/spurwing/rate-limits/spurwing-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/spurwing-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/spurwing/refs/heads/main/finops/spurwing-finops.yml
+  href: https://artifacts.apis.io/spurwing/finops/spurwing-finops.yml
   title: ''
   type: FinOps
   url: finops/spurwing-finops.yml
@@ -146,35 +146,51 @@ network: true
 overview: 'Spurwing publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Appointments API, Availability API, Services API, and 1 more. Tagged areas include Scheduling, Appointments, Booking, Calendar, and Availability.
 
 
+  The Spurwing catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Spurwing''s developer surface includes authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Spurwing Plans Pricing
   plan_count: 1
   slug: spurwing-plans-pricing
-random_paper: 15
+random_paper: 7
 rate_limits:
 - limit_count: 2
   name: Spurwing Rate Limits
   slug: spurwing-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Spurwing API Rules
+  rule_count: 56
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 1
+  slug: spurwing-rules
 score:
   band: emerging
-  composite: 22.9
+  composite: 24.6
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 41.0
+    artifact_dirs: 13
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 48.4
     developer_ergonomics: 16.7
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 28.9
+  previous_composite: 24.6
   provenance:
     agentic_access: derived
     contracts:
@@ -188,9 +204,9 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0

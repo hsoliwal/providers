@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: true
   schema_version: '0.2'
-  score: 11.5
-  scored_at: '2026-10-17'
+  score: 14.1
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -73,22 +77,22 @@ common:
   type: Compliance
   url: https://www.legalos.ai/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/legalos/refs/heads/main/conformance/legalos-conformance.yml
+  href: https://artifacts.apis.io/legalos/conformance/legalos-conformance.yml
   title: ''
   type: Conformance
   url: conformance/legalos-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/legalos/refs/heads/main/well-known/legalos-well-known.yml
+  href: https://artifacts.apis.io/legalos/well-known/legalos-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/legalos-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/legalos/refs/heads/main/security/legalos-domain-security.yml
+  href: https://artifacts.apis.io/legalos/security/legalos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/legalos-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/legalos/refs/heads/main/llms/legalos-llms.txt
+  href: https://artifacts.apis.io/legalos/llms/legalos-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/legalos-llms.txt
@@ -113,7 +117,7 @@ description: LegalOS is an AI-native U.S. immigration law practice based in San 
 image: https://cdn.prod.website-files.com/667d1a68c2779a28ef89b338/697dc2de49d014db1c617fe9_OG%201.webp
 layout: provider
 mcp_servers:
-- description: Remote MCP server at mcp.legalos.ai over HTTP.
+- description: Remote MCP server at mcp.legalos.ai over HTTP; 18 tools listed.
   name: LegalOS MCP Server
   slug: legalos
 modified: '2026-07-19'
@@ -124,12 +128,12 @@ overview: 'LegalOS is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   LegalOS''s developer surface includes engineering blog, support, and 15 more developer resources.'
-random_paper: 17
+random_paper: 23
 score:
   band: emerging
   composite: 17.5
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -160,14 +164,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/legalos/refs/heads/main/screenshots/legalos-2026-07-25T224828.png
+screenshot: https://apis.io/screenshots/legalos/legalos-2026-07-25T224828.png
 security:
 - kind: domain-security
   name: Legalos Domain Security

@@ -1,4 +1,21 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +32,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
@@ -23,7 +43,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 35.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://rowguard-api.rowguard-api.workers.dev
@@ -41,45 +61,45 @@ apis:
   description: The Healthz API from RowGuard API Catalog — 1 operation(s) for healthz.
   name: RowGuard API Catalog Healthz API
   slug: rowguard-healthz-api
-artifact_total: 9
+artifact_total: 13
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rowguard/refs/heads/main/plans/rowguard-plans-pricing.yml
+  href: https://artifacts.apis.io/rowguard/plans/rowguard-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/rowguard-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rowguard/refs/heads/main/capabilities/rowguard-capability-edges.yml
+  href: https://artifacts.apis.io/rowguard/capabilities/rowguard-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/rowguard-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rowguard/refs/heads/main/overlays/rowguard-openapi-overlay.yaml
+  href: https://artifacts.apis.io/rowguard/overlays/rowguard-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rowguard-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rowguard/refs/heads/main/mcp/rowguard-mcp.yml
+  href: https://artifacts.apis.io/rowguard/mcp/rowguard-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/rowguard-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rowguard/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rowguard/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rowguard/refs/heads/main/security/rowguard-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rowguard/security/rowguard-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/rowguard-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rowguard/refs/heads/main/security/rowguard-domain-security.yml
+  href: https://artifacts.apis.io/rowguard/security/rowguard-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rowguard-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rowguard/refs/heads/main/authentication/rowguard-authentication.yml
+  href: https://artifacts.apis.io/rowguard/authentication/rowguard-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rowguard-authentication.yml
@@ -128,17 +148,25 @@ common:
   type: LLMsTxt
   url: https://rowguard-api.rowguard-api.workers.dev/llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rowguard/refs/heads/main/well-known/rowguard-well-known.yml
+  href: https://artifacts.apis.io/rowguard/well-known/rowguard-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rowguard-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rowguard/refs/heads/main/well-known/rowguard-security.txt
+  href: https://artifacts.apis.io/rowguard/well-known/rowguard-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/rowguard-security.txt
 created: '2026-09-12'
 description: RowGuard validates UTF-8 CSV data against a caller-supplied column schema before it is imported into a database or automation workflow. In one HTTP request it reports missing values, type and format errors, out-of-range numbers, disallowed values, duplicate identifiers, and spreadsheet-formula (CSV injection) risks, returning record- and column-level references and optionally the rows that passed. It stores no files and calls no AI model, and is distributed through the RapidAPI marketplace.
+finops:
+- has_sources: true
+  method: derived
+  name: Rowguard Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: rowguard-finops
+  template: false
 layout: provider
 mcp_servers:
 - description: MCP server requiring an API key; 3 tools listed. A candidate, not confirmed as published by the provider.
@@ -151,41 +179,60 @@ network: true
 overview: 'RowGuard API Catalog publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: CSV validation API, Example API, and Healthz API. Tagged areas include CSV, Validation, Data Quality, Import, and Automation.
 
 
+  The RowGuard API Catalog catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   RowGuard API Catalog''s developer surface includes authentication, documentation, pricing, and 18 more developer resources.'
 plans:
 - name: Rowguard Plans Pricing
   plan_count: 4
   slug: rowguard-plans-pricing
-random_paper: 17
+- name: Rowguard Price Estimates
+  plan_count: 0
+  slug: rowguard-price-estimates
+random_paper: 11
 rate_limits:
 - limit_count: 9
   name: Rowguard Rate Limits
   slug: rowguard-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: RowGuard API Catalog API Rules
+  rule_count: 46
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 1
+  slug: rowguard-rules
 score:
   band: developing
-  composite: 45.4
+  composite: 49.8
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 54.0
+    artifact_dirs: 23
+    catalog_earned: 61.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 61.0
+    catalog_gap: 53.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.2
   facets:
-    access_clarity: 47.4
-    contract_governance: 0.0
-    contract_quality: 44.1
+    access_clarity: 55.3
+    contract_governance: 13.6
+    contract_quality: 49.0
     developer_ergonomics: 49.4
     discoverability: 71.4
     operational_transparency: 47.4
-  previous_composite: 45.3
+  previous_composite: 48.6
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
     mcp: derived
     skills: derived
@@ -195,14 +242,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/rowguard/refs/heads/main/screenshots/rowguard-2026-10-11T125426.png
+screenshot: https://apis.io/screenshots/rowguard/rowguard-2026-10-11T125426.png
 security:
 - kind: authentication
   name: Rowguard Authentication
@@ -216,6 +263,10 @@ security:
   name: Rowguard Vulnerability Disclosure
   slug: rowguard-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 1
+skills:
+- name: rowguard-validate-csv
+  slug: rowguard-validate-csv
 slug: rowguard
 tags:
 - CSV

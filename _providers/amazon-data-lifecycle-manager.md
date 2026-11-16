@@ -1,16 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
   public: false
   source:
-  - plans
   - authentication
   - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -27,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.7
-  scored_at: '2026-10-17'
+  score: 30.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -74,14 +76,11 @@ arazzos:
 - description: Remove tags from a DLM resource and confirm removal by listing the resource's tags.
   name: Amazon Data Lifecycle Manager Untag Policy Resource
   slug: amazon-data-lifecycle-manager-untag-policy-resource-workflow
-artifact_total: 81
+artifact_total: 80
 collections:
 - collection_type: postman
   name: Amazon Data Lifecycle Manager API
   slug: postman-amazon-data-lifecycle-manager
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Amazon Data Lifecycle Manager Lifecycle Policies API
   slug: open-amazon-data-lifecycle-manager-lifecycle-policies-api
@@ -93,17 +92,17 @@ collections:
   slug: open-amazon-data-lifecycle-manager
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/plans/amazon-data-lifecycle-manager-plans-pricing.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/plans/amazon-data-lifecycle-manager-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/amazon-data-lifecycle-manager-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/rate-limits/amazon-data-lifecycle-manager-rate-limits.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/rate-limits/amazon-data-lifecycle-manager-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/amazon-data-lifecycle-manager-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/finops/amazon-data-lifecycle-manager-finops.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/finops/amazon-data-lifecycle-manager-finops.yml
   title: ''
   type: FinOps
   url: finops/amazon-data-lifecycle-manager-finops.yml
@@ -112,27 +111,27 @@ common:
   type: Website
   url: https://aws.amazon.com/ebs/data-lifecycle-manager/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/agentic-access/amazon-data-lifecycle-manager-agentic-access.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/agentic-access/amazon-data-lifecycle-manager-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amazon-data-lifecycle-manager-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/security/amazon-data-lifecycle-manager-trust-center.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/security/amazon-data-lifecycle-manager-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/amazon-data-lifecycle-manager-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/security/amazon-data-lifecycle-manager-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/security/amazon-data-lifecycle-manager-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-data-lifecycle-manager-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/security/amazon-data-lifecycle-manager-domain-security.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/security/amazon-data-lifecycle-manager-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-data-lifecycle-manager-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/authentication/amazon-data-lifecycle-manager-authentication.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/authentication/amazon-data-lifecycle-manager-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amazon-data-lifecycle-manager-authentication.yml
@@ -141,32 +140,32 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-data-lifecycle-manager/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/arazzo/amazon-data-lifecycle-manager-decommission-policy-workflow.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/arazzo/amazon-data-lifecycle-manager-decommission-policy-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-data-lifecycle-manager-decommission-policy-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/arazzo/amazon-data-lifecycle-manager-disable-policy-workflow.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/arazzo/amazon-data-lifecycle-manager-disable-policy-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-data-lifecycle-manager-disable-policy-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/arazzo/amazon-data-lifecycle-manager-provision-policy-workflow.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/arazzo/amazon-data-lifecycle-manager-provision-policy-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-data-lifecycle-manager-provision-policy-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/arazzo/amazon-data-lifecycle-manager-reconfigure-schedule-workflow.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/arazzo/amazon-data-lifecycle-manager-reconfigure-schedule-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-data-lifecycle-manager-reconfigure-schedule-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/arazzo/amazon-data-lifecycle-manager-tag-policy-resource-workflow.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/arazzo/amazon-data-lifecycle-manager-tag-policy-resource-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-data-lifecycle-manager-tag-policy-resource-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/arazzo/amazon-data-lifecycle-manager-untag-policy-resource-workflow.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/arazzo/amazon-data-lifecycle-manager-untag-policy-resource-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-data-lifecycle-manager-untag-policy-resource-workflow.yml
@@ -219,12 +218,12 @@ common:
   type: Contact
   url: https://aws.amazon.com/contact-us/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/rules/amazon-data-lifecycle-manager-spectral-rules.yml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/rules/amazon-data-lifecycle-manager-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/amazon-data-lifecycle-manager-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/vocabulary/amazon-data-lifecycle-manager-vocabulary.yaml
+  href: https://artifacts.apis.io/amazon-data-lifecycle-manager/vocabulary/amazon-data-lifecycle-manager-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/amazon-data-lifecycle-manager-vocabulary.yaml
@@ -292,11 +291,11 @@ features:
 - description: Trigger snapshot sharing and copying workflows in response to CloudWatch Events for cross-account snapshot automation.
   name: Event-Based Policies
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Amazon Data Lifecycle Manager Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: amazon-data-lifecycle-manager-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-data-lifecycle-manager.png
@@ -402,7 +401,7 @@ modified: '2026-09-16'
 name: Amazon Data Lifecycle Manager
 nav: Providers
 network: true
-overview: 'Amazon Data Lifecycle Manager publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Lifecycle Policies API and Tags API. Tagged areas include Backup, EBS Snapshots, Lifecycle Management, Storage, and Automation.
+overview: 'Amazon Data Lifecycle Manager publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Lifecycle Policies API and Tags API. Tagged areas include Amazon Web Services, Backup, EBS Snapshots, Lifecycle Management, and Storage.
 
 
   The Amazon Data Lifecycle Manager catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -411,9 +410,9 @@ overview: 'Amazon Data Lifecycle Manager publishes 2 API contracts indexed on th
   Amazon Data Lifecycle Manager''s developer surface includes authentication, developer portal, documentation, support, developer console, signup flow, and 24 more developer resources.'
 plans:
 - name: Amazon Data Lifecycle Manager Plans Pricing
-  plan_count: 3
+  plan_count: 0
   slug: amazon-data-lifecycle-manager-plans-pricing
-random_paper: 6
+random_paper: 10
 rate_limits:
 - limit_count: 5
   name: Amazon Data Lifecycle Manager Rate Limits
@@ -444,23 +443,23 @@ rules:
   slug: amazon-data-lifecycle-manager-spectral-rules
 score:
   band: developing
-  composite: 53.3
+  composite: 53.1
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 69.0
+    artifact_dirs: 21
+    catalog_earned: 66.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.0
+    catalog_gap: 49.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 43.4
+    access_clarity: 35.5
     contract_governance: 27.3
     contract_quality: 65.5
     developer_ergonomics: 63.1
     discoverability: 66.1
-    operational_transparency: 26.3
-  previous_composite: 54.8
+    operational_transparency: 36.8
+  previous_composite: 53.1
   provenance:
     agentic_access: derived
     contracts:
@@ -474,13 +473,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/amazon-data-lifecycle-manager/refs/heads/main/screenshots/amazon-data-lifecycle-manager-2026-06-20T171613.png
+screenshot: https://apis.io/screenshots/amazon-data-lifecycle-manager/amazon-data-lifecycle-manager-2026-06-20T171613.png
 security:
 - kind: authentication
   name: Amazon Data Lifecycle Manager Authentication
@@ -500,6 +499,7 @@ security:
   summary_line: PCI DSS, HIPAA, FedRAMP, GDPR, FIPS 140
 slug: amazon-data-lifecycle-manager
 tags:
+- Amazon Web Services
 - Backup
 - EBS Snapshots
 - Lifecycle Management

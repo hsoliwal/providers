@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The agent-facing commerce surface of the SAMBAZON online store. The merchant profile at /.well-known/ucp advertises the Universal Commerce Protocol (versions 2026-04-08 and 2026-01-23) over an MCP/JSO
@@ -47,7 +50,7 @@ apis:
 artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/security/sambazon-domain-security.yml
+  href: https://artifacts.apis.io/sambazon/security/sambazon-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sambazon-domain-security.yml
@@ -60,52 +63,52 @@ common:
   type: Documentation
   url: https://www.sambazon.com/agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/llms/sambazon-llms.txt
+  href: https://artifacts.apis.io/sambazon/llms/sambazon-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sambazon-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/sambazon/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/mcp/sambazon-mcp.yml
+  href: https://artifacts.apis.io/sambazon/mcp/sambazon-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/sambazon-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/well-known/sambazon-well-known.yml
+  href: https://artifacts.apis.io/sambazon/well-known/sambazon-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sambazon-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/authentication/sambazon-authentication.yml
+  href: https://artifacts.apis.io/sambazon/authentication/sambazon-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sambazon-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/scopes/sambazon-scopes.yml
+  href: https://artifacts.apis.io/sambazon/scopes/sambazon-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/sambazon-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/conventions/sambazon-conventions.yml
+  href: https://artifacts.apis.io/sambazon/conventions/sambazon-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sambazon-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/errors/sambazon-problem-types.yml
+  href: https://artifacts.apis.io/sambazon/errors/sambazon-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sambazon-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/conformance/sambazon-conformance.yml
+  href: https://artifacts.apis.io/sambazon/conformance/sambazon-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sambazon-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/lifecycle/sambazon-lifecycle.yml
+  href: https://artifacts.apis.io/sambazon/lifecycle/sambazon-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sambazon-lifecycle.yml
@@ -149,7 +152,7 @@ overview: 'Sambazon is listed with 2 APIs on the [APIs.io](https://apis.io/) net
 
 
   Sambazon''s developer surface includes documentation, authentication, engineering blog, support, signup flow, and 14 more developer resources.'
-random_paper: 1
+random_paper: 19
 scopes:
 - name: Sambazon Scopes
   scope_count: 4
@@ -165,7 +168,7 @@ score:
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
@@ -173,7 +176,7 @@ score:
     developer_ergonomics: 35.7
     discoverability: 63.3
     operational_transparency: 0.0
-  previous_composite: 25.3
+  previous_composite: 25.4
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -184,14 +187,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sambazon/refs/heads/main/screenshots/sambazon-2026-09-02T154343.png
+screenshot: https://apis.io/screenshots/sambazon/sambazon-2026-09-02T154343.png
 security:
 - kind: authentication
   name: Sambazon Authentication

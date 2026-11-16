@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Open access
   onboarding: open
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   - '{''url'': ''https://www.zinrelo.com'', ''status'': 301, ''note'': ''declared website redirects to https://www.trueloyal.com/ — a different registrable domain (zinrelo.com -> trueloyal.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: true
   try_now: true
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -83,9 +90,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Zinrelo Loyalty Events API
   slug: open-zinrelo-events-api
 - collection_type: open
@@ -115,27 +119,27 @@ common:
   type: Blog
   url: https://www.trueloyal.com/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zinrelo/refs/heads/main/capabilities/zinrelo-capability-edges.yml
+  href: https://artifacts.apis.io/zinrelo/capabilities/zinrelo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/zinrelo-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zinrelo/refs/heads/main/agentic-access/zinrelo-agentic-access.yml
+  href: https://artifacts.apis.io/zinrelo/agentic-access/zinrelo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zinrelo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zinrelo/refs/heads/main/security/zinrelo-trust-center.yml
+  href: https://artifacts.apis.io/zinrelo/security/zinrelo-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/zinrelo-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zinrelo/refs/heads/main/security/zinrelo-domain-security.yml
+  href: https://artifacts.apis.io/zinrelo/security/zinrelo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zinrelo-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zinrelo/refs/heads/main/authentication/zinrelo-authentication.yml
+  href: https://artifacts.apis.io/zinrelo/authentication/zinrelo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zinrelo-authentication.yml
@@ -156,17 +160,17 @@ common:
   type: APIReference
   url: https://zinrelo.github.io/slate/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zinrelo/refs/heads/main/plans/zinrelo-plans-pricing.yml
+  href: https://artifacts.apis.io/zinrelo/plans/zinrelo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/zinrelo-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zinrelo/refs/heads/main/rate-limits/zinrelo-rate-limits.yml
+  href: https://artifacts.apis.io/zinrelo/rate-limits/zinrelo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/zinrelo-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zinrelo/refs/heads/main/finops/zinrelo-finops.yml
+  href: https://artifacts.apis.io/zinrelo/finops/zinrelo-finops.yml
   title: ''
   type: FinOps
   url: finops/zinrelo-finops.yml
@@ -189,35 +193,51 @@ network: true
 overview: 'Zinrelo publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Events API, Members API, Points API, and 4 more. Tagged areas include Loyalty, Rewards, Points, Customer Retention, and E-Commerce.
 
 
+  The Zinrelo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Zinrelo''s developer surface includes engineering blog, authentication, documentation, API reference, and 9 more developer resources.'
 plans:
 - name: Zinrelo Plans Pricing
   plan_count: 3
   slug: zinrelo-plans-pricing
-random_paper: 1
+random_paper: 3
 rate_limits:
 - limit_count: 2
   name: Zinrelo Rate Limits
   slug: zinrelo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Zinrelo API Rules
+  rule_count: 65
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 4
+  slug: zinrelo-rules
 score:
   band: thin
-  composite: 28.1
+  composite: 30.7
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 42.0
+    artifact_dirs: 16
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.9
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.7
-    developer_ergonomics: 27.4
+    developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 35.0
+  previous_composite: 29.8
   provenance:
     agentic_access: derived
     contracts:
@@ -231,13 +251,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zinrelo/refs/heads/main/screenshots/zinrelo-2026-09-02T171754.png
+screenshot: https://apis.io/screenshots/zinrelo/zinrelo-2026-09-02T171754.png
 security:
 - kind: authentication
   name: Zinrelo Authentication

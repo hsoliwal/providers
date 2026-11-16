@@ -1,11 +1,15 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
+  confidence: medium
+  label: Open access
+  onboarding: open
   pricing: unknown
-  public: false
-  source: []
+  public: true
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
@@ -65,42 +72,42 @@ common:
   type: PrivacyPolicy
   url: https://www.andersonsinc.com/privacy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/andersons/refs/heads/main/well-known/andersons-well-known.yml
+  href: https://artifacts.apis.io/andersons/well-known/andersons-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/andersons-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/andersons/refs/heads/main/authentication/andersons-authentication.yml
+  href: https://artifacts.apis.io/andersons/authentication/andersons-authentication.yml
   title: ''
   type: Authentication
   url: authentication/andersons-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/andersons/refs/heads/main/scopes/andersons-scopes.yml
+  href: https://artifacts.apis.io/andersons/scopes/andersons-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/andersons-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/andersons/refs/heads/main/conformance/andersons-conformance.yml
+  href: https://artifacts.apis.io/andersons/conformance/andersons-conformance.yml
   title: ''
   type: Conformance
   url: conformance/andersons-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/andersons/refs/heads/main/security/andersons-domain-security.yml
+  href: https://artifacts.apis.io/andersons/security/andersons-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/andersons-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/andersons/refs/heads/main/plans/andersons-plans-pricing.yml
+  href: https://artifacts.apis.io/andersons/plans/andersons-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/andersons-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/andersons/refs/heads/main/rate-limits/andersons-rate-limits.yml
+  href: https://artifacts.apis.io/andersons/rate-limits/andersons-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/andersons-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/andersons/refs/heads/main/llms/andersons-llms.txt
+  href: https://artifacts.apis.io/andersons/llms/andersons-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/andersons-llms.txt
@@ -155,7 +162,7 @@ press:
 - date: ''
   title: The Andersons, Inc. Reports First Quarter Results
   url: https://www.prnewswire.com/news-releases/the-andersons-inc-reports-first-quarter-results-302762937.html
-random_paper: 5
+random_paper: 13
 rate_limits:
 - limit_count: 0
   name: Andersons Rate Limits
@@ -169,7 +176,7 @@ score:
   band: emerging
   composite: 18.8
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -199,14 +206,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 34.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/andersons/refs/heads/main/screenshots/andersons-2026-06-20T171949.png
+screenshot: https://apis.io/screenshots/andersons/andersons-2026-06-20T171949.png
 security:
 - kind: authentication
   name: Andersons Authentication

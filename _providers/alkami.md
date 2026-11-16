@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Alkami's RESTful digital-banking APIs (D2C, B2B, and Open Banking) plus the Alkami SDK, built on OpenID Connect and documented in the gated Alkami DevPortal.
@@ -75,22 +78,22 @@ common:
   type: GitHubOrganization
   url: https://github.com/Alkami
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alkami/refs/heads/main/authentication/alkami-authentication.yml
+  href: https://artifacts.apis.io/alkami/authentication/alkami-authentication.yml
   title: ''
   type: Authentication
   url: authentication/alkami-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alkami/refs/heads/main/well-known/alkami-security.txt
+  href: https://artifacts.apis.io/alkami/well-known/alkami-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/alkami-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alkami/refs/heads/main/well-known/alkami-well-known.yml
+  href: https://artifacts.apis.io/alkami/well-known/alkami-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/alkami-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alkami/refs/heads/main/security/alkami-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/alkami/security/alkami-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/alkami-vulnerability-disclosure.yml
@@ -99,12 +102,12 @@ common:
   type: Security
   url: https://www.alkami.com/tools/Vulnerability-Disclosure.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alkami/refs/heads/main/security/alkami-domain-security.yml
+  href: https://artifacts.apis.io/alkami/security/alkami-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/alkami-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alkami/refs/heads/main/llms/alkami-llms.txt
+  href: https://artifacts.apis.io/alkami/llms/alkami-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/alkami-llms.txt
@@ -120,12 +123,12 @@ overview: 'Alkami is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Alkami''s developer surface includes documentation, engineering blog, support, authentication, and 11 more developer resources.'
-random_paper: 7
+random_paper: 23
 score:
   band: emerging
   composite: 16.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -146,14 +149,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 17.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/alkami/refs/heads/main/screenshots/alkami-2026-07-25T195627.png
+screenshot: https://apis.io/screenshots/alkami/alkami-2026-07-25T195627.png
 security:
 - kind: authentication
   name: Alkami Authentication

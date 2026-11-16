@@ -1,6 +1,18 @@
 ---
+access_model:
+  confidence: medium
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.7
-  scored_at: '2026-10-17'
+  score: 28.1
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - baseURL: https://api.cnaught.com
@@ -41,80 +56,80 @@ apis:
   description: The Subaccounts API from CNaught — 1 operation(s) for subaccounts.
   name: CNaught Subaccounts API
   slug: cnaught-subaccounts-api
-artifact_total: 14
+artifact_total: 15
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/plans/cnaught-plans-pricing.yml
+  href: https://artifacts.apis.io/cnaught/plans/cnaught-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cnaught-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/rules/cnaught-rules.yml
+  href: https://artifacts.apis.io/cnaught/rules/cnaught-rules.yml
   title: ''
   type: Spectral
   url: rules/cnaught-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/json-ld/cnaught-context.jsonld
+  href: https://artifacts.apis.io/cnaught/json-ld/cnaught-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cnaught-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/vocabulary/cnaught-vocabulary.yml
+  href: https://artifacts.apis.io/cnaught/vocabulary/cnaught-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cnaught-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/data-model/cnaught-data-model.yml
+  href: https://artifacts.apis.io/cnaught/data-model/cnaught-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cnaught-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/changelog/cnaught-changelog.yml
+  href: https://artifacts.apis.io/cnaught/changelog/cnaught-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/cnaught-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/conventions/cnaught-conventions.yml
+  href: https://artifacts.apis.io/cnaught/conventions/cnaught-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/cnaught-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/conventions/cnaught-conventions.yml
+  href: https://artifacts.apis.io/cnaught/conventions/cnaught-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cnaught-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/authentication/cnaught-authentication.yml
+  href: https://artifacts.apis.io/cnaught/authentication/cnaught-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cnaught-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/conformance/cnaught-conformance.yml
+  href: https://artifacts.apis.io/cnaught/conformance/cnaught-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cnaught-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/llms/cnaught-llms.txt
+  href: https://artifacts.apis.io/cnaught/llms/cnaught-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cnaught-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/hosts/cnaught-hosts.yml
+  href: https://artifacts.apis.io/cnaught/hosts/cnaught-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cnaught-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/vendors/cnaught-vendors.yml
+  href: https://artifacts.apis.io/cnaught/vendors/cnaught-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cnaught-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/packages/cnaught-packages.yml
+  href: https://artifacts.apis.io/cnaught/packages/cnaught-packages.yml
   title: ''
   type: SDKs
   url: packages/cnaught-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/packages/cnaught-packages.yml
+  href: https://artifacts.apis.io/cnaught/packages/cnaught-packages.yml
   title: ''
   type: Packages
   url: packages/cnaught-packages.yml
@@ -139,7 +154,7 @@ common:
   type: ChangeLog
   url: https://docs.cnaught.com/changelog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cnaught/refs/heads/main/security/cnaught-domain-security.yml
+  href: https://artifacts.apis.io/cnaught/security/cnaught-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cnaught-domain-security.yml
@@ -173,6 +188,14 @@ common:
   url: https://www.cnaught.com/contact-sales
 created: '2026-10-09'
 description: CNaught provides a science‑backed platform that helps businesses purchase, manage and retire high‑integrity carbon credits. Their API enables integration of carbon‑credit portfolios, access to Energy Attribute Certificates, and tools for emissions calculations, aiming to simplify climate impact for companies of any size.
+finops:
+- has_sources: true
+  method: derived
+  name: Cnaught Finops
+  primary_unit: ''
+  service_category: ''
+  slug: cnaught-finops
+  template: true
 image: https://www.cnaught.com/api/og?title=Carbon credits you can trust
 json_schemas:
 - name: DeleteV1SubaccountsIdResponse
@@ -203,7 +226,7 @@ modified: '2026-10-09'
 name: CNaught
 nav: Providers
 network: true
-overview: 'CNaught is listed with 3 APIs on the [APIs.io](https://apis.io/) network: CNaught API, Orders API, and Subaccounts API. Tagged areas include Company, Climate, CarbonCredits, and Sustainability.
+overview: 'CNaught is listed with 3 APIs on the [APIs.io](https://apis.io/) network: CNaught API, Orders API, and Subaccounts API. Tagged areas include Company, Climate, Carbon Credits, and Sustainability.
 
 
   The CNaught catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -214,7 +237,7 @@ plans:
 - name: Cnaught Plans Pricing
   plan_count: 3
   slug: cnaught-plans-pricing
-random_paper: 20
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -229,22 +252,24 @@ rules:
     warn: 1
   slug: cnaught-rules
 score:
-  band: developing
-  composite: 44.6
+  band: thin
+  composite: 34.9
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 25
     catalog_earned: 69.8
     catalog_earned_first_party: 12.0
     catalog_gap: 45.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.7
   facets:
-    access_clarity: 63.2
+    access_clarity: 47.4
     contract_governance: 22.0
     contract_quality: 23.8
-    developer_ergonomics: 54.8
+    developer_ergonomics: 36.9
     discoverability: 69.6
-    operational_transparency: 36.8
+    operational_transparency: 18.4
+  previous_composite: 44.6
   provenance:
     conformance: derived
     contracts:
@@ -258,12 +283,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cnaught/cnaught-2026-11-03T124634.png
 security:
 - kind: authentication
   name: Cnaught Authentication
@@ -277,7 +304,7 @@ slug: cnaught
 tags:
 - Company
 - Climate
-- CarbonCredits
+- Carbon Credits
 - Sustainability
 website: https://www.cnaught.com/
 ---

@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Versioned REST API for the CodeNOW platform covering applications, components, containers, libraries, builds, releases, triggers, deployments, environments, clusters, managed services, labels, teams a
@@ -62,22 +67,22 @@ common:
   type: GettingStarted
   url: https://docs.codenow.com/manuals
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codenow/refs/heads/main/authentication/codenow-authentication.yml
+  href: https://artifacts.apis.io/codenow/authentication/codenow-authentication.yml
   title: ''
   type: Authentication
   url: authentication/codenow-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codenow/refs/heads/main/mcp/codenow-mcp.yml
+  href: https://artifacts.apis.io/codenow/mcp/codenow-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/codenow-mcp.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/codenow/refs/heads/main/rate-limits/codenow-rate-limits.yml
+  href: https://artifacts.apis.io/codenow/rate-limits/codenow-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/codenow-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codenow/refs/heads/main/lifecycle/codenow-lifecycle.yml
+  href: https://artifacts.apis.io/codenow/lifecycle/codenow-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/codenow-lifecycle.yml
@@ -90,32 +95,32 @@ common:
   type: Roadmap
   url: https://www.codenow.com/en/product/roadmap
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/codenow/refs/heads/main/changelog/codenow-changelog.yml
+  href: https://artifacts.apis.io/codenow/changelog/codenow-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/codenow-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codenow/refs/heads/main/conventions/codenow-conventions.yml
+  href: https://artifacts.apis.io/codenow/conventions/codenow-conventions.yml
   title: ''
   type: Conventions
   url: conventions/codenow-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codenow/refs/heads/main/conformance/codenow-conformance.yml
+  href: https://artifacts.apis.io/codenow/conformance/codenow-conformance.yml
   title: ''
   type: Conformance
   url: conformance/codenow-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/codenow/refs/heads/main/data-model/codenow-data-model.yml
+  href: https://artifacts.apis.io/codenow/data-model/codenow-data-model.yml
   title: ''
   type: DataModel
   url: data-model/codenow-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/codenow/refs/heads/main/security/codenow-domain-security.yml
+  href: https://artifacts.apis.io/codenow/security/codenow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/codenow-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/codenow/refs/heads/main/llms/codenow-llms.txt
+  href: https://artifacts.apis.io/codenow/llms/codenow-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/codenow-llms.txt
@@ -163,7 +168,7 @@ overview: 'CodeNOW is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   CodeNOW''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, engineering blog, support, and 17 more developer resources.'
-random_paper: 3
+random_paper: 7
 rate_limits:
 - limit_count: 1
   name: Codenow Rate Limits
@@ -172,13 +177,13 @@ score:
   band: thin
   composite: 30.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
@@ -188,11 +193,13 @@ score:
     operational_transparency: 57.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - czech-republic
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - cee
     - europe
-  previous_composite: 29.9
+  previous_composite: 30.0
   provenance:
     conformance: first-party
     mcp: first-party
@@ -202,14 +209,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/codenow/refs/heads/main/screenshots/codenow-2026-07-25T205923.png
+screenshot: https://apis.io/screenshots/codenow/codenow-2026-07-25T205923.png
 security:
 - kind: authentication
   name: Codenow Authentication

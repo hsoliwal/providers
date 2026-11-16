@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -15,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 50.7
-  scored_at: '2026-10-17'
+  score: 51.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 379
   human_in_the_loop: 20
@@ -31,7 +47,7 @@ agentic_access:
   operation_count: 697
   slug: pagopa-agentic-access
   summary_line: 697 operations · 379 acting · 20 human-in-the-loop
-api_count: 86
+api_count: 43
 apis:
 - description: SOAP (WSDL) interfaces of the pagoPA payments node (Nodo dei Pagamenti) between creditor organizations (EC/PA), payment service providers (PSP) and the node, published in the pagopa/pagopa-api reposit
   name: pagoPA - Nodo dei Pagamenti SOAP interfaces
@@ -441,75 +457,75 @@ apis:
   description: The Utility API from PagoPA — 1 operation(s) for utility.
   name: PagoPA Utility API
   slug: pagopa-utility-api
-artifact_total: 189
+artifact_total: 193
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/capabilities/pagopa-capability-edges.yml
+  href: https://artifacts.apis.io/pagopa/capabilities/pagopa-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/pagopa-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/agentic-access/pagopa-agentic-access.yml
+  href: https://artifacts.apis.io/pagopa/agentic-access/pagopa-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pagopa-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/rate-limits/pagopa-rate-limits.yml
+  href: https://artifacts.apis.io/pagopa/rate-limits/pagopa-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pagopa-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/rules/pagopa-rules.yml
+  href: https://artifacts.apis.io/pagopa/rules/pagopa-rules.yml
   title: ''
   type: Spectral
   url: rules/pagopa-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/rules/pagopa-pn-mandate-spectral-rules.yml
+  href: https://artifacts.apis.io/pagopa/rules/pagopa-pn-mandate-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/pagopa-pn-mandate-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/rules/pagopa-interop-be-monorepo-spectral-rules.yml
+  href: https://artifacts.apis.io/pagopa/rules/pagopa-interop-be-monorepo-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/pagopa-interop-be-monorepo-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/json-ld/pagopa-context.jsonld
+  href: https://artifacts.apis.io/pagopa/json-ld/pagopa-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/pagopa-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/vocabulary/pagopa-vocabulary.yml
+  href: https://artifacts.apis.io/pagopa/vocabulary/pagopa-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/pagopa-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pagopa/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/data-model/pagopa-data-model.yml
+  href: https://artifacts.apis.io/pagopa/data-model/pagopa-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pagopa-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/changelog/pagopa-changelog.yml
+  href: https://artifacts.apis.io/pagopa/changelog/pagopa-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/pagopa-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/conventions/pagopa-conventions.yml
+  href: https://artifacts.apis.io/pagopa/conventions/pagopa-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/pagopa-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/conventions/pagopa-conventions.yml
+  href: https://artifacts.apis.io/pagopa/conventions/pagopa-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pagopa-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/sandbox/pagopa-sandbox.yml
+  href: https://artifacts.apis.io/pagopa/sandbox/pagopa-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/pagopa-sandbox.yml
@@ -518,57 +534,57 @@ common:
   type: StatusPage
   url: https://api.notifichedigitali.it/status
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/lifecycle/pagopa-lifecycle.yml
+  href: https://artifacts.apis.io/pagopa/lifecycle/pagopa-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pagopa-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/errors/pagopa-problem-types.yml
+  href: https://artifacts.apis.io/pagopa/errors/pagopa-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pagopa-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/conformance/pagopa-conformance.yml
+  href: https://artifacts.apis.io/pagopa/conformance/pagopa-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pagopa-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/overlays/pagopa-aca-overlay.yaml
+  href: https://artifacts.apis.io/pagopa/overlays/pagopa-aca-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pagopa-aca-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/llms/pagopa-llms.txt
+  href: https://artifacts.apis.io/pagopa/llms/pagopa-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pagopa-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/mcp/pagopa-tool-crosswalk.yml
+  href: https://artifacts.apis.io/pagopa/mcp/pagopa-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/pagopa-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/mcp/pagopa-mcp.yml
+  href: https://artifacts.apis.io/pagopa/mcp/pagopa-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/pagopa-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/hosts/pagopa-hosts.yml
+  href: https://artifacts.apis.io/pagopa/hosts/pagopa-hosts.yml
   title: ''
   type: Hosts
   url: hosts/pagopa-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/vendors/pagopa-vendors.yml
+  href: https://artifacts.apis.io/pagopa/vendors/pagopa-vendors.yml
   title: ''
   type: Vendors
   url: vendors/pagopa-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/packages/pagopa-packages.yml
+  href: https://artifacts.apis.io/pagopa/packages/pagopa-packages.yml
   title: ''
   type: SDKs
   url: packages/pagopa-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/packages/pagopa-packages.yml
+  href: https://artifacts.apis.io/pagopa/packages/pagopa-packages.yml
   title: ''
   type: Packages
   url: packages/pagopa-packages.yml
@@ -577,17 +593,17 @@ common:
   type: GettingStarted
   url: https://developer.pagopa.it/it/send/guides/manuale-operativo/v1.1.4/mittente/funzionario-autorizzato-del-mittente/richiesta-di-onboarding-processo-di-adesione
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/scopes/pagopa-scopes.yml
+  href: https://artifacts.apis.io/pagopa/scopes/pagopa-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/pagopa-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/authentication/pagopa-authentication.yml
+  href: https://artifacts.apis.io/pagopa/authentication/pagopa-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pagopa-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/security/pagopa-domain-security.yml
+  href: https://artifacts.apis.io/pagopa/security/pagopa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pagopa-domain-security.yml
@@ -972,7 +988,7 @@ plans:
 - name: Pagopa Plans Pricing
   plan_count: 0
   slug: pagopa-plans-pricing
-random_paper: 16
+random_paper: 8
 rate_limits:
 - limit_count: 2
   name: Pagopa Rate Limits
@@ -1020,23 +1036,23 @@ scopes:
   slug: pagopa-scopes
   summary_line: 6 scopes · clientCredentials
 score:
-  band: exemplar
-  composite: 69.0
+  band: strong
+  composite: 57.9
   coverage:
-    artifact_dirs: 32
+    artifact_dirs: 34
     catalog_earned: 82.3
     catalog_earned_first_party: 26.0
     catalog_gap: 32.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.1
+  delta: -11.1
   facets:
-    access_clarity: 42.1
+    access_clarity: 21.1
     contract_governance: 62.9
-    contract_quality: 68.5
-    developer_ergonomics: 66.1
-    discoverability: 73.3
-    operational_transparency: 68.4
+    contract_quality: 68.3
+    developer_ergonomics: 47.0
+    discoverability: 72.5
+    operational_transparency: 52.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -1045,12 +1061,12 @@ score:
     regions:
     - europe
     - italy-southern-europe
-  previous_composite: 64.9
+  previous_composite: 69.0
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 98.8
+      callable: 92.6
       derived: 0
       marker_coverage: 0.0
       total: 81
@@ -1061,14 +1077,14 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 32.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/pagopa/refs/heads/main/screenshots/pagopa-2026-10-11T112310.png
+screenshot: https://apis.io/screenshots/pagopa/pagopa-2026-10-11T112310.png
 security:
 - kind: authentication
   name: Pagopa Authentication
@@ -1078,6 +1094,16 @@ security:
   name: Pagopa Domain Security
   slug: pagopa-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 4
+skills:
+- name: pagopa-io-send-message
+  slug: pagopa-io-send-message
+- name: pagopa-manage-debt-positions
+  slug: pagopa-manage-debt-positions
+- name: pagopa-print-payment-notices
+  slug: pagopa-print-payment-notices
+- name: pagopa-send-digital-notification
+  slug: pagopa-send-digital-notification
 slug: pagopa
 tags:
 - Company

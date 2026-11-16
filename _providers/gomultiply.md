@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -63,22 +66,22 @@ common:
   type: Blog
   url: https://www.gomultiply.com/news
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gomultiply/refs/heads/main/security/gomultiply-domain-security.yml
+  href: https://artifacts.apis.io/gomultiply/security/gomultiply-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gomultiply-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gomultiply/refs/heads/main/llms/gomultiply-llms.txt
+  href: https://artifacts.apis.io/gomultiply/llms/gomultiply-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gomultiply-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gomultiply/refs/heads/main/plans/gomultiply-plans-pricing.yml
+  href: https://artifacts.apis.io/gomultiply/plans/gomultiply-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gomultiply-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gomultiply/refs/heads/main/rate-limits/gomultiply-rate-limits.yml
+  href: https://artifacts.apis.io/gomultiply/rate-limits/gomultiply-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gomultiply-rate-limits.yml
@@ -120,14 +123,14 @@ plans:
 - name: Gomultiply Plans Pricing
   plan_count: 3
   slug: gomultiply-plans-pricing
-random_paper: 10
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Gomultiply Rate Limits
   slug: gomultiply-rate-limits
 score:
   band: emerging
-  composite: 11.7
+  composite: 18.3
   coverage:
     artifact_dirs: 9
     catalog_earned: 39.0
@@ -135,12 +138,12 @@ score:
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.6
   facets:
-    access_clarity: 38.2
+    access_clarity: 65.8
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 0.0
+    developer_ergonomics: 2.4
     discoverability: 55.4
     operational_transparency: 0.0
   previous_composite: 11.7
@@ -149,15 +152,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 9.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/gomultiply/refs/heads/main/screenshots/gomultiply-2026-07-25T220030.png
+screenshot: https://apis.io/screenshots/gomultiply/gomultiply-2026-07-25T220030.png
 security:
 - kind: domain-security
   name: Gomultiply Domain Security

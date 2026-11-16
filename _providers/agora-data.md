@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.6
-  scored_at: '2026-10-17'
+  score: 36.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 21
   slug: agora-data-agentic-access
   summary_line: 21 operations · 13 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.agoradata.com
   baseurl_source: declared
@@ -95,15 +98,12 @@ apis:
   description: The Oauth API from Agora Data — 2 operation(s) for oauth.
   name: Agora Data OAUTH API
   slug: agora-data-oauth-api
-artifact_total: 27
+artifact_total: 30
 asyncapis:
 - description: ''
   name: Agora Data Webhooks
   slug: agora-data-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Fast Health API
   slug: open-agora-data-health-api
@@ -199,77 +199,77 @@ common:
   type: Careers
   url: https://agoradata.com/careers/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/security/agora-data-domain-security.yml
+  href: https://artifacts.apis.io/agora-data/security/agora-data-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/agora-data-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/agentic-access/agora-data-agentic-access.yml
+  href: https://artifacts.apis.io/agora-data/agentic-access/agora-data-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/agora-data-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/authentication/agora-data-authentication.yml
+  href: https://artifacts.apis.io/agora-data/authentication/agora-data-authentication.yml
   title: ''
   type: Authentication
   url: authentication/agora-data-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/scopes/agora-data-scopes.yml
+  href: https://artifacts.apis.io/agora-data/scopes/agora-data-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/agora-data-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/well-known/agora-data-well-known.yml
+  href: https://artifacts.apis.io/agora-data/well-known/agora-data-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/agora-data-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/conventions/agora-data-conventions.yml
+  href: https://artifacts.apis.io/agora-data/conventions/agora-data-conventions.yml
   title: ''
   type: Conventions
   url: conventions/agora-data-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/errors/agora-data-problem-types.yml
+  href: https://artifacts.apis.io/agora-data/errors/agora-data-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/agora-data-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/lifecycle/agora-data-lifecycle.yml
+  href: https://artifacts.apis.io/agora-data/lifecycle/agora-data-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/agora-data-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/conformance/agora-data-conformance.yml
+  href: https://artifacts.apis.io/agora-data/conformance/agora-data-conformance.yml
   title: ''
   type: Conformance
   url: conformance/agora-data-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/data-model/agora-data-data-model.yml
+  href: https://artifacts.apis.io/agora-data/data-model/agora-data-data-model.yml
   title: ''
   type: DataModel
   url: data-model/agora-data-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/asyncapi/agora-data-webhooks.yml
+  href: https://artifacts.apis.io/agora-data/asyncapi/agora-data-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/agora-data-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/mcp/agora-data-mcp.yml
+  href: https://artifacts.apis.io/agora-data/mcp/agora-data-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/agora-data-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/agora-data/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/llms/agora-data-llms.txt
+  href: https://artifacts.apis.io/agora-data/llms/agora-data-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/agora-data-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/overlays/agora-data-openapi-overlay.yaml
+  href: https://artifacts.apis.io/agora-data/overlays/agora-data-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/agora-data-openapi-overlay.yaml
@@ -284,42 +284,55 @@ network: true
 overview: 'Agora Data publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Health API, Hooks API, Import API, and 7 more. Tagged areas include Company, Auto Finance, Automotive, Lending, and Financial Services.
 
 
-  The Agora Data catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Agora Data catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Agora Data''s developer surface includes engineering blog, support, getting-started guide, documentation, API reference, authentication, and 24 more developer resources.'
-random_paper: 9
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 80
+  extends:
+  - spectral:oas
+  name: Agora Data API Rules
+  rule_count: 39
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 3
+    warn: 2
+  slug: agora-data-rules
 scopes:
 - name: Agora Data Scopes
   scope_count: 6
   slug: agora-data-scopes
   summary_line: 6 scopes · authorizationCode
 score:
-  band: thin
-  composite: 38.6
+  band: developing
+  composite: 41.2
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.0
   facets:
     access_clarity: 27.6
-    contract_governance: 4.5
-    contract_quality: 43.8
+    contract_governance: 18.2
+    contract_quality: 47.8
     developer_ergonomics: 58.9
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 38.5
+  previous_composite: 40.2
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 10
     mcp: derived
     skills: derived
@@ -329,13 +342,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/agora-data/refs/heads/main/screenshots/agora-data-2026-08-07T161038.png
+screenshot: https://apis.io/screenshots/agora-data/agora-data-2026-08-07T161038.png
 security:
 - kind: authentication
   name: Agora Data Authentication
@@ -345,6 +358,14 @@ security:
   name: Agora Data Domain Security
   slug: agora-data-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Authenticate to Agora Data and query a third-party data provider
+  slug: agora-data-authenticate-and-query-providers
+- name: Import a BHPH loan portfolio file into Agora Data
+  slug: agora-data-import-loan-portfolio
+- name: Review and remove loans from an Agora Data account
+  slug: agora-data-review-and-delete-loans
 slug: agora-data
 tags:
 - Company

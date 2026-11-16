@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: W4 Cloud (W4GD) is a managed multiplayer backend-as-a-service for the Godot game engine, consumed through the w4gd Godot editor addon (a GDScript SDK). It provides player authentication, a Supabase/Po
@@ -90,52 +94,52 @@ common:
   type: Login
   url: https://www.w4games.com/web/login
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/w4-games/refs/heads/main/authentication/w4-games-authentication.yml
+  href: https://artifacts.apis.io/w4-games/authentication/w4-games-authentication.yml
   title: ''
   type: Authentication
   url: authentication/w4-games-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/w4-games/refs/heads/main/packages/w4-games-packages.yml
+  href: https://artifacts.apis.io/w4-games/packages/w4-games-packages.yml
   title: ''
   type: Packages
   url: packages/w4-games-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/w4-games/refs/heads/main/packages/w4-games-packages.yml
+  href: https://artifacts.apis.io/w4-games/packages/w4-games-packages.yml
   title: ''
   type: SDKs
   url: packages/w4-games-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/w4-games/refs/heads/main/well-known/w4-games-well-known.yml
+  href: https://artifacts.apis.io/w4-games/well-known/w4-games-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/w4-games-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/w4-games/refs/heads/main/llms/w4-games-llms.txt
+  href: https://artifacts.apis.io/w4-games/llms/w4-games-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/w4-games-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/w4-games/refs/heads/main/conformance/w4-games-conformance.yml
+  href: https://artifacts.apis.io/w4-games/conformance/w4-games-conformance.yml
   title: ''
   type: Conformance
   url: conformance/w4-games-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/w4-games/refs/heads/main/conventions/w4-games-conventions.yml
+  href: https://artifacts.apis.io/w4-games/conventions/w4-games-conventions.yml
   title: ''
   type: Conventions
   url: conventions/w4-games-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/w4-games/refs/heads/main/lifecycle/w4-games-lifecycle.yml
+  href: https://artifacts.apis.io/w4-games/lifecycle/w4-games-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/w4-games-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/w4-games/refs/heads/main/changelog/w4-games-changelog.yml
+  href: https://artifacts.apis.io/w4-games/changelog/w4-games-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/w4-games-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/w4-games/refs/heads/main/security/w4-games-domain-security.yml
+  href: https://artifacts.apis.io/w4-games/security/w4-games-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/w4-games-domain-security.yml
@@ -151,18 +155,18 @@ overview: 'W4 Games is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   W4 Games'' developer surface includes engineering blog, documentation, API reference, getting-started guide, support, authentication, changelog, and 15 more developer resources.'
-random_paper: 15
+random_paper: 21
 score:
   band: thin
   composite: 29.4
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 17.1
     contract_governance: 18.2
@@ -170,7 +174,7 @@ score:
     developer_ergonomics: 64.3
     discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 29.3
+  previous_composite: 29.4
   provenance:
     conformance: first-party
   regulatory:
@@ -179,14 +183,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/w4-games/refs/heads/main/screenshots/w4-games-2026-09-02T170345.png
+screenshot: https://apis.io/screenshots/w4-games/w4-games-2026-09-02T170345.png
 security:
 - kind: authentication
   name: W4 Games Authentication

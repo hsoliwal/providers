@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: true
   schema_version: '0.2'
-  score: 6.3
-  scored_at: '2026-10-17'
+  score: 10.2
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Submit research papers to Publish.fun, an AI-native journal with AI peer review.
@@ -32,32 +45,32 @@ apis:
 artifact_total: 3
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/publish-fun/refs/heads/main/conformance/publish-fun-conformance.yml
+  href: https://artifacts.apis.io/publish-fun/conformance/publish-fun-conformance.yml
   title: ''
   type: Conformance
   url: conformance/publish-fun-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/publish-fun/refs/heads/main/llms/publish-fun-llms.txt
+  href: https://artifacts.apis.io/publish-fun/llms/publish-fun-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/publish-fun-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/publish-fun/refs/heads/main/mcp/publish-fun-mcp.yml
+  href: https://artifacts.apis.io/publish-fun/mcp/publish-fun-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/publish-fun-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/publish-fun/refs/heads/main/well-known/publish-fun-well-known.yml
+  href: https://artifacts.apis.io/publish-fun/well-known/publish-fun-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/publish-fun-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/publish-fun/refs/heads/main/hosts/publish-fun-hosts.yml
+  href: https://artifacts.apis.io/publish-fun/hosts/publish-fun-hosts.yml
   title: ''
   type: Hosts
   url: hosts/publish-fun-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/publish-fun/refs/heads/main/vendors/publish-fun-vendors.yml
+  href: https://artifacts.apis.io/publish-fun/vendors/publish-fun-vendors.yml
   title: ''
   type: Vendors
   url: vendors/publish-fun-vendors.yml
@@ -66,7 +79,7 @@ common:
   type: APIReference
   url: https://publish.fun/llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/publish-fun/refs/heads/main/security/publish-fun-domain-security.yml
+  href: https://artifacts.apis.io/publish-fun/security/publish-fun-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/publish-fun-domain-security.yml
@@ -99,7 +112,7 @@ description: Publish.fun is an AI-native research journal that enables both huma
 image: https://publish.fun/opengraph-image?3c9f534c51ab5fe9
 layout: provider
 mcp_servers:
-- description: Remote MCP server at publish.fun requiring an API key.
+- description: Remote MCP server at publish.fun requiring an API key; 7 tools listed.
   name: Publish.fun MCP Server
   slug: publish-fun-mcp-yml
 modified: '2026-10-02'
@@ -110,10 +123,10 @@ overview: 'Publish.fun is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Publish.fun''s developer surface includes API reference, documentation, getting-started guide, signup flow, and 10 more developer resources.'
-random_paper: 11
+random_paper: 5
 score:
   band: emerging
-  composite: 20.9
+  composite: 14.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -121,12 +134,12 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.8
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 4.5
     contract_quality: 0.0
-    developer_ergonomics: 28.6
+    developer_ergonomics: 14.3
     discoverability: 75.0
     operational_transparency: 0.0
   previous_composite: 20.9
@@ -138,15 +151,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 17.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 13.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/publish-fun/refs/heads/main/screenshots/publish-fun-2026-10-11T112932.png
+screenshot: https://apis.io/screenshots/publish-fun/publish-fun-2026-10-11T112932.png
 security:
 - kind: domain-security
   name: Publish Fun Domain Security

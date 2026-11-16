@@ -1,20 +1,23 @@
 ---
 access_model:
   confidence: high
-  label: Paid · Self-serve signup
-  onboarding: self-serve
+  label: Paid
+  onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: false
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: negotiable
@@ -22,19 +25,22 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: false
+    mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.4
-  scored_at: '2026-10-17'
+  score: 40.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 0
@@ -100,6 +106,9 @@ apis:
 - description: Integrate with Microsoft Teams for chat, channels, meetings, and collaboration.
   name: Microsoft Teams API
   slug: microsoft-teams-api
+- description: Microsoft-hosted remote Model Context Protocol server (preview) that lets AI agents query Microsoft Entra tenant data in natural language by translating requests into read-only Microsoft Graph API cal
+  name: Microsoft MCP Server for Enterprise
+  slug: microsoft-mcp-server-for-enterprise
 arazzos:
 - description: Create an event, read it back to confirm, then delete it from the calendar.
   name: Microsoft Office 365 Cancel Event
@@ -158,14 +167,11 @@ arazzos:
 - description: Patch a user's profile properties, then read the user back to verify.
   name: Microsoft Office 365 Update User Profile
   slug: microsoft-office-365-update-user-profile-workflow
-artifact_total: 266
+artifact_total: 272
 collections:
 - collection_type: postman
   name: Microsoft Office 365 Microsoft Graph API
   slug: postman-microsoft-graph-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Microsoft Office 365 Microsoft Graph API
   slug: open-microsoft-graph-api
@@ -182,8 +188,120 @@ collections:
   name: Microsoft Office 365 Microsoft Graph Calendar Users API
   slug: open-microsoft-office-365-users-api
 common:
+- group: design
+  href: https://artifacts.apis.io/microsoft-office-365/rules/microsoft-office-365-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-office-365-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-office-365/rules/microsoft-office-365-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-office-365-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-office-365/rules/microsoft-office-365-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-office-365-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-office-365/json-ld/microsoft-graph-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/microsoft-graph-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/microsoft-office-365/vocabulary/microsoft-office-365-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/microsoft-office-365-vocabulary.yml
+- group: agent
+  href: https://artifacts.apis.io/microsoft-office-365/skills/_index.yml
+  title: ''
+  type: AgentSkill
+  url: skills/_index.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-office-365/data-model/microsoft-office-365-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/microsoft-office-365-data-model.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-office-365/conventions/microsoft-office-365-conventions.yml
+  title: ''
+  type: Conventions
+  url: conventions/microsoft-office-365-conventions.yml
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://learn.microsoft.com/en-us/graph/versioning-and-support
+- group: design
+  href: https://artifacts.apis.io/microsoft-office-365/lifecycle/microsoft-office-365-lifecycle.yml
+  title: ''
+  type: Lifecycle
+  url: lifecycle/microsoft-office-365-lifecycle.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-office-365/errors/microsoft-office-365-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/microsoft-office-365-problem-types.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-office-365/conformance/microsoft-office-365-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/microsoft-office-365-conformance.yml
+- group: agent
+  href: https://artifacts.apis.io/microsoft-office-365/llms/microsoft-office-365-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/microsoft-office-365-llms.txt
+- group: build
+  href: https://artifacts.apis.io/microsoft-office-365/mcp/microsoft-office-365-tool-crosswalk.yml
+  title: ''
+  type: ToolCrosswalk
+  url: mcp/microsoft-office-365-tool-crosswalk.yml
+- group: agent
+  href: https://artifacts.apis.io/microsoft-office-365/mcp/microsoft-office-365-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/microsoft-office-365-mcp.yml
+- group: auth
+  href: https://artifacts.apis.io/microsoft-office-365/well-known/microsoft-office-365-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/microsoft-office-365-security.txt
+- group: agent
+  href: https://artifacts.apis.io/microsoft-office-365/well-known/microsoft-office-365-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/microsoft-office-365-well-known.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-office-365/hosts/microsoft-office-365-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/microsoft-office-365-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-office-365/vendors/microsoft-office-365-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/microsoft-office-365-vendors.yml
+- group: build
+  href: https://artifacts.apis.io/microsoft-office-365/packages/microsoft-office-365-packages.yml
+  title: ''
+  type: Packages
+  url: packages/microsoft-office-365-packages.yml
+- group: auth
+  title: ''
+  type: Security
+  url: https://www.microsoft.com/security
+- group: other
+  title: ''
+  type: Leadership
+  url: https://news.microsoft.com/leadership
+- group: auth
+  href: https://artifacts.apis.io/microsoft-office-365/security/microsoft-office-365-trust-center.yml
+  title: ''
+  type: TrustCenter
+  url: security/microsoft-office-365-trust-center.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/finops/microsoft-office-365-finops.yml
+  href: https://artifacts.apis.io/microsoft-office-365/finops/microsoft-office-365-finops.yml
   title: ''
   type: FinOps
   url: finops/microsoft-office-365-finops.yml
@@ -192,12 +310,12 @@ common:
   type: Pricing
   url: https://www.microsoft.com/en-us/security/business/microsoft-entra-pricing
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/rate-limits/microsoft-office-365-rate-limits.yml
+  href: https://artifacts.apis.io/microsoft-office-365/rate-limits/microsoft-office-365-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/microsoft-office-365-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/plans/microsoft-office-365-plans-pricing.yml
+  href: https://artifacts.apis.io/microsoft-office-365/plans/microsoft-office-365-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/microsoft-office-365-plans-pricing.yml
@@ -206,32 +324,32 @@ common:
   type: Website
   url: https://www.microsoft.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/capabilities/microsoft-office-365-capability-edges.yml
+  href: https://artifacts.apis.io/microsoft-office-365/capabilities/microsoft-office-365-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/microsoft-office-365-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/agentic-access/microsoft-office-365-agentic-access.yml
+  href: https://artifacts.apis.io/microsoft-office-365/agentic-access/microsoft-office-365-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/microsoft-office-365-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/security/microsoft-office-365-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/microsoft-office-365/security/microsoft-office-365-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/microsoft-office-365-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/security/microsoft-office-365-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-office-365/security/microsoft-office-365-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-office-365-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/authentication/microsoft-office-365-authentication.yml
+  href: https://artifacts.apis.io/microsoft-office-365/authentication/microsoft-office-365-authentication.yml
   title: ''
   type: Authentication
   url: authentication/microsoft-office-365-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/scopes/microsoft-office-365-scopes.yml
+  href: https://artifacts.apis.io/microsoft-office-365/scopes/microsoft-office-365-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/microsoft-office-365-scopes.yml
@@ -240,97 +358,97 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/microsoft-office-365/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-cancel-event-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-cancel-event-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-cancel-event-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-cleanup-draft-message-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-cleanup-draft-message-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-cleanup-draft-message-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-create-group-with-members-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-create-group-with-members-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-create-group-with-members-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-deprovision-user-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-deprovision-user-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-deprovision-user-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-draft-and-send-mail-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-draft-and-send-mail-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-draft-and-send-mail-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-find-event-in-window-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-find-event-in-window-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-find-event-in-window-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-find-or-create-group-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-find-or-create-group-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-find-or-create-group-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-notify-new-user-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-notify-new-user-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-notify-new-user-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-onboard-user-to-group-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-onboard-user-to-group-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-onboard-user-to-group-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-provision-user-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-provision-user-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-provision-user-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-reschedule-event-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-reschedule-event-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-reschedule-event-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-respond-to-invitation-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-respond-to-invitation-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-respond-to-invitation-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-rotate-group-member-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-rotate-group-member-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-rotate-group-member-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-schedule-and-accept-event-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-schedule-and-accept-event-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-schedule-and-accept-event-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-schedule-event-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-schedule-event-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-schedule-event-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-triage-inbox-message-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-triage-inbox-message-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-triage-inbox-message-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-update-draft-and-send-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-update-draft-and-send-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-update-draft-and-send-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-update-group-and-verify-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-update-group-and-verify-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-update-group-and-verify-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/arazzo/microsoft-office-365-update-user-profile-workflow.yml
+  href: https://artifacts.apis.io/microsoft-office-365/arazzo/microsoft-office-365-update-user-profile-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-office-365-update-user-profile-workflow.yml
@@ -407,12 +525,12 @@ common:
   type: Compliance
   url: https://learn.microsoft.com/en-us/graph/compliance-concept-overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/rules/microsoft-office-365-spectral-rules.yml
+  href: https://artifacts.apis.io/microsoft-office-365/rules/microsoft-office-365-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/microsoft-office-365-spectral-rules.yml
 created: '2024-01-15'
-description: A collection of APIs provided by Microsoft Office 365 for productivity, collaboration, and enterprise services.
+description: Microsoft Office 365 (Microsoft 365) exposes its productivity and collaboration services through Microsoft Graph at graph.microsoft.com, covering Outlook mail, calendar and contacts, OneNote, Excel workbooks, To Do, Teams, users and groups, plus a hosted MCP server for AI agents, with SDKs in nine languages.
 examples:
 - key_count: 2
   name: Microsoft Graph Assigned License Example
@@ -636,10 +754,10 @@ features:
   name: User and Group Management
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Microsoft Office 365 Finops
-  primary_unit: ''
-  service_category: Productivity
+  primary_unit: user
+  service_category: ''
   slug: microsoft-office-365-finops
   template: false
 integrations:
@@ -1039,20 +1157,24 @@ jsonld:
   property_count: 10
   slug: microsoft-office-365-context
 layout: provider
+mcp_servers:
+- description: Microsoft-hosted MCP server that translates natural language requests into read-only Microsoft Graph API calls against a Microsoft Entra tenant.
+  name: Microsoft MCP Server for Enterprise
+  slug: microsoft-mcp-server-for-enterprise
 modified: '2026-09-15'
 name: Microsoft Office 365
 nav: Providers
 network: true
-overview: 'Microsoft Office 365 publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Calendar API, Groups API, Mail API, and 13 more. Tagged areas include Cloud, Collaboration, Enterprise, Microsoft, and Productivity.
+overview: 'Microsoft Office 365 publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Calendar API, Groups API, Mail API, and 14 more. Tagged areas include Cloud, Collaboration, Enterprise, Microsoft, and Productivity.
 
 
-  The Microsoft Office 365 catalog on APIs.io includes 2 JSON-LD contexts and 2 Spectral governance rulesets.
+  The Microsoft Office 365 catalog on APIs.io includes 2 JSON-LD contexts and 3 Spectral governance rulesets.
 
 
-  Microsoft Office 365''s developer surface includes pricing, authentication, support, engineering blog, developer console, changelog, release notes, and 43 more developer resources.'
+  Microsoft Office 365''s developer surface includes pricing, authentication, support, engineering blog, developer console, changelog, release notes, and 66 more developer resources.'
 plans:
 - name: Microsoft Office 365 Plans Pricing
-  plan_count: 11
+  plan_count: 7
   slug: microsoft-office-365-plans-pricing
 - name: Microsoft Office 365 Price Estimates
   plan_count: 0
@@ -1075,6 +1197,18 @@ rules:
     warn: 3
   slug: microsoft-office-365-jsonschema-spectral-rules
 - authorship: generated
+  effective_rule_count: 114
+  extends:
+  - spectral:oas
+  name: Microsoft Office 365 API Rules
+  rule_count: 73
+  severity_counts:
+    error: 66
+    hint: 0
+    info: 1
+    warn: 6
+  slug: microsoft-office-365-rules
+- authorship: generated
   effective_rule_count: 59
   extends:
   - spectral:oas
@@ -1092,44 +1226,47 @@ scopes:
   slug: microsoft-office-365-scopes
   summary_line: 18 scopes · authorizationCode/clientCredentials
 score:
-  band: strong
-  composite: 60.4
+  band: exemplar
+  composite: 69.5
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 54.9
+    artifact_dirs: 37
+    catalog_earned: 67.4
     catalog_earned_first_party: 12.0
-    catalog_gap: 60.1
+    catalog_gap: 47.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 6.2
   facets:
-    access_clarity: 71.1
-    contract_governance: 13.6
+    access_clarity: 86.8
+    contract_governance: 31.8
     contract_quality: 70.6
-    developer_ergonomics: 72.6
-    discoverability: 51.8
-    operational_transparency: 26.3
-  previous_composite: 61.9
+    developer_ergonomics: 74.4
+    discoverability: 61.7
+    operational_transparency: 44.7
+  previous_composite: 63.3
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 4
+    mcp: first-party
+    skills: derived
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-office-365/refs/heads/main/screenshots/microsoft-office-365-2026-06-20T185511.png
+screenshot: https://apis.io/screenshots/microsoft-office-365/microsoft-office-365-2026-06-20T185511.png
 security:
 - kind: authentication
   name: Microsoft Office 365 Authentication
@@ -1143,6 +1280,18 @@ security:
   name: Microsoft Office 365 Vulnerability Disclosure
   slug: microsoft-office-365-vulnerability-disclosure
   summary_line: security.txt · contact published
+- kind: trust-center
+  name: Microsoft Office 365 Trust Center
+  slug: microsoft-office-365-trust-center
+  summary_line: GDPR
+skill_count: 3
+skills:
+- name: manage-group-membership
+  slug: microsoft-office-365-manage-group-membership
+- name: schedule-meeting
+  slug: microsoft-office-365-schedule-meeting
+- name: send-mail
+  slug: microsoft-office-365-send-mail
 slug: microsoft-office-365
 tags:
 - Cloud

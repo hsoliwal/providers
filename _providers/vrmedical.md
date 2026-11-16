@@ -1,11 +1,15 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -45,12 +52,12 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/vr-medical-inc-
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vrmedical/refs/heads/main/security/vrmedical-domain-security.yml
+  href: https://artifacts.apis.io/vrmedical/security/vrmedical-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vrmedical-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vrmedical/refs/heads/main/llms/vrmedical-llms.txt
+  href: https://artifacts.apis.io/vrmedical/llms/vrmedical-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/vrmedical-llms.txt
@@ -63,7 +70,7 @@ name: VR Medical
 nav: Providers
 network: true
 overview: VR Medical is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Medical Devices, Healthcare, Respiratory Care, and Wound Care.
-random_paper: 5
+random_paper: 15
 score:
   band: minimal
   composite: 4.4
@@ -89,8 +96,8 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

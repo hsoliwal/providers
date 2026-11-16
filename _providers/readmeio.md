@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: The current ReadMe API for managing your project programmatically — API keys, API definitions, reference/guides/custom pages, categories, branches, changelog entries, recipes, images, fonts, Owlbot AI
@@ -46,7 +49,7 @@ apis:
 - description: The legacy ReadMe API (HTTP Basic auth with an API key) for docs, categories, versions, custom pages, changelog, API specification upload, the API registry, and search. Not available to projects using
   name: ReadMe API (v1, Legacy)
   slug: readme-api-v1-legacy
-artifact_total: 5
+artifact_total: 7
 common:
 - group: company
   title: ''
@@ -69,7 +72,7 @@ common:
   type: GettingStarted
   url: https://docs.readme.com/main/docs/getting-started
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/authentication/readmeio-authentication.yml
+  href: https://artifacts.apis.io/readmeio/authentication/readmeio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/readmeio-authentication.yml
@@ -110,72 +113,72 @@ common:
   type: TrustCenter
   url: https://trust.readme.com
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/changelog/readmeio-changelog.yml
+  href: https://artifacts.apis.io/readmeio/changelog/readmeio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/readmeio-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/packages/readmeio-packages.yml
+  href: https://artifacts.apis.io/readmeio/packages/readmeio-packages.yml
   title: ''
   type: Packages
   url: packages/readmeio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/packages/readmeio-packages.yml
+  href: https://artifacts.apis.io/readmeio/packages/readmeio-packages.yml
   title: ''
   type: SDKs
   url: packages/readmeio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/cli/readmeio-cli.yml
+  href: https://artifacts.apis.io/readmeio/cli/readmeio-cli.yml
   title: ''
   type: CLI
   url: cli/readmeio-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/llms/readmeio-llms.txt
+  href: https://artifacts.apis.io/readmeio/llms/readmeio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/readmeio-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/conventions/readmeio-conventions.yml
+  href: https://artifacts.apis.io/readmeio/conventions/readmeio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/readmeio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/errors/readmeio-problem-types.yml
+  href: https://artifacts.apis.io/readmeio/errors/readmeio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/readmeio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/conformance/readmeio-conformance.yml
+  href: https://artifacts.apis.io/readmeio/conformance/readmeio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/readmeio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/lifecycle/readmeio-lifecycle.yml
+  href: https://artifacts.apis.io/readmeio/lifecycle/readmeio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/readmeio-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/lifecycle/readmeio-lifecycle.yml
+  href: https://artifacts.apis.io/readmeio/lifecycle/readmeio-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/readmeio-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/mcp/readmeio-mcp.yml
+  href: https://artifacts.apis.io/readmeio/mcp/readmeio-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/readmeio-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/well-known/readmeio-well-known.yml
+  href: https://artifacts.apis.io/readmeio/well-known/readmeio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/readmeio-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/security/readmeio-domain-security.yml
+  href: https://artifacts.apis.io/readmeio/security/readmeio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/readmeio-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/readmeio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -191,26 +194,26 @@ overview: 'ReadMe.io is listed with 3 APIs on the [APIs.io](https://apis.io/) ne
 
 
   ReadMe.io''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, pricing, signup flow, and 22 more developer resources.'
-random_paper: 2
+random_paper: 22
 score:
-  band: thin
-  composite: 39.0
+  band: developing
+  composite: 40.7
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.7
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 54.2
+    developer_ergonomics: 62.5
     discoverability: 78.6
     operational_transparency: 42.1
-  previous_composite: 38.9
+  previous_composite: 39.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -221,14 +224,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/readmeio/refs/heads/main/screenshots/readmeio-2026-09-02T152949.png
+screenshot: https://apis.io/screenshots/readmeio/readmeio-2026-09-02T152949.png
 security:
 - kind: authentication
   name: Readmeio Authentication
@@ -238,6 +241,12 @@ security:
   name: Readmeio Domain Security
   slug: readmeio-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Publish a changelog entry to a ReadMe project
+  slug: readmeio-publish-changelog
+- name: Sync an API definition into a ReadMe project
+  slug: readmeio-sync-api-definition
 slug: readmeio
 tags:
 - Company

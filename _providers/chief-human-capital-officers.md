@@ -1,12 +1,17 @@
 ---
 access_model:
-  confidence: high
-  label: Free and unauthenticated
-  onboarding: unknown
-  pricing: free
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Open access
+  onboarding: open
+  pricing: paid
   public: true
   source:
-  - plans
+  - finops
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The CHCO Council publishes its charter, leadership roster, working group output, policy memoranda, and federal human capital guidance through chcoc.gov (now hosted under opm.gov). The Council does not
@@ -42,7 +50,7 @@ apis:
 artifact_total: 21
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chief-human-capital-officers/refs/heads/main/finops/chief-human-capital-officers-finops.yml
+  href: https://artifacts.apis.io/chief-human-capital-officers/finops/chief-human-capital-officers-finops.yml
   title: ''
   type: FinOps
   url: finops/chief-human-capital-officers-finops.yml
@@ -51,7 +59,7 @@ common:
   type: Blog
   url: https://www.opm.gov/news/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chief-human-capital-officers/refs/heads/main/security/chief-human-capital-officers-domain-security.yml
+  href: https://artifacts.apis.io/chief-human-capital-officers/security/chief-human-capital-officers-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chief-human-capital-officers-domain-security.yml
@@ -88,7 +96,7 @@ common:
   type: PrivacyPolicy
   url: https://www.opm.gov/privacy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chief-human-capital-officers/refs/heads/main/security/chief-human-capital-officers-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/chief-human-capital-officers/security/chief-human-capital-officers-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/chief-human-capital-officers-vulnerability-disclosure.yml
@@ -97,17 +105,17 @@ common:
   type: Security
   url: https://www.opm.gov/vulnerability-disclosure-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chief-human-capital-officers/refs/heads/main/llms/chief-human-capital-officers-llms.txt
+  href: https://artifacts.apis.io/chief-human-capital-officers/llms/chief-human-capital-officers-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/chief-human-capital-officers-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chief-human-capital-officers/refs/heads/main/plans/chief-human-capital-officers-plans-pricing.yml
+  href: https://artifacts.apis.io/chief-human-capital-officers/plans/chief-human-capital-officers-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/chief-human-capital-officers-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/chief-human-capital-officers/refs/heads/main/rate-limits/chief-human-capital-officers-rate-limits.yml
+  href: https://artifacts.apis.io/chief-human-capital-officers/rate-limits/chief-human-capital-officers-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/chief-human-capital-officers-rate-limits.yml
@@ -156,7 +164,7 @@ finops:
 - has_sources: false
   method: generated
   name: Chief Human Capital Officers Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: chief-human-capital-officers-finops
   template: true
@@ -174,7 +182,7 @@ plans:
 - name: Chief Human Capital Officers Plans Pricing
   plan_count: 0
   slug: chief-human-capital-officers-plans-pricing
-random_paper: 16
+random_paper: 6
 rate_limits:
 - limit_count: 0
   name: Chief Human Capital Officers Rate Limits
@@ -183,13 +191,13 @@ score:
   band: emerging
   composite: 13.8
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.1
+  delta: 0.0
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
@@ -202,21 +210,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.9
+  previous_composite: 13.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/chief-human-capital-officers/refs/heads/main/screenshots/chief-human-capital-officers-2026-06-20T174308.png
+screenshot: https://apis.io/screenshots/chief-human-capital-officers/chief-human-capital-officers-2026-06-20T174308.png
 security:
 - kind: domain-security
   name: Chief Human Capital Officers Domain Security

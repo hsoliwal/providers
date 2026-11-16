@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -26,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The Rokid Glass3 / Sprite Enterprise cloud API. Device registration lookup and real-time telemetry, message push to glasses, paged AI agent chat logs, RTC remote-collaboration meeting history and part
@@ -43,10 +49,10 @@ apis:
 - description: Rokid's global storefront implements the Universal Commerce Protocol for agent-driven commerce, with a UCP merchant profile at /.well-known/ucp and a live MCP endpoint exposing catalog search, cart, c
   name: Rokid Store Agent Commerce API
   slug: rokid-store-agent-commerce-api
-artifact_total: 5
+artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/security/rokid-domain-security.yml
+  href: https://artifacts.apis.io/rokid/security/rokid-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rokid-domain-security.yml
@@ -103,77 +109,77 @@ common:
   type: PrivacyPolicy
   url: https://global.rokid.com/policies/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/authentication/rokid-authentication.yml
+  href: https://artifacts.apis.io/rokid/authentication/rokid-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rokid-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/errors/rokid-error-codes.yml
+  href: https://artifacts.apis.io/rokid/errors/rokid-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/rokid-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/conventions/rokid-conventions.yml
+  href: https://artifacts.apis.io/rokid/conventions/rokid-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rokid-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/data-model/rokid-data-model.yml
+  href: https://artifacts.apis.io/rokid/data-model/rokid-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rokid-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/lifecycle/rokid-lifecycle.yml
+  href: https://artifacts.apis.io/rokid/lifecycle/rokid-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rokid-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/changelog/rokid-changelog.yml
+  href: https://artifacts.apis.io/rokid/changelog/rokid-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/rokid-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/conformance/rokid-conformance.yml
+  href: https://artifacts.apis.io/rokid/conformance/rokid-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rokid-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/packages/rokid-packages.yml
+  href: https://artifacts.apis.io/rokid/packages/rokid-packages.yml
   title: ''
   type: Packages
   url: packages/rokid-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/packages/rokid-packages.yml
+  href: https://artifacts.apis.io/rokid/packages/rokid-packages.yml
   title: ''
   type: SDKs
   url: packages/rokid-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/cli/rokid-cli.yml
+  href: https://artifacts.apis.io/rokid/cli/rokid-cli.yml
   title: ''
   type: CLI
   url: cli/rokid-cli.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/grpc/rokid-protobuf.yml
+  href: https://artifacts.apis.io/rokid/grpc/rokid-protobuf.yml
   title: ''
   type: Protobuf
   url: grpc/rokid-protobuf.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/well-known/rokid-well-known.yml
+  href: https://artifacts.apis.io/rokid/well-known/rokid-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rokid-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/llms/rokid-llms.txt
+  href: https://artifacts.apis.io/rokid/llms/rokid-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rokid-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/mcp/rokid-mcp.yml
+  href: https://artifacts.apis.io/rokid/mcp/rokid-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/rokid-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rokid/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -199,13 +205,13 @@ score:
   band: developing
   composite: 42.6
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
@@ -218,7 +224,7 @@ score:
     countries:
     - china
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 42.5
+  previous_composite: 42.6
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -229,14 +235,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rokid/refs/heads/main/screenshots/rokid-2026-09-02T154100.png
+screenshot: https://apis.io/screenshots/rokid/rokid-2026-09-02T154100.png
 security:
 - kind: authentication
   name: Rokid Authentication
@@ -246,6 +252,10 @@ security:
   name: Rokid Domain Security
   slug: rokid-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: rokid-glass3-sdk
+  slug: rokid-glass3-sdk
 slug: rokid
 tags:
 - Smart Glasses

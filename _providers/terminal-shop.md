@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: high
-  label: Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Free · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: free
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 20.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -102,9 +109,6 @@ apis:
 artifact_total: 30
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Terminal Shop Address API
   slug: open-terminal-shop-address-api
 - collection_type: open
@@ -142,22 +146,22 @@ collections:
   slug: open-terminal-shop
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-shop/refs/heads/main/capabilities/terminal-shop-capability-edges.yml
+  href: https://artifacts.apis.io/terminal-shop/capabilities/terminal-shop-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/terminal-shop-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-shop/refs/heads/main/agentic-access/terminal-shop-agentic-access.yml
+  href: https://artifacts.apis.io/terminal-shop/agentic-access/terminal-shop-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/terminal-shop-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-shop/refs/heads/main/security/terminal-shop-domain-security.yml
+  href: https://artifacts.apis.io/terminal-shop/security/terminal-shop-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/terminal-shop-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-shop/refs/heads/main/authentication/terminal-shop-authentication.yml
+  href: https://artifacts.apis.io/terminal-shop/authentication/terminal-shop-authentication.yml
   title: ''
   type: Authentication
   url: authentication/terminal-shop-authentication.yml
@@ -178,17 +182,17 @@ common:
   type: Documentation
   url: https://www.terminal.shop/api
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-shop/refs/heads/main/plans/terminal-shop-plans-pricing.yml
+  href: https://artifacts.apis.io/terminal-shop/plans/terminal-shop-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/terminal-shop-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-shop/refs/heads/main/rate-limits/terminal-shop-rate-limits.yml
+  href: https://artifacts.apis.io/terminal-shop/rate-limits/terminal-shop-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/terminal-shop-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/terminal-shop/refs/heads/main/finops/terminal-shop-finops.yml
+  href: https://artifacts.apis.io/terminal-shop/finops/terminal-shop-finops.yml
   title: ''
   type: FinOps
   url: finops/terminal-shop-finops.yml
@@ -211,35 +215,51 @@ network: true
 overview: 'Terminal publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Address API, App API, Card API, and 8 more. Tagged areas include Coffee, E-Commerce, Developers, SSH, and Ordering.
 
 
+  The Terminal catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Terminal''s developer surface includes authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Terminal Shop Plans Pricing
   plan_count: 3
   slug: terminal-shop-plans-pricing
-random_paper: 5
+random_paper: 3
 rate_limits:
 - limit_count: 2
   name: Terminal Shop Rate Limits
   slug: terminal-shop-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Terminal API Rules
+  rule_count: 55
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 5
+  slug: terminal-shop-rules
 score:
   band: thin
-  composite: 28.5
+  composite: 30.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 42.0
+    artifact_dirs: 16
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 49.4
     developer_ergonomics: 29.8
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 35.9
+  previous_composite: 30.2
   provenance:
     agentic_access: derived
     contracts:
@@ -253,13 +273,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/terminal-shop/refs/heads/main/screenshots/terminal-shop-2026-06-20T195128.png
+screenshot: https://apis.io/screenshots/terminal-shop/terminal-shop-2026-06-20T195128.png
 security:
 - kind: authentication
   name: Terminal Shop Authentication

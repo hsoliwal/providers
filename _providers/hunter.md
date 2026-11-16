@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,10 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: true
 agent_readiness:
@@ -22,19 +29,22 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: verified
     event_surface_described: true
     idempotency: documented
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
-    rate_limit_signal: documented
-    reversibility_documented: documented
+    rate_limit_signal: verified
+    reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.4
-  scored_at: '2026-10-17'
+  score: 59.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -68,7 +78,7 @@ apis:
   - id: addCampaignRecipients
     intent: Add recipients to a campaign
     question: How do I enroll new people into an email sequence?
-  - id: cancelCampaignRecipients
+  - id: removeCampaignRecipients
     intent: Cancel scheduled emails for campaign recipients
     question: How do I stop a campaign from sending any more emails to certain people?
   - id: startCampaign
@@ -78,84 +88,14 @@ apis:
   slug: hunter-campaigns-api
 - baseURL: https://api.hunter.io/v2
   baseurl_source: declared
-  description: Merge person and company enrichment for a single email address.
-  name: Hunter Combined Enrichment API
-  phrasing_intents:
-  - id: combinedEnrichment
-    intent: Enrich an email with person and company data
-    question: Can I get both the person's profile and their employer's details from one email address?
-  phrasing_ops: 1
-  slug: hunter-combined-enrichment-api
-- baseURL: https://api.hunter.io/v2
-  baseurl_source: declared
-  description: Enrich company information linked to a domain name.
-  name: Hunter Company Enrichment API
-  phrasing_intents:
-  - id: companyEnrichment
-    intent: Enrich a company from its domain
-    question: How do I get a company's size, industry and location from just its domain?
-  phrasing_ops: 1
-  slug: hunter-company-enrichment-api
-- baseURL: https://api.hunter.io/v2
-  baseurl_source: declared
   description: Find companies matching criteria using natural language or filters.
   name: Hunter Discover API
   phrasing_intents:
-  - id: discover
+  - id: discoverCompanies
     intent: Find companies matching my ideal customer profile
     question: How do I find companies that fit my ideal customer profile?
   phrasing_ops: 1
   slug: hunter-discover-api
-- baseURL: https://api.hunter.io/v2
-  baseurl_source: declared
-  description: Search for email addresses associated with a domain.
-  name: Hunter Domain Search API
-  phrasing_intents:
-  - id: domainSearch
-    intent: Find all email addresses at a domain
-    question: How do I get every email address Hunter has found for a company's domain?
-  phrasing_ops: 1
-  slug: hunter-domain-search-api
-- baseURL: https://api.hunter.io/v2
-  baseurl_source: declared
-  description: Count email addresses found for a domain.
-  name: Hunter Email Count API
-  phrasing_intents:
-  - id: emailCount
-    intent: Count the email addresses found for a domain
-    question: How many email addresses are known for a given domain?
-  phrasing_ops: 1
-  slug: hunter-email-count-api
-- baseURL: https://api.hunter.io/v2
-  baseurl_source: declared
-  description: Enrich personal information linked to an email or LinkedIn profile.
-  name: Hunter Email Enrichment API
-  phrasing_intents:
-  - id: emailEnrichment
-    intent: Look up a person's profile from email or LinkedIn
-    question: Who is behind this email address, and where do they work?
-  phrasing_ops: 1
-  slug: hunter-email-enrichment-api
-- baseURL: https://api.hunter.io/v2
-  baseurl_source: declared
-  description: Find the most likely email address for a person at a company.
-  name: Hunter Email Finder API
-  phrasing_intents:
-  - id: emailFinder
-    intent: Find a person's email address
-    question: How do I find someone's work email from their name and company domain?
-  phrasing_ops: 1
-  slug: hunter-email-finder-api
-- baseURL: https://api.hunter.io/v2
-  baseurl_source: declared
-  description: Verify the deliverability of an email address.
-  name: Hunter Email Verifier API
-  phrasing_intents:
-  - id: emailVerifier
-    intent: Verify an email address is deliverable
-    question: How can I check whether an email address will actually receive mail?
-  phrasing_ops: 1
-  slug: hunter-email-verifier-api
 - baseURL: https://api.hunter.io/v2
   baseurl_source: declared
   description: Manage leads stored in Hunter.
@@ -167,13 +107,13 @@ apis:
   - id: createLead
     intent: Create a new lead
     question: How do I add a brand-new prospect to my leads?
-  - id: upsertLead
+  - id: upsertLeads
     intent: Create a lead or update it if the email exists
     question: Can I save a lead without creating a duplicate if that email is already in the list?
   - id: getLead
     intent: Get the details of one lead
     question: How can I look up everything stored on a single lead by its ID?
-  - id: updateLead
+  - id: replaceLead
     intent: Update an existing lead by ID
     question: How do I change the job title or company on a lead I already saved?
   - id: deleteLead
@@ -183,26 +123,94 @@ apis:
   slug: hunter-leads-api
 - baseURL: https://api.hunter.io/v2
   baseurl_source: declared
-  description: Manage leads list collections in Hunter.
-  name: Hunter Leads Lists API
-  phrasing_intents:
-  - id: listLeadsLists
-    intent: List my leads lists
-    question: How do I see all the lead lists I've created in Hunter?
-  - id: createLeadsList
-    intent: Create a new leads list
-    question: How do I make a new list to group my leads?
-  - id: getLeadsList
-    intent: Get one leads list
-    question: How can I look up the details of a single leads list by its ID?
-  - id: updateLeadsList
-    intent: Rename a leads list
-    question: How do I rename one of my existing leads lists?
-  - id: deleteLeadsList
-    intent: Delete a leads list
-    question: How do I delete a leads list I no longer need?
-  phrasing_ops: 5
-  slug: hunter-leads-lists-api
+  description: The API Keys API from Hunter — 2 operation(s) for api keys.
+  name: Hunter API Keys API
+  slug: hunter-api-keys-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Companies API from Hunter — 8 operation(s) for companies.
+  name: Hunter Companies API
+  slug: hunter-companies-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Connected Apps API from Hunter — 3 operation(s) for connected apps.
+  name: Hunter Connected Apps API
+  slug: hunter-connected-apps-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Email Accounts API from Hunter — 7 operation(s) for email accounts.
+  name: Hunter Email Accounts API
+  slug: hunter-email-accounts-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Enrichment API from Hunter — 3 operation(s) for enrichment.
+  name: Hunter Enrichment API
+  slug: hunter-enrichment-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Feedback API from Hunter — 1 operation(s) for feedback.
+  name: Hunter Feedback API
+  slug: hunter-feedback-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Finder API from Hunter — 8 operation(s) for finder.
+  name: Hunter Finder API
+  slug: hunter-finder-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Lists API from Hunter — 20 operation(s) for lists.
+  name: Hunter Lists API
+  slug: hunter-lists-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Messages API from Hunter — 1 operation(s) for messages.
+  name: Hunter Messages API
+  slug: hunter-messages-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Multi-Domain Search API from Hunter — 1 operation(s) for multi-domain search.
+  name: Hunter Multi-Domain Search API
+  slug: hunter-multi-domain-search-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Sequences API from Hunter — 10 operation(s) for sequences.
+  name: Hunter Sequences API
+  slug: hunter-sequences-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Tags API from Hunter — 4 operation(s) for tags.
+  name: Hunter Tags API
+  slug: hunter-tags-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Team API from Hunter — 1 operation(s) for team.
+  name: Hunter Team API
+  slug: hunter-team-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Templates API from Hunter — 2 operation(s) for templates.
+  name: Hunter Templates API
+  slug: hunter-templates-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Usage API from Hunter — 2 operation(s) for usage.
+  name: Hunter Usage API
+  slug: hunter-usage-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Verifier API from Hunter — 2 operation(s) for verifier.
+  name: Hunter Verifier API
+  slug: hunter-verifier-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Views API from Hunter — 2 operation(s) for views.
+  name: Hunter Views API
+  slug: hunter-views-api
+- baseURL: https://api.hunter.io/v2
+  baseurl_source: declared
+  description: The Webhooks API from Hunter — 2 operation(s) for webhooks.
+  name: Hunter Webhooks API
+  slug: hunter-webhooks-api
 arazzos:
 - description: Check remaining search quota before running a domain search.
   name: Hunter Account-Guarded Domain Search
@@ -234,7 +242,7 @@ arazzos:
 - description: Verify an email, add it to a campaign when valid, then start the campaign.
   name: Hunter Verify and Add to Campaign
   slug: hunter-verify-add-to-campaign-workflow
-artifact_total: 156
+artifact_total: 179
 asyncapis:
 - description: ''
   name: Hunter Webhooks
@@ -243,9 +251,6 @@ collections:
 - collection_type: postman
   name: Hunter API
   slug: postman-hunter-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Hunter Account API
   slug: open-hunter-account-api
@@ -287,7 +292,47 @@ collections:
   slug: open-hunter-leads-lists-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/capabilities/hunter-capability-edges.yml
+  href: https://artifacts.apis.io/hunter/overlays/hunter-combined-enrichment-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/hunter-combined-enrichment-api-overlay.yaml
+- group: other
+  href: https://artifacts.apis.io/hunter/overlays/hunter-company-enrichment-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/hunter-company-enrichment-api-overlay.yaml
+- group: other
+  href: https://artifacts.apis.io/hunter/overlays/hunter-domain-search-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/hunter-domain-search-api-overlay.yaml
+- group: other
+  href: https://artifacts.apis.io/hunter/overlays/hunter-email-count-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/hunter-email-count-api-overlay.yaml
+- group: other
+  href: https://artifacts.apis.io/hunter/overlays/hunter-email-enrichment-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/hunter-email-enrichment-api-overlay.yaml
+- group: other
+  href: https://artifacts.apis.io/hunter/overlays/hunter-email-finder-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/hunter-email-finder-api-overlay.yaml
+- group: other
+  href: https://artifacts.apis.io/hunter/overlays/hunter-email-verifier-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/hunter-email-verifier-api-overlay.yaml
+- group: other
+  href: https://artifacts.apis.io/hunter/overlays/hunter-leads-lists-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/hunter-leads-lists-api-overlay.yaml
+- group: other
+  href: https://artifacts.apis.io/hunter/capabilities/hunter-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/hunter-capability-edges.yml
@@ -296,17 +341,17 @@ common:
   type: Website
   url: https://www.hunter.io/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/agentic-access/hunter-agentic-access.yml
+  href: https://artifacts.apis.io/hunter/agentic-access/hunter-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hunter-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/security/hunter-domain-security.yml
+  href: https://artifacts.apis.io/hunter/security/hunter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hunter-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/authentication/hunter-authentication.yml
+  href: https://artifacts.apis.io/hunter/authentication/hunter-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hunter-authentication.yml
@@ -315,52 +360,52 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/hunter/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/arazzo/hunter-account-guarded-domain-search-workflow.yml
+  href: https://artifacts.apis.io/hunter/arazzo/hunter-account-guarded-domain-search-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hunter-account-guarded-domain-search-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/arazzo/hunter-combined-enrich-upsert-lead-workflow.yml
+  href: https://artifacts.apis.io/hunter/arazzo/hunter-combined-enrich-upsert-lead-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hunter-combined-enrich-upsert-lead-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/arazzo/hunter-create-list-add-lead-workflow.yml
+  href: https://artifacts.apis.io/hunter/arazzo/hunter-create-list-add-lead-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hunter-create-list-add-lead-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/arazzo/hunter-discover-search-count-workflow.yml
+  href: https://artifacts.apis.io/hunter/arazzo/hunter-discover-search-count-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hunter-discover-search-count-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/arazzo/hunter-domain-search-build-list-workflow.yml
+  href: https://artifacts.apis.io/hunter/arazzo/hunter-domain-search-build-list-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hunter-domain-search-build-list-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/arazzo/hunter-domain-search-find-verify-workflow.yml
+  href: https://artifacts.apis.io/hunter/arazzo/hunter-domain-search-find-verify-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hunter-domain-search-find-verify-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/arazzo/hunter-enrich-verify-create-lead-workflow.yml
+  href: https://artifacts.apis.io/hunter/arazzo/hunter-enrich-verify-create-lead-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hunter-enrich-verify-create-lead-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/arazzo/hunter-find-verify-add-recipient-workflow.yml
+  href: https://artifacts.apis.io/hunter/arazzo/hunter-find-verify-add-recipient-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hunter-find-verify-add-recipient-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/arazzo/hunter-find-verify-create-lead-workflow.yml
+  href: https://artifacts.apis.io/hunter/arazzo/hunter-find-verify-create-lead-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hunter-find-verify-create-lead-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/arazzo/hunter-verify-add-to-campaign-workflow.yml
+  href: https://artifacts.apis.io/hunter/arazzo/hunter-verify-add-to-campaign-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/hunter-verify-add-to-campaign-workflow.yml
@@ -377,22 +422,22 @@ common:
   type: Documentation
   url: https://hunter.io/api-documentation/v2
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/openapi/_original/hunter-api-openapi.yml
+  href: https://artifacts.apis.io/hunter/openapi/_original/hunter-api-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/hunter-api-openapi.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/overlays/hunter-full-overlay.yaml
+  href: https://artifacts.apis.io/hunter/overlays/hunter-full-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hunter-full-overlay.yaml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/json-schema/hunter-lead-schema.json
+  href: https://artifacts.apis.io/hunter/json-schema/hunter-lead-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/hunter-lead-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/json-ld/hunter-context.jsonld
+  href: https://artifacts.apis.io/hunter/json-ld/hunter-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/hunter-context.jsonld
@@ -449,7 +494,7 @@ common:
   type: Support
   url: https://help.hunter.io
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/mcp/hunter-mcp.yml
+  href: https://artifacts.apis.io/hunter/mcp/hunter-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/hunter-mcp.yml
@@ -458,62 +503,62 @@ common:
   type: MCPServer
   url: https://mcp.hunter.io/mcp
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/mcp/hunter-tool-crosswalk.yml
+  href: https://artifacts.apis.io/hunter/mcp/hunter-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/hunter-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/hunter/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/well-known/hunter-well-known.yml
+  href: https://artifacts.apis.io/hunter/well-known/hunter-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/hunter-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/llms/hunter-llms.txt
+  href: https://artifacts.apis.io/hunter/llms/hunter-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hunter-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/packages/hunter-packages.yml
+  href: https://artifacts.apis.io/hunter/packages/hunter-packages.yml
   title: ''
   type: Packages
   url: packages/hunter-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/conventions/hunter-conventions.yml
+  href: https://artifacts.apis.io/hunter/conventions/hunter-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hunter-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/conventions/hunter-conventions.yml
+  href: https://artifacts.apis.io/hunter/conventions/hunter-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/hunter-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/errors/hunter-problem-types.yml
+  href: https://artifacts.apis.io/hunter/errors/hunter-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/hunter-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/lifecycle/hunter-lifecycle.yml
+  href: https://artifacts.apis.io/hunter/lifecycle/hunter-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hunter-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/scopes/hunter-scopes.yml
+  href: https://artifacts.apis.io/hunter/scopes/hunter-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/hunter-scopes.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/sandbox/hunter-sandbox.yml
+  href: https://artifacts.apis.io/hunter/sandbox/hunter-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/hunter-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/conformance/hunter-conformance.yml
+  href: https://artifacts.apis.io/hunter/conformance/hunter-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hunter-conformance.yml
@@ -522,22 +567,22 @@ common:
   type: Compliance
   url: https://help.hunter.io/en/articles/1890029-gdpr-compliance
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/data-model/hunter-data-model.yml
+  href: https://artifacts.apis.io/hunter/data-model/hunter-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hunter-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/asyncapi/hunter-webhooks.yml
+  href: https://artifacts.apis.io/hunter/asyncapi/hunter-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/hunter-webhooks.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/changelog/hunter-changelog.yml
+  href: https://artifacts.apis.io/hunter/changelog/hunter-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/hunter-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/security/hunter-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hunter/security/hunter-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hunter-vulnerability-disclosure.yml
@@ -546,32 +591,32 @@ common:
   type: Security
   url: https://hunter.io/security-policy
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/plans/hunter-plans-pricing.yml
+  href: https://artifacts.apis.io/hunter/plans/hunter-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hunter-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/rate-limits/hunter-rate-limits.yml
+  href: https://artifacts.apis.io/hunter/rate-limits/hunter-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hunter-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/finops/hunter-finops.yml
+  href: https://artifacts.apis.io/hunter/finops/hunter-finops.yml
   title: ''
   type: FinOps
   url: finops/hunter-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/vocabulary/hunter-vocabulary.yml
+  href: https://artifacts.apis.io/hunter/vocabulary/hunter-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/hunter-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/rules/hunter-spectral-rules.yml
+  href: https://artifacts.apis.io/hunter/rules/hunter-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/hunter-spectral-rules.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/postman/hunter-api.postman_collection.json
+  href: https://artifacts.apis.io/hunter/postman/hunter-api.postman_collection.json
   title: ''
   type: Postman
   url: postman/hunter-api.postman_collection.json
@@ -676,10 +721,10 @@ features:
   name: Company Discovery
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Hunter Finops
-  primary_unit: ''
-  service_category: Sales Intelligence
+  primary_unit: email account
+  service_category: ''
   slug: hunter-finops
   template: false
 image: https://hunter.io/images/hunter-logo.png
@@ -907,18 +952,21 @@ modified: '2026-08-13'
 name: Hunter
 nav: Providers
 network: true
-overview: 'Hunter publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Campaigns API, Combined Enrichment API, and 9 more. Tagged areas include Contact Discovery, Email, Email Verification, Lead Generation, and Prospecting.
+overview: 'Hunter publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Campaigns API, Discover API, and 19 more. Tagged areas include Contact Discovery, Email, Email Verification, Lead Generation, and Prospecting.
 
 
   The Hunter catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Hunter''s developer surface includes authentication, developer portal, documentation, pricing, engineering blog, signup flow, changelog, and 58 more developer resources.'
+  Hunter''s developer surface includes authentication, developer portal, documentation, pricing, engineering blog, signup flow, changelog, and 66 more developer resources.'
 plans:
 - name: Hunter Plans Pricing
-  plan_count: 6
+  plan_count: 9
   slug: hunter-plans-pricing
-random_paper: 2
+- name: Hunter Price Estimates
+  plan_count: 0
+  slug: hunter-price-estimates
+random_paper: 14
 rate_limits:
 - limit_count: 15
   name: Hunter Rate Limits
@@ -954,31 +1002,36 @@ scopes:
   summary_line: 2 scopes · authorizationCode/clientCredentials/refreshToken
 score:
   band: exemplar
-  composite: 70.4
+  composite: 71.5
   coverage:
-    artifact_dirs: 36
-    catalog_earned: 80.4
+    artifact_dirs: 38
+    catalog_earned: 83.4
     catalog_earned_first_party: 24.0
-    catalog_gap: 34.6
+    catalog_gap: 31.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.8
   facets:
-    access_clarity: 67.1
+    access_clarity: 75.0
     contract_governance: 45.5
-    contract_quality: 68.9
+    contract_quality: 66.9
     developer_ergonomics: 60.7
     discoverability: 68.3
     operational_transparency: 76.3
-  previous_composite: 71.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 70.7
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 12
+      marker_coverage: 62.9
+      total: 35
     mcp: first-party
     skills: first-party
   regulatory:
@@ -991,13 +1044,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/hunter/refs/heads/main/screenshots/hunter-2026-06-20T182943.png
+screenshot: https://apis.io/screenshots/hunter/hunter-2026-06-20T182943.png
 security:
 - kind: authentication
   name: Hunter Authentication
@@ -1011,6 +1064,34 @@ security:
   name: Hunter Vulnerability Disclosure
   slug: hunter-vulnerability-disclosure
   summary_line: Hackerone · security.txt
+skill_count: 13
+skills:
+- name: build-sequences
+  slug: hunter-build-sequences
+- name: check-usage
+  slug: hunter-check-usage
+- name: company-enrichment
+  slug: hunter-company-enrichment
+- name: company-lists
+  slug: hunter-company-lists
+- name: discover
+  slug: hunter-discover
+- name: domain-search
+  slug: hunter-domain-search
+- name: email-finder
+  slug: hunter-email-finder
+- name: email-verifier
+  slug: hunter-email-verifier
+- name: lead-lists
+  slug: hunter-lead-lists
+- name: manage-leads
+  slug: hunter-manage-leads
+- name: person-enrichment
+  slug: hunter-person-enrichment
+- name: prospecting
+  slug: hunter-prospecting
+- name: push-to-crm
+  slug: hunter-push-to-crm
 slug: hunter
 tags:
 - Contact Discovery

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: templated
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.1
-  scored_at: '2026-10-17'
+  score: 29.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -69,11 +72,8 @@ apis:
   description: Upload recordings for VOC processing.
   name: Crescendo VOC API
   slug: crescendo-voc-api
-artifact_total: 15
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Crescendo Platform MCP API
   slug: open-crescendo-mcp-api
@@ -91,7 +91,12 @@ collections:
   slug: open-crescendo-voc-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/overlays/crescendo-platform-overlay.yaml
+  href: https://artifacts.apis.io/crescendo/capabilities/crescendo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/crescendo-capability-edges.yml
+- group: other
+  href: https://artifacts.apis.io/crescendo/overlays/crescendo-platform-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/crescendo-platform-overlay.yaml
@@ -112,7 +117,7 @@ common:
   type: Quickstart
   url: https://docs.crescendo.ai/quickstart
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/llms/crescendo-llms.txt
+  href: https://artifacts.apis.io/crescendo/llms/crescendo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/crescendo-llms.txt
@@ -137,60 +142,64 @@ common:
   type: Website
   url: https://www.crescendo.ai
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/mcp/crescendo-mcp.yml
+  href: https://artifacts.apis.io/crescendo/mcp/crescendo-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/crescendo-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/authentication/crescendo-authentication.yml
+  href: https://artifacts.apis.io/crescendo/authentication/crescendo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/crescendo-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/agentic-access/crescendo-agentic-access.yml
+  href: https://artifacts.apis.io/crescendo/agentic-access/crescendo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/crescendo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/security/crescendo-domain-security.yml
+  href: https://artifacts.apis.io/crescendo/security/crescendo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/crescendo-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/conventions/crescendo-conventions.yml
+  href: https://artifacts.apis.io/crescendo/conventions/crescendo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/crescendo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/errors/crescendo-problem-types.yml
+  href: https://artifacts.apis.io/crescendo/errors/crescendo-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/crescendo-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/conformance/crescendo-conformance.yml
+  href: https://artifacts.apis.io/crescendo/conformance/crescendo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/crescendo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/lifecycle/crescendo-lifecycle.yml
+  href: https://artifacts.apis.io/crescendo/lifecycle/crescendo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/crescendo-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/data-model/crescendo-data-model.yml
+  href: https://artifacts.apis.io/crescendo/data-model/crescendo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/crescendo-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/components/crescendo-components.yml
+  href: https://artifacts.apis.io/crescendo/components/crescendo-components.yml
   title: ''
   type: Components
   url: components/crescendo-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/crescendo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://www.crescendo.ai/guides/diy-ai
 created: '2026-07-17'
 description: Crescendo is an AI-native customer experience (CX) platform that unifies AI agents for chat, voice, email, and messaging with quality assurance, workforce management, and business insights. The Crescendo Platform API (OpenAPI 3.1) is a tenant-scoped HTTP API for provisioning tenant configuration and documents, exporting assistant and voice-of-customer (VOC) conversations for reporting with cursor pagination, uploading audio recordings for asynchronous VOC processing, and driving assistants through a hosted Model Context Protocol (MCP) bots server over Streamable HTTP. Authentication is a tenant-scoped bearer API key. Crescendo is backed by General Catalyst and Trinity Ventures.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/crescendo.png
@@ -206,27 +215,43 @@ network: true
 overview: 'Crescendo publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including MCP API, Provisioning API, Reporting API, and 2 more. Tagged areas include Company, Customer Experience, Customer Service, Artificial Intelligence, and AI Agents.
 
 
-  Crescendo''s developer surface includes documentation, API reference, quickstart, engineering blog, support, authentication, and 16 more developer resources.'
-random_paper: 4
+  The Crescendo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Crescendo''s developer surface includes documentation, API reference, quickstart, engineering blog, support, authentication, and 18 more developer resources.'
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Crescendo API Rules
+  rule_count: 52
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 4
+    warn: 1
+  slug: crescendo-rules
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 40.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.4
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 48.5
     developer_ergonomics: 58.9
     discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 39.2
+  previous_composite: 40.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -243,13 +268,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/crescendo/refs/heads/main/screenshots/crescendo-2026-07-25T210727.png
+screenshot: https://apis.io/screenshots/crescendo/crescendo-2026-07-25T210727.png
 security:
 - kind: authentication
   name: Crescendo Authentication
@@ -259,6 +284,14 @@ security:
   name: Crescendo Domain Security
   slug: crescendo-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Export Crescendo conversations for reporting
+  slug: crescendo-export-reporting
+- name: Manage Crescendo provisioning documents
+  slug: crescendo-manage-provisioning
+- name: Process a VOC recording with Crescendo
+  slug: crescendo-voc-recording
 slug: crescendo
 tags:
 - Company
@@ -270,5 +303,7 @@ tags:
 - Conversational AI
 - Voice of Customer
 - MCP
+- Platform
+- Automation
 website: https://www.crescendo.ai
 ---

@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 21.7
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://exchange.derivadex.com
@@ -51,11 +56,8 @@ apis:
   description: Health, server time, and exchange configuration
   name: DerivaDEX System API
   slug: derivadex-system-api
-artifact_total: 9
+artifact_total: 10
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: DerivaDEX Exchange & Stats Market API
   slug: open-derivadex-market-api
@@ -67,7 +69,7 @@ collections:
   slug: open-derivadex-system-api
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/security/derivadex-domain-security.yml
+  href: https://artifacts.apis.io/derivadex/security/derivadex-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/derivadex-domain-security.yml
@@ -104,62 +106,62 @@ common:
   type: SignUp
   url: https://exchange.derivadex.com/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/openapi/_original/derivadex-exchange-openapi.yml
+  href: https://artifacts.apis.io/derivadex/openapi/_original/derivadex-exchange-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/derivadex-exchange-openapi.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/overlays/derivadex-exchange-overlay.yaml
+  href: https://artifacts.apis.io/derivadex/overlays/derivadex-exchange-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/derivadex-exchange-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/authentication/derivadex-authentication.yml
+  href: https://artifacts.apis.io/derivadex/authentication/derivadex-authentication.yml
   title: ''
   type: Authentication
   url: authentication/derivadex-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/conventions/derivadex-conventions.yml
+  href: https://artifacts.apis.io/derivadex/conventions/derivadex-conventions.yml
   title: ''
   type: Conventions
   url: conventions/derivadex-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/errors/derivadex-problem-types.yml
+  href: https://artifacts.apis.io/derivadex/errors/derivadex-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/derivadex-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/data-model/derivadex-data-model.yml
+  href: https://artifacts.apis.io/derivadex/data-model/derivadex-data-model.yml
   title: ''
   type: DataModel
   url: data-model/derivadex-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/mcp/derivadex-mcp.yml
+  href: https://artifacts.apis.io/derivadex/mcp/derivadex-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/derivadex-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/conformance/derivadex-conformance.yml
+  href: https://artifacts.apis.io/derivadex/conformance/derivadex-conformance.yml
   title: ''
   type: Conformance
   url: conformance/derivadex-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/lifecycle/derivadex-lifecycle.yml
+  href: https://artifacts.apis.io/derivadex/lifecycle/derivadex-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/derivadex-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/sandbox/derivadex-sandbox.yml
+  href: https://artifacts.apis.io/derivadex/sandbox/derivadex-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/derivadex-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/derivadex/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/llms/derivadex-llms.txt
+  href: https://artifacts.apis.io/derivadex/llms/derivadex-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/derivadex-llms.txt
@@ -174,27 +176,43 @@ network: true
 overview: 'DerivaDEX publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Market API, Stats API, and System API. Tagged areas include Company, Defi Derivatives, Cryptocurrency, Derivatives, and Perpetual Swaps.
 
 
+  The DerivaDEX catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   DerivaDEX''s developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, sandbox, and 15 more developer resources.'
-random_paper: 10
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: DerivaDEX API Rules
+  rule_count: 50
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 1
+  slug: derivadex-rules
 score:
   band: thin
-  composite: 32.5
+  composite: 36.7
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 37.0
+    artifact_dirs: 19
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 2.6
   facets:
-    access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 44.7
+    access_clarity: 6.6
+    contract_governance: 18.2
+    contract_quality: 49.7
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 32.4
+  previous_composite: 34.1
   provenance:
     conformance: derived
     contracts:
@@ -210,14 +228,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/derivadex/refs/heads/main/screenshots/derivadex-2026-07-25T211741.png
+screenshot: https://apis.io/screenshots/derivadex/derivadex-2026-07-25T211741.png
 security:
 - kind: authentication
   name: Derivadex Authentication
@@ -227,6 +245,10 @@ security:
   name: Derivadex Domain Security
   slug: derivadex-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Read DerivaDEX market data
+  slug: derivadex-market-data
 slug: derivadex
 tags:
 - Company

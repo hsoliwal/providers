@@ -1,9 +1,9 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-10-17'
+  score: 29.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 2
@@ -153,11 +156,8 @@ apis:
   description: A token is used to identify requests from a device and associate the requests with a session. As the user interacts with True Fit, the token will update. The most recent token returned by True Fit sho
   name: True Fit Token API
   slug: true-fit-token-api
-artifact_total: 48
+artifact_total: 52
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: True Fit - Consumer Analytics API
   slug: open-true-fit-analytics-api
@@ -227,27 +227,27 @@ common:
   type: Pricing
   url: https://www.truefit.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/plans/true-fit-plans-pricing.yml
+  href: https://artifacts.apis.io/true-fit/plans/true-fit-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/true-fit-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/overlays/true-fit-consumer-api-overlay.yaml
+  href: https://artifacts.apis.io/true-fit/overlays/true-fit-consumer-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/true-fit-consumer-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/agentic-access/true-fit-agentic-access.yml
+  href: https://artifacts.apis.io/true-fit/agentic-access/true-fit-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/true-fit-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/security/true-fit-domain-security.yml
+  href: https://artifacts.apis.io/true-fit/security/true-fit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/true-fit-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/authentication/true-fit-authentication.yml
+  href: https://artifacts.apis.io/true-fit/authentication/true-fit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/true-fit-authentication.yml
@@ -312,42 +312,42 @@ common:
   type: ChangeLog
   url: https://techdocs.truefitcorp.com/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/changelog/true-fit-changelog.yml
+  href: https://artifacts.apis.io/true-fit/changelog/true-fit-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/true-fit-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/lifecycle/true-fit-lifecycle.yml
+  href: https://artifacts.apis.io/true-fit/lifecycle/true-fit-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/true-fit-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/conventions/true-fit-conventions.yml
+  href: https://artifacts.apis.io/true-fit/conventions/true-fit-conventions.yml
   title: ''
   type: Conventions
   url: conventions/true-fit-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/conformance/true-fit-conformance.yml
+  href: https://artifacts.apis.io/true-fit/conformance/true-fit-conformance.yml
   title: ''
   type: Conformance
   url: conformance/true-fit-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/errors/true-fit-problem-types.yml
+  href: https://artifacts.apis.io/true-fit/errors/true-fit-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/true-fit-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/errors/true-fit-error-codes.yml
+  href: https://artifacts.apis.io/true-fit/errors/true-fit-error-codes.yml
   title: ''
   type: ErrorCodes
   url: errors/true-fit-error-codes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/packages/true-fit-packages.yml
+  href: https://artifacts.apis.io/true-fit/packages/true-fit-packages.yml
   title: ''
   type: Packages
   url: packages/true-fit-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/packages/true-fit-packages.yml
+  href: https://artifacts.apis.io/true-fit/packages/true-fit-packages.yml
   title: ''
   type: SDKs
   url: packages/true-fit-packages.yml
@@ -356,52 +356,60 @@ common:
   type: CDN
   url: https://cdn.truefitcorp.com/fitrec/global/js/tf-integration.js
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/components/true-fit-components.yml
+  href: https://artifacts.apis.io/true-fit/components/true-fit-components.yml
   title: ''
   type: Components
   url: components/true-fit-components.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/sandbox/true-fit-sandbox.yml
+  href: https://artifacts.apis.io/true-fit/sandbox/true-fit-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/true-fit-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/data-model/true-fit-data-model.yml
+  href: https://artifacts.apis.io/true-fit/data-model/true-fit-data-model.yml
   title: ''
   type: DataModel
   url: data-model/true-fit-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/mcp/true-fit-mcp.yml
+  href: https://artifacts.apis.io/true-fit/mcp/true-fit-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/true-fit-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/mcp/true-fit-tool-crosswalk.yml
+  href: https://artifacts.apis.io/true-fit/mcp/true-fit-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/true-fit-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/true-fit/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/llms/true-fit-llms.txt
+  href: https://artifacts.apis.io/true-fit/llms/true-fit-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/true-fit-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/llms/true-fit-techdocs-llms.txt
+  href: https://artifacts.apis.io/true-fit/llms/true-fit-techdocs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/true-fit-techdocs-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/well-known/true-fit-robots.txt
+  href: https://artifacts.apis.io/true-fit/well-known/true-fit-robots.txt
   title: ''
   type: ContentSignal
   url: well-known/true-fit-robots.txt
 created: '2026-08-05'
 description: True Fit Corporation is an AI-powered fit and sizing intelligence platform for apparel and footwear ecommerce. Its Fashion Genome dataset is built on roughly two decades of real purchase-and-return outcomes across 100M+ registered shoppers, 60M unique products and 91K+ brands, and powers size recommendations, fit confidence scores, cross-brand size calibration and shopper fit profiles. True Fit ships as a product-detail-page JavaScript widget, a Shopify app, native iOS/Android/React Native SDKs, a documented Partner REST API and Consumer REST API, a 360 Member View data API, and a Fit Intelligence Layer exposed to AI agents over the Model Context Protocol.
+finops:
+- has_sources: true
+  method: derived
+  name: True Fit Finops
+  primary_unit: ''
+  service_category: ''
+  slug: true-fit-finops
+  template: true
 image: https://cdn.prod.website-files.com/64ee50f98275d03e3242bdef/69d410679088692a9df73243_256px%20webclip.png
 layout: provider
 modified: '2026-09-16'
@@ -411,31 +419,47 @@ network: true
 overview: 'True Fit publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analytics API, Auth API, Bra Sizes API, and 19 more. Tagged areas include Company, Fit and Sizing, Apparel, Footwear, and Retail.
 
 
+  The True Fit catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   True Fit''s developer surface includes pricing, authentication, documentation, API reference, getting-started guide, support, engineering blog, and 32 more developer resources.'
 plans:
 - name: True Fit Plans Pricing
   plan_count: 0
   slug: true-fit-plans-pricing
-random_paper: 2
+random_paper: 0
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: True Fit API Rules
+  rule_count: 58
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 14
+  slug: true-fit-rules
 score:
   band: developing
-  composite: 42.8
+  composite: 45.1
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 37.0
+    artifact_dirs: 30
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.2
+  delta: 0.6
   facets:
-    access_clarity: 39.5
-    contract_governance: 4.5
+    access_clarity: 34.2
+    contract_governance: 18.2
     contract_quality: 43.7
-    developer_ergonomics: 54.2
+    developer_ergonomics: 62.5
     discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 40.6
+  previous_composite: 44.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -452,13 +476,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/true-fit/refs/heads/main/screenshots/true-fit-2026-08-17T082444.png
+screenshot: https://apis.io/screenshots/true-fit/true-fit-2026-08-17T082444.png
 security:
 - kind: authentication
   name: True Fit Authentication
@@ -468,6 +492,14 @@ security:
   name: True Fit Domain Security
   slug: true-fit-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Answer "does this run small?" with no shopper profile
+  slug: true-fit-anonymous-fit-guidance
+- name: Manage a shopper's fit profile, measurements and closet
+  slug: true-fit-manage-fit-profile
+- name: Size a shopper for a retailer product
+  slug: true-fit-size-a-shopper
 slug: true-fit
 tags:
 - Company

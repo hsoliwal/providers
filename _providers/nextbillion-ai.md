@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +25,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 12.9
-  scored_at: '2026-10-17'
+  score: 12.7
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
-- description: Location‑based routing and optimization APIs as described in the developer documentation.
+- baseURL: https://api.nextbillion.io
+  baseurl_source: spec
+  description: Location‑based routing and optimization APIs as described in the developer documentation.
   name: NextBillion AI API
-  slug: nextbillion-ai-api-2
+  slug: nextbillion-ai-api
 - baseURL: https://api.nextbillion.io
   baseurl_source: declared
   description: The Directions API from NextBillion.ai — 1 operation(s) for directions.
@@ -67,57 +82,57 @@ apis:
 artifact_total: 16
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/rules/nextbillion-ai-rules.yml
+  href: https://artifacts.apis.io/nextbillion-ai/rules/nextbillion-ai-rules.yml
   title: ''
   type: Spectral
   url: rules/nextbillion-ai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/json-ld/nextbillion-ai-context.jsonld
+  href: https://artifacts.apis.io/nextbillion-ai/json-ld/nextbillion-ai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/nextbillion-ai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/vocabulary/nextbillion-ai-vocabulary.yml
+  href: https://artifacts.apis.io/nextbillion-ai/vocabulary/nextbillion-ai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/nextbillion-ai-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/data-model/nextbillion-ai-data-model.yml
+  href: https://artifacts.apis.io/nextbillion-ai/data-model/nextbillion-ai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/nextbillion-ai-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/changelog/nextbillion-ai-changelog.yml
+  href: https://artifacts.apis.io/nextbillion-ai/changelog/nextbillion-ai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/nextbillion-ai-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/conformance/nextbillion-ai-conformance.yml
+  href: https://artifacts.apis.io/nextbillion-ai/conformance/nextbillion-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nextbillion-ai-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/llms/nextbillion-ai-llms.txt
+  href: https://artifacts.apis.io/nextbillion-ai/llms/nextbillion-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nextbillion-ai-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/hosts/nextbillion-ai-hosts.yml
+  href: https://artifacts.apis.io/nextbillion-ai/hosts/nextbillion-ai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/nextbillion-ai-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/vendors/nextbillion-ai-vendors.yml
+  href: https://artifacts.apis.io/nextbillion-ai/vendors/nextbillion-ai-vendors.yml
   title: ''
   type: Vendors
   url: vendors/nextbillion-ai-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/packages/nextbillion-ai-packages.yml
+  href: https://artifacts.apis.io/nextbillion-ai/packages/nextbillion-ai-packages.yml
   title: ''
   type: SDKs
   url: packages/nextbillion-ai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/packages/nextbillion-ai-packages.yml
+  href: https://artifacts.apis.io/nextbillion-ai/packages/nextbillion-ai-packages.yml
   title: ''
   type: Packages
   url: packages/nextbillion-ai-packages.yml
@@ -154,7 +169,7 @@ common:
   type: DeveloperPortal
   url: https://api.nextbillion.io/optimization/v2?key={your_api_key}</p
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/security/nextbillion-ai-domain-security.yml
+  href: https://artifacts.apis.io/nextbillion-ai/security/nextbillion-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nextbillion-ai-domain-security.yml
@@ -198,14 +213,14 @@ modified: '2026-10-13'
 name: NextBillion.ai
 nav: Providers
 network: true
-overview: 'NextBillion.ai is listed with 8 APIs on the [APIs.io](https://apis.io/) network, including Directions API, Distancematrix API, Hos API, and 5 more. Tagged areas include Company, Routing, Logistics, Artificial Intelligence, and Mapping.
+overview: 'NextBillion.ai is listed with 8 APIs on the [APIs.io](https://apis.io/) network, including NextBillion AI API, Directions API, Distancematrix API, and 5 more. Tagged areas include Company, Routing, Logistics, Artificial Intelligence, and Mapping.
 
 
   The NextBillion.ai catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   NextBillion.ai''s developer surface includes changelog, pricing, getting-started guide, engineering blog, documentation, and 16 more developer resources.'
-random_paper: 9
+random_paper: 23
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -220,22 +235,24 @@ rules:
     warn: 1
   slug: nextbillion-ai-rules
 score:
-  band: thin
-  composite: 34.1
+  band: emerging
+  composite: 25.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.2
   facets:
-    access_clarity: 39.5
+    access_clarity: 19.7
     contract_governance: 22.0
     contract_quality: 24.6
-    developer_ergonomics: 40.5
+    developer_ergonomics: 23.8
     discoverability: 69.6
     operational_transparency: 15.8
+  previous_composite: 34.1
   provenance:
     conformance: derived
     contracts:
@@ -249,12 +266,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 15.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/nextbillion-ai/nextbillion-ai-2026-11-03T140207.png
 security:
 - kind: domain-security
   name: Nextbillion Ai Domain Security

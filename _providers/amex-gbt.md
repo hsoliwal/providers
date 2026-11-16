@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.4
-  scored_at: '2026-10-17'
+  score: 43.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 7
@@ -176,7 +179,7 @@ apis:
   description: The version-controller API from American Express Global Business Travel — 1 operation(s) for version-controller.
   name: American Express Global Business Travel Version Controller API
   slug: amex-gbt-version-controller-api
-artifact_total: 50
+artifact_total: 57
 asyncapis:
 - description: ''
   name: Amex Gbt Webhooks
@@ -235,117 +238,117 @@ collections:
   slug: open-amex-gbt-validation-spi
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/capabilities/amex-gbt-capability-edges.yml
+  href: https://artifacts.apis.io/amex-gbt/capabilities/amex-gbt-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/amex-gbt-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-sso-context-api-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-sso-context-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-sso-context-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-company-info-api-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-company-info-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-company-info-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-company-cdf-api-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-company-cdf-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-company-cdf-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-validation-spi-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-validation-spi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-validation-spi-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-expense-spi-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-expense-spi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-expense-spi-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-booking-api-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-booking-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-booking-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-cancellation-deletion-api-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-cancellation-deletion-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-cancellation-deletion-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-approval-workflow-api-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-approval-workflow-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-approval-workflow-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-approval-customisation-spi-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-approval-customisation-spi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-approval-customisation-spi-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-receipt-api-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-receipt-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-receipt-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-duty-of-care-api-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-duty-of-care-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-duty-of-care-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/mcp/amex-gbt-mcp.yml
+  href: https://artifacts.apis.io/amex-gbt/mcp/amex-gbt-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/amex-gbt-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/agentic-access/amex-gbt-agentic-access.yml
+  href: https://artifacts.apis.io/amex-gbt/agentic-access/amex-gbt-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amex-gbt-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/security/amex-gbt-domain-security.yml
+  href: https://artifacts.apis.io/amex-gbt/security/amex-gbt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amex-gbt-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/scopes/amex-gbt-scopes.yml
+  href: https://artifacts.apis.io/amex-gbt/scopes/amex-gbt-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/amex-gbt-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/authentication/amex-gbt-authentication.yml
+  href: https://artifacts.apis.io/amex-gbt/authentication/amex-gbt-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amex-gbt-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/conventions/amex-gbt-conventions.yml
+  href: https://artifacts.apis.io/amex-gbt/conventions/amex-gbt-conventions.yml
   title: ''
   type: Conventions
   url: conventions/amex-gbt-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/errors/amex-gbt-error-codes.yml
+  href: https://artifacts.apis.io/amex-gbt/errors/amex-gbt-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/amex-gbt-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/errors/amex-gbt-problem-types.yml
+  href: https://artifacts.apis.io/amex-gbt/errors/amex-gbt-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/amex-gbt-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/lifecycle/amex-gbt-lifecycle.yml
+  href: https://artifacts.apis.io/amex-gbt/lifecycle/amex-gbt-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/amex-gbt-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/changelog/amex-gbt-changelog.yml
+  href: https://artifacts.apis.io/amex-gbt/changelog/amex-gbt-changelog.yml
   title: ''
   type: Deprecation
   url: changelog/amex-gbt-changelog.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/changelog/amex-gbt-changelog.yml
+  href: https://artifacts.apis.io/amex-gbt/changelog/amex-gbt-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/amex-gbt-changelog.yml
@@ -354,47 +357,47 @@ common:
   type: ChangeLog
   url: https://apis.egencia.com/bi/v1/api-info
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/conformance/amex-gbt-conformance.yml
+  href: https://artifacts.apis.io/amex-gbt/conformance/amex-gbt-conformance.yml
   title: ''
   type: Conformance
   url: conformance/amex-gbt-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/data-model/amex-gbt-data-model.yml
+  href: https://artifacts.apis.io/amex-gbt/data-model/amex-gbt-data-model.yml
   title: ''
   type: DataModel
   url: data-model/amex-gbt-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/asyncapi/amex-gbt-webhooks.yml
+  href: https://artifacts.apis.io/amex-gbt/asyncapi/amex-gbt-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/amex-gbt-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/sandbox/amex-gbt-sandbox.yml
+  href: https://artifacts.apis.io/amex-gbt/sandbox/amex-gbt-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/amex-gbt-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/packages/amex-gbt-packages.yml
+  href: https://artifacts.apis.io/amex-gbt/packages/amex-gbt-packages.yml
   title: ''
   type: Packages
   url: packages/amex-gbt-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/well-known/amex-gbt-well-known.yml
+  href: https://artifacts.apis.io/amex-gbt/well-known/amex-gbt-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/amex-gbt-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/llms/amex-gbt-llms.txt
+  href: https://artifacts.apis.io/amex-gbt/llms/amex-gbt-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/amex-gbt-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/amex-gbt/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/security/amex-gbt-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amex-gbt/security/amex-gbt-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amex-gbt-vulnerability-disclosure.yml
@@ -403,17 +406,17 @@ common:
   type: Security
   url: https://amexgbt.responsibledisclosure.com/hc/en-us
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-reporting-api-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-reporting-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-reporting-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-user-sync-api-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-user-sync-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-user-sync-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/overlays/amex-gbt-service-openconnect-overlay.yaml
+  href: https://artifacts.apis.io/amex-gbt/overlays/amex-gbt-service-openconnect-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amex-gbt-service-openconnect-overlay.yaml
@@ -462,22 +465,22 @@ common:
   type: Authentication
   url: https://apis.egencia.com/auth/v1/token
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/openapi/_original/amex-gbt-service-openconnect-openapi.json
+  href: https://artifacts.apis.io/amex-gbt/openapi/_original/amex-gbt-service-openconnect-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/amex-gbt-service-openconnect-openapi.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/openapi/_original/amex-gbt-service-bi-openapi.json
+  href: https://artifacts.apis.io/amex-gbt/openapi/_original/amex-gbt-service-bi-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/amex-gbt-service-bi-openapi.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/openapi/_original/amex-gbt-service-dutyofcare-openapi.json
+  href: https://artifacts.apis.io/amex-gbt/openapi/_original/amex-gbt-service-dutyofcare-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/amex-gbt-service-dutyofcare-openapi.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/openapi/_original/amex-gbt-service-company-openapi.json
+  href: https://artifacts.apis.io/amex-gbt/openapi/_original/amex-gbt-service-company-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/amex-gbt-service-company-openapi.json
@@ -517,11 +520,24 @@ network: true
 overview: 'American Express Global Business Travel publishes 26 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Assist Notes API, Approval API, Availability Probes Controller API, and 23 more. Tagged areas include Travel, United States, Corporate Travel, Travel Management, and Business Travel.
 
 
-  The American Express Global Business Travel catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The American Express Global Business Travel catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   American Express Global Business Travel''s developer surface includes authentication, changelog, sandbox, documentation, API reference, getting-started guide, support, and 50 more developer resources.'
-random_paper: 19
+random_paper: 21
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: American Express Global Business Travel API Rules
+  rule_count: 46
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 3
+    warn: 10
+  slug: amex-gbt-rules
 scopes:
 - name: Amex Gbt Scopes
   scope_count: 0
@@ -529,18 +545,18 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 49.8
+  composite: 51.5
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 40.0
+    artifact_dirs: 28
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 56.5
     developer_ergonomics: 58.9
     discoverability: 78.6
@@ -552,7 +568,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 49.8
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -569,13 +585,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/amex-gbt/refs/heads/main/screenshots/amex-gbt-2026-10-11T093848.png
+screenshot: https://apis.io/screenshots/amex-gbt/amex-gbt-2026-10-11T093848.png
 security:
 - kind: authentication
   name: Amex Gbt Authentication
@@ -589,6 +605,20 @@ security:
   name: Amex Gbt Vulnerability Disclosure
   slug: amex-gbt-vulnerability-disclosure
   summary_line: Hackerone · contact published
+skill_count: 6
+skills:
+- name: Approve, deny, cancel and delete Egencia bookings
+  slug: amex-gbt-approve-and-service-bookings
+- name: Authenticate against the Egencia API platform
+  slug: amex-gbt-authenticate
+- name: Export booking transaction history from the Reporting API
+  slug: amex-gbt-export-transactions
+- name: Provision travellers into Egencia over SCIM 2.0
+  slug: amex-gbt-provision-travelers-scim
+- name: Receive the Egencia Expense and Booking SPI push, then fetch receipts
+  slug: amex-gbt-receive-expense-push
+- name: Locate travellers with the Duty of Care API
+  slug: amex-gbt-track-travelers-duty-of-care
 slug: amex-gbt
 tags:
 - Travel

@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: 'Agent-native commerce surface for the honest.com Shopify storefront. Exposes a live Universal Commerce Protocol (UCP) shopping MCP endpoint for catalog search, cart, and buyer-approved checkout, plus '
@@ -69,42 +74,42 @@ common:
   type: TermsOfService
   url: https://honest.com/policies/terms-of-service
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/honest-company/refs/heads/main/mcp/honest-company-mcp.yml
+  href: https://artifacts.apis.io/honest-company/mcp/honest-company-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/honest-company-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/honest-company/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/honest-company/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/honest-company/refs/heads/main/llms/honest-company-llms.txt
+  href: https://artifacts.apis.io/honest-company/llms/honest-company-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/honest-company-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/honest-company/refs/heads/main/well-known/honest-company-well-known.yml
+  href: https://artifacts.apis.io/honest-company/well-known/honest-company-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/honest-company-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/honest-company/refs/heads/main/authentication/honest-company-authentication.yml
+  href: https://artifacts.apis.io/honest-company/authentication/honest-company-authentication.yml
   title: ''
   type: Authentication
   url: authentication/honest-company-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/honest-company/refs/heads/main/scopes/honest-company-scopes.yml
+  href: https://artifacts.apis.io/honest-company/scopes/honest-company-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/honest-company-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/honest-company/refs/heads/main/conformance/honest-company-conformance.yml
+  href: https://artifacts.apis.io/honest-company/conformance/honest-company-conformance.yml
   title: ''
   type: Conformance
   url: conformance/honest-company-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/honest-company/refs/heads/main/security/honest-company-domain-security.yml
+  href: https://artifacts.apis.io/honest-company/security/honest-company-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/honest-company-domain-security.yml
@@ -124,7 +129,7 @@ overview: 'Honest Company is listed with 2 APIs on the [APIs.io](https://apis.io
 
 
   Honest Company''s developer surface includes signup flow, support, engineering blog, authentication, and 10 more developer resources.'
-random_paper: 9
+random_paper: 21
 scopes:
 - name: Honest Company Scopes
   scope_count: 4
@@ -134,7 +139,7 @@ score:
   band: emerging
   composite: 24.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -166,14 +171,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/honest-company/refs/heads/main/screenshots/honest-company-2026-08-07T170253.png
+screenshot: https://apis.io/screenshots/honest-company/honest-company-2026-08-07T170253.png
 security:
 - kind: authentication
   name: Honest Company Authentication

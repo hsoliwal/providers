@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.1
-  scored_at: '2026-10-17'
+  score: 21.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -104,15 +107,12 @@ apis:
   description: The Webhooks API from FastSpring — 1 operation(s) for webhooks.
   name: FastSpring Webhooks API
   slug: fastspring-webhooks-api
-artifact_total: 32
+artifact_total: 31
 asyncapis:
 - description: AsyncAPI 2.6 description of FastSpring's outbound webhook surface. FastSpring delivers events to a seller-configured HTTPS endpoint as HTTP POSTs with a JSON envelope of one or more events. Each reque
   name: FastSpring Webhooks
   slug: fastspring-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: FastSpring Accounts API
   slug: open-fastspring-accounts-api
@@ -154,27 +154,27 @@ collections:
   slug: open-fastspring
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fastspring/refs/heads/main/capabilities/fastspring-capability-edges.yml
+  href: https://artifacts.apis.io/fastspring/capabilities/fastspring-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/fastspring-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fastspring/refs/heads/main/agentic-access/fastspring-agentic-access.yml
+  href: https://artifacts.apis.io/fastspring/agentic-access/fastspring-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fastspring-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fastspring/refs/heads/main/security/fastspring-trust-center.yml
+  href: https://artifacts.apis.io/fastspring/security/fastspring-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/fastspring-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fastspring/refs/heads/main/security/fastspring-domain-security.yml
+  href: https://artifacts.apis.io/fastspring/security/fastspring-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fastspring-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fastspring/refs/heads/main/authentication/fastspring-authentication.yml
+  href: https://artifacts.apis.io/fastspring/authentication/fastspring-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fastspring-authentication.yml
@@ -233,7 +233,7 @@ overview: 'FastSpring publishes 12 API contracts indexed on the [APIs.io](https:
 
 
   FastSpring''s developer surface includes authentication, documentation, pricing, signup flow, support, engineering blog, and 9 more developer resources.'
-random_paper: 11
+random_paper: 9
 rules:
 - authorship: generated
   effective_rule_count: 34
@@ -249,20 +249,20 @@ rules:
   slug: fastspring-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 34.0
+  composite: 37.3
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 41.5
     catalog_earned_first_party: 0.0
     catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.3
   facets:
     access_clarity: 31.6
     contract_governance: 13.6
     contract_quality: 52.8
-    developer_ergonomics: 19.0
+    developer_ergonomics: 35.7
     discoverability: 73.2
     operational_transparency: 6.6
   previous_composite: 34.0
@@ -279,13 +279,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/fastspring/refs/heads/main/screenshots/fastspring-2026-06-20T181053.png
+screenshot: https://apis.io/screenshots/fastspring/fastspring-2026-06-20T181053.png
 security:
 - kind: authentication
   name: Fastspring Authentication

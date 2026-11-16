@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Anonymous, fully introspectable GraphQL endpoint served from Johnnie-O's own Hydrogen storefront host. This is the Shopify Storefront API for merchant tenant 22750137; the Hydrogen app proxies the req
@@ -45,10 +48,10 @@ apis:
 - description: Live remote MCP server implementing the Universal Commerce Protocol shopping service (version 2026-04-08) on Johnnie-O's Shopify-served primary domain. An anonymous JSON-RPC tools/list returns thirtee
   name: Johnnie-O UCP Commerce MCP Endpoint
   slug: ucp-mcp
-artifact_total: 8
+artifact_total: 10
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/security/johnnie-o-domain-security.yml
+  href: https://artifacts.apis.io/johnnie-o/security/johnnie-o-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/johnnie-o-domain-security.yml
@@ -57,82 +60,82 @@ common:
   type: Website
   url: https://www.johnnie-o.com/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/graphql/johnnie-o-storefront.graphql
+  href: https://artifacts.apis.io/johnnie-o/graphql/johnnie-o-storefront.graphql
   title: ''
   type: GraphQL
   url: graphql/johnnie-o-storefront.graphql
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/mcp/johnnie-o-mcp.yml
+  href: https://artifacts.apis.io/johnnie-o/mcp/johnnie-o-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/johnnie-o-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/mcp/johnnie-o-tool-crosswalk.yml
+  href: https://artifacts.apis.io/johnnie-o/mcp/johnnie-o-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/johnnie-o-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/llms/johnnie-o-llms.txt
+  href: https://artifacts.apis.io/johnnie-o/llms/johnnie-o-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/johnnie-o-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/johnnie-o/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/well-known/johnnie-o-well-known.yml
+  href: https://artifacts.apis.io/johnnie-o/well-known/johnnie-o-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/johnnie-o-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/authentication/johnnie-o-authentication.yml
+  href: https://artifacts.apis.io/johnnie-o/authentication/johnnie-o-authentication.yml
   title: ''
   type: Authentication
   url: authentication/johnnie-o-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/scopes/johnnie-o-scopes.yml
+  href: https://artifacts.apis.io/johnnie-o/scopes/johnnie-o-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/johnnie-o-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/conformance/johnnie-o-conformance.yml
+  href: https://artifacts.apis.io/johnnie-o/conformance/johnnie-o-conformance.yml
   title: ''
   type: Conformance
   url: conformance/johnnie-o-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/conventions/johnnie-o-conventions.yml
+  href: https://artifacts.apis.io/johnnie-o/conventions/johnnie-o-conventions.yml
   title: ''
   type: Conventions
   url: conventions/johnnie-o-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/lifecycle/johnnie-o-lifecycle.yml
+  href: https://artifacts.apis.io/johnnie-o/lifecycle/johnnie-o-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/johnnie-o-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/errors/johnnie-o-problem-types.yml
+  href: https://artifacts.apis.io/johnnie-o/errors/johnnie-o-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/johnnie-o-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/data-model/johnnie-o-data-model.yml
+  href: https://artifacts.apis.io/johnnie-o/data-model/johnnie-o-data-model.yml
   title: ''
   type: DataModel
   url: data-model/johnnie-o-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/rate-limits/johnnie-o-rate-limits.yml
+  href: https://artifacts.apis.io/johnnie-o/rate-limits/johnnie-o-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/johnnie-o-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/plans/johnnie-o-plans-pricing.yml
+  href: https://artifacts.apis.io/johnnie-o/plans/johnnie-o-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/johnnie-o-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/packages/johnnie-o-packages.yml
+  href: https://artifacts.apis.io/johnnie-o/packages/johnnie-o-packages.yml
   title: ''
   type: Packages
   url: packages/johnnie-o-packages.yml
@@ -181,7 +184,7 @@ plans:
 - name: Johnnie O Plans Pricing
   plan_count: 0
   slug: johnnie-o-plans-pricing
-random_paper: 1
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: Johnnie O Rate Limits
@@ -220,14 +223,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/johnnie-o/refs/heads/main/screenshots/johnnie-o-2026-09-02T145957.png
+screenshot: https://apis.io/screenshots/johnnie-o/johnnie-o-2026-09-02T145957.png
 security:
 - kind: authentication
   name: Johnnie O Authentication
@@ -237,6 +240,12 @@ security:
   name: Johnnie O Domain Security
   slug: johnnie-o-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: johnnie-o-agentic-checkout
+  slug: johnnie-o-agentic-checkout
+- name: johnnie-o-browse-catalog
+  slug: johnnie-o-browse-catalog
 slug: johnnie-o
 tags:
 - Company

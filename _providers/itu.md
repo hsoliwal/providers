@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.6
-  scored_at: '2026-10-17'
+  score: 26.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -85,7 +88,7 @@ apis:
   description: Universal and Meaningful Connectivity targets and scores.
   name: ITU UMC API
   slug: itu-umc-api
-artifact_total: 13
+artifact_total: 17
 collections:
 - collection_type: open
   name: ITU DataHub API
@@ -95,77 +98,77 @@ collections:
   slug: open-itu-proximity
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/overlays/itu-datahub-overlay.yaml
+  href: https://artifacts.apis.io/itu/overlays/itu-datahub-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/itu-datahub-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/overlays/itu-proximity-overlay.yaml
+  href: https://artifacts.apis.io/itu/overlays/itu-proximity-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/itu-proximity-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/agentic-access/itu-agentic-access.yml
+  href: https://artifacts.apis.io/itu/agentic-access/itu-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/itu-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/authentication/itu-authentication.yml
+  href: https://artifacts.apis.io/itu/authentication/itu-authentication.yml
   title: ''
   type: Authentication
   url: authentication/itu-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/security/itu-domain-security.yml
+  href: https://artifacts.apis.io/itu/security/itu-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/itu-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/conventions/itu-conventions.yml
+  href: https://artifacts.apis.io/itu/conventions/itu-conventions.yml
   title: ''
   type: Conventions
   url: conventions/itu-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/errors/itu-problem-types.yml
+  href: https://artifacts.apis.io/itu/errors/itu-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/itu-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/lifecycle/itu-lifecycle.yml
+  href: https://artifacts.apis.io/itu/lifecycle/itu-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/itu-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/conformance/itu-conformance.yml
+  href: https://artifacts.apis.io/itu/conformance/itu-conformance.yml
   title: ''
   type: Conformance
   url: conformance/itu-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/data-model/itu-data-model.yml
+  href: https://artifacts.apis.io/itu/data-model/itu-data-model.yml
   title: ''
   type: DataModel
   url: data-model/itu-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/examples/_index.yml
+  href: https://artifacts.apis.io/itu/examples/_index.yml
   title: ''
   type: Examples
   url: examples/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/mcp/itu-mcp.yml
+  href: https://artifacts.apis.io/itu/mcp/itu-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/itu-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/mcp/itu-tool-crosswalk.yml
+  href: https://artifacts.apis.io/itu/mcp/itu-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/itu-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/itu/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/llms/itu-llms.txt
+  href: https://artifacts.apis.io/itu/llms/itu-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/itu-llms.txt
@@ -217,22 +220,38 @@ network: true
 overview: 'ITU publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Dashboards API, Data API, IDI API, and 5 more. Tagged areas include Telecommunications, Global, Regulator, Standards, and Spectrum.
 
 
+  The ITU catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   ITU''s developer surface includes authentication, code examples, documentation, engineering blog, support, and 19 more developer resources.'
-random_paper: 8
+random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: ITU API Rules
+  rule_count: 62
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 1
+    warn: 3
+  slug: itu-rules
 score:
   band: emerging
-  composite: 24.0
+  composite: 25.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 15.8
     developer_ergonomics: 37.5
     discoverability: 73.2
@@ -246,7 +265,7 @@ score:
     - dach
     - europe
     - global
-  previous_composite: 24.0
+  previous_composite: 25.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -263,13 +282,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 25.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/itu/refs/heads/main/screenshots/itu-2026-08-07T170931.png
+screenshot: https://apis.io/screenshots/itu/itu-2026-08-07T170931.png
 security:
 - kind: authentication
   name: Itu Authentication
@@ -279,6 +298,14 @@ security:
   name: Itu Domain Security
   slug: itu-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Build a country connectivity scorecard from ITU
+  slug: itu-country-connectivity-scorecard
+- name: Score coordinates against ITU fibre infrastructure
+  slug: itu-fibre-proximity-batch
+- name: Look up an ITU ICT indicator for a country
+  slug: itu-lookup-ict-indicator
 slug: itu
 tags:
 - Telecommunications

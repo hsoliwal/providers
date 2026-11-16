@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.8
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -48,11 +52,8 @@ apis:
   description: The Feeds API from Slashdot — 8 operation(s) for feeds.
   name: Slashdot Feeds API
   slug: slashdot-feeds-api
-artifact_total: 18
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Slashdot RSS/Atom Feeds Apple API
   slug: open-slashdot-apple-api
@@ -79,27 +80,27 @@ collections:
   slug: open-slashdot-science-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/plans/slashdot-plans-pricing.yml
+  href: https://artifacts.apis.io/slashdot/plans/slashdot-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/slashdot-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/rate-limits/slashdot-rate-limits.yml
+  href: https://artifacts.apis.io/slashdot/rate-limits/slashdot-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/slashdot-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/finops/slashdot-finops.yml
+  href: https://artifacts.apis.io/slashdot/finops/slashdot-finops.yml
   title: ''
   type: FinOps
   url: finops/slashdot-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/agentic-access/slashdot-agentic-access.yml
+  href: https://artifacts.apis.io/slashdot/agentic-access/slashdot-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/slashdot-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/security/slashdot-domain-security.yml
+  href: https://artifacts.apis.io/slashdot/security/slashdot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/slashdot-domain-security.yml
@@ -160,17 +161,17 @@ common:
   type: PrivacyPolicy
   url: https://slashdot.org/privacy
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/openapi/_original/slashdot-rss-openapi.yml
+  href: https://artifacts.apis.io/slashdot/openapi/_original/slashdot-rss-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/slashdot-rss-openapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/json-ld/slashdot-context.jsonld
+  href: https://artifacts.apis.io/slashdot/json-ld/slashdot-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/slashdot-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/vocabulary/slashdot-vocabulary.yml
+  href: https://artifacts.apis.io/slashdot/vocabulary/slashdot-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/slashdot-vocabulary.yml
@@ -188,7 +189,7 @@ finops:
 - has_sources: false
   method: generated
   name: Slashdot Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: slashdot-finops
   template: true
@@ -214,7 +215,7 @@ plans:
 - name: Slashdot Plans Pricing
   plan_count: 3
   slug: slashdot-plans-pricing
-random_paper: 8
+random_paper: 2
 rate_limits:
 - limit_count: 5
   name: Slashdot Rate Limits
@@ -236,13 +237,13 @@ score:
   band: emerging
   composite: 23.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 46.3
     catalog_earned_first_party: 0.0
     catalog_gap: 68.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.9
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 25.0
@@ -250,7 +251,7 @@ score:
     developer_ergonomics: 0.0
     discoverability: 55.4
     operational_transparency: 7.9
-  previous_composite: 24.9
+  previous_composite: 23.0
   provenance:
     agentic_access: derived
     contracts:
@@ -264,14 +265,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/slashdot/refs/heads/main/screenshots/slashdot-2026-06-20T194022.png
+screenshot: https://apis.io/screenshots/slashdot/slashdot-2026-06-20T194022.png
 security:
 - kind: domain-security
   name: Slashdot Domain Security

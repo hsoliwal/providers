@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +25,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 16.5
-  scored_at: '2026-10-17'
+  score: 18.3
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
-- description: Claritymovement provides air quality monitoring hardware and cloud data services.
+- baseURL: https://clarity-data-api.clarity.io
+  baseurl_source: spec
+  description: Claritymovement provides air quality monitoring hardware and cloud data services.
   name: Claritymovement API
-  slug: claritymovement-api-2
+  slug: claritymovement-api
 - baseURL: https://clarity-data-api.clarity.io
   baseurl_source: declared
   description: The Report Requests API from Claritymovement — 2 operation(s) for report requests.
@@ -37,62 +52,62 @@ apis:
 artifact_total: 6
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/rules/claritymovement-rules.yml
+  href: https://artifacts.apis.io/claritymovement/rules/claritymovement-rules.yml
   title: ''
   type: Spectral
   url: rules/claritymovement-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/json-ld/claritymovement-context.jsonld
+  href: https://artifacts.apis.io/claritymovement/json-ld/claritymovement-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/claritymovement-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/vocabulary/claritymovement-vocabulary.yml
+  href: https://artifacts.apis.io/claritymovement/vocabulary/claritymovement-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/claritymovement-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/data-model/claritymovement-data-model.yml
+  href: https://artifacts.apis.io/claritymovement/data-model/claritymovement-data-model.yml
   title: ''
   type: DataModel
   url: data-model/claritymovement-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/changelog/claritymovement-changelog.yml
+  href: https://artifacts.apis.io/claritymovement/changelog/claritymovement-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/claritymovement-changelog.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/lifecycle/claritymovement-lifecycle.yml
+  href: https://artifacts.apis.io/claritymovement/lifecycle/claritymovement-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/claritymovement-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/lifecycle/claritymovement-lifecycle.yml
+  href: https://artifacts.apis.io/claritymovement/lifecycle/claritymovement-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/claritymovement-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/conformance/claritymovement-conformance.yml
+  href: https://artifacts.apis.io/claritymovement/conformance/claritymovement-conformance.yml
   title: ''
   type: Conformance
   url: conformance/claritymovement-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/llms/claritymovement-llms.txt
+  href: https://artifacts.apis.io/claritymovement/llms/claritymovement-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/claritymovement-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/well-known/claritymovement-well-known.yml
+  href: https://artifacts.apis.io/claritymovement/well-known/claritymovement-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/claritymovement-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/hosts/claritymovement-hosts.yml
+  href: https://artifacts.apis.io/claritymovement/hosts/claritymovement-hosts.yml
   title: ''
   type: Hosts
   url: hosts/claritymovement-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/vendors/claritymovement-vendors.yml
+  href: https://artifacts.apis.io/claritymovement/vendors/claritymovement-vendors.yml
   title: ''
   type: Vendors
   url: vendors/claritymovement-vendors.yml
@@ -129,7 +144,7 @@ common:
   type: Documentation
   url: https://api-docs.clarity.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/claritymovement/refs/heads/main/security/claritymovement-domain-security.yml
+  href: https://artifacts.apis.io/claritymovement/security/claritymovement-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/claritymovement-domain-security.yml
@@ -169,7 +184,7 @@ overview: 'Claritymovement is listed with 2 APIs on the [APIs.io](https://apis.i
 
 
   Claritymovement''s developer surface includes changelog, support, signup flow, engineering blog, getting-started guide, documentation, and 16 more developer resources.'
-random_paper: 7
+random_paper: 3
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -184,22 +199,24 @@ rules:
     warn: 1
   slug: claritymovement-rules
 score:
-  band: thin
-  composite: 28.5
+  band: emerging
+  composite: 21.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 48.2
     catalog_earned_first_party: 0.0
     catalog_gap: 66.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.6
   facets:
-    access_clarity: 23.7
+    access_clarity: 11.8
     contract_governance: 22.0
     contract_quality: 17.8
-    developer_ergonomics: 28.6
-    discoverability: 66.1
-    operational_transparency: 39.5
+    developer_ergonomics: 14.3
+    discoverability: 65.2
+    operational_transparency: 31.6
+  previous_composite: 28.5
   provenance:
     conformance: derived
     contracts:
@@ -213,12 +230,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/claritymovement/claritymovement-2026-11-03T124316.png
 security:
 - kind: domain-security
   name: Claritymovement Domain Security

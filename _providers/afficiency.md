@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/afficiency/refs/heads/main/security/afficiency-domain-security.yml
+  href: https://artifacts.apis.io/afficiency/security/afficiency-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/afficiency-domain-security.yml
@@ -77,37 +91,37 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/afficiency
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/afficiency/refs/heads/main/conformance/afficiency-conformance.yml
+  href: https://artifacts.apis.io/afficiency/conformance/afficiency-conformance.yml
   title: ''
   type: Conformance
   url: conformance/afficiency-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/afficiency/refs/heads/main/conformance/afficiency-conformance.yml
+  href: https://artifacts.apis.io/afficiency/conformance/afficiency-conformance.yml
   title: ''
   type: Compliance
   url: conformance/afficiency-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/afficiency/refs/heads/main/well-known/afficiency-robots.txt
+  href: https://artifacts.apis.io/afficiency/well-known/afficiency-robots.txt
   title: ''
   type: ContentSignal
   url: well-known/afficiency-robots.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/afficiency/refs/heads/main/llms/afficiency-llms.txt
+  href: https://artifacts.apis.io/afficiency/llms/afficiency-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/afficiency-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/afficiency/refs/heads/main/plans/afficiency-plans-pricing.yml
+  href: https://artifacts.apis.io/afficiency/plans/afficiency-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/afficiency-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/afficiency/refs/heads/main/rate-limits/afficiency-rate-limits.yml
+  href: https://artifacts.apis.io/afficiency/rate-limits/afficiency-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/afficiency-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/afficiency/refs/heads/main/packages/afficiency-packages.yml
+  href: https://artifacts.apis.io/afficiency/packages/afficiency-packages.yml
   title: ''
   type: Packages
   url: packages/afficiency-packages.yml
@@ -144,7 +158,7 @@ plans:
 - name: Afficiency Plans Pricing
   plan_count: 0
   slug: afficiency-plans-pricing
-random_paper: 7
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Afficiency Rate Limits
@@ -183,14 +197,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/afficiency/refs/heads/main/screenshots/afficiency-2026-10-11T093020.png
+screenshot: https://apis.io/screenshots/afficiency/afficiency-2026-10-11T093020.png
 security:
 - kind: domain-security
   name: Afficiency Domain Security

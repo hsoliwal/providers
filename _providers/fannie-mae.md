@@ -1,11 +1,15 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
+  confidence: medium
+  label: Self-serve signup
+  onboarding: self-serve
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +39,12 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 20.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/security/fannie-mae-domain-security.yml
+  href: https://artifacts.apis.io/fannie-mae/security/fannie-mae-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fannie-mae-domain-security.yml
@@ -118,12 +125,12 @@ common:
   type: TermsOfUse
   url: https://www.fanniemae.com/tech-guide
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/authentication/fannie-mae-authentication.yml
+  href: https://artifacts.apis.io/fannie-mae/authentication/fannie-mae-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fannie-mae-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/scopes/fannie-mae-scopes.yml
+  href: https://artifacts.apis.io/fannie-mae/scopes/fannie-mae-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/fannie-mae-scopes.yml
@@ -132,47 +139,47 @@ common:
   type: OpenIDConnect
   url: https://fmsso.fanniemae.com/.well-known/openid-configuration
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/well-known/fannie-mae-well-known.yml
+  href: https://artifacts.apis.io/fannie-mae/well-known/fannie-mae-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/fannie-mae-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/conformance/fannie-mae-conformance.yml
+  href: https://artifacts.apis.io/fannie-mae/conformance/fannie-mae-conformance.yml
   title: ''
   type: Conformance
   url: conformance/fannie-mae-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/security/fannie-mae-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fannie-mae/security/fannie-mae-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/fannie-mae-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/security/fannie-mae-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fannie-mae/security/fannie-mae-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/fannie-mae-vulnerability-disclosure.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/changelog/fannie-mae-changelog.yml
+  href: https://artifacts.apis.io/fannie-mae/changelog/fannie-mae-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/fannie-mae-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/lifecycle/fannie-mae-lifecycle.yml
+  href: https://artifacts.apis.io/fannie-mae/lifecycle/fannie-mae-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/fannie-mae-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/llms/fannie-mae-llms.txt
+  href: https://artifacts.apis.io/fannie-mae/llms/fannie-mae-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fannie-mae-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/plans/fannie-mae-plans-pricing.yml
+  href: https://artifacts.apis.io/fannie-mae/plans/fannie-mae-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fannie-mae-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/rate-limits/fannie-mae-rate-limits.yml
+  href: https://artifacts.apis.io/fannie-mae/rate-limits/fannie-mae-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fannie-mae-rate-limits.yml
@@ -208,7 +215,7 @@ press:
 - date: ''
   title: Mortgage Lender Sentiment Survey
   url: https://www.fanniemae.com/data-and-insights/surveys/mortgage-lender-sentiment-survey
-random_paper: 9
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Fannie Mae Rate Limits
@@ -222,13 +229,13 @@ score:
   band: thin
   composite: 32.8
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
@@ -236,7 +243,7 @@ score:
     developer_ergonomics: 41.7
     discoverability: 56.3
     operational_transparency: 44.7
-  previous_composite: 32.9
+  previous_composite: 32.8
   provenance:
     conformance: first-party
   regulatory:
@@ -245,14 +252,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/screenshots/fannie-mae-2026-06-20T181035.png
+screenshot: https://apis.io/screenshots/fannie-mae/fannie-mae-2026-06-20T181035.png
 security:
 - kind: authentication
   name: Fannie Mae Authentication

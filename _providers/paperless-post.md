@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The Paperless Post Party Shop storefront is the only machine-callable surface on any paperlesspost.com host. It is Shopify-hosted and implements the Universal Commerce Protocol (UCP) for agent-driven '
@@ -44,7 +47,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paperless-post/refs/heads/main/security/paperless-post-domain-security.yml
+  href: https://artifacts.apis.io/paperless-post/security/paperless-post-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/paperless-post-domain-security.yml
@@ -97,42 +100,42 @@ common:
   type: StatusPage
   url: https://status.paperlesspost.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paperless-post/refs/heads/main/lifecycle/paperless-post-lifecycle.yml
+  href: https://artifacts.apis.io/paperless-post/lifecycle/paperless-post-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/paperless-post-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paperless-post/refs/heads/main/llms/paperless-post-llms.txt
+  href: https://artifacts.apis.io/paperless-post/llms/paperless-post-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/paperless-post-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paperless-post/refs/heads/main/well-known/paperless-post-well-known.yml
+  href: https://artifacts.apis.io/paperless-post/well-known/paperless-post-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/paperless-post-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paperless-post/refs/heads/main/mcp/paperless-post-mcp.yml
+  href: https://artifacts.apis.io/paperless-post/mcp/paperless-post-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/paperless-post-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paperless-post/refs/heads/main/authentication/paperless-post-authentication.yml
+  href: https://artifacts.apis.io/paperless-post/authentication/paperless-post-authentication.yml
   title: ''
   type: Authentication
   url: authentication/paperless-post-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paperless-post/refs/heads/main/scopes/paperless-post-scopes.yml
+  href: https://artifacts.apis.io/paperless-post/scopes/paperless-post-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/paperless-post-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paperless-post/refs/heads/main/conformance/paperless-post-conformance.yml
+  href: https://artifacts.apis.io/paperless-post/conformance/paperless-post-conformance.yml
   title: ''
   type: Conformance
   url: conformance/paperless-post-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paperless-post/refs/heads/main/conventions/paperless-post-conventions.yml
+  href: https://artifacts.apis.io/paperless-post/conventions/paperless-post-conventions.yml
   title: ''
   type: Conventions
   url: conventions/paperless-post-conventions.yml
@@ -156,7 +159,7 @@ overview: 'Paperless Post is listed with 1 API on the [APIs.io](https://apis.io/
 
 
   Paperless Post''s developer surface includes pricing, signup flow, support, engineering blog, authentication, and 17 more developer resources.'
-random_paper: 0
+random_paper: 10
 scopes:
 - name: Paperless Post Scopes
   scope_count: 4
@@ -164,9 +167,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 28.5
+  composite: 29.9
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -179,8 +182,8 @@ score:
     contract_quality: 0.0
     developer_ergonomics: 28.6
     discoverability: 75.0
-    operational_transparency: 18.4
-  previous_composite: 28.5
+    operational_transparency: 28.9
+  previous_composite: 29.9
   provenance:
     conformance: first-party
     mcp: platform-generated
@@ -190,8 +193,8 @@ score:
     regime: Payments
     regime_id: payments
     score: 31.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

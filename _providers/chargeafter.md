@@ -28,16 +28,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: derived
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 45.9
-  scored_at: '2026-10-17'
-api_count: 42
+  score: 48.8
+  scored_at: '2026-11-06'
+api_count: 13
 apis:
 - baseURL: https://api.chargeafter.com
   baseurl_source: declared
@@ -99,15 +102,12 @@ apis:
   description: The Transactions API from ChargeAfter — 2 operation(s) for transactions.
   name: ChargeAfter Transactions API
   slug: chargeafter-transactions-api
-artifact_total: 29
+artifact_total: 34
 asyncapis:
 - description: ''
   name: Chargeafter Notifications Webhooks
   slug: chargeafter-notifications-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Chargeafter Accounts API
   slug: open-chargeafter-accounts-api
@@ -146,12 +146,12 @@ collections:
   slug: open-chargeafter-transactions-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/capabilities/chargeafter-capability-edges.yml
+  href: https://artifacts.apis.io/chargeafter/capabilities/chargeafter-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/chargeafter-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/overlays/chargeafter-charge-api-overlay.yaml
+  href: https://artifacts.apis.io/chargeafter/overlays/chargeafter-charge-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/chargeafter-charge-api-overlay.yaml
@@ -208,77 +208,77 @@ common:
   type: ChangeLog
   url: https://docs.chargeafter.com/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/changelog/chargeafter-changelog.yml
+  href: https://artifacts.apis.io/chargeafter/changelog/chargeafter-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/chargeafter-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/lifecycle/chargeafter-lifecycle.yml
+  href: https://artifacts.apis.io/chargeafter/lifecycle/chargeafter-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/chargeafter-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/authentication/chargeafter-authentication.yml
+  href: https://artifacts.apis.io/chargeafter/authentication/chargeafter-authentication.yml
   title: ''
   type: Authentication
   url: authentication/chargeafter-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/conventions/chargeafter-conventions.yml
+  href: https://artifacts.apis.io/chargeafter/conventions/chargeafter-conventions.yml
   title: ''
   type: Conventions
   url: conventions/chargeafter-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/conventions/chargeafter-conventions.yml
+  href: https://artifacts.apis.io/chargeafter/conventions/chargeafter-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/chargeafter-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/errors/chargeafter-problem-types.yml
+  href: https://artifacts.apis.io/chargeafter/errors/chargeafter-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/chargeafter-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/errors/chargeafter-error-codes.yml
+  href: https://artifacts.apis.io/chargeafter/errors/chargeafter-error-codes.yml
   title: ''
   type: ErrorCodes
   url: errors/chargeafter-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/data-model/chargeafter-data-model.yml
+  href: https://artifacts.apis.io/chargeafter/data-model/chargeafter-data-model.yml
   title: ''
   type: DataModel
   url: data-model/chargeafter-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/conformance/chargeafter-conformance.yml
+  href: https://artifacts.apis.io/chargeafter/conformance/chargeafter-conformance.yml
   title: ''
   type: Conformance
   url: conformance/chargeafter-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/packages/chargeafter-packages.yml
+  href: https://artifacts.apis.io/chargeafter/packages/chargeafter-packages.yml
   title: ''
   type: Packages
   url: packages/chargeafter-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/packages/chargeafter-packages.yml
+  href: https://artifacts.apis.io/chargeafter/packages/chargeafter-packages.yml
   title: ''
   type: SDKs
   url: packages/chargeafter-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/components/chargeafter-components.yml
+  href: https://artifacts.apis.io/chargeafter/components/chargeafter-components.yml
   title: ''
   type: Components
   url: components/chargeafter-components.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/sandbox/chargeafter-sandbox.yml
+  href: https://artifacts.apis.io/chargeafter/sandbox/chargeafter-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/chargeafter-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/asyncapi/chargeafter-notifications-webhooks.yml
+  href: https://artifacts.apis.io/chargeafter/asyncapi/chargeafter-notifications-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/chargeafter-notifications-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/well-known/chargeafter-well-known.yml
+  href: https://artifacts.apis.io/chargeafter/well-known/chargeafter-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/chargeafter-well-known.yml
@@ -287,22 +287,22 @@ common:
   type: APICatalog
   url: https://docs.chargeafter.com/.well-known/api-catalog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/llms/chargeafter-llms.txt
+  href: https://artifacts.apis.io/chargeafter/llms/chargeafter-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/chargeafter-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/mcp/chargeafter-mcp.yml
+  href: https://artifacts.apis.io/chargeafter/mcp/chargeafter-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/chargeafter-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/chargeafter/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/security/chargeafter-domain-security.yml
+  href: https://artifacts.apis.io/chargeafter/security/chargeafter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chargeafter-domain-security.yml
@@ -321,36 +321,49 @@ network: true
 overview: 'ChargeAfter publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Applications V3 API, Charges API, and 9 more. Tagged areas include Financial Services, Payments, Lending, Buy Now Pay Later, and Embedded Finance.
 
 
-  The ChargeAfter catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The ChargeAfter catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   ChargeAfter''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, authentication, and 28 more developer resources.'
-random_paper: 4
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: ChargeAfter API Rules
+  rule_count: 63
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 2
+    warn: 9
+  slug: chargeafter-rules
 score:
   band: developing
-  composite: 42.9
+  composite: 49.8
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 40.0
+    artifact_dirs: 27
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 5.3
   facets:
     access_clarity: 17.1
-    contract_governance: 4.5
-    contract_quality: 59.8
-    developer_ergonomics: 54.2
+    contract_governance: 18.2
+    contract_quality: 63.2
+    developer_ergonomics: 68.5
     discoverability: 90.0
-    operational_transparency: 38.2
-  previous_composite: 42.9
+    operational_transparency: 50.0
+  previous_composite: 44.5
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 58.3
       total: 12
     mcp: site-plugin
     skills: derived
@@ -360,13 +373,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/chargeafter/refs/heads/main/screenshots/chargeafter-2026-08-17T080818.png
+screenshot: https://apis.io/screenshots/chargeafter/chargeafter-2026-08-17T080818.png
 security:
 - kind: authentication
   name: Chargeafter Authentication
@@ -376,6 +389,18 @@ security:
   name: Chargeafter Domain Security
   slug: chargeafter-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 5
+skills:
+- name: ChargeAfter ecommerce checkout financing
+  slug: chargeafter-ecommerce-checkout-financing
+- name: ChargeAfter funding reconciliation
+  slug: chargeafter-funding-reconciliation
+- name: ChargeAfter lender dispute management
+  slug: chargeafter-lender-dispute-management
+- name: ChargeAfter OmniLink in-store and call-center financing
+  slug: chargeafter-omnilink-instore-financing
+- name: ChargeAfter post-sale charge operations
+  slug: chargeafter-post-sale-charge-operations
 slug: chargeafter
 tags:
 - Financial Services

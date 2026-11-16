@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -68,47 +71,47 @@ common:
   type: Compliance
   url: https://trust.truveta.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/truveta/refs/heads/main/llms/truveta-llms.txt
+  href: https://artifacts.apis.io/truveta/llms/truveta-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/truveta-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/truveta/refs/heads/main/well-known/truveta-well-known.yml
+  href: https://artifacts.apis.io/truveta/well-known/truveta-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/truveta-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/truveta/refs/heads/main/authentication/truveta-authentication.yml
+  href: https://artifacts.apis.io/truveta/authentication/truveta-authentication.yml
   title: ''
   type: Authentication
   url: authentication/truveta-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/truveta/refs/heads/main/scopes/truveta-scopes.yml
+  href: https://artifacts.apis.io/truveta/scopes/truveta-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/truveta-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/truveta/refs/heads/main/conformance/truveta-conformance.yml
+  href: https://artifacts.apis.io/truveta/conformance/truveta-conformance.yml
   title: ''
   type: Conformance
   url: conformance/truveta-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/truveta/refs/heads/main/packages/truveta-packages.yml
+  href: https://artifacts.apis.io/truveta/packages/truveta-packages.yml
   title: ''
   type: Packages
   url: packages/truveta-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/truveta/refs/heads/main/cli/truveta-cli.yml
+  href: https://artifacts.apis.io/truveta/cli/truveta-cli.yml
   title: ''
   type: CLI
   url: cli/truveta-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/truveta/refs/heads/main/security/truveta-trust-center.yml
+  href: https://artifacts.apis.io/truveta/security/truveta-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/truveta-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/truveta/refs/heads/main/security/truveta-domain-security.yml
+  href: https://artifacts.apis.io/truveta/security/truveta-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/truveta-domain-security.yml
@@ -138,7 +141,7 @@ overview: 'Truveta is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Truveta''s developer surface includes engineering blog, support, authentication, CLI, and 12 more developer resources.'
-random_paper: 9
+random_paper: 11
 scopes:
 - name: Truveta Scopes
   scope_count: 14
@@ -148,7 +151,7 @@ score:
   band: emerging
   composite: 20.8
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -178,14 +181,14 @@ score:
     regime: Health
     regime_id: health
     score: 30.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/truveta/refs/heads/main/screenshots/truveta-2026-09-02T164431.png
+screenshot: https://apis.io/screenshots/truveta/truveta-2026-09-02T164431.png
 security:
 - kind: authentication
   name: Truveta Authentication

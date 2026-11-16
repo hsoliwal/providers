@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.9
-  scored_at: '2026-10-17'
+  score: 34.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://apis-us.highbond.com/v1
@@ -381,11 +386,8 @@ apis:
   description: Workflows contain a set of statuses that a certain item belonging to that workflow can be in. Any items in this workflow can move between certain statuses and the transition can trigger certain events
   name: Wegalvanize Workflows in Asset Inventory/Asset Manager API
   slug: wegalvanize-workflows-in-asset-inventory-asset-manager-api
-artifact_total: 143
+artifact_total: 146
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: HighBond API Reference Actions API
   slug: open-wegalvanize-actions-api
@@ -599,17 +601,17 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/diligent-boards/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/capabilities/wegalvanize-capability-edges.yml
+  href: https://artifacts.apis.io/wegalvanize/capabilities/wegalvanize-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/wegalvanize-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/overlays/wegalvanize-highbond-overlay.yaml
+  href: https://artifacts.apis.io/wegalvanize/overlays/wegalvanize-highbond-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/wegalvanize-highbond-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/security/wegalvanize-domain-security.yml
+  href: https://artifacts.apis.io/wegalvanize/security/wegalvanize-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wegalvanize-domain-security.yml
@@ -634,27 +636,27 @@ common:
   type: GettingStarted
   url: https://help.highbond.com/helpdocs/highbond/en-us/Default.htm#cshid=lp-access-tokens
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/authentication/wegalvanize-authentication.yml
+  href: https://artifacts.apis.io/wegalvanize/authentication/wegalvanize-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wegalvanize-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/scopes/wegalvanize-scopes.yml
+  href: https://artifacts.apis.io/wegalvanize/scopes/wegalvanize-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/wegalvanize-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/conventions/wegalvanize-conventions.yml
+  href: https://artifacts.apis.io/wegalvanize/conventions/wegalvanize-conventions.yml
   title: ''
   type: Conventions
   url: conventions/wegalvanize-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/errors/wegalvanize-problem-types.yml
+  href: https://artifacts.apis.io/wegalvanize/errors/wegalvanize-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/wegalvanize-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/conformance/wegalvanize-conformance.yml
+  href: https://artifacts.apis.io/wegalvanize/conformance/wegalvanize-conformance.yml
   title: ''
   type: Conformance
   url: conformance/wegalvanize-conformance.yml
@@ -663,12 +665,12 @@ common:
   type: Compliance
   url: https://trust.diligent.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/security/wegalvanize-trust-center.yml
+  href: https://artifacts.apis.io/wegalvanize/security/wegalvanize-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/wegalvanize-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/lifecycle/wegalvanize-lifecycle.yml
+  href: https://artifacts.apis.io/wegalvanize/lifecycle/wegalvanize-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/wegalvanize-lifecycle.yml
@@ -677,22 +679,22 @@ common:
   type: StatusPage
   url: https://status.diligent.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/data-model/wegalvanize-data-model.yml
+  href: https://artifacts.apis.io/wegalvanize/data-model/wegalvanize-data-model.yml
   title: ''
   type: DataModel
   url: data-model/wegalvanize-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/mcp/wegalvanize-mcp.yml
+  href: https://artifacts.apis.io/wegalvanize/mcp/wegalvanize-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/wegalvanize-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/wegalvanize/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/well-known/wegalvanize-well-known.yml
+  href: https://artifacts.apis.io/wegalvanize/well-known/wegalvanize-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/wegalvanize-well-known.yml
@@ -727,8 +729,24 @@ network: true
 overview: 'Wegalvanize publishes 69 API contracts indexed on the [APIs.io](https://apis.io/) network, including Actions API, Activities API, Analyses API, and 66 more. Tagged areas include Company, Governance, Risk Management, Compliance, and Audit.
 
 
+  The Wegalvanize catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Wegalvanize''s developer surface includes documentation, API reference, getting-started guide, authentication, support, and 22 more developer resources.'
-random_paper: 15
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Wegalvanize API Rules
+  rule_count: 63
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 15
+  slug: wegalvanize-rules
 scopes:
 - name: Wegalvanize Scopes
   scope_count: 7
@@ -736,23 +754,23 @@ scopes:
   summary_line: 7 scopes · authorizationCode/clientCredentials/implicit/refreshToken/tokenExchange
 score:
   band: developing
-  composite: 48.1
+  composite: 49.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 43.4
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 47.3
     developer_ergonomics: 56.5
     discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 48.1
+  previous_composite: 49.8
   provenance:
     conformance: derived
     contracts:
@@ -768,13 +786,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 38.9
-screenshot: https://raw.githubusercontent.com/api-evangelist/wegalvanize/refs/heads/main/screenshots/wegalvanize-2026-08-17T082923.png
+screenshot: https://apis.io/screenshots/wegalvanize/wegalvanize-2026-08-17T082923.png
 security:
 - kind: authentication
   name: Wegalvanize Authentication
@@ -788,6 +806,14 @@ security:
   name: Wegalvanize Trust Center
   slug: wegalvanize-trust-center
   summary_line: SOC 1, SOC 2, ISO 27001, ISO 27017, ISO 27018, HIPAA, FedRAMP, GDPR
+skill_count: 3
+skills:
+- name: Build and test an audit/assurance project
+  slug: wegalvanize-build-audit-project
+- name: Ingest data into HighBond Results
+  slug: wegalvanize-ingest-results-data
+- name: Automate work with HighBond Robots
+  slug: wegalvanize-run-robot-automation
 slug: wegalvanize
 tags:
 - Company

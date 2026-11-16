@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -45,7 +48,7 @@ common:
   type: BlogRSS
   url: https://send.technology/feed
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/send-technology/refs/heads/main/security/send-technology-domain-security.yml
+  href: https://artifacts.apis.io/send-technology/security/send-technology-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/send-technology-domain-security.yml
@@ -126,37 +129,37 @@ common:
   type: Security
   url: https://trustcenter.send.technology/?itemUid=64c9680b-ef79-4c92-baa0-13b541954bef
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/send-technology/refs/heads/main/security/send-technology-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/send-technology/security/send-technology-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/send-technology-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/send-technology/refs/heads/main/security/send-technology-trust-center.yml
+  href: https://artifacts.apis.io/send-technology/security/send-technology-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/send-technology-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/send-technology/refs/heads/main/conformance/send-technology-conformance.yml
+  href: https://artifacts.apis.io/send-technology/conformance/send-technology-conformance.yml
   title: ''
   type: Conformance
   url: conformance/send-technology-conformance.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/send-technology/refs/heads/main/changelog/send-technology-changelog.yml
+  href: https://artifacts.apis.io/send-technology/changelog/send-technology-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/send-technology-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/send-technology/refs/heads/main/lifecycle/send-technology-lifecycle.yml
+  href: https://artifacts.apis.io/send-technology/lifecycle/send-technology-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/send-technology-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/send-technology/refs/heads/main/well-known/send-technology-well-known.yml
+  href: https://artifacts.apis.io/send-technology/well-known/send-technology-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/send-technology-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/send-technology/refs/heads/main/llms/send-technology-llms.txt
+  href: https://artifacts.apis.io/send-technology/llms/send-technology-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/send-technology-llms.txt
@@ -173,12 +176,12 @@ overview: 'Send Technology is profiled on the [APIs.io](https://apis.io/) networ
 
 
   Send Technology''s developer surface includes engineering blog, YouTube channel, changelog, and 25 more developer resources.'
-random_paper: 15
+random_paper: 19
 score:
   band: emerging
   composite: 18.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -213,14 +216,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 28.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/send-technology/refs/heads/main/screenshots/send-technology-2026-09-02T154832.png
+screenshot: https://apis.io/screenshots/send-technology/send-technology-2026-09-02T154832.png
 security:
 - kind: domain-security
   name: Send Technology Domain Security

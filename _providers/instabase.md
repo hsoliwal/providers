@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.2
-  scored_at: '2026-10-17'
+  score: 30.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 27
   slug: instabase-agentic-access
   summary_line: 27 operations · 15 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://aihub.instabase.com/api
   baseurl_source: declared
@@ -74,15 +77,12 @@ apis:
   description: The Secrets API from Instabase — 1 operation(s) for secrets.
   name: Instabase Secrets API
   slug: instabase-secrets-api
-artifact_total: 20
+artifact_total: 23
 asyncapis:
 - description: ''
   name: Instabase Webhooks
   slug: instabase-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: AI Hub Audit API
   slug: open-instabase-audit-api
@@ -102,8 +102,12 @@ collections:
   name: AI Hub Audit Secrets API
   slug: open-instabase-secrets-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/instabase/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/overlays/instabase-aihub-overlay.yaml
+  href: https://artifacts.apis.io/instabase/overlays/instabase-aihub-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/instabase-aihub-overlay.yaml
@@ -152,42 +156,42 @@ common:
   type: TrustCenter
   url: https://trust.instabase.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/packages/instabase-packages.yml
+  href: https://artifacts.apis.io/instabase/packages/instabase-packages.yml
   title: ''
   type: SDKs
   url: packages/instabase-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/packages/instabase-packages.yml
+  href: https://artifacts.apis.io/instabase/packages/instabase-packages.yml
   title: ''
   type: Packages
   url: packages/instabase-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/mcp/instabase-mcp.yml
+  href: https://artifacts.apis.io/instabase/mcp/instabase-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/instabase-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/llms/instabase-llms.txt
+  href: https://artifacts.apis.io/instabase/llms/instabase-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/instabase-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/instabase/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/conventions/instabase-conventions.yml
+  href: https://artifacts.apis.io/instabase/conventions/instabase-conventions.yml
   title: ''
   type: Conventions
   url: conventions/instabase-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/changelog/instabase-changelog.yml
+  href: https://artifacts.apis.io/instabase/changelog/instabase-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/instabase-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/lifecycle/instabase-lifecycle.yml
+  href: https://artifacts.apis.io/instabase/lifecycle/instabase-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/instabase-lifecycle.yml
@@ -196,7 +200,7 @@ common:
   type: Deprecation
   url: https://docs.instabase.com/policies/upgrades.md
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/conformance/instabase-conformance.yml
+  href: https://artifacts.apis.io/instabase/conformance/instabase-conformance.yml
   title: ''
   type: Conformance
   url: conformance/instabase-conformance.yml
@@ -205,32 +209,32 @@ common:
   type: Compliance
   url: https://trust.instabase.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/asyncapi/instabase-webhooks.yml
+  href: https://artifacts.apis.io/instabase/asyncapi/instabase-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/instabase-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/well-known/instabase-well-known.yml
+  href: https://artifacts.apis.io/instabase/well-known/instabase-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/instabase-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/authentication/instabase-authentication.yml
+  href: https://artifacts.apis.io/instabase/authentication/instabase-authentication.yml
   title: ''
   type: Authentication
   url: authentication/instabase-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/agentic-access/instabase-agentic-access.yml
+  href: https://artifacts.apis.io/instabase/agentic-access/instabase-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/instabase-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/security/instabase-domain-security.yml
+  href: https://artifacts.apis.io/instabase/security/instabase-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/instabase-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/security/instabase-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/instabase/security/instabase-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/instabase-vulnerability-disclosure.yml
@@ -253,37 +257,50 @@ network: true
 overview: 'Instabase publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audit API, Batches API, Files API, and 3 more. Tagged areas include Company, Intelligent Document Processing, Document AI, Artificial Intelligence, and Machine Learning.
 
 
-  The Instabase catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Instabase catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Instabase''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 23 more developer resources.'
-random_paper: 8
+  Instabase''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 24 more developer resources.'
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: Instabase API Rules
+  rule_count: 68
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 6
+  slug: instabase-rules
 score:
-  band: developing
-  composite: 51.8
+  band: strong
+  composite: 55.0
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.3
   facets:
     access_clarity: 39.5
-    contract_governance: 18.2
-    contract_quality: 59.1
-    developer_ergonomics: 66.1
+    contract_governance: 31.8
+    contract_quality: 64.5
+    developer_ergonomics: 67.3
     discoverability: 71.7
     operational_transparency: 44.7
-  previous_composite: 51.8
+  previous_composite: 53.7
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 6
     mcp: first-party
     skills: derived
@@ -305,13 +322,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 26.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/instabase/refs/heads/main/screenshots/instabase-2026-07-25T222558.png
+screenshot: https://apis.io/screenshots/instabase/instabase-2026-07-25T222558.png
 security:
 - kind: authentication
   name: Instabase Authentication
@@ -329,6 +346,14 @@ security:
   name: Instabase Trust Center
   slug: instabase-trust-center
   summary_line: SOC 2, HIPAA, GDPR
+skill_count: 3
+skills:
+- name: Manage AI Hub secrets
+  slug: instabase-manage-secrets
+- name: Process documents with an AI Hub app
+  slug: instabase-process-documents
+- name: Run a production app deployment
+  slug: instabase-run-deployment
 slug: instabase
 tags:
 - Company

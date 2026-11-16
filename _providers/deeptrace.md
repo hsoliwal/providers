@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.8
-  scored_at: '2026-10-17'
+  score: 23.4
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.deeptrace.com
@@ -47,11 +51,8 @@ apis:
   description: Trigger and retrieve asynchronous root-cause investigations.
   name: Deeptrace Investigations API
   slug: deeptrace-investigations-api
-artifact_total: 7
+artifact_total: 11
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Deeptrace REST Chat API
   slug: open-deeptrace-chat-api
@@ -59,12 +60,17 @@ collections:
   name: Deeptrace REST Chat Investigations API
   slug: open-deeptrace-investigations-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/deeptrace/plans/deeptrace-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/deeptrace-plans-pricing.yml
 - group: company
   title: ''
   type: Blog
   url: https://deeptrace.com/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/capabilities/deeptrace-capability-edges.yml
+  href: https://artifacts.apis.io/deeptrace/capabilities/deeptrace-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/deeptrace-capability-edges.yml
@@ -117,57 +123,57 @@ common:
   type: ChangeLog
   url: https://docs.deeptrace.com/changelog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/authentication/deeptrace-authentication.yml
+  href: https://artifacts.apis.io/deeptrace/authentication/deeptrace-authentication.yml
   title: ''
   type: Authentication
   url: authentication/deeptrace-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/conventions/deeptrace-conventions.yml
+  href: https://artifacts.apis.io/deeptrace/conventions/deeptrace-conventions.yml
   title: ''
   type: Conventions
   url: conventions/deeptrace-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/errors/deeptrace-error-codes.yml
+  href: https://artifacts.apis.io/deeptrace/errors/deeptrace-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/deeptrace-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/lifecycle/deeptrace-lifecycle.yml
+  href: https://artifacts.apis.io/deeptrace/lifecycle/deeptrace-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/deeptrace-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/conformance/deeptrace-conformance.yml
+  href: https://artifacts.apis.io/deeptrace/conformance/deeptrace-conformance.yml
   title: ''
   type: Conformance
   url: conformance/deeptrace-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/data-model/deeptrace-data-model.yml
+  href: https://artifacts.apis.io/deeptrace/data-model/deeptrace-data-model.yml
   title: ''
   type: DataModel
   url: data-model/deeptrace-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/mcp/deeptrace-mcp.yml
+  href: https://artifacts.apis.io/deeptrace/mcp/deeptrace-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/deeptrace-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/llms/deeptrace-llms.txt
+  href: https://artifacts.apis.io/deeptrace/llms/deeptrace-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/deeptrace-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/security/deeptrace-domain-security.yml
+  href: https://artifacts.apis.io/deeptrace/security/deeptrace-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/deeptrace-domain-security.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/changelog/deeptrace-changelog.yml
+  href: https://artifacts.apis.io/deeptrace/changelog/deeptrace-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/deeptrace-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/deeptrace/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -181,6 +187,14 @@ common:
   url: https://twitter.com/deeptraceai
 created: '2026-07-17'
 description: Deeptrace is an AI SRE (site reliability engineering) agent that automatically investigates and root-causes production alerts by reasoning across logs, traces, metrics, and code. It triages and prioritizes alerts, produces evidence-backed root cause analyses in a couple of minutes, answers natural-language questions about production from Slack or the web app, and can auto-generate remediation such as pull requests and GitHub Actions. Deeptrace connects to the existing toolchain — Datadog, Grafana, New Relic, Sentry, Honeycomb, Coralogix, AWS CloudWatch, PagerDuty, GitHub, Linear, and Slack — to cut mean time to resolution. It exposes a REST API to trigger investigations, poll results, and drive AI chat programmatically. Founded 2025 and backed by Felicis, Matrix, and Y Combinator.
+finops:
+- has_sources: true
+  method: derived
+  name: Deeptrace Finops
+  primary_unit: ''
+  service_category: ''
+  slug: deeptrace-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/deeptrace.png
 layout: provider
 modified: '2026-10-06'
@@ -190,31 +204,51 @@ network: true
 overview: 'Deeptrace publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Chat API and Investigations API. Tagged areas include Company, AIOps, Site Reliability Engineering, Observability, and Incident Management.
 
 
-  Deeptrace''s developer surface includes engineering blog, documentation, API reference, getting-started guide, pricing, signup flow, changelog, and 20 more developer resources.'
-random_paper: 17
+  The Deeptrace catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Deeptrace''s developer surface includes engineering blog, documentation, API reference, getting-started guide, pricing, signup flow, changelog, and 21 more developer resources.'
+plans:
+- name: Deeptrace Plans Pricing
+  plan_count: 2
+  slug: deeptrace-plans-pricing
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: Deeptrace API Rules
+  rule_count: 64
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 1
+  slug: deeptrace-rules
 score:
   band: developing
-  composite: 43.4
+  composite: 48.5
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 24
+    catalog_earned: 49.5
+    catalog_earned_first_party: 8.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
-    access_clarity: 32.9
-    contract_governance: 4.5
-    contract_quality: 53.4
+    access_clarity: 53.9
+    contract_governance: 18.2
+    contract_quality: 50.3
     developer_ergonomics: 54.2
     discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 42.9
+  previous_composite: 48.5
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 2
@@ -226,13 +260,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/deeptrace/refs/heads/main/screenshots/deeptrace-2026-07-25T211610.png
+screenshot: https://apis.io/screenshots/deeptrace/deeptrace-2026-07-25T211610.png
 security:
 - kind: authentication
   name: Deeptrace Authentication
@@ -242,6 +276,12 @@ security:
   name: Deeptrace Domain Security
   slug: deeptrace-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 2
+skills:
+- name: Ask Deeptrace about production and continue the conversation
+  slug: deeptrace-chat
+- name: Trigger a Deeptrace investigation and poll for the root cause
+  slug: deeptrace-investigate-and-poll
 slug: deeptrace
 tags:
 - Company

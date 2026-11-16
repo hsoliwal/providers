@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.5
-  scored_at: '2026-10-17'
+  score: 30.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 1
@@ -107,11 +110,8 @@ apis:
   description: Operations for creating, updating, listing, and deleting workflow definitions.
   name: Xceptor Workflows API
   slug: xceptor-workflows-api
-artifact_total: 67
+artifact_total: 66
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Xceptor Document Upload Authentication API
   slug: open-xceptor-authentication-api
@@ -153,27 +153,27 @@ collections:
   slug: open-xceptor-workflows-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/xceptor/refs/heads/main/plans/xceptor-plans-pricing.yml
+  href: https://artifacts.apis.io/xceptor/plans/xceptor-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/xceptor-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/xceptor/refs/heads/main/finops/xceptor-finops.yml
+  href: https://artifacts.apis.io/xceptor/finops/xceptor-finops.yml
   title: ''
   type: FinOps
   url: finops/xceptor-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/xceptor/refs/heads/main/agentic-access/xceptor-agentic-access.yml
+  href: https://artifacts.apis.io/xceptor/agentic-access/xceptor-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/xceptor-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/xceptor/refs/heads/main/security/xceptor-domain-security.yml
+  href: https://artifacts.apis.io/xceptor/security/xceptor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/xceptor-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/xceptor/refs/heads/main/authentication/xceptor-authentication.yml
+  href: https://artifacts.apis.io/xceptor/authentication/xceptor-authentication.yml
   title: ''
   type: Authentication
   url: authentication/xceptor-authentication.yml
@@ -406,7 +406,7 @@ plans:
 - name: Xceptor Plans Pricing
   plan_count: 1
   slug: xceptor-plans-pricing
-random_paper: 3
+random_paper: 5
 rate_limits:
 - limit_count: 1
   name: Xceptor Rate Limits
@@ -427,13 +427,13 @@ score:
   band: thin
   composite: 33.8
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 42.3
     catalog_earned_first_party: 0.0
     catalog_gap: 72.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
@@ -441,7 +441,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 63.4
     operational_transparency: 13.2
-  previous_composite: 35.3
+  previous_composite: 33.8
   provenance:
     agentic_access: derived
     contracts:
@@ -455,13 +455,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/xceptor/refs/heads/main/screenshots/xceptor-2026-06-20T201656.png
+screenshot: https://apis.io/screenshots/xceptor/xceptor-2026-06-20T201656.png
 security:
 - kind: authentication
   name: Xceptor Authentication

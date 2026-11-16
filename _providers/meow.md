@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 65.2
-  scored_at: '2026-10-17'
+  score: 65.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 62
   human_in_the_loop: 1
@@ -176,15 +179,12 @@ apis:
   description: Manage webhook subscriptions and inspect delivery history.
   name: Meow Webhooks API
   slug: meow-webhooks-api
-artifact_total: 59
+artifact_total: 64
 asyncapis:
 - description: ''
   name: Meow Webhooks
   slug: meow-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Meow Accounts API
   slug: open-meow-accounts-api
@@ -264,32 +264,36 @@ collections:
   name: Meow Accounts Webhooks API
   slug: open-meow-webhooks-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/meow/overview
 - group: company
   title: ''
   type: Blog
   url: https://www.meow.com/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/meow/refs/heads/main/capabilities/meow-capability-edges.yml
+  href: https://artifacts.apis.io/meow/capabilities/meow-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/meow-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meow/refs/heads/main/skills/meow-create-and-send-invoice.md
+  href: https://artifacts.apis.io/meow/skills/meow-create-and-send-invoice.md
   title: ''
   type: AgentSkill
   url: skills/meow-create-and-send-invoice.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meow/refs/heads/main/mcp/meow-mcp.yml
+  href: https://artifacts.apis.io/meow/mcp/meow-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/meow-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/meow/refs/heads/main/overlays/meow-openapi-overlay.yaml
+  href: https://artifacts.apis.io/meow/overlays/meow-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/meow-openapi-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/meow/refs/heads/main/a2a/meow-a2a.yml
+  href: https://artifacts.apis.io/meow/a2a/meow-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/meow-a2a.yml
@@ -311,35 +315,48 @@ network: true
 overview: 'Meow publishes 26 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, API Keys API, Approvals API, and 23 more. Tagged areas include Company, Banking, and A2A.
 
 
-  The Meow catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Meow catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Meow''s developer surface includes engineering blog and 6 more developer resources.'
-random_paper: 0
+  Meow''s developer surface includes engineering blog and 7 more developer resources.'
+random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 115
+  extends:
+  - spectral:oas
+  name: Meow API Rules
+  rule_count: 74
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 2
+    warn: 11
+  slug: meow-rules
 scopes:
 - name: Meow Scopes
   scope_count: 0
   slug: meow-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: emerging
-  composite: 24.4
+  band: thin
+  composite: 26.3
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 20.0
+    artifact_dirs: 28
+    catalog_earned: 24.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 95.0
+    catalog_gap: 90.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 62.9
-    developer_ergonomics: 4.2
+    developer_ergonomics: 5.4
     discoverability: 46.7
     operational_transparency: 0.0
-  previous_composite: 23.9
+  previous_composite: 26.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -356,13 +373,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 24.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/meow/refs/heads/main/screenshots/meow-2026-08-07T172630.png
+screenshot: https://apis.io/screenshots/meow/meow-2026-08-07T172630.png
 security:
 - kind: authentication
   name: Meow Authentication
@@ -372,6 +389,18 @@ security:
   name: Meow Domain Security
   slug: meow-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 5
+skills:
+- name: Create and send an invoice
+  slug: meow-create-and-send-invoice
+- name: Draft an ACH transfer for approval
+  slug: meow-draft-ach-transfer
+- name: Issue and manage a virtual card
+  slug: meow-issue-virtual-card
+- name: Onboard a business entity (KYB)
+  slug: meow-onboard-business-entity
+- name: Subscribe to and verify webhooks
+  slug: meow-subscribe-webhooks
 slug: meow
 tags:
 - Company

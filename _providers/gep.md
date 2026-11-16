@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.5
-  scored_at: '2026-10-17'
+  score: 22.2
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - baseURL: https://api-leoeu.gep.com
@@ -49,42 +62,42 @@ apis:
 artifact_total: 12
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gep/refs/heads/main/rules/gep-rules.yml
+  href: https://artifacts.apis.io/gep/rules/gep-rules.yml
   title: ''
   type: Spectral
   url: rules/gep-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gep/refs/heads/main/json-ld/gep-context.jsonld
+  href: https://artifacts.apis.io/gep/json-ld/gep-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/gep-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gep/refs/heads/main/vocabulary/gep-vocabulary.yml
+  href: https://artifacts.apis.io/gep/vocabulary/gep-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/gep-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gep/refs/heads/main/data-model/gep-data-model.yml
+  href: https://artifacts.apis.io/gep/data-model/gep-data-model.yml
   title: ''
   type: DataModel
   url: data-model/gep-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gep/refs/heads/main/conformance/gep-conformance.yml
+  href: https://artifacts.apis.io/gep/conformance/gep-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gep-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gep/refs/heads/main/llms/gep-llms.txt
+  href: https://artifacts.apis.io/gep/llms/gep-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gep-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gep/refs/heads/main/hosts/gep-hosts.yml
+  href: https://artifacts.apis.io/gep/hosts/gep-hosts.yml
   title: ''
   type: Hosts
   url: hosts/gep-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gep/refs/heads/main/vendors/gep-vendors.yml
+  href: https://artifacts.apis.io/gep/vendors/gep-vendors.yml
   title: ''
   type: Vendors
   url: vendors/gep-vendors.yml
@@ -113,7 +126,7 @@ common:
   type: Blog
   url: https://www.gep.com/blog/mind/nft-basics
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gep/refs/heads/main/security/gep-domain-security.yml
+  href: https://artifacts.apis.io/gep/security/gep-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gep-domain-security.yml
@@ -165,7 +178,7 @@ overview: 'GEP is listed with 4 APIs on the [APIs.io](https://apis.io/) network,
 
 
   GEP''s developer surface includes engineering blog and 15 more developer resources.'
-random_paper: 8
+random_paper: 4
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -181,21 +194,23 @@ rules:
   slug: gep-rules
 score:
   band: emerging
-  composite: 23.9
+  composite: 19.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 63.8
     catalog_earned_first_party: 0.0
     catalog_gap: 51.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.4
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 22.0
     contract_quality: 25.9
-    developer_ergonomics: 2.4
-    discoverability: 78.6
+    developer_ergonomics: 1.2
+    discoverability: 76.8
     operational_transparency: 0.0
+  previous_composite: 23.9
   provenance:
     conformance: derived
     contracts:
@@ -209,12 +224,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 17.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 13.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/gep/gep-2026-11-03T132636.png
 security:
 - kind: domain-security
   name: Gep Domain Security

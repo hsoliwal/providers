@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -62,9 +69,6 @@ apis:
 artifact_total: 14
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Sinch Verification Report Verification API
   slug: open-sinch-verify-report-verification-api
 - collection_type: open
@@ -86,17 +90,17 @@ common:
   type: BlogRSS
   url: https://sinch.com/blog/feed/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sinch-verify/refs/heads/main/agentic-access/sinch-verify-agentic-access.yml
+  href: https://artifacts.apis.io/sinch-verify/agentic-access/sinch-verify-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sinch-verify-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sinch-verify/refs/heads/main/authentication/sinch-verify-authentication.yml
+  href: https://artifacts.apis.io/sinch-verify/authentication/sinch-verify-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sinch-verify-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sinch-verify/refs/heads/main/security/sinch-verify-domain-security.yml
+  href: https://artifacts.apis.io/sinch-verify/security/sinch-verify-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sinch-verify-domain-security.yml
@@ -121,17 +125,17 @@ common:
   type: SignUp
   url: https://dashboard.sinch.com/signup
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sinch-verify/refs/heads/main/plans/sinch-verify-plans-pricing.yml
+  href: https://artifacts.apis.io/sinch-verify/plans/sinch-verify-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sinch-verify-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sinch-verify/refs/heads/main/rate-limits/sinch-verify-rate-limits.yml
+  href: https://artifacts.apis.io/sinch-verify/rate-limits/sinch-verify-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sinch-verify-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sinch-verify/refs/heads/main/finops/sinch-verify-finops.yml
+  href: https://artifacts.apis.io/sinch-verify/finops/sinch-verify-finops.yml
   title: ''
   type: FinOps
   url: finops/sinch-verify-finops.yml
@@ -158,35 +162,51 @@ network: true
 overview: 'Sinch Verification API publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Report Verification API, Start Verification API, and Verification Status API. Tagged areas include Number Verification, Phone Verification, OTP, 2FA, and CPaaS.
 
 
+  The Sinch Verification API catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Sinch Verification API''s developer surface includes engineering blog, authentication, documentation, signup flow, pricing, and 9 more developer resources.'
 plans:
 - name: Sinch Verify Plans Pricing
   plan_count: 3
   slug: sinch-verify-plans-pricing
-random_paper: 7
+random_paper: 15
 rate_limits:
 - limit_count: 3
   name: Sinch Verify Rate Limits
   slug: sinch-verify-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Sinch Verification API API Rules
+  rule_count: 61
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 1
+    warn: 1
+  slug: sinch-verify-rules
 score:
   band: thin
-  composite: 29.9
+  composite: 31.6
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 14
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.9
+  delta: 0.0
   facets:
     access_clarity: 18.4
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.2
     developer_ergonomics: 41.7
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 37.8
+  previous_composite: 31.6
   provenance:
     agentic_access: derived
     contracts:
@@ -200,13 +220,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sinch-verify/refs/heads/main/screenshots/sinch-verify-2026-09-02T155607.png
+screenshot: https://apis.io/screenshots/sinch-verify/sinch-verify-2026-09-02T155607.png
 security:
 - kind: authentication
   name: Sinch Verify Authentication

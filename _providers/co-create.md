@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'REST API for token-driven communities on Polygon: users and hosted wallets; ERC-20 / ERC-721 / ERC-1155 and Soulbound token contract deployment, minting, patching, and transfers (sync + async with sta'
@@ -69,37 +72,37 @@ common:
   type: Website
   url: https://www.usecocreate.io/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/co-create/refs/heads/main/authentication/co-create-authentication.yml
+  href: https://artifacts.apis.io/co-create/authentication/co-create-authentication.yml
   title: ''
   type: Authentication
   url: authentication/co-create-authentication.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/co-create/refs/heads/main/sandbox/co-create-sandbox.yml
+  href: https://artifacts.apis.io/co-create/sandbox/co-create-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/co-create-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/co-create/refs/heads/main/conventions/co-create-conventions.yml
+  href: https://artifacts.apis.io/co-create/conventions/co-create-conventions.yml
   title: ''
   type: Conventions
   url: conventions/co-create-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/co-create/refs/heads/main/conformance/co-create-conformance.yml
+  href: https://artifacts.apis.io/co-create/conformance/co-create-conformance.yml
   title: ''
   type: Conformance
   url: conformance/co-create-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/co-create/refs/heads/main/lifecycle/co-create-lifecycle.yml
+  href: https://artifacts.apis.io/co-create/lifecycle/co-create-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/co-create-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/co-create/refs/heads/main/security/co-create-domain-security.yml
+  href: https://artifacts.apis.io/co-create/security/co-create-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/co-create-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/co-create/refs/heads/main/llms/co-create-llms.txt
+  href: https://artifacts.apis.io/co-create/llms/co-create-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/co-create-llms.txt
@@ -115,12 +118,12 @@ overview: 'Co:Create is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Co:Create''s developer surface includes documentation, API reference, getting-started guide, engineering blog, authentication, sandbox, and 7 more developer resources.'
-random_paper: 3
+random_paper: 19
 score:
   band: emerging
   composite: 17.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -143,14 +146,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/co-create/refs/heads/main/screenshots/co-create-2026-07-25T205812.png
+screenshot: https://apis.io/screenshots/co-create/co-create-2026-07-25T205812.png
 security:
 - kind: authentication
   name: Co Create Authentication

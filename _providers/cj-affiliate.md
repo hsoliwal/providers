@@ -1,9 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
@@ -12,7 +15,7 @@ access_model:
   - security
   - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -29,15 +32,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.8
-  scored_at: '2026-10-17'
+  score: 32.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 10
@@ -90,15 +96,12 @@ apis:
   description: DEPRECATED XML REST API for near-real-time commission and item-detail data. CJ's own documentation states it was to be removed on 1 June 2019 and directs integrators to the GraphQL Commission Detail A
   name: CJ Affiliate Commission Detail API (Legacy)
   slug: cj-affiliate-commission-detail-legacy-api
-artifact_total: 25
+artifact_total: 29
 asyncapis:
 - description: 'CJ Affiliate''s ONLY event/streaming surface: the GraphQL subscriptions declared on the ads API at https://ads.api.cj.com/query. These are bulk catalog downloads — a subscription requests an advertiser'
   name: CJ Affiliate Product Catalog Streaming API
   slug: cj-affiliate-ads-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CJ Affiliate Advertiser Lookup API
   slug: open-cj-affiliate-advertiser-lookup-api
@@ -122,17 +125,17 @@ collections:
   slug: open-cj-affiliate
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/agentic-access/cj-affiliate-agentic-access.yml
+  href: https://artifacts.apis.io/cj-affiliate/agentic-access/cj-affiliate-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cj-affiliate-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/security/cj-affiliate-domain-security.yml
+  href: https://artifacts.apis.io/cj-affiliate/security/cj-affiliate-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cj-affiliate-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/authentication/cj-affiliate-authentication.yml
+  href: https://artifacts.apis.io/cj-affiliate/authentication/cj-affiliate-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cj-affiliate-authentication.yml
@@ -153,17 +156,17 @@ common:
   type: Authentication
   url: https://developers.cj.com/account/personal-access-tokens
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/plans/cj-affiliate-plans-pricing.yml
+  href: https://artifacts.apis.io/cj-affiliate/plans/cj-affiliate-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cj-affiliate-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/rate-limits/cj-affiliate-rate-limits.yml
+  href: https://artifacts.apis.io/cj-affiliate/rate-limits/cj-affiliate-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cj-affiliate-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/finops/cj-affiliate-finops.yml
+  href: https://artifacts.apis.io/cj-affiliate/finops/cj-affiliate-finops.yml
   title: ''
   type: FinOps
   url: finops/cj-affiliate-finops.yml
@@ -208,82 +211,82 @@ common:
   type: Partners
   url: https://www.cj.com/advertiser/tech-partners
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/graphql/cj-affiliate-graphql.md
+  href: https://artifacts.apis.io/cj-affiliate/graphql/cj-affiliate-graphql.md
   title: ''
   type: GraphQL
   url: graphql/cj-affiliate-graphql.md
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/conventions/cj-affiliate-conventions.yml
+  href: https://artifacts.apis.io/cj-affiliate/conventions/cj-affiliate-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cj-affiliate-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/conventions/cj-affiliate-conventions.yml
+  href: https://artifacts.apis.io/cj-affiliate/conventions/cj-affiliate-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/cj-affiliate-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/errors/cj-affiliate-problem-types.yml
+  href: https://artifacts.apis.io/cj-affiliate/errors/cj-affiliate-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cj-affiliate-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/lifecycle/cj-affiliate-lifecycle.yml
+  href: https://artifacts.apis.io/cj-affiliate/lifecycle/cj-affiliate-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cj-affiliate-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/lifecycle/cj-affiliate-lifecycle.yml
+  href: https://artifacts.apis.io/cj-affiliate/lifecycle/cj-affiliate-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/cj-affiliate-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/conformance/cj-affiliate-conformance.yml
+  href: https://artifacts.apis.io/cj-affiliate/conformance/cj-affiliate-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cj-affiliate-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/data-model/cj-affiliate-data-model.yml
+  href: https://artifacts.apis.io/cj-affiliate/data-model/cj-affiliate-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cj-affiliate-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/sandbox/cj-affiliate-sandbox.yml
+  href: https://artifacts.apis.io/cj-affiliate/sandbox/cj-affiliate-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/cj-affiliate-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/components/cj-affiliate-components.yml
+  href: https://artifacts.apis.io/cj-affiliate/components/cj-affiliate-components.yml
   title: ''
   type: Components
   url: components/cj-affiliate-components.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/packages/cj-affiliate-packages.yml
+  href: https://artifacts.apis.io/cj-affiliate/packages/cj-affiliate-packages.yml
   title: ''
   type: Packages
   url: packages/cj-affiliate-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/llms/cj-affiliate-llms.txt
+  href: https://artifacts.apis.io/cj-affiliate/llms/cj-affiliate-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cj-affiliate-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/mcp/cj-affiliate-mcp.yml
+  href: https://artifacts.apis.io/cj-affiliate/mcp/cj-affiliate-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/cj-affiliate-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/mcp/cj-affiliate-tool-crosswalk.yml
+  href: https://artifacts.apis.io/cj-affiliate/mcp/cj-affiliate-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/cj-affiliate-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/cj-affiliate/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/asyncapi/cj-affiliate-ads-asyncapi.yml
+  href: https://artifacts.apis.io/cj-affiliate/asyncapi/cj-affiliate-ads-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/cj-affiliate-ads-asyncapi.yml
@@ -292,12 +295,12 @@ description: CJ Affiliate (formerly Commission Junction) is one of the largest a
   on all three endpoints.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Cj Affiliate Finops
   primary_unit: ''
-  service_category: Marketing and Advertising
+  service_category: ''
   slug: cj-affiliate-finops
-  template: false
+  template: true
 graphqls:
 - description: CJ Affiliate's current developer surface is **GraphQL**. There are **three**
   name: CJ Affiliate GraphQL APIs
@@ -311,7 +314,7 @@ network: true
 overview: 'CJ Affiliate publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including CJ Commission Detail API, CJ Product Search API, Advertiser Lookup API, and 6 more. Tagged areas include Affiliate Marketing, Affiliate Network, Commissions, Product Search, and Publishers.
 
 
-  The CJ Affiliate catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The CJ Affiliate catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   CJ Affiliate''s developer surface includes authentication, documentation, engineering blog, API reference, getting-started guide, support, signup flow, and 29 more developer resources.'
@@ -319,30 +322,43 @@ plans:
 - name: Cj Affiliate Plans Pricing
   plan_count: 2
   slug: cj-affiliate-plans-pricing
-random_paper: 17
+random_paper: 7
 rate_limits:
 - limit_count: 6
   name: Cj Affiliate Rate Limits
   slug: cj-affiliate-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: CJ Affiliate API Rules
+  rule_count: 65
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 3
+  slug: cj-affiliate-rules
 score:
   band: developing
-  composite: 45.6
+  composite: 47.2
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 57.0
+    artifact_dirs: 30
+    catalog_earned: 61.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 53.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 55.3
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 62.9
     developer_ergonomics: 17.3
     discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 47.1
+  previous_composite: 47.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -359,13 +375,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cj-affiliate/refs/heads/main/screenshots/cj-affiliate-2026-07-25T205448.png
+screenshot: https://apis.io/screenshots/cj-affiliate/cj-affiliate-2026-07-25T205448.png
 security:
 - kind: authentication
   name: Cj Affiliate Authentication
@@ -375,6 +391,16 @@ security:
   name: Cj Affiliate Domain Security
   slug: cj-affiliate-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: cj-affiliate-discover-products
+  slug: cj-affiliate-discover-products
+- name: cj-affiliate-find-links-to-promote
+  slug: cj-affiliate-find-links-to-promote
+- name: cj-affiliate-reconcile-commissions
+  slug: cj-affiliate-reconcile-commissions
+- name: cj-affiliate-submit-orders
+  slug: cj-affiliate-submit-orders
 slug: cj-affiliate
 tags:
 - Affiliate Marketing

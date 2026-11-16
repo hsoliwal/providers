@@ -1,39 +1,15 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
-agent_readiness:
-  band: human-only
-  dimensions:
-    agent_card: false
-    agent_skills: false
-    agentic_access: false
-    agentic_commerce: false
-    auth_clarity: false
-    consent_identity: false
-    delegated_identity: false
-    dry_run_mode: false
-    dynamic_client_registration: false
-    error_semantics: false
-    event_surface_described: false
-    idempotency: false
-    mcp_server: false
-    openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: derived
-    reversibility_documented: false
-    spec_presence: false
-    well_known_catalog: false
-  schema_version: '0.2'
-  score: 0.6
-  scored_at: '2026-10-17'
 api_count: 9
 apis:
 - description: Core Java SE API including fundamental classes and utilities for building Java applications, including the java.lang, java.util, java.io, and other foundational packages.
@@ -66,22 +42,22 @@ apis:
 artifact_total: 13
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/java/refs/heads/main/plans/java-plans-pricing.yml
+  href: https://artifacts.apis.io/java/plans/java-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/java-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/java/refs/heads/main/rate-limits/java-rate-limits.yml
+  href: https://artifacts.apis.io/java/rate-limits/java-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/java-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/java/refs/heads/main/finops/java-finops.yml
+  href: https://artifacts.apis.io/java/finops/java-finops.yml
   title: ''
   type: FinOps
   url: finops/java-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/java/refs/heads/main/security/java-domain-security.yml
+  href: https://artifacts.apis.io/java/security/java-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/java-domain-security.yml
@@ -119,7 +95,7 @@ finops:
 - has_sources: false
   method: generated
   name: Java Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: java-finops
   template: true
@@ -137,44 +113,12 @@ plans:
 - name: Java Plans Pricing
   plan_count: 3
   slug: java-plans-pricing
-random_paper: 0
+random_paper: 10
 rate_limits:
 - limit_count: 5
   name: Java Rate Limits
   slug: java-rate-limits
-score:
-  band: emerging
-  composite: 14.8
-  coverage:
-    artifact_dirs: 6
-    catalog_earned: 41.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
-    catalog_max: 115.0
-    note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
-  facets:
-    access_clarity: 18.4
-    contract_governance: 0.0
-    contract_quality: 0.0
-    developer_ergonomics: 21.4
-    discoverability: 62.5
-    operational_transparency: 10.5
-  previous_composite: 16.3
-  regulatory:
-    applies: true
-    matched_via: fallback
-    regime: Horizontal (data, software, accessibility, platform)
-    regime_id: horizontal
-    score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
-  upsert:
-    applies: false
-    note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
-    reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/java/refs/heads/main/screenshots/java-2026-06-20T183701.png
+screenshot: https://apis.io/screenshots/java/java-2026-06-20T183701.png
 security:
 - kind: domain-security
   name: Java Domain Security

@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Developer portal for Campus Explorer providing access to college search data.
@@ -32,17 +45,17 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/campusexplorer/refs/heads/main/llms/campusexplorer-llms.txt
+  href: https://artifacts.apis.io/campusexplorer/llms/campusexplorer-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/campusexplorer-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/campusexplorer/refs/heads/main/hosts/campusexplorer-hosts.yml
+  href: https://artifacts.apis.io/campusexplorer/hosts/campusexplorer-hosts.yml
   title: ''
   type: Hosts
   url: hosts/campusexplorer-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/campusexplorer/refs/heads/main/vendors/campusexplorer-vendors.yml
+  href: https://artifacts.apis.io/campusexplorer/vendors/campusexplorer-vendors.yml
   title: ''
   type: Vendors
   url: vendors/campusexplorer-vendors.yml
@@ -51,7 +64,7 @@ common:
   type: DeveloperPortal
   url: https://dev.campusexplorer.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/campusexplorer/refs/heads/main/security/campusexplorer-domain-security.yml
+  href: https://artifacts.apis.io/campusexplorer/security/campusexplorer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/campusexplorer-domain-security.yml
@@ -95,24 +108,26 @@ overview: 'Campusexplorer is listed with 1 API on the [APIs.io](https://apis.io/
 
 
   Campusexplorer''s developer surface includes engineering blog, getting-started guide, and 8 more developer resources.'
-random_paper: 12
+random_paper: 18
 score:
-  band: emerging
-  composite: 14.7
+  band: minimal
+  composite: 9.6
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 10
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.1
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 23.8
+    developer_ergonomics: 11.9
     discoverability: 64.3
     operational_transparency: 0.0
+  previous_composite: 14.7
   provenance:
     mcp: unknown
   regulatory:
@@ -120,13 +135,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 9.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/campusexplorer/campusexplorer-2026-11-03T123238.png
 security:
 - kind: domain-security
   name: Campusexplorer Domain Security

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 25.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 20
   slug: soundstat-agentic-access
   summary_line: 20 operations
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://soundstat.info/api/v1
   baseurl_source: declared
@@ -73,9 +79,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: SoundStat Genres API
   slug: open-soundstat-genres-api
 - collection_type: open
@@ -95,22 +98,22 @@ collections:
   slug: open-soundstat
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/soundstat/refs/heads/main/capabilities/soundstat-capability-edges.yml
+  href: https://artifacts.apis.io/soundstat/capabilities/soundstat-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/soundstat-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/soundstat/refs/heads/main/agentic-access/soundstat-agentic-access.yml
+  href: https://artifacts.apis.io/soundstat/agentic-access/soundstat-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/soundstat-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/soundstat/refs/heads/main/security/soundstat-domain-security.yml
+  href: https://artifacts.apis.io/soundstat/security/soundstat-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/soundstat-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/soundstat/refs/heads/main/authentication/soundstat-authentication.yml
+  href: https://artifacts.apis.io/soundstat/authentication/soundstat-authentication.yml
   title: ''
   type: Authentication
   url: authentication/soundstat-authentication.yml
@@ -131,17 +134,17 @@ common:
   type: TermsOfService
   url: https://soundstat.info/terms.html
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/soundstat/refs/heads/main/plans/soundstat-plans-pricing.yml
+  href: https://artifacts.apis.io/soundstat/plans/soundstat-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/soundstat-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/soundstat/refs/heads/main/rate-limits/soundstat-rate-limits.yml
+  href: https://artifacts.apis.io/soundstat/rate-limits/soundstat-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/soundstat-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/soundstat/refs/heads/main/finops/soundstat-finops.yml
+  href: https://artifacts.apis.io/soundstat/finops/soundstat-finops.yml
   title: ''
   type: FinOps
   url: finops/soundstat-finops.yml
@@ -164,41 +167,57 @@ network: true
 overview: 'SoundStat publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Genres API, Recommendations API, Stats API, and 2 more. Tagged areas include Music, Audio Analysis, Audio Features, Recommendations, and Track Analysis.
 
 
+  The SoundStat catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   SoundStat''s developer surface includes authentication, documentation, signup flow, and 8 more developer resources.'
 plans:
 - name: Soundstat Plans Pricing
   plan_count: 5
   slug: soundstat-plans-pricing
-random_paper: 7
+random_paper: 13
 rate_limits:
 - limit_count: 3
   name: Soundstat Rate Limits
   slug: soundstat-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: SoundStat API Rules
+  rule_count: 61
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 6
+  slug: soundstat-rules
 score:
   band: thin
-  composite: 31.6
+  composite: 34.6
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 14
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 1.3
   facets:
     access_clarity: 31.6
-    contract_governance: 0.0
-    contract_quality: 49.3
+    contract_governance: 13.6
+    contract_quality: 54.8
     developer_ergonomics: 29.8
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 39.9
+  previous_composite: 33.3
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 5
   regulatory:
     applies: true
@@ -206,13 +225,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/soundstat/refs/heads/main/screenshots/soundstat-2026-08-17T082005.png
+screenshot: https://apis.io/screenshots/soundstat/soundstat-2026-08-17T082005.png
 security:
 - kind: authentication
   name: Soundstat Authentication

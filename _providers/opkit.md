@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -73,9 +76,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Opkit Benefits API
   slug: open-opkit-benefits-api
 - collection_type: open
@@ -95,22 +95,22 @@ collections:
   slug: open-opkit
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/opkit/refs/heads/main/capabilities/opkit-capability-edges.yml
+  href: https://artifacts.apis.io/opkit/capabilities/opkit-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/opkit-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opkit/refs/heads/main/agentic-access/opkit-agentic-access.yml
+  href: https://artifacts.apis.io/opkit/agentic-access/opkit-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/opkit-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opkit/refs/heads/main/security/opkit-domain-security.yml
+  href: https://artifacts.apis.io/opkit/security/opkit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/opkit-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opkit/refs/heads/main/authentication/opkit-authentication.yml
+  href: https://artifacts.apis.io/opkit/authentication/opkit-authentication.yml
   title: ''
   type: Authentication
   url: authentication/opkit-authentication.yml
@@ -127,17 +127,17 @@ common:
   type: Documentation
   url: https://docs.opkit.co
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/opkit/refs/heads/main/plans/opkit-plans-pricing.yml
+  href: https://artifacts.apis.io/opkit/plans/opkit-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/opkit-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/opkit/refs/heads/main/rate-limits/opkit-rate-limits.yml
+  href: https://artifacts.apis.io/opkit/rate-limits/opkit-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/opkit-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/opkit/refs/heads/main/finops/opkit-finops.yml
+  href: https://artifacts.apis.io/opkit/finops/opkit-finops.yml
   title: ''
   type: FinOps
   url: finops/opkit-finops.yml
@@ -160,24 +160,40 @@ network: true
 overview: 'Opkit publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Benefits API, Eligibility Inquiries API, Patients API, and 2 more. Tagged areas include Healthcare, Insurance, Eligibility, Benefits, and Verification.
 
 
+  The Opkit catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Opkit''s developer surface includes authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Opkit Plans Pricing
   plan_count: 1
   slug: opkit-plans-pricing
-random_paper: 1
+random_paper: 23
 rate_limits:
 - limit_count: 2
   name: Opkit Rate Limits
   slug: opkit-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Opkit API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: opkit-rules
 score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 41.0
+    artifact_dirs: 13
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -203,8 +219,8 @@ score:
     regime: Health
     regime_id: health
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true

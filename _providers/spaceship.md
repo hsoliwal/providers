@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.2
-  scored_at: '2026-10-17'
+  score: 35.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -95,11 +98,8 @@ apis:
   description: The SellerHub API from Spaceship — 7 operation(s) for sellerhub.
   name: Spaceship SellerHub API
   slug: spaceship-sellerhub-api
-artifact_total: 25
+artifact_total: 29
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Spaceship.com Async Operations API
   slug: open-spaceship-async-operations-api
@@ -164,77 +164,77 @@ common:
   type: GitHubOrganization
   url: https://github.com/spaceshipapp
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/authentication/spaceship-authentication.yml
+  href: https://artifacts.apis.io/spaceship/authentication/spaceship-authentication.yml
   title: ''
   type: Authentication
   url: authentication/spaceship-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/scopes/spaceship-scopes.yml
+  href: https://artifacts.apis.io/spaceship/scopes/spaceship-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/spaceship-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/conventions/spaceship-conventions.yml
+  href: https://artifacts.apis.io/spaceship/conventions/spaceship-conventions.yml
   title: ''
   type: Conventions
   url: conventions/spaceship-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/errors/spaceship-problem-types.yml
+  href: https://artifacts.apis.io/spaceship/errors/spaceship-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/spaceship-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/lifecycle/spaceship-lifecycle.yml
+  href: https://artifacts.apis.io/spaceship/lifecycle/spaceship-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/spaceship-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/data-model/spaceship-data-model.yml
+  href: https://artifacts.apis.io/spaceship/data-model/spaceship-data-model.yml
   title: ''
   type: DataModel
   url: data-model/spaceship-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/conformance/spaceship-conformance.yml
+  href: https://artifacts.apis.io/spaceship/conformance/spaceship-conformance.yml
   title: ''
   type: Conformance
   url: conformance/spaceship-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/mcp/spaceship-mcp.yml
+  href: https://artifacts.apis.io/spaceship/mcp/spaceship-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/spaceship-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/llms/spaceship-llms.txt
+  href: https://artifacts.apis.io/spaceship/llms/spaceship-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/spaceship-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/overlays/spaceship-openapi-overlay.yaml
+  href: https://artifacts.apis.io/spaceship/overlays/spaceship-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/spaceship-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/well-known/spaceship-well-known.yml
+  href: https://artifacts.apis.io/spaceship/well-known/spaceship-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/spaceship-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/packages/spaceship-packages.yml
+  href: https://artifacts.apis.io/spaceship/packages/spaceship-packages.yml
   title: ''
   type: Packages
   url: packages/spaceship-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/spaceship/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/security/spaceship-domain-security.yml
+  href: https://artifacts.apis.io/spaceship/security/spaceship-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/spaceship-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/agentic-access/spaceship-agentic-access.yml
+  href: https://artifacts.apis.io/spaceship/agentic-access/spaceship-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/spaceship-agentic-access.yml
@@ -249,8 +249,24 @@ network: true
 overview: 'Spaceship publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Async Operations API, Contacts API, Contacts attributes API, and 7 more. Tagged areas include Company, Domains, Domain Registrar, DNS, and Domain Marketplace.
 
 
+  The Spaceship catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Spaceship''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, authentication, and 17 more developer resources.'
-random_paper: 14
+random_paper: 0
+rules:
+- authorship: generated
+  effective_rule_count: 112
+  extends:
+  - spectral:oas
+  name: Spaceship API Rules
+  rule_count: 71
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 10
+  slug: spaceship-rules
 scopes:
 - name: Spaceship Scopes
   scope_count: 11
@@ -258,28 +274,28 @@ scopes:
   summary_line: 11 scopes
 score:
   band: thin
-  composite: 34.2
+  composite: 35.1
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 54.9
+    contract_governance: 18.2
+    contract_quality: 51.9
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 33.7
+  previous_composite: 35.1
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 10
@@ -291,13 +307,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/spaceship/refs/heads/main/screenshots/spaceship-2026-09-02T160322.png
+screenshot: https://apis.io/screenshots/spaceship/spaceship-2026-09-02T160322.png
 security:
 - kind: authentication
   name: Spaceship Authentication
@@ -307,6 +323,16 @@ security:
   name: Spaceship Domain Security
   slug: spaceship-domain-security
   summary_line: TLSv1.3 · DNSSEC · DMARC
+skill_count: 4
+skills:
+- name: Manage DNS records for a domain
+  slug: spaceship-manage-dns
+- name: Register a domain
+  slug: spaceship-register-domain
+- name: List and sell a domain on SellerHub
+  slug: spaceship-sell-domain
+- name: Transfer a domain in
+  slug: spaceship-transfer-domain
 slug: spaceship
 tags:
 - Company

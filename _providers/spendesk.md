@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
-  label: Paid
-  onboarding: unknown
-  pricing: paid
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 47.8
-  scored_at: '2026-10-17'
+  score: 48.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 50
   human_in_the_loop: 0
@@ -139,83 +147,88 @@ asyncapis:
   name: Spendesk Webhooks
   slug: spendesk-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/spendesk/capabilities/spendesk-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/spendesk-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/agentic-access/spendesk-agentic-access.yml
+  href: https://artifacts.apis.io/spendesk/agentic-access/spendesk-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/spendesk-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/rules/spendesk-rules.yml
+  href: https://artifacts.apis.io/spendesk/rules/spendesk-rules.yml
   title: ''
   type: Spectral
   url: rules/spendesk-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/json-ld/spendesk-context.jsonld
+  href: https://artifacts.apis.io/spendesk/json-ld/spendesk-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/spendesk-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/vocabulary/spendesk-vocabulary.yml
+  href: https://artifacts.apis.io/spendesk/vocabulary/spendesk-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/spendesk-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/asyncapi/spendesk-webhooks.yml
+  href: https://artifacts.apis.io/spendesk/asyncapi/spendesk-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/spendesk-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/data-model/spendesk-data-model.yml
+  href: https://artifacts.apis.io/spendesk/data-model/spendesk-data-model.yml
   title: ''
   type: DataModel
   url: data-model/spendesk-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/conventions/spendesk-conventions.yml
+  href: https://artifacts.apis.io/spendesk/conventions/spendesk-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/spendesk-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/conventions/spendesk-conventions.yml
+  href: https://artifacts.apis.io/spendesk/conventions/spendesk-conventions.yml
   title: ''
   type: Conventions
   url: conventions/spendesk-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/errors/spendesk-problem-types.yml
+  href: https://artifacts.apis.io/spendesk/errors/spendesk-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/spendesk-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/conformance/spendesk-conformance.yml
+  href: https://artifacts.apis.io/spendesk/conformance/spendesk-conformance.yml
   title: ''
   type: Conformance
   url: conformance/spendesk-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/llms/spendesk-llms.txt
+  href: https://artifacts.apis.io/spendesk/llms/spendesk-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/spendesk-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/well-known/spendesk-status-security.txt
+  href: https://artifacts.apis.io/spendesk/well-known/spendesk-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/spendesk-status-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/well-known/spendesk-security.txt
+  href: https://artifacts.apis.io/spendesk/well-known/spendesk-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/spendesk-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/well-known/spendesk-well-known.yml
+  href: https://artifacts.apis.io/spendesk/well-known/spendesk-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/spendesk-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/hosts/spendesk-hosts.yml
+  href: https://artifacts.apis.io/spendesk/hosts/spendesk-hosts.yml
   title: ''
   type: Hosts
   url: hosts/spendesk-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/vendors/spendesk-vendors.yml
+  href: https://artifacts.apis.io/spendesk/vendors/spendesk-vendors.yml
   title: ''
   type: Vendors
   url: vendors/spendesk-vendors.yml
@@ -244,22 +257,22 @@ common:
   type: Login
   url: https://app.spendesk.com/auth/login
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/scopes/spendesk-scopes.yml
+  href: https://artifacts.apis.io/spendesk/scopes/spendesk-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/spendesk-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/authentication/spendesk-authentication.yml
+  href: https://artifacts.apis.io/spendesk/authentication/spendesk-authentication.yml
   title: ''
   type: Authentication
   url: authentication/spendesk-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/security/spendesk-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/spendesk/security/spendesk-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/spendesk-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/security/spendesk-domain-security.yml
+  href: https://artifacts.apis.io/spendesk/security/spendesk-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/spendesk-domain-security.yml
@@ -296,35 +309,35 @@ common:
   type: StatusPage
   url: https://status.spendesk.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/plans/spendesk-plans-pricing.yml
+  href: https://artifacts.apis.io/spendesk/plans/spendesk-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/spendesk-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/rate-limits/spendesk-rate-limits.yml
+  href: https://artifacts.apis.io/spendesk/rate-limits/spendesk-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/spendesk-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/finops/spendesk-finops.yml
+  href: https://artifacts.apis.io/spendesk/finops/spendesk-finops.yml
   title: ''
   type: FinOps
   url: finops/spendesk-finops.yml
 - group: company
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/blogs/blogs.json
+  href: https://artifacts.apis.io/spendesk/blogs/blogs.json
   title: ''
   type: BlogFeed
   url: blogs/blogs.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/json-ld/spendesk-context.jsonld
+  href: https://artifacts.apis.io/spendesk/json-ld/spendesk-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/spendesk-context.jsonld
 created: '2026-06-12'
 description: Spendesk is an AI-powered spend management and procurement platform serving over 200,000 users across Europe. Its public REST API enables partners and customers to integrate programmatic card issuance, transaction retrieval, expense claims processing, vendor and invoice management, and accounting exports into their own tools and workflows. Authentication is supported via API keys (for customers) and OAuth2 (for partners building native integrations). API access requires a Premium or Enterprise subscription plan, and the developer portal at developer.spendesk.com provides reference documentation, changelogs, a Postman collection, and webhook administration.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Spendesk Finops
   primary_unit: ''
   service_category: ''
@@ -366,12 +379,12 @@ overview: 'Spendesk publishes 18 API contracts indexed on the [APIs.io](https://
   The Spendesk catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Spendesk''s developer surface includes authentication, documentation, engineering blog, pricing, and 35 more developer resources.'
+  Spendesk''s developer surface includes authentication, documentation, engineering blog, pricing, and 36 more developer resources.'
 plans:
 - name: Spendesk Plans Pricing
-  plan_count: 3
+  plan_count: 1
   slug: spendesk-plans-pricing
-random_paper: 3
+random_paper: 21
 rate_limits:
 - limit_count: 3
   name: Spendesk Rate Limits
@@ -396,23 +409,28 @@ scopes:
   summary_line: 39 scopes · clientCredentials/authorizationCode
 score:
   band: strong
-  composite: 59.6
+  composite: 60.2
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 68.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 46.3
+    artifact_dirs: 29
+    catalog_earned: 73.8
+    catalog_earned_first_party: 8.0
+    catalog_gap: 41.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 29.1
+  delta: -2.3
   facets:
-    access_clarity: 60.5
+    access_clarity: 52.6
     contract_governance: 22.0
-    contract_quality: 73.1
-    developer_ergonomics: 17.9
-    discoverability: 75.0
-    operational_transparency: 52.6
-  previous_composite: 30.5
+    contract_quality: 79.7
+    developer_ergonomics: 28.6
+    discoverability: 74.1
+    operational_transparency: 47.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 62.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -427,14 +445,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 41.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 35.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/spendesk/refs/heads/main/screenshots/spendesk-2026-06-20T194306.png
+screenshot: https://apis.io/screenshots/spendesk/spendesk-2026-06-20T194306.png
 security:
 - kind: authentication
   name: Spendesk Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 25.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -42,44 +49,41 @@ agentic_access:
   operation_count: 20
   slug: parea-agentic-access
   summary_line: 20 operations · 12 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://parea-ai-backend-us-9ac16cdbc7a7b006.onporter.run
   baseurl_source: declared
   description: The Parea API from Parea AI — 19 operation(s) for parea.
   name: Parea AI Parea API
   slug: parea-parea-api
-artifact_total: 22
+artifact_total: 21
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: AI REST Parea API
   slug: open-parea-parea-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/parea/refs/heads/main/capabilities/parea-capability-edges.yml
+  href: https://artifacts.apis.io/parea/capabilities/parea-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/parea-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/parea/refs/heads/main/agentic-access/parea-agentic-access.yml
+  href: https://artifacts.apis.io/parea/agentic-access/parea-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/parea-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/parea/refs/heads/main/security/parea-domain-security.yml
+  href: https://artifacts.apis.io/parea/security/parea-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/parea-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/parea/refs/heads/main/authentication/parea-authentication.yml
+  href: https://artifacts.apis.io/parea/authentication/parea-authentication.yml
   title: ''
   type: Authentication
   url: authentication/parea-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/parea/refs/heads/main/scopes/parea-scopes.yml
+  href: https://artifacts.apis.io/parea/scopes/parea-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/parea-scopes.yml
@@ -112,27 +116,27 @@ common:
   type: X
   url: https://twitter.com/PareaAI
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/parea/refs/heads/main/plans/parea-plans-pricing.yml
+  href: https://artifacts.apis.io/parea/plans/parea-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/parea-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/parea/refs/heads/main/rate-limits/parea-rate-limits.yml
+  href: https://artifacts.apis.io/parea/rate-limits/parea-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/parea-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/parea/refs/heads/main/finops/parea-finops.yml
+  href: https://artifacts.apis.io/parea/finops/parea-finops.yml
   title: ''
   type: FinOps
   url: finops/parea-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/parea/refs/heads/main/vocabulary/parea-vocabulary.yml
+  href: https://artifacts.apis.io/parea/vocabulary/parea-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/parea-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/parea/refs/heads/main/json-ld/parea-context.jsonld
+  href: https://artifacts.apis.io/parea/json-ld/parea-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/parea-context.jsonld
@@ -199,7 +203,7 @@ plans:
 - name: Parea Plans Pricing
   plan_count: 4
   slug: parea-plans-pricing
-random_paper: 15
+random_paper: 17
 rate_limits:
 - limit_count: 5
   name: Parea Rate Limits
@@ -223,29 +227,29 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 36.0
+  composite: 37.3
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 61.8
     catalog_earned_first_party: 0.0
     catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 1.3
   facets:
     access_clarity: 13.2
     contract_governance: 23.5
-    contract_quality: 51.6
+    contract_quality: 56.5
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 44.3
+  previous_composite: 36.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
   regulatory:
     applies: true
@@ -253,13 +257,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 38.9
-screenshot: https://raw.githubusercontent.com/api-evangelist/parea/refs/heads/main/screenshots/parea-2026-06-20T191406.png
+screenshot: https://apis.io/screenshots/parea/parea-2026-06-20T191406.png
 security:
 - kind: authentication
   name: Parea Authentication

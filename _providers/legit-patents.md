@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 0
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/legit-patents/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/legit-patents/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -51,7 +57,7 @@ name: Legit Patents
 nav: Providers
 network: true
 overview: Legit Patents is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Expert Network, Natural Language Processing, and Scientific Literature.
-random_paper: 3
+random_paper: 1
 score:
   band: minimal
   composite: 0.0
@@ -86,8 +92,8 @@ score:
     regime: Health
     regime_id: health
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

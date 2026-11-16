@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: REST API for Broker Genius providing customs brokerage automation
@@ -42,42 +56,42 @@ apis:
 artifact_total: 9
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/brokergenius/refs/heads/main/plans/brokergenius-plans-pricing.yml
+  href: https://artifacts.apis.io/brokergenius/plans/brokergenius-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/brokergenius-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brokergenius/refs/heads/main/rules/brokergenius-rules.yml
+  href: https://artifacts.apis.io/brokergenius/rules/brokergenius-rules.yml
   title: ''
   type: Spectral
   url: rules/brokergenius-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brokergenius/refs/heads/main/json-ld/brokergenius-context.jsonld
+  href: https://artifacts.apis.io/brokergenius/json-ld/brokergenius-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/brokergenius-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brokergenius/refs/heads/main/vocabulary/brokergenius-vocabulary.yml
+  href: https://artifacts.apis.io/brokergenius/vocabulary/brokergenius-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/brokergenius-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brokergenius/refs/heads/main/data-model/brokergenius-data-model.yml
+  href: https://artifacts.apis.io/brokergenius/data-model/brokergenius-data-model.yml
   title: ''
   type: DataModel
   url: data-model/brokergenius-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brokergenius/refs/heads/main/conformance/brokergenius-conformance.yml
+  href: https://artifacts.apis.io/brokergenius/conformance/brokergenius-conformance.yml
   title: ''
   type: Conformance
   url: conformance/brokergenius-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brokergenius/refs/heads/main/well-known/brokergenius-well-known.yml
+  href: https://artifacts.apis.io/brokergenius/well-known/brokergenius-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/brokergenius-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brokergenius/refs/heads/main/hosts/brokergenius-hosts.yml
+  href: https://artifacts.apis.io/brokergenius/hosts/brokergenius-hosts.yml
   title: ''
   type: Hosts
   url: hosts/brokergenius-hosts.yml
@@ -86,7 +100,7 @@ common:
   type: Login
   url: https://brokergenius.ai/login
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brokergenius/refs/heads/main/security/brokergenius-domain-security.yml
+  href: https://artifacts.apis.io/brokergenius/security/brokergenius-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brokergenius-domain-security.yml
@@ -166,7 +180,7 @@ plans:
 - name: Brokergenius Plans Pricing
   plan_count: 5
   slug: brokergenius-plans-pricing
-random_paper: 20
+random_paper: 0
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -182,25 +196,27 @@ rules:
   slug: brokergenius-rules
 score:
   band: thin
-  composite: 36.9
+  composite: 28.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 19
     catalog_earned: 66.8
     catalog_earned_first_party: 12.0
     catalog_gap: 48.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.5
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 22.0
-    contract_quality: 21.8
-    developer_ergonomics: 35.7
+    contract_quality: 20.9
+    developer_ergonomics: 17.9
     discoverability: 62.5
     operational_transparency: 0.0
+  previous_composite: 36.7
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 3
       marker_coverage: 100.0
       total: 3
@@ -210,12 +226,14 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 26.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/brokergenius/brokergenius-2026-11-03T122654.png
 security:
 - kind: domain-security
   name: Brokergenius Domain Security

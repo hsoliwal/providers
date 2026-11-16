@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/handoff/refs/heads/main/plans/handoff-plans-pricing.yml
+  href: https://artifacts.apis.io/handoff/plans/handoff-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/handoff-plans-pricing.yml
@@ -78,12 +83,12 @@ common:
   type: PrivacyPolicy
   url: https://www.handoff.ai/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/handoff/refs/heads/main/llms/handoff-llms.txt
+  href: https://artifacts.apis.io/handoff/llms/handoff-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/handoff-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/handoff/refs/heads/main/security/handoff-domain-security.yml
+  href: https://artifacts.apis.io/handoff/security/handoff-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/handoff-domain-security.yml
@@ -103,18 +108,18 @@ plans:
 - name: Handoff Plans Pricing
   plan_count: 4
   slug: handoff-plans-pricing
-random_paper: 0
+random_paper: 6
 score:
   band: emerging
   composite: 21.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.0
   facets:
     access_clarity: 69.7
     contract_governance: 0.0
@@ -122,21 +127,21 @@ score:
     developer_ergonomics: 7.1
     discoverability: 55.4
     operational_transparency: 5.3
-  previous_composite: 14.9
+  previous_composite: 21.2
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 12.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/handoff/refs/heads/main/screenshots/handoff-2026-07-25T220640.png
+screenshot: https://apis.io/screenshots/handoff/handoff-2026-07-25T220640.png
 security:
 - kind: domain-security
   name: Handoff Domain Security
@@ -153,6 +158,6 @@ tags:
 - Artificial Intelligence
 - Project Management
 - CRM
-- Field Service
+- Field Service Management
 website: https://handoff.ai/
 ---

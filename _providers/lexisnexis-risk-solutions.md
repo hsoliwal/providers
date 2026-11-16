@@ -30,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -38,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - description: C.L.U.E. Auto is a contributory claim-history information exchange containing up to seven years of personal automobile claims matching the search criteria, used by carriers during quoting and underwri
@@ -73,12 +76,12 @@ common:
   type: License
   url: https://github.com/lexisnexis-risk-solutions/emailage-public-clients/blob/main/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/security/lexisnexis-risk-solutions-trust-center.yml
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/security/lexisnexis-risk-solutions-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/lexisnexis-risk-solutions-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/security/lexisnexis-risk-solutions-domain-security.yml
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/security/lexisnexis-risk-solutions-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lexisnexis-risk-solutions-domain-security.yml
@@ -163,7 +166,7 @@ common:
   type: StatusPage
   url: https://status.lexisnexisrisk.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/lifecycle/lexisnexis-risk-solutions-lifecycle.yml
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/lifecycle/lexisnexis-risk-solutions-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lexisnexis-risk-solutions-lifecycle.yml
@@ -172,17 +175,17 @@ common:
   type: Security
   url: https://www.lexisnexis.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/security/lexisnexis-risk-solutions-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/security/lexisnexis-risk-solutions-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/lexisnexis-risk-solutions-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/well-known/lexisnexis-risk-solutions-security.txt
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/well-known/lexisnexis-risk-solutions-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/lexisnexis-risk-solutions-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/well-known/lexisnexis-risk-solutions-well-known.yml
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/well-known/lexisnexis-risk-solutions-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lexisnexis-risk-solutions-well-known.yml
@@ -191,37 +194,37 @@ common:
   type: Compliance
   url: https://trust.lexisnexis.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/conformance/lexisnexis-risk-solutions-conformance.yml
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/conformance/lexisnexis-risk-solutions-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lexisnexis-risk-solutions-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/packages/lexisnexis-risk-solutions-packages.yml
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/packages/lexisnexis-risk-solutions-packages.yml
   title: ''
   type: Packages
   url: packages/lexisnexis-risk-solutions-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/packages/lexisnexis-risk-solutions-packages.yml
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/packages/lexisnexis-risk-solutions-packages.yml
   title: ''
   type: SDKs
   url: packages/lexisnexis-risk-solutions-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/authentication/lexisnexis-risk-solutions-authentication.yml
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/authentication/lexisnexis-risk-solutions-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lexisnexis-risk-solutions-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/conventions/lexisnexis-risk-solutions-conventions.yml
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/conventions/lexisnexis-risk-solutions-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lexisnexis-risk-solutions-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/sandbox/lexisnexis-risk-solutions-sandbox.yml
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/sandbox/lexisnexis-risk-solutions-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/lexisnexis-risk-solutions-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/llms/lexisnexis-risk-solutions-llms.txt
+  href: https://artifacts.apis.io/lexisnexis-risk-solutions/llms/lexisnexis-risk-solutions-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lexisnexis-risk-solutions-llms.txt
@@ -238,12 +241,12 @@ overview: 'LexisNexis Risk Solutions is listed with 7 APIs on the [APIs.io](http
 
 
   LexisNexis Risk Solutions'' developer surface includes documentation, support, engineering blog, authentication, sandbox, and 32 more developer resources.'
-random_paper: 21
+random_paper: 23
 score:
   band: thin
   composite: 35.0
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -273,14 +276,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 31.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lexisnexis-risk-solutions/refs/heads/main/screenshots/lexisnexis-risk-solutions-2026-07-25T224959.png
+screenshot: https://apis.io/screenshots/lexisnexis-risk-solutions/lexisnexis-risk-solutions-2026-07-25T224959.png
 security:
 - kind: authentication
   name: Lexisnexis Risk Solutions Authentication

@@ -1,13 +1,14 @@
 ---
 access_model:
   confidence: low
-  generated: '2026-07-22'
+  generated: '2026-11-06'
   label: Unknown
   method: derived
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 api_count: 0
@@ -21,7 +22,7 @@ modified: '2026-07-17'
 name: Techstars
 nav: Providers
 network: true
-random_paper: 9
+random_paper: 17
 slug: techstars
 tags:
 - Venture Capital

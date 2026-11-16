@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -13,6 +16,7 @@ access_model:
   try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 33.0
-  scored_at: '2026-10-17'
+  score: 39.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 59
   human_in_the_loop: 5
@@ -43,7 +50,7 @@ agentic_access:
   operation_count: 111
   slug: memesio-agentic-access
   summary_line: 111 operations · 59 acting · 5 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://memesio.com/api
   baseurl_source: declared
@@ -125,11 +132,8 @@ apis:
   description: The video API from Memesio — 9 operation(s) for video.
   name: Memesio Video API
   slug: memesio-video-api
-artifact_total: 233
+artifact_total: 232
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Memesio API Contracts agent-infra API
   slug: open-memesio-agent-infra-api
@@ -261,37 +265,37 @@ collections:
   slug: open-memesio
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/memesio/refs/heads/main/plans/memesio-plans-pricing.yml
+  href: https://artifacts.apis.io/memesio/plans/memesio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/memesio-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/memesio/refs/heads/main/rate-limits/memesio-rate-limits.yml
+  href: https://artifacts.apis.io/memesio/rate-limits/memesio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/memesio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/memesio/refs/heads/main/finops/memesio-finops.yml
+  href: https://artifacts.apis.io/memesio/finops/memesio-finops.yml
   title: ''
   type: FinOps
   url: finops/memesio-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/memesio/refs/heads/main/capabilities/memesio-capability-edges.yml
+  href: https://artifacts.apis.io/memesio/capabilities/memesio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/memesio-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/memesio/refs/heads/main/agentic-access/memesio-agentic-access.yml
+  href: https://artifacts.apis.io/memesio/agentic-access/memesio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/memesio-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/memesio/refs/heads/main/security/memesio-domain-security.yml
+  href: https://artifacts.apis.io/memesio/security/memesio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/memesio-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/memesio/refs/heads/main/authentication/memesio-authentication.yml
+  href: https://artifacts.apis.io/memesio/authentication/memesio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/memesio-authentication.yml
@@ -740,7 +744,7 @@ json_schemas:
   property_count: 29
   slug: memesio-meme-caption
 - name: MemeDetailResponse
-  property_count: 0
+  property_count: 18
   slug: memesio-meme-detail-response
 - name: MemeGenerationVariant
   property_count: 16
@@ -855,7 +859,7 @@ plans:
 - name: Memesio Plans Pricing
   plan_count: 4
   slug: memesio-plans-pricing
-random_paper: 3
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Memesio Rate Limits
@@ -886,29 +890,29 @@ rules:
   slug: memesio-rules
 score:
   band: thin
-  composite: 35.1
+  composite: 36.3
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 57.0
     catalog_earned_first_party: 0.0
     catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.1
+  delta: 1.2
   facets:
     access_clarity: 21.1
     contract_governance: 27.3
-    contract_quality: 47.9
+    contract_quality: 52.4
     developer_ergonomics: 21.4
     discoverability: 80.0
     operational_transparency: 15.8
-  previous_composite: 41.2
+  previous_composite: 35.1
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 16
     mcp: first-party
   regulatory:
@@ -917,13 +921,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/memesio/refs/heads/main/screenshots/memesio-2026-06-20T185140.png
+screenshot: https://apis.io/screenshots/memesio/memesio-2026-06-20T185140.png
 security:
 - kind: authentication
   name: Memesio Authentication

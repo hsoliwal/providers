@@ -1,12 +1,14 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.7
-  scored_at: '2026-10-17'
+  score: 30.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 61
   human_in_the_loop: 0
@@ -65,11 +70,6 @@ apis:
   slug: depict-brand-features-api
 - baseURL: https://api.depict.ai
   baseurl_source: declared
-  description: The Catalog Push API (v0) API from Depict — 6 operation(s) for catalog push api (v0).
-  name: Depict Catalog Push API (v0) API
-  slug: depict-catalog-push-api-v0-api
-- baseURL: https://api.depict.ai
-  baseurl_source: declared
   description: The Collections API from Depict — 25 operation(s) for collections.
   name: Depict Collections API
   slug: depict-collections-api
@@ -80,19 +80,9 @@ apis:
   slug: depict-dashboard-api
 - baseURL: https://api.depict.ai
   baseurl_source: declared
-  description: The Events (v2) API from Depict — 3 operation(s) for events (v2).
-  name: Depict Events (v2) API
-  slug: depict-events-v2-api
-- baseURL: https://api.depict.ai
-  baseurl_source: declared
   description: The Instagram API from Depict — 4 operation(s) for instagram.
   name: Depict Instagram API
   slug: depict-instagram-api
-- baseURL: https://api.depict.ai
-  baseurl_source: declared
-  description: The Listing (v2) API from Depict — 1 operation(s) for listing (v2).
-  name: Depict Listing (v2) API
-  slug: depict-listing-v2-api
 - baseURL: https://api.depict.ai
   baseurl_source: declared
   description: The Listing (v3) API from Depict — 5 operation(s) for listing (v3).
@@ -130,11 +120,6 @@ apis:
   slug: depict-onboarding-api
 - baseURL: https://api.depict.ai
   baseurl_source: declared
-  description: The Other (v3) API from Depict — 3 operation(s) for other (v3).
-  name: Depict Other (v3) API
-  slug: depict-other-v3-api
-- baseURL: https://api.depict.ai
-  baseurl_source: declared
   description: The Product Funnel Metrics API from Depict — 1 operation(s) for product funnel metrics.
   name: Depict Product Funnel Metrics API
   slug: depict-product-funnel-metrics-api
@@ -160,29 +145,9 @@ apis:
   slug: depict-published-collections-api
 - baseURL: https://api.depict.ai
   baseurl_source: declared
-  description: The Recommendations (v2) API from Depict — 4 operation(s) for recommendations (v2).
-  name: Depict Recommendations (v2) API
-  slug: depict-recommendations-v2-api
-- baseURL: https://api.depict.ai
-  baseurl_source: declared
-  description: The Recommendations (v3) API from Depict — 1 operation(s) for recommendations (v3).
-  name: Depict Recommendations (v3) API
-  slug: depict-recommendations-v3-api
-- baseURL: https://api.depict.ai
-  baseurl_source: declared
   description: The Search Metrics API from Depict — 1 operation(s) for search metrics.
   name: Depict Search Metrics API
   slug: depict-search-metrics-api
-- baseURL: https://api.depict.ai
-  baseurl_source: declared
-  description: The Search (v2) API from Depict — 4 operation(s) for search (v2).
-  name: Depict Search (v2) API
-  slug: depict-search-v2-api
-- baseURL: https://api.depict.ai
-  baseurl_source: declared
-  description: The Search (v3) API from Depict — 3 operation(s) for search (v3).
-  name: Depict Search (v3) API
-  slug: depict-search-v3-api
 - baseURL: https://api.depict.ai
   baseurl_source: declared
   description: The Settings API from Depict — 12 operation(s) for settings.
@@ -218,11 +183,33 @@ apis:
   description: The Vitals API from Depict — 1 operation(s) for vitals.
   name: Depict Vitals API
   slug: depict-vitals-api
-artifact_total: 76
+- baseURL: https://api.depict.ai
+  baseurl_source: declared
+  description: The Events API from Depict — 3 operation(s) for events.
+  name: Depict Events API
+  slug: depict-events-api
+- baseURL: https://api.depict.ai
+  baseurl_source: declared
+  description: The Markets API from Depict — 2 operation(s) for markets.
+  name: Depict Markets API
+  slug: depict-markets-api
+- baseURL: https://api.depict.ai
+  baseurl_source: declared
+  description: The Product Listing API from Depict — 3 operation(s) for product listing.
+  name: Depict Product Listing API
+  slug: depict-product-listing-api
+- baseURL: https://api.depict.ai
+  baseurl_source: declared
+  description: The Recommendations API from Depict — 6 operation(s) for recommendations.
+  name: Depict Recommendations API
+  slug: depict-recommendations-api
+- baseURL: https://api.depict.ai
+  baseurl_source: declared
+  description: The Search API from Depict — 7 operation(s) for search.
+  name: Depict Search API
+  slug: depict-search-api
+artifact_total: 78
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Depict Lite Ab Test API
   slug: open-depict-ab-test-api
@@ -330,12 +317,12 @@ collections:
   slug: open-depict-vitals-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/plans/depict-plans-pricing.yml
+  href: https://artifacts.apis.io/depict/plans/depict-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/depict-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/capabilities/depict-capability-edges.yml
+  href: https://artifacts.apis.io/depict/capabilities/depict-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/depict-capability-edges.yml
@@ -396,99 +383,110 @@ common:
   type: ChangeLog
   url: https://depict.ai/updates
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/authentication/depict-authentication.yml
+  href: https://artifacts.apis.io/depict/authentication/depict-authentication.yml
   title: ''
   type: Authentication
   url: authentication/depict-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/scopes/depict-scopes.yml
+  href: https://artifacts.apis.io/depict/scopes/depict-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/depict-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/agentic-access/depict-agentic-access.yml
+  href: https://artifacts.apis.io/depict/agentic-access/depict-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/depict-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/security/depict-domain-security.yml
+  href: https://artifacts.apis.io/depict/security/depict-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/depict-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/packages/depict-packages.yml
+  href: https://artifacts.apis.io/depict/packages/depict-packages.yml
   title: ''
   type: Packages
   url: packages/depict-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/packages/depict-packages.yml
+  href: https://artifacts.apis.io/depict/packages/depict-packages.yml
   title: ''
   type: SDKs
   url: packages/depict-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/components/depict-components.yml
+  href: https://artifacts.apis.io/depict/components/depict-components.yml
   title: ''
   type: Components
   url: components/depict-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/llms/depict-llms.txt
+  href: https://artifacts.apis.io/depict/llms/depict-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/depict-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/conventions/depict-conventions.yml
+  href: https://artifacts.apis.io/depict/conventions/depict-conventions.yml
   title: ''
   type: Conventions
   url: conventions/depict-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/errors/depict-problem-types.yml
+  href: https://artifacts.apis.io/depict/errors/depict-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/depict-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/lifecycle/depict-lifecycle.yml
+  href: https://artifacts.apis.io/depict/lifecycle/depict-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/depict-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/changelog/depict-changelog.yml
+  href: https://artifacts.apis.io/depict/changelog/depict-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/depict-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/mcp/depict-mcp.yml
+  href: https://artifacts.apis.io/depict/mcp/depict-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/depict-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/overlays/depict-storefront-overlay.yaml
+  href: https://artifacts.apis.io/depict/overlays/depict-storefront-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/depict-storefront-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/conformance/depict-conformance.yml
+  href: https://artifacts.apis.io/depict/conformance/depict-conformance.yml
   title: ''
   type: Conformance
   url: conformance/depict-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/data-model/depict-data-model.yml
+  href: https://artifacts.apis.io/depict/data-model/depict-data-model.yml
   title: ''
   type: DataModel
   url: data-model/depict-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/depict/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: Depict is an AI-assisted merchandising platform for e-commerce brands, headquartered in Stockholm, Sweden and backed by Slow Ventures and Y Combinator. Depict helps fashion and lifestyle retailers curate visual merchandising, hybrid AI-plus-keyword site search, and personalized product recommendations across their storefronts, automating routine merchandising and optimization while keeping brand rules intact. For developers, Depict exposes a public Storefront API (served from api.depict.ai) that returns search results, query suggestions, product listings, and recommendations and accepts tracking events, plus an Auth0-protected Portal API and a Lite API that power the merchant portal and the Depict Lite Shopify app. The platform integrates with Shopify, Centra, WooCommerce, and headless/composable storefronts through JavaScript and React UI libraries as well as direct REST API access.
+finops:
+- has_sources: true
+  method: derived
+  name: Depict Finops
+  primary_unit: up to 50,000 sessions / month
+  service_category: ''
+  slug: depict-finops
+  template: false
 image: https://depict.ai/favicon.ico
 layout: provider
 modified: '2026-07-18'
 name: Depict
 nav: Providers
 network: true
-overview: 'Depict publishes 35 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ab Test API, Analytics API, Boost Bury API, and 32 more. Tagged areas include Company, E-Commerce, Merchandising, Product Recommendations, and Search.
+overview: 'Depict publishes 32 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ab Test API, Analytics API, Boost Bury API, and 29 more. Tagged areas include Company, E-Commerce, Merchandising, Product Recommendations, and Search.
+
+
+  The Depict catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Depict''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 26 more developer resources.'
@@ -496,7 +494,23 @@ plans:
 - name: Depict Plans Pricing
   plan_count: 6
   slug: depict-plans-pricing
-random_paper: 17
+- name: Depict Price Estimates
+  plan_count: 0
+  slug: depict-price-estimates
+random_paper: 9
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Depict API Rules
+  rule_count: 56
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 6
+    warn: 9
+  slug: depict-rules
 scopes:
 - name: Depict Scopes
   scope_count: 3
@@ -504,19 +518,19 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: strong
-  composite: 54.6
+  composite: 55.5
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 52.0
+    artifact_dirs: 30
+    catalog_earned: 59.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 0.2
   facets:
-    access_clarity: 63.2
-    contract_governance: 4.5
-    contract_quality: 44.5
+    access_clarity: 71.1
+    contract_governance: 18.2
+    contract_quality: 44.0
     developer_ergonomics: 61.3
     discoverability: 78.6
     operational_transparency: 26.3
@@ -528,15 +542,15 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 48.2
+  previous_composite: 55.3
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 25.7
+      callable: 23.8
       derived: 0
-      marker_coverage: 0.0
-      total: 35
+      marker_coverage: 14.3
+      total: 42
     mcp: derived
     skills: derived
   regulatory:
@@ -545,13 +559,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
-    score: 50.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/depict/refs/heads/main/screenshots/depict-2026-07-25T211731.png
+    score: 27.8
+screenshot: https://apis.io/screenshots/depict/depict-2026-07-25T211731.png
 security:
 - kind: authentication
   name: Depict Authentication
@@ -561,6 +575,14 @@ security:
   name: Depict Domain Security
   slug: depict-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Browse a product listing page
+  slug: depict-browse-listing
+- name: Get personalized product recommendations
+  slug: depict-recommend-products
+- name: Search a storefront catalog
+  slug: depict-search-products
 slug: depict
 tags:
 - Company

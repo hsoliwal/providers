@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'RESTful API for managing B2B events including conferences, speakers, ticketing, attendee registration, contacts, sessions, and event analytics. Enables third-party developers and Bizzabo customers to '
@@ -42,22 +46,22 @@ apis:
 artifact_total: 6
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bizzabo/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/bizzabo/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bizzabo/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/bizzabo/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bizzabo/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/bizzabo/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bizzabo/refs/heads/main/security/bizzabo-domain-security.yml
+  href: https://artifacts.apis.io/bizzabo/security/bizzabo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bizzabo-domain-security.yml
@@ -125,7 +129,7 @@ plans:
 - name: Plans
   plan_count: 1
   slug: plans
-random_paper: 5
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -134,13 +138,13 @@ score:
   band: emerging
   composite: 20.2
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 44.0
     catalog_earned_first_party: 0.0
     catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.2
+  delta: 0.0
   facets:
     access_clarity: 22.4
     contract_governance: 0.0
@@ -148,21 +152,21 @@ score:
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 24.4
+  previous_composite: 20.2
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bizzabo/refs/heads/main/screenshots/bizzabo-2026-06-20T173329.png
+screenshot: https://apis.io/screenshots/bizzabo/bizzabo-2026-06-20T173329.png
 security:
 - kind: domain-security
   name: Bizzabo Domain Security

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 20.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 51
   human_in_the_loop: 0
@@ -93,9 +96,6 @@ apis:
 artifact_total: 26
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Shopmonkey Appointments API
   slug: open-shopmonkey-appointments-api
 - collection_type: open
@@ -131,22 +131,22 @@ common:
   type: Blog
   url: https://www.shopmonkey.io/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/shopmonkey/refs/heads/main/capabilities/shopmonkey-capability-edges.yml
+  href: https://artifacts.apis.io/shopmonkey/capabilities/shopmonkey-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/shopmonkey-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shopmonkey/refs/heads/main/agentic-access/shopmonkey-agentic-access.yml
+  href: https://artifacts.apis.io/shopmonkey/agentic-access/shopmonkey-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/shopmonkey-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shopmonkey/refs/heads/main/security/shopmonkey-domain-security.yml
+  href: https://artifacts.apis.io/shopmonkey/security/shopmonkey-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shopmonkey-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shopmonkey/refs/heads/main/authentication/shopmonkey-authentication.yml
+  href: https://artifacts.apis.io/shopmonkey/authentication/shopmonkey-authentication.yml
   title: ''
   type: Authentication
   url: authentication/shopmonkey-authentication.yml
@@ -167,17 +167,17 @@ common:
   type: Documentation
   url: https://shopmonkey.dev/overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/shopmonkey/refs/heads/main/plans/shopmonkey-plans-pricing.yml
+  href: https://artifacts.apis.io/shopmonkey/plans/shopmonkey-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/shopmonkey-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/shopmonkey/refs/heads/main/rate-limits/shopmonkey-rate-limits.yml
+  href: https://artifacts.apis.io/shopmonkey/rate-limits/shopmonkey-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/shopmonkey-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/shopmonkey/refs/heads/main/finops/shopmonkey-finops.yml
+  href: https://artifacts.apis.io/shopmonkey/finops/shopmonkey-finops.yml
   title: ''
   type: FinOps
   url: finops/shopmonkey-finops.yml
@@ -197,7 +197,10 @@ modified: '2026-10-06'
 name: Shopmonkey
 nav: Providers
 network: true
-overview: 'Shopmonkey publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Appointments API, Customers API, Employees API, and 6 more. Tagged areas include Auto Repair, Shop Management, Field Service, REST, and Not GraphQL.
+overview: 'Shopmonkey publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Appointments API, Customers API, Employees API, and 6 more. Tagged areas include Auto Repair, Shop Management, Field Service Management, REST, and Not GraphQL.
+
+
+  The Shopmonkey catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Shopmonkey''s developer surface includes engineering blog, authentication, documentation, and 9 more developer resources.'
@@ -205,30 +208,43 @@ plans:
 - name: Shopmonkey Plans Pricing
   plan_count: 4
   slug: shopmonkey-plans-pricing
-random_paper: 1
+random_paper: 21
 rate_limits:
 - limit_count: 1
   name: Shopmonkey Rate Limits
   slug: shopmonkey-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Shopmonkey API Rules
+  rule_count: 55
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 2
+    warn: 4
+  slug: shopmonkey-rules
 score:
   band: emerging
-  composite: 21.2
+  composite: 22.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 42.0
+    artifact_dirs: 17
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 27.9
     developer_ergonomics: 31.0
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 28.1
+  previous_composite: 22.8
   provenance:
     agentic_access: derived
     contracts:
@@ -242,13 +258,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/shopmonkey/refs/heads/main/screenshots/shopmonkey-2026-09-02T155302.png
+screenshot: https://apis.io/screenshots/shopmonkey/shopmonkey-2026-09-02T155302.png
 security:
 - kind: authentication
   name: Shopmonkey Authentication
@@ -262,7 +278,7 @@ slug: shopmonkey
 tags:
 - Auto Repair
 - Shop Management
-- Field Service
+- Field Service Management
 - REST
 - Not GraphQL
 website: https://www.shopmonkey.io/

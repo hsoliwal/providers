@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,17 +37,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/elpha-secure/refs/heads/main/plans/elpha-secure-plans-pricing.yml
+  href: https://artifacts.apis.io/elpha-secure/plans/elpha-secure-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/elpha-secure-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/elpha-secure/refs/heads/main/rate-limits/elpha-secure-rate-limits.yml
+  href: https://artifacts.apis.io/elpha-secure/rate-limits/elpha-secure-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/elpha-secure-rate-limits.yml
@@ -93,17 +96,17 @@ common:
   type: Compliance
   url: https://www.elphasecure.com/about
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/elpha-secure/refs/heads/main/conformance/elpha-secure-conformance.yml
+  href: https://artifacts.apis.io/elpha-secure/conformance/elpha-secure-conformance.yml
   title: ''
   type: Conformance
   url: conformance/elpha-secure-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/elpha-secure/refs/heads/main/llms/elpha-secure-llms.txt
+  href: https://artifacts.apis.io/elpha-secure/llms/elpha-secure-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/elpha-secure-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/elpha-secure/refs/heads/main/security/elpha-secure-domain-security.yml
+  href: https://artifacts.apis.io/elpha-secure/security/elpha-secure-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/elpha-secure-domain-security.yml
@@ -137,16 +140,16 @@ plans:
 - name: Elpha Secure Plans Pricing
   plan_count: 0
   slug: elpha-secure-plans-pricing
-random_paper: 4
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Elpha Secure Rate Limits
   slug: elpha-secure-rate-limits
 score:
   band: emerging
-  composite: 17.3
+  composite: 18.7
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -159,7 +162,7 @@ score:
     contract_quality: 0.0
     developer_ergonomics: 7.1
     discoverability: 56.3
-    operational_transparency: 2.6
+    operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -167,7 +170,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 17.3
+  previous_composite: 18.7
   provenance:
     conformance: first-party
   regulatory:
@@ -176,14 +179,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/elpha-secure/refs/heads/main/screenshots/elpha-secure-2026-09-02T145346.png
+screenshot: https://apis.io/screenshots/elpha-secure/elpha-secure-2026-09-02T145346.png
 security:
 - kind: domain-security
   name: Elpha Secure Domain Security

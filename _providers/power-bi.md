@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: high
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
   public: false
   source:
   - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
+  - sandbox
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: verified
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.8
-  scored_at: '2026-10-17'
+  score: 30.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -42,8 +49,14 @@ agentic_access:
   operation_count: 36
   slug: power-bi-agentic-access
   summary_line: 36 operations · 14 acting
-api_count: 1
+api_count: 2
 apis:
+- description: Microsoft-hosted (preview) and local stdio (GA) MCP server that lets AI agents create, change, validate and document Power BI semantic models, run DAX, and work with TMDL and PBIP files.
+  name: Power BI Authoring MCP Server
+  slug: power-bi-authoring-mcp-server
+- description: Remote MCP endpoint (preview) where AI agents query Power BI semantic models in natural language, generating and executing DAX under the user's permissions.
+  name: Power BI Consumption MCP Server
+  slug: power-bi-consumption-mcp-server
 - description: Azure service that enables ISVs and developers to embed Power BI visuals, reports, and dashboards into their applications.
   name: Power BI Embedded
   slug: power-bi-embedded
@@ -396,6 +409,71 @@ apis:
     question: Which reports are in a shared team workspace?
   phrasing_ops: 8
   slug: microsoft-power-bi-reports-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The Admin API from Power BI — 55 operation(s) for admin.
+  name: Power BI Admin API
+  slug: power-bi-admin-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The AvailableFeatures API from Power BI — 2 operation(s) for availablefeatures.
+  name: Power BI Available Features API
+  slug: power-bi-availablefeatures-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The DataflowStorageAccounts API from Power BI — 2 operation(s) for dataflowstorageaccounts.
+  name: Power BI Dataflow Storage Accounts API
+  slug: power-bi-dataflowstorageaccounts-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The GoalNotes_(Preview) API from Power BI — 2 operation(s) for goalnotes_(preview).
+  name: Power BI Goal Notes (Preview) API
+  slug: power-bi-goalnotes-preview-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The Goals_(Preview) API from Power BI — 7 operation(s) for goals_(preview).
+  name: Power BI Goals (Preview) API
+  slug: power-bi-goals-preview-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The GoalsStatusRules_(Preview) API from Power BI — 1 operation(s) for goalsstatusrules_(preview).
+  name: Power BI Goals Status Rules (Preview) API
+  slug: power-bi-goalsstatusrules-preview-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The GoalValues_(Preview) API from Power BI — 2 operation(s) for goalvalues_(preview).
+  name: Power BI Goal Values (Preview) API
+  slug: power-bi-goalvalues-preview-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The Pipelines API from Power BI — 12 operation(s) for pipelines.
+  name: Power BI Pipelines API
+  slug: power-bi-pipelines-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The Profiles API from Power BI — 2 operation(s) for profiles.
+  name: Power BI Profiles API
+  slug: power-bi-profiles-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The PushDatasets API from Power BI — 8 operation(s) for pushdatasets.
+  name: Power BI Push Datasets API
+  slug: power-bi-pushdatasets-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The Scorecards_(Preview) API from Power BI — 4 operation(s) for scorecards_(preview).
+  name: Power BI Scorecards (Preview) API
+  slug: power-bi-scorecards-preview-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The TemplateApps API from Power BI — 1 operation(s) for templateapps.
+  name: Power BI Template Apps API
+  slug: power-bi-templateapps-api
+- baseURL: https://api.powerbi.com
+  baseurl_source: declared
+  description: The Users API from Power BI — 1 operation(s) for users.
+  name: Power BI Users API
+  slug: power-bi-users-api
 arazzos:
 - description: Walk from the dashboard list down to a single tile and capture the embed URL, report, and dataset it needs.
   name: Power BI Resolve a Dashboard Tile for Embedding
@@ -433,7 +511,7 @@ arazzos:
 - description: Create a workspace, add a principal with a specific access right, and verify the resulting membership.
   name: Power BI Provision a Workspace and Grant Access
   slug: power-bi-workspace-provision-access-workflow
-artifact_total: 272
+artifact_total: 306
 collections:
 - collection_type: postman
   name: Power BI REST Dashboards API
@@ -453,9 +531,6 @@ collections:
 - collection_type: postman
   name: Power BI REST Dashboards Reports API
   slug: postman-power-bi-reports-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Power BI REST Dashboards API
   slug: open-power-bi-dashboards-api
@@ -478,18 +553,69 @@ collections:
   name: Power BI REST API
   slug: open-power-bi-rest-api
 common:
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://learn.microsoft.com/en-us/power-bi/developer/embedded/embedded-analytics-power-bi-changelog
+- group: design
+  href: https://artifacts.apis.io/power-bi/rules/power-bi-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/power-bi-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/power-bi/rules/power-bi-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/power-bi-rules.yml
+- group: design
+  href: https://artifacts.apis.io/power-bi/rules/power-bi-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/power-bi-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/power-bi/vocabulary/power-bi-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/power-bi-vocabulary.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://www.microsoft.com/en-us/trust-center
+- group: other
+  href: https://artifacts.apis.io/power-bi/hosts/power-bi-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/power-bi-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/power-bi/integrations/power-bi-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/power-bi-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/power-bi/vendors/power-bi-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/power-bi-vendors.yml
+- group: other
+  title: ''
+  type: Leadership
+  url: https://news.microsoft.com/leadership
+- group: start
+  title: ''
+  type: GettingStarted
+  url: https://learn.microsoft.com/en-us/adaptive-cards/sdk/rendering-cards/android/getting-started
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/plans/power-bi-plans-pricing.yml
+  href: https://artifacts.apis.io/power-bi/plans/power-bi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/power-bi-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/rate-limits/power-bi-rate-limits.yml
+  href: https://artifacts.apis.io/power-bi/rate-limits/power-bi-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/power-bi-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/finops/power-bi-finops.yml
+  href: https://artifacts.apis.io/power-bi/finops/power-bi-finops.yml
   title: ''
   type: FinOps
   url: finops/power-bi-finops.yml
@@ -506,7 +632,7 @@ common:
   type: Website
   url: https://www.microsoft.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/capabilities/power-bi-capability-edges.yml
+  href: https://artifacts.apis.io/power-bi/capabilities/power-bi-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/power-bi-capability-edges.yml
@@ -535,107 +661,107 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/power-bi/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/agentic-access/power-bi-agentic-access.yml
+  href: https://artifacts.apis.io/power-bi/agentic-access/power-bi-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/power-bi-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/security/power-bi-domain-security.yml
+  href: https://artifacts.apis.io/power-bi/security/power-bi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/power-bi-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/authentication/power-bi-authentication.yml
+  href: https://artifacts.apis.io/power-bi/authentication/power-bi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/power-bi-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/packages/power-bi-packages.yml
+  href: https://artifacts.apis.io/power-bi/packages/power-bi-packages.yml
   title: ''
   type: Packages
   url: packages/power-bi-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/well-known/power-bi-well-known.yml
+  href: https://artifacts.apis.io/power-bi/well-known/power-bi-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/power-bi-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/well-known/power-bi-security.txt
+  href: https://artifacts.apis.io/power-bi/well-known/power-bi-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/power-bi-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/mcp/power-bi-mcp.yml
+  href: https://artifacts.apis.io/power-bi/mcp/power-bi-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/power-bi-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/llms/power-bi-llms.txt
+  href: https://artifacts.apis.io/power-bi/llms/power-bi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/power-bi-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/overlays/power-bi-rest-api-overlay.yaml
+  href: https://artifacts.apis.io/power-bi/overlays/power-bi-rest-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/power-bi-rest-api-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/conformance/power-bi-conformance.yml
+  href: https://artifacts.apis.io/power-bi/conformance/power-bi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/power-bi-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/errors/power-bi-problem-types.yml
+  href: https://artifacts.apis.io/power-bi/errors/power-bi-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/power-bi-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/lifecycle/power-bi-lifecycle.yml
+  href: https://artifacts.apis.io/power-bi/lifecycle/power-bi-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/power-bi-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/scopes/power-bi-scopes.yml
+  href: https://artifacts.apis.io/power-bi/scopes/power-bi-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/power-bi-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/security/power-bi-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/power-bi/security/power-bi-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/power-bi-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/security/power-bi-trust-center.yml
+  href: https://artifacts.apis.io/power-bi/security/power-bi-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/power-bi-trust-center.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/sandbox/power-bi-sandbox.yml
+  href: https://artifacts.apis.io/power-bi/sandbox/power-bi-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/power-bi-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/conventions/power-bi-conventions.yml
+  href: https://artifacts.apis.io/power-bi/conventions/power-bi-conventions.yml
   title: ''
   type: Conventions
   url: conventions/power-bi-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/changelog/power-bi-changelog.yml
+  href: https://artifacts.apis.io/power-bi/changelog/power-bi-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/power-bi-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/cli/power-bi-cli.yml
+  href: https://artifacts.apis.io/power-bi/cli/power-bi-cli.yml
   title: ''
   type: CLI
   url: cli/power-bi-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/components/power-bi-components.yml
+  href: https://artifacts.apis.io/power-bi/components/power-bi-components.yml
   title: ''
   type: Components
   url: components/power-bi-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/data-model/power-bi-data-model.yml
+  href: https://artifacts.apis.io/power-bi/data-model/power-bi-data-model.yml
   title: ''
   type: DataModel
   url: data-model/power-bi-data-model.yml
@@ -716,17 +842,17 @@ common:
   type: StackOverflow
   url: https://stackoverflow.com/questions/tagged/powerbi
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/json-ld/power-bi-context.jsonld
+  href: https://artifacts.apis.io/power-bi/json-ld/power-bi-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/power-bi-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/json-schema/power-bi-dataset-schema.json
+  href: https://artifacts.apis.io/power-bi/json-schema/power-bi-dataset-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/power-bi-dataset-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/json-schema/power-bi-report-schema.json
+  href: https://artifacts.apis.io/power-bi/json-schema/power-bi-report-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/power-bi-report-schema.json
@@ -735,62 +861,62 @@ common:
   type: SDKs
   url: https://github.com/microsoft/PowerBI-CSharp
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-dataset-refresh-poll-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-dataset-refresh-poll-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-dataset-refresh-poll-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-push-dataset-provision-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-push-dataset-provision-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-push-dataset-provision-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-parameter-update-refresh-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-parameter-update-refresh-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-parameter-update-refresh-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-report-clone-rebind-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-report-clone-rebind-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-report-clone-rebind-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-workspace-provision-access-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-workspace-provision-access-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-workspace-provision-access-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-pbix-import-publish-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-pbix-import-publish-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-pbix-import-publish-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-workspace-content-inventory-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-workspace-content-inventory-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-workspace-content-inventory-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-gateway-datasource-audit-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-gateway-datasource-audit-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-gateway-datasource-audit-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-dashboard-tile-embed-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-dashboard-tile-embed-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-dashboard-tile-embed-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-report-export-archive-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-report-export-archive-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-report-export-archive-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-dataset-decommission-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-dataset-decommission-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-dataset-decommission-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/arazzo/power-bi-workspace-access-review-workflow.yml
+  href: https://artifacts.apis.io/power-bi/arazzo/power-bi-workspace-access-review-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/power-bi-workspace-access-review-workflow.yml
@@ -1038,12 +1164,12 @@ features:
   name: Dataflows
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Power Bi Finops
   primary_unit: ''
-  service_category: Analytics
+  service_category: ''
   slug: power-bi-finops
-  template: false
+  template: true
 image: https://powerbi.microsoft.com/pictures/shared/social/social-default-image.png
 integrations:
 - description: View and interact with Power BI reports directly within Microsoft Teams channels and chats.
@@ -1065,10 +1191,19 @@ integrations:
 json_schemas:
 - name: CloneReportRequest
   property_count: 3
+  slug: power-bi-clone-report-request
+- name: CloneReportRequest
+  property_count: 3
   slug: power-bi-clonereportrequest
 - name: Column
   property_count: 5
   slug: power-bi-column
+- name: CreateDashboardRequest
+  property_count: 1
+  slug: power-bi-create-dashboard-request
+- name: CreateDatasetRequest
+  property_count: 4
+  slug: power-bi-create-dataset-request
 - name: CreateDashboardRequest
   property_count: 1
   slug: power-bi-createdashboardrequest
@@ -1078,12 +1213,18 @@ json_schemas:
 - name: CreateGroupRequest
   property_count: 1
   slug: power-bi-creategrouprequest
+- name: DashboardList
+  property_count: 2
+  slug: power-bi-dashboard-list
 - name: Dashboard
   property_count: 6
   slug: power-bi-dashboard
 - name: DashboardList
   property_count: 2
   slug: power-bi-dashboardlist
+- name: DatasetList
+  property_count: 2
+  slug: power-bi-dataset-list
 - name: Power BI Dataset
   property_count: 18
   slug: power-bi-dataset
@@ -1099,6 +1240,12 @@ json_schemas:
 - name: ErrorResponse
   property_count: 1
   slug: power-bi-errorresponse
+- name: GatewayDatasourceList
+  property_count: 2
+  slug: power-bi-gateway-datasource-list
+- name: GatewayList
+  property_count: 2
+  slug: power-bi-gateway-list
 - name: Gateway
   property_count: 5
   slug: power-bi-gateway
@@ -1111,9 +1258,21 @@ json_schemas:
 - name: GatewayList
   property_count: 2
   slug: power-bi-gatewaylist
+- name: GenericList
+  property_count: 1
+  slug: power-bi-generic-list
+- name: GenericObject
+  property_count: 0
+  slug: power-bi-generic-object
+- name: GroupList
+  property_count: 2
+  slug: power-bi-group-list
 - name: Group
   property_count: 7
   slug: power-bi-group
+- name: GroupUser
+  property_count: 6
+  slug: power-bi-group-user
 - name: GroupList
   property_count: 2
   slug: power-bi-grouplist
@@ -1123,6 +1282,9 @@ json_schemas:
 - name: GroupUserList
   property_count: 2
   slug: power-bi-groupuserlist
+- name: ImportList
+  property_count: 2
+  slug: power-bi-import-list
 - name: Import
   property_count: 7
   slug: power-bi-import
@@ -1132,6 +1294,9 @@ json_schemas:
 - name: Measure
   property_count: 4
   slug: power-bi-measure
+- name: PageList
+  property_count: 2
+  slug: power-bi-page-list
 - name: Page
   property_count: 3
   slug: power-bi-page
@@ -1146,7 +1311,16 @@ json_schemas:
   slug: power-bi-parameterlist
 - name: RebindReportRequest
   property_count: 1
+  slug: power-bi-rebind-report-request
+- name: RebindReportRequest
+  property_count: 1
   slug: power-bi-rebindreportrequest
+- name: RefreshList
+  property_count: 2
+  slug: power-bi-refresh-list
+- name: RefreshRequest
+  property_count: 5
+  slug: power-bi-refresh-request
 - name: Refresh
   property_count: 7
   slug: power-bi-refresh
@@ -1159,6 +1333,9 @@ json_schemas:
 - name: Relationship
   property_count: 6
   slug: power-bi-relationship
+- name: ReportList
+  property_count: 2
+  slug: power-bi-report-list
 - name: Power BI Report
   property_count: 17
   slug: power-bi-report
@@ -1282,12 +1459,18 @@ json_schemas:
 - name: Table
   property_count: 4
   slug: power-bi-table
+- name: TileList
+  property_count: 2
+  slug: power-bi-tile-list
 - name: Tile
   property_count: 9
   slug: power-bi-tile
 - name: TileList
   property_count: 2
   slug: power-bi-tilelist
+- name: UpdateParametersRequest
+  property_count: 1
+  slug: power-bi-update-parameters-request
 - name: UpdateParametersRequest
   property_count: 1
   slug: power-bi-updateparametersrequest
@@ -1423,20 +1606,20 @@ modified: '2026-06-20'
 name: Power BI
 nav: Providers
 network: true
-overview: 'Power BI publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Dashboards API, Datasets API, Gateways API, and 19 more. Tagged areas include Analytics, Business Intelligence, Dashboards, Data Analysis, and Reporting.
+overview: 'Power BI publishes 37 API contracts indexed on the [APIs.io](https://apis.io/) network, including Dashboards API, Datasets API, Gateways API, and 34 more. Tagged areas include Analytics, Business Intelligence, Dashboards, Data Analysis, and Reporting.
 
 
-  The Power BI catalog on APIs.io includes 2 JSON-LD contexts and 2 Spectral governance rulesets.
+  The Power BI catalog on APIs.io includes 2 JSON-LD contexts and 3 Spectral governance rulesets.
 
 
-  Power BI''s developer surface includes authentication, sandbox, changelog, CLI, developer portal, engineering blog, support, and 62 more developer resources.'
+  Power BI''s developer surface includes getting-started guide, authentication, sandbox, changelog, CLI, developer portal, engineering blog, and 73 more developer resources.'
 plans:
 - name: Power Bi Plans Pricing
-  plan_count: 5
+  plan_count: 8
   slug: power-bi-plans-pricing
 random_paper: 13
 rate_limits:
-- limit_count: 4
+- limit_count: 5
   name: Power Bi Rate Limits
   slug: power-bi-rate-limits
 rules:
@@ -1451,6 +1634,18 @@ rules:
     info: 2
     warn: 4
   slug: power-bi-jsonschema-spectral-rules
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Power BI API Rules
+  rule_count: 66
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 2
+    warn: 17
+  slug: power-bi-rules
 - authorship: generated
   effective_rule_count: 57
   extends:
@@ -1469,24 +1664,24 @@ scopes:
   slug: power-bi-scopes
   summary_line: 17 scopes · authorizationCode/clientCredentials
 score:
-  band: strong
-  composite: 65.9
+  band: exemplar
+  composite: 78.3
   coverage:
-    artifact_dirs: 36
-    catalog_earned: 55.5
-    catalog_earned_first_party: 0.0
-    catalog_gap: 59.5
+    artifact_dirs: 40
+    catalog_earned: 87.0
+    catalog_earned_first_party: 24.0
+    catalog_gap: 28.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 7.6
   facets:
-    access_clarity: 53.9
-    contract_governance: 18.2
-    contract_quality: 63.4
+    access_clarity: 85.5
+    contract_governance: 31.8
+    contract_quality: 63.8
     developer_ergonomics: 95.7
-    discoverability: 73.2
-    operational_transparency: 52.6
-  previous_composite: 67.5
+    discoverability: 75.0
+    operational_transparency: 84.2
+  previous_composite: 70.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -1494,21 +1689,21 @@ score:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 10
-    mcp: derived
+      total: 23
+    mcp: first-party
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 43.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/power-bi/refs/heads/main/screenshots/power-bi-2026-06-20T192022.png
+screenshot: https://apis.io/screenshots/power-bi/power-bi-2026-06-20T192022.png
 security:
 - kind: authentication
   name: Power Bi Authentication
@@ -1525,7 +1720,7 @@ security:
 - kind: trust-center
   name: Power Bi Trust Center
   slug: power-bi-trust-center
-  summary_line: SOC 1, SOC 2, SOC 3, ISO 27001, ISO 27017, ISO 27018, ISO 27701, PCI DSS, HIPAA / HITECH, HITRUST, FedRAMP, GDPR, CSA STAR
+  summary_line: GDPR
 slug: power-bi
 tags:
 - Analytics

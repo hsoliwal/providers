@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-10-17'
+  score: 33.3
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
 - baseURL: https://{infinibox_host}/api/rest
@@ -77,7 +80,7 @@ apis:
   description: The users API from Infinidat — 2 operation(s) for users.
   name: Infinidat Users API
   slug: infinidat-users-api
-artifact_total: 12
+artifact_total: 17
 asyncapis:
 - description: ''
   name: Infinidat Events
@@ -88,7 +91,7 @@ collections:
   slug: open-infinidat-infinibox
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/overlays/infinidat-infinibox-overlay.yaml
+  href: https://artifacts.apis.io/infinidat/overlays/infinidat-infinibox-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/infinidat-infinibox-overlay.yaml
@@ -133,82 +136,82 @@ common:
   type: PrivacyPolicy
   url: https://www.infinidat.com/sites/default/files/resource-pdfs/Infinidat-Privacy-Policy.pdf
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/postman/infinidat-infinibox-7-3-postman.json
+  href: https://artifacts.apis.io/infinidat/postman/infinidat-infinibox-7-3-postman.json
   title: ''
   type: Postman
   url: postman/infinidat-infinibox-7-3-postman.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/packages/infinidat-packages.yml
+  href: https://artifacts.apis.io/infinidat/packages/infinidat-packages.yml
   title: ''
   type: Packages
   url: packages/infinidat-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/packages/infinidat-packages.yml
+  href: https://artifacts.apis.io/infinidat/packages/infinidat-packages.yml
   title: ''
   type: SDKs
   url: packages/infinidat-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/cli/infinidat-cli.yml
+  href: https://artifacts.apis.io/infinidat/cli/infinidat-cli.yml
   title: ''
   type: CLI
   url: cli/infinidat-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/well-known/infinidat-well-known.yml
+  href: https://artifacts.apis.io/infinidat/well-known/infinidat-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/infinidat-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/authentication/infinidat-authentication.yml
+  href: https://artifacts.apis.io/infinidat/authentication/infinidat-authentication.yml
   title: ''
   type: Authentication
   url: authentication/infinidat-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/conventions/infinidat-conventions.yml
+  href: https://artifacts.apis.io/infinidat/conventions/infinidat-conventions.yml
   title: ''
   type: Conventions
   url: conventions/infinidat-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/errors/infinidat-problem-types.yml
+  href: https://artifacts.apis.io/infinidat/errors/infinidat-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/infinidat-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/data-model/infinidat-data-model.yml
+  href: https://artifacts.apis.io/infinidat/data-model/infinidat-data-model.yml
   title: ''
   type: DataModel
   url: data-model/infinidat-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/asyncapi/infinidat-events.yml
+  href: https://artifacts.apis.io/infinidat/asyncapi/infinidat-events.yml
   title: ''
   type: Events
   url: asyncapi/infinidat-events.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/lifecycle/infinidat-lifecycle.yml
+  href: https://artifacts.apis.io/infinidat/lifecycle/infinidat-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/infinidat-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/changelog/infinidat-changelog.yml
+  href: https://artifacts.apis.io/infinidat/changelog/infinidat-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/infinidat-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/conformance/infinidat-conformance.yml
+  href: https://artifacts.apis.io/infinidat/conformance/infinidat-conformance.yml
   title: ''
   type: Conformance
   url: conformance/infinidat-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/infinidat/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/llms/infinidat-llms.txt
+  href: https://artifacts.apis.io/infinidat/llms/infinidat-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/infinidat-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/security/infinidat-domain-security.yml
+  href: https://artifacts.apis.io/infinidat/security/infinidat-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/infinidat-domain-security.yml
@@ -223,30 +226,43 @@ network: true
 overview: 'Infinidat is listed with 8 APIs on the [APIs.io](https://apis.io/) network, including Components API, Config API, Filesystems API, and 5 more. Tagged areas include Company, Storage, Enterprise Storage, Data Infrastructure, and Data Protection.
 
 
-  The Infinidat catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Infinidat catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Infinidat''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, CLI, authentication, and 20 more developer resources.'
-random_paper: 4
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: Infinidat API Rules
+  rule_count: 64
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 3
+  slug: infinidat-rules
 score:
   band: thin
-  composite: 33.7
+  composite: 35.4
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 40.0
+    artifact_dirs: 26
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 20.6
     developer_ergonomics: 68.0
     discoverability: 71.4
     operational_transparency: 18.4
-  previous_composite: 33.7
+  previous_composite: 35.4
   provenance:
     conformance: derived
     contracts:
@@ -262,13 +278,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/infinidat/refs/heads/main/screenshots/infinidat-2026-08-07T170658.png
+screenshot: https://apis.io/screenshots/infinidat/infinidat-2026-08-07T170658.png
 security:
 - kind: authentication
   name: Infinidat Authentication
@@ -278,6 +294,16 @@ security:
   name: Infinidat Domain Security
   slug: infinidat-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Check the health of an InfiniBox array
+  slug: infinidat-array-health-check
+- name: Inventory InfiniBox pools, filesystems and their metadata
+  slug: infinidat-capacity-inventory
+- name: Configure and verify an InfiniBox LDAP / Active Directory repository
+  slug: infinidat-directory-integration
+- name: Onboard a host onto an InfiniBox array
+  slug: infinidat-host-onboarding
 slug: infinidat
 tags:
 - Company

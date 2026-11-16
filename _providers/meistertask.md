@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,22 +39,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 6
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/rate-limits/meistertask-rate-limits.yml
+  href: https://artifacts.apis.io/meistertask/rate-limits/meistertask-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/meistertask-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/plans/meistertask-plans-pricing.yml
+  href: https://artifacts.apis.io/meistertask/plans/meistertask-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/meistertask-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/conventions/meistertask-conventions.yml
+  href: https://artifacts.apis.io/meistertask/conventions/meistertask-conventions.yml
   title: ''
   type: Conventions
   url: conventions/meistertask-conventions.yml
@@ -47,42 +63,42 @@ common:
   type: Compliance
   url: https://www.meistertask.com/pages/pt/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/authentication/meistertask-authentication.yml
+  href: https://artifacts.apis.io/meistertask/authentication/meistertask-authentication.yml
   title: ''
   type: Authentication
   url: authentication/meistertask-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/conformance/meistertask-conformance.yml
+  href: https://artifacts.apis.io/meistertask/conformance/meistertask-conformance.yml
   title: ''
   type: Conformance
   url: conformance/meistertask-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/llms/meistertask-llms.txt
+  href: https://artifacts.apis.io/meistertask/llms/meistertask-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/meistertask-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/well-known/meistertask-www-security.txt
+  href: https://artifacts.apis.io/meistertask/well-known/meistertask-www-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/meistertask-www-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/well-known/meistertask-security.txt
+  href: https://artifacts.apis.io/meistertask/well-known/meistertask-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/meistertask-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/well-known/meistertask-well-known.yml
+  href: https://artifacts.apis.io/meistertask/well-known/meistertask-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/meistertask-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/hosts/meistertask-hosts.yml
+  href: https://artifacts.apis.io/meistertask/hosts/meistertask-hosts.yml
   title: ''
   type: Hosts
   url: hosts/meistertask-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/vendors/meistertask-vendors.yml
+  href: https://artifacts.apis.io/meistertask/vendors/meistertask-vendors.yml
   title: ''
   type: Vendors
   url: vendors/meistertask-vendors.yml
@@ -115,17 +131,17 @@ common:
   type: Documentation
   url: https://developers.meistertask.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/security/meistertask-trust-center.yml
+  href: https://artifacts.apis.io/meistertask/security/meistertask-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/meistertask-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/security/meistertask-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/meistertask/security/meistertask-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/meistertask-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/meistertask/refs/heads/main/security/meistertask-domain-security.yml
+  href: https://artifacts.apis.io/meistertask/security/meistertask-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/meistertask-domain-security.yml
@@ -157,28 +173,30 @@ plans:
 - name: Meistertask Plans Pricing
   plan_count: 4
   slug: meistertask-plans-pricing
-random_paper: 8
+random_paper: 20
 rate_limits:
 - limit_count: 1
   name: Meistertask Rate Limits
   slug: meistertask-rate-limits
 score:
   band: thin
-  composite: 36.3
+  composite: 29.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 47.0
     catalog_earned_first_party: 20.0
     catalog_gap: 68.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.2
   facets:
-    access_clarity: 68.4
+    access_clarity: 53.9
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 28.6
+    developer_ergonomics: 20.2
     discoverability: 55.4
-    operational_transparency: 47.4
+    operational_transparency: 34.2
+  previous_composite: 36.3
   provenance:
     conformance: first-party
     mcp: unknown
@@ -187,13 +205,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 28.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/meistertask/meistertask-2026-11-03T135443.png
 security:
 - kind: authentication
   name: Meistertask Authentication

@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 20.1
-  scored_at: '2026-10-17'
+  score: 19.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -103,60 +121,65 @@ apis:
   description: The Chat Completions API from Fastrouter — 1 operation(s) for chat completions.
   name: Fastrouter Chat Completions API
   slug: fastrouter-chat-completions-api
-artifact_total: 20
+artifact_total: 22
 common:
+- group: other
+  href: https://artifacts.apis.io/fastrouter/capabilities/fastrouter-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/fastrouter-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/agentic-access/fastrouter-agentic-access.yml
+  href: https://artifacts.apis.io/fastrouter/agentic-access/fastrouter-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fastrouter-agentic-access.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/plans/fastrouter-plans-pricing.yml
+  href: https://artifacts.apis.io/fastrouter/plans/fastrouter-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fastrouter-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/rules/fastrouter-rules.yml
+  href: https://artifacts.apis.io/fastrouter/rules/fastrouter-rules.yml
   title: ''
   type: Spectral
   url: rules/fastrouter-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/data-model/fastrouter-data-model.yml
+  href: https://artifacts.apis.io/fastrouter/data-model/fastrouter-data-model.yml
   title: ''
   type: DataModel
   url: data-model/fastrouter-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/cli/fastrouter-cli.yml
+  href: https://artifacts.apis.io/fastrouter/cli/fastrouter-cli.yml
   title: ''
   type: CLI
   url: cli/fastrouter-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/changelog/fastrouter-changelog.yml
+  href: https://artifacts.apis.io/fastrouter/changelog/fastrouter-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/fastrouter-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/conformance/fastrouter-conformance.yml
+  href: https://artifacts.apis.io/fastrouter/conformance/fastrouter-conformance.yml
   title: ''
   type: Conformance
   url: conformance/fastrouter-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/llms/fastrouter-llms.txt
+  href: https://artifacts.apis.io/fastrouter/llms/fastrouter-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fastrouter-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/well-known/fastrouter-well-known.yml
+  href: https://artifacts.apis.io/fastrouter/well-known/fastrouter-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/fastrouter-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/hosts/fastrouter-hosts.yml
+  href: https://artifacts.apis.io/fastrouter/hosts/fastrouter-hosts.yml
   title: ''
   type: Hosts
   url: hosts/fastrouter-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/vendors/fastrouter-vendors.yml
+  href: https://artifacts.apis.io/fastrouter/vendors/fastrouter-vendors.yml
   title: ''
   type: Vendors
   url: vendors/fastrouter-vendors.yml
@@ -185,12 +208,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/fastrouter
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/authentication/fastrouter-authentication.yml
+  href: https://artifacts.apis.io/fastrouter/authentication/fastrouter-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fastrouter-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fastrouter/refs/heads/main/security/fastrouter-domain-security.yml
+  href: https://artifacts.apis.io/fastrouter/security/fastrouter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fastrouter-domain-security.yml
@@ -224,6 +247,14 @@ common:
   url: https://fastrouter.ai/contact
 created: '2026-10-16'
 description: FastRouter.ai provides a unified API gateway for large language models, enabling enterprises to route, compare, and operate across over 200 AI models via a single OpenAI‑compatible endpoint. It offers features such as automatic model selection, cost‑optimization insights, response caching, prompt management, and comprehensive analytics, helping teams build scalable, reliable AI applications while reducing latency and expense.
+finops:
+- has_sources: true
+  method: derived
+  name: Fastrouter Finops
+  primary_unit: seat
+  service_category: ''
+  slug: fastrouter-finops
+  template: false
 image: https://fastrouter.ai/opengraph-image
 json_schemas:
 - name: JsonObject
@@ -240,12 +271,15 @@ overview: 'Fastrouter publishes 14 API contracts indexed on the [APIs.io](https:
   The Fastrouter catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Fastrouter''s developer surface includes CLI, changelog, API reference, authentication, documentation, getting-started guide, pricing, and 19 more developer resources.'
+  Fastrouter''s developer surface includes CLI, changelog, API reference, authentication, documentation, getting-started guide, pricing, and 20 more developer resources.'
 plans:
 - name: Fastrouter Plans Pricing
   plan_count: 4
   slug: fastrouter-plans-pricing
-random_paper: 3
+- name: Fastrouter Price Estimates
+  plan_count: 0
+  slug: fastrouter-price-estimates
+random_paper: 23
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -261,21 +295,23 @@ rules:
   slug: fastrouter-rules
 score:
   band: developing
-  composite: 51.5
+  composite: 42.7
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 58.9
+    artifact_dirs: 24
+    catalog_earned: 61.9
     catalog_earned_first_party: 12.0
-    catalog_gap: 56.1
+    catalog_gap: 53.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.4
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 18.2
     contract_quality: 46.8
-    developer_ergonomics: 59.5
+    developer_ergonomics: 39.3
     discoverability: 73.2
-    operational_transparency: 21.1
+    operational_transparency: 10.5
+  previous_composite: 53.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -290,12 +326,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/fastrouter/fastrouter-2026-11-03T131910.png
 security:
 - kind: authentication
   name: Fastrouter Authentication

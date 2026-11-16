@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
@@ -10,6 +13,7 @@ access_model:
   - authentication
   - rate-limits
   - security
+  - sandbox
   trial: false
   try_now: true
 agent_readiness:
@@ -28,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.0
-  scored_at: '2026-10-17'
+  score: 34.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -44,7 +51,7 @@ agentic_access:
   operation_count: 362
   slug: gzw-data-agentic-access
   summary_line: 362 operations
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://gzw-data.dev/api/v1
   baseurl_source: declared
@@ -521,29 +528,29 @@ apis:
   description: The Version API from GZW Data API — 2 operation(s) for version.
   name: GZW Data API Version API
   slug: gzw-data-version-api
-artifact_total: 206
+artifact_total: 211
 common:
 - group: company
   title: ''
   type: Website
   url: https://gzw-data.dev/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/vocabulary/gzw-data-vocabulary.yml
+  href: https://artifacts.apis.io/gzw-data/vocabulary/gzw-data-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/gzw-data-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/rules/gzw-data-spectral.yaml
+  href: https://artifacts.apis.io/gzw-data/rules/gzw-data-spectral.yaml
   title: ''
   type: SpectralRules
   url: rules/gzw-data-spectral.yaml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/sandbox/gzw-data-sandbox.yml
+  href: https://artifacts.apis.io/gzw-data/sandbox/gzw-data-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/gzw-data-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/well-known/gzw-data-well-known.yml
+  href: https://artifacts.apis.io/gzw-data/well-known/gzw-data-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/gzw-data-well-known.yml
@@ -556,22 +563,22 @@ common:
   type: Security
   url: https://github.com/ZoniBoy00/gzw-data/blob/main/SECURITY.md
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/changelog/gzw-data-changelog.yml
+  href: https://artifacts.apis.io/gzw-data/changelog/gzw-data-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/gzw-data-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/examples/_index.yml
+  href: https://artifacts.apis.io/gzw-data/examples/_index.yml
   title: ''
   type: Examples
   url: examples/_index.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/json-schema/_index.yml
+  href: https://artifacts.apis.io/gzw-data/json-schema/_index.yml
   title: ''
   type: JSONSchema
   url: json-schema/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/llms/gzw-data-llms.txt
+  href: https://artifacts.apis.io/gzw-data/llms/gzw-data-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gzw-data-llms.txt
@@ -588,12 +595,12 @@ common:
   type: HelpCenter
   url: https://gzw-data.dev/feedback/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/agentic-access/gzw-data-agentic-access.yml
+  href: https://artifacts.apis.io/gzw-data/agentic-access/gzw-data-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gzw-data-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/security/gzw-data-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/gzw-data/security/gzw-data-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/gzw-data-vulnerability-disclosure.yml
@@ -602,7 +609,7 @@ common:
   type: License
   url: https://github.com/ZoniBoy00/gzw-data/blob/main/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/security/gzw-data-domain-security.yml
+  href: https://artifacts.apis.io/gzw-data/security/gzw-data-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gzw-data-domain-security.yml
@@ -651,62 +658,62 @@ common:
   type: PrivacyPolicy
   url: https://gzw-data.dev/privacy-policy/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/packages/gzw-data-packages.yml
+  href: https://artifacts.apis.io/gzw-data/packages/gzw-data-packages.yml
   title: ''
   type: Packages
   url: packages/gzw-data-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/packages/gzw-data-packages.yml
+  href: https://artifacts.apis.io/gzw-data/packages/gzw-data-packages.yml
   title: ''
   type: SDKs
   url: packages/gzw-data-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/authentication/gzw-data-authentication.yml
+  href: https://artifacts.apis.io/gzw-data/authentication/gzw-data-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gzw-data-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/rate-limits/gzw-data-rate-limits.yml
+  href: https://artifacts.apis.io/gzw-data/rate-limits/gzw-data-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gzw-data-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/plans/gzw-data-plans-pricing.yml
+  href: https://artifacts.apis.io/gzw-data/plans/gzw-data-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gzw-data-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/errors/gzw-data-problem-types.yml
+  href: https://artifacts.apis.io/gzw-data/errors/gzw-data-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/gzw-data-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/conventions/gzw-data-conventions.yml
+  href: https://artifacts.apis.io/gzw-data/conventions/gzw-data-conventions.yml
   title: ''
   type: Conventions
   url: conventions/gzw-data-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/lifecycle/gzw-data-lifecycle.yml
+  href: https://artifacts.apis.io/gzw-data/lifecycle/gzw-data-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/gzw-data-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/conformance/gzw-data-conformance.yml
+  href: https://artifacts.apis.io/gzw-data/conformance/gzw-data-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gzw-data-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/data-model/gzw-data-data-model.yml
+  href: https://artifacts.apis.io/gzw-data/data-model/gzw-data-data-model.yml
   title: ''
   type: DataModel
   url: data-model/gzw-data-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/overlays/gzw-data-openapi-overlay.yaml
+  href: https://artifacts.apis.io/gzw-data/overlays/gzw-data-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/gzw-data-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/gzw-data/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -749,6 +756,14 @@ examples:
 - key_count: 4
   name: Gzw Data Version Response
   slug: gzw-data-version-response
+finops:
+- has_sources: true
+  method: derived
+  name: Gzw Data Finops
+  primary_unit: ''
+  service_category: ''
+  slug: gzw-data-finops
+  template: true
 image: https://gzw-data.dev/assets/gzw-data-logo.png
 json_schemas:
 - name: ApiError
@@ -761,16 +776,16 @@ json_schemas:
   property_count: 4
   slug: gzw-data-Capabilities
 - name: MetadataResponse
-  property_count: 0
+  property_count: 1
   slug: gzw-data-MetadataResponse
 - name: ObjectResponse
   property_count: 6
   slug: gzw-data-ObjectResponse
 - name: PaginatedResponse
-  property_count: 0
+  property_count: 6
   slug: gzw-data-PaginatedResponse
 - name: RecordResponse
-  property_count: 0
+  property_count: 1
   slug: gzw-data-RecordResponse
 - name: ammo
   property_count: 13
@@ -1063,30 +1078,30 @@ rules:
   slug: gzw-data-spectral
 score:
   band: strong
-  composite: 56.0
+  composite: 57.1
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 28
     catalog_earned: 58.8
     catalog_earned_first_party: 16.0
     catalog_gap: 56.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.2
+  delta: 1.1
   facets:
     access_clarity: 52.6
     contract_governance: 22.0
-    contract_quality: 44.8
+    contract_quality: 49.4
     developer_ergonomics: 67.3
     discoverability: 83.9
     operational_transparency: 55.3
-  previous_composite: 60.2
+  previous_composite: 56.0
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 95
     mcp: derived
     skills: derived
@@ -1096,14 +1111,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/gzw-data/refs/heads/main/screenshots/gzw-data-2026-09-02T145643.png
+screenshot: https://apis.io/screenshots/gzw-data/gzw-data-2026-09-02T145643.png
 security:
 - kind: authentication
   name: Gzw Data Authentication
@@ -1117,6 +1132,16 @@ security:
   name: Gzw Data Vulnerability Disclosure
   slug: gzw-data-vulnerability-disclosure
   summary_line: Hackerone · security.txt · contact published
+skill_count: 4
+skills:
+- name: gzw-data-browse-dataset
+  slug: gzw-data-browse-dataset
+- name: gzw-data-check-freshness
+  slug: gzw-data-check-freshness
+- name: gzw-data-lookup-item
+  slug: gzw-data-lookup-item
+- name: gzw-data-track-data-changes
+  slug: gzw-data-track-data-changes
 slug: gzw-data
 tags:
 - Gaming

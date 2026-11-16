@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,10 +11,11 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
-    rate_limit_signal: derived
+    rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.2
-  scored_at: '2026-10-17'
+  score: 34.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -42,7 +49,7 @@ agentic_access:
   operation_count: 16
   slug: cycloid-agentic-access
   summary_line: 16 operations · 4 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://http-api.cycloid.io
   baseurl_source: declared
@@ -84,7 +91,302 @@ apis:
   description: Stacks (Service Catalog) and StackForms.
   name: Cycloid ServiceCatalogs API
   slug: cycloid-servicecatalogs-api
-artifact_total: 40
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Instance administration, available on the root organization to its admins only.
+  name: Cycloid Admin API
+  slug: cycloid-admin-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Appearance API from Cycloid — 2 operation(s) for appearance.
+  name: Cycloid Appearance API
+  slug: cycloid-appearance-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Authentications API from Cycloid — 2 operation(s) for authentications.
+  name: Cycloid Authentications API
+  slug: cycloid-authentications-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Cloud providers API from Cycloid — 1 operation(s) for cloud providers.
+  name: Cycloid Cloud providers API
+  slug: cycloid-cloud-providers-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Code Generation API from Cycloid — 8 operation(s) for code generation.
+  name: Cycloid Code Generation API
+  slug: cycloid-code-generation-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on the resources of a pipeline in a component
+  name: Cycloid Component Pipeline Resources API
+  slug: cycloid-component-pipeline-resources-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on the versions of a resource in a pipeline
+  name: Cycloid Component Pipeline Resources Versions API
+  slug: cycloid-component-pipeline-resources-versions-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on the pipelines of a component
+  name: Cycloid Component pipelines API
+  slug: cycloid-component-pipelines-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on the jobs of a pipeline in a component
+  name: Cycloid Component Pipelines Jobs API
+  slug: cycloid-component-pipelines-jobs-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on the builds of a job in a pipeline
+  name: Cycloid Component Pipelines Jobs Builds API
+  slug: cycloid-component-pipelines-jobs-builds-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations related to estimating cost of infrastructure.
+  name: Cycloid Cost Estimation API
+  slug: cycloid-cost-estimation-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operation related to Cycloid's application.
+  name: Cycloid Cycloid API
+  slug: cycloid-cycloid-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Environment pipelines API from Cycloid — 1 operation(s) for environment pipelines.
+  name: Cycloid Environment pipelines API
+  slug: cycloid-environment-pipelines-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization API keys API from Cycloid — 2 operation(s) for organization api keys.
+  name: Cycloid Organization API keys API
+  slug: cycloid-organization-api-keys-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Appearances API from Cycloid — 2 operation(s) for organization appearances.
+  name: Cycloid Organization Appearances API
+  slug: cycloid-organization-appearances-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Authentications API from Cycloid — 2 operation(s) for organization authentications.
+  name: Cycloid Organization Authentications API
+  slug: cycloid-organization-authentications-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on the children of an organization
+  name: Cycloid Organization Children API
+  slug: cycloid-organization-children-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Cloud Accounts API from Cycloid — 7 operation(s) for organization cloud accounts.
+  name: Cycloid Organization Cloud Accounts API
+  slug: cycloid-organization-cloud-accounts-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Cloud Cost Management Accounts API from Cycloid — 2 operation(s) for organization cloud cost management accounts.
+  name: Cycloid Organization Cloud Cost Management Accounts API
+  slug: cycloid-organization-cloud-cost-management-accounts-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Cloud Cost Management API from Cycloid — 1 operation(s) for organization cloud cost management.
+  name: Cycloid Organization Cloud Cost Management API
+  slug: cycloid-organization-cloud-cost-management-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Cloud Cost Management Dashboard API from Cycloid — 1 operation(s) for organization cloud cost management dashboard.
+  name: Cycloid Organization Cloud Cost Management Dashboard API
+  slug: cycloid-organization-cloud-cost-management-dashboard-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Cloud Cost Management filter vaules API from Cycloid — 1 operation(s) for organization cloud cost management filter vaules.
+  name: Cycloid Organization Cloud Cost Management filter vaules API
+  slug: cycloid-organization-cloud-cost-management-filter-vaules-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Cloud Cost Management Projects Dashboard API from Cycloid — 1 operation(s) for organization cloud cost management projects dashboard.
+  name: Cycloid Organization Cloud Cost Management Projects Dashboard API
+  slug: cycloid-organization-cloud-cost-management-projects-dashboard-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Cloud Cost Management Provider Details API from Cycloid — 1 operation(s) for organization cloud cost management provider details.
+  name: Cycloid Organization Cloud Cost Management Provider Details API
+  slug: cycloid-organization-cloud-cost-management-provider-details-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Cloud Cost Management Provider Histograms API from Cycloid — 2 operation(s) for organization cloud cost management provider histograms.
+  name: Cycloid Organization Cloud Cost Management Provider Histograms API
+  slug: cycloid-organization-cloud-cost-management-provider-histograms-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Cloud Cost Management Tag Mappings API from Cycloid — 1 operation(s) for organization cloud cost management tag mappings.
+  name: Cycloid Organization Cloud Cost Management Tag Mappings API
+  slug: cycloid-organization-cloud-cost-management-tag-mappings-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on the components of an organization
+  name: Cycloid Organization components API
+  slug: cycloid-organization-components-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Config Repositories API from Cycloid — 3 operation(s) for organization config repositories.
+  name: Cycloid Organization Config Repositories API
+  slug: cycloid-organization-config-repositories-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Credentials API from Cycloid — 4 operation(s) for organization credentials.
+  name: Cycloid Organization Credentials API
+  slug: cycloid-organization-credentials-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Environment Types API from Cycloid — 3 operation(s) for organization environment types.
+  name: Cycloid Organization Environment Types API
+  slug: cycloid-organization-environment-types-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations to perform on an environment associated to a project of an organization.
+  name: Cycloid Organization Environments API
+  slug: cycloid-organization-environments-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization External Backends API from Cycloid — 3 operation(s) for organization external backends.
+  name: Cycloid Organization External Backends API
+  slug: cycloid-organization-external-backends-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Forms API from Cycloid — 3 operation(s) for organization forms.
+  name: Cycloid Organization Forms API
+  slug: cycloid-organization-forms-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on the infrastructure of an organization
+  name: Cycloid Organization Infrastructure API
+  slug: cycloid-organization-infrastructure-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on the infrastructure policies of an organization
+  name: Cycloid Organization Infrastructure Policies API
+  slug: cycloid-organization-infrastructure-policies-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Inventory API from Cycloid — 10 operation(s) for organization inventory.
+  name: Cycloid Organization Inventory API
+  slug: cycloid-organization-inventory-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Inventory Plan API from Cycloid — 1 operation(s) for organization inventory plan.
+  name: Cycloid Organization Inventory Plan API
+  slug: cycloid-organization-inventory-plan-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on KPIs of an organization
+  name: Cycloid Organization KPIs API
+  slug: cycloid-organization-kpis-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization licence API from Cycloid — 1 operation(s) for organization licence.
+  name: Cycloid Organization licence API
+  slug: cycloid-organization-licence-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on the logs of a project
+  name: Cycloid Organization Logs API
+  slug: cycloid-organization-logs-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations for members of an organization.
+  name: Cycloid Organization members API
+  slug: cycloid-organization-members-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization naming rules API from Cycloid — 1 operation(s) for organization naming rules.
+  name: Cycloid Organization naming rules API
+  slug: cycloid-organization-naming-rules-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations for OIDC group mappings of an organization.
+  name: Cycloid Organization OIDC Group Mappings API
+  slug: cycloid-organization-oidc-group-mappings-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization pipelines API from Cycloid — 1 operation(s) for organization pipelines.
+  name: Cycloid Organization pipelines API
+  slug: cycloid-organization-pipelines-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Plugin Managers API from Cycloid — 2 operation(s) for organization plugin managers.
+  name: Cycloid Organization Plugin Managers API
+  slug: cycloid-organization-plugin-managers-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Plugins API from Cycloid — 21 operation(s) for organization plugins.
+  name: Cycloid Organization Plugins API
+  slug: cycloid-organization-plugins-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations for projects which belong to an organization.
+  name: Cycloid Organization projects API
+  slug: cycloid-organization-projects-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Roles API from Cycloid — 2 operation(s) for organization roles.
+  name: Cycloid Organization Roles API
+  slug: cycloid-organization-roles-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization Service Catalog Sources API from Cycloid — 6 operation(s) for organization service catalog sources.
+  name: Cycloid Organization Service Catalog Sources API
+  slug: cycloid-organization-service-catalog-sources-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on the subscriptions
+  name: Cycloid Organization Subscriptions API
+  slug: cycloid-organization-subscriptions-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization team members API from Cycloid — 2 operation(s) for organization team members.
+  name: Cycloid Organization team members API
+  slug: cycloid-organization-team-members-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations for teams which belong to an organization.
+  name: Cycloid Organization teams API
+  slug: cycloid-organization-teams-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Organization workers API from Cycloid — 1 operation(s) for organization workers.
+  name: Cycloid Organization workers API
+  slug: cycloid-organization-workers-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Policies API from Cycloid — 1 operation(s) for policies.
+  name: Cycloid Policies API
+  slug: cycloid-policies-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations on KPIs of an organization
+  name: Cycloid Project KPIs API
+  slug: cycloid-project-kpis-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Project pipelines API from Cycloid — 1 operation(s) for project pipelines.
+  name: Cycloid Project pipelines API
+  slug: cycloid-project-pipelines-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The SAML2 API from Cycloid — 2 operation(s) for saml2.
+  name: Cycloid SAML2 API
+  slug: cycloid-saml2-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: The Service catalogs API from Cycloid — 10 operation(s) for service catalogs.
+  name: Cycloid Service catalogs API
+  slug: cycloid-service-catalogs-api
+- baseURL: https://http-api.cycloid.io
+  baseurl_source: declared
+  description: Operations for the authenticated user.
+  name: Cycloid User API
+  slug: cycloid-user-api
+artifact_total: 98
 collections:
 - collection_type: postman
   name: Cycloid HTTP CloudCost API
@@ -110,9 +412,6 @@ collections:
 - collection_type: postman
   name: Cycloid HTTP CloudCost ServiceCatalogs API
   slug: postman-cycloid-servicecatalogs-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Cycloid HTTP API
   slug: open-cycloid-api
@@ -142,22 +441,22 @@ collections:
   slug: open-cycloid-servicecatalogs-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/plans/cycloid-plans-pricing.yml
+  href: https://artifacts.apis.io/cycloid/plans/cycloid-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cycloid-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/rate-limits/cycloid-rate-limits.yml
+  href: https://artifacts.apis.io/cycloid/rate-limits/cycloid-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cycloid-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/finops/cycloid-finops.yml
+  href: https://artifacts.apis.io/cycloid/finops/cycloid-finops.yml
   title: ''
   type: FinOps
   url: finops/cycloid-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/capabilities/cycloid-capability-edges.yml
+  href: https://artifacts.apis.io/cycloid/capabilities/cycloid-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cycloid-capability-edges.yml
@@ -166,27 +465,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/cycloid/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/agentic-access/cycloid-agentic-access.yml
+  href: https://artifacts.apis.io/cycloid/agentic-access/cycloid-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cycloid-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/security/cycloid-trust-center.yml
+  href: https://artifacts.apis.io/cycloid/security/cycloid-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/cycloid-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/security/cycloid-domain-security.yml
+  href: https://artifacts.apis.io/cycloid/security/cycloid-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cycloid-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/authentication/cycloid-authentication.yml
+  href: https://artifacts.apis.io/cycloid/authentication/cycloid-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cycloid-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/scopes/cycloid-scopes.yml
+  href: https://artifacts.apis.io/cycloid/scopes/cycloid-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cycloid-scopes.yml
@@ -235,27 +534,27 @@ common:
   type: Contact
   url: https://www.cycloid.io/contact
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/json-ld/cycloid-context.jsonld
+  href: https://artifacts.apis.io/cycloid/json-ld/cycloid-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cycloid-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/json-schema/cycloid-organization-schema.json
+  href: https://artifacts.apis.io/cycloid/json-schema/cycloid-organization-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/cycloid-organization-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/json-schema/cycloid-stack-schema.json
+  href: https://artifacts.apis.io/cycloid/json-schema/cycloid-stack-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/cycloid-stack-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/vocabulary/cycloid-vocabulary.yml
+  href: https://artifacts.apis.io/cycloid/vocabulary/cycloid-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cycloid-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/rules/cycloid-api-rules.yml
+  href: https://artifacts.apis.io/cycloid/rules/cycloid-api-rules.yml
   title: ''
   type: Rules
   url: rules/cycloid-api-rules.yml
@@ -273,7 +572,7 @@ finops:
 - has_sources: false
   method: generated
   name: Cycloid Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: cycloid-finops
   template: true
@@ -299,7 +598,7 @@ modified: '2026-05-19'
 name: Cycloid
 nav: Providers
 network: true
-overview: 'Cycloid publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including CloudCost API, ConfigRepositories API, Credentials API, and 5 more. Tagged areas include Asset Inventory, CI/CD, Cloud Cost Management, Cloud Management, and Developer Experience.
+overview: 'Cycloid publishes 67 API contracts indexed on the [APIs.io](https://apis.io/) network, including CloudCost API, ConfigRepositories API, Credentials API, and 64 more. Tagged areas include Asset Inventory, CI/CD, Cloud Cost Management, Cloud Management, and Developer Experience.
 
 
   The Cycloid catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -310,7 +609,7 @@ plans:
 - name: Cycloid Plans Pricing
   plan_count: 3
   slug: cycloid-plans-pricing
-random_paper: 17
+random_paper: 23
 rate_limits:
 - limit_count: 5
   name: Cycloid Rate Limits
@@ -345,44 +644,44 @@ scopes:
   slug: cycloid-scopes
   summary_line: 2 scopes · authorizationCode
 score:
-  band: thin
-  composite: 37.2
+  band: developing
+  composite: 42.8
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 60.0
     catalog_earned_first_party: 0.0
     catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.7
+  delta: 1.8
   facets:
     access_clarity: 32.9
     contract_governance: 27.3
-    contract_quality: 49.5
+    contract_quality: 58.5
     developer_ergonomics: 13.1
     discoverability: 71.7
     operational_transparency: 26.3
-  previous_composite: 42.9
+  previous_composite: 41.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 8
+      total: 76
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/screenshots/cycloid-2026-06-20T175412.png
+    score: 33.3
+screenshot: https://apis.io/screenshots/cycloid/cycloid-2026-06-20T175412.png
 security:
 - kind: authentication
   name: Cycloid Authentication

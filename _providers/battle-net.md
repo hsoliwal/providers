@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -8,6 +11,9 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
-    well_known_catalog: false
+    well_known_catalog: true
   schema_version: '0.2'
-  score: 38.8
-  scored_at: '2026-10-17'
+  score: 41.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -88,7 +97,7 @@ apis:
   description: Hearthstone metadata including sets, classes, types, and keywords
   name: Battle.net Metadata API
   slug: battle-net-metadata-api
-artifact_total: 92
+artifact_total: 93
 collections:
 - collection_type: postman
   name: Battle.net Hearthstone Game Data Card Backs API
@@ -103,9 +112,6 @@ collections:
   name: Battle.net Hearthstone Game Data Card Backs Metadata API
   slug: postman-battle-net-metadata-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Battle.net Hearthstone Game Data Card Backs API
   slug: open-battle-net-card-backs-api
 - collection_type: open
@@ -118,13 +124,73 @@ collections:
   name: Battle.net Hearthstone Game Data Card Backs Metadata API
   slug: open-battle-net-metadata-api
 common:
+- group: operate
+  href: https://artifacts.apis.io/battle-net/rate-limits/battle-net-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/battle-net-rate-limits.yml
+- group: design
+  href: https://artifacts.apis.io/battle-net/rules/battle-net-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/battle-net-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/battle-net/rules/battle-net-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/battle-net-rules.yml
+- group: design
+  href: https://artifacts.apis.io/battle-net/rules/battle-net-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/battle-net-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/battle-net/json-ld/battle-net-hearthstone-game-data-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/battle-net-hearthstone-game-data-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/battle-net/json-ld/battle-net-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/battle-net-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/battle-net/vocabulary/battle-net-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/battle-net-vocabulary.yml
+- group: design
+  href: https://artifacts.apis.io/battle-net/data-model/battle-net-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/battle-net-data-model.yml
+- group: design
+  href: https://artifacts.apis.io/battle-net/errors/battle-net-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/battle-net-problem-types.yml
+- group: design
+  href: https://artifacts.apis.io/battle-net/conformance/battle-net-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/battle-net-conformance.yml
+- group: other
+  href: https://artifacts.apis.io/battle-net/hosts/battle-net-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/battle-net-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/battle-net/vendors/battle-net-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/battle-net-vendors.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/battle-net/refs/heads/main/plans/battle-net-plans-pricing.yml
+  href: https://artifacts.apis.io/battle-net/plans/battle-net-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/battle-net-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/battle-net/refs/heads/main/finops/battle-net-finops.yml
+  href: https://artifacts.apis.io/battle-net/finops/battle-net-finops.yml
   title: ''
   type: FinOps
   url: finops/battle-net-finops.yml
@@ -137,22 +203,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/battlenet/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/battle-net/refs/heads/main/agentic-access/battle-net-agentic-access.yml
+  href: https://artifacts.apis.io/battle-net/agentic-access/battle-net-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/battle-net-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/battle-net/refs/heads/main/security/battle-net-domain-security.yml
+  href: https://artifacts.apis.io/battle-net/security/battle-net-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/battle-net-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/battle-net/refs/heads/main/authentication/battle-net-authentication.yml
+  href: https://artifacts.apis.io/battle-net/authentication/battle-net-authentication.yml
   title: ''
   type: Authentication
   url: authentication/battle-net-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/battle-net/refs/heads/main/scopes/battle-net-scopes.yml
+  href: https://artifacts.apis.io/battle-net/scopes/battle-net-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/battle-net-scopes.yml
@@ -213,12 +279,12 @@ common:
   type: CodeExamples
   url: https://github.com/Blizzard/oauth-client-sample
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/battle-net/refs/heads/main/rules/battle-net-spectral-rules.yml
+  href: https://artifacts.apis.io/battle-net/rules/battle-net-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/battle-net-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/battle-net/refs/heads/main/vocabulary/battle-net-vocabulary.yaml
+  href: https://artifacts.apis.io/battle-net/vocabulary/battle-net-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/battle-net-vocabulary.yaml
@@ -291,7 +357,7 @@ finops:
 - has_sources: true
   method: generated
   name: Battle Net Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: Gaming / Developer APIs
   slug: battle-net-finops
   template: false
@@ -399,6 +465,10 @@ json_structures:
   property_count: 7
   slug: hearthstone-game-data-metadata-structure
 jsonld:
+- class_count: 10
+  name: Battle Net Context
+  property_count: 39
+  slug: battle-net-context
 - class_count: 12
   name: Battle Net Hearthstone Game Data Context
   property_count: 37
@@ -411,17 +481,17 @@ network: true
 overview: 'Battle.net is listed with 12 APIs on the [APIs.io](https://apis.io/) network, including Card Backs API, Cards API, Decks API, and 9 more. Tagged areas include Games, Gaming, Blizzard, World Of Warcraft, and Diablo.
 
 
-  The Battle.net catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+  The Battle.net catalog on APIs.io includes 2 JSON-LD contexts and 3 Spectral governance rulesets.
 
 
-  Battle.net''s developer surface includes authentication, developer portal, documentation, getting-started guide, support, code examples, and 18 more developer resources.'
+  Battle.net''s developer surface includes authentication, developer portal, documentation, getting-started guide, support, code examples, and 30 more developer resources.'
 plans:
 - name: Battle Net Plans Pricing
   plan_count: 1
   slug: battle-net-plans-pricing
-random_paper: 18
+random_paper: 0
 rate_limits:
-- limit_count: 2
+- limit_count: 3
   name: Battle Net Rate Limits
   slug: battle-net-rate-limits
 rules:
@@ -436,6 +506,18 @@ rules:
     info: 2
     warn: 3
   slug: battle-net-jsonschema-spectral-rules
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Battle.net API Rules
+  rule_count: 66
+  severity_counts:
+    error: 64
+    hint: 0
+    info: 1
+    warn: 1
+  slug: battle-net-rules
 - authorship: generated
   effective_rule_count: 78
   extends:
@@ -455,44 +537,46 @@ scopes:
   summary_line: 4 scopes · clientCredentials
 score:
   band: thin
-  composite: 26.8
+  composite: 32.4
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 68.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 47.0
+    artifact_dirs: 28
+    catalog_earned: 81.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 34.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 4.0
   facets:
-    access_clarity: 10.5
-    contract_governance: 27.3
+    access_clarity: 18.4
+    contract_governance: 31.8
     contract_quality: 30.6
     developer_ergonomics: 22.6
     discoverability: 62.5
-    operational_transparency: 7.9
-  previous_composite: 28.3
+    operational_transparency: 34.2
+  previous_composite: 28.4
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
       callable: 100.0
       derived: 5
       marker_coverage: 100.0
       total: 5
+    mcp: derived
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 28.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/battle-net/refs/heads/main/screenshots/battle-net-2026-06-20T173043.png
+screenshot: https://apis.io/screenshots/battle-net/battle-net-2026-06-20T173043.png
 security:
 - kind: authentication
   name: Battle Net Authentication

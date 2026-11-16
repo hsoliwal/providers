@@ -1,16 +1,19 @@
 ---
 access_model:
   confidence: medium
-  label: Paid
-  onboarding: unknown
-  pricing: paid
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -21,21 +24,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: na
+    dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
-    idempotency: na
+    idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: na
+    reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 27.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -50,19 +56,26 @@ apis:
   slug: kpmg-origins-iwts
 - baseURL: https://app.kpmgorigins.com/client-api/
   baseurl_source: declared
-  description: The Movements API from KPMG — 4 operation(s) for movements.
-  name: KPMG Movements API
-  slug: kpmg-movements-api
+  description: APIs for Locations
+  name: KPMG Locations API
+  slug: kpmg-locations-api
 - baseURL: https://app.kpmgorigins.com/client-api/
   baseurl_source: declared
-  description: The Registries API from KPMG — 2 operation(s) for registries.
-  name: KPMG Registries API
-  slug: kpmg-registries-api
-artifact_total: 15
+  description: APIs to query Organizations
+  name: KPMG Organizations API
+  slug: kpmg-organizations-api
+- baseURL: https://app.kpmgorigins.com/client-api/
+  baseurl_source: declared
+  description: APIs for Product Catalogue/Product Templates/Materials
+  name: KPMG Product Templates API
+  slug: kpmg-producttemplates-api
+- baseURL: https://app.kpmgorigins.com/client-api/
+  baseurl_source: declared
+  description: APIs for Access Token
+  name: KPMG Token API
+  slug: kpmg-token-api
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: KPMG Origins APIs Discovery API
   slug: open-kpmg-discovery-api
@@ -77,32 +90,32 @@ collections:
   slug: open-kpmg
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kpmg/refs/heads/main/plans/kpmg-plans-pricing.yml
+  href: https://artifacts.apis.io/kpmg/plans/kpmg-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kpmg-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kpmg/refs/heads/main/rate-limits/kpmg-rate-limits.yml
+  href: https://artifacts.apis.io/kpmg/rate-limits/kpmg-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kpmg-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kpmg/refs/heads/main/finops/kpmg-finops.yml
+  href: https://artifacts.apis.io/kpmg/finops/kpmg-finops.yml
   title: ''
   type: FinOps
   url: finops/kpmg-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kpmg/refs/heads/main/agentic-access/kpmg-agentic-access.yml
+  href: https://artifacts.apis.io/kpmg/agentic-access/kpmg-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kpmg-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kpmg/refs/heads/main/security/kpmg-domain-security.yml
+  href: https://artifacts.apis.io/kpmg/security/kpmg-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kpmg-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kpmg/refs/heads/main/authentication/kpmg-authentication.yml
+  href: https://artifacts.apis.io/kpmg/authentication/kpmg-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kpmg-authentication.yml
@@ -217,10 +230,10 @@ modified: '2026-05-23'
 name: KPMG
 nav: Providers
 network: true
-overview: 'KPMG publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Movements API, Registries API, and 1 more. Tagged areas include Consulting, Audit, Tax, Legal, and Professional Services.
+overview: 'KPMG publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Locations API, Organizations API, Product Templates API, and 2 more. Tagged areas include Consulting, Audit, Tax, Legal, and Professional Services.
 
 
-  The KPMG catalog on APIs.io includes 1 JSON-LD context.
+  The KPMG catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   KPMG''s developer surface includes authentication, YouTube channel, and 26 more developer resources.'
@@ -228,51 +241,63 @@ plans:
 - name: Kpmg Plans Pricing
   plan_count: 3
   slug: kpmg-plans-pricing
-random_paper: 13
+random_paper: 23
 rate_limits:
 - limit_count: 2
   name: Kpmg Rate Limits
   slug: kpmg-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: KPMG API Rules
+  rule_count: 50
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 2
+    warn: 5
+  slug: kpmg-rules
 score:
   band: thin
-  composite: 32.3
+  composite: 32.7
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 50.0
+    artifact_dirs: 18
+    catalog_earned: 54.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 65.0
+    catalog_gap: 60.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.3
+  delta: 0.6
   facets:
     access_clarity: 21.1
-    contract_governance: 0.0
-    contract_quality: 50.7
+    contract_governance: 13.6
+    contract_quality: 48.7
     developer_ergonomics: 26.2
     discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 39.6
+  previous_composite: 32.1
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 42.9
       derived: 0
-      marker_coverage: 0.0
-      total: 2
+      marker_coverage: 57.1
+      total: 7
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
-    applies: false
-    note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
-    reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/kpmg/refs/heads/main/screenshots/kpmg-2026-06-20T184147.png
+    applies: true
+    score: 0.0
+screenshot: https://apis.io/screenshots/kpmg/kpmg-2026-06-20T184147.png
 security:
 - kind: authentication
   name: Kpmg Authentication

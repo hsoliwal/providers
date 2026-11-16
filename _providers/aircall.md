@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.0
-  scored_at: '2026-10-17'
+  score: 25.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -118,15 +122,12 @@ apis:
   description: The Webhooks API from Aircall — 2 operation(s) for webhooks.
   name: Aircall Webhooks API
   slug: aircall-webhooks-api
-artifact_total: 36
+artifact_total: 35
 asyncapis:
 - description: AsyncAPI description of Aircall's outbound webhook surface. Aircall delivers event notifications by issuing HTTP POST requests with a JSON body to a subscriber `url` that is registered through the Web
   name: Aircall Webhooks
   slug: aircall-webhooks-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Aircall Public Calls API
   slug: open-aircall-calls-api
@@ -160,27 +161,27 @@ common:
   type: Blog
   url: https://aircall.io/blog/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aircall/refs/heads/main/agentic-access/aircall-agentic-access.yml
+  href: https://artifacts.apis.io/aircall/agentic-access/aircall-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/aircall-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aircall/refs/heads/main/security/aircall-trust-center.yml
+  href: https://artifacts.apis.io/aircall/security/aircall-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/aircall-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aircall/refs/heads/main/security/aircall-domain-security.yml
+  href: https://artifacts.apis.io/aircall/security/aircall-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aircall-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aircall/refs/heads/main/authentication/aircall-authentication.yml
+  href: https://artifacts.apis.io/aircall/authentication/aircall-authentication.yml
   title: ''
   type: Authentication
   url: authentication/aircall-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aircall/refs/heads/main/scopes/aircall-scopes.yml
+  href: https://artifacts.apis.io/aircall/scopes/aircall-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/aircall-scopes.yml
@@ -197,17 +198,17 @@ common:
   type: Website
   url: https://aircall.io/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aircall/refs/heads/main/plans/aircall-plans-pricing.yml
+  href: https://artifacts.apis.io/aircall/plans/aircall-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aircall-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aircall/refs/heads/main/rate-limits/aircall-rate-limits.yml
+  href: https://artifacts.apis.io/aircall/rate-limits/aircall-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aircall-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aircall/refs/heads/main/finops/aircall-finops.yml
+  href: https://artifacts.apis.io/aircall/finops/aircall-finops.yml
   title: ''
   type: FinOps
   url: finops/aircall-finops.yml
@@ -242,7 +243,7 @@ plans:
 - name: Aircall Plans Pricing
   plan_count: 1
   slug: aircall-plans-pricing
-random_paper: 2
+random_paper: 8
 rate_limits:
 - limit_count: 1
   name: Aircall Rate Limits
@@ -269,13 +270,13 @@ score:
   band: thin
   composite: 30.3
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 39.8
     catalog_earned_first_party: 0.0
     catalog_gap: 75.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 0.0
   facets:
     access_clarity: 13.2
     contract_governance: 11.4
@@ -283,7 +284,7 @@ score:
     developer_ergonomics: 19.0
     discoverability: 64.3
     operational_transparency: 7.9
-  previous_composite: 31.3
+  previous_composite: 30.3
   provenance:
     agentic_access: derived
     contracts:
@@ -297,13 +298,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/aircall/refs/heads/main/screenshots/aircall-2026-06-20T171433.png
+screenshot: https://apis.io/screenshots/aircall/aircall-2026-06-20T171433.png
 security:
 - kind: authentication
   name: Aircall Authentication

@@ -1,16 +1,20 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   - '{''url'': ''https://www.root.io/'', ''status'': 301, ''note'': ''declared website redirects to https://www.aikido.dev/cloud/hardened-images — a different registrable domain (root.io -> aikido.dev), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.7
-  scored_at: '2026-10-17'
+  score: 27.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -145,15 +152,12 @@ apis:
   description: The Webhooks API from Root (fka Slim.ai) — 3 operation(s) for webhooks.
   name: Root (fka Slim.ai) Webhooks API
   slug: root-fka-slimai-webhooks-api
-artifact_total: 47
+artifact_total: 51
 asyncapis:
 - description: ''
   name: Root Fka Slimai Webhooks
   slug: root-fka-slimai-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Root.io Accounts API
   slug: open-root-fka-slimai-accounts-api
@@ -215,48 +219,53 @@ collections:
   name: Root.io Accounts Webhooks API
   slug: open-root-fka-slimai-webhooks-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/root-fka-slimai/plans/root-fka-slimai-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/root-fka-slimai-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/capabilities/root-fka-slimai-capability-edges.yml
+  href: https://artifacts.apis.io/root-fka-slimai/capabilities/root-fka-slimai-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/root-fka-slimai-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/overlays/root-fka-slimai-openapi-overlay.yaml
+  href: https://artifacts.apis.io/root-fka-slimai/overlays/root-fka-slimai-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/root-fka-slimai-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/agentic-access/root-fka-slimai-agentic-access.yml
+  href: https://artifacts.apis.io/root-fka-slimai/agentic-access/root-fka-slimai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/root-fka-slimai-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/security/root-fka-slimai-domain-security.yml
+  href: https://artifacts.apis.io/root-fka-slimai/security/root-fka-slimai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/root-fka-slimai-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/authentication/root-fka-slimai-authentication.yml
+  href: https://artifacts.apis.io/root-fka-slimai/authentication/root-fka-slimai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/root-fka-slimai-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/packages/root-fka-slimai-packages.yml
+  href: https://artifacts.apis.io/root-fka-slimai/packages/root-fka-slimai-packages.yml
   title: ''
   type: Packages
   url: packages/root-fka-slimai-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/mcp/root-fka-slimai-mcp.yml
+  href: https://artifacts.apis.io/root-fka-slimai/mcp/root-fka-slimai-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/root-fka-slimai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/llms/root-fka-slimai-llms.txt
+  href: https://artifacts.apis.io/root-fka-slimai/llms/root-fka-slimai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/root-fka-slimai-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/conformance/root-fka-slimai-conformance.yml
+  href: https://artifacts.apis.io/root-fka-slimai/conformance/root-fka-slimai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/root-fka-slimai-conformance.yml
@@ -265,52 +274,52 @@ common:
   type: Compliance
   url: https://docs.root.io/compliance/certifications
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/errors/root-fka-slimai-problem-types.yml
+  href: https://artifacts.apis.io/root-fka-slimai/errors/root-fka-slimai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/root-fka-slimai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/lifecycle/root-fka-slimai-lifecycle.yml
+  href: https://artifacts.apis.io/root-fka-slimai/lifecycle/root-fka-slimai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/root-fka-slimai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/conventions/root-fka-slimai-conventions.yml
+  href: https://artifacts.apis.io/root-fka-slimai/conventions/root-fka-slimai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/root-fka-slimai-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/conventions/root-fka-slimai-conventions.yml
+  href: https://artifacts.apis.io/root-fka-slimai/conventions/root-fka-slimai-conventions.yml
   title: ''
   type: RateLimits
   url: conventions/root-fka-slimai-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/changelog/root-fka-slimai-changelog.yml
+  href: https://artifacts.apis.io/root-fka-slimai/changelog/root-fka-slimai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/root-fka-slimai-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/cli/root-fka-slimai-cli.yml
+  href: https://artifacts.apis.io/root-fka-slimai/cli/root-fka-slimai-cli.yml
   title: ''
   type: CLI
   url: cli/root-fka-slimai-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/data-model/root-fka-slimai-data-model.yml
+  href: https://artifacts.apis.io/root-fka-slimai/data-model/root-fka-slimai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/root-fka-slimai-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/asyncapi/root-fka-slimai-webhooks.yml
+  href: https://artifacts.apis.io/root-fka-slimai/asyncapi/root-fka-slimai-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/root-fka-slimai-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/root-fka-slimai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/security/root-fka-slimai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/root-fka-slimai/security/root-fka-slimai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/root-fka-slimai-vulnerability-disclosure.yml
@@ -319,7 +328,7 @@ common:
   type: Security
   url: https://docs.root.io/compliance/security-posture
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/security/root-fka-slimai-trust-center.yml
+  href: https://artifacts.apis.io/root-fka-slimai/security/root-fka-slimai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/root-fka-slimai-trust-center.yml
@@ -365,6 +374,14 @@ common:
   url: https://www.root.io/
 created: '2026-07-17'
 description: 'Root (formerly Slim.ai) is a container and dependency security company backed by Insight Partners. Its "secure supply" platform delivers end-to-end, autonomous vulnerability remediation for container images and application packages: a fleet of AI agents (Agentic Vulnerability Remediation, AVR) researches, patches, tests, and ships Root Patches within minutes of CVE publication, without base-image changes or forced version upgrades. Root operates the Root Image Catalog (cr.root.io), Library Catalog, and OS-package registry (pkg.root.io), and exposes a REST API (api.root.io) for querying patch status, security findings, subscriptions, and pulling SBOM, VEX, and provenance artifacts, plus Standard-Webhooks notifications and a first-party CLI (rootio_patcher).'
+finops:
+- has_sources: true
+  method: derived
+  name: Root Fka Slimai Finops
+  primary_unit: total fee (incl. 10 users)
+  service_category: ''
+  slug: root-fka-slimai-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/root-fka-slimai.png
 layout: provider
 modified: '2026-07-21'
@@ -374,30 +391,47 @@ network: true
 overview: 'Root (fka Slim.ai) publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, API Keys API, Authentication API, and 17 more. Tagged areas include Company, Security, Vulnerability Management, Container Security, and DevSecOps.
 
 
-  The Root (fka Slim.ai) catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Root (fka Slim.ai) catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Root (fka Slim.ai)''s developer surface includes authentication, changelog, CLI, documentation, getting-started guide, support, engineering blog, and 25 more developer resources.'
-random_paper: 13
+  Root (fka Slim.ai)''s developer surface includes authentication, changelog, CLI, documentation, getting-started guide, support, engineering blog, and 26 more developer resources.'
+plans:
+- name: Root Fka Slimai Plans Pricing
+  plan_count: 9
+  slug: root-fka-slimai-plans-pricing
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Root (fka Slim.ai) API Rules
+  rule_count: 57
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 2
+    warn: 12
+  slug: root-fka-slimai-rules
 score:
-  band: developing
-  composite: 47.6
+  band: strong
+  composite: 57.1
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 31
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 22.4
-    contract_governance: 18.2
+    access_clarity: 61.8
+    contract_governance: 31.8
     contract_quality: 52.6
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 47.6
+  previous_composite: 57.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -414,13 +448,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/root-fka-slimai/refs/heads/main/screenshots/root-fka-slimai-2026-08-17T081633.png
+screenshot: https://apis.io/screenshots/root-fka-slimai/root-fka-slimai-2026-08-17T081633.png
 security:
 - kind: authentication
   name: Root Fka Slimai Authentication
@@ -438,6 +472,12 @@ security:
   name: Root Fka Slimai Trust Center
   slug: root-fka-slimai-trust-center
   summary_line: SOC 2 Type II, Cyber Essentials, SLSA, FIPS 140-3, STIG
+skill_count: 2
+skills:
+- name: Monitor security findings and subscribe to remediated images
+  slug: root-fka-slimai-monitor-and-subscribe
+- name: Remediate application dependencies with Root
+  slug: root-fka-slimai-remediate-dependencies
 slug: root-fka-slimai
 tags:
 - Company

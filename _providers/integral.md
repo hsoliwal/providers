@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -61,22 +65,22 @@ common:
   type: Compliance
   url: https://www.integral.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/integral/refs/heads/main/conformance/integral-conformance.yml
+  href: https://artifacts.apis.io/integral/conformance/integral-conformance.yml
   title: ''
   type: Conformance
   url: conformance/integral-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/integral/refs/heads/main/security/integral-domain-security.yml
+  href: https://artifacts.apis.io/integral/security/integral-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/integral-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/integral/refs/heads/main/well-known/integral-well-known.yml
+  href: https://artifacts.apis.io/integral/well-known/integral-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/integral-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/integral/refs/heads/main/llms/integral-llms.txt
+  href: https://artifacts.apis.io/integral/llms/integral-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/integral-llms.txt
@@ -92,18 +96,18 @@ overview: 'Integral is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   Integral''s developer surface includes engineering blog, support, signup flow, and 7 more developer resources.'
-random_paper: 18
+random_paper: 14
 score:
   band: emerging
   composite: 16.3
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
@@ -111,7 +115,7 @@ score:
     developer_ergonomics: 7.1
     discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 16.2
+  previous_composite: 16.3
   provenance:
     conformance: first-party
   regulatory:
@@ -120,14 +124,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 25.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/integral/refs/heads/main/screenshots/integral-2026-07-25T222640.png
+screenshot: https://apis.io/screenshots/integral/integral-2026-07-25T222640.png
 security:
 - kind: domain-security
   name: Integral Domain Security

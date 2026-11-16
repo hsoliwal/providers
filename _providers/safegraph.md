@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -77,27 +81,27 @@ common:
   type: ChangeLog
   url: https://docs.safegraph.com/changelog/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/safegraph/refs/heads/main/changelog/safegraph-changelog.yml
+  href: https://artifacts.apis.io/safegraph/changelog/safegraph-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/safegraph-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/safegraph/refs/heads/main/llms/safegraph-llms.txt
+  href: https://artifacts.apis.io/safegraph/llms/safegraph-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/safegraph-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/safegraph/refs/heads/main/packages/safegraph-packages.yml
+  href: https://artifacts.apis.io/safegraph/packages/safegraph-packages.yml
   title: ''
   type: Packages
   url: packages/safegraph-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/safegraph/refs/heads/main/well-known/safegraph-well-known.yml
+  href: https://artifacts.apis.io/safegraph/well-known/safegraph-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/safegraph-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/safegraph/refs/heads/main/security/safegraph-domain-security.yml
+  href: https://artifacts.apis.io/safegraph/security/safegraph-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/safegraph-domain-security.yml
@@ -113,23 +117,23 @@ overview: 'SafeGraph is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   SafeGraph''s developer surface includes engineering blog, documentation, pricing, changelog, and 11 more developer resources.'
-random_paper: 21
+random_paper: 9
 score:
   band: emerging
-  composite: 14.4
+  composite: 15.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.0
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 7.1
+    developer_ergonomics: 11.9
     discoverability: 55.4
     operational_transparency: 10.5
   previous_composite: 14.4
@@ -139,14 +143,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/safegraph/refs/heads/main/screenshots/safegraph-2026-09-02T154248.png
+screenshot: https://apis.io/screenshots/safegraph/safegraph-2026-09-02T154248.png
 security:
 - kind: domain-security
   name: Safegraph Domain Security

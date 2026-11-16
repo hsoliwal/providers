@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Artfinder provides a marketplace API (no public machine‑readable contract discovered).
@@ -32,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/artfinder/refs/heads/main/hosts/artfinder-hosts.yml
+  href: https://artifacts.apis.io/artfinder/hosts/artfinder-hosts.yml
   title: ''
   type: Hosts
   url: hosts/artfinder-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/artfinder/refs/heads/main/vendors/artfinder-vendors.yml
+  href: https://artifacts.apis.io/artfinder/vendors/artfinder-vendors.yml
   title: ''
   type: Vendors
   url: vendors/artfinder-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/artfinder/refs/heads/main/packages/artfinder-packages.yml
+  href: https://artifacts.apis.io/artfinder/packages/artfinder-packages.yml
   title: ''
   type: SDKs
   url: packages/artfinder-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/artfinder/refs/heads/main/packages/artfinder-packages.yml
+  href: https://artifacts.apis.io/artfinder/packages/artfinder-packages.yml
   title: ''
   type: Packages
   url: packages/artfinder-packages.yml
@@ -76,7 +89,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/artfinder
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/artfinder/refs/heads/main/security/artfinder-domain-security.yml
+  href: https://artifacts.apis.io/artfinder/security/artfinder-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/artfinder-domain-security.yml
@@ -140,26 +153,26 @@ overview: 'Artfinder is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Artfinder''s developer surface includes support, pricing, engineering blog, documentation, and 17 more developer resources.'
-random_paper: 13
+random_paper: 23
 score:
-  band: emerging
-  composite: 14.8
+  band: minimal
+  composite: 10.2
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -4.6
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 23.8
-    discoverability: 58.9
-    operational_transparency: 5.3
-  previous_composite: 14.7
+    developer_ergonomics: 15.5
+    discoverability: 58.0
+    operational_transparency: 2.6
+  previous_composite: 14.8
   provenance:
     mcp: derived
   regulatory:
@@ -167,15 +180,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 7.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/artfinder/refs/heads/main/screenshots/artfinder-2026-10-11T100414.png
+screenshot: https://apis.io/screenshots/artfinder/artfinder-2026-10-11T100414.png
 security:
 - kind: domain-security
   name: Artfinder Domain Security

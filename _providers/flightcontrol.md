@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -82,9 +88,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Flightcontrol Management CloudFront API
   slug: open-flightcontrol-cloudfront-api
 - collection_type: open
@@ -107,22 +110,22 @@ collections:
   slug: open-flightcontrol
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/flightcontrol/refs/heads/main/capabilities/flightcontrol-capability-edges.yml
+  href: https://artifacts.apis.io/flightcontrol/capabilities/flightcontrol-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/flightcontrol-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flightcontrol/refs/heads/main/agentic-access/flightcontrol-agentic-access.yml
+  href: https://artifacts.apis.io/flightcontrol/agentic-access/flightcontrol-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/flightcontrol-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flightcontrol/refs/heads/main/security/flightcontrol-domain-security.yml
+  href: https://artifacts.apis.io/flightcontrol/security/flightcontrol-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flightcontrol-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flightcontrol/refs/heads/main/authentication/flightcontrol-authentication.yml
+  href: https://artifacts.apis.io/flightcontrol/authentication/flightcontrol-authentication.yml
   title: ''
   type: Authentication
   url: authentication/flightcontrol-authentication.yml
@@ -139,17 +142,17 @@ common:
   type: Documentation
   url: https://www.flightcontrol.dev/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flightcontrol/refs/heads/main/plans/flightcontrol-plans-pricing.yml
+  href: https://artifacts.apis.io/flightcontrol/plans/flightcontrol-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/flightcontrol-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/flightcontrol/refs/heads/main/rate-limits/flightcontrol-rate-limits.yml
+  href: https://artifacts.apis.io/flightcontrol/rate-limits/flightcontrol-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/flightcontrol-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flightcontrol/refs/heads/main/finops/flightcontrol-finops.yml
+  href: https://artifacts.apis.io/flightcontrol/finops/flightcontrol-finops.yml
   title: ''
   type: FinOps
   url: finops/flightcontrol-finops.yml
@@ -173,7 +176,10 @@ modified: '2026-06-20'
 name: Flightcontrol
 nav: Providers
 network: true
-overview: 'Flightcontrol publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including CloudFront API, Deploy Hooks API, Deployments API, and 4 more. Tagged areas include Deployment, Platform-as-a-Service, Infrastructure, and DevOps.
+overview: 'Flightcontrol publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including CloudFront API, Deploy Hooks API, Deployments API, and 4 more. Tagged areas include Deployment, Amazon Web Services, Platform-as-a-Service, Infrastructure, and DevOps.
+
+
+  The Flightcontrol catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Flightcontrol''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
@@ -181,30 +187,43 @@ plans:
 - name: Flightcontrol Plans Pricing
   plan_count: 4
   slug: flightcontrol-plans-pricing
-random_paper: 21
+random_paper: 15
 rate_limits:
 - limit_count: 3
   name: Flightcontrol Rate Limits
   slug: flightcontrol-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Flightcontrol API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: flightcontrol-rules
 score:
   band: thin
-  composite: 26.9
+  composite: 29.4
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.4
+    artifact_dirs: 16
+    catalog_earned: 52.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.6
+    catalog_gap: 62.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.9
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 53.5
     developer_ergonomics: 32.1
-    discoverability: 57.1
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 35.2
+  previous_composite: 28.5
   provenance:
     agentic_access: derived
     contracts:
@@ -218,13 +237,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/flightcontrol/refs/heads/main/screenshots/flightcontrol-2026-06-20T181311.png
+screenshot: https://apis.io/screenshots/flightcontrol/flightcontrol-2026-06-20T181311.png
 security:
 - kind: authentication
   name: Flightcontrol Authentication
@@ -237,6 +256,7 @@ security:
 slug: flightcontrol
 tags:
 - Deployment
+- Amazon Web Services
 - Platform-as-a-Service
 - Infrastructure
 - DevOps

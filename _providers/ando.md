@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: verified
-    openapi_examples: partial
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: false
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 57.0
-  scored_at: '2026-10-17'
+  score: 61.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -50,11 +53,6 @@ apis:
   description: Call detail and transcript routes.
   name: Ando Calls API
   slug: ando-calls-api
-- baseURL: https://api.ando.so/v1
-  baseurl_source: declared
-  description: Clipboard detail routes.
-  name: Ando Clipboards API
-  slug: ando-clipboards-api
 - baseURL: https://api.ando.so/v1
   baseurl_source: declared
   description: Workspace member detail routes. Existing v1 paths keep member compatibility spellings.
@@ -77,23 +75,45 @@ apis:
   slug: ando-search-api
 - baseURL: https://api.ando.so/v1
   baseurl_source: declared
-  description: Task routes.
-  name: Ando Tasks API
-  slug: ando-tasks-api
-- baseURL: https://api.ando.so/v1
-  baseurl_source: declared
   description: Outbound webhook endpoint and delivery routes.
   name: Ando Webhooks API
   slug: ando-webhooks-api
-artifact_total: 22
+- baseURL: https://api.ando.so/v1
+  baseurl_source: declared
+  description: Workspace agent lifecycle routes.
+  name: Ando Agents API
+  slug: ando-agents-api
+- baseURL: https://api.ando.so/v1
+  baseurl_source: declared
+  description: Programmatic API key issuance and lifecycle routes.
+  name: Ando API Keys API
+  slug: ando-api-keys-api
+- baseURL: https://api.ando.so/v1
+  baseurl_source: declared
+  description: Membership-scoped conversation routes.
+  name: Ando Conversations API
+  slug: ando-conversations-api
+- baseURL: https://api.ando.so/v1
+  baseurl_source: declared
+  description: File upload lifecycle routes for public API message attachments.
+  name: Ando Files API
+  slug: ando-files-api
+- baseURL: https://api.ando.so/v1
+  baseurl_source: declared
+  description: Move another chat tool's history into a workspace with original authors and timestamps. Requires an owner or admin API key with the imports:write scope.
+  name: Ando Imports API
+  slug: ando-imports-api
+- baseURL: https://api.ando.so/v1
+  baseurl_source: declared
+  description: The Webhook sources API from Ando — 2 operation(s) for webhook sources.
+  name: Ando Webhook sources API
+  slug: ando-webhook-sources-api
+artifact_total: 31
 asyncapis:
 - description: ''
   name: Ando Webhooks
   slug: ando-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Ando Public Calls API
   slug: open-ando-calls-api
@@ -119,8 +139,13 @@ collections:
   name: Ando Public Calls Webhooks API
   slug: open-ando-webhooks-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/ando/plans/ando-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ando-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/capabilities/ando-capability-edges.yml
+  href: https://artifacts.apis.io/ando/capabilities/ando-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/ando-capability-edges.yml
@@ -141,92 +166,92 @@ common:
   type: GettingStarted
   url: https://docs.ando.so/developers/quickstart
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/authentication/ando-authentication.yml
+  href: https://artifacts.apis.io/ando/authentication/ando-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ando-authentication.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/openapi/_original/ando-public-api-v1-openapi.json
+  href: https://artifacts.apis.io/ando/openapi/_original/ando-public-api-v1-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/ando-public-api-v1-openapi.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/overlays/ando-public-api-v1-overlay.yaml
+  href: https://artifacts.apis.io/ando/overlays/ando-public-api-v1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ando-public-api-v1-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/conventions/ando-conventions.yml
+  href: https://artifacts.apis.io/ando/conventions/ando-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ando-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/conventions/ando-conventions.yml
+  href: https://artifacts.apis.io/ando/conventions/ando-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/ando-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/errors/ando-problem-types.yml
+  href: https://artifacts.apis.io/ando/errors/ando-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ando-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/data-model/ando-data-model.yml
+  href: https://artifacts.apis.io/ando/data-model/ando-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ando-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/conformance/ando-conformance.yml
+  href: https://artifacts.apis.io/ando/conformance/ando-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ando-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/asyncapi/ando-webhooks.yml
+  href: https://artifacts.apis.io/ando/asyncapi/ando-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/ando-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/mcp/ando-mcp.yml
+  href: https://artifacts.apis.io/ando/mcp/ando-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/ando-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ando/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/agentic-access/ando-agentic-access.yml
+  href: https://artifacts.apis.io/ando/agentic-access/ando-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ando-agentic-access.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/packages/ando-packages.yml
+  href: https://artifacts.apis.io/ando/packages/ando-packages.yml
   title: ''
   type: Packages
   url: packages/ando-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/packages/ando-packages.yml
+  href: https://artifacts.apis.io/ando/packages/ando-packages.yml
   title: ''
   type: SDKs
   url: packages/ando-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/cli/ando-cli.yml
+  href: https://artifacts.apis.io/ando/cli/ando-cli.yml
   title: ''
   type: CLI
   url: cli/ando-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/llms/ando-llms.txt
+  href: https://artifacts.apis.io/ando/llms/ando-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ando-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/well-known/ando-well-known.yml
+  href: https://artifacts.apis.io/ando/well-known/ando-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ando-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/lifecycle/ando-lifecycle.yml
+  href: https://artifacts.apis.io/ando/lifecycle/ando-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ando-lifecycle.yml
@@ -235,12 +260,12 @@ common:
   type: StatusPage
   url: https://status.ando.so
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/changelog/ando-changelog.yml
+  href: https://artifacts.apis.io/ando/changelog/ando-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/ando-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/security/ando-domain-security.yml
+  href: https://artifacts.apis.io/ando/security/ando-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ando-domain-security.yml
@@ -286,6 +311,14 @@ common:
   url: https://ando.so
 created: '2026-07-17'
 description: Ando is a messaging platform built from the ground up for teams that work alongside AI agents, positioned as a rearchitected alternative to Slack for human-agent collaboration. Agents join conversations as first-class members with shared context, memory, permissions, and tools, while humans see only what needs their attention. Ando ships a public REST API v1 (api.ando.so/v1) with API-key auth, required idempotency keys on writes, cursor pagination, HMAC-signed webhooks, a realtime websocket, a hosted MCP server (mcp.ando.so), a typed TypeScript SDK (@andocorp/sdk), and an agent-first CLI (@andocorp/cli). The legal entity is Asari Inc.; the company is backed by Index Ventures, Accel, and Emergence.
+finops:
+- has_sources: true
+  method: derived
+  name: Ando Finops
+  primary_unit: ''
+  service_category: ''
+  slug: ando-finops
+  template: true
 image: https://www.ando.so/opengraph-image.png
 layout: provider
 mcp_servers:
@@ -296,41 +329,58 @@ modified: '2026-07-17'
 name: Ando
 nav: Providers
 network: true
-overview: 'Ando publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Calls API, Clipboards API, Members API, and 5 more. Tagged areas include Company, Business Applications, Messaging, Team Collaboration, and AI Agents.
+overview: 'Ando publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Calls API, Members API, Messages API, and 9 more. Tagged areas include Company, Business Applications, Messaging, Team Collaboration, and AI Agents.
 
 
-  The Ando catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Ando catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Ando''s developer surface includes documentation, API reference, getting-started guide, authentication, CLI, changelog, engineering blog, and 29 more developer resources.'
-random_paper: 0
+  Ando''s developer surface includes documentation, API reference, getting-started guide, authentication, CLI, changelog, engineering blog, and 30 more developer resources.'
+plans:
+- name: Ando Plans Pricing
+  plan_count: 0
+  slug: ando-plans-pricing
+random_paper: 10
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: Ando API Rules
+  rule_count: 69
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 4
+    warn: 12
+  slug: ando-rules
 score:
   band: developing
-  composite: 46.4
+  composite: 51.9
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 29
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.9
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 58.8
+    contract_governance: 18.2
+    contract_quality: 62.9
     developer_ergonomics: 73.2
     discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 46.3
+  previous_composite: 51.0
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 8
+      marker_coverage: 60.0
+      total: 20
     mcp: first-party
     skills: derived
   regulatory:
@@ -339,13 +389,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/ando/refs/heads/main/screenshots/ando-2026-07-25T200233.png
+    score: 27.8
+screenshot: https://apis.io/screenshots/ando/ando-2026-07-25T200233.png
 security:
 - kind: authentication
   name: Ando Authentication
@@ -355,6 +405,14 @@ security:
   name: Ando Domain Security
   slug: ando-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Post a message and reply in a thread
+  slug: ando-post-message-and-reply
+- name: Receive and verify Ando webhooks
+  slug: ando-receive-and-verify-webhooks
+- name: Search and read Ando workspace context
+  slug: ando-search-and-read-context
 slug: ando
 tags:
 - Company

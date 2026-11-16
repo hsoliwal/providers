@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -27,7 +31,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,20 +42,25 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'REST API for managing Common Paper agreements and templates — list, create, send, void, reassign, download, and share agreements; manage templates, attachments, users, organizations, invitations, and '
   name: Common Paper API
   slug: common-paper-api
-artifact_total: 4
+artifact_total: 8
 asyncapis:
 - description: ''
   name: Common Paper Webhooks
   slug: common-paper-webhooks
 common:
+- group: commercial
+  href: https://artifacts.apis.io/common-paper/plans/common-paper-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/common-paper-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/security/common-paper-domain-security.yml
+  href: https://artifacts.apis.io/common-paper/security/common-paper-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/common-paper-domain-security.yml
@@ -73,42 +85,42 @@ common:
   type: GettingStarted
   url: https://api.commonpaper.com/docs
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/authentication/common-paper-authentication.yml
+  href: https://artifacts.apis.io/common-paper/authentication/common-paper-authentication.yml
   title: ''
   type: Authentication
   url: authentication/common-paper-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/mcp/common-paper-mcp.yml
+  href: https://artifacts.apis.io/common-paper/mcp/common-paper-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/common-paper-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/common-paper/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/asyncapi/common-paper-webhooks.yml
+  href: https://artifacts.apis.io/common-paper/asyncapi/common-paper-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/common-paper-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/llms/common-paper-llms.txt
+  href: https://artifacts.apis.io/common-paper/llms/common-paper-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/common-paper-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/conventions/common-paper-conventions.yml
+  href: https://artifacts.apis.io/common-paper/conventions/common-paper-conventions.yml
   title: ''
   type: Conventions
   url: conventions/common-paper-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/errors/common-paper-problem-types.yml
+  href: https://artifacts.apis.io/common-paper/errors/common-paper-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/common-paper-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/lifecycle/common-paper-lifecycle.yml
+  href: https://artifacts.apis.io/common-paper/lifecycle/common-paper-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/common-paper-lifecycle.yml
@@ -117,12 +129,12 @@ common:
   type: StatusPage
   url: https://status.commonpaper.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/conformance/common-paper-conformance.yml
+  href: https://artifacts.apis.io/common-paper/conformance/common-paper-conformance.yml
   title: ''
   type: Conformance
   url: conformance/common-paper-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/data-model/common-paper-data-model.yml
+  href: https://artifacts.apis.io/common-paper/data-model/common-paper-data-model.yml
   title: ''
   type: DataModel
   url: data-model/common-paper-data-model.yml
@@ -164,6 +176,14 @@ common:
   url: https://commonpaper.com/privacy-policy
 created: '2026-07-17'
 description: Common Paper is a contract management platform that helps revenue, legal, and operations teams build, negotiate, sign, and manage commercial agreements in minutes using a library of committee-drafted standard agreements (Cloud Service Agreement, Mutual NDA, DPA, BAA, Professional Services, Partnership, Software License, Pilot, Design Partner, and Letter of Intent) paired with AI-assisted contract review. The company exposes a public REST API at api.commonpaper.com/v1 with Bearer-token authentication, JSON:API read responses, Ransack filtering, offset pagination, a documented webhook catalog, an agentic account-provisioning flow, and an official hosted MCP server plus a published Claude agent skill, so agents and integrations can list, create, send, void, reassign, and download agreements and templates programmatically.
+finops:
+- has_sources: true
+  method: derived
+  name: Common Paper Finops
+  primary_unit: user
+  service_category: ''
+  slug: common-paper-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/common-paper.png
 layout: provider
 modified: '2026-07-18'
@@ -176,27 +196,34 @@ overview: 'Common Paper is listed with 1 API on the [APIs.io](https://apis.io/) 
   The Common Paper catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Common Paper''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, pricing, and 19 more developer resources.'
-random_paper: 20
+  Common Paper''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, pricing, and 20 more developer resources.'
+plans:
+- name: Common Paper Plans Pricing
+  plan_count: 4
+  slug: common-paper-plans-pricing
+- name: Common Paper Price Estimates
+  plan_count: 0
+  slug: common-paper-price-estimates
+random_paper: 6
 score:
   band: developing
-  composite: 45.0
+  composite: 52.9
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 20
+    catalog_earned: 52.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 44.7
+    access_clarity: 84.2
     contract_governance: 18.2
     contract_quality: 39.0
     developer_ergonomics: 64.3
     discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 45.0
+  previous_composite: 52.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -207,14 +234,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/common-paper/refs/heads/main/screenshots/common-paper-2026-07-25T210135.png
+screenshot: https://apis.io/screenshots/common-paper/common-paper-2026-07-25T210135.png
 security:
 - kind: authentication
   name: Common Paper Authentication
@@ -224,6 +251,10 @@ security:
   name: Common Paper Domain Security
   slug: common-paper-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: commonpaper
+  slug: commonpaper-skill
 slug: common-paper
 tags:
 - Company

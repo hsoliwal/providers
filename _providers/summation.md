@@ -1,11 +1,14 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Freemium
   onboarding: unknown
-  pricing: unknown
+  pricing: freemium
   public: false
-  source: []
+  source:
+  - plans
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 6
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/summation/refs/heads/main/rate-limits/summation-rate-limits.yml
+  href: https://artifacts.apis.io/summation/rate-limits/summation-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/summation-rate-limits.yml
@@ -46,7 +52,7 @@ common:
   type: Pricing
   url: https://www.summation.com/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/summation/refs/heads/main/plans/summation-plans-pricing.yml
+  href: https://artifacts.apis.io/summation/plans/summation-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/summation-plans-pricing.yml
@@ -55,17 +61,17 @@ common:
   type: Blog
   url: https://www.summation.com/resources/articles
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/summation/refs/heads/main/security/summation-trust-center.yml
+  href: https://artifacts.apis.io/summation/security/summation-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/summation-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/summation/refs/heads/main/security/summation-domain-security.yml
+  href: https://artifacts.apis.io/summation/security/summation-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/summation-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/summation/refs/heads/main/security/summation-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/summation/security/summation-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/summation-vulnerability-disclosure.yml
@@ -133,30 +139,30 @@ plans:
 - name: Summation Plans Pricing
   plan_count: 4
   slug: summation-plans-pricing
-random_paper: 21
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Summation Rate Limits
   slug: summation-rate-limits
 score:
   band: thin
-  composite: 28.5
+  composite: 27.4
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 9.0
+  delta: -1.1
   facets:
-    access_clarity: 92.1
+    access_clarity: 86.8
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
     discoverability: 51.7
     operational_transparency: 10.5
-  previous_composite: 19.5
+  previous_composite: 28.5
   provenance:
     mcp: first-party
   regulatory:
@@ -165,14 +171,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/summation/refs/heads/main/screenshots/summation-2026-09-02T161323.png
+screenshot: https://apis.io/screenshots/summation/summation-2026-09-02T161323.png
 security:
 - kind: domain-security
   name: Summation Domain Security

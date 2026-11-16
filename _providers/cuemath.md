@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -43,7 +46,7 @@ common:
   type: BlogRSS
   url: https://www.cuemath.com/blog/rss/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cuemath/refs/heads/main/security/cuemath-domain-security.yml
+  href: https://artifacts.apis.io/cuemath/security/cuemath-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cuemath-domain-security.yml
@@ -84,22 +87,22 @@ common:
   type: GitHubOrganization
   url: https://github.com/cuemath
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cuemath/refs/heads/main/llms/cuemath-llms.txt
+  href: https://artifacts.apis.io/cuemath/llms/cuemath-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cuemath-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cuemath/refs/heads/main/packages/cuemath-packages.yml
+  href: https://artifacts.apis.io/cuemath/packages/cuemath-packages.yml
   title: ''
   type: Packages
   url: packages/cuemath-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cuemath/refs/heads/main/plans/cuemath-plans-pricing.yml
+  href: https://artifacts.apis.io/cuemath/plans/cuemath-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cuemath-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cuemath/refs/heads/main/rate-limits/cuemath-rate-limits.yml
+  href: https://artifacts.apis.io/cuemath/rate-limits/cuemath-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cuemath-rate-limits.yml
@@ -139,7 +142,7 @@ plans:
 - name: Cuemath Plans Pricing
   plan_count: 0
   slug: cuemath-plans-pricing
-random_paper: 17
+random_paper: 23
 rate_limits:
 - limit_count: 0
   name: Cuemath Rate Limits
@@ -148,7 +151,7 @@ score:
   band: emerging
   composite: 15.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -176,14 +179,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cuemath/refs/heads/main/screenshots/cuemath-2026-09-02T145203.png
+screenshot: https://apis.io/screenshots/cuemath/cuemath-2026-09-02T145203.png
 security:
 - kind: domain-security
   name: Cuemath Domain Security

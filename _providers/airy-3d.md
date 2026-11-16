@@ -1,4 +1,13 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source: []
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Airy:3D provides 3D depth sensing solutions via its platform.
@@ -32,7 +44,7 @@ apis:
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airy-3d/refs/heads/main/llms/airy-3d-llms.txt
+  href: https://artifacts.apis.io/airy-3d/llms/airy-3d-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/airy-3d-llms.txt
@@ -56,7 +68,7 @@ name: Airy:3D
 nav: Providers
 network: true
 overview: Airy:3D is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company.
-random_paper: 17
+random_paper: 9
 score:
   band: minimal
   composite: 2.0
@@ -90,14 +102,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/airy-3d/refs/heads/main/screenshots/airy-3d-2026-10-11T093452.png
+screenshot: https://apis.io/screenshots/airy-3d/airy-3d-2026-10-11T093452.png
 slug: airy-3d
 tags:
 - Company

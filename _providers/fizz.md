@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fizz/refs/heads/main/security/fizz-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fizz/security/fizz-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/fizz-vulnerability-disclosure.yml
@@ -46,17 +50,17 @@ common:
   type: Security
   url: https://fizzsocial.notion.site/Fizz-Vulnerability-Disclosure-Policy-b32371f595344efb8cacfea9160bed73
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fizz/refs/heads/main/security/fizz-domain-security.yml
+  href: https://artifacts.apis.io/fizz/security/fizz-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fizz-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fizz/refs/heads/main/well-known/fizz-well-known.yml
+  href: https://artifacts.apis.io/fizz/well-known/fizz-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/fizz-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fizz/refs/heads/main/well-known/fizz-security.txt
+  href: https://artifacts.apis.io/fizz/well-known/fizz-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/fizz-security.txt
@@ -96,12 +100,12 @@ overview: 'Fizz is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   Fizz''s developer surface includes engineering blog, support, and 9 more developer resources.'
-random_paper: 11
+random_paper: 19
 score:
   band: emerging
   composite: 12.1
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -122,14 +126,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/fizz/refs/heads/main/screenshots/fizz-2026-07-25T214655.png
+screenshot: https://apis.io/screenshots/fizz/fizz-2026-07-25T214655.png
 security:
 - kind: domain-security
   name: Fizz Domain Security
@@ -151,5 +155,8 @@ tags:
 - Consumer
 - Mobile
 - Marketplace
+- Gen Z
+- College
+- Advertising
 website: https://fizz.social
 ---

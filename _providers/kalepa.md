@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -77,7 +80,7 @@ common:
   type: StatusPage
   url: https://status.kalepa.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kalepa/refs/heads/main/lifecycle/kalepa-lifecycle.yml
+  href: https://artifacts.apis.io/kalepa/lifecycle/kalepa-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kalepa-lifecycle.yml
@@ -86,12 +89,12 @@ common:
   type: Security
   url: https://kalepa.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kalepa/refs/heads/main/security/kalepa-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kalepa/security/kalepa-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/kalepa-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kalepa/refs/heads/main/security/kalepa-domain-security.yml
+  href: https://artifacts.apis.io/kalepa/security/kalepa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kalepa-domain-security.yml
@@ -100,17 +103,17 @@ common:
   type: Compliance
   url: https://kalepa.com/solutions/for-it-ai-leaders
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kalepa/refs/heads/main/conformance/kalepa-conformance.yml
+  href: https://artifacts.apis.io/kalepa/conformance/kalepa-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kalepa-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kalepa/refs/heads/main/packages/kalepa-packages.yml
+  href: https://artifacts.apis.io/kalepa/packages/kalepa-packages.yml
   title: ''
   type: Packages
   url: packages/kalepa-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kalepa/refs/heads/main/llms/kalepa-llms.txt
+  href: https://artifacts.apis.io/kalepa/llms/kalepa-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kalepa-llms.txt
@@ -144,12 +147,12 @@ overview: 'Kalepa is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Kalepa''s developer surface includes engineering blog, signup flow, and 19 more developer resources.'
-random_paper: 6
+random_paper: 22
 score:
   band: emerging
   composite: 17.3
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -179,14 +182,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kalepa/refs/heads/main/screenshots/kalepa-2026-07-25T223430.png
+screenshot: https://apis.io/screenshots/kalepa/kalepa-2026-07-25T223430.png
 security:
 - kind: domain-security
   name: Kalepa Domain Security

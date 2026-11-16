@@ -1,14 +1,19 @@
 ---
 access_model:
-  confidence: high
-  label: Free - Open bulk data; REST APIs restricted to market participants
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Open access
   onboarding: open
-  pricing: free
+  pricing: unknown
   public: true
   source:
-  - probe
+  - authentication
+  - security
+  - sandbox
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: NYISO's Market Information System public archive - the operator's flagship open data surface. Roughly sixty machine-readable report families are published as predictable daily CSV files and monthly ZI
@@ -54,10 +62,10 @@ apis:
 - description: NYISO's standalone Metering API, documented separately from the Finance APIs guide and served from its own root at api.nyiso.com/metering. It covers submission and retrieval of hourly revenue-grade me
   name: NYISO Metering API
   slug: nyiso-metering-api
-artifact_total: 18
+artifact_total: 20
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/security/nyiso-domain-security.yml
+  href: https://artifacts.apis.io/nyiso/security/nyiso-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nyiso-domain-security.yml
@@ -98,22 +106,22 @@ common:
   type: Blog
   url: https://www.nyiso.com/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/authentication/nyiso-authentication.yml
+  href: https://artifacts.apis.io/nyiso/authentication/nyiso-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nyiso-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/conventions/nyiso-conventions.yml
+  href: https://artifacts.apis.io/nyiso/conventions/nyiso-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nyiso-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/errors/nyiso-problem-types.yml
+  href: https://artifacts.apis.io/nyiso/errors/nyiso-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/nyiso-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/lifecycle/nyiso-lifecycle.yml
+  href: https://artifacts.apis.io/nyiso/lifecycle/nyiso-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nyiso-lifecycle.yml
@@ -122,32 +130,32 @@ common:
   type: Deprecation
   url: https://www.nyiso.com/documents/20142/20259596/SDX-Upload-Download-Application-Retirement.pdf/93ebf171-b383-520d-b3af-00cb9f433d3c
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/sandbox/nyiso-sandbox.yml
+  href: https://artifacts.apis.io/nyiso/sandbox/nyiso-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/nyiso-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/conformance/nyiso-conformance.yml
+  href: https://artifacts.apis.io/nyiso/conformance/nyiso-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nyiso-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/packages/nyiso-packages.yml
+  href: https://artifacts.apis.io/nyiso/packages/nyiso-packages.yml
   title: ''
   type: Packages
   url: packages/nyiso-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/data-model/nyiso-data-model.yml
+  href: https://artifacts.apis.io/nyiso/data-model/nyiso-data-model.yml
   title: ''
   type: DataModel
   url: data-model/nyiso-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/llms/nyiso-llms.txt
+  href: https://artifacts.apis.io/nyiso/llms/nyiso-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nyiso-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/nyiso/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -195,7 +203,7 @@ overview: 'New York Independent System Operator (NYISO) is listed with 6 APIs on
 
 
   New York Independent System Operator (NYISO)''s developer surface includes developer portal, documentation, legal docs, support, engineering blog, authentication, sandbox, and 14 more developer resources.'
-random_paper: 12
+random_paper: 10
 score:
   band: thin
   composite: 28.2
@@ -231,14 +239,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 17.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nyiso/refs/heads/main/screenshots/nyiso-2026-08-07T185826.png
+screenshot: https://apis.io/screenshots/nyiso/nyiso-2026-08-07T185826.png
 security:
 - kind: authentication
   name: Nyiso Authentication
@@ -248,6 +256,12 @@ security:
   name: Nyiso Domain Security
   slug: nyiso-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Pull NYISO market and system data
+  slug: nyiso-pull-market-data
+- name: Submit and retrieve revenue-grade meter data (NYISO Finance Metering API)
+  slug: nyiso-submit-meter-data
 slug: nyiso
 tags:
 - Energy

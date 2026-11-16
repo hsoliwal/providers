@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -36,9 +39,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 2
+artifact_total: 6
 common:
 - group: operate
   title: ''
@@ -61,12 +64,12 @@ common:
   type: License
   url: https://github.com/Legal-and-General/canopy/blob/master/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/legal-and-general/refs/heads/main/security/legal-and-general-domain-security.yml
+  href: https://artifacts.apis.io/legal-and-general/security/legal-and-general-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/legal-and-general-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/legal-and-general/refs/heads/main/security/legal-and-general-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/legal-and-general/security/legal-and-general-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/legal-and-general-vulnerability-disclosure.yml
@@ -75,27 +78,27 @@ common:
   type: Security
   url: https://github.com/Legal-and-General/canopy/blob/master/docs/SECURITY.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/legal-and-general/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/legal-and-general/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/legal-and-general/refs/heads/main/packages/legal-and-general-packages.yml
+  href: https://artifacts.apis.io/legal-and-general/packages/legal-and-general-packages.yml
   title: ''
   type: Packages
   url: packages/legal-and-general-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/legal-and-general/refs/heads/main/components/legal-and-general-components.yml
+  href: https://artifacts.apis.io/legal-and-general/components/legal-and-general-components.yml
   title: ''
   type: Components
   url: components/legal-and-general-components.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/legal-and-general/refs/heads/main/changelog/legal-and-general-changelog.yml
+  href: https://artifacts.apis.io/legal-and-general/changelog/legal-and-general-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/legal-and-general-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/legal-and-general/refs/heads/main/lifecycle/legal-and-general-lifecycle.yml
+  href: https://artifacts.apis.io/legal-and-general/lifecycle/legal-and-general-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/legal-and-general-lifecycle.yml
@@ -104,12 +107,12 @@ common:
   type: Deprecation
   url: https://github.com/Legal-and-General/canopy/blob/master/docs/BREAKING_CHANGES.md
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/legal-and-general/refs/heads/main/conformance/legal-and-general-conformance.yml
+  href: https://artifacts.apis.io/legal-and-general/conformance/legal-and-general-conformance.yml
   title: ''
   type: Conformance
   url: conformance/legal-and-general-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/legal-and-general/refs/heads/main/llms/legal-and-general-llms.txt
+  href: https://artifacts.apis.io/legal-and-general/llms/legal-and-general-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/legal-and-general-llms.txt
@@ -171,12 +174,12 @@ overview: 'Legal & General is profiled on the [APIs.io](https://apis.io/) networ
 
 
   Legal & General''s developer surface includes changelog, engineering blog, support, and 24 more developer resources.'
-random_paper: 20
+random_paper: 16
 score:
   band: emerging
   composite: 26.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -211,14 +214,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/legal-and-general/refs/heads/main/screenshots/legal-and-general-2026-07-25T224825.png
+screenshot: https://apis.io/screenshots/legal-and-general/legal-and-general-2026-07-25T224825.png
 security:
 - kind: domain-security
   name: Legal And General Domain Security
@@ -228,6 +231,16 @@ security:
   name: Legal And General Vulnerability Disclosure
   slug: legal-and-general-vulnerability-disclosure
   summary_line: Hackerone · contact published
+skill_count: 4
+skills:
+- name: canopy-accessibility
+  slug: legal-and-general-canopy-accessibility
+- name: canopy-button
+  slug: legal-and-general-canopy-button
+- name: canopy-forms-validation
+  slug: legal-and-general-canopy-forms-validation
+- name: canopy-v37-migration
+  slug: legal-and-general-canopy-v37-migration
 slug: legal-and-general
 tags:
 - Insurance
@@ -240,7 +253,6 @@ tags:
 - Asset Management
 - Underwriting
 - Carrier
-- Design Systems
 - Agent Skills
 - Open Source
 website: https://www.legalandgeneral.com/

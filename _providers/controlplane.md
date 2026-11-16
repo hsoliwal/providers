@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.5
-  scored_at: '2026-10-17'
+  score: 20.1
+  scored_at: '2026-11-06'
 api_count: 12
 apis:
 - baseURL: https://api.cpln.io
@@ -86,65 +102,70 @@ apis:
   description: The Signups API from ControlPlane — 1 operation(s) for signups.
   name: ControlPlane Signups API
   slug: controlplane-signups-api
-artifact_total: 23
+artifact_total: 25
 common:
+- group: commercial
+  href: https://artifacts.apis.io/controlplane/plans/controlplane-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/controlplane-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/rate-limits/controlplane-rate-limits.yml
+  href: https://artifacts.apis.io/controlplane/rate-limits/controlplane-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/controlplane-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/rules/controlplane-rules.yml
+  href: https://artifacts.apis.io/controlplane/rules/controlplane-rules.yml
   title: ''
   type: Spectral
   url: rules/controlplane-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/json-ld/controlplane-context.jsonld
+  href: https://artifacts.apis.io/controlplane/json-ld/controlplane-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/controlplane-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/vocabulary/controlplane-vocabulary.yml
+  href: https://artifacts.apis.io/controlplane/vocabulary/controlplane-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/controlplane-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/data-model/controlplane-data-model.yml
+  href: https://artifacts.apis.io/controlplane/data-model/controlplane-data-model.yml
   title: ''
   type: DataModel
   url: data-model/controlplane-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/changelog/controlplane-changelog.yml
+  href: https://artifacts.apis.io/controlplane/changelog/controlplane-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/controlplane-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/authentication/controlplane-authentication.yml
+  href: https://artifacts.apis.io/controlplane/authentication/controlplane-authentication.yml
   title: ''
   type: Authentication
   url: authentication/controlplane-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/conformance/controlplane-conformance.yml
+  href: https://artifacts.apis.io/controlplane/conformance/controlplane-conformance.yml
   title: ''
   type: Conformance
   url: conformance/controlplane-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/llms/controlplane-llms.txt
+  href: https://artifacts.apis.io/controlplane/llms/controlplane-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/controlplane-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/a2a/controlplane-a2a.yml
+  href: https://artifacts.apis.io/controlplane/a2a/controlplane-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/controlplane-a2a.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/hosts/controlplane-hosts.yml
+  href: https://artifacts.apis.io/controlplane/hosts/controlplane-hosts.yml
   title: ''
   type: Hosts
   url: hosts/controlplane-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/vendors/controlplane-vendors.yml
+  href: https://artifacts.apis.io/controlplane/vendors/controlplane-vendors.yml
   title: ''
   type: Vendors
   url: vendors/controlplane-vendors.yml
@@ -173,7 +194,7 @@ common:
   type: DeveloperPortal
   url: https://docs.controlplane.com\
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/controlplane/refs/heads/main/security/controlplane-domain-security.yml
+  href: https://artifacts.apis.io/controlplane/security/controlplane-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/controlplane-domain-security.yml
@@ -217,6 +238,14 @@ coverage:
   state: unreadable
 created: '2026-10-10'
 description: ControlPlane provides a virtual cloud platform that unifies compute, networking, identity, and services across multiple clouds, bare metal, and on‑prem environments. It enables teams to build, ship, and scale applications with AI‑native automation, universal cloud identity, and zero‑ops operations, offering high availability and compliance features for enterprise workloads.
+finops:
+- has_sources: true
+  method: derived
+  name: Controlplane Finops
+  primary_unit: gpu-hour
+  service_category: ''
+  slug: controlplane-finops
+  template: false
 image: https://controlplane.com/opengraph-image?9bc49be7543d6542
 json_schemas:
 - name: GetQuotaCatalogResponse
@@ -253,8 +282,12 @@ overview: 'ControlPlane is listed with 12 APIs on the [APIs.io](https://apis.io/
   The ControlPlane catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  ControlPlane''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, engineering blog, pricing, and 19 more developer resources.'
-random_paper: 21
+  ControlPlane''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, engineering blog, pricing, and 20 more developer resources.'
+plans:
+- name: Controlplane Plans Pricing
+  plan_count: 24
+  slug: controlplane-plans-pricing
+random_paper: 1
 rate_limits:
 - limit_count: 1
   name: Controlplane Rate Limits
@@ -274,21 +307,23 @@ rules:
   slug: controlplane-rules
 score:
   band: developing
-  composite: 45.2
+  composite: 42.0
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 73.8
-    catalog_earned_first_party: 8.0
-    catalog_gap: 41.3
+    artifact_dirs: 24
+    catalog_earned: 88.8
+    catalog_earned_first_party: 20.0
+    catalog_gap: 26.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -11.1
   facets:
-    access_clarity: 44.7
+    access_clarity: 61.8
     contract_governance: 35.6
     contract_quality: 25.6
-    developer_ergonomics: 52.4
+    developer_ergonomics: 32.1
     discoverability: 78.6
-    operational_transparency: 52.6
+    operational_transparency: 36.8
+  previous_composite: 53.1
   provenance:
     conformance: first-party
     contracts:
@@ -308,12 +343,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/controlplane/controlplane-2026-11-03T125225.png
 security:
 - kind: authentication
   name: Controlplane Authentication

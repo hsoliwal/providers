@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fintech-farm/refs/heads/main/security/fintech-farm-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fintech-farm/security/fintech-farm-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/fintech-farm-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fintech-farm/refs/heads/main/security/fintech-farm-domain-security.yml
+  href: https://artifacts.apis.io/fintech-farm/security/fintech-farm-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fintech-farm-domain-security.yml
@@ -68,22 +71,22 @@ common:
   type: GitHubOrganization
   url: https://github.com/Fintech-Farm-Ltd
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fintech-farm/refs/heads/main/well-known/fintech-farm-well-known.yml
+  href: https://artifacts.apis.io/fintech-farm/well-known/fintech-farm-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/fintech-farm-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fintech-farm/refs/heads/main/well-known/fintech-farm-security.txt
+  href: https://artifacts.apis.io/fintech-farm/well-known/fintech-farm-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/fintech-farm-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fintech-farm/refs/heads/main/llms/fintech-farm-llms.txt
+  href: https://artifacts.apis.io/fintech-farm/llms/fintech-farm-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fintech-farm-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fintech-farm/refs/heads/main/plans/fintech-farm-plans-pricing.yml
+  href: https://artifacts.apis.io/fintech-farm/plans/fintech-farm-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fintech-farm-plans-pricing.yml
@@ -117,12 +120,12 @@ plans:
 - name: Fintech Farm Plans Pricing
   plan_count: 0
   slug: fintech-farm-plans-pricing
-random_paper: 16
+random_paper: 4
 score:
   band: minimal
   composite: 7.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -151,14 +154,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/fintech-farm/refs/heads/main/screenshots/fintech-farm-2026-09-02T145517.png
+screenshot: https://apis.io/screenshots/fintech-farm/fintech-farm-2026-09-02T145517.png
 security:
 - kind: domain-security
   name: Fintech Farm Domain Security

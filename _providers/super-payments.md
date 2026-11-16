@@ -1,19 +1,24 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
   - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -28,15 +33,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.4
-  scored_at: '2026-10-17'
+  score: 40.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -91,7 +99,7 @@ apis:
   description: The Webhooks API from Super Payments — 0 operation(s) for webhooks.
   name: Super Payments Webhooks API
   slug: super-payments-webhooks-api
-artifact_total: 73
+artifact_total: 77
 asyncapis:
 - description: Super Payments delivers real-time event notifications to merchant-configured endpoints. Webhooks are configured per Integration in the Business Portal. Every request carries a super-signature header (
   name: Super Payments Webhooks
@@ -122,9 +130,6 @@ collections:
   name: Super Payments Checkout Sessions Settlements API
   slug: postman-super-payments-settlements-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Super Payments Checkout Sessions API
   slug: open-super-payments-checkout-sessions-api
 - collection_type: open
@@ -150,52 +155,52 @@ collections:
   slug: open-super-payments-settlements-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/agentic-access/super-payments-agentic-access.yml
+  href: https://artifacts.apis.io/super-payments/agentic-access/super-payments-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/super-payments-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/rules/super-payments-rules.yml
+  href: https://artifacts.apis.io/super-payments/rules/super-payments-rules.yml
   title: ''
   type: Spectral
   url: rules/super-payments-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/json-ld/super-payments-context.jsonld
+  href: https://artifacts.apis.io/super-payments/json-ld/super-payments-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/super-payments-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/vocabulary/super-payments-vocabulary.yml
+  href: https://artifacts.apis.io/super-payments/vocabulary/super-payments-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/super-payments-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/mcp/super-payments-mcp.yml
+  href: https://artifacts.apis.io/super-payments/mcp/super-payments-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/super-payments-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/integrations/super-payments-integration-edges.yml
+  href: https://artifacts.apis.io/super-payments/integrations/super-payments-integration-edges.yml
   title: ''
   type: IntegrationEdges
   url: integrations/super-payments-integration-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/vendors/super-payments-vendors.yml
+  href: https://artifacts.apis.io/super-payments/vendors/super-payments-vendors.yml
   title: ''
   type: Vendors
   url: vendors/super-payments-vendors.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/plans/super-payments-plans-pricing.yml
+  href: https://artifacts.apis.io/super-payments/plans/super-payments-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/super-payments-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/capabilities/super-payments-capability-edges.yml
+  href: https://artifacts.apis.io/super-payments/capabilities/super-payments-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/super-payments-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/overlays/super-payments-openapi-overlay.yaml
+  href: https://artifacts.apis.io/super-payments/overlays/super-payments-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/super-payments-openapi-overlay.yaml
@@ -204,7 +209,7 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/super-payments/overview
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/security/super-payments-domain-security.yml
+  href: https://artifacts.apis.io/super-payments/security/super-payments-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/super-payments-domain-security.yml
@@ -269,7 +274,7 @@ common:
   type: ChangeLog
   url: https://docs.superpayments.com/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/changelog/super-payments-changelog.yml
+  href: https://artifacts.apis.io/super-payments/changelog/super-payments-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/super-payments-changelog.yml
@@ -278,92 +283,100 @@ common:
   type: Deprecation
   url: https://docs.superpayments.com/reference/upgrading
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/lifecycle/super-payments-lifecycle.yml
+  href: https://artifacts.apis.io/super-payments/lifecycle/super-payments-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/super-payments-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/authentication/super-payments-authentication.yml
+  href: https://artifacts.apis.io/super-payments/authentication/super-payments-authentication.yml
   title: ''
   type: Authentication
   url: authentication/super-payments-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/asyncapi/super-payments-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/super-payments/asyncapi/super-payments-webhooks-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/super-payments-webhooks-asyncapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/asyncapi/super-payments-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/super-payments/asyncapi/super-payments-webhooks-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/super-payments-webhooks-asyncapi.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/rate-limits/super-payments-rate-limits.yml
+  href: https://artifacts.apis.io/super-payments/rate-limits/super-payments-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/super-payments-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/errors/super-payments-problem-types.yml
+  href: https://artifacts.apis.io/super-payments/errors/super-payments-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/super-payments-problem-types.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/errors/super-payments-decline-codes.yml
+  href: https://artifacts.apis.io/super-payments/errors/super-payments-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/super-payments-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/conventions/super-payments-conventions.yml
+  href: https://artifacts.apis.io/super-payments/conventions/super-payments-conventions.yml
   title: ''
   type: Conventions
   url: conventions/super-payments-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/sandbox/super-payments-sandbox.yml
+  href: https://artifacts.apis.io/super-payments/sandbox/super-payments-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/super-payments-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/components/super-payments-components.yml
+  href: https://artifacts.apis.io/super-payments/components/super-payments-components.yml
   title: ''
   type: Components
   url: components/super-payments-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/data-model/super-payments-data-model.yml
+  href: https://artifacts.apis.io/super-payments/data-model/super-payments-data-model.yml
   title: ''
   type: DataModel
   url: data-model/super-payments-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/conformance/super-payments-conformance.yml
+  href: https://artifacts.apis.io/super-payments/conformance/super-payments-conformance.yml
   title: ''
   type: Conformance
   url: conformance/super-payments-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/packages/super-payments-packages.yml
+  href: https://artifacts.apis.io/super-payments/packages/super-payments-packages.yml
   title: ''
   type: Packages
   url: packages/super-payments-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/packages/super-payments-packages.yml
+  href: https://artifacts.apis.io/super-payments/packages/super-payments-packages.yml
   title: ''
   type: SDKs
   url: packages/super-payments-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/mcp/super-payments-mcp.yml
+  href: https://artifacts.apis.io/super-payments/mcp/super-payments-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/super-payments-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/llms/super-payments-llms.txt
+  href: https://artifacts.apis.io/super-payments/llms/super-payments-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/super-payments-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/super-payments/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: Super Payments is a UK payments provider offering free card and open-banking (pay-by-bank) payment processing for businesses, funded by a customer-acquisition and cash-rewards model rather than per-transaction fees. Its REST API lets merchants create payments and checkout sessions, issue refunds, manage customers and reusable payment methods, run settlements and reconciliation, create no-code payment links, and configure cash rewards. The API uses date-based URL versioning, static API-key authentication, RFC 9457 problem+json errors, cursor pagination, HMAC-signed webhooks, an embedded super-card web component and hosted payment page, and a React Native SDK. Backed by Accel and Union Square Ventures.
+finops:
+- has_sources: true
+  method: derived
+  name: Super Payments Finops
+  primary_unit: payment processor fee
+  service_category: ''
+  slug: super-payments-finops
+  template: false
 image: https://framerusercontent.com/images/eAdDRGD6sLo1NlXEu8bPS71k.png
 json_schemas:
 - name: CreateCheckoutSessionRequestDto
@@ -505,7 +518,7 @@ plans:
 - name: Super Payments Price Estimates
   plan_count: 0
   slug: super-payments-price-estimates
-random_paper: 11
+random_paper: 21
 rate_limits:
 - limit_count: 2
   name: Super Payments Rate Limits
@@ -525,22 +538,22 @@ rules:
   slug: super-payments-rules
 score:
   band: exemplar
-  composite: 67.0
+  composite: 70.7
   coverage:
-    artifact_dirs: 33
-    catalog_earned: 82.0
+    artifact_dirs: 36
+    catalog_earned: 85.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 33.0
+    catalog_gap: 30.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 5.4
+  delta: 1.6
   facets:
-    access_clarity: 76.3
+    access_clarity: 84.2
     contract_governance: 33.3
-    contract_quality: 73.9
+    contract_quality: 76.0
     developer_ergonomics: 55.4
     discoverability: 75.0
-    operational_transparency: 59.2
+    operational_transparency: 71.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -549,7 +562,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 61.6
+  previous_composite: 69.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -566,13 +579,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 29.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/super-payments/refs/heads/main/screenshots/super-payments-2026-08-17T082158.png
+screenshot: https://apis.io/screenshots/super-payments/super-payments-2026-08-17T082158.png
 security:
 - kind: authentication
   name: Super Payments Authentication
@@ -582,6 +595,16 @@ security:
   name: Super Payments Domain Security
   slug: super-payments-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: accept-a-payment
+  slug: super-payments-accept-a-payment
+- name: reconcile-settlements
+  slug: super-payments-reconcile-settlements
+- name: refund-a-payment
+  slug: super-payments-refund-a-payment
+- name: save-and-charge-card
+  slug: super-payments-save-and-charge-card
 slug: super-payments
 tags:
 - Company

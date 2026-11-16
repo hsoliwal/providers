@@ -1,11 +1,14 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Freemium
   onboarding: unknown
-  pricing: unknown
+  pricing: freemium
   public: false
-  source: []
+  source:
+  - plans
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -73,7 +79,7 @@ common:
   type: StatusPage
   url: https://www.jeeva.ai/system-status
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jeeva-ai/refs/heads/main/security/jeeva-ai-trust-center.yml
+  href: https://artifacts.apis.io/jeeva-ai/security/jeeva-ai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/jeeva-ai-trust-center.yml
@@ -82,12 +88,12 @@ common:
   type: Compliance
   url: https://www.jeeva.ai/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jeeva-ai/refs/heads/main/security/jeeva-ai-domain-security.yml
+  href: https://artifacts.apis.io/jeeva-ai/security/jeeva-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jeeva-ai-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jeeva-ai/refs/heads/main/llms/jeeva-ai-llms.txt
+  href: https://artifacts.apis.io/jeeva-ai/llms/jeeva-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/jeeva-ai-llms.txt
@@ -108,32 +114,32 @@ common:
   type: GitHubOrganization
   url: https://github.com/Involve-AI
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jeeva-ai/refs/heads/main/plans/jeeva-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/jeeva-ai/plans/jeeva-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/jeeva-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/jeeva-ai/refs/heads/main/rate-limits/jeeva-ai-rate-limits.yml
+  href: https://artifacts.apis.io/jeeva-ai/rate-limits/jeeva-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/jeeva-ai-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/jeeva-ai/refs/heads/main/packages/jeeva-ai-packages.yml
+  href: https://artifacts.apis.io/jeeva-ai/packages/jeeva-ai-packages.yml
   title: ''
   type: Packages
   url: packages/jeeva-ai-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jeeva-ai/refs/heads/main/components/jeeva-ai-components.yml
+  href: https://artifacts.apis.io/jeeva-ai/components/jeeva-ai-components.yml
   title: ''
   type: Components
   url: components/jeeva-ai-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jeeva-ai/refs/heads/main/lifecycle/jeeva-ai-lifecycle.yml
+  href: https://artifacts.apis.io/jeeva-ai/lifecycle/jeeva-ai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/jeeva-ai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jeeva-ai/refs/heads/main/conformance/jeeva-ai-conformance.yml
+  href: https://artifacts.apis.io/jeeva-ai/conformance/jeeva-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/jeeva-ai-conformance.yml
@@ -168,7 +174,7 @@ plans:
 - name: Jeeva Ai Plans Pricing
   plan_count: 4
   slug: jeeva-ai-plans-pricing
-random_paper: 0
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Jeeva Ai Rate Limits
@@ -177,7 +183,7 @@ score:
   band: thin
   composite: 34.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -204,14 +210,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/jeeva-ai/refs/heads/main/screenshots/jeeva-ai-2026-07-25T223125.png
+screenshot: https://apis.io/screenshots/jeeva-ai/jeeva-ai-2026-07-25T223125.png
 security:
 - kind: domain-security
   name: Jeeva Ai Domain Security

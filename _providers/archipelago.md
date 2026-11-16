@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Archipelago's customer-facing API is a GraphQL API that lets customers access and use their property and SOV data in custom applications. Access is credential-based; Archipelago provisions credentials
@@ -111,22 +114,22 @@ common:
   type: Compliance
   url: https://www.onarchipelago.com/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/archipelago/refs/heads/main/llms/archipelago-llms.txt
+  href: https://artifacts.apis.io/archipelago/llms/archipelago-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/archipelago-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/archipelago/refs/heads/main/authentication/archipelago-authentication.yml
+  href: https://artifacts.apis.io/archipelago/authentication/archipelago-authentication.yml
   title: ''
   type: Authentication
   url: authentication/archipelago-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/archipelago/refs/heads/main/conformance/archipelago-conformance.yml
+  href: https://artifacts.apis.io/archipelago/conformance/archipelago-conformance.yml
   title: ''
   type: Conformance
   url: conformance/archipelago-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/archipelago/refs/heads/main/security/archipelago-domain-security.yml
+  href: https://artifacts.apis.io/archipelago/security/archipelago-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/archipelago-domain-security.yml
@@ -142,12 +145,12 @@ overview: 'Archipelago is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Archipelago''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 14 more developer resources.'
-random_paper: 7
+random_paper: 23
 score:
   band: thin
   composite: 29.9
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -177,14 +180,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 26.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/archipelago/refs/heads/main/screenshots/archipelago-2026-07-25T201034.png
+screenshot: https://apis.io/screenshots/archipelago/archipelago-2026-07-25T201034.png
 security:
 - kind: authentication
   name: Archipelago Authentication

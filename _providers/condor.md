@@ -1,11 +1,12 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/condor/refs/heads/main/plans/condor-plans-pricing.yml
+  href: https://artifacts.apis.io/condor/plans/condor-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/condor-plans-pricing.yml
@@ -78,17 +82,17 @@ common:
   type: Compliance
   url: https://www.condorsoftware.com/company/trust
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/condor/refs/heads/main/llms/condor-llms.txt
+  href: https://artifacts.apis.io/condor/llms/condor-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/condor-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/condor/refs/heads/main/conformance/condor-conformance.yml
+  href: https://artifacts.apis.io/condor/conformance/condor-conformance.yml
   title: ''
   type: Conformance
   url: conformance/condor-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/condor/refs/heads/main/security/condor-domain-security.yml
+  href: https://artifacts.apis.io/condor/security/condor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/condor-domain-security.yml
@@ -108,7 +112,7 @@ plans:
 - name: Condor Plans Pricing
   plan_count: 0
   slug: condor-plans-pricing
-random_paper: 7
+random_paper: 21
 score:
   band: emerging
   composite: 20.7
@@ -143,14 +147,14 @@ score:
     regime: Health
     regime_id: health
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/condor/refs/heads/main/screenshots/condor-2026-07-25T210229.png
+screenshot: https://apis.io/screenshots/condor/condor-2026-07-25T210229.png
 security:
 - kind: domain-security
   name: Condor Domain Security

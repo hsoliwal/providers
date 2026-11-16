@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 29.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -78,11 +85,8 @@ apis:
   description: Retrieve NFT token metadata including collection information and on-chain attribute traits.
   name: LooksRare Tokens API
   slug: looksrare-tokens-api
-artifact_total: 22
+artifact_total: 21
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: LooksRare Public Collections API
   slug: open-looksrare-collections-api
@@ -100,17 +104,17 @@ collections:
   slug: open-looksrare-tokens-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/looksrare/refs/heads/main/agentic-access/looksrare-agentic-access.yml
+  href: https://artifacts.apis.io/looksrare/agentic-access/looksrare-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/looksrare-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/looksrare/refs/heads/main/security/looksrare-domain-security.yml
+  href: https://artifacts.apis.io/looksrare/security/looksrare-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/looksrare-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/looksrare/refs/heads/main/authentication/looksrare-authentication.yml
+  href: https://artifacts.apis.io/looksrare/authentication/looksrare-authentication.yml
   title: ''
   type: Authentication
   url: authentication/looksrare-authentication.yml
@@ -159,22 +163,22 @@ common:
   type: ProtocolDocs
   url: https://docs.looksrare.org/developers/protocol/looksrare-v2-protocol-overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/looksrare/refs/heads/main/plans/looksrare-plans-pricing.yml
+  href: https://artifacts.apis.io/looksrare/plans/looksrare-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/looksrare-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/looksrare/refs/heads/main/rate-limits/looksrare-rate-limits.yml
+  href: https://artifacts.apis.io/looksrare/rate-limits/looksrare-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/looksrare-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/looksrare/refs/heads/main/finops/looksrare-finops.yml
+  href: https://artifacts.apis.io/looksrare/finops/looksrare-finops.yml
   title: ''
   type: FinOps
   url: finops/looksrare-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/looksrare/refs/heads/main/json-ld/looksrare.jsonld
+  href: https://artifacts.apis.io/looksrare/json-ld/looksrare.jsonld
   title: ''
   type: JSONLD
   url: json-ld/looksrare.jsonld
@@ -195,10 +199,6 @@ jsonld:
   property_count: 5
   slug: looksrare
 layout: provider
-mcp_servers:
-- description: Remote MCP server at looksrare.dev over HTTP.
-  name: LooksRare MCP Server
-  slug: looksrare
 modified: '2026-06-13'
 name: LooksRare
 nav: Providers
@@ -206,7 +206,7 @@ network: true
 overview: 'LooksRare publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Collections API, Events API, Orders API, and 5 more. Tagged areas include NFT, Marketplace, Ethereum, Web3, and Order.
 
 
-  The LooksRare catalog on APIs.io includes 1 JSON-LD context.
+  The LooksRare catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   LooksRare''s developer surface includes authentication, documentation, developer portal, changelog, engineering blog, and 13 more developer resources.'
@@ -214,30 +214,43 @@ plans:
 - name: Looksrare Plans Pricing
   plan_count: 2
   slug: looksrare-plans-pricing
-random_paper: 10
+random_paper: 18
 rate_limits:
 - limit_count: 4
   name: Looksrare Rate Limits
   slug: looksrare-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: LooksRare API Rules
+  rule_count: 65
+  severity_counts:
+    error: 63
+    hint: 0
+    info: 1
+    warn: 1
+  slug: looksrare-rules
 score:
   band: thin
-  composite: 33.2
+  composite: 35.8
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 50.0
+    artifact_dirs: 17
+    catalog_earned: 54.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 65.0
+    catalog_gap: 60.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 1.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 57.3
     developer_ergonomics: 45.2
     discoverability: 68.3
-    operational_transparency: 18.4
-  previous_composite: 40.1
+    operational_transparency: 26.3
+  previous_composite: 34.8
   provenance:
     agentic_access: derived
     contracts:
@@ -252,13 +265,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/looksrare/refs/heads/main/screenshots/looksrare-2026-06-20T184713.png
+screenshot: https://apis.io/screenshots/looksrare/looksrare-2026-06-20T184713.png
 security:
 - kind: authentication
   name: Looksrare Authentication

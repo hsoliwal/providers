@@ -1,11 +1,11 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   gated: partner
   gated_source:
   - tag:Partner Gated
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -30,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -38,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: 'CCC''s only publicly named API product. Secure Share is described by CCC as "a network using cloud-based APIs to permit more than 22,000 collision repairers to connect to apps using the CIECA BMS data '
@@ -129,62 +132,62 @@ common:
   type: Login
   url: https://connect.cccis.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/llms/ccc-intelligent-solutions-llms.txt
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/llms/ccc-intelligent-solutions-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ccc-intelligent-solutions-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/well-known/ccc-intelligent-solutions-well-known.yml
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/well-known/ccc-intelligent-solutions-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ccc-intelligent-solutions-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/authentication/ccc-intelligent-solutions-authentication.yml
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/authentication/ccc-intelligent-solutions-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ccc-intelligent-solutions-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/scopes/ccc-intelligent-solutions-scopes.yml
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/scopes/ccc-intelligent-solutions-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/ccc-intelligent-solutions-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/conformance/ccc-intelligent-solutions-conformance.yml
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/conformance/ccc-intelligent-solutions-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ccc-intelligent-solutions-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/errors/ccc-intelligent-solutions-problem-types.yml
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/errors/ccc-intelligent-solutions-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ccc-intelligent-solutions-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/lifecycle/ccc-intelligent-solutions-lifecycle.yml
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/lifecycle/ccc-intelligent-solutions-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ccc-intelligent-solutions-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/conventions/ccc-intelligent-solutions-conventions.yml
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/conventions/ccc-intelligent-solutions-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ccc-intelligent-solutions-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/packages/ccc-intelligent-solutions-packages.yml
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/packages/ccc-intelligent-solutions-packages.yml
   title: ''
   type: Packages
   url: packages/ccc-intelligent-solutions-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/security/ccc-intelligent-solutions-domain-security.yml
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/security/ccc-intelligent-solutions-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ccc-intelligent-solutions-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/security/ccc-intelligent-solutions-trust-center.yml
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/security/ccc-intelligent-solutions-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/ccc-intelligent-solutions-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/security/ccc-intelligent-solutions-security-policy.yml
+  href: https://artifacts.apis.io/ccc-intelligent-solutions/security/ccc-intelligent-solutions-security-policy.yml
   title: ''
   type: Security
   url: security/ccc-intelligent-solutions-security-policy.yml
@@ -201,7 +204,7 @@ overview: 'CCC Intelligent Solutions is listed with 3 APIs on the [APIs.io](http
 
 
   CCC Intelligent Solutions'' developer surface includes documentation, engineering blog, support, signup flow, authentication, and 26 more developer resources.'
-random_paper: 4
+random_paper: 10
 scopes:
 - name: Ccc Intelligent Solutions Scopes
   scope_count: 9
@@ -209,17 +212,17 @@ scopes:
   summary_line: 9 scopes · authorizationCode/implicit/deviceCode/clientCredentials
 score:
   band: thin
-  composite: 30.6
+  composite: 32.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.6
   facets:
-    access_clarity: 42.1
+    access_clarity: 50.0
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
@@ -241,14 +244,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 41.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ccc-intelligent-solutions/refs/heads/main/screenshots/ccc-intelligent-solutions-2026-07-25T204826.png
+screenshot: https://apis.io/screenshots/ccc-intelligent-solutions/ccc-intelligent-solutions-2026-07-25T204826.png
 security:
 - kind: authentication
   name: Ccc Intelligent Solutions Authentication
@@ -273,6 +276,7 @@ tags:
 - Insurtech
 - Claims Technology
 - CIECA
+- OAuth
 - Authentication
 website: https://www.cccis.com/
 ---

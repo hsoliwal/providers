@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: verified
     mcp_server: false
-    openapi_examples: verified
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.4
-  scored_at: '2026-10-17'
+  score: 35.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 1
@@ -85,11 +91,38 @@ apis:
   description: Operations for managing Athena work groups
   name: Amazon Athena Work Groups API
   slug: amazon-athena-work-groups-api
-artifact_total: 349
+- baseURL: https://athena.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Athena Calculation Execution API from Amazon Athena — 4 operation(s) for athena calculation execution.
+  name: Amazon Athena Athena Calculation Execution API
+  slug: amazon-athena-calculation-execution-api
+- baseURL: https://athena.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Athena Capacity Reservation API from Amazon Athena — 6 operation(s) for athena capacity reservation.
+  name: Amazon Athena Athena Capacity Reservation API
+  slug: amazon-athena-capacity-reservation-api
+- baseURL: https://athena.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Athena Notebook API from Amazon Athena — 5 operation(s) for athena notebook.
+  name: Amazon Athena Athena Notebook API
+  slug: amazon-athena-notebook-api
+- baseURL: https://athena.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Athena Notebook Metadata API from Amazon Athena — 3 operation(s) for athena notebook metadata.
+  name: Amazon Athena Athena Notebook Metadata API
+  slug: amazon-athena-notebook-metadata-api
+- baseURL: https://athena.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Athena Operations API from Amazon Athena — 17 operation(s) for athena operations.
+  name: Amazon Athena Athena Operations API
+  slug: amazon-athena-operations-api
+- baseURL: https://athena.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Athena Session API from Amazon Athena — 3 operation(s) for athena session.
+  name: Amazon Athena Athena Session API
+  slug: amazon-athena-session-api
+artifact_total: 354
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Amazon Athena Data Catalogs API
   slug: open-amazon-athena-data-catalogs-api
@@ -118,18 +151,23 @@ collections:
   name: Amazon Athena API
   slug: open-amazon-athena
 common:
+- group: other
+  href: https://artifacts.apis.io/amazon-athena/capabilities/amazon-athena-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-athena-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-athena/refs/heads/main/plans/amazon-athena-plans-pricing.yml
+  href: https://artifacts.apis.io/amazon-athena/plans/amazon-athena-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/amazon-athena-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-athena/refs/heads/main/rate-limits/amazon-athena-rate-limits.yml
+  href: https://artifacts.apis.io/amazon-athena/rate-limits/amazon-athena-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/amazon-athena-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-athena/refs/heads/main/finops/amazon-athena-finops.yml
+  href: https://artifacts.apis.io/amazon-athena/finops/amazon-athena-finops.yml
   title: ''
   type: FinOps
   url: finops/amazon-athena-finops.yml
@@ -138,22 +176,22 @@ common:
   type: Website
   url: https://aws.amazon.com/athena/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-athena/refs/heads/main/agentic-access/amazon-athena-agentic-access.yml
+  href: https://artifacts.apis.io/amazon-athena/agentic-access/amazon-athena-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amazon-athena-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-athena/refs/heads/main/security/amazon-athena-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-athena/security/amazon-athena-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-athena-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-athena/refs/heads/main/security/amazon-athena-domain-security.yml
+  href: https://artifacts.apis.io/amazon-athena/security/amazon-athena-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-athena-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-athena/refs/heads/main/authentication/amazon-athena-authentication.yml
+  href: https://artifacts.apis.io/amazon-athena/authentication/amazon-athena-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amazon-athena-authentication.yml
@@ -1088,18 +1126,18 @@ modified: '2026-09-16'
 name: Amazon Athena
 nav: Providers
 network: true
-overview: 'Amazon Athena publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data Catalogs API, Databases API, Named Queries API, and 5 more. Tagged areas include Amazon Athena, SQL, Analytics, and Serverless.
+overview: 'Amazon Athena publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data Catalogs API, Databases API, Named Queries API, and 11 more. Tagged areas include Amazon Athena, SQL, Analytics, Serverless, and Amazon Web Services.
 
 
   The Amazon Athena catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon Athena''s developer surface includes authentication and 7 more developer resources.'
+  Amazon Athena''s developer surface includes authentication and 8 more developer resources.'
 plans:
 - name: Amazon Athena Plans Pricing
   plan_count: 1
   slug: amazon-athena-plans-pricing
-random_paper: 18
+random_paper: 20
 rate_limits:
 - limit_count: 2
   name: Amazon Athena Rate Limits
@@ -1130,43 +1168,43 @@ rules:
   slug: amazon-athena-spectral-rules
 score:
   band: thin
-  composite: 30.4
+  composite: 34.1
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 62.0
+    artifact_dirs: 21
+    catalog_earned: 67.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 53.0
+    catalog_gap: 48.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 1.1
   facets:
     access_clarity: 5.3
     contract_governance: 27.3
-    contract_quality: 67.6
+    contract_quality: 69.0
     developer_ergonomics: 11.9
-    discoverability: 57.1
-    operational_transparency: 5.3
-  previous_composite: 36.4
+    discoverability: 66.1
+    operational_transparency: 15.8
+  previous_composite: 33.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 8
+      marker_coverage: 42.9
+      total: 14
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/amazon-athena/refs/heads/main/screenshots/amazon-athena-2026-06-20T171608.png
+    score: 11.1
+screenshot: https://apis.io/screenshots/amazon-athena/amazon-athena-2026-06-20T171608.png
 security:
 - kind: authentication
   name: Amazon Athena Authentication
@@ -1186,6 +1224,7 @@ tags:
 - SQL
 - Analytics
 - Serverless
+- Amazon Web Services
 use_cases:
 - Analyze log files and clickstream data stored in S3
 - Run ad-hoc SQL queries on data lake without ETL

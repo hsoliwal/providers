@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-10-17'
+  score: 20.4
+  scored_at: '2026-11-06'
 api_count: 15
 apis:
 - baseURL: https://companyabc.threatconnect.com
@@ -104,62 +118,62 @@ apis:
 artifact_total: 25
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/vendors/threatconnect-vendors.yml
+  href: https://artifacts.apis.io/threatconnect/vendors/threatconnect-vendors.yml
   title: ''
   type: Vendors
   url: vendors/threatconnect-vendors.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/rules/threatconnect-rules.yml
+  href: https://artifacts.apis.io/threatconnect/rules/threatconnect-rules.yml
   title: ''
   type: Spectral
   url: rules/threatconnect-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/json-ld/threatconnect-context.jsonld
+  href: https://artifacts.apis.io/threatconnect/json-ld/threatconnect-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/threatconnect-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/vocabulary/threatconnect-vocabulary.yml
+  href: https://artifacts.apis.io/threatconnect/vocabulary/threatconnect-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/threatconnect-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/data-model/threatconnect-data-model.yml
+  href: https://artifacts.apis.io/threatconnect/data-model/threatconnect-data-model.yml
   title: ''
   type: DataModel
   url: data-model/threatconnect-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/changelog/threatconnect-changelog.yml
+  href: https://artifacts.apis.io/threatconnect/changelog/threatconnect-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/threatconnect-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/conventions/threatconnect-conventions.yml
+  href: https://artifacts.apis.io/threatconnect/conventions/threatconnect-conventions.yml
   title: ''
   type: Conventions
   url: conventions/threatconnect-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/authentication/threatconnect-authentication.yml
+  href: https://artifacts.apis.io/threatconnect/authentication/threatconnect-authentication.yml
   title: ''
   type: Authentication
   url: authentication/threatconnect-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/conformance/threatconnect-conformance.yml
+  href: https://artifacts.apis.io/threatconnect/conformance/threatconnect-conformance.yml
   title: ''
   type: Conformance
   url: conformance/threatconnect-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/hosts/threatconnect-hosts.yml
+  href: https://artifacts.apis.io/threatconnect/hosts/threatconnect-hosts.yml
   title: ''
   type: Hosts
   url: hosts/threatconnect-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/packages/threatconnect-packages.yml
+  href: https://artifacts.apis.io/threatconnect/packages/threatconnect-packages.yml
   title: ''
   type: SDKs
   url: packages/threatconnect-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/packages/threatconnect-packages.yml
+  href: https://artifacts.apis.io/threatconnect/packages/threatconnect-packages.yml
   title: ''
   type: Packages
   url: packages/threatconnect-packages.yml
@@ -172,7 +186,7 @@ common:
   type: Documentation
   url: https://docs.threatconnect.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/threatconnect/refs/heads/main/security/threatconnect-domain-security.yml
+  href: https://artifacts.apis.io/threatconnect/security/threatconnect-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/threatconnect-domain-security.yml
@@ -222,7 +236,7 @@ overview: 'ThreatConnect is listed with 15 APIs on the [APIs.io](https://apis.io
 
 
   ThreatConnect''s developer surface includes changelog, authentication, getting-started guide, documentation, and 11 more developer resources.'
-random_paper: 8
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -237,26 +251,28 @@ rules:
     warn: 2
   slug: threatconnect-rules
 score:
-  band: thin
-  composite: 26.2
+  band: emerging
+  composite: 23.9
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 63.8
     catalog_earned_first_party: 0.0
     catalog_gap: 51.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.1
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
-    contract_quality: 28.4
-    developer_ergonomics: 40.5
+    contract_quality: 27.6
+    developer_ergonomics: 29.8
     discoverability: 67.9
     operational_transparency: 15.8
+  previous_composite: 26.0
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 16
       marker_coverage: 100.0
       total: 16
@@ -267,11 +283,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/threatconnect/threatconnect-2026-11-03T144706.png
 security:
 - kind: authentication
   name: Threatconnect Authentication

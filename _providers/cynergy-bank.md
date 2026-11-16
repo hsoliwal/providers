@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-10-17'
+  score: 36.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -184,95 +190,95 @@ apis:
   description: The Transactions API from Cynergy Bank — 2 operation(s) for transactions.
   name: Cynergy Bank Transactions API
   slug: cynergy-bank-transactions-api
-artifact_total: 32
+artifact_total: 36
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/capabilities/cynergy-bank-capability-edges.yml
+  href: https://artifacts.apis.io/cynergy-bank/capabilities/cynergy-bank-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cynergy-bank-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/overlays/cynergy-bank-account-information-overlay.yaml
+  href: https://artifacts.apis.io/cynergy-bank/overlays/cynergy-bank-account-information-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/cynergy-bank-account-information-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/overlays/cynergy-bank-payment-initiation-overlay.yaml
+  href: https://artifacts.apis.io/cynergy-bank/overlays/cynergy-bank-payment-initiation-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/cynergy-bank-payment-initiation-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/overlays/cynergy-bank-confirmation-of-funds-overlay.yaml
+  href: https://artifacts.apis.io/cynergy-bank/overlays/cynergy-bank-confirmation-of-funds-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/cynergy-bank-confirmation-of-funds-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/agentic-access/cynergy-bank-agentic-access.yml
+  href: https://artifacts.apis.io/cynergy-bank/agentic-access/cynergy-bank-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cynergy-bank-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/conventions/cynergy-bank-conventions.yml
+  href: https://artifacts.apis.io/cynergy-bank/conventions/cynergy-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cynergy-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/conventions/cynergy-bank-conventions.yml
+  href: https://artifacts.apis.io/cynergy-bank/conventions/cynergy-bank-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/cynergy-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/errors/cynergy-bank-problem-types.yml
+  href: https://artifacts.apis.io/cynergy-bank/errors/cynergy-bank-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cynergy-bank-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/conformance/cynergy-bank-conformance.yml
+  href: https://artifacts.apis.io/cynergy-bank/conformance/cynergy-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cynergy-bank-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/lifecycle/cynergy-bank-lifecycle.yml
+  href: https://artifacts.apis.io/cynergy-bank/lifecycle/cynergy-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cynergy-bank-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/data-model/cynergy-bank-data-model.yml
+  href: https://artifacts.apis.io/cynergy-bank/data-model/cynergy-bank-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cynergy-bank-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/llms/cynergy-bank-llms.txt
+  href: https://artifacts.apis.io/cynergy-bank/llms/cynergy-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cynergy-bank-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/cynergy-bank/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/mcp/cynergy-bank-mcp.yml
+  href: https://artifacts.apis.io/cynergy-bank/mcp/cynergy-bank-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/cynergy-bank-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/mcp/cynergy-bank-tool-crosswalk.yml
+  href: https://artifacts.apis.io/cynergy-bank/mcp/cynergy-bank-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/cynergy-bank-tool-crosswalk.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/security/cynergy-bank-domain-security.yml
+  href: https://artifacts.apis.io/cynergy-bank/security/cynergy-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cynergy-bank-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/scopes/cynergy-bank-scopes.yml
+  href: https://artifacts.apis.io/cynergy-bank/scopes/cynergy-bank-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cynergy-bank-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/authentication/cynergy-bank-authentication.yml
+  href: https://artifacts.apis.io/cynergy-bank/authentication/cynergy-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cynergy-bank-authentication.yml
@@ -323,8 +329,24 @@ network: true
 overview: 'Cynergy Bank publishes 28 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 25 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
+  The Cynergy Bank catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Cynergy Bank''s developer surface includes authentication, documentation, support, and 24 more developer resources.'
-random_paper: 16
+random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Cynergy Bank API Rules
+  rule_count: 59
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 5
+  slug: cynergy-bank-rules
 scopes:
 - name: Cynergy Bank Scopes
   scope_count: 3
@@ -332,18 +354,18 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 32.8
+  composite: 34.5
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 35.0
+    artifact_dirs: 20
+    catalog_earned: 39.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.0
     developer_ergonomics: 28.0
     discoverability: 69.6
@@ -356,7 +378,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 32.8
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -379,13 +401,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 37.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cynergy-bank/refs/heads/main/screenshots/cynergy-bank-2026-07-25T211048.png
+screenshot: https://apis.io/screenshots/cynergy-bank/cynergy-bank-2026-07-25T211048.png
 security:
 - kind: authentication
   name: Cynergy Bank Authentication
@@ -395,6 +417,14 @@ security:
   name: Cynergy Bank Domain Security
   slug: cynergy-bank-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Access Cynergy Bank account & transaction information
+  slug: cynergy-bank-account-information-access
+- name: Confirm funds availability via Cynergy Bank (CBPII)
+  slug: cynergy-bank-confirm-funds
+- name: Initiate a domestic payment via Cynergy Bank
+  slug: cynergy-bank-initiate-domestic-payment
 slug: cynergy-bank
 tags:
 - Financial Services

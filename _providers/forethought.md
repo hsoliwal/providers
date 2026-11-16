@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Paid · Self-serve signup
-  onboarding: self-serve
+  confidence: medium
+  label: Paid
+  onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-10-17'
+  score: 20.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -59,11 +63,8 @@ apis:
   description: Predict labels for customer-support tickets.
   name: Forethought Predictions API
   slug: forethought-predictions-api
-artifact_total: 61
+artifact_total: 60
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Forethought Solve Conversations API
   slug: open-forethought-conversations-api
@@ -81,27 +82,27 @@ collections:
   slug: open-forethought-triage-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/forethought/refs/heads/main/capabilities/forethought-capability-edges.yml
+  href: https://artifacts.apis.io/forethought/capabilities/forethought-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/forethought-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/forethought/refs/heads/main/agentic-access/forethought-agentic-access.yml
+  href: https://artifacts.apis.io/forethought/agentic-access/forethought-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/forethought-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/forethought/refs/heads/main/security/forethought-trust-center.yml
+  href: https://artifacts.apis.io/forethought/security/forethought-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/forethought-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/forethought/refs/heads/main/security/forethought-domain-security.yml
+  href: https://artifacts.apis.io/forethought/security/forethought-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/forethought-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/forethought/refs/heads/main/authentication/forethought-authentication.yml
+  href: https://artifacts.apis.io/forethought/authentication/forethought-authentication.yml
   title: ''
   type: Authentication
   url: authentication/forethought-authentication.yml
@@ -130,17 +131,17 @@ common:
   type: Pricing
   url: https://forethought.ai/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/forethought/refs/heads/main/plans/forethought-plans-pricing.yml
+  href: https://artifacts.apis.io/forethought/plans/forethought-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/forethought-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/forethought/refs/heads/main/rate-limits/forethought-rate-limits.yml
+  href: https://artifacts.apis.io/forethought/rate-limits/forethought-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/forethought-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/forethought/refs/heads/main/finops/forethought-finops.yml
+  href: https://artifacts.apis.io/forethought/finops/forethought-finops.yml
   title: ''
   type: FinOps
   url: finops/forethought-finops.yml
@@ -309,7 +310,7 @@ plans:
 - name: Forethought Plans Pricing
   plan_count: 6
   slug: forethought-plans-pricing
-random_paper: 11
+random_paper: 23
 rate_limits:
 - limit_count: 0
   name: Forethought Rate Limits
@@ -342,13 +343,13 @@ score:
   band: thin
   composite: 38.3
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 56.5
     catalog_earned_first_party: 0.0
     catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.4
+  delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 13.6
@@ -363,7 +364,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 42.7
+  previous_composite: 38.3
   provenance:
     agentic_access: derived
     contracts:
@@ -377,13 +378,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 20.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/forethought/refs/heads/main/screenshots/forethought-2026-06-20T181426.png
+screenshot: https://apis.io/screenshots/forethought/forethought-2026-06-20T181426.png
 security:
 - kind: authentication
   name: Forethought Authentication

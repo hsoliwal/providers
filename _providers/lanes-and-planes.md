@@ -7,6 +7,7 @@ access_model:
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The External API (ExtAPI) is named in the company's own llms.txt as the integration surface used to synchronize employee and organizational data from HRIS and identity systems that lack a native conne
@@ -114,27 +118,27 @@ common:
   type: Compliance
   url: https://trust.lanes-planes.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lanes-and-planes/refs/heads/main/llms/lanes-and-planes-llms.txt
+  href: https://artifacts.apis.io/lanes-and-planes/llms/lanes-and-planes-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lanes-and-planes-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lanes-and-planes/refs/heads/main/authentication/lanes-and-planes-authentication.yml
+  href: https://artifacts.apis.io/lanes-and-planes/authentication/lanes-and-planes-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lanes-and-planes-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lanes-and-planes/refs/heads/main/conformance/lanes-and-planes-conformance.yml
+  href: https://artifacts.apis.io/lanes-and-planes/conformance/lanes-and-planes-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lanes-and-planes-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lanes-and-planes/refs/heads/main/security/lanes-and-planes-domain-security.yml
+  href: https://artifacts.apis.io/lanes-and-planes/security/lanes-and-planes-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lanes-and-planes-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lanes-and-planes/refs/heads/main/security/lanes-and-planes-trust-center.yml
+  href: https://artifacts.apis.io/lanes-and-planes/security/lanes-and-planes-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/lanes-and-planes-trust-center.yml
@@ -151,12 +155,12 @@ overview: 'Lanes & Planes is listed with 1 API on the [APIs.io](https://apis.io/
 
 
   Lanes & Planes'' developer surface includes documentation, support, engineering blog, pricing, signup flow, authentication, and 17 more developer resources.'
-random_paper: 9
+random_paper: 11
 score:
   band: thin
   composite: 29.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -191,14 +195,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lanes-and-planes/refs/heads/main/screenshots/lanes-and-planes-2026-07-25T224513.png
+screenshot: https://apis.io/screenshots/lanes-and-planes/lanes-and-planes-2026-07-25T224513.png
 security:
 - kind: authentication
   name: Lanes And Planes Authentication

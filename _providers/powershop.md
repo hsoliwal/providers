@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -90,7 +96,7 @@ apis:
   description: Energy Plan endpoints
   name: Powershop Energy Plans API
   slug: powershop-energy-plans-api
-artifact_total: 15
+artifact_total: 19
 collections:
 - collection_type: open
   name: CDR Common API
@@ -100,57 +106,57 @@ collections:
   slug: open-powershop-cdr-energy-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/capabilities/powershop-capability-edges.yml
+  href: https://artifacts.apis.io/powershop/capabilities/powershop-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/powershop-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/skills/powershop-lookup-energy-plans.md
+  href: https://artifacts.apis.io/powershop/skills/powershop-lookup-energy-plans.md
   title: ''
   type: AgentSkill
   url: skills/powershop-lookup-energy-plans.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/skills/powershop-check-cdr-status.md
+  href: https://artifacts.apis.io/powershop/skills/powershop-check-cdr-status.md
   title: ''
   type: AgentSkill
   url: skills/powershop-check-cdr-status.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/skills/powershop-share-consumer-energy-data.md
+  href: https://artifacts.apis.io/powershop/skills/powershop-share-consumer-energy-data.md
   title: ''
   type: AgentSkill
   url: skills/powershop-share-consumer-energy-data.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/agentic-access/powershop-agentic-access.yml
+  href: https://artifacts.apis.io/powershop/agentic-access/powershop-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/powershop-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/security/powershop-domain-security.yml
+  href: https://artifacts.apis.io/powershop/security/powershop-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/powershop-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/authentication/powershop-authentication.yml
+  href: https://artifacts.apis.io/powershop/authentication/powershop-authentication.yml
   title: ''
   type: Authentication
   url: authentication/powershop-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/scopes/powershop-scopes.yml
+  href: https://artifacts.apis.io/powershop/scopes/powershop-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/powershop-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/conventions/powershop-conventions.yml
+  href: https://artifacts.apis.io/powershop/conventions/powershop-conventions.yml
   title: ''
   type: Conventions
   url: conventions/powershop-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/errors/powershop-problem-types.yml
+  href: https://artifacts.apis.io/powershop/errors/powershop-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/powershop-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/lifecycle/powershop-lifecycle.yml
+  href: https://artifacts.apis.io/powershop/lifecycle/powershop-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/powershop-lifecycle.yml
@@ -163,47 +169,47 @@ common:
   type: Deprecation
   url: https://consumerdatastandardsaustralia.github.io/standards/#versioning
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/changelog/powershop-changelog.yml
+  href: https://artifacts.apis.io/powershop/changelog/powershop-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/powershop-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/conformance/powershop-conformance.yml
+  href: https://artifacts.apis.io/powershop/conformance/powershop-conformance.yml
   title: ''
   type: Conformance
   url: conformance/powershop-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/data-model/powershop-data-model.yml
+  href: https://artifacts.apis.io/powershop/data-model/powershop-data-model.yml
   title: ''
   type: DataModel
   url: data-model/powershop-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/mcp/powershop-mcp.yml
+  href: https://artifacts.apis.io/powershop/mcp/powershop-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/powershop-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/powershop/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/llms/powershop-llms.txt
+  href: https://artifacts.apis.io/powershop/llms/powershop-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/powershop-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/overlays/powershop-cdr-energy-api-overlay.yaml
+  href: https://artifacts.apis.io/powershop/overlays/powershop-cdr-energy-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/powershop-cdr-energy-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/overlays/powershop-cdr-common-api-overlay.yaml
+  href: https://artifacts.apis.io/powershop/overlays/powershop-cdr-common-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/powershop-cdr-common-api-overlay.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/packages/powershop-packages.yml
+  href: https://artifacts.apis.io/powershop/packages/powershop-packages.yml
   title: ''
   type: Packages
   url: packages/powershop-packages.yml
@@ -279,8 +285,24 @@ network: true
 overview: 'Powershop publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data Holder Customers API, Data Holder Operations API, Distributed Energy Resources API, and 6 more. Tagged areas include Energy, Australia, Utilities, Electricity, and Gas.
 
 
+  The Powershop catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Powershop''s developer surface includes authentication, changelog, API reference, support, engineering blog, pricing, signup flow, and 30 more developer resources.'
-random_paper: 9
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Powershop API Rules
+  rule_count: 66
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 1
+    warn: 8
+  slug: powershop-rules
 scopes:
 - name: Powershop Scopes
   scope_count: 11
@@ -288,18 +310,18 @@ scopes:
   summary_line: 11 scopes
 score:
   band: developing
-  composite: 43.0
+  composite: 44.6
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 44.7
     developer_ergonomics: 37.5
     discoverability: 66.1
@@ -311,7 +333,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 43.0
+  previous_composite: 44.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -328,13 +350,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 34.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/powershop/refs/heads/main/screenshots/powershop-2026-08-17T124837.png
+screenshot: https://apis.io/screenshots/powershop/powershop-2026-08-17T124837.png
 security:
 - kind: authentication
   name: Powershop Authentication
@@ -344,6 +366,14 @@ security:
   name: Powershop Domain Security
   slug: powershop-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Check Powershop CDR availability before sharing data
+  slug: powershop-check-cdr-status
+- name: Look up Powershop energy plans (CDR Generic Tariff)
+  slug: powershop-lookup-energy-plans
+- name: Share Powershop consumer energy data as an accredited data recipient
+  slug: powershop-share-consumer-energy-data
 slug: powershop
 tags:
 - Energy

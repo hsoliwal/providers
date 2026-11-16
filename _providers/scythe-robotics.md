@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,27 +36,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/scythe-robotics/refs/heads/main/llms/scythe-robotics-llms.txt
+  href: https://artifacts.apis.io/scythe-robotics/llms/scythe-robotics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/scythe-robotics-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/scythe-robotics/refs/heads/main/hosts/scythe-robotics-hosts.yml
+  href: https://artifacts.apis.io/scythe-robotics/hosts/scythe-robotics-hosts.yml
   title: ''
   type: Hosts
   url: hosts/scythe-robotics-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/scythe-robotics/refs/heads/main/vendors/scythe-robotics-vendors.yml
+  href: https://artifacts.apis.io/scythe-robotics/vendors/scythe-robotics-vendors.yml
   title: ''
   type: Vendors
   url: vendors/scythe-robotics-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/scythe-robotics/refs/heads/main/security/scythe-robotics-domain-security.yml
+  href: https://artifacts.apis.io/scythe-robotics/security/scythe-robotics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/scythe-robotics-domain-security.yml
@@ -86,24 +99,26 @@ overview: 'Scythe Robotics is profiled on the [APIs.io](https://apis.io/) networ
 
 
   Scythe Robotics'' developer surface includes engineering blog, documentation, support, and 6 more developer resources.'
-random_paper: 8
+random_paper: 10
 score:
   band: minimal
-  composite: 10.2
+  composite: 7.2
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.0
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 16.7
+    developer_ergonomics: 8.3
     discoverability: 55.4
     operational_transparency: 0.0
+  previous_composite: 10.2
   provenance:
     mcp: unknown
   regulatory:
@@ -111,13 +126,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 7.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/scythe-robotics/scythe-robotics-2026-11-03T142859.png
 security:
 - kind: domain-security
   name: Scythe Robotics Domain Security

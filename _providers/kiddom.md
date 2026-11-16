@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Kiddom is a certified 1EdTech LTI Advantage 1.3 Tool (Assignment and Grade Services 2.0, Names and Role Provisioning Services 2.0, Deep Linking 2.0). The publicly reachable surface is the OIDC third-p
@@ -84,47 +87,47 @@ common:
   type: Compliance
   url: https://site.imsglobal.org/certifications/kiddom-inc/kiddom
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kiddom/refs/heads/main/llms/kiddom-llms.txt
+  href: https://artifacts.apis.io/kiddom/llms/kiddom-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kiddom-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kiddom/refs/heads/main/conformance/kiddom-conformance.yml
+  href: https://artifacts.apis.io/kiddom/conformance/kiddom-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kiddom-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kiddom/refs/heads/main/lifecycle/kiddom-lifecycle.yml
+  href: https://artifacts.apis.io/kiddom/lifecycle/kiddom-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kiddom-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kiddom/refs/heads/main/authentication/kiddom-authentication.yml
+  href: https://artifacts.apis.io/kiddom/authentication/kiddom-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kiddom-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kiddom/refs/heads/main/security/kiddom-domain-security.yml
+  href: https://artifacts.apis.io/kiddom/security/kiddom-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kiddom-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kiddom/refs/heads/main/packages/kiddom-packages.yml
+  href: https://artifacts.apis.io/kiddom/packages/kiddom-packages.yml
   title: ''
   type: Packages
   url: packages/kiddom-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kiddom/refs/heads/main/plans/kiddom-plans-pricing.yml
+  href: https://artifacts.apis.io/kiddom/plans/kiddom-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kiddom-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kiddom/refs/heads/main/rate-limits/kiddom-rate-limits.yml
+  href: https://artifacts.apis.io/kiddom/rate-limits/kiddom-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kiddom-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kiddom/refs/heads/main/data-model/kiddom-data-model.yml
+  href: https://artifacts.apis.io/kiddom/data-model/kiddom-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kiddom-data-model.yml
@@ -158,7 +161,7 @@ plans:
 - name: Kiddom Plans Pricing
   plan_count: 0
   slug: kiddom-plans-pricing
-random_paper: 16
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Kiddom Rate Limits
@@ -167,7 +170,7 @@ score:
   band: emerging
   composite: 25.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -190,14 +193,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kiddom/refs/heads/main/screenshots/kiddom-2026-09-02T150033.png
+screenshot: https://apis.io/screenshots/kiddom/kiddom-2026-09-02T150033.png
 security:
 - kind: authentication
   name: Kiddom Authentication

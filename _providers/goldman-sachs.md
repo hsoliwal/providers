@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 9
 apis:
 - description: Part of the Marquee developer platform, the Content Services API lets institutional clients programmatically consume client-focused Goldman Sachs content and commentary across equity, fixed income, cu
@@ -78,7 +83,7 @@ common:
   type: Login
   url: https://www.goldmansachs.com/login
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/security/goldman-sachs-domain-security.yml
+  href: https://artifacts.apis.io/goldman-sachs/security/goldman-sachs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/goldman-sachs-domain-security.yml
@@ -107,57 +112,57 @@ common:
   type: Blog
   url: https://developer.gs.com/blog/posts
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/plans/goldman-sachs-plans-pricing.yml
+  href: https://artifacts.apis.io/goldman-sachs/plans/goldman-sachs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/goldman-sachs-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/rate-limits/goldman-sachs-rate-limits.yml
+  href: https://artifacts.apis.io/goldman-sachs/rate-limits/goldman-sachs-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/goldman-sachs-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/finops/goldman-sachs-finops.yml
+  href: https://artifacts.apis.io/goldman-sachs/finops/goldman-sachs-finops.yml
   title: ''
   type: FinOps
   url: finops/goldman-sachs-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/authentication/goldman-sachs-authentication.yml
+  href: https://artifacts.apis.io/goldman-sachs/authentication/goldman-sachs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/goldman-sachs-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/packages/goldman-sachs-packages.yml
+  href: https://artifacts.apis.io/goldman-sachs/packages/goldman-sachs-packages.yml
   title: ''
   type: Packages
   url: packages/goldman-sachs-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/packages/goldman-sachs-packages.yml
+  href: https://artifacts.apis.io/goldman-sachs/packages/goldman-sachs-packages.yml
   title: ''
   type: SDKs
   url: packages/goldman-sachs-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/conventions/goldman-sachs-conventions.yml
+  href: https://artifacts.apis.io/goldman-sachs/conventions/goldman-sachs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/goldman-sachs-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/conventions/goldman-sachs-conventions.yml
+  href: https://artifacts.apis.io/goldman-sachs/conventions/goldman-sachs-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/goldman-sachs-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/conformance/goldman-sachs-conformance.yml
+  href: https://artifacts.apis.io/goldman-sachs/conformance/goldman-sachs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/goldman-sachs-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/lifecycle/goldman-sachs-lifecycle.yml
+  href: https://artifacts.apis.io/goldman-sachs/lifecycle/goldman-sachs-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/goldman-sachs-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/llms/goldman-sachs-llms.txt
+  href: https://artifacts.apis.io/goldman-sachs/llms/goldman-sachs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/goldman-sachs-llms.txt
@@ -188,7 +193,7 @@ plans:
 - name: Goldman Sachs Plans Pricing
   plan_count: 2
   slug: goldman-sachs-plans-pricing
-random_paper: 15
+random_paper: 17
 rate_limits:
 - limit_count: 2
   name: Goldman Sachs Rate Limits
@@ -197,13 +202,13 @@ score:
   band: thin
   composite: 34.1
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 39.0
     catalog_earned_first_party: 0.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 22.4
     contract_governance: 4.5
@@ -218,7 +223,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 35.6
+  previous_composite: 34.1
   provenance:
     conformance: derived
   regulatory:
@@ -227,14 +232,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 21.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/screenshots/goldman-sachs-2026-06-20T181950.png
+screenshot: https://apis.io/screenshots/goldman-sachs/goldman-sachs-2026-06-20T181950.png
 security:
 - kind: authentication
   name: Goldman Sachs Authentication

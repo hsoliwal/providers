@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: human-only
   dimensions:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,16 +41,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Token-authenticated REST API for submitting Coiled batch jobs (single job scripts) to run on cloud VMs and Dask clusters.
   name: Coiled Batch REST API
   slug: coiled-batch-rest-api
-artifact_total: 5
+artifact_total: 7
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/coiled/refs/heads/main/plans/coiled-plans-pricing.yml
+  href: https://artifacts.apis.io/coiled/plans/coiled-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/coiled-plans-pricing.yml
@@ -104,37 +111,37 @@ common:
   type: ChangeLog
   url: https://docs.coiled.io/user_guide/changelog.html
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/coiled/refs/heads/main/changelog/coiled-changelog.yml
+  href: https://artifacts.apis.io/coiled/changelog/coiled-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/coiled-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coiled/refs/heads/main/authentication/coiled-authentication.yml
+  href: https://artifacts.apis.io/coiled/authentication/coiled-authentication.yml
   title: ''
   type: Authentication
   url: authentication/coiled-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coiled/refs/heads/main/conventions/coiled-conventions.yml
+  href: https://artifacts.apis.io/coiled/conventions/coiled-conventions.yml
   title: ''
   type: Conventions
   url: conventions/coiled-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/coiled/refs/heads/main/packages/coiled-packages.yml
+  href: https://artifacts.apis.io/coiled/packages/coiled-packages.yml
   title: ''
   type: Packages
   url: packages/coiled-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/coiled/refs/heads/main/packages/coiled-packages.yml
+  href: https://artifacts.apis.io/coiled/packages/coiled-packages.yml
   title: ''
   type: SDKs
   url: packages/coiled-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/coiled/refs/heads/main/cli/coiled-cli.yml
+  href: https://artifacts.apis.io/coiled/cli/coiled-cli.yml
   title: ''
   type: CLI
   url: cli/coiled-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coiled/refs/heads/main/llms/coiled-llms.txt
+  href: https://artifacts.apis.io/coiled/llms/coiled-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/coiled-llms.txt
@@ -147,12 +154,20 @@ common:
   type: Compliance
   url: https://www.coiled.io/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coiled/refs/heads/main/security/coiled-domain-security.yml
+  href: https://artifacts.apis.io/coiled/security/coiled-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coiled-domain-security.yml
 created: '2026-07-17'
 description: Coiled is a lightweight cloud compute platform that lets Python developers scale their code to thousands of cloud machines without managing Kubernetes, Docker, or infrastructure. Built by the maintainers of Dask, Coiled provisions cloud VMs and Dask clusters in a user's own AWS, GCP, or Azure account, automatically replicates the local software environment, runs the work across large clusters, and tears the resources back down when finished. It powers Dask clusters, serverless functions, batch jobs, hosted Jupyter notebooks, and interactive CLI jobs, and exposes a first-party Python client, a `coiled` command-line interface, and a token-authenticated REST API. Coiled was surfaced as a portfolio company of Bessemer Venture Partners.
+finops:
+- has_sources: true
+  method: derived
+  name: Coiled Finops
+  primary_unit: hour
+  service_category: ''
+  slug: coiled-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coiled.png
 layout: provider
 modified: '2026-07-18'
@@ -167,40 +182,43 @@ plans:
 - name: Coiled Plans Pricing
   plan_count: 10
   slug: coiled-plans-pricing
-random_paper: 8
+- name: Coiled Price Estimates
+  plan_count: 0
+  slug: coiled-price-estimates
+random_paper: 0
 score:
   band: developing
-  composite: 42.2
+  composite: 43.8
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 49.0
+    artifact_dirs: 14
+    catalog_earned: 52.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 0.0
   facets:
-    access_clarity: 85.5
+    access_clarity: 93.4
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 71.4
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 35.8
+  previous_composite: 43.8
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/coiled/refs/heads/main/screenshots/coiled-2026-07-25T210020.png
+screenshot: https://apis.io/screenshots/coiled/coiled-2026-07-25T210020.png
 security:
 - kind: authentication
   name: Coiled Authentication

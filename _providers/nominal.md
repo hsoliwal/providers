@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 8.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Nominal Core REST API (Conjure-generated) for test data storage, ingest, streaming, compute, and asset/run/checklist management.
@@ -87,62 +90,62 @@ common:
   type: Compliance
   url: https://trust.nominal.io
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/mcp/nominal-mcp.yml
+  href: https://artifacts.apis.io/nominal/mcp/nominal-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/nominal-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/llms/nominal-llms.txt
+  href: https://artifacts.apis.io/nominal/llms/nominal-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nominal-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/packages/nominal-packages.yml
+  href: https://artifacts.apis.io/nominal/packages/nominal-packages.yml
   title: ''
   type: Packages
   url: packages/nominal-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/packages/nominal-packages.yml
+  href: https://artifacts.apis.io/nominal/packages/nominal-packages.yml
   title: ''
   type: SDKs
   url: packages/nominal-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/cli/nominal-cli.yml
+  href: https://artifacts.apis.io/nominal/cli/nominal-cli.yml
   title: ''
   type: CLI
   url: cli/nominal-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/authentication/nominal-authentication.yml
+  href: https://artifacts.apis.io/nominal/authentication/nominal-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nominal-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/conventions/nominal-conventions.yml
+  href: https://artifacts.apis.io/nominal/conventions/nominal-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nominal-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/well-known/nominal-well-known.yml
+  href: https://artifacts.apis.io/nominal/well-known/nominal-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/nominal-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/conformance/nominal-conformance.yml
+  href: https://artifacts.apis.io/nominal/conformance/nominal-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nominal-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/lifecycle/nominal-lifecycle.yml
+  href: https://artifacts.apis.io/nominal/lifecycle/nominal-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nominal-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/changelog/nominal-changelog.yml
+  href: https://artifacts.apis.io/nominal/changelog/nominal-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/nominal-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/security/nominal-domain-security.yml
+  href: https://artifacts.apis.io/nominal/security/nominal-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nominal-domain-security.yml
@@ -162,18 +165,18 @@ overview: 'Nominal is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Nominal''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, CLI, authentication, and 16 more developer resources.'
-random_paper: 2
+random_paper: 6
 score:
   band: thin
   composite: 32.5
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
@@ -181,7 +184,7 @@ score:
     developer_ergonomics: 59.5
     discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 32.4
+  previous_composite: 32.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -195,14 +198,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nominal/refs/heads/main/screenshots/nominal-2026-08-07T185449.png
+screenshot: https://apis.io/screenshots/nominal/nominal-2026-08-07T185449.png
 security:
 - kind: authentication
   name: Nominal Authentication

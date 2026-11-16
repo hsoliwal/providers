@@ -1,11 +1,15 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -57,12 +64,12 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/liberate-bio/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/liberatebio/refs/heads/main/security/liberatebio-domain-security.yml
+  href: https://artifacts.apis.io/liberatebio/security/liberatebio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/liberatebio-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/liberatebio/refs/heads/main/llms/liberatebio-llms.txt
+  href: https://artifacts.apis.io/liberatebio/llms/liberatebio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/liberatebio-llms.txt
@@ -75,7 +82,7 @@ name: Liberate Bio
 nav: Providers
 network: true
 overview: Liberate Bio is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Genetic Medicine, Cell Therapy, and Oncology.
-random_paper: 10
+random_paper: 2
 score:
   band: minimal
   composite: 4.4
@@ -101,14 +108,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/liberatebio/refs/heads/main/screenshots/liberatebio-2026-07-25T225023.png
+screenshot: https://apis.io/screenshots/liberatebio/liberatebio-2026-07-25T225023.png
 security:
 - kind: domain-security
   name: Liberatebio Domain Security

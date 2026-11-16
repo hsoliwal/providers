@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-10-17'
+  score: 31.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 1
@@ -44,7 +47,7 @@ agentic_access:
   operation_count: 62
   slug: getir-agentic-access
   summary_line: 62 operations · 35 acting · 1 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://food-external-api-gateway.getirapi.com
   baseurl_source: declared
@@ -86,7 +89,7 @@ apis:
   description: Endpoints about restaurant and courier opening and closing features can be seen in the restaurants section.
   name: Getir Restaurants API
   slug: getir-restaurants-api
-artifact_total: 15
+artifact_total: 20
 asyncapis:
 - description: ''
   name: Getir Food Webhooks
@@ -97,7 +100,7 @@ collections:
   slug: open-getir-food
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/mcp/getir-mcp.yml
+  href: https://artifacts.apis.io/getir/mcp/getir-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/getir-mcp.yml
@@ -138,82 +141,82 @@ common:
   type: PrivacyPolicy
   url: https://getir.com/yardim/gizlilik-politikasi/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/authentication/getir-authentication.yml
+  href: https://artifacts.apis.io/getir/authentication/getir-authentication.yml
   title: ''
   type: Authentication
   url: authentication/getir-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/rate-limits/getir-rate-limits.yml
+  href: https://artifacts.apis.io/getir/rate-limits/getir-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/getir-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/errors/getir-error-codes.yml
+  href: https://artifacts.apis.io/getir/errors/getir-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/getir-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/asyncapi/getir-food-webhooks.yml
+  href: https://artifacts.apis.io/getir/asyncapi/getir-food-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/getir-food-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/sandbox/getir-sandbox.yml
+  href: https://artifacts.apis.io/getir/sandbox/getir-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/getir-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/conventions/getir-conventions.yml
+  href: https://artifacts.apis.io/getir/conventions/getir-conventions.yml
   title: ''
   type: Conventions
   url: conventions/getir-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/data-model/getir-data-model.yml
+  href: https://artifacts.apis.io/getir/data-model/getir-data-model.yml
   title: ''
   type: DataModel
   url: data-model/getir-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/conformance/getir-conformance.yml
+  href: https://artifacts.apis.io/getir/conformance/getir-conformance.yml
   title: ''
   type: Conformance
   url: conformance/getir-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/lifecycle/getir-lifecycle.yml
+  href: https://artifacts.apis.io/getir/lifecycle/getir-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/getir-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/changelog/getir-changelog.yml
+  href: https://artifacts.apis.io/getir/changelog/getir-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/getir-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/getir/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/packages/getir-packages.yml
+  href: https://artifacts.apis.io/getir/packages/getir-packages.yml
   title: ''
   type: Packages
   url: packages/getir-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/llms/getir-llms.txt
+  href: https://artifacts.apis.io/getir/llms/getir-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/getir-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/agentic-access/getir-agentic-access.yml
+  href: https://artifacts.apis.io/getir/agentic-access/getir-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/getir-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/security/getir-domain-security.yml
+  href: https://artifacts.apis.io/getir/security/getir-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/getir-domain-security.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/overlays/getir-food-overlay.yaml
+  href: https://artifacts.apis.io/getir/overlays/getir-food-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/getir-food-overlay.yaml
@@ -233,7 +236,7 @@ network: true
 overview: 'Getir publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Chain Menus API, Changelog API, and 5 more. Tagged areas include Company, Food Delivery, Grocery Delivery, On-Demand Delivery, and Logistics.
 
 
-  The Getir catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Getir catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Getir''s developer surface includes documentation, API reference, getting-started guide, support, authentication, sandbox, changelog, and 19 more developer resources.'
@@ -242,20 +245,33 @@ rate_limits:
 - limit_count: 3
   name: Getir Rate Limits
   slug: getir-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 82
+  extends:
+  - spectral:oas
+  name: Getir API Rules
+  rule_count: 41
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 1
+    warn: 4
+  slug: getir-rules
 score:
   band: thin
-  composite: 33.4
+  composite: 35.0
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 49.0
+    artifact_dirs: 26
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 43.2
     developer_ergonomics: 25.6
     discoverability: 71.7
@@ -268,7 +284,7 @@ score:
     regions:
     - mena
     - middle-east
-  previous_composite: 33.3
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -285,13 +301,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/getir/refs/heads/main/screenshots/getir-2026-08-07T165703.png
+screenshot: https://apis.io/screenshots/getir/getir-2026-08-07T165703.png
 security:
 - kind: authentication
   name: Getir Authentication
@@ -301,6 +317,16 @@ security:
   name: Getir Domain Security
   slug: getir-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 4
+skills:
+- name: Authenticate and read a GetirFood restaurant
+  slug: getir-authenticate-and-read-restaurant
+- name: Cancel or transfer a GetirFood order
+  slug: getir-cancel-or-transfer-order
+- name: Fulfil a GetirFood order end to end
+  slug: getir-fulfil-food-order
+- name: Manage GetirFood menu and restaurant availability
+  slug: getir-manage-menu-availability
 slug: getir
 tags:
 - Company

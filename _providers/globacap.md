@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/globacap/refs/heads/main/security/globacap-domain-security.yml
+  href: https://artifacts.apis.io/globacap/security/globacap-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/globacap-domain-security.yml
@@ -74,7 +77,7 @@ common:
   type: TrustCenter
   url: https://trust.globacap.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/globacap/refs/heads/main/security/globacap-trust-center.yml
+  href: https://artifacts.apis.io/globacap/security/globacap-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/globacap-trust-center.yml
@@ -83,42 +86,42 @@ common:
   type: SecondaryMarketListing
   url: https://www.hiive.com/securities/globacap-stock
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/globacap/refs/heads/main/well-known/globacap-well-known.yml
+  href: https://artifacts.apis.io/globacap/well-known/globacap-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/globacap-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/globacap/refs/heads/main/authentication/globacap-authentication.yml
+  href: https://artifacts.apis.io/globacap/authentication/globacap-authentication.yml
   title: ''
   type: Authentication
   url: authentication/globacap-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/globacap/refs/heads/main/scopes/globacap-scopes.yml
+  href: https://artifacts.apis.io/globacap/scopes/globacap-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/globacap-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/globacap/refs/heads/main/conformance/globacap-conformance.yml
+  href: https://artifacts.apis.io/globacap/conformance/globacap-conformance.yml
   title: ''
   type: Conformance
   url: conformance/globacap-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/globacap/refs/heads/main/lifecycle/globacap-lifecycle.yml
+  href: https://artifacts.apis.io/globacap/lifecycle/globacap-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/globacap-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/globacap/refs/heads/main/plans/globacap-plans-pricing.yml
+  href: https://artifacts.apis.io/globacap/plans/globacap-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/globacap-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/globacap/refs/heads/main/rate-limits/globacap-rate-limits.yml
+  href: https://artifacts.apis.io/globacap/rate-limits/globacap-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/globacap-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/globacap/refs/heads/main/llms/globacap-llms.txt
+  href: https://artifacts.apis.io/globacap/llms/globacap-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/globacap-llms.txt
@@ -155,7 +158,7 @@ plans:
 - name: Globacap Plans Pricing
   plan_count: 0
   slug: globacap-plans-pricing
-random_paper: 11
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Globacap Rate Limits
@@ -200,14 +203,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 38.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/globacap/refs/heads/main/screenshots/globacap-2026-09-02T145609.png
+screenshot: https://apis.io/screenshots/globacap/globacap-2026-09-02T145609.png
 security:
 - kind: authentication
   name: Globacap Authentication

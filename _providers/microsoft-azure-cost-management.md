@@ -1,15 +1,21 @@
 ---
 access_model:
   confidence: high
-  label: Freemium · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
   onboarding: self-serve
-  pricing: freemium
+  pricing: unknown
   public: false
   source:
   - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -26,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: derived
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.9
-  scored_at: '2026-10-17'
+  score: 31.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 40
   human_in_the_loop: 0
@@ -320,11 +329,8 @@ apis:
     question: How do I delete a personal cost view I no longer use?
   phrasing_ops: 4
   slug: microsoft-azure-cost-management-views-api
-artifact_total: 188
+artifact_total: 222
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Azure Cost Management REST Exports API
   slug: open-microsoft-azure-cost-management-exports-api
@@ -335,18 +341,47 @@ collections:
   name: Azure Cost Management REST API
   slug: open-microsoft-azure-cost-management
 common:
+- group: design
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/rules/microsoft-azure-cost-management-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-azure-cost-management-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/json-ld/microsoft-azure-cost-management-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/microsoft-azure-cost-management-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/vocabulary/microsoft-azure-cost-management-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/microsoft-azure-cost-management-vocabulary.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/capabilities/microsoft-azure-cost-management-capability-edges.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/hosts/microsoft-azure-cost-management-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/microsoft-azure-cost-management-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/vendors/microsoft-azure-cost-management-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/microsoft-azure-cost-management-vendors.yml
+- group: other
+  title: ''
+  type: Leadership
+  url: https://news.microsoft.com/leadership
+- group: other
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/capabilities/microsoft-azure-cost-management-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/microsoft-azure-cost-management-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/security/microsoft-azure-cost-management-trust-center.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/security/microsoft-azure-cost-management-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/microsoft-azure-cost-management-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/security/microsoft-azure-cost-management-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/security/microsoft-azure-cost-management-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/microsoft-azure-cost-management-vulnerability-disclosure.yml
@@ -355,22 +390,22 @@ common:
   type: Website
   url: https://www.microsoft.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/agentic-access/microsoft-azure-cost-management-agentic-access.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/agentic-access/microsoft-azure-cost-management-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/microsoft-azure-cost-management-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/security/microsoft-azure-cost-management-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/security/microsoft-azure-cost-management-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-azure-cost-management-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/authentication/microsoft-azure-cost-management-authentication.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/authentication/microsoft-azure-cost-management-authentication.yml
   title: ''
   type: Authentication
   url: authentication/microsoft-azure-cost-management-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/scopes/microsoft-azure-cost-management-scopes.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/scopes/microsoft-azure-cost-management-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/microsoft-azure-cost-management-scopes.yml
@@ -423,52 +458,52 @@ common:
   type: Roadmap
   url: https://azure.microsoft.com/en-us/updates/?updateType=in-development
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/packages/microsoft-azure-cost-management-packages.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/packages/microsoft-azure-cost-management-packages.yml
   title: ''
   type: Packages
   url: packages/microsoft-azure-cost-management-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/packages/microsoft-azure-cost-management-packages.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/packages/microsoft-azure-cost-management-packages.yml
   title: ''
   type: SDKs
   url: packages/microsoft-azure-cost-management-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/cli/microsoft-azure-cost-management-cli.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/cli/microsoft-azure-cost-management-cli.yml
   title: ''
   type: CLI
   url: cli/microsoft-azure-cost-management-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/well-known/microsoft-azure-cost-management-well-known.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/well-known/microsoft-azure-cost-management-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/microsoft-azure-cost-management-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/well-known/microsoft-azure-cost-management-security.txt
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/well-known/microsoft-azure-cost-management-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/microsoft-azure-cost-management-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/llms/microsoft-azure-cost-management-llms.txt
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/llms/microsoft-azure-cost-management-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/microsoft-azure-cost-management-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/conventions/microsoft-azure-cost-management-conventions.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/conventions/microsoft-azure-cost-management-conventions.yml
   title: ''
   type: Conventions
   url: conventions/microsoft-azure-cost-management-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/conventions/microsoft-azure-cost-management-conventions.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/conventions/microsoft-azure-cost-management-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/microsoft-azure-cost-management-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/errors/microsoft-azure-cost-management-problem-types.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/errors/microsoft-azure-cost-management-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/microsoft-azure-cost-management-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/lifecycle/microsoft-azure-cost-management-lifecycle.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/lifecycle/microsoft-azure-cost-management-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/microsoft-azure-cost-management-lifecycle.yml
@@ -481,52 +516,52 @@ common:
   type: Deprecation
   url: https://learn.microsoft.com/en-us/lifecycle/policies/modern
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/changelog/microsoft-azure-cost-management-changelog.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/changelog/microsoft-azure-cost-management-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/microsoft-azure-cost-management-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/conformance/microsoft-azure-cost-management-conformance.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/conformance/microsoft-azure-cost-management-conformance.yml
   title: ''
   type: Conformance
   url: conformance/microsoft-azure-cost-management-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/conformance/microsoft-azure-cost-management-conformance.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/conformance/microsoft-azure-cost-management-conformance.yml
   title: ''
   type: Compliance
   url: conformance/microsoft-azure-cost-management-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/data-model/microsoft-azure-cost-management-data-model.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/data-model/microsoft-azure-cost-management-data-model.yml
   title: ''
   type: DataModel
   url: data-model/microsoft-azure-cost-management-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/security/microsoft-azure-cost-management-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/security/microsoft-azure-cost-management-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/microsoft-azure-cost-management-vulnerability-disclosure.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/rate-limits/microsoft-azure-cost-management-rate-limits.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/rate-limits/microsoft-azure-cost-management-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/microsoft-azure-cost-management-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/plans/microsoft-azure-cost-management-plans-pricing.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/plans/microsoft-azure-cost-management-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/microsoft-azure-cost-management-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/finops/microsoft-azure-cost-management-finops.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/finops/microsoft-azure-cost-management-finops.yml
   title: ''
   type: FinOps
   url: finops/microsoft-azure-cost-management-finops.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/examples/_index.yml
+  href: https://artifacts.apis.io/microsoft-azure-cost-management/examples/_index.yml
   title: ''
   type: Examples
   url: examples/_index.yml
@@ -1014,14 +1049,110 @@ examples:
   name: Settingslist
   slug: settingsList
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Microsoft Azure Cost Management Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: microsoft-azure-cost-management-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-azure-cost-management.png
+json_schemas:
+- name: Alert
+  property_count: 2
+  slug: microsoft-azure-cost-management-alert
+- name: AlertsResult
+  property_count: 2
+  slug: microsoft-azure-cost-management-alerts-result
+- name: BenefitUtilizationSummariesOperationStatus
+  property_count: 3
+  slug: microsoft-azure-cost-management-benefit-utilization-summaries-operation-status
+- name: BenefitUtilizationSummariesRequest
+  property_count: 8
+  slug: microsoft-azure-cost-management-benefit-utilization-summaries-request
+- name: Budget
+  property_count: 2
+  slug: microsoft-azure-cost-management-budget
+- name: BudgetsListResult
+  property_count: 2
+  slug: microsoft-azure-cost-management-budgets-list-result
+- name: CostAllocationRuleDefinition
+  property_count: 1
+  slug: microsoft-azure-cost-management-cost-allocation-rule-definition
+- name: CostAllocationRuleList
+  property_count: 2
+  slug: microsoft-azure-cost-management-cost-allocation-rule-list
+- name: CostDetailsOperationResults
+  property_count: 7
+  slug: microsoft-azure-cost-management-cost-details-operation-results
+- name: DismissAlertPayload
+  property_count: 1
+  slug: microsoft-azure-cost-management-dismiss-alert-payload
+- name: ExportExecutionListResult
+  property_count: 1
+  slug: microsoft-azure-cost-management-export-execution-list-result
+- name: ExportListResult
+  property_count: 1
+  slug: microsoft-azure-cost-management-export-list-result
+- name: ExportRunRequest
+  property_count: 1
+  slug: microsoft-azure-cost-management-export-run-request
+- name: Export
+  property_count: 4
+  slug: microsoft-azure-cost-management-export
+- name: ForecastDefinition
+  property_count: 6
+  slug: microsoft-azure-cost-management-forecast-definition
+- name: GenerateCostDetailsReportRequestDefinition
+  property_count: 4
+  slug: microsoft-azure-cost-management-generate-cost-details-report-request-definition
+- name: GenerateDetailedCostReportDefinition
+  property_count: 5
+  slug: microsoft-azure-cost-management-generate-detailed-cost-report-definition
+- name: GenerateDetailedCostReportOperationResult
+  property_count: 1
+  slug: microsoft-azure-cost-management-generate-detailed-cost-report-operation-result
+- name: GenerateDetailedCostReportOperationStatuses
+  property_count: 5
+  slug: microsoft-azure-cost-management-generate-detailed-cost-report-operation-statuses
+- name: MarkupRulePagedResponse
+  property_count: 2
+  slug: microsoft-azure-cost-management-markup-rule-paged-response
+- name: MarkupRule
+  property_count: 1
+  slug: microsoft-azure-cost-management-markup-rule
+- name: OperationListResult
+  property_count: 2
+  slug: microsoft-azure-cost-management-operation-list-result
+- name: ResourceList
+  property_count: 2
+  slug: microsoft-azure-cost-management-resource-list
+- name: Resource
+  property_count: 6
+  slug: microsoft-azure-cost-management-resource
+- name: ScheduledActionListResult
+  property_count: 2
+  slug: microsoft-azure-cost-management-scheduled-action-list-result
+- name: ScheduledAction
+  property_count: 3
+  slug: microsoft-azure-cost-management-scheduled-action
+- name: Setting
+  property_count: 1
+  slug: microsoft-azure-cost-management-setting
+- name: SettingsListResult
+  property_count: 1
+  slug: microsoft-azure-cost-management-settings-list-result
+- name: ViewListResult
+  property_count: 2
+  slug: microsoft-azure-cost-management-view-list-result
+- name: View
+  property_count: 2
+  slug: microsoft-azure-cost-management-view
+jsonld:
+- class_count: 120
+  name: Microsoft Azure Cost Management Context
+  property_count: 143
+  slug: microsoft-azure-cost-management-context
 layout: provider
 modified: '2026-09-17'
 name: Azure Cost Management
@@ -1030,16 +1161,32 @@ network: true
 overview: 'Azure Cost Management publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Exports API, Operations API, Alerts API, and 12 more. Tagged areas include Cost Management, FinOps, Cloud Cost, Billing, and Budgets.
 
 
-  Azure Cost Management''s developer surface includes authentication, developer portal, pricing, support, documentation, API reference, getting-started guide, and 35 more developer resources.'
+  The Azure Cost Management catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+
+
+  Azure Cost Management''s developer surface includes authentication, developer portal, pricing, support, documentation, API reference, getting-started guide, and 41 more developer resources.'
 plans:
 - name: Microsoft Azure Cost Management Plans Pricing
   plan_count: 1
   slug: microsoft-azure-cost-management-plans-pricing
-random_paper: 16
+random_paper: 18
 rate_limits:
 - limit_count: 3
   name: Microsoft Azure Cost Management Rate Limits
   slug: microsoft-azure-cost-management-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Azure Cost Management API Rules
+  rule_count: 53
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 1
+    warn: 11
+  slug: microsoft-azure-cost-management-rules
 scopes:
 - name: Microsoft Azure Cost Management Scopes
   scope_count: 1
@@ -1047,23 +1194,23 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: exemplar
-  composite: 67.5
+  composite: 73.7
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 57.0
+    artifact_dirs: 36
+    catalog_earned: 82.8
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 32.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 4.6
   facets:
     access_clarity: 81.6
-    contract_governance: 0.0
-    contract_quality: 46.1
+    contract_governance: 22.0
+    contract_quality: 59.7
     developer_ergonomics: 73.2
-    discoverability: 73.2
+    discoverability: 75.0
     operational_transparency: 89.5
-  previous_composite: 69.0
+  previous_composite: 69.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -1080,13 +1227,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-cost-management/refs/heads/main/screenshots/microsoft-azure-cost-management-2026-06-20T185407.png
+screenshot: https://apis.io/screenshots/microsoft-azure-cost-management/microsoft-azure-cost-management-2026-06-20T185407.png
 security:
 - kind: authentication
   name: Microsoft Azure Cost Management Authentication
@@ -1104,6 +1251,14 @@ security:
   name: Microsoft Azure Cost Management Trust Center
   slug: microsoft-azure-cost-management-trust-center
   summary_line: GDPR
+skill_count: 3
+skills:
+- name: analyze-azure-costs
+  slug: microsoft-azure-cost-management-analyze-costs
+- name: schedule-focus-cost-exports
+  slug: microsoft-azure-cost-management-focus-exports
+- name: manage-azure-cost-budgets
+  slug: microsoft-azure-cost-management-manage-budgets
 slug: microsoft-azure-cost-management
 tags:
 - Cost Management

@@ -1,14 +1,21 @@
 ---
 access_model:
-  confidence: medium
-  label: Paid (free trial)
-  onboarding: unknown
-  pricing: paid
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium (free trial) · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: true
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -25,7 +32,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +43,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 35.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The CrowdStrike Falcon API — 1,463 documented operations across 128 service collections covering hosts, detections, incidents, real-time response, threat intelligence, cloud and container security, id
@@ -42,14 +52,14 @@ apis:
 - description: CrowdStrike's first-party open-source MCP server. Self-hosted (uvx/pip/Docker/Bedrock/Cloud Run) and authenticated with the operator's own Falcon API client; 166 tools across 28 modules. A separate Cr
   name: Falcon MCP Server
   slug: falcon-mcp
-artifact_total: 12
+artifact_total: 24
 asyncapis:
 - description: ''
   name: Crowdstrike Event Streams
   slug: crowdstrike-event-streams
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/finops/crowdstrike-finops.yml
+  href: https://artifacts.apis.io/crowdstrike/finops/crowdstrike-finops.yml
   title: ''
   type: FinOps
   url: finops/crowdstrike-finops.yml
@@ -118,87 +128,87 @@ common:
   type: LlmsText
   url: https://developer.crowdstrike.com/llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/llms/crowdstrike-llms.txt
+  href: https://artifacts.apis.io/crowdstrike/llms/crowdstrike-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/crowdstrike-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/packages/crowdstrike-packages.yml
+  href: https://artifacts.apis.io/crowdstrike/packages/crowdstrike-packages.yml
   title: ''
   type: Packages
   url: packages/crowdstrike-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/packages/crowdstrike-packages.yml
+  href: https://artifacts.apis.io/crowdstrike/packages/crowdstrike-packages.yml
   title: ''
   type: SDKs
   url: packages/crowdstrike-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/cli/crowdstrike-cli.yml
+  href: https://artifacts.apis.io/crowdstrike/cli/crowdstrike-cli.yml
   title: ''
   type: CLI
   url: cli/crowdstrike-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/components/crowdstrike-components.yml
+  href: https://artifacts.apis.io/crowdstrike/components/crowdstrike-components.yml
   title: ''
   type: Components
   url: components/crowdstrike-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/crowdstrike/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/mcp/crowdstrike-mcp.yml
+  href: https://artifacts.apis.io/crowdstrike/mcp/crowdstrike-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/crowdstrike-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/mcp/crowdstrike-tool-crosswalk.yml
+  href: https://artifacts.apis.io/crowdstrike/mcp/crowdstrike-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/crowdstrike-tool-crosswalk.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/authentication/crowdstrike-authentication.yml
+  href: https://artifacts.apis.io/crowdstrike/authentication/crowdstrike-authentication.yml
   title: ''
   type: Authentication
   url: authentication/crowdstrike-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/scopes/crowdstrike-scopes.yml
+  href: https://artifacts.apis.io/crowdstrike/scopes/crowdstrike-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/crowdstrike-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/conventions/crowdstrike-conventions.yml
+  href: https://artifacts.apis.io/crowdstrike/conventions/crowdstrike-conventions.yml
   title: ''
   type: Conventions
   url: conventions/crowdstrike-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/errors/crowdstrike-problem-types.yml
+  href: https://artifacts.apis.io/crowdstrike/errors/crowdstrike-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/crowdstrike-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/rate-limits/crowdstrike-rate-limits.yml
+  href: https://artifacts.apis.io/crowdstrike/rate-limits/crowdstrike-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/crowdstrike-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/plans/crowdstrike-plans-pricing.yml
+  href: https://artifacts.apis.io/crowdstrike/plans/crowdstrike-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/crowdstrike-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/lifecycle/crowdstrike-lifecycle.yml
+  href: https://artifacts.apis.io/crowdstrike/lifecycle/crowdstrike-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/crowdstrike-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/changelog/crowdstrike-changelog.yml
+  href: https://artifacts.apis.io/crowdstrike/changelog/crowdstrike-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/crowdstrike-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/conformance/crowdstrike-conformance.yml
+  href: https://artifacts.apis.io/crowdstrike/conformance/crowdstrike-conformance.yml
   title: ''
   type: Conformance
   url: conformance/crowdstrike-conformance.yml
@@ -207,12 +217,12 @@ common:
   type: Compliance
   url: https://trust.crowdstrike.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/security/crowdstrike-trust-center.yml
+  href: https://artifacts.apis.io/crowdstrike/security/crowdstrike-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/crowdstrike-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/security/crowdstrike-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/crowdstrike/security/crowdstrike-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/crowdstrike-vulnerability-disclosure.yml
@@ -221,22 +231,22 @@ common:
   type: Security
   url: https://www.crowdstrike.com/en-us/report-a-security-bug/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/well-known/crowdstrike-security.txt
+  href: https://artifacts.apis.io/crowdstrike/well-known/crowdstrike-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/crowdstrike-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/well-known/crowdstrike-well-known.yml
+  href: https://artifacts.apis.io/crowdstrike/well-known/crowdstrike-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/crowdstrike-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/security/crowdstrike-domain-security.yml
+  href: https://artifacts.apis.io/crowdstrike/security/crowdstrike-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/crowdstrike-domain-security.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/regulatory/crowdstrike-regulatory-posture.yml
+  href: https://artifacts.apis.io/crowdstrike/regulatory/crowdstrike-regulatory-posture.yml
   title: ''
   type: RegulatoryPosture
   url: regulatory/crowdstrike-regulatory-posture.yml
@@ -249,7 +259,7 @@ common:
   type: DataSubjectRequest
   url: https://www.crowdstrike.com/en-us/legal/privacy-notice/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/asyncapi/crowdstrike-event-streams.yml
+  href: https://artifacts.apis.io/crowdstrike/asyncapi/crowdstrike-event-streams.yml
   title: ''
   type: StreamingEndpoint
   url: asyncapi/crowdstrike-event-streams.yml
@@ -257,10 +267,10 @@ created: '2026-04-19'
 description: 'CrowdStrike is a US cybersecurity company and Fortune 1000 constituent whose Falcon platform delivers endpoint, cloud, identity and data protection from a single cloud-native agent. Its developer surface is substantial and public: a 1,463-operation OAuth2 REST API spanning 128 service collections, documented operation by operation on developer.crowdstrike.com, with 187 named permission scopes; six official SDKs (Python, PowerShell, Go, TypeScript/JavaScript, Rust, Ruby); a Terraform provider for Configuration as Code; Falcon Foundry, an app platform with its own CLI; a first-party open-source MCP server (falcon-mcp) exposing 166 agent tools across 28 modules; and a published set of Agent Skills for building Foundry apps. CrowdStrike does not publish an OpenAPI document, and API access requires a Falcon subscription — the API itself is included in every paid bundle.'
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Crowdstrike Finops
-  primary_unit: ''
-  service_category: Cybersecurity
+  primary_unit: device
+  service_category: ''
   slug: crowdstrike-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/crowdstrike.png
@@ -282,9 +292,9 @@ overview: 'CrowdStrike is listed with 2 APIs on the [APIs.io](https://apis.io/) 
   CrowdStrike''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 38 more developer resources.'
 plans:
 - name: Crowdstrike Plans Pricing
-  plan_count: 6
+  plan_count: 8
   slug: crowdstrike-plans-pricing
-random_paper: 13
+random_paper: 1
 rate_limits:
 - limit_count: 2
   name: Crowdstrike Rate Limits
@@ -295,24 +305,29 @@ scopes:
   slug: crowdstrike-scopes
   summary_line: 187 scopes
 score:
-  band: strong
-  composite: 65.6
+  band: exemplar
+  composite: 67.2
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 57.0
+    artifact_dirs: 26
+    catalog_earned: 60.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 92.1
+    access_clarity: 100.0
     contract_governance: 18.2
     contract_quality: 39.0
     developer_ergonomics: 78.6
     discoverability: 73.3
     operational_transparency: 50.0
-  previous_composite: 67.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 67.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -323,14 +338,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 52.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/screenshots/crowdstrike-2026-06-20T175254.png
+screenshot: https://apis.io/screenshots/crowdstrike/crowdstrike-2026-06-20T175254.png
 security:
 - kind: authentication
   name: Crowdstrike Authentication
@@ -348,6 +363,32 @@ security:
   name: Crowdstrike Trust Center
   slug: crowdstrike-trust-center
   summary_line: SOC 2, ISO 27001, ISO 27017, PCI DSS, FedRAMP, GDPR, CSA STAR
+skill_count: 12
+skills:
+- name: api-integrations
+  slug: crowdstrike-foundry-api-integrations
+- name: collections-development
+  slug: crowdstrike-foundry-collections-development
+- name: debugging-workflows
+  slug: crowdstrike-foundry-debugging-workflows
+- name: development-workflow
+  slug: crowdstrike-foundry-development-workflow
+- name: e2e-testing
+  slug: crowdstrike-foundry-e2e-testing
+- name: functions-development
+  slug: crowdstrike-foundry-functions-development
+- name: functions-falcon-api
+  slug: crowdstrike-foundry-functions-falcon-api
+- name: fusion-redirect
+  slug: crowdstrike-foundry-fusion-redirect
+- name: security-patterns
+  slug: crowdstrike-foundry-security-patterns
+- name: ui-development
+  slug: crowdstrike-foundry-ui-development
+- name: workflows-development
+  slug: crowdstrike-foundry-workflows-development
+- name: gofalcon-regenerate
+  slug: crowdstrike-gofalcon-regenerate
 slug: crowdstrike
 tags:
 - Cybersecurity

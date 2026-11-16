@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -93,9 +99,6 @@ apis:
 artifact_total: 26
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Height APP Activities API
   slug: open-height-activities-api
 - collection_type: open
@@ -124,22 +127,22 @@ collections:
   slug: open-height-workspace-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/height/refs/heads/main/capabilities/height-capability-edges.yml
+  href: https://artifacts.apis.io/height/capabilities/height-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/height-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/height/refs/heads/main/agentic-access/height-agentic-access.yml
+  href: https://artifacts.apis.io/height/agentic-access/height-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/height-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/height/refs/heads/main/security/height-domain-security.yml
+  href: https://artifacts.apis.io/height/security/height-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/height-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/height/refs/heads/main/authentication/height-authentication.yml
+  href: https://artifacts.apis.io/height/authentication/height-authentication.yml
   title: ''
   type: Authentication
   url: authentication/height-authentication.yml
@@ -176,17 +179,17 @@ common:
   type: X
   url: https://twitter.com/height_app
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/height/refs/heads/main/plans/height-plans-pricing.yml
+  href: https://artifacts.apis.io/height/plans/height-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/height-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/height/refs/heads/main/rate-limits/height-rate-limits.yml
+  href: https://artifacts.apis.io/height/rate-limits/height-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/height-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/height/refs/heads/main/finops/height-finops.yml
+  href: https://artifacts.apis.io/height/finops/height-finops.yml
   title: ''
   type: FinOps
   url: finops/height-finops.yml
@@ -214,7 +217,7 @@ network: true
 overview: 'Height publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activities API, Field Templates API, Groups API, and 6 more. Tagged areas include Project Management, Task Management, Collaboration, Productivity, and Workflow Automation.
 
 
-  The Height catalog on APIs.io includes 1 JSON-LD context.
+  The Height catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Height''s developer surface includes authentication, documentation, engineering blog, pricing, and 11 more developer resources.'
@@ -222,19 +225,32 @@ plans:
 - name: Height Plans Pricing
   plan_count: 4
   slug: height-plans-pricing
-random_paper: 17
+random_paper: 9
 rate_limits:
 - limit_count: 3
   name: Height Rate Limits
   slug: height-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Height API Rules
+  rule_count: 57
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 2
+  slug: height-rules
 score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 51.0
+    artifact_dirs: 19
+    catalog_earned: 55.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 64.0
+    catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -260,13 +276,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/height/refs/heads/main/screenshots/height-2026-06-20T182618.png
+screenshot: https://apis.io/screenshots/height/height-2026-06-20T182618.png
 security:
 - kind: authentication
   name: Height Authentication

@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.0
-  scored_at: '2026-10-17'
+  score: 37.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 0
@@ -99,9 +102,6 @@ apis:
 artifact_total: 30
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Fountain Developer API (Hire API v2) Applicants API
   slug: open-fountain-com-applicants-api
 - collection_type: open
@@ -137,27 +137,27 @@ common:
   type: Blog
   url: https://www.fountain.com/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fountain-com/refs/heads/main/capabilities/fountain-com-capability-edges.yml
+  href: https://artifacts.apis.io/fountain-com/capabilities/fountain-com-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/fountain-com-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fountain-com/refs/heads/main/agentic-access/fountain-com-agentic-access.yml
+  href: https://artifacts.apis.io/fountain-com/agentic-access/fountain-com-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fountain-com-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fountain-com/refs/heads/main/security/fountain-com-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fountain-com/security/fountain-com-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/fountain-com-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fountain-com/refs/heads/main/security/fountain-com-domain-security.yml
+  href: https://artifacts.apis.io/fountain-com/security/fountain-com-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fountain-com-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fountain-com/refs/heads/main/authentication/fountain-com-authentication.yml
+  href: https://artifacts.apis.io/fountain-com/authentication/fountain-com-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fountain-com-authentication.yml
@@ -174,17 +174,17 @@ common:
   type: Documentation
   url: https://developer.fountain.com/reference
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fountain-com/refs/heads/main/plans/fountain-com-plans-pricing.yml
+  href: https://artifacts.apis.io/fountain-com/plans/fountain-com-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fountain-com-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fountain-com/refs/heads/main/rate-limits/fountain-com-rate-limits.yml
+  href: https://artifacts.apis.io/fountain-com/rate-limits/fountain-com-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fountain-com-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fountain-com/refs/heads/main/finops/fountain-com-finops.yml
+  href: https://artifacts.apis.io/fountain-com/finops/fountain-com-finops.yml
   title: ''
   type: FinOps
   url: finops/fountain-com-finops.yml
@@ -201,7 +201,7 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fountain-com.png
 layout: provider
 mcp_servers:
-- description: Remote MCP server at api.fountain.com over HTTP.
+- description: Remote MCP server at api.fountain.com over HTTP; 166 tools listed.
   name: Fountain MCP Server
   slug: fountain-com
 modified: '2026-10-06'
@@ -211,35 +211,51 @@ network: true
 overview: 'Fountain publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applicants API, Documents API, Labels API, and 8 more. Tagged areas include Hiring, Recruiting, Applicant Tracking, Frontline Hiring, and Hourly Workforce.
 
 
+  The Fountain catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Fountain''s developer surface includes engineering blog, authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Fountain Com Plans Pricing
   plan_count: 4
   slug: fountain-com-plans-pricing
-random_paper: 0
+random_paper: 8
 rate_limits:
 - limit_count: 3
   name: Fountain Com Rate Limits
   slug: fountain-com-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Fountain API Rules
+  rule_count: 65
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 2
+  slug: fountain-com-rules
 score:
   band: thin
-  composite: 30.2
+  composite: 32.5
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 43.0
+    artifact_dirs: 18
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.9
+  delta: -0.7
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 49.7
-    developer_ergonomics: 26.2
+    developer_ergonomics: 20.2
     discoverability: 75.0
-    operational_transparency: 11.8
-  previous_composite: 38.1
+    operational_transparency: 26.3
+  previous_composite: 33.2
   provenance:
     agentic_access: derived
     contracts:
@@ -254,13 +270,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/fountain-com/refs/heads/main/screenshots/fountain-com-2026-07-25T215044.png
+screenshot: https://apis.io/screenshots/fountain-com/fountain-com-2026-07-25T215044.png
 security:
 - kind: authentication
   name: Fountain Com Authentication

@@ -1,16 +1,16 @@
 ---
 access_model:
   confidence: medium
-  label: Free · Self-serve signup
-  onboarding: self-serve
-  pricing: free
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -74,11 +77,8 @@ apis:
   description: The Search API from Tavily — 1 operation(s) for search.
   name: Tavily Search API
   slug: tavily-search-api
-artifact_total: 21
+artifact_total: 22
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Tavily Web Crawl API
   slug: open-tavily-crawl-api
@@ -99,42 +99,42 @@ collections:
   slug: open-tavily
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tavily/refs/heads/main/plans/tavily-plans-pricing.yml
+  href: https://artifacts.apis.io/tavily/plans/tavily-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tavily-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tavily/refs/heads/main/rate-limits/tavily-rate-limits.yml
+  href: https://artifacts.apis.io/tavily/rate-limits/tavily-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tavily-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tavily/refs/heads/main/finops/tavily-finops.yml
+  href: https://artifacts.apis.io/tavily/finops/tavily-finops.yml
   title: ''
   type: FinOps
   url: finops/tavily-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tavily/refs/heads/main/a2a/tavily-a2a.yml
+  href: https://artifacts.apis.io/tavily/a2a/tavily-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/tavily-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tavily/refs/heads/main/agentic-access/tavily-agentic-access.yml
+  href: https://artifacts.apis.io/tavily/agentic-access/tavily-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tavily-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tavily/refs/heads/main/security/tavily-trust-center.yml
+  href: https://artifacts.apis.io/tavily/security/tavily-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/tavily-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tavily/refs/heads/main/security/tavily-domain-security.yml
+  href: https://artifacts.apis.io/tavily/security/tavily-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tavily-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tavily/refs/heads/main/authentication/tavily-authentication.yml
+  href: https://artifacts.apis.io/tavily/authentication/tavily-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tavily-authentication.yml
@@ -193,13 +193,13 @@ common:
 created: '2026-05-23'
 description: Tavily is a web access API platform optimized for LLMs and AI agents. It exposes a unified REST surface for real-time web search, page content extraction, site crawling, sitemap mapping, and AI-driven research tasks. The platform emphasizes low-latency search with a 180ms p50 on the search endpoint, a 99.99% uptime SLA, and built-in content validation safeguards. Tavily ships Python and JavaScript SDKs and integrates cleanly with major agent frameworks and LLM providers such as OpenAI, Anthropic, and Groq. Used by more than a million developers, it is trusted by enterprise customers including Databricks, IBM, JetBrains, MongoDB, and AWS.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Tavily Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: credit
+  service_category: ''
   slug: tavily-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
 mcp_servers:
@@ -213,35 +213,54 @@ network: true
 overview: 'Tavily publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Crawl API, Extract API, Map API, and 3 more. Tagged areas include Search, Web Search, AI Agents, LLM, and Extract.
 
 
+  The Tavily catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Tavily''s developer surface includes authentication, documentation, engineering blog, pricing, YouTube channel, support, and 15 more developer resources.'
 plans:
 - name: Tavily Plans Pricing
-  plan_count: 1
+  plan_count: 4
   slug: tavily-plans-pricing
-random_paper: 5
+- name: Tavily Price Estimates
+  plan_count: 0
+  slug: tavily-price-estimates
+random_paper: 17
 rate_limits:
 - limit_count: 2
   name: Tavily Rate Limits
   slug: tavily-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 83
+  extends:
+  - spectral:oas
+  name: Tavily API Rules
+  rule_count: 42
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 1
+    warn: 1
+  slug: tavily-rules
 score:
   band: developing
-  composite: 39.5
+  composite: 47.9
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 41.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    artifact_dirs: 20
+    catalog_earned: 58.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 56.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
-    access_clarity: 57.9
-    contract_governance: 0.0
+    access_clarity: 92.1
+    contract_governance: 13.6
     contract_quality: 49.0
     developer_ergonomics: 33.3
     discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 45.5
+  previous_composite: 47.9
   provenance:
     agentic_access: derived
     contracts:
@@ -256,13 +275,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tavily/refs/heads/main/screenshots/tavily-2026-06-20T194930.png
+screenshot: https://apis.io/screenshots/tavily/tavily-2026-06-20T194930.png
 security:
 - kind: authentication
   name: Tavily Authentication

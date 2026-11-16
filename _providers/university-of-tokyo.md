@@ -25,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.0
-  scored_at: '2026-10-17'
+  score: 31.7
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: The University of Tokyo operates three SAML 2.0 entities registered in GakuNin, Japan's academic access federation — two Shibboleth Identity Providers (the central UTokyo IdP at gidp.adm.u-tokyo.ac.jp
@@ -147,82 +150,82 @@ common:
   type: AITooling
   url: https://utelecon.adm.u-tokyo.ac.jp/notice/2024/0327-ai-service/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/openapi/_original/university-of-tokyo-oai-pmh-openapi.yml
+  href: https://artifacts.apis.io/university-of-tokyo/openapi/_original/university-of-tokyo-oai-pmh-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/university-of-tokyo-oai-pmh-openapi.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/json-schema/university-of-tokyo-repository-record.schema.json
+  href: https://artifacts.apis.io/university-of-tokyo/json-schema/university-of-tokyo-repository-record.schema.json
   title: ''
   type: JSONSchema
   url: json-schema/university-of-tokyo-repository-record.schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/json-ld/university-of-tokyo-context.jsonld
+  href: https://artifacts.apis.io/university-of-tokyo/json-ld/university-of-tokyo-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/university-of-tokyo-context.jsonld
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/examples/university-of-tokyo-repository-records-list.json
+  href: https://artifacts.apis.io/university-of-tokyo/examples/university-of-tokyo-repository-records-list.json
   title: ''
   type: Examples
   url: examples/university-of-tokyo-repository-records-list.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/authentication/university-of-tokyo-authentication.yml
+  href: https://artifacts.apis.io/university-of-tokyo/authentication/university-of-tokyo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/university-of-tokyo-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/scopes/university-of-tokyo-scopes.yml
+  href: https://artifacts.apis.io/university-of-tokyo/scopes/university-of-tokyo-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/university-of-tokyo-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/conformance/university-of-tokyo-conformance.yml
+  href: https://artifacts.apis.io/university-of-tokyo/conformance/university-of-tokyo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/university-of-tokyo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/errors/university-of-tokyo-error-handling.yml
+  href: https://artifacts.apis.io/university-of-tokyo/errors/university-of-tokyo-error-handling.yml
   title: ''
   type: ErrorCatalog
   url: errors/university-of-tokyo-error-handling.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/lifecycle/university-of-tokyo-lifecycle.yml
+  href: https://artifacts.apis.io/university-of-tokyo/lifecycle/university-of-tokyo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/university-of-tokyo-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/vocabulary/university-of-tokyo-vocabulary.yml
+  href: https://artifacts.apis.io/university-of-tokyo/vocabulary/university-of-tokyo-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/university-of-tokyo-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/rules/university-of-tokyo-harvest-rules.yml
+  href: https://artifacts.apis.io/university-of-tokyo/rules/university-of-tokyo-harvest-rules.yml
   title: ''
   type: Rules
   url: rules/university-of-tokyo-harvest-rules.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/security/university-of-tokyo-domain-security.yml
+  href: https://artifacts.apis.io/university-of-tokyo/security/university-of-tokyo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/university-of-tokyo-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/plans/university-of-tokyo-plans-pricing.yml
+  href: https://artifacts.apis.io/university-of-tokyo/plans/university-of-tokyo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/university-of-tokyo-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/rate-limits/university-of-tokyo-rate-limits.yml
+  href: https://artifacts.apis.io/university-of-tokyo/rate-limits/university-of-tokyo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/university-of-tokyo-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/finops/university-of-tokyo-finops.yml
+  href: https://artifacts.apis.io/university-of-tokyo/finops/university-of-tokyo-finops.yml
   title: ''
   type: FinOps
   url: finops/university-of-tokyo-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/university-of-tokyo/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -247,12 +250,12 @@ examples:
   slug: university-of-tokyo-repository-records-list
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: University Of Tokyo Finops
   primary_unit: ''
-  service_category: Education
+  service_category: ''
   slug: university-of-tokyo-finops
-  template: false
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/university-of-tokyo.png
 json_schemas:
 - name: UTokyo Repository Record
@@ -282,7 +285,7 @@ plans:
 - name: University Of Tokyo Plans Pricing
   plan_count: 2
   slug: university-of-tokyo-plans-pricing
-random_paper: 11
+random_paper: 23
 rate_limits:
 - limit_count: 4
   name: University Of Tokyo Rate Limits
@@ -306,19 +309,19 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 43.1
+  composite: 44.1
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 70.8
     catalog_earned_first_party: 20.0
     catalog_gap: 44.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.2
+  delta: 1.0
   facets:
     access_clarity: 36.8
     contract_governance: 22.0
-    contract_quality: 51.9
+    contract_quality: 56.0
     developer_ergonomics: 32.1
     discoverability: 71.4
     operational_transparency: 34.2
@@ -329,7 +332,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 45.3
+  previous_composite: 43.1
   provenance:
     conformance: first-party
     contracts:
@@ -343,14 +346,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/university-of-tokyo/refs/heads/main/screenshots/university-of-tokyo-2026-06-20T200308.png
+screenshot: https://apis.io/screenshots/university-of-tokyo/university-of-tokyo-2026-06-20T200308.png
 security:
 - kind: authentication
   name: University Of Tokyo Authentication

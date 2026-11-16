@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://vanchin.streamlake.ai/api/gateway/v1/endpoints
@@ -31,60 +46,65 @@ apis:
   description: The Gateway API from StreamLake — 1 operation(s) for gateway.
   name: StreamLake Gateway API
   slug: streamlake-gateway-api
-artifact_total: 7
+artifact_total: 9
 common:
+- group: commercial
+  href: https://artifacts.apis.io/streamlake/plans/streamlake-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/streamlake-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/streamlake/refs/heads/main/rules/streamlake-rules.yml
+  href: https://artifacts.apis.io/streamlake/rules/streamlake-rules.yml
   title: ''
   type: Spectral
   url: rules/streamlake-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/streamlake/refs/heads/main/json-ld/streamlake-context.jsonld
+  href: https://artifacts.apis.io/streamlake/json-ld/streamlake-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/streamlake-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/streamlake/refs/heads/main/vocabulary/streamlake-vocabulary.yml
+  href: https://artifacts.apis.io/streamlake/vocabulary/streamlake-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/streamlake-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/streamlake/refs/heads/main/data-model/streamlake-data-model.yml
+  href: https://artifacts.apis.io/streamlake/data-model/streamlake-data-model.yml
   title: ''
   type: DataModel
   url: data-model/streamlake-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/streamlake/refs/heads/main/changelog/streamlake-changelog.yml
+  href: https://artifacts.apis.io/streamlake/changelog/streamlake-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/streamlake-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/streamlake/refs/heads/main/authentication/streamlake-authentication.yml
+  href: https://artifacts.apis.io/streamlake/authentication/streamlake-authentication.yml
   title: ''
   type: Authentication
   url: authentication/streamlake-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/streamlake/refs/heads/main/lifecycle/streamlake-lifecycle.yml
+  href: https://artifacts.apis.io/streamlake/lifecycle/streamlake-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/streamlake-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/streamlake/refs/heads/main/errors/streamlake-error-codes.yml
+  href: https://artifacts.apis.io/streamlake/errors/streamlake-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/streamlake-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/streamlake/refs/heads/main/conformance/streamlake-conformance.yml
+  href: https://artifacts.apis.io/streamlake/conformance/streamlake-conformance.yml
   title: ''
   type: Conformance
   url: conformance/streamlake-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/streamlake/refs/heads/main/hosts/streamlake-hosts.yml
+  href: https://artifacts.apis.io/streamlake/hosts/streamlake-hosts.yml
   title: ''
   type: Hosts
   url: hosts/streamlake-hosts.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/streamlake/refs/heads/main/security/streamlake-domain-security.yml
+  href: https://artifacts.apis.io/streamlake/security/streamlake-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/streamlake-domain-security.yml
@@ -150,6 +170,14 @@ common:
   url: https://status.streamlake.ai
 created: '2026-10-13'
 description: StreamLake (STREAMLAKE PTE. LTD.) is the cloud and AI model platform of Kuaishou. Its Vanchin model service offers pay-as-you-go and Coding Plan access to KwaiKAT (KAT-Coder) models and hosted third-party open models (Qwen, DeepSeek, GLM, Kimi, MiniMax, MiMo) through an OpenAI-compatible chat completions endpoint and a Claude Code compatible proxy at vanchin.streamlake.ai, alongside audio and video SDKs for capture, editing and playback.
+finops:
+- has_sources: true
+  method: derived
+  name: Streamlake Finops
+  primary_unit: million tokens
+  service_category: ''
+  slug: streamlake-finops
+  template: false
 image: https://www.streamlake.ai/img/StreamLake_1200-630.png
 json_schemas:
 - name: PostApiGatewayV1EndpointsChatCompletionsRequest
@@ -174,7 +202,11 @@ overview: 'StreamLake is listed with 1 API on the [APIs.io](https://apis.io/) ne
   The StreamLake catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  StreamLake''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, pricing, support, and 19 more developer resources.'
+  StreamLake''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, pricing, support, and 20 more developer resources.'
+plans:
+- name: Streamlake Plans Pricing
+  plan_count: 9
+  slug: streamlake-plans-pricing
 random_paper: 9
 rules:
 - authorship: generated
@@ -190,22 +222,24 @@ rules:
     warn: 1
   slug: streamlake-rules
 score:
-  band: developing
-  composite: 40.7
+  band: thin
+  composite: 37.2
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 59.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 55.3
+    artifact_dirs: 21
+    catalog_earned: 74.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 40.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -11.4
   facets:
-    access_clarity: 44.7
+    access_clarity: 61.8
     contract_governance: 22.0
     contract_quality: 23.5
-    developer_ergonomics: 59.5
-    discoverability: 67.9
-    operational_transparency: 31.6
+    developer_ergonomics: 33.3
+    discoverability: 67.0
+    operational_transparency: 23.7
+  previous_composite: 48.6
   provenance:
     conformance: derived
     contracts:
@@ -219,12 +253,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/streamlake/streamlake-2026-11-03T143914.png
 security:
 - kind: authentication
   name: Streamlake Authentication

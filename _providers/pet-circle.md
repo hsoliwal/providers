@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -59,27 +62,27 @@ common:
   type: PrivacyPolicy
   url: https://www.petcircle.com.au/privacy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pet-circle/refs/heads/main/packages/pet-circle-packages.yml
+  href: https://artifacts.apis.io/pet-circle/packages/pet-circle-packages.yml
   title: ''
   type: Packages
   url: packages/pet-circle-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pet-circle/refs/heads/main/plans/pet-circle-plans-pricing.yml
+  href: https://artifacts.apis.io/pet-circle/plans/pet-circle-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pet-circle-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pet-circle/refs/heads/main/rate-limits/pet-circle-rate-limits.yml
+  href: https://artifacts.apis.io/pet-circle/rate-limits/pet-circle-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pet-circle-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pet-circle/refs/heads/main/llms/pet-circle-llms.txt
+  href: https://artifacts.apis.io/pet-circle/llms/pet-circle-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pet-circle-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pet-circle/refs/heads/main/security/pet-circle-domain-security.yml
+  href: https://artifacts.apis.io/pet-circle/security/pet-circle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pet-circle-domain-security.yml
@@ -118,7 +121,7 @@ plans:
 - name: Pet Circle Plans Pricing
   plan_count: 0
   slug: pet-circle-plans-pricing
-random_paper: 10
+random_paper: 16
 rate_limits:
 - limit_count: 0
   name: Pet Circle Rate Limits
@@ -127,7 +130,7 @@ score:
   band: minimal
   composite: 6.9
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -155,8 +158,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

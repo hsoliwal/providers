@@ -1,12 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Free
   onboarding: unknown
-  pricing: unknown
+  pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -105,9 +109,6 @@ apis:
 artifact_total: 30
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: EOSIO / Antelope Nodeos Chain Get Abi API
   slug: open-eosio-get-abi-api
 - collection_type: open
@@ -142,17 +143,17 @@ collections:
   slug: open-eosio-send-transaction-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/eosio/refs/heads/main/plans/eosio-plans-pricing.yml
+  href: https://artifacts.apis.io/eosio/plans/eosio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/eosio-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/eosio/refs/heads/main/rate-limits/eosio-rate-limits.yml
+  href: https://artifacts.apis.io/eosio/rate-limits/eosio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/eosio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/eosio/refs/heads/main/finops/eosio-finops.yml
+  href: https://artifacts.apis.io/eosio/finops/eosio-finops.yml
   title: ''
   type: FinOps
   url: finops/eosio-finops.yml
@@ -169,12 +170,12 @@ common:
   type: ContributionGuide
   url: https://github.com/AntelopeIO/leap/blob/main/CONTRIBUTING.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eosio/refs/heads/main/agentic-access/eosio-agentic-access.yml
+  href: https://artifacts.apis.io/eosio/agentic-access/eosio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/eosio-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eosio/refs/heads/main/security/eosio-domain-security.yml
+  href: https://artifacts.apis.io/eosio/security/eosio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/eosio-domain-security.yml
@@ -245,6 +246,9 @@ network: true
 overview: 'EOSIO publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Get Abi API, Get Account API, Get Block API, and 10 more. Tagged areas include Antelope, Blockchain, and EOS.
 
 
+  The EOSIO catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   EOSIO''s developer surface includes engineering blog, developer portal, getting-started guide, documentation, FAQ, changelog, and 14 more developer resources.'
 plans:
 - name: Eosio Plans Pricing
@@ -255,25 +259,38 @@ rate_limits:
 - limit_count: 3
   name: Eosio Rate Limits
   slug: eosio-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: EOSIO API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: eosio-rules
 score:
   band: thin
-  composite: 29.3
+  composite: 30.9
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 32.0
+    artifact_dirs: 14
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 0.0
   facets:
     access_clarity: 26.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 42.6
     developer_ergonomics: 28.6
     discoverability: 48.2
     operational_transparency: 28.9
-  previous_composite: 30.3
+  previous_composite: 30.9
   provenance:
     agentic_access: derived
     contracts:
@@ -287,13 +304,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/eosio/refs/heads/main/screenshots/eosio-2026-10-11T104236.png
+screenshot: https://apis.io/screenshots/eosio/eosio-2026-10-11T104236.png
 security:
 - kind: domain-security
   name: Eosio Domain Security

@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.0
-  scored_at: '2026-10-17'
+  score: 33.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 2
@@ -41,7 +49,7 @@ agentic_access:
   operation_count: 55
   slug: axle-energy-agentic-access
   summary_line: 55 operations · 30 acting · 2 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.axle.energy
   baseurl_source: declared
@@ -83,15 +91,12 @@ apis:
   description: Get example data for testing
   name: Axle Energy 8. Examples API
   slug: axle-energy-8-examples-api
-artifact_total: 21
+artifact_total: 23
 asyncapis:
 - description: ''
   name: Axle Energy Dispatch Webhooks
   slug: axle-energy-dispatch-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Axle 1. Authentication API
   slug: open-axle-energy-1-authentication-api
@@ -118,7 +123,7 @@ collections:
   slug: open-axle-energy-8-examples-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/overlays/axle-energy-api-overlay.yaml
+  href: https://artifacts.apis.io/axle-energy/overlays/axle-energy-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/axle-energy-api-overlay.yaml
@@ -151,67 +156,67 @@ common:
   type: Support
   url: mailto:support@axle.energy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/conventions/axle-energy-conventions.yml
+  href: https://artifacts.apis.io/axle-energy/conventions/axle-energy-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/axle-energy-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/lifecycle/axle-energy-lifecycle.yml
+  href: https://artifacts.apis.io/axle-energy/lifecycle/axle-energy-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/axle-energy-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/lifecycle/axle-energy-lifecycle.yml
+  href: https://artifacts.apis.io/axle-energy/lifecycle/axle-energy-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/axle-energy-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/packages/axle-energy-packages.yml
+  href: https://artifacts.apis.io/axle-energy/packages/axle-energy-packages.yml
   title: ''
   type: Packages
   url: packages/axle-energy-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/packages/axle-energy-packages.yml
+  href: https://artifacts.apis.io/axle-energy/packages/axle-energy-packages.yml
   title: ''
   type: SDKs
   url: packages/axle-energy-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/components/axle-energy-components.yml
+  href: https://artifacts.apis.io/axle-energy/components/axle-energy-components.yml
   title: ''
   type: Components
   url: components/axle-energy-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/mcp/axle-energy-mcp.yml
+  href: https://artifacts.apis.io/axle-energy/mcp/axle-energy-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/axle-energy-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/axle-energy/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/llms/axle-energy-llms.txt
+  href: https://artifacts.apis.io/axle-energy/llms/axle-energy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/axle-energy-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/well-known/axle-energy-well-known.yml
+  href: https://artifacts.apis.io/axle-energy/well-known/axle-energy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/axle-energy-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/security/axle-energy-domain-security.yml
+  href: https://artifacts.apis.io/axle-energy/security/axle-energy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/axle-energy-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/agentic-access/axle-energy-agentic-access.yml
+  href: https://artifacts.apis.io/axle-energy/agentic-access/axle-energy-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/axle-energy-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/authentication/axle-energy-authentication.yml
+  href: https://artifacts.apis.io/axle-energy/authentication/axle-energy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/axle-energy-authentication.yml
@@ -230,37 +235,50 @@ network: true
 overview: 'Axle Energy publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including 1. Authentication API, 2. Meters API, 3. Sites API, and 5 more. Tagged areas include Company, Energy, Flexibility, Virtual Power Plant, and Electric Vehicles.
 
 
-  The Axle Energy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Axle Energy catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Axle Energy''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, and 16 more developer resources.'
-random_paper: 21
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Axle Energy API Rules
+  rule_count: 58
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 2
+    warn: 9
+  slug: axle-energy-rules
 score:
   band: developing
-  composite: 42.0
+  composite: 44.8
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.2
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 55.1
+    contract_governance: 18.2
+    contract_quality: 60.1
     developer_ergonomics: 73.2
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 41.9
+  previous_composite: 43.6
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 8
     mcp: derived
     skills: derived
@@ -270,13 +288,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 13.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 38.9
-screenshot: https://raw.githubusercontent.com/api-evangelist/axle-energy/refs/heads/main/screenshots/axle-energy-2026-07-25T202055.png
+screenshot: https://apis.io/screenshots/axle-energy/axle-energy-2026-07-25T202055.png
 security:
 - kind: authentication
   name: Axle Energy Authentication
@@ -286,6 +304,12 @@ security:
   name: Axle Energy Domain Security
   slug: axle-energy-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Run EV smart-charging flexibility for an asset
+  slug: axle-energy-ev-smart-charging
+- name: Onboard a site and enrol it in a flexibility market
+  slug: axle-energy-onboard-and-enrol
 slug: axle-energy
 tags:
 - Company

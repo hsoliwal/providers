@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST API for managing rental properties, tenants, leases, maintenance requests, accounting, and online rent payment processing on the TenantCloud platform.
@@ -45,7 +50,7 @@ common:
   type: Website
   url: https://www.tenantcloud.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tenantcloud/refs/heads/main/security/tenantcloud-domain-security.yml
+  href: https://artifacts.apis.io/tenantcloud/security/tenantcloud-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tenantcloud-domain-security.yml
@@ -117,7 +122,7 @@ plans:
 - name: Plans
   plan_count: 4
   slug: plans
-random_paper: 19
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -126,7 +131,7 @@ score:
   band: emerging
   composite: 23.2
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -147,14 +152,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 5.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tenantcloud/refs/heads/main/screenshots/tenantcloud-2026-06-20T195109.png
+screenshot: https://apis.io/screenshots/tenantcloud/tenantcloud-2026-06-20T195109.png
 security:
 - kind: domain-security
   name: Tenantcloud Domain Security

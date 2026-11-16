@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Enterprise · Self-serve signup
   onboarding: self-serve
   pricing: enterprise
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -67,9 +74,6 @@ apis:
 artifact_total: 16
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: GridX Enterprise Rate Platform Authentication API
   slug: open-gridx-authentication-api
 - collection_type: open
@@ -90,17 +94,17 @@ common:
   type: Blog
   url: https://gridx.com/blog/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gridx/refs/heads/main/agentic-access/gridx-agentic-access.yml
+  href: https://artifacts.apis.io/gridx/agentic-access/gridx-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gridx-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gridx/refs/heads/main/security/gridx-domain-security.yml
+  href: https://artifacts.apis.io/gridx/security/gridx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gridx-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gridx/refs/heads/main/authentication/gridx-authentication.yml
+  href: https://artifacts.apis.io/gridx/authentication/gridx-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gridx-authentication.yml
@@ -117,17 +121,17 @@ common:
   type: Documentation
   url: https://api-calculate-docs.gridx.com/calculate-apis-gridx-docs/get-pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gridx/refs/heads/main/plans/gridx-plans-pricing.yml
+  href: https://artifacts.apis.io/gridx/plans/gridx-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gridx-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gridx/refs/heads/main/rate-limits/gridx-rate-limits.yml
+  href: https://artifacts.apis.io/gridx/rate-limits/gridx-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gridx-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gridx/refs/heads/main/finops/gridx-finops.yml
+  href: https://artifacts.apis.io/gridx/finops/gridx-finops.yml
   title: ''
   type: FinOps
   url: finops/gridx-finops.yml
@@ -150,6 +154,9 @@ network: true
 overview: 'GridX publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Customer API, OpenADR API, and 1 more. Tagged areas include Energy, Utilities, Rate Engine, Billing, and Rate Analytics.
 
 
+  The GridX catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   GridX''s developer surface includes engineering blog, authentication, documentation, and 7 more developer resources.'
 plans:
 - name: Gridx Plans Pricing
@@ -160,25 +167,38 @@ rate_limits:
 - limit_count: 3
   name: Gridx Rate Limits
   slug: gridx-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: GridX API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: gridx-rules
 score:
-  band: emerging
-  composite: 25.9
+  band: thin
+  composite: 27.5
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 42.0
+    artifact_dirs: 14
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.4
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 47.8
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 32.3
+  previous_composite: 27.5
   provenance:
     agentic_access: derived
     contracts:
@@ -192,13 +212,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/gridx/refs/heads/main/screenshots/gridx-2026-06-20T182406.png
+screenshot: https://apis.io/screenshots/gridx/gridx-2026-06-20T182406.png
 security:
 - kind: authentication
   name: Gridx Authentication

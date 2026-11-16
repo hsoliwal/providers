@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/capstan-medical/refs/heads/main/security/capstan-medical-domain-security.yml
+  href: https://artifacts.apis.io/capstan-medical/security/capstan-medical-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/capstan-medical-domain-security.yml
@@ -87,7 +90,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/capstan-medical
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/capstan-medical/refs/heads/main/llms/capstan-medical-llms.txt
+  href: https://artifacts.apis.io/capstan-medical/llms/capstan-medical-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/capstan-medical-llms.txt
@@ -107,7 +110,7 @@ overview: 'Capstan Medical is profiled on the [APIs.io](https://apis.io/) networ
 
 
   Capstan Medical''s developer surface includes engineering blog, support, and 12 more developer resources.'
-random_paper: 14
+random_paper: 22
 score:
   band: emerging
   composite: 11.3
@@ -133,14 +136,14 @@ score:
     regime: Health
     regime_id: health
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/capstan-medical/refs/heads/main/screenshots/capstan-medical-2026-08-07T162938.png
+screenshot: https://apis.io/screenshots/capstan-medical/capstan-medical-2026-08-07T162938.png
 security:
 - kind: domain-security
   name: Capstan Medical Domain Security

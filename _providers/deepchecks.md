@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -80,9 +87,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Deepchecks LLM Evaluation Application Versions API
   slug: open-deepchecks-application-versions-api
 - collection_type: open
@@ -105,22 +109,22 @@ collections:
   slug: open-deepchecks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/deepchecks/refs/heads/main/capabilities/deepchecks-capability-edges.yml
+  href: https://artifacts.apis.io/deepchecks/capabilities/deepchecks-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/deepchecks-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/deepchecks/refs/heads/main/agentic-access/deepchecks-agentic-access.yml
+  href: https://artifacts.apis.io/deepchecks/agentic-access/deepchecks-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/deepchecks-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deepchecks/refs/heads/main/security/deepchecks-domain-security.yml
+  href: https://artifacts.apis.io/deepchecks/security/deepchecks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/deepchecks-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/deepchecks/refs/heads/main/authentication/deepchecks-authentication.yml
+  href: https://artifacts.apis.io/deepchecks/authentication/deepchecks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/deepchecks-authentication.yml
@@ -141,17 +145,17 @@ common:
   type: Documentation
   url: https://llmdocs.deepchecks.com
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/deepchecks/refs/heads/main/plans/deepchecks-plans-pricing.yml
+  href: https://artifacts.apis.io/deepchecks/plans/deepchecks-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/deepchecks-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/deepchecks/refs/heads/main/rate-limits/deepchecks-rate-limits.yml
+  href: https://artifacts.apis.io/deepchecks/rate-limits/deepchecks-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/deepchecks-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/deepchecks/refs/heads/main/finops/deepchecks-finops.yml
+  href: https://artifacts.apis.io/deepchecks/finops/deepchecks-finops.yml
   title: ''
   type: FinOps
   url: finops/deepchecks-finops.yml
@@ -174,35 +178,51 @@ network: true
 overview: 'Deepchecks publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Application Versions API, Applications API, Interactions API, and 4 more. Tagged areas include Artificial Intelligence, LLM, Evaluation, Testing, and Monitoring.
 
 
+  The Deepchecks catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Deepchecks'' developer surface includes authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Deepchecks Plans Pricing
   plan_count: 4
   slug: deepchecks-plans-pricing
-random_paper: 5
+random_paper: 7
 rate_limits:
 - limit_count: 4
   name: Deepchecks Rate Limits
   slug: deepchecks-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Deepchecks API Rules
+  rule_count: 62
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 2
+    warn: 1
+  slug: deepchecks-rules
 score:
   band: emerging
-  composite: 23.1
+  composite: 24.5
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: -0.3
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 42.6
-    developer_ergonomics: 21.4
+    developer_ergonomics: 20.2
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 31.4
+  previous_composite: 24.8
   provenance:
     agentic_access: derived
     contracts:
@@ -216,13 +236,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/deepchecks/refs/heads/main/screenshots/deepchecks-2026-06-20T175801.png
+screenshot: https://apis.io/screenshots/deepchecks/deepchecks-2026-06-20T175801.png
 security:
 - kind: authentication
   name: Deepchecks Authentication

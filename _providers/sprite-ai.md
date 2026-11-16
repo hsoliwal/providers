@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +27,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.7
-  scored_at: '2026-10-17'
+  score: 21.4
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
-- description: Sprite AI provides a REST API for generating pixel‑art sprites, with endpoints such as /api/me, /api/sprites, and MCP server for AI generation.
+- baseURL: https://www.sprite-ai.art
+  baseurl_source: declared
+  description: Sprite AI provides a REST API for generating pixel‑art sprites, with endpoints such as /api/me, /api/sprites, and MCP server for AI generation.
   name: Sprite AI API
-  slug: sprite-ai-api-2
+  slug: sprite-ai-api
 - description: The Cancel API from Sprite AI — 1 operation(s) for cancel.
   name: Sprite AI Cancel API
   slug: sprite-ai-cancel-api
@@ -41,60 +58,60 @@ apis:
 - description: The Sprites API from Sprite AI — 1 operation(s) for sprites.
   name: Sprite AI Sprites API
   slug: sprite-ai-sprites-api
-artifact_total: 16
+artifact_total: 18
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/plans/sprite-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/sprite-ai/plans/sprite-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sprite-ai-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/rules/sprite-ai-rules.yml
+  href: https://artifacts.apis.io/sprite-ai/rules/sprite-ai-rules.yml
   title: ''
   type: Spectral
   url: rules/sprite-ai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/json-ld/sprite-ai-context.jsonld
+  href: https://artifacts.apis.io/sprite-ai/json-ld/sprite-ai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/sprite-ai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/vocabulary/sprite-ai-vocabulary.yml
+  href: https://artifacts.apis.io/sprite-ai/vocabulary/sprite-ai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/sprite-ai-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/data-model/sprite-ai-data-model.yml
+  href: https://artifacts.apis.io/sprite-ai/data-model/sprite-ai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sprite-ai-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/authentication/sprite-ai-authentication.yml
+  href: https://artifacts.apis.io/sprite-ai/authentication/sprite-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sprite-ai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/conformance/sprite-ai-conformance.yml
+  href: https://artifacts.apis.io/sprite-ai/conformance/sprite-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sprite-ai-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/llms/sprite-ai-llms.txt
+  href: https://artifacts.apis.io/sprite-ai/llms/sprite-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sprite-ai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/well-known/sprite-ai-well-known.yml
+  href: https://artifacts.apis.io/sprite-ai/well-known/sprite-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sprite-ai-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/hosts/sprite-ai-hosts.yml
+  href: https://artifacts.apis.io/sprite-ai/hosts/sprite-ai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/sprite-ai-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/vendors/sprite-ai-vendors.yml
+  href: https://artifacts.apis.io/sprite-ai/vendors/sprite-ai-vendors.yml
   title: ''
   type: Vendors
   url: vendors/sprite-ai-vendors.yml
@@ -103,7 +120,7 @@ common:
   type: APIReference
   url: https://www.sprite-ai.art/docs/api-reference
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sprite-ai/refs/heads/main/security/sprite-ai-domain-security.yml
+  href: https://artifacts.apis.io/sprite-ai/security/sprite-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sprite-ai-domain-security.yml
@@ -161,6 +178,14 @@ coverage:
   state: unreadable
 created: '2026-10-11'
 description: Sprite AI provides a REST API for generating pixel-art sprites using AI, targeting game developers and designers. The service lets users describe characters, items, or creatures in natural language and receive clean, ready‑to‑use sprite images instantly. Features include sprite sheet and GIF export, animation generation, and integration with popular tools like Aseprite. With a free tier offering thousands of generated sprites and paid plans for higher volume, Sprite AI aims to accelerate 2D game asset creation through fast, affordable AI‑powered art.
+finops:
+- has_sources: true
+  method: derived
+  name: Sprite Ai Finops
+  primary_unit: seat
+  service_category: ''
+  slug: sprite-ai-finops
+  template: false
 image: https://www.sprite-ai.art/og/og.jpg
 json_schemas:
 - name: GetApiApiidIdResponse
@@ -191,7 +216,7 @@ modified: '2026-10-11'
 name: Sprite AI
 nav: Providers
 network: true
-overview: 'Sprite AI is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Cancel API, Palettes API, Sprite AI API, and 2 more. Tagged areas include Company, Artificial Intelligence, Gaming, Graphics, and REST API.
+overview: 'Sprite AI is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Cancel API, Palettes API, and 3 more. Tagged areas include Company, Artificial Intelligence, Gaming, Graphics, and REST API.
 
 
   The Sprite AI catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -202,7 +227,10 @@ plans:
 - name: Sprite Ai Plans Pricing
   plan_count: 7
   slug: sprite-ai-plans-pricing
-random_paper: 8
+- name: Sprite Ai Price Estimates
+  plan_count: 0
+  slug: sprite-ai-price-estimates
+random_paper: 22
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -217,22 +245,24 @@ rules:
     warn: 1
   slug: sprite-ai-rules
 score:
-  band: developing
-  composite: 42.9
+  band: thin
+  composite: 35.0
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 72.8
+    artifact_dirs: 22
+    catalog_earned: 75.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 42.3
+    catalog_gap: 39.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.5
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 22.0
-    contract_quality: 24.7
-    developer_ergonomics: 57.1
+    contract_quality: 24.8
+    developer_ergonomics: 34.5
     discoverability: 69.6
     operational_transparency: 0.0
+  previous_composite: 44.5
   provenance:
     conformance: derived
     contracts:
@@ -246,12 +276,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/sprite-ai/sprite-ai-2026-11-03T143655.png
 security:
 - kind: authentication
   name: Sprite Ai Authentication

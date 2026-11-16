@@ -1,14 +1,19 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium
-  onboarding: unknown
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
   pricing: freemium
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 11
 apis:
 - description: The Citi Accounts and Transactions API provides authorized third-party access to retail customer accounts, current and available balances, and transaction histories, enabling account-aggregation and p
@@ -124,57 +132,57 @@ common:
   type: Support
   url: https://online.citi.com/US/contactus.htm
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/security/citigroup-domain-security.yml
+  href: https://artifacts.apis.io/citigroup/security/citigroup-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/citigroup-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/plans/citigroup-plans-pricing.yml
+  href: https://artifacts.apis.io/citigroup/plans/citigroup-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/citigroup-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/rate-limits/citigroup-rate-limits.yml
+  href: https://artifacts.apis.io/citigroup/rate-limits/citigroup-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/citigroup-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/finops/citigroup-finops.yml
+  href: https://artifacts.apis.io/citigroup/finops/citigroup-finops.yml
   title: ''
   type: FinOps
   url: finops/citigroup-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/json-ld/citigroup-context.jsonld
+  href: https://artifacts.apis.io/citigroup/json-ld/citigroup-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/citigroup-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/rules/citigroup-rules.yml
+  href: https://artifacts.apis.io/citigroup/rules/citigroup-rules.yml
   title: ''
   type: Spectral
   url: rules/citigroup-rules.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/authentication/citigroup-authentication.yml
+  href: https://artifacts.apis.io/citigroup/authentication/citigroup-authentication.yml
   title: ''
   type: Authentication
   url: authentication/citigroup-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/conformance/citigroup-conformance.yml
+  href: https://artifacts.apis.io/citigroup/conformance/citigroup-conformance.yml
   title: ''
   type: Conformance
   url: conformance/citigroup-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/lifecycle/citigroup-lifecycle.yml
+  href: https://artifacts.apis.io/citigroup/lifecycle/citigroup-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/citigroup-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/conventions/citigroup-conventions.yml
+  href: https://artifacts.apis.io/citigroup/conventions/citigroup-conventions.yml
   title: ''
   type: Conventions
   url: conventions/citigroup-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/llms/citigroup-llms.txt
+  href: https://artifacts.apis.io/citigroup/llms/citigroup-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/citigroup-llms.txt
@@ -227,7 +235,7 @@ press:
 - date: ''
   title: Citi eyes AI productivity gains as it consolidates data systems
   url: https://www.ciodive.com/news/citigroup-data-compliance-modernization-generative-ai/745683/
-random_paper: 14
+random_paper: 22
 rate_limits:
 - limit_count: 2
   name: Citigroup Rate Limits
@@ -255,7 +263,7 @@ score:
     catalog_gap: 64.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.1
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 29.5
@@ -270,7 +278,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 28.6
+  previous_composite: 23.5
   provenance:
     conformance: first-party
   regulatory:
@@ -279,14 +287,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 23.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/screenshots/citigroup-2026-06-20T174411.png
+screenshot: https://apis.io/screenshots/citigroup/citigroup-2026-06-20T174411.png
 security:
 - kind: authentication
   name: Citigroup Authentication

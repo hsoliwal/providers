@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 30.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -71,70 +85,70 @@ apis:
   description: 'File upload operations for importing datasets and data into your projects and jobs. - **Dataset Upload Process:** - **Upload Files**: Send CSV files containing your data to existing projects - **Statu'
   name: Appen Upload API
   slug: appen-upload-api
-artifact_total: 16
+artifact_total: 17
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/appen/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/agentic-access/appen-agentic-access.yml
+  href: https://artifacts.apis.io/appen/agentic-access/appen-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/appen-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/rules/appen-rules.yml
+  href: https://artifacts.apis.io/appen/rules/appen-rules.yml
   title: ''
   type: Spectral
   url: rules/appen-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/json-ld/appen-context.jsonld
+  href: https://artifacts.apis.io/appen/json-ld/appen-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/appen-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/vocabulary/appen-vocabulary.yml
+  href: https://artifacts.apis.io/appen/vocabulary/appen-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/appen-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/data-model/appen-data-model.yml
+  href: https://artifacts.apis.io/appen/data-model/appen-data-model.yml
   title: ''
   type: DataModel
   url: data-model/appen-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/errors/appen-problem-types.yml
+  href: https://artifacts.apis.io/appen/errors/appen-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/appen-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/conformance/appen-conformance.yml
+  href: https://artifacts.apis.io/appen/conformance/appen-conformance.yml
   title: ''
   type: Conformance
   url: conformance/appen-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/llms/appen-llms.txt
+  href: https://artifacts.apis.io/appen/llms/appen-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/appen-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/well-known/appen-status-security.txt
+  href: https://artifacts.apis.io/appen/well-known/appen-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/appen-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/well-known/appen-well-known.yml
+  href: https://artifacts.apis.io/appen/well-known/appen-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/appen-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/hosts/appen-hosts.yml
+  href: https://artifacts.apis.io/appen/hosts/appen-hosts.yml
   title: ''
   type: Hosts
   url: hosts/appen-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/vendors/appen-vendors.yml
+  href: https://artifacts.apis.io/appen/vendors/appen-vendors.yml
   title: ''
   type: Vendors
   url: vendors/appen-vendors.yml
@@ -143,12 +157,12 @@ common:
   type: StatusPage
   url: https://status.appen.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/authentication/appen-authentication.yml
+  href: https://artifacts.apis.io/appen/authentication/appen-authentication.yml
   title: ''
   type: Authentication
   url: authentication/appen-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/security/appen-domain-security.yml
+  href: https://artifacts.apis.io/appen/security/appen-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/appen-domain-security.yml
@@ -226,7 +240,7 @@ rules:
   slug: appen-rules
 score:
   band: thin
-  composite: 39.1
+  composite: 34.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 62.8
@@ -234,15 +248,15 @@ score:
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -5.6
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 22.0
     contract_quality: 63.8
-    developer_ergonomics: 42.3
+    developer_ergonomics: 28.0
     discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 39.0
+  previous_composite: 40.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -258,14 +272,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 17.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/appen/refs/heads/main/screenshots/appen-2026-10-11T100005.png
+screenshot: https://apis.io/screenshots/appen/appen-2026-10-11T100005.png
 security:
 - kind: authentication
   name: Appen Authentication
@@ -275,6 +289,10 @@ security:
   name: Appen Domain Security
   slug: appen-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: job-management
+  slug: appen-job-management
 slug: appen
 tags:
 - Artificial Intelligence

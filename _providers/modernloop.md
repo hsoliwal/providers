@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -77,22 +81,22 @@ common:
   type: SLA
   url: https://modernloop.com/sla/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/modernloop/refs/heads/main/lifecycle/modernloop-lifecycle.yml
+  href: https://artifacts.apis.io/modernloop/lifecycle/modernloop-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/modernloop-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/modernloop/refs/heads/main/security/modernloop-domain-security.yml
+  href: https://artifacts.apis.io/modernloop/security/modernloop-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/modernloop-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/modernloop/refs/heads/main/well-known/modernloop-well-known.yml
+  href: https://artifacts.apis.io/modernloop/well-known/modernloop-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/modernloop-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/modernloop/refs/heads/main/llms/modernloop-llms.txt
+  href: https://artifacts.apis.io/modernloop/llms/modernloop-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/modernloop-llms.txt
@@ -108,12 +112,12 @@ overview: 'ModernLoop is profiled on the [APIs.io](https://apis.io/) network. Ta
 
 
   ModernLoop''s developer surface includes engineering blog, support, and 12 more developer resources.'
-random_paper: 9
+random_paper: 7
 score:
   band: emerging
   composite: 17.7
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -134,14 +138,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/modernloop/refs/heads/main/screenshots/modernloop-2026-08-07T184020.png
+screenshot: https://apis.io/screenshots/modernloop/modernloop-2026-08-07T184020.png
 security:
 - kind: domain-security
   name: Modernloop Domain Security

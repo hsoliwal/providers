@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,9 +36,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 2
+artifact_total: 11
 common:
 - group: company
   title: ''
@@ -69,22 +73,22 @@ common:
   type: PrivacyPolicy
   url: https://www.ambarella.com/privacy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ambarella/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ambarella/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ambarella/refs/heads/main/well-known/ambarella-security.txt
+  href: https://artifacts.apis.io/ambarella/well-known/ambarella-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/ambarella-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ambarella/refs/heads/main/well-known/ambarella-well-known.yml
+  href: https://artifacts.apis.io/ambarella/well-known/ambarella-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ambarella-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ambarella/refs/heads/main/security/ambarella-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ambarella/security/ambarella-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ambarella-vulnerability-disclosure.yml
@@ -93,12 +97,12 @@ common:
   type: Security
   url: https://www.ambarella.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ambarella/refs/heads/main/security/ambarella-domain-security.yml
+  href: https://artifacts.apis.io/ambarella/security/ambarella-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ambarella-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ambarella/refs/heads/main/llms/ambarella-llms.txt
+  href: https://artifacts.apis.io/ambarella/llms/ambarella-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ambarella-llms.txt
@@ -114,12 +118,12 @@ overview: 'Ambarella is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Ambarella''s developer surface includes documentation, support, engineering blog, and 12 more developer resources.'
-random_paper: 5
+random_paper: 17
 score:
   band: emerging
   composite: 15.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -142,14 +146,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 14.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ambarella/refs/heads/main/screenshots/ambarella-2026-07-25T200023.png
+screenshot: https://apis.io/screenshots/ambarella/ambarella-2026-07-25T200023.png
 security:
 - kind: domain-security
   name: Ambarella Domain Security
@@ -159,6 +163,26 @@ security:
   name: Ambarella Vulnerability Disclosure
   slug: ambarella-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 9
+skills:
+- name: ambarella-model-garden
+  slug: ambarella-ambarella-model-garden
+- name: cooper-expert-guide
+  slug: ambarella-cooper-expert-guide
+- name: cooper-performance
+  slug: ambarella-cooper-performance
+- name: cooper-peripheral
+  slug: ambarella-cooper-peripheral
+- name: cooper-pipeline
+  slug: ambarella-cooper-pipeline
+- name: cooper-remote-device
+  slug: ambarella-cooper-remote-device
+- name: cooper-sdk
+  slug: ambarella-cooper-sdk
+- name: cooper-system
+  slug: ambarella-cooper-system
+- name: cooper-video-stream
+  slug: ambarella-cooper-video-stream
 slug: ambarella
 tags:
 - Company

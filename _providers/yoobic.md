@@ -1,12 +1,14 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,16 +27,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.6
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 33.8
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.yoobic.com/public/api
   baseurl_source: declared
@@ -241,15 +246,12 @@ apis:
   description: '<a id="group-webhooks"></a> You can create webhooks with HTTP targets to build integrations with the services or with your back-end system. Examples: - Alert your team in Slack when a mission is creat'
   name: Yoobic Webhooks API
   slug: yoobic-webhooks-api
-artifact_total: 88
+artifact_total: 93
 asyncapis:
 - description: ''
   name: Yoobic Webhooks
   slug: yoobic-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: YOOBIC Public Answers API
   slug: open-yoobic-answers-api
@@ -379,27 +381,27 @@ common:
   type: BlogRSS
   url: https://yoobic.com/feed/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/plans/yoobic-plans-pricing.yml
+  href: https://artifacts.apis.io/yoobic/plans/yoobic-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/yoobic-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/capabilities/yoobic-capability-edges.yml
+  href: https://artifacts.apis.io/yoobic/capabilities/yoobic-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/yoobic-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/skills/yoobic-manage-missions.md
+  href: https://artifacts.apis.io/yoobic/skills/yoobic-manage-missions.md
   title: ''
   type: AgentSkill
   url: skills/yoobic-manage-missions.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/mcp/yoobic-mcp.yml
+  href: https://artifacts.apis.io/yoobic/mcp/yoobic-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/yoobic-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/overlays/yoobic-openapi-overlay.yaml
+  href: https://artifacts.apis.io/yoobic/overlays/yoobic-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/yoobic-openapi-overlay.yaml
@@ -444,37 +446,45 @@ common:
   type: StatusPage
   url: https://status.yoobic.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/llms/yoobic-llms.txt
+  href: https://artifacts.apis.io/yoobic/llms/yoobic-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/yoobic-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/well-known/yoobic-well-known.yml
+  href: https://artifacts.apis.io/yoobic/well-known/yoobic-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/yoobic-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/authentication/yoobic-authentication.yml
+  href: https://artifacts.apis.io/yoobic/authentication/yoobic-authentication.yml
   title: ''
   type: Authentication
   url: authentication/yoobic-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/security/yoobic-domain-security.yml
+  href: https://artifacts.apis.io/yoobic/security/yoobic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/yoobic-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/security/yoobic-trust-center.yml
+  href: https://artifacts.apis.io/yoobic/security/yoobic-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/yoobic-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/security/yoobic-trust-center.yml
+  href: https://artifacts.apis.io/yoobic/security/yoobic-trust-center.yml
   title: ''
   type: Compliance
   url: security/yoobic-trust-center.yml
 created: '2026-07-17'
 description: YOOBIC is an AI-powered frontline employee experience and retail operations platform that unifies task management, internal communications, and mobile microlearning, giving headquarters real-time visibility and frontline teams the tools to execute in-store. It serves retail, grocery, fashion and luxury, convenience, pharmacy, restaurant/QSR, and fitness brands. The YOOBIC Public API is a RESTful JSON API (OpenAPI 3.0, 230 paths / 265 operations across 41 resource groups) for programmatically managing users, stores, missions, campaigns, learning, communities, and webhooks, secured with JWT bearer tokens.
+finops:
+- has_sources: true
+  method: derived
+  name: Yoobic Finops
+  primary_unit: ''
+  service_category: ''
+  slug: yoobic-finops
+  template: true
 image: https://yoobic.com/wp-content/uploads/2025/11/cropped-favicon-1-1-270x270.png
 layout: provider
 modified: '2026-10-06'
@@ -484,7 +494,7 @@ network: true
 overview: 'Yoobic publishes 41 API contracts indexed on the [APIs.io](https://apis.io/) network, including Answers API, Badges API, Bot Messages API, and 38 more. Tagged areas include Company, Retail, Frontline Operations, Task Management, and Workforce.
 
 
-  The Yoobic catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Yoobic catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Yoobic''s developer surface includes documentation, engineering blog, pricing, signup flow, support, authentication, and 16 more developer resources.'
@@ -492,32 +502,45 @@ plans:
 - name: Yoobic Plans Pricing
   plan_count: 0
   slug: yoobic-plans-pricing
-random_paper: 7
+random_paper: 21
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Yoobic API Rules
+  rule_count: 57
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 3
+    warn: 10
+  slug: yoobic-rules
 score:
   band: developing
-  composite: 51.3
+  composite: 54.1
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.2
   facets:
     access_clarity: 50.0
-    contract_governance: 4.5
-    contract_quality: 56.7
+    contract_governance: 18.2
+    contract_quality: 61.4
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 51.2
+  previous_composite: 52.9
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 41
     mcp: derived
     skills: derived
@@ -527,13 +550,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/yoobic/refs/heads/main/screenshots/yoobic-2026-08-17T083024.png
+screenshot: https://apis.io/screenshots/yoobic/yoobic-2026-08-17T083024.png
 security:
 - kind: authentication
   name: Yoobic Authentication
@@ -547,6 +570,16 @@ security:
   name: Yoobic Trust Center
   slug: yoobic-trust-center
   summary_line: SOC 2, ISO 27001, ISO 27017, ISO 27018, GDPR
+skill_count: 4
+skills:
+- name: Assign and validate YOOBIC missions
+  slug: yoobic-manage-missions
+- name: Provision YOOBIC users
+  slug: yoobic-provision-users
+- name: Register a YOOBIC webhook subscription
+  slug: yoobic-register-webhook
+- name: Publish a YOOBIC campaign
+  slug: yoobic-run-campaign
 slug: yoobic
 tags:
 - Company

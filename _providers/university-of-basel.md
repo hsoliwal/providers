@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - description: Public DSpace REST API for "edoc", the open-access institutional repository of the University of Basel, running DSpace-CRIS 7.6.2 (cris-2023.02.06) on the university's own host. The API root reports d
@@ -57,7 +60,7 @@ apis:
 - description: SRU (Search/Retrieve via URL) interface to swisscovery, the Swiss national library discovery platform, scoped to the University of Basel institution zone 41SLSP_UBS. The catalogue records and the inst
   name: swisscovery (SLSP / Ex Libris Alma) SRU — Basel institution zone
   slug: swisscovery-sru
-artifact_total: 13
+artifact_total: 14
 common:
 - group: company
   title: ''
@@ -116,57 +119,57 @@ common:
   type: AIPolicy
   url: https://www.unibas.ch/en/Studies/Learning-and-Teaching/AI-in-learning-and-teaching.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/authentication/university-of-basel-authentication.yml
+  href: https://artifacts.apis.io/university-of-basel/authentication/university-of-basel-authentication.yml
   title: ''
   type: Authentication
   url: authentication/university-of-basel-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/conformance/university-of-basel-conformance.yml
+  href: https://artifacts.apis.io/university-of-basel/conformance/university-of-basel-conformance.yml
   title: ''
   type: Conformance
   url: conformance/university-of-basel-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/security/university-of-basel-domain-security.yml
+  href: https://artifacts.apis.io/university-of-basel/security/university-of-basel-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/university-of-basel-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/security/university-of-basel-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/university-of-basel/security/university-of-basel-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/university-of-basel-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/security/university-of-basel-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/university-of-basel/security/university-of-basel-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/university-of-basel-vulnerability-disclosure.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/plans/university-of-basel-plans-pricing.yml
+  href: https://artifacts.apis.io/university-of-basel/plans/university-of-basel-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/university-of-basel-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/rate-limits/university-of-basel-rate-limits.yml
+  href: https://artifacts.apis.io/university-of-basel/rate-limits/university-of-basel-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/university-of-basel-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/finops/university-of-basel-finops.yml
+  href: https://artifacts.apis.io/university-of-basel/finops/university-of-basel-finops.yml
   title: ''
   type: FinOps
   url: finops/university-of-basel-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/llms/university-of-basel-llms.txt
+  href: https://artifacts.apis.io/university-of-basel/llms/university-of-basel-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/university-of-basel-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/university-of-basel/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/university-of-basel/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -195,7 +198,7 @@ plans:
 - name: University Of Basel Plans Pricing
   plan_count: 1
   slug: university-of-basel-plans-pricing
-random_paper: 8
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: University Of Basel Rate Limits
@@ -204,13 +207,13 @@ score:
   band: thin
   composite: 29.9
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 48.0
     catalog_earned_first_party: 8.0
     catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
@@ -226,7 +229,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 31.4
+  previous_composite: 29.9
   provenance:
     conformance: first-party
     skills: derived
@@ -236,14 +239,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/university-of-basel/refs/heads/main/screenshots/university-of-basel-2026-06-20T200131.png
+screenshot: https://apis.io/screenshots/university-of-basel/university-of-basel-2026-06-20T200131.png
 security:
 - kind: authentication
   name: University Of Basel Authentication
@@ -257,6 +260,10 @@ security:
   name: University Of Basel Vulnerability Disclosure
   slug: university-of-basel-vulnerability-disclosure
   summary_line: Intigriti
+skill_count: 1
+skills:
+- name: harvest-edoc-open-access
+  slug: university-of-basel-harvest-edoc-open-access
 slug: university-of-basel
 tags:
 - University

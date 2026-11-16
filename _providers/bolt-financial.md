@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 50.6
-  scored_at: '2026-10-17'
+  score: 50.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 41
   human_in_the_loop: 0
@@ -44,7 +47,7 @@ agentic_access:
   operation_count: 58
   slug: bolt-financial-agentic-access
   summary_line: 58 operations · 41 acting
-api_count: 5
+api_count: 4
 apis:
 - description: 'Bolt exposes two Model Context Protocol surfaces: a hosted documentation MCP server advertised at help.boltapp.com/mcp with search_docs, get_doc_page and list_doc_sections tools, and a Speakeasy-gener'
   name: Bolt MCP Servers
@@ -109,7 +112,7 @@ apis:
   description: Use this endpoint to retrieve an OAuth token. Use the token to allow your ecommerce server to make calls to the Account endpoint and create a one-click checkout experience for shoppers. See related gu
   name: Bolt Financial O Auth API
   slug: bolt-financial-oauth-api
-artifact_total: 27
+artifact_total: 33
 asyncapis:
 - description: ''
   name: Bolt Financial Webhooks
@@ -129,17 +132,17 @@ collections:
   slug: open-bolt-financial-tokenizer
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/capabilities/bolt-financial-capability-edges.yml
+  href: https://artifacts.apis.io/bolt-financial/capabilities/bolt-financial-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bolt-financial-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/agentic-access/bolt-financial-agentic-access.yml
+  href: https://artifacts.apis.io/bolt-financial/agentic-access/bolt-financial-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bolt-financial-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/security/bolt-financial-trust-center.yml
+  href: https://artifacts.apis.io/bolt-financial/security/bolt-financial-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/bolt-financial-trust-center.yml
@@ -156,17 +159,17 @@ common:
   type: X
   url: https://x.com/bolt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/plans/bolt-financial-plans-pricing.yml
+  href: https://artifacts.apis.io/bolt-financial/plans/bolt-financial-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bolt-financial-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/rate-limits/bolt-financial-rate-limits.yml
+  href: https://artifacts.apis.io/bolt-financial/rate-limits/bolt-financial-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bolt-financial-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/finops/bolt-financial-finops.yml
+  href: https://artifacts.apis.io/bolt-financial/finops/bolt-financial-finops.yml
   title: ''
   type: FinOps
   url: finops/bolt-financial-finops.yml
@@ -175,27 +178,27 @@ common:
   type: MerchantDashboard
   url: https://merchant.bolt.com
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/overlays/bolt-financial-bolt-api-overlay.yaml
+  href: https://artifacts.apis.io/bolt-financial/overlays/bolt-financial-bolt-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bolt-financial-bolt-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/overlays/bolt-financial-embeddable-checkout-v1-overlay.yaml
+  href: https://artifacts.apis.io/bolt-financial/overlays/bolt-financial-embeddable-checkout-v1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bolt-financial-embeddable-checkout-v1-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/overlays/bolt-financial-embeddable-checkout-v3-overlay.yaml
+  href: https://artifacts.apis.io/bolt-financial/overlays/bolt-financial-embeddable-checkout-v3-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bolt-financial-embeddable-checkout-v3-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/overlays/bolt-financial-tokenizer-overlay.yaml
+  href: https://artifacts.apis.io/bolt-financial/overlays/bolt-financial-tokenizer-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bolt-financial-tokenizer-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/security/bolt-financial-domain-security.yml
+  href: https://artifacts.apis.io/bolt-financial/security/bolt-financial-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bolt-financial-domain-security.yml
@@ -256,105 +259,105 @@ common:
   type: StatusPage
   url: https://status.bolt.com
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/changelog/bolt-financial-changelog.yml
+  href: https://artifacts.apis.io/bolt-financial/changelog/bolt-financial-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/bolt-financial-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/packages/bolt-financial-packages.yml
+  href: https://artifacts.apis.io/bolt-financial/packages/bolt-financial-packages.yml
   title: ''
   type: Packages
   url: packages/bolt-financial-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/packages/bolt-financial-packages.yml
+  href: https://artifacts.apis.io/bolt-financial/packages/bolt-financial-packages.yml
   title: ''
   type: SDKs
   url: packages/bolt-financial-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/well-known/bolt-financial-well-known.yml
+  href: https://artifacts.apis.io/bolt-financial/well-known/bolt-financial-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bolt-financial-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/llms/bolt-financial-llms.txt
+  href: https://artifacts.apis.io/bolt-financial/llms/bolt-financial-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bolt-financial-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/authentication/bolt-financial-authentication.yml
+  href: https://artifacts.apis.io/bolt-financial/authentication/bolt-financial-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bolt-financial-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/scopes/bolt-financial-scopes.yml
+  href: https://artifacts.apis.io/bolt-financial/scopes/bolt-financial-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/bolt-financial-scopes.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/well-known/bolt-financial-openid-configuration.json
+  href: https://artifacts.apis.io/bolt-financial/well-known/bolt-financial-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/bolt-financial-openid-configuration.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/conventions/bolt-financial-conventions.yml
+  href: https://artifacts.apis.io/bolt-financial/conventions/bolt-financial-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bolt-financial-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/conventions/bolt-financial-conventions.yml
+  href: https://artifacts.apis.io/bolt-financial/conventions/bolt-financial-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/bolt-financial-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/errors/bolt-financial-error-codes.yml
+  href: https://artifacts.apis.io/bolt-financial/errors/bolt-financial-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/bolt-financial-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/lifecycle/bolt-financial-lifecycle.yml
+  href: https://artifacts.apis.io/bolt-financial/lifecycle/bolt-financial-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bolt-financial-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/conformance/bolt-financial-conformance.yml
+  href: https://artifacts.apis.io/bolt-financial/conformance/bolt-financial-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bolt-financial-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/conformance/bolt-financial-conformance.yml
+  href: https://artifacts.apis.io/bolt-financial/conformance/bolt-financial-conformance.yml
   title: ''
   type: Compliance
   url: conformance/bolt-financial-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/sandbox/bolt-financial-sandbox.yml
+  href: https://artifacts.apis.io/bolt-financial/sandbox/bolt-financial-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/bolt-financial-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/components/bolt-financial-components.yml
+  href: https://artifacts.apis.io/bolt-financial/components/bolt-financial-components.yml
   title: ''
   type: Components
   url: components/bolt-financial-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/data-model/bolt-financial-data-model.yml
+  href: https://artifacts.apis.io/bolt-financial/data-model/bolt-financial-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bolt-financial-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/asyncapi/bolt-financial-webhooks.yml
+  href: https://artifacts.apis.io/bolt-financial/asyncapi/bolt-financial-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/bolt-financial-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bolt-financial/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-31'
 description: 'Bolt Financial, Inc. is an American commerce technology company that gives retailers a one-click, identity-powered checkout backed by a shopper account network, payments processing, tokenization and fraud protection. Merchants integrate Bolt either through platform plugins (Adobe Commerce/Magento, BigCommerce, Salesforce Commerce Cloud, Shopify, WooCommerce) or directly against a REST API surface that covers shopper accounts, order tokens, transaction authorize/capture/refund/void, subscriptions, product catalog, merchant statements, webhooks and a hosted card tokenizer. Bolt publishes OpenAPI 3.0 definitions for its Bolt API, Embeddable Checkout v1 and v3, and Tokenizer endpoints, ships first-party SDKs for TypeScript, Python, C#, Go, PHP, iOS/Swift, Android/Kotlin, React Native, Unity and Unreal, and maintains an explicit agent-facing surface: an llms.txt index, a hosted documentation MCP server and two published agent skills.'
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Bolt Financial Finops
   primary_unit: ''
   service_category: ''
@@ -373,19 +376,32 @@ network: true
 overview: 'Bolt Financial publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Callbacks API, Configuration API, and 10 more. Tagged areas include Company, Payments, Checkout, E-Commerce, and Fintech.
 
 
-  The Bolt Financial catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Bolt Financial catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Bolt Financial''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 41 more developer resources.'
 plans:
 - name: Bolt Financial Plans Pricing
-  plan_count: 1
+  plan_count: 0
   slug: bolt-financial-plans-pricing
-random_paper: 3
+random_paper: 19
 rate_limits:
 - limit_count: 0
   name: Bolt Financial Rate Limits
   slug: bolt-financial-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Bolt Financial API Rules
+  rule_count: 65
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 16
+  slug: bolt-financial-rules
 scopes:
 - name: Bolt Financial Scopes
   scope_count: 4
@@ -393,18 +409,18 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: strong
-  composite: 60.7
+  composite: 61.2
   coverage:
-    artifact_dirs: 29
-    catalog_earned: 42.0
+    artifact_dirs: 32
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.3
+  delta: 0.0
   facets:
-    access_clarity: 42.1
-    contract_governance: 18.2
+    access_clarity: 36.8
+    contract_governance: 31.8
     contract_quality: 57.5
     developer_ergonomics: 79.8
     discoverability: 78.6
@@ -414,7 +430,7 @@ score:
     countries:
     - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 65.0
+  previous_composite: 61.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -431,13 +447,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 44.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/screenshots/bolt-financial-2026-08-07T162709.png
+screenshot: https://apis.io/screenshots/bolt-financial/bolt-financial-2026-08-07T162709.png
 security:
 - kind: authentication
   name: Bolt Financial Authentication
@@ -451,6 +467,18 @@ security:
   name: Bolt Financial Trust Center
   slug: bolt-financial-trust-center
   summary_line: SOC 2, ISO 27001
+skill_count: 5
+skills:
+- name: bolt-api-verify
+  slug: bolt-financial-bolt-api-verify
+- name: bolt-gaming-docs
+  slug: bolt-financial-bolt-gaming-docs
+- name: bolt-financial-charge-and-settle
+  slug: bolt-financial-charge-and-settle
+- name: bolt-financial-shopper-account-oauth
+  slug: bolt-financial-shopper-account-oauth
+- name: bolt-financial-webhooks-and-tokenizer
+  slug: bolt-financial-webhooks-and-tokenizer
 slug: bolt-financial
 tags:
 - Company

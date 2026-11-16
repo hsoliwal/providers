@@ -26,16 +26,19 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.4
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 23.1
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.sigma360.com/external/v2
   baseurl_source: declared
@@ -77,7 +80,7 @@ apis:
   description: Webhooks that notify you of important events
   name: Sigma360 Webhooks API
   slug: sigma-ratings-webhooks-api
-artifact_total: 22
+artifact_total: 25
 asyncapis:
 - description: Event surface for Sigma360; webhook callbacks are delivered to your registered HTTPS endpoint when monitored entities change. Derived from the OpenAPI 3.1 webhooks object published at docs.sigma360.co
   name: Sigma360 Webhooks
@@ -86,9 +89,6 @@ asyncapis:
   name: Sigma Ratings Webhooks
   slug: sigma-ratings-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Sigma360 Account API
   slug: open-sigma-ratings-account-api
@@ -112,7 +112,7 @@ collections:
   slug: open-sigma-ratings-utilities-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/capabilities/sigma-ratings-capability-edges.yml
+  href: https://artifacts.apis.io/sigma-ratings/capabilities/sigma-ratings-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/sigma-ratings-capability-edges.yml
@@ -173,72 +173,72 @@ common:
   type: Compliance
   url: https://trust.sigma360.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/authentication/sigma-ratings-authentication.yml
+  href: https://artifacts.apis.io/sigma-ratings/authentication/sigma-ratings-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sigma-ratings-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/conventions/sigma-ratings-conventions.yml
+  href: https://artifacts.apis.io/sigma-ratings/conventions/sigma-ratings-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sigma-ratings-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/errors/sigma-ratings-problem-types.yml
+  href: https://artifacts.apis.io/sigma-ratings/errors/sigma-ratings-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sigma-ratings-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/data-model/sigma-ratings-data-model.yml
+  href: https://artifacts.apis.io/sigma-ratings/data-model/sigma-ratings-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sigma-ratings-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/lifecycle/sigma-ratings-lifecycle.yml
+  href: https://artifacts.apis.io/sigma-ratings/lifecycle/sigma-ratings-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sigma-ratings-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/conformance/sigma-ratings-conformance.yml
+  href: https://artifacts.apis.io/sigma-ratings/conformance/sigma-ratings-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sigma-ratings-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/overlays/sigma-ratings-openapi-overlay.yaml
+  href: https://artifacts.apis.io/sigma-ratings/overlays/sigma-ratings-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/sigma-ratings-openapi-overlay.yaml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/asyncapi/sigma-ratings-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/sigma-ratings/asyncapi/sigma-ratings-webhooks-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/sigma-ratings-webhooks-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/asyncapi/sigma-ratings-webhooks.yml
+  href: https://artifacts.apis.io/sigma-ratings/asyncapi/sigma-ratings-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/sigma-ratings-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/mcp/sigma-ratings-mcp.yml
+  href: https://artifacts.apis.io/sigma-ratings/mcp/sigma-ratings-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/sigma-ratings-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/sigma-ratings/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/llms/sigma-ratings-llms.txt
+  href: https://artifacts.apis.io/sigma-ratings/llms/sigma-ratings-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sigma-ratings-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/security/sigma-ratings-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/sigma-ratings/security/sigma-ratings-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/sigma-ratings-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/security/sigma-ratings-domain-security.yml
+  href: https://artifacts.apis.io/sigma-ratings/security/sigma-ratings-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sigma-ratings-domain-security.yml
@@ -253,36 +253,49 @@ network: true
 overview: 'Sigma360 publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Informational API, Monitoring: Entity Creation API, and 5 more. Tagged areas include Company, Compliance, Financial Crime, KYC, and AML.
 
 
-  The Sigma360 catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
+  The Sigma360 catalog on APIs.io includes 2 event-driven AsyncAPI specifications and 1 Spectral governance ruleset.
 
 
   Sigma360''s developer surface includes documentation, API reference, getting-started guide, changelog, signup flow, support, authentication, and 22 more developer resources.'
 random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Sigma360 API Rules
+  rule_count: 65
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 9
+  slug: sigma-ratings-rules
 score:
   band: developing
-  composite: 45.9
+  composite: 49.3
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.2
   facets:
     access_clarity: 23.7
-    contract_governance: 4.5
-    contract_quality: 57.9
+    contract_governance: 18.2
+    contract_quality: 65.1
     developer_ergonomics: 56.5
     discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 45.8
+  previous_composite: 48.1
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 87.5
       total: 8
     mcp: derived
     skills: derived
@@ -296,13 +309,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sigma-ratings/refs/heads/main/screenshots/sigma-ratings-2026-08-17T081849.png
+screenshot: https://apis.io/screenshots/sigma-ratings/sigma-ratings-2026-08-17T081849.png
 security:
 - kind: authentication
   name: Sigma Ratings Authentication
@@ -320,6 +333,14 @@ security:
   name: Sigma Ratings Trust Center
   slug: sigma-ratings-trust-center
   summary_line: SOC 2 Type II, GDPR
+skill_count: 3
+skills:
+- name: Handle alerts and webhooks
+  slug: sigma-ratings-handle-webhooks
+- name: Create and monitor an entity
+  slug: sigma-ratings-monitor-entity
+- name: Screen an entity against Sigma360 risk data
+  slug: sigma-ratings-screen-entity
 slug: sigma-ratings
 tags:
 - Company

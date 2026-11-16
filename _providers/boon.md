@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -69,22 +73,22 @@ common:
   type: Compliance
   url: https://www.goboon.co/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/boon/refs/heads/main/conformance/boon-conformance.yml
+  href: https://artifacts.apis.io/boon/conformance/boon-conformance.yml
   title: ''
   type: Conformance
   url: conformance/boon-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boon/refs/heads/main/security/boon-trust-center.yml
+  href: https://artifacts.apis.io/boon/security/boon-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/boon-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/boon/refs/heads/main/security/boon-domain-security.yml
+  href: https://artifacts.apis.io/boon/security/boon-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/boon-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/boon/refs/heads/main/lifecycle/boon-lifecycle.yml
+  href: https://artifacts.apis.io/boon/lifecycle/boon-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/boon-lifecycle.yml
@@ -104,12 +108,12 @@ overview: 'Boon is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   Boon''s developer surface includes engineering blog, support, and 10 more developer resources.'
-random_paper: 12
+random_paper: 22
 score:
   band: emerging
   composite: 20.2
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -137,14 +141,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/boon/refs/heads/main/screenshots/boon-2026-07-25T203618.png
+screenshot: https://apis.io/screenshots/boon/boon-2026-07-25T203618.png
 security:
 - kind: domain-security
   name: Boon Domain Security

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 22.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -99,9 +105,6 @@ apis:
 artifact_total: 49
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: CTA Bus Tracker Arrivals API
   slug: open-chicago-transit-authority-arrivals-api
 - collection_type: open
@@ -136,17 +139,17 @@ collections:
   slug: open-cta-train-tracker
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chicago-transit-authority/refs/heads/main/plans/chicago-transit-authority-plans-pricing.yml
+  href: https://artifacts.apis.io/chicago-transit-authority/plans/chicago-transit-authority-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/chicago-transit-authority-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/chicago-transit-authority/refs/heads/main/rate-limits/chicago-transit-authority-rate-limits.yml
+  href: https://artifacts.apis.io/chicago-transit-authority/rate-limits/chicago-transit-authority-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/chicago-transit-authority-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chicago-transit-authority/refs/heads/main/finops/chicago-transit-authority-finops.yml
+  href: https://artifacts.apis.io/chicago-transit-authority/finops/chicago-transit-authority-finops.yml
   title: ''
   type: FinOps
   url: finops/chicago-transit-authority-finops.yml
@@ -155,17 +158,17 @@ common:
   type: Blog
   url: https://www.transitchicago.com/updates/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chicago-transit-authority/refs/heads/main/agentic-access/chicago-transit-authority-agentic-access.yml
+  href: https://artifacts.apis.io/chicago-transit-authority/agentic-access/chicago-transit-authority-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/chicago-transit-authority-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chicago-transit-authority/refs/heads/main/security/chicago-transit-authority-domain-security.yml
+  href: https://artifacts.apis.io/chicago-transit-authority/security/chicago-transit-authority-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chicago-transit-authority-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chicago-transit-authority/refs/heads/main/authentication/chicago-transit-authority-authentication.yml
+  href: https://artifacts.apis.io/chicago-transit-authority/authentication/chicago-transit-authority-authentication.yml
   title: ''
   type: Authentication
   url: authentication/chicago-transit-authority-authentication.yml
@@ -210,12 +213,12 @@ common:
   type: ContactUs
   url: https://www.transitchicago.com/contactus/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chicago-transit-authority/refs/heads/main/json-ld/chicago-transit-authority-context.jsonld
+  href: https://artifacts.apis.io/chicago-transit-authority/json-ld/chicago-transit-authority-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/chicago-transit-authority-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chicago-transit-authority/refs/heads/main/spectral/chicago-transit-authority-spectral.yml
+  href: https://artifacts.apis.io/chicago-transit-authority/spectral/chicago-transit-authority-spectral.yml
   title: ''
   type: Spectral
   url: spectral/chicago-transit-authority-spectral.yml
@@ -240,7 +243,7 @@ finops:
 - has_sources: false
   method: generated
   name: Chicago Transit Authority Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: chicago-transit-authority-finops
   template: true
@@ -258,7 +261,7 @@ network: true
 overview: 'Chicago Transit Authority publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Arrivals API, Bulletins API, Follow API, and 8 more. Tagged areas include Bus, Bus Tracker, Chicago, CTA, and Customer Alerts.
 
 
-  The Chicago Transit Authority catalog on APIs.io includes 1 JSON-LD context.
+  The Chicago Transit Authority catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Chicago Transit Authority''s developer surface includes engineering blog, authentication, developer portal, and 16 more developer resources.'
@@ -266,30 +269,43 @@ plans:
 - name: Chicago Transit Authority Plans Pricing
   plan_count: 3
   slug: chicago-transit-authority-plans-pricing
-random_paper: 8
+random_paper: 14
 rate_limits:
 - limit_count: 5
   name: Chicago Transit Authority Rate Limits
   slug: chicago-transit-authority-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Chicago Transit Authority API Rules
+  rule_count: 57
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 1
+  slug: chicago-transit-authority-rules
 score:
   band: thin
-  composite: 34.5
+  composite: 36.1
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 48.0
+    artifact_dirs: 17
+    catalog_earned: 52.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 67.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.1
+  delta: 0.0
   facets:
     access_clarity: 28.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.5
     developer_ergonomics: 33.3
     discoverability: 67.0
     operational_transparency: 7.9
-  previous_composite: 35.6
+  previous_composite: 36.1
   provenance:
     agentic_access: derived
     contracts:
@@ -303,14 +319,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/chicago-transit-authority/refs/heads/main/screenshots/chicago-transit-authority-2026-06-20T174303.png
+screenshot: https://apis.io/screenshots/chicago-transit-authority/chicago-transit-authority-2026-06-20T174303.png
 security:
 - kind: authentication
   name: Chicago Transit Authority Authentication

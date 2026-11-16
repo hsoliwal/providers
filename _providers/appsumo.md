@@ -1,16 +1,16 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
   - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 51.6
-  scored_at: '2026-10-17'
+  score: 52.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -56,7 +59,7 @@ apis:
   description: Partner profile management
   name: AppSumo Profile API
   slug: appsumo-profile-api
-artifact_total: 20
+artifact_total: 19
 collections:
 - collection_type: postman
   name: AppSumo Licensing Licenses API
@@ -65,9 +68,6 @@ collections:
   name: AppSumo Licensing Licenses Profile API
   slug: postman-appsumo-profile-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: AppSumo Licensing Licenses API
   slug: open-appsumo-licenses-api
 - collection_type: open
@@ -75,17 +75,17 @@ collections:
   slug: open-appsumo-profile-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/plans/appsumo-plans-pricing.yml
+  href: https://artifacts.apis.io/appsumo/plans/appsumo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/appsumo-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/rate-limits/appsumo-rate-limits.yml
+  href: https://artifacts.apis.io/appsumo/rate-limits/appsumo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/appsumo-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/finops/appsumo-finops.yml
+  href: https://artifacts.apis.io/appsumo/finops/appsumo-finops.yml
   title: ''
   type: FinOps
   url: finops/appsumo-finops.yml
@@ -94,7 +94,7 @@ common:
   type: Blog
   url: https://appsumo.com:443/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/capabilities/appsumo-capability-edges.yml
+  href: https://artifacts.apis.io/appsumo/capabilities/appsumo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/appsumo-capability-edges.yml
@@ -103,17 +103,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/appsumo/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/agentic-access/appsumo-agentic-access.yml
+  href: https://artifacts.apis.io/appsumo/agentic-access/appsumo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/appsumo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/security/appsumo-domain-security.yml
+  href: https://artifacts.apis.io/appsumo/security/appsumo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/appsumo-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/authentication/appsumo-authentication.yml
+  href: https://artifacts.apis.io/appsumo/authentication/appsumo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/appsumo-authentication.yml
@@ -204,13 +204,13 @@ examples:
   name: License Example
   slug: license-example
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Appsumo Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: lifetime deal
+  service_category: ''
   slug: appsumo-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/appsumo.png
 json_schemas:
 - name: License
@@ -243,9 +243,9 @@ overview: 'AppSumo publishes 2 API contracts indexed on the [APIs.io](https://ap
   AppSumo''s developer surface includes engineering blog, authentication, documentation, signup flow, pricing, getting-started guide, support, and 22 more developer resources.'
 plans:
 - name: Appsumo Plans Pricing
-  plan_count: 3
+  plan_count: 9
   slug: appsumo-plans-pricing
-random_paper: 3
+random_paper: 5
 rate_limits:
 - limit_count: 5
   name: Appsumo Rate Limits
@@ -276,23 +276,23 @@ rules:
   slug: appsumo-spectral-rules
 score:
   band: developing
-  composite: 44.9
+  composite: 51.2
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 47.4
-    catalog_earned_first_party: 0.0
-    catalog_gap: 67.6
+    artifact_dirs: 24
+    catalog_earned: 59.4
+    catalog_earned_first_party: 12.0
+    catalog_gap: 55.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 52.6
+    access_clarity: 84.2
     contract_governance: 27.3
     contract_quality: 63.2
     developer_ergonomics: 41.7
     discoverability: 38.3
     operational_transparency: 18.4
-  previous_composite: 46.4
+  previous_composite: 51.2
   provenance:
     agentic_access: derived
     contracts:
@@ -307,13 +307,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/screenshots/appsumo-2026-06-20T172331.png
+screenshot: https://apis.io/screenshots/appsumo/appsumo-2026-06-20T172331.png
 security:
 - kind: authentication
   name: Appsumo Authentication

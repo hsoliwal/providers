@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.0
-  scored_at: '2026-10-17'
+  score: 40.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 192
   human_in_the_loop: 6
@@ -42,7 +48,7 @@ agentic_access:
   operation_count: 340
   slug: skilljar-agentic-access
   summary_line: 340 operations · 192 acting · 6 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.skilljar.com/v1/
   baseurl_source: declared
@@ -434,15 +440,12 @@ apis:
   description: The Webhooks API from Skilljar — 13 operation(s) for webhooks.
   name: Skilljar Webhooks API
   slug: skilljar-webhooks-api
-artifact_total: 162
+artifact_total: 167
 asyncapis:
 - description: ''
   name: Skilljar Webhooks
   slug: skilljar-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Skilljar Assets API
   slug: open-skilljar-assets-api
@@ -678,13 +681,18 @@ collections:
   name: Skilljar Assets Webhooks API
   slug: open-skilljar-webhooks-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/skilljar/plans/skilljar-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/skilljar-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/capabilities/skilljar-capability-edges.yml
+  href: https://artifacts.apis.io/skilljar/capabilities/skilljar-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/skilljar-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/overlays/skilljar-openapi-overlay.yaml
+  href: https://artifacts.apis.io/skilljar/overlays/skilljar-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/skilljar-openapi-overlay.yaml
@@ -741,82 +749,90 @@ common:
   type: StatusPage
   url: https://status.skilljar.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/authentication/skilljar-authentication.yml
+  href: https://artifacts.apis.io/skilljar/authentication/skilljar-authentication.yml
   title: ''
   type: Authentication
   url: authentication/skilljar-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/scopes/skilljar-scopes.yml
+  href: https://artifacts.apis.io/skilljar/scopes/skilljar-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/skilljar-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/conventions/skilljar-conventions.yml
+  href: https://artifacts.apis.io/skilljar/conventions/skilljar-conventions.yml
   title: ''
   type: Conventions
   url: conventions/skilljar-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/conventions/skilljar-conventions.yml
+  href: https://artifacts.apis.io/skilljar/conventions/skilljar-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/skilljar-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/errors/skilljar-problem-types.yml
+  href: https://artifacts.apis.io/skilljar/errors/skilljar-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/skilljar-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/lifecycle/skilljar-lifecycle.yml
+  href: https://artifacts.apis.io/skilljar/lifecycle/skilljar-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/skilljar-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/well-known/skilljar-well-known.yml
+  href: https://artifacts.apis.io/skilljar/well-known/skilljar-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/skilljar-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/conformance/skilljar-conformance.yml
+  href: https://artifacts.apis.io/skilljar/conformance/skilljar-conformance.yml
   title: ''
   type: Conformance
   url: conformance/skilljar-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/security/skilljar-domain-security.yml
+  href: https://artifacts.apis.io/skilljar/security/skilljar-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/skilljar-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/agentic-access/skilljar-agentic-access.yml
+  href: https://artifacts.apis.io/skilljar/agentic-access/skilljar-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/skilljar-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/mcp/skilljar-mcp.yml
+  href: https://artifacts.apis.io/skilljar/mcp/skilljar-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/skilljar-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/llms/skilljar-llms.txt
+  href: https://artifacts.apis.io/skilljar/llms/skilljar-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/skilljar-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/data-model/skilljar-data-model.yml
+  href: https://artifacts.apis.io/skilljar/data-model/skilljar-data-model.yml
   title: ''
   type: DataModel
   url: data-model/skilljar-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/asyncapi/skilljar-webhooks.yml
+  href: https://artifacts.apis.io/skilljar/asyncapi/skilljar-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/skilljar-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/skilljar/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: 'Skilljar is a customer education and external learning management (LMS) platform, now part of Gainsight, used to build, publish, and measure training academies, courses, learning paths, and certification programs for customers and partners. Its REST API provides comprehensive programmatic access to the platform: courses and lessons, published courses and catalog pages, learning paths, training domains, users and groups, enrollments and progress, quizzes and question banks, purchases and promo codes, instructor-led and virtual (VILT) training, and real-time webhooks. The published OpenAPI 3.0.3 definition covers 160 paths and 340 operations across 420 schemas, with an HTTP Basic API-key v1 surface and a newer v2 OAuth 2.0 surface (PKCE, ~89 scopes).'
+finops:
+- has_sources: true
+  method: derived
+  name: Skilljar Finops
+  primary_unit: add-on
+  service_category: ''
+  slug: skilljar-finops
+  template: false
 image: https://cdn.prod.website-files.com/65f2e85a59750ccb710adbf3/65f97abc87919ff34fc3f4ea_Favicon.svg
 layout: provider
 modified: '2026-07-21'
@@ -826,42 +842,59 @@ network: true
 overview: 'Skilljar publishes 78 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Courses API, Courses > Labels API, and 75 more. Tagged areas include Company, Education, LMS, Customer Education, and Training.
 
 
-  The Skilljar catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Skilljar catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Skilljar''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 23 more developer resources.'
-random_paper: 2
+  Skilljar''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
+plans:
+- name: Skilljar Plans Pricing
+  plan_count: 6
+  slug: skilljar-plans-pricing
+random_paper: 20
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Skilljar API Rules
+  rule_count: 50
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 2
+    warn: 14
+  slug: skilljar-rules
 scopes:
 - name: Skilljar Scopes
   scope_count: 89
   slug: skilljar-scopes
   summary_line: 89 scopes · authorizationCode
 score:
-  band: developing
-  composite: 48.2
+  band: strong
+  composite: 59.0
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 28
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.2
   facets:
-    access_clarity: 44.7
-    contract_governance: 4.5
-    contract_quality: 53.8
+    access_clarity: 84.2
+    contract_governance: 18.2
+    contract_quality: 58.5
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 48.2
+  previous_composite: 57.8
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 78
     mcp: derived
     skills: derived
@@ -871,13 +904,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/skilljar/refs/heads/main/screenshots/skilljar-2026-08-17T081918.png
+screenshot: https://apis.io/screenshots/skilljar/skilljar-2026-08-17T081918.png
 security:
 - kind: authentication
   name: Skilljar Authentication
@@ -887,6 +920,14 @@ security:
   name: Skilljar Domain Security
   slug: skilljar-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Enroll a user in a published course
+  slug: skilljar-enroll-user-in-course
+- name: Report a learner's course progress
+  slug: skilljar-report-learner-progress
+- name: Subscribe to Skilljar platform events with webhooks
+  slug: skilljar-subscribe-to-webhooks
 slug: skilljar
 tags:
 - Company

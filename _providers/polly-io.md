@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 21.5
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: Polly's API suite provides access to product and pricing engine functionality for mortgage and capital markets applications.
@@ -48,17 +65,17 @@ asyncapis:
   slug: polly-io-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/rules/polly-io-rules.yml
+  href: https://artifacts.apis.io/polly-io/rules/polly-io-rules.yml
   title: ''
   type: Spectral
   url: rules/polly-io-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/asyncapi/polly-io-webhooks.yml
+  href: https://artifacts.apis.io/polly-io/asyncapi/polly-io-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/polly-io-webhooks.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/changelog/polly-io-changelog.yml
+  href: https://artifacts.apis.io/polly-io/changelog/polly-io-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/polly-io-changelog.yml
@@ -67,37 +84,37 @@ common:
   type: Compliance
   url: https://polly.io/vendor-due-diligence
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/authentication/polly-io-authentication.yml
+  href: https://artifacts.apis.io/polly-io/authentication/polly-io-authentication.yml
   title: ''
   type: Authentication
   url: authentication/polly-io-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/conformance/polly-io-conformance.yml
+  href: https://artifacts.apis.io/polly-io/conformance/polly-io-conformance.yml
   title: ''
   type: Conformance
   url: conformance/polly-io-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/llms/polly-io-llms.txt
+  href: https://artifacts.apis.io/polly-io/llms/polly-io-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/polly-io-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/well-known/polly-io-status-security.txt
+  href: https://artifacts.apis.io/polly-io/well-known/polly-io-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/polly-io-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/well-known/polly-io-well-known.yml
+  href: https://artifacts.apis.io/polly-io/well-known/polly-io-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/polly-io-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/hosts/polly-io-hosts.yml
+  href: https://artifacts.apis.io/polly-io/hosts/polly-io-hosts.yml
   title: ''
   type: Hosts
   url: hosts/polly-io-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/vendors/polly-io-vendors.yml
+  href: https://artifacts.apis.io/polly-io/vendors/polly-io-vendors.yml
   title: ''
   type: Vendors
   url: vendors/polly-io-vendors.yml
@@ -110,12 +127,12 @@ common:
   type: PrivacyPolicy
   url: https://polly.io/privacy-notice/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/security/polly-io-trust-center.yml
+  href: https://artifacts.apis.io/polly-io/security/polly-io-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/polly-io-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polly-io/refs/heads/main/security/polly-io-domain-security.yml
+  href: https://artifacts.apis.io/polly-io/security/polly-io-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/polly-io-domain-security.yml
@@ -143,6 +160,10 @@ common:
   title: ''
   type: GettingStarted
   url: https://polly.io/product-pricing-eligibility
+- group: build
+  title: ''
+  type: GitHubOrganization
+  url: https://github.com/PollyEx
 coverage:
   checked: '2026-10-15'
   detail: Docs are served as JavaScript-rendered pages, preventing machine‑readable spec discovery.
@@ -159,14 +180,14 @@ modified: '2026-10-14'
 name: Polly
 nav: Providers
 network: true
-overview: 'Polly is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Event Types API, Lock Confirmation Documents API, Mi Quotes API, and 2 more. Tagged areas include Fintech, CapitalMarkets, Mortgage, APIPlatform, and Artificial Intelligence.
+overview: 'Polly is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Event Types API, Lock Confirmation Documents API, Mi Quotes API, and 2 more. Tagged areas include Fintech, Capital Markets, Mortgage, API Platform, and Artificial Intelligence.
 
 
   The Polly catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Polly''s developer surface includes changelog, authentication, API reference, documentation, engineering blog, support, getting-started guide, and 14 more developer resources.'
-random_paper: 7
+  Polly''s developer surface includes changelog, authentication, API reference, documentation, engineering blog, support, getting-started guide, and 15 more developer resources.'
+random_paper: 5
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -182,21 +203,23 @@ rules:
   slug: polly-io-rules
 score:
   band: thin
-  composite: 34.3
+  composite: 29.0
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 39.5
     catalog_earned_first_party: 0.0
     catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.7
   facets:
-    access_clarity: 26.3
+    access_clarity: 17.1
     contract_governance: 18.2
     contract_quality: 18.8
-    developer_ergonomics: 47.6
+    developer_ergonomics: 29.8
     discoverability: 69.6
-    operational_transparency: 39.5
+    operational_transparency: 44.7
+  previous_composite: 35.7
   provenance:
     conformance: derived
     contracts:
@@ -210,12 +233,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 23.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/polly-io/polly-io-2026-11-03T141348.png
 security:
 - kind: authentication
   name: Polly Io Authentication
@@ -232,9 +257,9 @@ security:
 slug: polly-io
 tags:
 - Fintech
-- CapitalMarkets
+- Capital Markets
 - Mortgage
-- APIPlatform
+- API Platform
 - Artificial Intelligence
 website: https://polly.io
 ---

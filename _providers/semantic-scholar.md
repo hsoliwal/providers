@@ -1,12 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Free
   onboarding: unknown
-  pricing: unknown
+  pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: quarter
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.3
-  scored_at: '2026-10-17'
+  score: 33.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -41,7 +45,7 @@ agentic_access:
   operation_count: 20
   slug: semantic-scholar-agentic-access
   summary_line: 20 operations · 1 acting
-api_count: 5
+api_count: 3
 apis:
 - baseURL: https://api.semanticscholar.org/graph/v1
   baseurl_source: declared
@@ -73,11 +77,8 @@ apis:
   description: The Snippet Text API from Semantic Scholar — 1 operation(s) for snippet text.
   name: Semantic Scholar Snippet Text API
   slug: semantic-scholar-snippet-text-api
-artifact_total: 29
+artifact_total: 28
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Academic Graph Author Data API
   slug: open-semantic-scholar-author-data-api
@@ -98,7 +99,7 @@ collections:
   slug: open-semantic-scholar-snippet-text-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/semantic-scholar/refs/heads/main/capabilities/semantic-scholar-capability-edges.yml
+  href: https://artifacts.apis.io/semantic-scholar/capabilities/semantic-scholar-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/semantic-scholar-capability-edges.yml
@@ -107,17 +108,17 @@ common:
   type: IssueTracker
   url: https://github.com/allenai/s2-folks/issues
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/semantic-scholar/refs/heads/main/agentic-access/semantic-scholar-agentic-access.yml
+  href: https://artifacts.apis.io/semantic-scholar/agentic-access/semantic-scholar-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/semantic-scholar-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/semantic-scholar/refs/heads/main/security/semantic-scholar-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/semantic-scholar/security/semantic-scholar-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/semantic-scholar-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/semantic-scholar/refs/heads/main/security/semantic-scholar-domain-security.yml
+  href: https://artifacts.apis.io/semantic-scholar/security/semantic-scholar-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/semantic-scholar-domain-security.yml
@@ -166,17 +167,17 @@ common:
   type: Tutorial
   url: https://www.semanticscholar.org/product/api/tutorial
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/semantic-scholar/refs/heads/main/plans/semantic-scholar-plans-pricing.yml
+  href: https://artifacts.apis.io/semantic-scholar/plans/semantic-scholar-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/semantic-scholar-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/semantic-scholar/refs/heads/main/rate-limits/semantic-scholar-rate-limits.yml
+  href: https://artifacts.apis.io/semantic-scholar/rate-limits/semantic-scholar-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/semantic-scholar-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/semantic-scholar/refs/heads/main/finops/semantic-scholar-finops.yml
+  href: https://artifacts.apis.io/semantic-scholar/finops/semantic-scholar-finops.yml
   title: ''
   type: FinOps
   url: finops/semantic-scholar-finops.yml
@@ -239,7 +240,7 @@ plans:
 - name: Semantic Scholar Plans Pricing
   plan_count: 3
   slug: semantic-scholar-plans-pricing
-random_paper: 17
+random_paper: 13
 rate_limits:
 - limit_count: 3
   name: Semantic Scholar Rate Limits
@@ -258,29 +259,29 @@ rules:
   slug: semantic-scholar-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 31.6
+  composite: 32.9
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 20
     catalog_earned: 57.3
     catalog_earned_first_party: 0.0
     catalog_gap: 57.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.7
   facets:
     access_clarity: 28.9
     contract_governance: 9.8
-    contract_quality: 48.5
+    contract_quality: 48.4
     developer_ergonomics: 11.9
     discoverability: 73.3
-    operational_transparency: 26.3
-  previous_composite: 39.9
+    operational_transparency: 36.8
+  previous_composite: 32.2
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 66.7
       total: 6
     mcp: first-party
   regulatory:
@@ -289,13 +290,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/semantic-scholar/refs/heads/main/screenshots/semantic-scholar-2026-06-20T193645.png
+screenshot: https://apis.io/screenshots/semantic-scholar/semantic-scholar-2026-06-20T193645.png
 security:
 - kind: domain-security
   name: Semantic Scholar Domain Security

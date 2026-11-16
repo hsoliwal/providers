@@ -24,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 0
 common:
@@ -80,7 +83,7 @@ press:
 - date: ''
   title: Philippine Economic Zone Authority
   url: https://www.facebook.com/PEZAPH/posts/-%F0%9D%90%91%F0%9D%90%9E%F0%9D%90%A0%F0%9D%90%A2%F0%9D%90%AC%F0%9D%90%AD%F0%9D%90%AB%F0%9D%90%9A%F0%9D%90%AD%F0%9D%90%A2%F0%9D%90%A8%F0%9D%90%A7-%F0%9D%90%80%F0%9D%90%A0%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%A6%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD-%F0%9D%90%91%F0%9D%90%80-%F0%9D%90%92%F0%9D%90%A2%F0%9D%90%A0%F0%9D%90%A7%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A0-on-26-may-2025-be-aerospace-collins-aerospace/1022466243333653/
-random_paper: 4
+random_paper: 12
 score:
   band: minimal
   composite: 4.8
@@ -91,7 +94,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -105,21 +108,21 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 4.7
+  previous_composite: 4.8
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/b-e-aerospace/refs/heads/main/screenshots/b-e-aerospace-2026-06-20T172917.png
+screenshot: https://apis.io/screenshots/b-e-aerospace/b-e-aerospace-2026-06-20T172917.png
 slug: b-e-aerospace
 tags:
 - Aerospace

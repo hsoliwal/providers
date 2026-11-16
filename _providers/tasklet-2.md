@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tasklet-2/refs/heads/main/plans/tasklet-2-plans-pricing.yml
+  href: https://artifacts.apis.io/tasklet-2/plans/tasklet-2-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tasklet-2-plans-pricing.yml
@@ -70,7 +75,7 @@ common:
   type: ChangeLog
   url: https://tasklet.ai/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tasklet-2/refs/heads/main/changelog/tasklet-2-changelog.yml
+  href: https://artifacts.apis.io/tasklet-2/changelog/tasklet-2-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/tasklet-2-changelog.yml
@@ -99,7 +104,7 @@ common:
   type: PrivacyPolicy
   url: https://tasklet.ai/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tasklet-2/refs/heads/main/security/tasklet-2-trust-center.yml
+  href: https://artifacts.apis.io/tasklet-2/security/tasklet-2-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/tasklet-2-trust-center.yml
@@ -108,12 +113,12 @@ common:
   type: TrustCenter
   url: https://trust.tasklet.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tasklet-2/refs/heads/main/security/tasklet-2-trust-center.yml
+  href: https://artifacts.apis.io/tasklet-2/security/tasklet-2-trust-center.yml
   title: ''
   type: Compliance
   url: security/tasklet-2-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tasklet-2/refs/heads/main/llms/tasklet-2-llms.txt
+  href: https://artifacts.apis.io/tasklet-2/llms/tasklet-2-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tasklet-2-llms.txt
@@ -141,18 +146,18 @@ plans:
 - name: Tasklet 2 Plans Pricing
   plan_count: 4
   slug: tasklet-2-plans-pricing
-random_paper: 19
+random_paper: 15
 score:
   band: thin
   composite: 29.6
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 0.0
   facets:
     access_clarity: 77.6
     contract_governance: 0.0
@@ -160,21 +165,21 @@ score:
     developer_ergonomics: 38.1
     discoverability: 55.4
     operational_transparency: 15.8
-  previous_composite: 23.2
+  previous_composite: 29.6
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 7.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tasklet-2/refs/heads/main/screenshots/tasklet-2-2026-09-02T162549.png
+screenshot: https://apis.io/screenshots/tasklet-2/tasklet-2-2026-09-02T162549.png
 security:
 - kind: trust-center
   name: Tasklet 2 Trust Center

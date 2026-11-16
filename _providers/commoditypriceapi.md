@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Open access
+  onboarding: open
+  pricing: paid
+  public: true
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.8
-  scored_at: '2026-10-17'
+  score: 22.8
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: Provides real‑time commodity price data via REST endpoints such as gold-price and silver-price.
@@ -42,37 +59,37 @@ apis:
 artifact_total: 12
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/commoditypriceapi/refs/heads/main/plans/commoditypriceapi-plans-pricing.yml
+  href: https://artifacts.apis.io/commoditypriceapi/plans/commoditypriceapi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/commoditypriceapi-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/commoditypriceapi/refs/heads/main/rules/commoditypriceapi-rules.yml
+  href: https://artifacts.apis.io/commoditypriceapi/rules/commoditypriceapi-rules.yml
   title: ''
   type: Spectral
   url: rules/commoditypriceapi-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/commoditypriceapi/refs/heads/main/json-ld/commoditypriceapi-context.jsonld
+  href: https://artifacts.apis.io/commoditypriceapi/json-ld/commoditypriceapi-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/commoditypriceapi-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/commoditypriceapi/refs/heads/main/vocabulary/commoditypriceapi-vocabulary.yml
+  href: https://artifacts.apis.io/commoditypriceapi/vocabulary/commoditypriceapi-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/commoditypriceapi-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/commoditypriceapi/refs/heads/main/data-model/commoditypriceapi-data-model.yml
+  href: https://artifacts.apis.io/commoditypriceapi/data-model/commoditypriceapi-data-model.yml
   title: ''
   type: DataModel
   url: data-model/commoditypriceapi-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/commoditypriceapi/refs/heads/main/conformance/commoditypriceapi-conformance.yml
+  href: https://artifacts.apis.io/commoditypriceapi/conformance/commoditypriceapi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/commoditypriceapi-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/commoditypriceapi/refs/heads/main/hosts/commoditypriceapi-hosts.yml
+  href: https://artifacts.apis.io/commoditypriceapi/hosts/commoditypriceapi-hosts.yml
   title: ''
   type: Hosts
   url: hosts/commoditypriceapi-hosts.yml
@@ -105,7 +122,7 @@ common:
   type: Blog
   url: https://commoditypriceapi.com/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/commoditypriceapi/refs/heads/main/security/commoditypriceapi-domain-security.yml
+  href: https://artifacts.apis.io/commoditypriceapi/security/commoditypriceapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/commoditypriceapi-domain-security.yml
@@ -161,7 +178,7 @@ plans:
 - name: Commoditypriceapi Plans Pricing
   plan_count: 4
   slug: commoditypriceapi-plans-pricing
-random_paper: 0
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -177,21 +194,23 @@ rules:
   slug: commoditypriceapi-rules
 score:
   band: thin
-  composite: 32.3
+  composite: 26.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 18
     catalog_earned: 67.8
     catalog_earned_first_party: 12.0
     catalog_gap: 47.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.1
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 22.0
     contract_quality: 25.7
-    developer_ergonomics: 7.1
+    developer_ergonomics: 3.6
     discoverability: 53.6
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  previous_composite: 32.3
   provenance:
     conformance: derived
     contracts:
@@ -205,13 +224,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/commoditypriceapi/commoditypriceapi-2026-11-03T124932.png
 security:
 - kind: domain-security
   name: Commoditypriceapi Domain Security

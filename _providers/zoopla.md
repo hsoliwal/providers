@@ -1,14 +1,17 @@
 ---
 access_model:
-  confidence: high
-  label: Paid · Zoopla membership required · credentials issued by Member Services
-  onboarding: unknown
-  pricing: paid
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
   public: false
   source:
-  - documentation
   - authentication
-  - terms-of-use
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.6
-  scored_at: '2026-10-17'
+  score: 33.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -55,7 +61,7 @@ apis:
   description: The REST Endpoints API from Zoopla — 2 operation(s) for rest endpoints.
   name: Zoopla REST Endpoints API
   slug: zoopla-rest-endpoints-api
-artifact_total: 30
+artifact_total: 35
 asyncapis:
 - description: API Evangelist derivation of Zoopla's Lead Push Service. Zoopla publishes no AsyncAPI document; this document is derived from the published push-service documentation at https://developers.zoopla.co.u
   name: Zoopla Lead Push Service
@@ -78,42 +84,42 @@ collections:
   slug: open-zoopla-weekly-featured-property-activations
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/overlays/zoopla-leads-api-overlay.yaml
+  href: https://artifacts.apis.io/zoopla/overlays/zoopla-leads-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zoopla-leads-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/overlays/zoopla-premium-listing-activations-overlay.yaml
+  href: https://artifacts.apis.io/zoopla/overlays/zoopla-premium-listing-activations-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zoopla-premium-listing-activations-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/overlays/zoopla-weekly-featured-property-activations-overlay.yaml
+  href: https://artifacts.apis.io/zoopla/overlays/zoopla-weekly-featured-property-activations-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zoopla-weekly-featured-property-activations-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/agentic-access/zoopla-agentic-access.yml
+  href: https://artifacts.apis.io/zoopla/agentic-access/zoopla-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zoopla-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/security/zoopla-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/zoopla/security/zoopla-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/zoopla-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/security/zoopla-domain-security.yml
+  href: https://artifacts.apis.io/zoopla/security/zoopla-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zoopla-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/scopes/zoopla-scopes.yml
+  href: https://artifacts.apis.io/zoopla/scopes/zoopla-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/zoopla-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/authentication/zoopla-authentication.yml
+  href: https://artifacts.apis.io/zoopla/authentication/zoopla-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zoopla-authentication.yml
@@ -174,17 +180,17 @@ common:
   type: Security
   url: https://www.zoopla.co.uk/vulnerability-disclosure/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/well-known/zoopla-security.txt
+  href: https://artifacts.apis.io/zoopla/well-known/zoopla-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/zoopla-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/well-known/zoopla-well-known.yml
+  href: https://artifacts.apis.io/zoopla/well-known/zoopla-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/zoopla-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/packages/zoopla-packages.yml
+  href: https://artifacts.apis.io/zoopla/packages/zoopla-packages.yml
   title: ''
   type: Packages
   url: packages/zoopla-packages.yml
@@ -193,92 +199,92 @@ common:
   type: Postman
   url: https://support.zoopla.co.uk/hc/en-gb/article_attachments/360016811117/Products-API.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/postman/zoopla-products-api.postman_collection.json
+  href: https://artifacts.apis.io/zoopla/postman/zoopla-products-api.postman_collection.json
   title: ''
   type: Postman
   url: postman/zoopla-products-api.postman_collection.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/mcp/zoopla-mcp.yml
+  href: https://artifacts.apis.io/zoopla/mcp/zoopla-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/zoopla-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/mcp/zoopla-tool-crosswalk.yml
+  href: https://artifacts.apis.io/zoopla/mcp/zoopla-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/zoopla-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/llms/zoopla-llms.txt
+  href: https://artifacts.apis.io/zoopla/llms/zoopla-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zoopla-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/conformance/zoopla-conformance.yml
+  href: https://artifacts.apis.io/zoopla/conformance/zoopla-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zoopla-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/errors/zoopla-error-codes.yml
+  href: https://artifacts.apis.io/zoopla/errors/zoopla-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/zoopla-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/errors/zoopla-problem-types.yml
+  href: https://artifacts.apis.io/zoopla/errors/zoopla-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/zoopla-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/lifecycle/zoopla-lifecycle.yml
+  href: https://artifacts.apis.io/zoopla/lifecycle/zoopla-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zoopla-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/conventions/zoopla-conventions.yml
+  href: https://artifacts.apis.io/zoopla/conventions/zoopla-conventions.yml
   title: ''
   type: Conventions
   url: conventions/zoopla-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/data-model/zoopla-data-model.yml
+  href: https://artifacts.apis.io/zoopla/data-model/zoopla-data-model.yml
   title: ''
   type: DataModel
   url: data-model/zoopla-data-model.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/asyncapi/zoopla-leads-push-asyncapi.yml
+  href: https://artifacts.apis.io/zoopla/asyncapi/zoopla-leads-push-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/zoopla-leads-push-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/asyncapi/zoopla-leads-webhooks.yml
+  href: https://artifacts.apis.io/zoopla/asyncapi/zoopla-leads-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/zoopla-leads-webhooks.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/examples/_index.yml
+  href: https://artifacts.apis.io/zoopla/examples/_index.yml
   title: ''
   type: Examples
   url: examples/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/zoopla/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/skills/zoopla-poll-leads.md
+  href: https://artifacts.apis.io/zoopla/skills/zoopla-poll-leads.md
   title: ''
   type: AgentSkill
   url: skills/zoopla-poll-leads.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/skills/zoopla-receive-lead-push.md
+  href: https://artifacts.apis.io/zoopla/skills/zoopla-receive-lead-push.md
   title: ''
   type: AgentSkill
   url: skills/zoopla-receive-lead-push.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/skills/zoopla-activate-premium-listing.md
+  href: https://artifacts.apis.io/zoopla/skills/zoopla-activate-premium-listing.md
   title: ''
   type: AgentSkill
   url: skills/zoopla-activate-premium-listing.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/skills/zoopla-activate-weekly-featured-property.md
+  href: https://artifacts.apis.io/zoopla/skills/zoopla-activate-weekly-featured-property.md
   title: ''
   type: AgentSkill
   url: skills/zoopla-activate-weekly-featured-property.md
@@ -345,11 +351,24 @@ network: true
 overview: 'Zoopla publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Products API and REST Endpoints API. Tagged areas include Real Estate, United Kingdom, Property Listings, Property Portal, and PropTech.
 
 
-  The Zoopla catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
+  The Zoopla catalog on APIs.io includes 2 event-driven AsyncAPI specifications and 1 Spectral governance ruleset.
 
 
   Zoopla''s developer surface includes authentication, documentation, signup flow, support, getting-started guide, API reference, code examples, and 37 more developer resources.'
-random_paper: 1
+random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Zoopla API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: zoopla-rules
 scopes:
 - name: Zoopla Scopes
   scope_count: 3
@@ -357,18 +376,18 @@ scopes:
   summary_line: 3 scopes · clientCredentials
 score:
   band: thin
-  composite: 36.6
+  composite: 38.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 38.0
+    artifact_dirs: 24
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 13.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 58.1
     developer_ergonomics: 42.3
     discoverability: 67.9
@@ -381,7 +400,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 36.5
+  previous_composite: 38.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -398,13 +417,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zoopla/refs/heads/main/screenshots/zoopla-2026-08-17T083116.png
+screenshot: https://apis.io/screenshots/zoopla/zoopla-2026-08-17T083116.png
 security:
 - kind: authentication
   name: Zoopla Authentication
@@ -418,6 +437,16 @@ security:
   name: Zoopla Vulnerability Disclosure
   slug: zoopla-vulnerability-disclosure
   summary_line: Hackerone · security.txt · contact published
+skill_count: 4
+skills:
+- name: Activate a Zoopla Premium Listing from a CRM
+  slug: zoopla-activate-premium-listing
+- name: Activate a Zoopla Weekly Featured Property from a CRM
+  slug: zoopla-activate-weekly-featured-property
+- name: Poll Zoopla for new applicant and appraisal leads
+  slug: zoopla-poll-leads
+- name: Receive Zoopla leads in real time over the Push Service
+  slug: zoopla-receive-lead-push
 slug: zoopla
 tags:
 - Real Estate

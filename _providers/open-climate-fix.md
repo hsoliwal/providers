@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Open Climate Fix provides AI-driven forecasting APIs for solar, wind, and demand energy systems.
@@ -32,12 +45,12 @@ apis:
 artifact_total: 2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/open-climate-fix/refs/heads/main/hosts/open-climate-fix-hosts.yml
+  href: https://artifacts.apis.io/open-climate-fix/hosts/open-climate-fix-hosts.yml
   title: ''
   type: Hosts
   url: hosts/open-climate-fix-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/open-climate-fix/refs/heads/main/vendors/open-climate-fix-vendors.yml
+  href: https://artifacts.apis.io/open-climate-fix/vendors/open-climate-fix-vendors.yml
   title: ''
   type: Vendors
   url: vendors/open-climate-fix-vendors.yml
@@ -46,7 +59,7 @@ common:
   type: Leadership
   url: https://www.openclimatefix.org/team
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/open-climate-fix/refs/heads/main/security/open-climate-fix-domain-security.yml
+  href: https://artifacts.apis.io/open-climate-fix/security/open-climate-fix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/open-climate-fix-domain-security.yml
@@ -100,22 +113,24 @@ overview: 'Open Climate Fix is listed with 1 API on the [APIs.io](https://apis.i
   Open Climate Fix''s developer surface includes documentation, getting-started guide, support, and 8 more developer resources.'
 random_paper: 2
 score:
-  band: emerging
-  composite: 15.0
+  band: minimal
+  composite: 9.7
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.3
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 35.7
-    discoverability: 58.9
-    operational_transparency: 5.3
+    developer_ergonomics: 17.9
+    discoverability: 58.0
+    operational_transparency: 2.6
+  previous_composite: 15.0
   provenance:
     mcp: unknown
   regulatory:
@@ -123,13 +138,15 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 7.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 6.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/open-climate-fix/open-climate-fix-2026-11-03T140621.png
 security:
 - kind: domain-security
   name: Open Climate Fix Domain Security

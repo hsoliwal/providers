@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 30.3
-  scored_at: '2026-10-17'
+  score: 34.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 12
   slug: agora-agentic-access
   summary_line: 12 operations · 4 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.agora.finance
   baseurl_source: declared
@@ -69,11 +72,8 @@ apis:
   description: The Transactions API from Agora — 2 operation(s) for transactions.
   name: Agora Transactions API
   slug: agora-transactions-api
-artifact_total: 15
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Endpoints Accounts API
   slug: open-agora-accounts-api
@@ -95,12 +95,12 @@ common:
   type: Website
   url: https://www.agora.finance/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/agentic-access/agora-agentic-access.yml
+  href: https://artifacts.apis.io/agora/agentic-access/agora-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/agora-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/security/agora-domain-security.yml
+  href: https://artifacts.apis.io/agora/security/agora-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/agora-domain-security.yml
@@ -145,62 +145,62 @@ common:
   type: Support
   url: https://www.agora.finance/contact
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/authentication/agora-authentication.yml
+  href: https://artifacts.apis.io/agora/authentication/agora-authentication.yml
   title: ''
   type: Authentication
   url: authentication/agora-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/conventions/agora-conventions.yml
+  href: https://artifacts.apis.io/agora/conventions/agora-conventions.yml
   title: ''
   type: Conventions
   url: conventions/agora-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/errors/agora-error-codes.yml
+  href: https://artifacts.apis.io/agora/errors/agora-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/agora-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/lifecycle/agora-lifecycle.yml
+  href: https://artifacts.apis.io/agora/lifecycle/agora-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/agora-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/changelog/agora-changelog.yml
+  href: https://artifacts.apis.io/agora/changelog/agora-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/agora-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/conformance/agora-conformance.yml
+  href: https://artifacts.apis.io/agora/conformance/agora-conformance.yml
   title: ''
   type: Conformance
   url: conformance/agora-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/data-model/agora-data-model.yml
+  href: https://artifacts.apis.io/agora/data-model/agora-data-model.yml
   title: ''
   type: DataModel
   url: data-model/agora-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/overlays/agora-endpoints-overlay.yaml
+  href: https://artifacts.apis.io/agora/overlays/agora-endpoints-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/agora-endpoints-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/well-known/agora-well-known.yml
+  href: https://artifacts.apis.io/agora/well-known/agora-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/agora-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/llms/agora-llms.txt
+  href: https://artifacts.apis.io/agora/llms/agora-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/agora-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/mcp/agora-mcp.yml
+  href: https://artifacts.apis.io/agora/mcp/agora-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/agora-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/agora/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -219,34 +219,50 @@ network: true
 overview: 'Agora publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Auth API, Metrics API, and 2 more. Tagged areas include Company, Fintech, Stablecoins, Digital Dollar, and Payments.
 
 
+  The Agora catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Agora''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, support, authentication, and 18 more developer resources.'
-random_paper: 16
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Agora API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: agora-rules
 score:
   band: developing
-  composite: 40.7
+  composite: 43.7
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.4
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 49.0
+    contract_governance: 18.2
+    contract_quality: 54.4
     developer_ergonomics: 58.9
     discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 40.7
+  previous_composite: 42.3
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 5
     mcp: first-party
     skills: derived
@@ -256,13 +272,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/agora/refs/heads/main/screenshots/agora-2026-07-25T195314.png
+screenshot: https://apis.io/screenshots/agora/agora-2026-07-25T195314.png
 security:
 - kind: authentication
   name: Agora Authentication
@@ -272,6 +288,12 @@ security:
   name: Agora Domain Security
   slug: agora-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Authenticate, register an account, and create a mint/redeem route
+  slug: agora-authenticate-and-create-route
+- name: Read AUSD supply metrics
+  slug: agora-read-ausd-metrics
 slug: agora
 tags:
 - Company

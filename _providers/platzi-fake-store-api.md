@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -73,9 +79,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Platzi Fake Store Auth API
   slug: open-platzi-fake-store-api-auth-api
 - collection_type: open
@@ -95,32 +98,32 @@ collections:
   slug: open-platzi-fake-store-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/platzi-fake-store-api/refs/heads/main/plans/platzi-fake-store-api-plans-pricing.yml
+  href: https://artifacts.apis.io/platzi-fake-store-api/plans/platzi-fake-store-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/platzi-fake-store-api-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/platzi-fake-store-api/refs/heads/main/rate-limits/platzi-fake-store-api-rate-limits.yml
+  href: https://artifacts.apis.io/platzi-fake-store-api/rate-limits/platzi-fake-store-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/platzi-fake-store-api-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/platzi-fake-store-api/refs/heads/main/finops/platzi-fake-store-api-finops.yml
+  href: https://artifacts.apis.io/platzi-fake-store-api/finops/platzi-fake-store-api-finops.yml
   title: ''
   type: FinOps
   url: finops/platzi-fake-store-api-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/platzi-fake-store-api/refs/heads/main/agentic-access/platzi-fake-store-api-agentic-access.yml
+  href: https://artifacts.apis.io/platzi-fake-store-api/agentic-access/platzi-fake-store-api-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/platzi-fake-store-api-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/platzi-fake-store-api/refs/heads/main/security/platzi-fake-store-api-domain-security.yml
+  href: https://artifacts.apis.io/platzi-fake-store-api/security/platzi-fake-store-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/platzi-fake-store-api-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/platzi-fake-store-api/refs/heads/main/authentication/platzi-fake-store-api-authentication.yml
+  href: https://artifacts.apis.io/platzi-fake-store-api/authentication/platzi-fake-store-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/platzi-fake-store-api-authentication.yml
@@ -146,7 +149,7 @@ finops:
 - has_sources: false
   method: generated
   name: Platzi Fake Store Api Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: platzi-fake-store-api-finops
   template: true
@@ -159,35 +162,51 @@ network: true
 overview: 'Platzi Fake Store API publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Categories API, Files API, and 2 more. Tagged areas include E-Commerce, Fake API, JWT, Prototyping, and Sandbox.
 
 
+  The Platzi Fake Store API catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Platzi Fake Store API''s developer surface includes authentication, documentation, GitHub presence, and 7 more developer resources.'
 plans:
 - name: Platzi Fake Store Api Plans Pricing
   plan_count: 3
   slug: platzi-fake-store-api-plans-pricing
-random_paper: 5
+random_paper: 9
 rate_limits:
 - limit_count: 5
   name: Platzi Fake Store Api Rate Limits
   slug: platzi-fake-store-api-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Platzi Fake Store API API Rules
+  rule_count: 56
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 2
+  slug: platzi-fake-store-api-rules
 score:
-  band: emerging
-  composite: 25.1
+  band: thin
+  composite: 26.7
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 15
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.6
     developer_ergonomics: 21.4
     discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 26.6
+  previous_composite: 26.7
   provenance:
     agentic_access: derived
     contracts:
@@ -201,13 +220,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/platzi-fake-store-api/refs/heads/main/screenshots/platzi-fake-store-api-2026-06-20T191758.png
+screenshot: https://apis.io/screenshots/platzi-fake-store-api/platzi-fake-store-api-2026-06-20T191758.png
 security:
 - kind: authentication
   name: Platzi Fake Store Api Authentication

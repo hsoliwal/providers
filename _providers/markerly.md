@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: A first-party FFmpeg media-processing microservice Markerly runs on Google Cloud Run. It exposes two documented JSON/HTTP operations — a health check and a thumbnail generator that renders a JPEG fram
@@ -55,12 +58,12 @@ common:
   type: Support
   url: https://markerly.com/contact-us
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/markerly/refs/heads/main/llms/markerly-llms.txt
+  href: https://artifacts.apis.io/markerly/llms/markerly-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/markerly-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/markerly/refs/heads/main/security/markerly-domain-security.yml
+  href: https://artifacts.apis.io/markerly/security/markerly-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/markerly-domain-security.yml
@@ -85,37 +88,37 @@ common:
   type: Login
   url: https://markerly.creatorsaurus.com/login
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/markerly/refs/heads/main/rate-limits/markerly-rate-limits.yml
+  href: https://artifacts.apis.io/markerly/rate-limits/markerly-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/markerly-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/markerly/refs/heads/main/errors/markerly-error-codes.yml
+  href: https://artifacts.apis.io/markerly/errors/markerly-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/markerly-error-codes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/markerly/refs/heads/main/authentication/markerly-authentication.yml
+  href: https://artifacts.apis.io/markerly/authentication/markerly-authentication.yml
   title: ''
   type: Authentication
   url: authentication/markerly-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/markerly/refs/heads/main/conventions/markerly-conventions.yml
+  href: https://artifacts.apis.io/markerly/conventions/markerly-conventions.yml
   title: ''
   type: Conventions
   url: conventions/markerly-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/markerly/refs/heads/main/conformance/markerly-conformance.yml
+  href: https://artifacts.apis.io/markerly/conformance/markerly-conformance.yml
   title: ''
   type: Conformance
   url: conformance/markerly-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/markerly/refs/heads/main/lifecycle/markerly-lifecycle.yml
+  href: https://artifacts.apis.io/markerly/lifecycle/markerly-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/markerly-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/markerly/refs/heads/main/plans/markerly-plans-pricing.yml
+  href: https://artifacts.apis.io/markerly/plans/markerly-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/markerly-plans-pricing.yml
@@ -136,7 +139,7 @@ plans:
 - name: Markerly Plans Pricing
   plan_count: 0
   slug: markerly-plans-pricing
-random_paper: 13
+random_paper: 7
 rate_limits:
 - limit_count: 2
   name: Markerly Rate Limits
@@ -145,7 +148,7 @@ score:
   band: emerging
   composite: 25.5
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -168,14 +171,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/markerly/refs/heads/main/screenshots/markerly-2026-07-25T230243.png
+screenshot: https://apis.io/screenshots/markerly/markerly-2026-07-25T230243.png
 security:
 - kind: authentication
   name: Markerly Authentication

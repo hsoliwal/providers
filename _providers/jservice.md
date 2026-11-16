@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-10-17'
+  score: 23.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -57,11 +61,8 @@ apis:
   description: User-driven reporting of invalid clues.
   name: jService Moderation API
   slug: jservice-moderation-api
-artifact_total: 23
+artifact_total: 22
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: jService Trivia Categories API
   slug: open-jservice-categories-api
@@ -80,12 +81,12 @@ common:
   type: IssueTracker
   url: https://github.com/sottenad/jService/issues
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jservice/refs/heads/main/agentic-access/jservice-agentic-access.yml
+  href: https://artifacts.apis.io/jservice/agentic-access/jservice-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/jservice-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jservice/refs/heads/main/security/jservice-domain-security.yml
+  href: https://artifacts.apis.io/jservice/security/jservice-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jservice-domain-security.yml
@@ -155,11 +156,11 @@ modified: '2026-05-30'
 name: jService
 nav: Providers
 network: true
-overview: 'jService publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Categories API, Clues API, and Moderation API. Tagged areas include Trivia, Jeopardy, Open Source, Ruby, and Rails.
+overview: 'jService publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Categories API, Clues API, and Moderation API. Tagged areas include Trivia, Jeopardy, Open Source, Ruby, and Ruby on Rails.
 
 
   The jService catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.'
-random_paper: 1
+random_paper: 19
 rules:
 - authorship: generated
   effective_rule_count: 5
@@ -216,13 +217,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/jservice/refs/heads/main/screenshots/jservice-2026-06-20T183813.png
+screenshot: https://apis.io/screenshots/jservice/jservice-2026-06-20T183813.png
 security:
 - kind: domain-security
   name: Jservice Domain Security
@@ -234,6 +235,6 @@ tags:
 - Jeopardy
 - Open Source
 - Ruby
-- Rails
+- Ruby on Rails
 - Public APIs
 ---

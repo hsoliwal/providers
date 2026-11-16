@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: derived
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-10-17'
+  score: 27.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -69,15 +72,12 @@ apis:
   description: The Webhooks API from Rhino — 5 operation(s) for webhooks.
   name: Rhino Webhooks API
   slug: rhino-webhooks-api
-artifact_total: 17
+artifact_total: 19
 asyncapis:
 - description: ''
   name: Rhino Webhooks
   slug: rhino-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: SayRhino Partner Authentication API
   slug: open-rhino-authentication-api
@@ -98,22 +98,22 @@ collections:
   slug: open-rhino-webhooks-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/capabilities/rhino-capability-edges.yml
+  href: https://artifacts.apis.io/rhino/capabilities/rhino-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/rhino-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/agentic-access/rhino-agentic-access.yml
+  href: https://artifacts.apis.io/rhino/agentic-access/rhino-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/rhino-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/security/rhino-domain-security.yml
+  href: https://artifacts.apis.io/rhino/security/rhino-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rhino-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/authentication/rhino-authentication.yml
+  href: https://artifacts.apis.io/rhino/authentication/rhino-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rhino-authentication.yml
@@ -170,77 +170,77 @@ common:
   type: SecondaryMarket
   url: https://forgeglobal.com/rhino_stock/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/conventions/rhino-conventions.yml
+  href: https://artifacts.apis.io/rhino/conventions/rhino-conventions.yml
   title: ''
   type: Conventions
   url: conventions/rhino-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/conventions/rhino-conventions.yml
+  href: https://artifacts.apis.io/rhino/conventions/rhino-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/rhino-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/errors/rhino-problem-types.yml
+  href: https://artifacts.apis.io/rhino/errors/rhino-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/rhino-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/data-model/rhino-data-model.yml
+  href: https://artifacts.apis.io/rhino/data-model/rhino-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rhino-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/examples/rhino-examples.yml
+  href: https://artifacts.apis.io/rhino/examples/rhino-examples.yml
   title: ''
   type: Examples
   url: examples/rhino-examples.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/asyncapi/rhino-webhooks.yml
+  href: https://artifacts.apis.io/rhino/asyncapi/rhino-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/rhino-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/sandbox/rhino-sandbox.yml
+  href: https://artifacts.apis.io/rhino/sandbox/rhino-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/rhino-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/lifecycle/rhino-lifecycle.yml
+  href: https://artifacts.apis.io/rhino/lifecycle/rhino-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rhino-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/conformance/rhino-conformance.yml
+  href: https://artifacts.apis.io/rhino/conformance/rhino-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rhino-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/security/rhino-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rhino/security/rhino-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/rhino-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/security/rhino-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rhino/security/rhino-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/rhino-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/mcp/rhino-mcp.yml
+  href: https://artifacts.apis.io/rhino/mcp/rhino-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/rhino-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/rhino/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/llms/rhino-llms.txt
+  href: https://artifacts.apis.io/rhino/llms/rhino-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rhino-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/overlays/rhino-partner-api-overlay.yaml
+  href: https://artifacts.apis.io/rhino/overlays/rhino-partner-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rhino-partner-api-overlay.yaml
@@ -255,30 +255,43 @@ network: true
 overview: 'Rhino publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Partner Api::V2::Test::Resident API, Partner Api::V2::Test::Sayrhino User API, and 2 more. Tagged areas include Insurance, Insurtech, Real Estate, Property Management, and Rentals.
 
 
-  The Rhino catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Rhino catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Rhino''s developer surface includes authentication, documentation, API reference, support, engineering blog, signup flow, code examples, and 25 more developer resources.'
 random_paper: 16
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Rhino API Rules
+  rule_count: 46
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 2
+  slug: rhino-rules
 score:
   band: developing
-  composite: 42.8
+  composite: 44.4
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 53.3
     developer_ergonomics: 44.6
     discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 42.8
+  previous_composite: 44.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -295,13 +308,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 27.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/rhino/refs/heads/main/screenshots/rhino-2026-08-17T081558.png
+screenshot: https://apis.io/screenshots/rhino/rhino-2026-08-17T081558.png
 security:
 - kind: authentication
   name: Rhino Authentication
@@ -315,6 +328,12 @@ security:
   name: Rhino Vulnerability Disclosure
   slug: rhino-vulnerability-disclosure
   summary_line: Hackerone · security.txt · contact published
+skill_count: 2
+skills:
+- name: Enroll a renter prospect with Rhino
+  slug: rhino-enroll-a-prospect
+- name: Receive and reconcile Rhino webhook events
+  slug: rhino-receive-webhook-events
 slug: rhino
 tags:
 - Insurance

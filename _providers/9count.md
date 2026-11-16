@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,12 +36,12 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/9count/refs/heads/main/security/9count-domain-security.yml
+  href: https://artifacts.apis.io/9count/security/9count-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/9count-domain-security.yml
@@ -57,7 +70,7 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/9-count-inc
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/9count/refs/heads/main/llms/9count-llms.txt
+  href: https://artifacts.apis.io/9count/llms/9count-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/9count-llms.txt
@@ -90,12 +103,12 @@ overview: '9 Count is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   9 Count''s developer surface includes engineering blog and 7 more developer resources.'
-random_paper: 16
+random_paper: 10
 score:
   band: minimal
   composite: 9.6
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -116,14 +129,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/9count/refs/heads/main/screenshots/9count-2026-10-11T092328.png
+screenshot: https://apis.io/screenshots/9count/9count-2026-10-11T092328.png
 security:
 - kind: domain-security
   name: 9Count Domain Security

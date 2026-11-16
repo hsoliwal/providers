@@ -7,13 +7,15 @@ access_model:
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: false
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-10-17'
+  score: 30.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 0
@@ -78,15 +83,15 @@ apis:
   description: The insight-analyses API from Qlik — 3 operation(s) for insight-analyses.
   name: Qlik Insight Analyses API
   slug: qlik-insight-analyses-api
-artifact_total: 18
+artifact_total: 20
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/qlik/refs/heads/main/plans/qlik-plans-pricing.yml
+  href: https://artifacts.apis.io/qlik/plans/qlik-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/qlik-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/qlik/refs/heads/main/finops/qlik-finops.yml
+  href: https://artifacts.apis.io/qlik/finops/qlik-finops.yml
   title: ''
   type: FinOps
   url: finops/qlik-finops.yml
@@ -95,7 +100,7 @@ common:
   type: Website
   url: https://qlik.dev
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qlik/refs/heads/main/security/qlik-domain-security.yml
+  href: https://artifacts.apis.io/qlik/security/qlik-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/qlik-domain-security.yml
@@ -177,7 +182,7 @@ finops:
 - has_sources: false
   method: generated
   name: Qlik Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: qlik-finops
   template: true
@@ -207,7 +212,7 @@ plans:
 - name: Qlik Plans Pricing
   plan_count: 3
   slug: qlik-plans-pricing
-random_paper: 15
+random_paper: 1
 rate_limits:
 - limit_count: 5
   name: Qlik Rate Limits
@@ -229,13 +234,13 @@ score:
   band: developing
   composite: 43.2
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 43.5
     catalog_earned_first_party: 0.0
     catalog_gap: 71.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -10.2
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
@@ -243,7 +248,7 @@ score:
     developer_ergonomics: 52.4
     discoverability: 39.3
     operational_transparency: 44.7
-  previous_composite: 53.4
+  previous_composite: 43.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -260,13 +265,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/qlik/refs/heads/main/screenshots/qlik-2026-06-20T192340.png
+screenshot: https://apis.io/screenshots/qlik/qlik-2026-06-20T192340.png
 security:
 - kind: authentication
   name: Qlik Authentication
@@ -276,6 +281,12 @@ security:
   name: Qlik Domain Security
   slug: qlik-domain-security
   summary_line: TLSv1.3 · DNSSEC
+skill_count: 2
+skills:
+- name: qlik-evaluation-run-and-download
+  slug: qlik-evaluation-run-and-download
+- name: qlik-manage-filters
+  slug: qlik-manage-filters
 slug: qlik
 tags:
 - Security

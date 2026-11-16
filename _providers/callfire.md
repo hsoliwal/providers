@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 18.7
+  scored_at: '2026-11-06'
 api_count: 13
 apis:
 - description: CallFire API provides voice calls, SMS, and related communication services.
@@ -89,74 +103,74 @@ apis:
   description: The Utils API from Callfire — 1 operation(s) for utils.
   name: Callfire Utils API
   slug: callfire-utils-api
-artifact_total: 24
+artifact_total: 26
 asyncapis:
 - description: ''
   name: Callfire Webhooks
   slug: callfire-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/rules/callfire-rules.yml
+  href: https://artifacts.apis.io/callfire/rules/callfire-rules.yml
   title: ''
   type: Spectral
   url: rules/callfire-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/json-ld/callfire-context.jsonld
+  href: https://artifacts.apis.io/callfire/json-ld/callfire-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/callfire-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/vocabulary/callfire-vocabulary.yml
+  href: https://artifacts.apis.io/callfire/vocabulary/callfire-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/callfire-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/data-model/callfire-data-model.yml
+  href: https://artifacts.apis.io/callfire/data-model/callfire-data-model.yml
   title: ''
   type: DataModel
   url: data-model/callfire-data-model.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/plans/callfire-plans-pricing.yml
+  href: https://artifacts.apis.io/callfire/plans/callfire-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/callfire-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/asyncapi/callfire-webhooks.yml
+  href: https://artifacts.apis.io/callfire/asyncapi/callfire-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/callfire-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/conformance/callfire-conformance.yml
+  href: https://artifacts.apis.io/callfire/conformance/callfire-conformance.yml
   title: ''
   type: Conformance
   url: conformance/callfire-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/well-known/callfire-status-security.txt
+  href: https://artifacts.apis.io/callfire/well-known/callfire-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/callfire-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/well-known/callfire-well-known.yml
+  href: https://artifacts.apis.io/callfire/well-known/callfire-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/callfire-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/hosts/callfire-hosts.yml
+  href: https://artifacts.apis.io/callfire/hosts/callfire-hosts.yml
   title: ''
   type: Hosts
   url: hosts/callfire-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/vendors/callfire-vendors.yml
+  href: https://artifacts.apis.io/callfire/vendors/callfire-vendors.yml
   title: ''
   type: Vendors
   url: vendors/callfire-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/packages/callfire-packages.yml
+  href: https://artifacts.apis.io/callfire/packages/callfire-packages.yml
   title: ''
   type: SDKs
   url: packages/callfire-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/packages/callfire-packages.yml
+  href: https://artifacts.apis.io/callfire/packages/callfire-packages.yml
   title: ''
   type: Packages
   url: packages/callfire-packages.yml
@@ -173,7 +187,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/CallFire
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/callfire/refs/heads/main/security/callfire-domain-security.yml
+  href: https://artifacts.apis.io/callfire/security/callfire-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/callfire-domain-security.yml
@@ -236,6 +250,14 @@ coverage:
   state: unreadable
 created: '2026-10-06'
 description: Callfire provides cloud-based communication solutions that enable businesses to engage customers via voice calls, text messaging, and IVR. Their platform offers tools for call tracking, voice broadcasting, and automated messaging, helping companies improve outreach, increase revenue, and streamline customer interactions. With over 4 billion messages delivered, Callfire serves a wide range of industries and integrates with popular CRMs and marketing platforms.
+finops:
+- has_sources: true
+  method: derived
+  name: Callfire Finops
+  primary_unit: ''
+  service_category: ''
+  slug: callfire-finops
+  template: true
 image: https://www.callfire.com/sites/default/files/OpenGraph/callfire-social-post.png
 json_schemas:
 - name: GetV2CallsBroadcastsIdRecipientsResponse
@@ -277,7 +299,10 @@ plans:
 - name: Callfire Plans Pricing
   plan_count: 5
   slug: callfire-plans-pricing
-random_paper: 20
+- name: Callfire Price Estimates
+  plan_count: 0
+  slug: callfire-price-estimates
+random_paper: 18
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -292,22 +317,24 @@ rules:
     warn: 1
   slug: callfire-rules
 score:
-  band: developing
-  composite: 49.6
+  band: thin
+  composite: 38.8
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 22
     catalog_earned: 77.8
     catalog_earned_first_party: 12.0
     catalog_gap: 37.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -12.2
   facets:
-    access_clarity: 84.2
+    access_clarity: 57.9
     contract_governance: 22.0
     contract_quality: 32.2
-    developer_ergonomics: 52.4
-    discoverability: 73.2
+    developer_ergonomics: 29.8
+    discoverability: 72.3
     operational_transparency: 28.9
+  previous_composite: 51.0
   provenance:
     conformance: derived
     contracts:
@@ -321,12 +348,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 17.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/callfire/callfire-2026-11-03T123029.png
 security:
 - kind: domain-security
   name: Callfire Domain Security

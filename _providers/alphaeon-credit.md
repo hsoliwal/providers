@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alphaeon-credit/refs/heads/main/well-known/alphaeon-credit-clarity-security.txt
+  href: https://artifacts.apis.io/alphaeon-credit/well-known/alphaeon-credit-clarity-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/alphaeon-credit-clarity-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alphaeon-credit/refs/heads/main/well-known/alphaeon-credit-well-known.yml
+  href: https://artifacts.apis.io/alphaeon-credit/well-known/alphaeon-credit-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/alphaeon-credit-well-known.yml
@@ -42,12 +55,12 @@ common:
   type: Security
   url: https://clarity.com/vdp
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alphaeon-credit/refs/heads/main/hosts/alphaeon-credit-hosts.yml
+  href: https://artifacts.apis.io/alphaeon-credit/hosts/alphaeon-credit-hosts.yml
   title: ''
   type: Hosts
   url: hosts/alphaeon-credit-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alphaeon-credit/refs/heads/main/vendors/alphaeon-credit-vendors.yml
+  href: https://artifacts.apis.io/alphaeon-credit/vendors/alphaeon-credit-vendors.yml
   title: ''
   type: Vendors
   url: vendors/alphaeon-credit-vendors.yml
@@ -56,12 +69,12 @@ common:
   type: Login
   url: https://goalphaeon.com/login
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alphaeon-credit/refs/heads/main/security/alphaeon-credit-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/alphaeon-credit/security/alphaeon-credit-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/alphaeon-credit-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alphaeon-credit/refs/heads/main/security/alphaeon-credit-domain-security.yml
+  href: https://artifacts.apis.io/alphaeon-credit/security/alphaeon-credit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/alphaeon-credit-domain-security.yml
@@ -78,25 +91,25 @@ name: Alphaeon Credit
 nav: Providers
 network: true
 overview: Alphaeon Credit is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Credit Cards, Medical Financing, Dental, and Plastic Surgery.
-random_paper: 2
+random_paper: 8
 score:
   band: minimal
-  composite: 7.5
+  composite: 5.5
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.0
   facets:
-    access_clarity: 13.2
+    access_clarity: 6.6
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
     discoverability: 39.3
-    operational_transparency: 10.5
+    operational_transparency: 5.3
   previous_composite: 7.5
   regulatory:
     applies: true
@@ -104,14 +117,14 @@ score:
     regime: Health
     regime_id: health
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/alphaeon-credit/refs/heads/main/screenshots/alphaeon-credit-2026-10-11T093722.png
+screenshot: https://apis.io/screenshots/alphaeon-credit/alphaeon-credit-2026-10-11T093722.png
 security:
 - kind: domain-security
   name: Alphaeon Credit Domain Security

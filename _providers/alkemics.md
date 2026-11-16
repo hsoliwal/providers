@@ -6,6 +6,8 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - authentication
+  - security
   - '{''url'': ''https://www.alkemics.com/'', ''status'': 301, ''note'': ''declared website redirects to https://www.salsify.com/ — a different registrable domain (alkemics.com -> salsify.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.0
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -156,42 +161,42 @@ apis:
 artifact_total: 27
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/agentic-access/alkemics-agentic-access.yml
+  href: https://artifacts.apis.io/alkemics/agentic-access/alkemics-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/alkemics-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/rules/alkemics-rules.yml
+  href: https://artifacts.apis.io/alkemics/rules/alkemics-rules.yml
   title: ''
   type: Spectral
   url: rules/alkemics-rules.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/lifecycle/alkemics-lifecycle.yml
+  href: https://artifacts.apis.io/alkemics/lifecycle/alkemics-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/alkemics-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/errors/alkemics-problem-types.yml
+  href: https://artifacts.apis.io/alkemics/errors/alkemics-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/alkemics-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/conformance/alkemics-conformance.yml
+  href: https://artifacts.apis.io/alkemics/conformance/alkemics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/alkemics-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/hosts/alkemics-hosts.yml
+  href: https://artifacts.apis.io/alkemics/hosts/alkemics-hosts.yml
   title: ''
   type: Hosts
   url: hosts/alkemics-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/vendors/alkemics-vendors.yml
+  href: https://artifacts.apis.io/alkemics/vendors/alkemics-vendors.yml
   title: ''
   type: Vendors
   url: vendors/alkemics-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/packages/alkemics-packages.yml
+  href: https://artifacts.apis.io/alkemics/packages/alkemics-packages.yml
   title: ''
   type: SDKs
   url: packages/alkemics-packages.yml
@@ -216,32 +221,32 @@ common:
   type: Blog
   url: https://www.salsify.com/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/scopes/alkemics-scopes.yml
+  href: https://artifacts.apis.io/alkemics/scopes/alkemics-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/alkemics-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/authentication/alkemics-authentication.yml
+  href: https://artifacts.apis.io/alkemics/authentication/alkemics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/alkemics-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/security/alkemics-domain-security.yml
+  href: https://artifacts.apis.io/alkemics/security/alkemics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/alkemics-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/lifecycle/alkemics-lifecycle.yml
+  href: https://artifacts.apis.io/alkemics/lifecycle/alkemics-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/alkemics-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/packages/alkemics-packages.yml
+  href: https://artifacts.apis.io/alkemics/packages/alkemics-packages.yml
   title: ''
   type: Packages
   url: packages/alkemics-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/llms/alkemics-llms.txt
+  href: https://artifacts.apis.io/alkemics/llms/alkemics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/alkemics-llms.txt
@@ -292,7 +297,7 @@ overview: 'Alkemics publishes 22 API contracts indexed on the [APIs.io](https://
 
 
   Alkemics'' developer surface includes support, engineering blog, authentication, documentation, and 19 more developer resources.'
-random_paper: 5
+random_paper: 1
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -313,28 +318,28 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 37.9
+  composite: 36.0
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 34.5
     catalog_earned_first_party: 0.0
     catalog_gap: 80.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 31.2
+  delta: -1.9
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 51.0
-    developer_ergonomics: 35.7
-    discoverability: 55.4
+    contract_quality: 56.3
+    developer_ergonomics: 33.3
+    discoverability: 54.5
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
     - france
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 6.7
+  previous_composite: 37.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -349,14 +354,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 30.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/alkemics/refs/heads/main/screenshots/alkemics-2026-07-25T195632.png
+screenshot: https://apis.io/screenshots/alkemics/alkemics-2026-07-25T195632.png
 security:
 - kind: authentication
   name: Alkemics Authentication

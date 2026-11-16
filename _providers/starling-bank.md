@@ -1,14 +1,15 @@
 ---
 access_model:
-  confidence: high
-  label: Free · Self-serve developer signup with sandbox
-  onboarding: self-serve
-  pricing: free
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
   public: false
   source:
   - authentication
-  - documentation
-  trial: true
+  - security
+  - sandbox
+  trial: false
   try_now: false
 agent_readiness:
   band: agent-aware
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.3
-  scored_at: '2026-10-17'
+  score: 24.2
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Bespoke Starling Developer API for retrieving a customer's accounts, account identifiers (sort code / account number), and balances. Served over OAuth2 at the api.starlingbank.com/api/v2 host with a f
@@ -103,24 +107,24 @@ apis:
   description: Endpoint for getting Unsecured SME Loan data
   name: Starling Bank SME API
   slug: starling-bank-sme-api
-artifact_total: 22
+artifact_total: 23
 collections:
 - collection_type: open
   name: Open Data API
   slug: open-obie-opendata-swagger
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/capabilities/starling-bank-capability-edges.yml
+  href: https://artifacts.apis.io/starling-bank/capabilities/starling-bank-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/starling-bank-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/security/starling-bank-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/starling-bank/security/starling-bank-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/starling-bank-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/security/starling-bank-domain-security.yml
+  href: https://artifacts.apis.io/starling-bank/security/starling-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/starling-bank-domain-security.yml
@@ -129,67 +133,67 @@ common:
   type: Security
   url: https://www.starlingbank.com/security/disclosure/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/authentication/starling-bank-authentication.yml
+  href: https://artifacts.apis.io/starling-bank/authentication/starling-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/starling-bank-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/packages/starling-bank-packages.yml
+  href: https://artifacts.apis.io/starling-bank/packages/starling-bank-packages.yml
   title: ''
   type: Packages
   url: packages/starling-bank-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/packages/starling-bank-packages.yml
+  href: https://artifacts.apis.io/starling-bank/packages/starling-bank-packages.yml
   title: ''
   type: SDKs
   url: packages/starling-bank-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/well-known/starling-bank-well-known.yml
+  href: https://artifacts.apis.io/starling-bank/well-known/starling-bank-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/starling-bank-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/well-known/starling-bank-security.txt
+  href: https://artifacts.apis.io/starling-bank/well-known/starling-bank-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/starling-bank-security.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/conformance/starling-bank-conformance.yml
+  href: https://artifacts.apis.io/starling-bank/conformance/starling-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/starling-bank-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/lifecycle/starling-bank-lifecycle.yml
+  href: https://artifacts.apis.io/starling-bank/lifecycle/starling-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/starling-bank-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/conventions/starling-bank-conventions.yml
+  href: https://artifacts.apis.io/starling-bank/conventions/starling-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/starling-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/conventions/starling-bank-conventions.yml
+  href: https://artifacts.apis.io/starling-bank/conventions/starling-bank-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/starling-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/errors/starling-bank-problem-types.yml
+  href: https://artifacts.apis.io/starling-bank/errors/starling-bank-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/starling-bank-problem-types.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/sandbox/starling-bank-sandbox.yml
+  href: https://artifacts.apis.io/starling-bank/sandbox/starling-bank-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/starling-bank-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/llms/starling-bank-llms.txt
+  href: https://artifacts.apis.io/starling-bank/llms/starling-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/starling-bank-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/overlays/starling-bank-opendata-overlay.yaml
+  href: https://artifacts.apis.io/starling-bank/overlays/starling-bank-opendata-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/starling-bank-opendata-overlay.yaml
@@ -261,22 +265,38 @@ network: true
 overview: 'Starling Bank publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including ATM API, BCA API, Branch API, and 15 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
+  The Starling Bank catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Starling Bank''s developer surface includes authentication, sandbox, API reference, documentation, getting-started guide, engineering blog, support, and 24 more developer resources.'
 random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Starling Bank API Rules
+  rule_count: 49
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 1
+  slug: starling-bank-rules
 score:
   band: developing
-  composite: 46.3
+  composite: 47.9
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 78.6
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 35.5
     developer_ergonomics: 28.6
     discoverability: 73.2
@@ -289,7 +309,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 46.3
+  previous_composite: 47.9
   provenance:
     conformance: first-party
     contracts:
@@ -307,14 +327,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 38.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/screenshots/starling-bank-2026-08-17T082108.png
+screenshot: https://apis.io/screenshots/starling-bank/starling-bank-2026-08-17T082108.png
 security:
 - kind: authentication
   name: Starling Bank Authentication

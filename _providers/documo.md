@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Paid (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: paid
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -67,9 +74,6 @@ apis:
 artifact_total: 17
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Documo Account API
   slug: open-documo-account-api
 - collection_type: open
@@ -86,22 +90,22 @@ collections:
   slug: open-documo
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/documo/refs/heads/main/agentic-access/documo-agentic-access.yml
+  href: https://artifacts.apis.io/documo/agentic-access/documo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/documo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/documo/refs/heads/main/security/documo-trust-center.yml
+  href: https://artifacts.apis.io/documo/security/documo-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/documo-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/documo/refs/heads/main/security/documo-domain-security.yml
+  href: https://artifacts.apis.io/documo/security/documo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/documo-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/documo/refs/heads/main/authentication/documo-authentication.yml
+  href: https://artifacts.apis.io/documo/authentication/documo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/documo-authentication.yml
@@ -118,17 +122,17 @@ common:
   type: Documentation
   url: https://docs.documo.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/documo/refs/heads/main/plans/documo-plans-pricing.yml
+  href: https://artifacts.apis.io/documo/plans/documo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/documo-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/documo/refs/heads/main/rate-limits/documo-rate-limits.yml
+  href: https://artifacts.apis.io/documo/rate-limits/documo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/documo-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/documo/refs/heads/main/finops/documo-finops.yml
+  href: https://artifacts.apis.io/documo/finops/documo-finops.yml
   title: ''
   type: FinOps
   url: finops/documo-finops.yml
@@ -155,35 +159,51 @@ network: true
 overview: 'Documo publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Fax API, Numbers API, and 1 more. Tagged areas include Fax, Cloud Fax, Document Delivery, HIPAA, and Communications.
 
 
+  The Documo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Documo''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Documo Plans Pricing
   plan_count: 5
   slug: documo-plans-pricing
-random_paper: 9
+random_paper: 23
 rate_limits:
 - limit_count: 4
   name: Documo Rate Limits
   slug: documo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Documo API Rules
+  rule_count: 63
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 1
+  slug: documo-rules
 score:
   band: thin
-  composite: 29.0
+  composite: 30.6
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.2
+  delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 51.6
     developer_ergonomics: 28.6
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 37.2
+  previous_composite: 30.6
   provenance:
     agentic_access: derived
     contracts:
@@ -197,13 +217,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/documo/refs/heads/main/screenshots/documo-2026-07-25T212222.png
+screenshot: https://apis.io/screenshots/documo/documo-2026-07-25T212222.png
 security:
 - kind: authentication
   name: Documo Authentication

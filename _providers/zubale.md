@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.3
-  scored_at: '2026-10-17'
+  score: 27.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -90,9 +95,6 @@ asyncapis:
   slug: zubale-webhooks
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Zubale API Documentation for External Notification Handler API
   slug: open-zubale-api-documentation-for-external-notification-handler-api
 - collection_type: open
@@ -118,42 +120,42 @@ collections:
   slug: open-zubale-webhook-payload-structure-for-order-notification-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zubale/refs/heads/main/capabilities/zubale-capability-edges.yml
+  href: https://artifacts.apis.io/zubale/capabilities/zubale-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/zubale-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zubale/refs/heads/main/mcp/zubale-mcp.yml
+  href: https://artifacts.apis.io/zubale/mcp/zubale-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/zubale-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zubale/refs/heads/main/overlays/zubale-openapi-overlay.yaml
+  href: https://artifacts.apis.io/zubale/overlays/zubale-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zubale-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zubale/refs/heads/main/security/zubale-trust-center.yml
+  href: https://artifacts.apis.io/zubale/security/zubale-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/zubale-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zubale/refs/heads/main/security/zubale-domain-security.yml
+  href: https://artifacts.apis.io/zubale/security/zubale-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zubale-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zubale/refs/heads/main/agentic-access/zubale-agentic-access.yml
+  href: https://artifacts.apis.io/zubale/agentic-access/zubale-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zubale-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zubale/refs/heads/main/scopes/zubale-scopes.yml
+  href: https://artifacts.apis.io/zubale/scopes/zubale-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/zubale-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zubale/refs/heads/main/authentication/zubale-authentication.yml
+  href: https://artifacts.apis.io/zubale/authentication/zubale-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zubale-authentication.yml
@@ -172,11 +174,24 @@ network: true
 overview: 'Zubale publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including API Documentation for External Notification Handler API, Cancel tasks API, Delivery API, and 5 more. Tagged areas include Company and E-Commerce.
 
 
-  The Zubale catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Zubale catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Zubale''s developer surface includes authentication and 8 more developer resources.'
-random_paper: 5
+random_paper: 19
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Zubale API Rules
+  rule_count: 53
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 2
+    warn: 4
+  slug: zubale-rules
 scopes:
 - name: Zubale Scopes
   scope_count: 0
@@ -184,23 +199,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: emerging
-  composite: 12.2
+  composite: 13.8
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 22.0
+    artifact_dirs: 26
+    catalog_earned: 26.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 93.0
+    catalog_gap: 88.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 8.1
     developer_ergonomics: 11.9
     discoverability: 46.4
     operational_transparency: 0.0
-  previous_composite: 12.1
+  previous_composite: 13.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -216,13 +231,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zubale/refs/heads/main/screenshots/zubale-2026-09-02T171850.png
+screenshot: https://apis.io/screenshots/zubale/zubale-2026-09-02T171850.png
 security:
 - kind: authentication
   name: Zubale Authentication

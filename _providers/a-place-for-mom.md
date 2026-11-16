@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The integration surface of You''ve Got Leads, the senior-living CRM that is a division of A Place for Mom, Inc. The public integrations page names an "application programming interface (API)" used for '
@@ -45,12 +50,12 @@ asyncapis:
   slug: a-place-for-mom-webhooks
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/a-place-for-mom/refs/heads/main/plans/a-place-for-mom-plans-pricing.yml
+  href: https://artifacts.apis.io/a-place-for-mom/plans/a-place-for-mom-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/a-place-for-mom-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/a-place-for-mom/refs/heads/main/rate-limits/a-place-for-mom-rate-limits.yml
+  href: https://artifacts.apis.io/a-place-for-mom/rate-limits/a-place-for-mom-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/a-place-for-mom-rate-limits.yml
@@ -87,27 +92,27 @@ common:
   type: Careers
   url: https://www.aplaceformom.com/careers
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/a-place-for-mom/refs/heads/main/llms/a-place-for-mom-llms.txt
+  href: https://artifacts.apis.io/a-place-for-mom/llms/a-place-for-mom-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/a-place-for-mom-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/a-place-for-mom/refs/heads/main/llms/a-place-for-mom-support-llms.txt
+  href: https://artifacts.apis.io/a-place-for-mom/llms/a-place-for-mom-support-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/a-place-for-mom-support-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/a-place-for-mom/refs/heads/main/asyncapi/a-place-for-mom-webhooks.yml
+  href: https://artifacts.apis.io/a-place-for-mom/asyncapi/a-place-for-mom-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/a-place-for-mom-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/a-place-for-mom/refs/heads/main/lifecycle/a-place-for-mom-lifecycle.yml
+  href: https://artifacts.apis.io/a-place-for-mom/lifecycle/a-place-for-mom-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/a-place-for-mom-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/a-place-for-mom/refs/heads/main/security/a-place-for-mom-domain-security.yml
+  href: https://artifacts.apis.io/a-place-for-mom/security/a-place-for-mom-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/a-place-for-mom-domain-security.yml
@@ -144,7 +149,7 @@ plans:
 - name: A Place For Mom Plans Pricing
   plan_count: 0
   slug: a-place-for-mom-plans-pricing
-random_paper: 19
+random_paper: 13
 rate_limits:
 - limit_count: 0
   name: A Place For Mom Rate Limits
@@ -153,7 +158,7 @@ score:
   band: emerging
   composite: 24.7
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -174,14 +179,14 @@ score:
     regime: Health
     regime_id: health
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/a-place-for-mom/refs/heads/main/screenshots/a-place-for-mom-2026-07-25T181304.png
+screenshot: https://apis.io/screenshots/a-place-for-mom/a-place-for-mom-2026-07-25T181304.png
 security:
 - kind: domain-security
   name: A Place For Mom Domain Security

@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
   public: true
   source:
   - plans
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-10-17'
+  score: 22.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -63,11 +70,8 @@ apis:
   description: The Structure queries API from BIS — 12 operation(s) for structure queries.
   name: BIS Structure queries API
   slug: bis-structure-queries-api
-artifact_total: 20
+artifact_total: 19
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: SDMX RESTful Data availability queries API
   slug: open-bis-data-availability-queries-api
@@ -82,12 +86,12 @@ collections:
   slug: open-bis-structure-queries-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bis/refs/heads/main/agentic-access/bis-agentic-access.yml
+  href: https://artifacts.apis.io/bis/agentic-access/bis-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bis-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bis/refs/heads/main/security/bis-domain-security.yml
+  href: https://artifacts.apis.io/bis/security/bis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bis-domain-security.yml
@@ -181,7 +185,7 @@ plans:
 - name: Bis Plans Pricing
   plan_count: 1
   slug: bis-plans-pricing
-random_paper: 10
+random_paper: 6
 rate_limits:
 - limit_count: 2
   name: Bis Rate Limits
@@ -202,13 +206,13 @@ score:
   band: thin
   composite: 29.5
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 49.3
     catalog_earned_first_party: 0.0
     catalog_gap: 65.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
@@ -216,7 +220,7 @@ score:
     developer_ergonomics: 11.9
     discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 35.5
+  previous_composite: 29.5
   provenance:
     agentic_access: derived
     contracts:
@@ -230,14 +234,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 19.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/bis/refs/heads/main/screenshots/bis-2026-06-20T173300.png
+screenshot: https://apis.io/screenshots/bis/bis-2026-06-20T173300.png
 security:
 - kind: domain-security
   name: Bis Domain Security

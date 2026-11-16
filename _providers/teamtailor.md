@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'JSON:API compliant REST API for managing candidates, jobs, applications, users, departments, and recruitment workflows in Teamtailor. Available in EU (api.teamtailor.com), NA (api.na.teamtailor.com), '
@@ -41,12 +45,12 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teamtailor/refs/heads/main/security/teamtailor-trust-center.yml
+  href: https://artifacts.apis.io/teamtailor/security/teamtailor-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/teamtailor-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teamtailor/refs/heads/main/security/teamtailor-domain-security.yml
+  href: https://artifacts.apis.io/teamtailor/security/teamtailor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/teamtailor-domain-security.yml
@@ -95,7 +99,7 @@ score:
   band: emerging
   composite: 14.2
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -118,14 +122,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/teamtailor/refs/heads/main/screenshots/teamtailor-2026-06-20T194958.png
+screenshot: https://apis.io/screenshots/teamtailor/teamtailor-2026-06-20T194958.png
 security:
 - kind: domain-security
   name: Teamtailor Domain Security

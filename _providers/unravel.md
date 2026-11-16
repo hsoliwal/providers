@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST APIs for querying and collecting data from an Unravel instance — application details, recommendations and logs, apps search, cluster operations and resource metrics, chargeback reports, queue ana
@@ -79,7 +82,7 @@ common:
   type: PrivacyPolicy
   url: https://www.unraveldata.com/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unravel/refs/heads/main/security/unravel-trust-center.yml
+  href: https://artifacts.apis.io/unravel/security/unravel-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/unravel-trust-center.yml
@@ -88,37 +91,37 @@ common:
   type: Compliance
   url: https://trust.unraveldata.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unravel/refs/heads/main/security/unravel-domain-security.yml
+  href: https://artifacts.apis.io/unravel/security/unravel-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unravel-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unravel/refs/heads/main/authentication/unravel-authentication.yml
+  href: https://artifacts.apis.io/unravel/authentication/unravel-authentication.yml
   title: ''
   type: Authentication
   url: authentication/unravel-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unravel/refs/heads/main/conventions/unravel-conventions.yml
+  href: https://artifacts.apis.io/unravel/conventions/unravel-conventions.yml
   title: ''
   type: Conventions
   url: conventions/unravel-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/unravel/refs/heads/main/changelog/unravel-changelog.yml
+  href: https://artifacts.apis.io/unravel/changelog/unravel-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/unravel-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unravel/refs/heads/main/lifecycle/unravel-lifecycle.yml
+  href: https://artifacts.apis.io/unravel/lifecycle/unravel-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/unravel-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unravel/refs/heads/main/cli/unravel-cli.yml
+  href: https://artifacts.apis.io/unravel/cli/unravel-cli.yml
   title: ''
   type: CLI
   url: cli/unravel-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unravel/refs/heads/main/llms/unravel-llms.txt
+  href: https://artifacts.apis.io/unravel/llms/unravel-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/unravel-llms.txt
@@ -134,7 +137,7 @@ overview: 'Unravel is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Unravel''s developer surface includes documentation, getting-started guide, engineering blog, support, pricing, authentication, changelog, and 11 more developer resources.'
-random_paper: 17
+random_paper: 21
 score:
   band: thin
   composite: 30.2
@@ -160,14 +163,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/unravel/refs/heads/main/screenshots/unravel-2026-09-02T164950.png
+screenshot: https://apis.io/screenshots/unravel/unravel-2026-09-02T164950.png
 security:
 - kind: authentication
   name: Unravel Authentication

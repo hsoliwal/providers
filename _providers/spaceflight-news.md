@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 27.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -65,11 +69,8 @@ apis:
   description: Official mission, program, and agency reports.
   name: Spaceflight News Reports API
   slug: spaceflight-news-reports-api
-artifact_total: 50
+artifact_total: 49
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Spaceflight News Articles API
   slug: open-spaceflight-news-articles-api
@@ -99,12 +100,12 @@ common:
   type: SecurityPolicy
   url: https://github.com/TheSpaceDevs/spaceflightnewsapi/blob/main/SECURITY.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spaceflight-news/refs/heads/main/agentic-access/spaceflight-news-agentic-access.yml
+  href: https://artifacts.apis.io/spaceflight-news/agentic-access/spaceflight-news-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/spaceflight-news-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spaceflight-news/refs/heads/main/security/spaceflight-news-domain-security.yml
+  href: https://artifacts.apis.io/spaceflight-news/security/spaceflight-news-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/spaceflight-news-domain-security.yml
@@ -173,17 +174,17 @@ common:
   type: Tools
   url: https://github.com/TheSpaceDevs/serpy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spaceflight-news/refs/heads/main/rules/spaceflight-news-rules.yml
+  href: https://artifacts.apis.io/spaceflight-news/rules/spaceflight-news-rules.yml
   title: ''
   type: SpectralRules
   url: rules/spaceflight-news-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spaceflight-news/refs/heads/main/vocabulary/spaceflight-news-vocabulary.yml
+  href: https://artifacts.apis.io/spaceflight-news/vocabulary/spaceflight-news-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/spaceflight-news-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spaceflight-news/refs/heads/main/json-ld/spaceflight-news-context.jsonld
+  href: https://artifacts.apis.io/spaceflight-news/json-ld/spaceflight-news-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/spaceflight-news-context.jsonld
@@ -313,7 +314,7 @@ overview: 'Spaceflight News is listed with 5 APIs on the [APIs.io](https://apis.
 
 
   Spaceflight News'' developer surface includes documentation, changelog, FAQ, tooling, and 20 more developer resources.'
-random_paper: 2
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 5
@@ -342,13 +343,13 @@ score:
   band: emerging
   composite: 22.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 60.0
     catalog_earned_first_party: 0.0
     catalog_gap: 40.0
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 27.3
@@ -356,7 +357,7 @@ score:
     developer_ergonomics: 14.3
     discoverability: 78.6
     operational_transparency: 28.9
-  previous_composite: 22.5
+  previous_composite: 22.6
   provenance:
     agentic_access: derived
     contracts:
@@ -370,14 +371,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/spaceflight-news/refs/heads/main/screenshots/spaceflight-news-2026-06-20T194233.png
+screenshot: https://apis.io/screenshots/spaceflight-news/spaceflight-news-2026-06-20T194233.png
 security:
 - kind: domain-security
   name: Spaceflight News Domain Security

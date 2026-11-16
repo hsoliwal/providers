@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,27 +36,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/better-place-forests/refs/heads/main/llms/better-place-forests-llms.txt
+  href: https://artifacts.apis.io/better-place-forests/llms/better-place-forests-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/better-place-forests-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/better-place-forests/refs/heads/main/well-known/better-place-forests-well-known.yml
+  href: https://artifacts.apis.io/better-place-forests/well-known/better-place-forests-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/better-place-forests-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/better-place-forests/refs/heads/main/hosts/better-place-forests-hosts.yml
+  href: https://artifacts.apis.io/better-place-forests/hosts/better-place-forests-hosts.yml
   title: ''
   type: Hosts
   url: hosts/better-place-forests-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/better-place-forests/refs/heads/main/vendors/better-place-forests-vendors.yml
+  href: https://artifacts.apis.io/better-place-forests/vendors/better-place-forests-vendors.yml
   title: ''
   type: Vendors
   url: vendors/better-place-forests-vendors.yml
@@ -56,7 +69,7 @@ common:
   type: PrivacyPolicy
   url: https://betterplaceforests.org/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/better-place-forests/refs/heads/main/security/better-place-forests-domain-security.yml
+  href: https://artifacts.apis.io/better-place-forests/security/better-place-forests-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/better-place-forests-domain-security.yml
@@ -79,10 +92,10 @@ name: Better Place Forests
 nav: Providers
 network: true
 overview: Better Place Forests is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Non-Profit, Memorial, Forest Conservation, Grief Support, and Environmental.
-random_paper: 3
+random_paper: 11
 score:
   band: minimal
-  composite: 10.1
+  composite: 7.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 25.0
@@ -90,15 +103,15 @@ score:
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -2.7
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
     discoverability: 51.8
     operational_transparency: 0.0
-  previous_composite: 10.0
+  previous_composite: 10.1
   provenance:
     mcp: unknown
   regulatory:
@@ -106,15 +119,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 15.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/better-place-forests/refs/heads/main/screenshots/better-place-forests-2026-10-11T102016.png
+screenshot: https://apis.io/screenshots/better-place-forests/better-place-forests-2026-10-11T102016.png
 security:
 - kind: domain-security
   name: Better Place Forests Domain Security

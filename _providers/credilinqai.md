@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 17
@@ -92,7 +95,7 @@ arazzos:
 - description: Authenticate, check eligibility, run data processing, capture customer KYC, and send it for review.
   name: CrediLinq — Onboard a customer and complete KYC
   slug: credilinqai-onboard-and-kyc
-artifact_total: 24
+artifact_total: 28
 asyncapis:
 - description: AsyncAPI representation of CrediLinq's documented webhook events. CrediLinq delivers server-to-server notifications via HTTP POST to a partner-configured redirect_url. Payloads are signed with HMAC SH
   name: CrediLinq Webhooks
@@ -101,9 +104,6 @@ asyncapis:
   name: Credilinqai Webhooks
   slug: credilinqai-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CrediLinq Authentication API
   slug: open-credilinqai-authentication-api
@@ -138,7 +138,7 @@ common:
   type: BlogRSS
   url: https://credilinq.ai/feed
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/capabilities/credilinqai-capability-edges.yml
+  href: https://artifacts.apis.io/credilinqai/capabilities/credilinqai-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/credilinqai-capability-edges.yml
@@ -187,97 +187,97 @@ common:
   type: ChangeLog
   url: https://docs.credilinq.ai/docs/change-logs
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/openapi/_original/credilinqai-openapi.yml
+  href: https://artifacts.apis.io/credilinqai/openapi/_original/credilinqai-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/credilinqai-openapi.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/overlays/credilinqai-openapi-overlay.yaml
+  href: https://artifacts.apis.io/credilinqai/overlays/credilinqai-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/credilinqai-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/authentication/credilinqai-authentication.yml
+  href: https://artifacts.apis.io/credilinqai/authentication/credilinqai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/credilinqai-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/agentic-access/credilinqai-agentic-access.yml
+  href: https://artifacts.apis.io/credilinqai/agentic-access/credilinqai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/credilinqai-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/security/credilinqai-domain-security.yml
+  href: https://artifacts.apis.io/credilinqai/security/credilinqai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/credilinqai-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/errors/credilinqai-problem-types.yml
+  href: https://artifacts.apis.io/credilinqai/errors/credilinqai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/credilinqai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/conventions/credilinqai-conventions.yml
+  href: https://artifacts.apis.io/credilinqai/conventions/credilinqai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/credilinqai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/lifecycle/credilinqai-lifecycle.yml
+  href: https://artifacts.apis.io/credilinqai/lifecycle/credilinqai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/credilinqai-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/changelog/credilinqai-changelog.yml
+  href: https://artifacts.apis.io/credilinqai/changelog/credilinqai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/credilinqai-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/conformance/credilinqai-conformance.yml
+  href: https://artifacts.apis.io/credilinqai/conformance/credilinqai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/credilinqai-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/sandbox/credilinqai-sandbox.yml
+  href: https://artifacts.apis.io/credilinqai/sandbox/credilinqai-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/credilinqai-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/data-model/credilinqai-data-model.yml
+  href: https://artifacts.apis.io/credilinqai/data-model/credilinqai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/credilinqai-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/asyncapi/credilinqai-webhooks.yml
+  href: https://artifacts.apis.io/credilinqai/asyncapi/credilinqai-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/credilinqai-webhooks.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/asyncapi/credilinqai-asyncapi.yml
+  href: https://artifacts.apis.io/credilinqai/asyncapi/credilinqai-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/credilinqai-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/mcp/credilinqai-mcp.yml
+  href: https://artifacts.apis.io/credilinqai/mcp/credilinqai-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/credilinqai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/llms/credilinqai-llms.txt
+  href: https://artifacts.apis.io/credilinqai/llms/credilinqai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/credilinqai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/credilinqai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/arazzo/credilinqai-onboard-and-kyc.yml
+  href: https://artifacts.apis.io/credilinqai/arazzo/credilinqai-onboard-and-kyc.yml
   title: ''
   type: Arazzo
   url: arazzo/credilinqai-onboard-and-kyc.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/arazzo/credilinqai-create-and-disburse-loan.yml
+  href: https://artifacts.apis.io/credilinqai/arazzo/credilinqai-create-and-disburse-loan.yml
   title: ''
   type: Arazzo
   url: arazzo/credilinqai-create-and-disburse-loan.yml
@@ -292,30 +292,43 @@ network: true
 overview: 'Credilinq.ai publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Customers API, KYC API, and 5 more. Tagged areas include Company, Fintech, Embedded Finance, Lending, and Buy Now Pay Later.
 
 
-  The Credilinq.ai catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
+  The Credilinq.ai catalog on APIs.io includes 2 event-driven AsyncAPI specifications and 1 Spectral governance ruleset.
 
 
   Credilinq.ai''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, signup flow, changelog, and 26 more developer resources.'
-random_paper: 13
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: Credilinq.ai API Rules
+  rule_count: 64
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 3
+    warn: 6
+  slug: credilinqai-rules
 score:
   band: developing
-  composite: 40.4
+  composite: 44.6
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.6
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 55.9
-    developer_ergonomics: 47.0
+    developer_ergonomics: 60.1
     discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 40.4
+  previous_composite: 42.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -332,13 +345,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 25.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/credilinqai/refs/heads/main/screenshots/credilinqai-2026-07-25T210714.png
+screenshot: https://apis.io/screenshots/credilinqai/credilinqai-2026-07-25T210714.png
 security:
 - kind: authentication
   name: Credilinqai Authentication
@@ -348,6 +361,16 @@ security:
   name: Credilinqai Domain Security
   slug: credilinqai-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Authenticate with CrediLinq
+  slug: credilinqai-authenticate
+- name: Collect and reconcile a loan payment
+  slug: credilinqai-collect-and-reconcile-payment
+- name: Create and disburse a loan (drawdown)
+  slug: credilinqai-create-and-disburse-loan
+- name: Onboard a customer and complete KYC
+  slug: credilinqai-onboard-and-kyc
 slug: credilinqai
 tags:
 - Company

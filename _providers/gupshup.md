@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -72,9 +75,6 @@ apis:
 artifact_total: 17
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Gupshup WhatsApp Business Messaging API
   slug: open-gupshup-messaging-api
 - collection_type: open
@@ -88,17 +88,17 @@ collections:
   slug: open-gupshup
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gupshup/refs/heads/main/agentic-access/gupshup-agentic-access.yml
+  href: https://artifacts.apis.io/gupshup/agentic-access/gupshup-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gupshup-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gupshup/refs/heads/main/authentication/gupshup-authentication.yml
+  href: https://artifacts.apis.io/gupshup/authentication/gupshup-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gupshup-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gupshup/refs/heads/main/security/gupshup-domain-security.yml
+  href: https://artifacts.apis.io/gupshup/security/gupshup-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gupshup-domain-security.yml
@@ -115,17 +115,17 @@ common:
   type: Documentation
   url: https://docs.gupshup.io
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gupshup/refs/heads/main/plans/gupshup-plans-pricing.yml
+  href: https://artifacts.apis.io/gupshup/plans/gupshup-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gupshup-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gupshup/refs/heads/main/rate-limits/gupshup-rate-limits.yml
+  href: https://artifacts.apis.io/gupshup/rate-limits/gupshup-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gupshup-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gupshup/refs/heads/main/finops/gupshup-finops.yml
+  href: https://artifacts.apis.io/gupshup/finops/gupshup-finops.yml
   title: ''
   type: FinOps
   url: finops/gupshup-finops.yml
@@ -152,30 +152,46 @@ network: true
 overview: 'Gupshup publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Messaging API, Opt-In API, Templates API, and 3 more. Tagged areas include Messaging, WhatsApp, Conversational AI, CPaaS, and SMS.
 
 
+  The Gupshup catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Gupshup''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
 plans:
 - name: Gupshup Plans Pricing
   plan_count: 4
   slug: gupshup-plans-pricing
-random_paper: 10
+random_paper: 12
 rate_limits:
 - limit_count: 4
   name: Gupshup Rate Limits
   slug: gupshup-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Gupshup API Rules
+  rule_count: 53
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 1
+    warn: 1
+  slug: gupshup-rules
 score:
   band: emerging
-  composite: 23.7
+  composite: 25.3
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 38.0
+    artifact_dirs: 15
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 51.4
     developer_ergonomics: 23.8
     discoverability: 57.1
@@ -187,7 +203,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 32.0
+  previous_composite: 25.3
   provenance:
     agentic_access: derived
     contracts:
@@ -201,13 +217,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/gupshup/refs/heads/main/screenshots/gupshup-2026-07-25T220436.png
+screenshot: https://apis.io/screenshots/gupshup/gupshup-2026-07-25T220436.png
 security:
 - kind: authentication
   name: Gupshup Authentication

@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 23.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -116,9 +120,6 @@ apis:
 artifact_total: 34
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Copernicus Data Space Ecosystem (CDSE) asset-level STAC catalogue Bulk Transaction Extension API
   slug: open-esa-bulk-transaction-extension-api
 - collection_type: open
@@ -144,12 +145,12 @@ collections:
   slug: open-esa-transaction-extension-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/esa/refs/heads/main/agentic-access/esa-agentic-access.yml
+  href: https://artifacts.apis.io/esa/agentic-access/esa-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/esa-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/esa/refs/heads/main/security/esa-domain-security.yml
+  href: https://artifacts.apis.io/esa/security/esa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/esa-domain-security.yml
@@ -170,27 +171,27 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/european-space-agency
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/esa/refs/heads/main/plans/esa-plans-pricing.yml
+  href: https://artifacts.apis.io/esa/plans/esa-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/esa-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/esa/refs/heads/main/rate-limits/esa-rate-limits.yml
+  href: https://artifacts.apis.io/esa/rate-limits/esa-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/esa-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/esa/refs/heads/main/finops/esa-finops.yml
+  href: https://artifacts.apis.io/esa/finops/esa-finops.yml
   title: ''
   type: FinOps
   url: finops/esa-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/esa/refs/heads/main/json-ld/esa-context.jsonld
+  href: https://artifacts.apis.io/esa/json-ld/esa-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/esa-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/esa/refs/heads/main/graphql/esa-graphql.md
+  href: https://artifacts.apis.io/esa/graphql/esa-graphql.md
   title: ''
   type: GraphQL
   url: graphql/esa-graphql.md
@@ -226,7 +227,7 @@ network: true
 overview: 'European Space Agency (ESA) publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bulk Transaction Extension API, Collections API, Conformance API, and 15 more. Tagged areas include Earth Observation, Copernicus, Sentinel, Space Weather, and Astronomy.
 
 
-  The European Space Agency (ESA) catalog on APIs.io includes 1 JSON-LD context.
+  The European Space Agency (ESA) catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   European Space Agency (ESA)''s developer surface includes documentation, GitHub presence, engineering blog, and 9 more developer resources.'
@@ -234,25 +235,38 @@ plans:
 - name: Esa Plans Pricing
   plan_count: 2
   slug: esa-plans-pricing
-random_paper: 5
+random_paper: 1
 rate_limits:
 - limit_count: 9
   name: Esa Rate Limits
   slug: esa-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: European Space Agency (ESA) API Rules
+  rule_count: 46
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 3
+    warn: 7
+  slug: esa-rules
 score:
   band: emerging
-  composite: 23.8
+  composite: 25.4
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 50.0
+    artifact_dirs: 16
+    catalog_earned: 54.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 65.0
+    catalog_gap: 60.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 53.5
     developer_ergonomics: 11.9
     discoverability: 66.1
@@ -262,7 +276,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 30.7
+  previous_composite: 25.4
   provenance:
     agentic_access: derived
     contracts:
@@ -276,13 +290,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/esa/refs/heads/main/screenshots/esa-2026-06-20T180819.png
+screenshot: https://apis.io/screenshots/esa/esa-2026-06-20T180819.png
 security:
 - kind: domain-security
   name: Esa Domain Security

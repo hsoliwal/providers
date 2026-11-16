@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,8 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,13 +42,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Wato exposes each team's reviewed memory and approved connector tools through a single remote MCP (Model Context Protocol) gateway over Streamable HTTP with OAuth. Any MCP-capable client (Claude Code,
   name: Wato MCP Gateway
   slug: wato-mcp-gateway
-artifact_total: 6
+artifact_total: 11
 common:
 - group: company
   title: ''
@@ -83,62 +91,62 @@ common:
   type: TermsOfService
   url: https://www.watolabs.com/tos
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/mcp/wato-mcp.yml
+  href: https://artifacts.apis.io/wato/mcp/wato-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/wato-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/authentication/wato-authentication.yml
+  href: https://artifacts.apis.io/wato/authentication/wato-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wato-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/scopes/wato-scopes.yml
+  href: https://artifacts.apis.io/wato/scopes/wato-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/wato-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/well-known/wato-well-known.yml
+  href: https://artifacts.apis.io/wato/well-known/wato-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/wato-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/conventions/wato-conventions.yml
+  href: https://artifacts.apis.io/wato/conventions/wato-conventions.yml
   title: ''
   type: Conventions
   url: conventions/wato-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/lifecycle/wato-lifecycle.yml
+  href: https://artifacts.apis.io/wato/lifecycle/wato-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/wato-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/conformance/wato-conformance.yml
+  href: https://artifacts.apis.io/wato/conformance/wato-conformance.yml
   title: ''
   type: Conformance
   url: conformance/wato-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/components/wato-components.yml
+  href: https://artifacts.apis.io/wato/components/wato-components.yml
   title: ''
   type: Components
   url: components/wato-components.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/security/wato-domain-security.yml
+  href: https://artifacts.apis.io/wato/security/wato-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wato-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/llms/wato-llms.txt
+  href: https://artifacts.apis.io/wato/llms/wato-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/wato-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/wato/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/plans/wato-plans.yml
+  href: https://artifacts.apis.io/wato/plans/wato-plans.yml
   title: ''
   type: Plans
   url: plans/wato-plans.yml
@@ -162,7 +170,7 @@ plans:
 - name: Wato Plans
   plan_count: 3
   slug: wato-plans
-random_paper: 3
+random_paper: 11
 scopes:
 - name: Wato Scopes
   scope_count: 4
@@ -172,13 +180,13 @@ score:
   band: thin
   composite: 33.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
@@ -193,7 +201,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 32.9
+  previous_composite: 33.0
   provenance:
     conformance: derived
     mcp: first-party
@@ -204,14 +212,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/wato/refs/heads/main/screenshots/wato-2026-09-02T170454.png
+screenshot: https://apis.io/screenshots/wato/wato-2026-09-02T170454.png
 security:
 - kind: authentication
   name: Wato Authentication
@@ -221,6 +229,18 @@ security:
   name: Wato Domain Security
   slug: wato-domain-security
   summary_line: TLSv1.2 · HSTS
+skill_count: 5
+skills:
+- name: Author and publish a Wato skill
+  slug: wato-author-and-publish-skill
+- name: Turn a chat into a reusable automation
+  slug: wato-build-automation-from-chat
+- name: Discover and run approved connector tools
+  slug: wato-discover-and-run-tools
+- name: Publish a live dashboard artifact
+  slug: wato-live-dashboard
+- name: Propose and merge reviewed team memory
+  slug: wato-memory-review-workflow
 slug: wato
 tags:
 - Company

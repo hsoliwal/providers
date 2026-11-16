@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API for merchant portal operations such as account management and billing.
@@ -32,17 +45,17 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/billergenie/refs/heads/main/well-known/billergenie-well-known.yml
+  href: https://artifacts.apis.io/billergenie/well-known/billergenie-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/billergenie-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/billergenie/refs/heads/main/hosts/billergenie-hosts.yml
+  href: https://artifacts.apis.io/billergenie/hosts/billergenie-hosts.yml
   title: ''
   type: Hosts
   url: hosts/billergenie-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/billergenie/refs/heads/main/vendors/billergenie-vendors.yml
+  href: https://artifacts.apis.io/billergenie/vendors/billergenie-vendors.yml
   title: ''
   type: Vendors
   url: vendors/billergenie-vendors.yml
@@ -51,7 +64,7 @@ common:
   type: SignUp
   url: https://merchant.billergenie.com/Account/Register/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/billergenie/refs/heads/main/security/billergenie-domain-security.yml
+  href: https://artifacts.apis.io/billergenie/security/billergenie-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/billergenie-domain-security.yml
@@ -78,10 +91,10 @@ overview: 'Billergenie is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Billergenie''s developer surface includes signup flow and 5 more developer resources.'
-random_paper: 10
+random_paper: 2
 score:
   band: minimal
-  composite: 6.7
+  composite: 5.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 30.0
@@ -89,9 +102,9 @@ score:
     catalog_gap: 85.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.3
   facets:
-    access_clarity: 13.2
+    access_clarity: 6.6
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
@@ -106,14 +119,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/billergenie/refs/heads/main/screenshots/billergenie-2026-10-11T102203.png
+screenshot: https://apis.io/screenshots/billergenie/billergenie-2026-10-11T102203.png
 security:
 - kind: domain-security
   name: Billergenie Domain Security

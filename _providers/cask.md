@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 12
 apis:
 - description: The CDAP HTTP RESTful API, documented as "Microservices". All endpoints sit under a /v3 path prefix on a self-hosted CDAP router (default port 11015, or 10443 when SSL is enabled), and are scoped by n
@@ -113,72 +116,72 @@ common:
   type: PrivacyPolicy
   url: https://policies.google.com/privacy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/packages/cask-packages.yml
+  href: https://artifacts.apis.io/cask/packages/cask-packages.yml
   title: ''
   type: Packages
   url: packages/cask-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/packages/cask-packages.yml
+  href: https://artifacts.apis.io/cask/packages/cask-packages.yml
   title: ''
   type: SDKs
   url: packages/cask-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/authentication/cask-authentication.yml
+  href: https://artifacts.apis.io/cask/authentication/cask-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cask-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/conventions/cask-conventions.yml
+  href: https://artifacts.apis.io/cask/conventions/cask-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cask-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/errors/cask-problem-types.yml
+  href: https://artifacts.apis.io/cask/errors/cask-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cask-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/lifecycle/cask-lifecycle.yml
+  href: https://artifacts.apis.io/cask/lifecycle/cask-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cask-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/changelog/cask-changelog.yml
+  href: https://artifacts.apis.io/cask/changelog/cask-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/cask-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/cli/cask-cli.yml
+  href: https://artifacts.apis.io/cask/cli/cask-cli.yml
   title: ''
   type: CLI
   url: cli/cask-cli.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/sandbox/cask-sandbox.yml
+  href: https://artifacts.apis.io/cask/sandbox/cask-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/cask-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/data-model/cask-data-model.yml
+  href: https://artifacts.apis.io/cask/data-model/cask-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cask-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/conformance/cask-conformance.yml
+  href: https://artifacts.apis.io/cask/conformance/cask-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cask-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/well-known/cask-well-known.yml
+  href: https://artifacts.apis.io/cask/well-known/cask-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cask-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/security/cask-domain-security.yml
+  href: https://artifacts.apis.io/cask/security/cask-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cask-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/llms/cask-llms.txt
+  href: https://artifacts.apis.io/cask/llms/cask-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cask-llms.txt
@@ -195,7 +198,7 @@ overview: 'Cask is listed with 12 APIs on the [APIs.io](https://apis.io/) networ
 
 
   Cask''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 16 more developer resources.'
-random_paper: 0
+random_paper: 10
 score:
   band: thin
   composite: 31.2
@@ -223,14 +226,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cask/refs/heads/main/screenshots/cask-2026-07-25T204726.png
+screenshot: https://apis.io/screenshots/cask/cask-2026-07-25T204726.png
 security:
 - kind: authentication
   name: Cask Authentication

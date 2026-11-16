@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.4
-  scored_at: '2026-10-17'
+  score: 45.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -80,62 +95,62 @@ apis:
 artifact_total: 15
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/rate-limits/zebpay-rate-limits.yml
+  href: https://artifacts.apis.io/zebpay/rate-limits/zebpay-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/zebpay-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/agentic-access/zebpay-agentic-access.yml
+  href: https://artifacts.apis.io/zebpay/agentic-access/zebpay-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zebpay-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/rules/zebpay-rules.yml
+  href: https://artifacts.apis.io/zebpay/rules/zebpay-rules.yml
   title: ''
   type: Spectral
   url: rules/zebpay-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/vocabulary/zebpay-vocabulary.yml
+  href: https://artifacts.apis.io/zebpay/vocabulary/zebpay-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/zebpay-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/conformance/zebpay-conformance.yml
+  href: https://artifacts.apis.io/zebpay/conformance/zebpay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zebpay-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/llms/zebpay-llms.txt
+  href: https://artifacts.apis.io/zebpay/llms/zebpay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zebpay-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/mcp/zebpay-mcp.yml
+  href: https://artifacts.apis.io/zebpay/mcp/zebpay-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/zebpay-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/well-known/zebpay-well-known.yml
+  href: https://artifacts.apis.io/zebpay/well-known/zebpay-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/zebpay-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/hosts/zebpay-hosts.yml
+  href: https://artifacts.apis.io/zebpay/hosts/zebpay-hosts.yml
   title: ''
   type: Hosts
   url: hosts/zebpay-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/vendors/zebpay-vendors.yml
+  href: https://artifacts.apis.io/zebpay/vendors/zebpay-vendors.yml
   title: ''
   type: Vendors
   url: vendors/zebpay-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/packages/zebpay-packages.yml
+  href: https://artifacts.apis.io/zebpay/packages/zebpay-packages.yml
   title: ''
   type: SDKs
   url: packages/zebpay-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/packages/zebpay-packages.yml
+  href: https://artifacts.apis.io/zebpay/packages/zebpay-packages.yml
   title: ''
   type: Packages
   url: packages/zebpay-packages.yml
@@ -144,12 +159,12 @@ common:
   type: Security
   url: https://zebpay.com/features/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/authentication/zebpay-authentication.yml
+  href: https://artifacts.apis.io/zebpay/authentication/zebpay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zebpay-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zebpay/refs/heads/main/security/zebpay-domain-security.yml
+  href: https://artifacts.apis.io/zebpay/security/zebpay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zebpay-domain-security.yml
@@ -211,7 +226,7 @@ overview: 'ZebPay publishes 9 API contracts indexed on the [APIs.io](https://api
 
 
   ZebPay''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, and 18 more developer resources.'
-random_paper: 13
+random_paper: 3
 rate_limits:
 - limit_count: 3
   name: Zebpay Rate Limits
@@ -230,22 +245,31 @@ rules:
     warn: 1
   slug: zebpay-rules
 score:
-  band: developing
-  composite: 42.4
+  band: thin
+  composite: 34.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 20
     catalog_earned: 52.8
     catalog_earned_first_party: 12.0
     catalog_gap: 62.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.5
   facets:
-    access_clarity: 23.7
+    access_clarity: 11.8
     contract_governance: 22.0
     contract_quality: 46.1
-    developer_ergonomics: 59.5
+    developer_ergonomics: 39.3
     discoverability: 68.3
-    operational_transparency: 47.4
+    operational_transparency: 39.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - india
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - india-south-asia
+  previous_composite: 42.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -261,11 +285,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/zebpay/zebpay-2026-11-03T150432.png
 security:
 - kind: authentication
   name: Zebpay Authentication

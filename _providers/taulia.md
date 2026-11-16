@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The buyer-side integration API described in the SAP Taulia Description of Software Services. It carries the accounts-payable object set — supplier master, business unit, purchase orders, invoices, pay
@@ -104,67 +107,67 @@ common:
   type: StatusPage
   url: https://status.taulia.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/llms/taulia-llms.txt
+  href: https://artifacts.apis.io/taulia/llms/taulia-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/taulia-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/well-known/taulia-well-known.yml
+  href: https://artifacts.apis.io/taulia/well-known/taulia-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/taulia-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/well-known/taulia-security.txt
+  href: https://artifacts.apis.io/taulia/well-known/taulia-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/taulia-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/security/taulia-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/taulia/security/taulia-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/taulia-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/security/taulia-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/taulia/security/taulia-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/taulia-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/security/taulia-domain-security.yml
+  href: https://artifacts.apis.io/taulia/security/taulia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/taulia-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/conformance/taulia-conformance.yml
+  href: https://artifacts.apis.io/taulia/conformance/taulia-conformance.yml
   title: ''
   type: Conformance
   url: conformance/taulia-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/lifecycle/taulia-lifecycle.yml
+  href: https://artifacts.apis.io/taulia/lifecycle/taulia-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/taulia-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/changelog/taulia-changelog.yml
+  href: https://artifacts.apis.io/taulia/changelog/taulia-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/taulia-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/authentication/taulia-authentication.yml
+  href: https://artifacts.apis.io/taulia/authentication/taulia-authentication.yml
   title: ''
   type: Authentication
   url: authentication/taulia-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/conventions/taulia-conventions.yml
+  href: https://artifacts.apis.io/taulia/conventions/taulia-conventions.yml
   title: ''
   type: Conventions
   url: conventions/taulia-conventions.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/plans/taulia-plans-pricing.yml
+  href: https://artifacts.apis.io/taulia/plans/taulia-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/taulia-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/rate-limits/taulia-rate-limits.yml
+  href: https://artifacts.apis.io/taulia/rate-limits/taulia-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/taulia-rate-limits.yml
@@ -184,7 +187,7 @@ plans:
 - name: Taulia Plans Pricing
   plan_count: 0
   slug: taulia-plans-pricing
-random_paper: 2
+random_paper: 16
 rate_limits:
 - limit_count: 0
   name: Taulia Rate Limits
@@ -193,7 +196,7 @@ score:
   band: thin
   composite: 31.5
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -217,14 +220,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 32.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/taulia/refs/heads/main/screenshots/taulia-2026-09-02T162611.png
+screenshot: https://apis.io/screenshots/taulia/taulia-2026-09-02T162611.png
 security:
 - kind: authentication
   name: Taulia Authentication

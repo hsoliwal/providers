@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,22 +36,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bivacor/refs/heads/main/security/bivacor-domain-security.yml
+  href: https://artifacts.apis.io/bivacor/security/bivacor-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bivacor-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bivacor/refs/heads/main/conformance/bivacor-conformance.yml
+  href: https://artifacts.apis.io/bivacor/conformance/bivacor-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bivacor-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bivacor/refs/heads/main/llms/bivacor-llms.txt
+  href: https://artifacts.apis.io/bivacor/llms/bivacor-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bivacor-llms.txt
@@ -125,12 +128,12 @@ overview: 'BiVACOR is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   BiVACOR''s developer surface includes engineering blog, support, and 12 more developer resources.'
-random_paper: 16
+random_paper: 22
 score:
   band: minimal
   composite: 6.5
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -153,14 +156,14 @@ score:
     regime: Health
     regime_id: health
     score: 8.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bivacor/refs/heads/main/screenshots/bivacor-2026-08-07T162559.png
+screenshot: https://apis.io/screenshots/bivacor/bivacor-2026-08-07T162559.png
 security:
 - kind: domain-security
   name: Bivacor Domain Security

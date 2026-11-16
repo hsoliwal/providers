@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -131,9 +135,6 @@ apis:
 artifact_total: 41
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: OpenFEMA DisasterDeclarationsSummaries API
   slug: open-department-of-homeland-security-disasterdeclarationssummaries-api
 - collection_type: open
@@ -180,32 +181,32 @@ collections:
   slug: open-department-of-homeland-security
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-homeland-security/refs/heads/main/plans/department-of-homeland-security-plans-pricing.yml
+  href: https://artifacts.apis.io/department-of-homeland-security/plans/department-of-homeland-security-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/department-of-homeland-security-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-homeland-security/refs/heads/main/rate-limits/department-of-homeland-security-rate-limits.yml
+  href: https://artifacts.apis.io/department-of-homeland-security/rate-limits/department-of-homeland-security-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/department-of-homeland-security-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-homeland-security/refs/heads/main/finops/department-of-homeland-security-finops.yml
+  href: https://artifacts.apis.io/department-of-homeland-security/finops/department-of-homeland-security-finops.yml
   title: ''
   type: FinOps
   url: finops/department-of-homeland-security-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-homeland-security/refs/heads/main/capabilities/department-of-homeland-security-capability-edges.yml
+  href: https://artifacts.apis.io/department-of-homeland-security/capabilities/department-of-homeland-security-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/department-of-homeland-security-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-homeland-security/refs/heads/main/agentic-access/department-of-homeland-security-agentic-access.yml
+  href: https://artifacts.apis.io/department-of-homeland-security/agentic-access/department-of-homeland-security-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/department-of-homeland-security-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-homeland-security/refs/heads/main/security/department-of-homeland-security-domain-security.yml
+  href: https://artifacts.apis.io/department-of-homeland-security/security/department-of-homeland-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/department-of-homeland-security-domain-security.yml
@@ -278,12 +279,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/cisagov
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-homeland-security/refs/heads/main/json-ld/department-of-homeland-security-context.jsonld
+  href: https://artifacts.apis.io/department-of-homeland-security/json-ld/department-of-homeland-security-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/department-of-homeland-security-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/department-of-homeland-security/refs/heads/main/vocabulary/department-of-homeland-security-vocabulary.yml
+  href: https://artifacts.apis.io/department-of-homeland-security/vocabulary/department-of-homeland-security-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/department-of-homeland-security-vocabulary.yml
@@ -297,7 +298,7 @@ finops:
 - has_sources: false
   method: generated
   name: Department Of Homeland Security Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: department-of-homeland-security-finops
   template: true
@@ -315,7 +316,7 @@ network: true
 overview: 'Department of Homeland Security is listed with 19 APIs on the [APIs.io](https://apis.io/) network, including DisasterDeclarationsSummaries API, EmergencyManagementPerformanceGrants API, FemaRegions API, and 16 more. Tagged areas include CISA, Cybersecurity, Disaster, Federal Government, and FEMA.
 
 
-  The Department of Homeland Security catalog on APIs.io includes 1 JSON-LD context.
+  The Department of Homeland Security catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Department of Homeland Security''s developer surface includes privacy policy, engineering blog, and 24 more developer resources.'
@@ -323,25 +324,38 @@ plans:
 - name: Department Of Homeland Security Plans Pricing
   plan_count: 3
   slug: department-of-homeland-security-plans-pricing
-random_paper: 6
+random_paper: 8
 rate_limits:
 - limit_count: 5
   name: Department Of Homeland Security Rate Limits
   slug: department-of-homeland-security-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 81
+  extends:
+  - spectral:oas
+  name: Department of Homeland Security API Rules
+  rule_count: 40
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 1
+  slug: department-of-homeland-security-rules
 score:
   band: thin
-  composite: 30.9
+  composite: 32.5
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 50.5
+    artifact_dirs: 17
+    catalog_earned: 55.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 64.5
+    catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.0
+  delta: 0.0
   facets:
     access_clarity: 18.4
-    contract_governance: 13.6
+    contract_governance: 27.3
     contract_quality: 45.6
     developer_ergonomics: 21.4
     discoverability: 62.5
@@ -351,7 +365,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 32.9
+  previous_composite: 32.5
   provenance:
     agentic_access: derived
     contracts:
@@ -365,14 +379,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/department-of-homeland-security/refs/heads/main/screenshots/department-of-homeland-security-2026-06-20T175917.png
+screenshot: https://apis.io/screenshots/department-of-homeland-security/department-of-homeland-security-2026-06-20T175917.png
 security:
 - kind: domain-security
   name: Department Of Homeland Security Domain Security

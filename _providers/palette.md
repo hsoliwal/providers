@@ -1,11 +1,14 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/palette/refs/heads/main/rate-limits/palette-rate-limits.yml
+  href: https://artifacts.apis.io/palette/rate-limits/palette-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/palette-rate-limits.yml
@@ -78,17 +84,17 @@ common:
   type: Security
   url: https://palettehq.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/palette/refs/heads/main/security/palette-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/palette/security/palette-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/palette-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/palette/refs/heads/main/security/palette-domain-security.yml
+  href: https://artifacts.apis.io/palette/security/palette-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/palette-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/palette/refs/heads/main/conformance/palette-conformance.yml
+  href: https://artifacts.apis.io/palette/conformance/palette-conformance.yml
   title: ''
   type: Conformance
   url: conformance/palette-conformance.yml
@@ -97,7 +103,7 @@ common:
   type: Compliance
   url: https://palettehq.com/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/palette/refs/heads/main/llms/palette-llms.txt
+  href: https://artifacts.apis.io/palette/llms/palette-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/palette-llms.txt
@@ -106,12 +112,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/PaletteHQ
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/palette/refs/heads/main/lifecycle/palette-lifecycle.yml
+  href: https://artifacts.apis.io/palette/lifecycle/palette-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/palette-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/palette/refs/heads/main/plans/palette-plans-pricing.yml
+  href: https://artifacts.apis.io/palette/plans/palette-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/palette-plans-pricing.yml
@@ -143,7 +149,7 @@ plans:
 - name: Palette Plans Pricing
   plan_count: 3
   slug: palette-plans-pricing
-random_paper: 3
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Palette Rate Limits
@@ -152,13 +158,13 @@ score:
   band: thin
   composite: 28.1
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 67.1
     contract_governance: 18.2
@@ -166,7 +172,7 @@ score:
     developer_ergonomics: 11.9
     discoverability: 48.2
     operational_transparency: 28.9
-  previous_composite: 28.0
+  previous_composite: 28.1
   provenance:
     conformance: first-party
   regulatory:
@@ -179,14 +185,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/palette/refs/heads/main/screenshots/palette-2026-08-07T191317.png
+screenshot: https://apis.io/screenshots/palette/palette-2026-08-07T191317.png
 security:
 - kind: domain-security
   name: Palette Domain Security

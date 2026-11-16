@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -21,21 +24,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 33.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -50,14 +56,21 @@ apis:
   description: Launch Wizard deployment management
   name: Amazon Launch Wizard Deployments API
   slug: amazon-launch-wizard-deployments-api
-artifact_total: 31
+- baseURL: https://launchwizard.amazonaws.com
+  baseurl_source: declared
+  description: The Launch Wizard Operations API from Amazon Launch Wizard — 7 operation(s) for launch wizard operations.
+  name: Amazon Launch Wizard Launch Wizard Operations API
+  slug: amazon-launch-wizard-operations-api
+- baseURL: https://launchwizard.amazonaws.com
+  baseurl_source: declared
+  description: The Launch Wizard Tags API from Amazon Launch Wizard — 1 operation(s) for launch wizard tags.
+  name: Amazon Launch Wizard Launch Wizard Tags API
+  slug: amazon-launch-wizard-tags-api
+artifact_total: 32
 collections:
 - collection_type: postman
   name: Amazon Launch Wizard Deployments API
   slug: postman-amazon-launch-wizard-deployments-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Amazon Launch Wizard Deployments API
   slug: open-amazon-launch-wizard-deployments-api
@@ -66,17 +79,17 @@ collections:
   slug: open-amazon-launch-wizard
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-launch-wizard/refs/heads/main/plans/amazon-launch-wizard-plans-pricing.yml
+  href: https://artifacts.apis.io/amazon-launch-wizard/plans/amazon-launch-wizard-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/amazon-launch-wizard-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-launch-wizard/refs/heads/main/rate-limits/amazon-launch-wizard-rate-limits.yml
+  href: https://artifacts.apis.io/amazon-launch-wizard/rate-limits/amazon-launch-wizard-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/amazon-launch-wizard-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-launch-wizard/refs/heads/main/finops/amazon-launch-wizard-finops.yml
+  href: https://artifacts.apis.io/amazon-launch-wizard/finops/amazon-launch-wizard-finops.yml
   title: ''
   type: FinOps
   url: finops/amazon-launch-wizard-finops.yml
@@ -89,27 +102,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-launch-wizard/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-launch-wizard/refs/heads/main/agentic-access/amazon-launch-wizard-agentic-access.yml
+  href: https://artifacts.apis.io/amazon-launch-wizard/agentic-access/amazon-launch-wizard-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amazon-launch-wizard-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-launch-wizard/refs/heads/main/security/amazon-launch-wizard-trust-center.yml
+  href: https://artifacts.apis.io/amazon-launch-wizard/security/amazon-launch-wizard-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/amazon-launch-wizard-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-launch-wizard/refs/heads/main/security/amazon-launch-wizard-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-launch-wizard/security/amazon-launch-wizard-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-launch-wizard-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-launch-wizard/refs/heads/main/security/amazon-launch-wizard-domain-security.yml
+  href: https://artifacts.apis.io/amazon-launch-wizard/security/amazon-launch-wizard-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-launch-wizard-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-launch-wizard/refs/heads/main/authentication/amazon-launch-wizard-authentication.yml
+  href: https://artifacts.apis.io/amazon-launch-wizard/authentication/amazon-launch-wizard-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amazon-launch-wizard-authentication.yml
@@ -166,12 +179,12 @@ common:
   type: Contact
   url: https://aws.amazon.com/contact-us/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-launch-wizard/refs/heads/main/rules/amazon-launch-wizard-spectral-rules.yml
+  href: https://artifacts.apis.io/amazon-launch-wizard/rules/amazon-launch-wizard-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/amazon-launch-wizard-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-launch-wizard/refs/heads/main/vocabulary/amazon-launch-wizard-vocabulary.yaml
+  href: https://artifacts.apis.io/amazon-launch-wizard/vocabulary/amazon-launch-wizard-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/amazon-launch-wizard-vocabulary.yaml
@@ -196,7 +209,7 @@ finops:
 - has_sources: false
   method: generated
   name: Amazon Launch Wizard Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: amazon-launch-wizard-finops
   template: true
@@ -228,7 +241,7 @@ modified: '2026-09-16'
 name: Amazon Launch Wizard
 nav: Providers
 network: true
-overview: 'Amazon Launch Wizard publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Deployments API. Tagged areas include Deployment, Enterprise Applications, SAP, and SQL Server.
+overview: 'Amazon Launch Wizard publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Deployments API, Launch Wizard Operations API, and Launch Wizard Tags API. Tagged areas include Amazon Web Services, Deployment, Enterprise Applications, SAP, and SQL Server.
 
 
   The Amazon Launch Wizard catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -239,7 +252,7 @@ plans:
 - name: Amazon Launch Wizard Plans Pricing
   plan_count: 3
   slug: amazon-launch-wizard-plans-pricing
-random_paper: 4
+random_paper: 12
 rate_limits:
 - limit_count: 5
   name: Amazon Launch Wizard Rate Limits
@@ -270,43 +283,43 @@ rules:
   slug: amazon-launch-wizard-spectral-rules
 score:
   band: developing
-  composite: 47.3
+  composite: 51.3
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 57.4
+    artifact_dirs: 21
+    catalog_earned: 62.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 57.6
+    catalog_gap: 52.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.6
   facets:
     access_clarity: 43.4
     contract_governance: 27.3
-    contract_quality: 58.5
+    contract_quality: 65.5
     developer_ergonomics: 46.4
-    discoverability: 57.1
-    operational_transparency: 26.3
-  previous_composite: 48.8
+    discoverability: 66.1
+    operational_transparency: 36.8
+  previous_composite: 49.7
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 1
+      marker_coverage: 66.7
+      total: 3
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/amazon-launch-wizard/refs/heads/main/screenshots/amazon-launch-wizard-2026-06-20T171723.png
+screenshot: https://apis.io/screenshots/amazon-launch-wizard/amazon-launch-wizard-2026-06-20T171723.png
 security:
 - kind: authentication
   name: Amazon Launch Wizard Authentication
@@ -326,6 +339,7 @@ security:
   summary_line: PCI DSS, HIPAA, FedRAMP, GDPR, FIPS 140
 slug: amazon-launch-wizard
 tags:
+- Amazon Web Services
 - Deployment
 - Enterprise Applications
 - SAP

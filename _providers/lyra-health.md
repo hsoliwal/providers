@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lyra-health/refs/heads/main/security/lyra-health-trust-center.yml
+  href: https://artifacts.apis.io/lyra-health/security/lyra-health-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/lyra-health-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lyra-health/refs/heads/main/security/lyra-health-domain-security.yml
+  href: https://artifacts.apis.io/lyra-health/security/lyra-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lyra-health-domain-security.yml
@@ -127,7 +131,7 @@ overview: 'Lyra Health is profiled on the [APIs.io](https://apis.io/) network. T
 
 
   Lyra Health''s developer surface includes engineering blog, GitHub presence, and 17 more developer resources.'
-random_paper: 15
+random_paper: 11
 score:
   band: minimal
   composite: 8.5
@@ -153,14 +157,14 @@ score:
     regime: Health
     regime_id: health
     score: 8.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lyra-health/refs/heads/main/screenshots/lyra-health-2026-06-20T184811.png
+screenshot: https://apis.io/screenshots/lyra-health/lyra-health-2026-06-20T184811.png
 security:
 - kind: domain-security
   name: Lyra Health Domain Security

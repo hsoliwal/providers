@@ -1,12 +1,14 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium
-  onboarding: unknown
-  pricing: freemium
+  label: Paid · Requires approval
+  onboarding: approval
+  pricing: paid
   public: false
   source:
-  - plans
+  - finops
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: APIwiz is a low-code, end-to-end API management platform enabling the complete API lifecycle including design, build, security, governance, observability, and monetization. It provides a visual API de
@@ -42,17 +47,17 @@ apis:
 artifact_total: 36
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apiwiz/refs/heads/main/plans/apiwiz-plans-pricing.yml
+  href: https://artifacts.apis.io/apiwiz/plans/apiwiz-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apiwiz-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apiwiz/refs/heads/main/rate-limits/apiwiz-rate-limits.yml
+  href: https://artifacts.apis.io/apiwiz/rate-limits/apiwiz-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apiwiz-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apiwiz/refs/heads/main/finops/apiwiz-finops.yml
+  href: https://artifacts.apis.io/apiwiz/finops/apiwiz-finops.yml
   title: ''
   type: FinOps
   url: finops/apiwiz-finops.yml
@@ -73,7 +78,7 @@ common:
   type: TermsOfService
   url: https://www.apiwiz.io/legal/terms-conditions
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiwiz/refs/heads/main/security/apiwiz-domain-security.yml
+  href: https://artifacts.apis.io/apiwiz/security/apiwiz-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apiwiz-domain-security.yml
@@ -106,22 +111,22 @@ common:
   type: Support
   url: https://wizdesk.apiwiz.io
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiwiz/refs/heads/main/llms/apiwiz-llms.txt
+  href: https://artifacts.apis.io/apiwiz/llms/apiwiz-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/apiwiz-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apiwiz/refs/heads/main/packages/apiwiz-packages.yml
+  href: https://artifacts.apis.io/apiwiz/packages/apiwiz-packages.yml
   title: ''
   type: Packages
   url: packages/apiwiz-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiwiz/refs/heads/main/components/apiwiz-components.yml
+  href: https://artifacts.apis.io/apiwiz/components/apiwiz-components.yml
   title: ''
   type: Components
   url: components/apiwiz-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiwiz/refs/heads/main/conformance/apiwiz-conformance.yml
+  href: https://artifacts.apis.io/apiwiz/conformance/apiwiz-conformance.yml
   title: ''
   type: Conformance
   url: conformance/apiwiz-conformance.yml
@@ -130,12 +135,12 @@ common:
   type: Compliance
   url: https://www.apiwiz.io/legal/certificates
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiwiz/refs/heads/main/security/apiwiz-trust-center.yml
+  href: https://artifacts.apis.io/apiwiz/security/apiwiz-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/apiwiz-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiwiz/refs/heads/main/lifecycle/apiwiz-lifecycle.yml
+  href: https://artifacts.apis.io/apiwiz/lifecycle/apiwiz-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/apiwiz-lifecycle.yml
@@ -180,7 +185,7 @@ finops:
 - has_sources: false
   method: generated
   name: Apiwiz Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: apiwiz-finops
   template: true
@@ -225,7 +230,7 @@ plans:
 - name: Apiwiz Plans Pricing
   plan_count: 0
   slug: apiwiz-plans-pricing
-random_paper: 0
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Apiwiz Rate Limits
@@ -234,13 +239,13 @@ score:
   band: emerging
   composite: 24.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
@@ -248,7 +253,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 64.3
     operational_transparency: 2.6
-  previous_composite: 26.1
+  previous_composite: 24.6
   provenance:
     conformance: first-party
   regulatory:
@@ -265,14 +270,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/apiwiz/refs/heads/main/screenshots/apiwiz-2026-06-20T172301.png
+screenshot: https://apis.io/screenshots/apiwiz/apiwiz-2026-06-20T172301.png
 security:
 - kind: domain-security
   name: Apiwiz Domain Security

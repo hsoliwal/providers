@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.5
-  scored_at: '2026-10-17'
+  score: 33.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Chargefox's Open Charge Point Interface implementation in the Charge Point Operator role, used for roaming so that another network's drivers can authorise, charge and be billed on Chargefox infrastruc
@@ -46,29 +49,29 @@ apis:
   description: The Fleets API from Chargefox — 4 operation(s) for fleets.
   name: Chargefox Fleets API
   slug: chargefox-fleets-api
-artifact_total: 11
+artifact_total: 15
 collections:
 - collection_type: open
   name: Fleets API
   slug: open-chargefox-fleets-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/capabilities/chargefox-capability-edges.yml
+  href: https://artifacts.apis.io/chargefox/capabilities/chargefox-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/chargefox-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/mcp/chargefox-mcp.yml
+  href: https://artifacts.apis.io/chargefox/mcp/chargefox-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/chargefox-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/security/chargefox-domain-security.yml
+  href: https://artifacts.apis.io/chargefox/security/chargefox-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chargefox-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/authentication/chargefox-authentication.yml
+  href: https://artifacts.apis.io/chargefox/authentication/chargefox-authentication.yml
   title: ''
   type: Authentication
   url: authentication/chargefox-authentication.yml
@@ -145,62 +148,62 @@ common:
   type: TrustCenter
   url: https://trust.chargefox.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/lifecycle/chargefox-lifecycle.yml
+  href: https://artifacts.apis.io/chargefox/lifecycle/chargefox-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/chargefox-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/conformance/chargefox-conformance.yml
+  href: https://artifacts.apis.io/chargefox/conformance/chargefox-conformance.yml
   title: ''
   type: Conformance
   url: conformance/chargefox-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/conventions/chargefox-conventions.yml
+  href: https://artifacts.apis.io/chargefox/conventions/chargefox-conventions.yml
   title: ''
   type: Conventions
   url: conventions/chargefox-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/errors/chargefox-problem-types.yml
+  href: https://artifacts.apis.io/chargefox/errors/chargefox-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/chargefox-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/data-model/chargefox-data-model.yml
+  href: https://artifacts.apis.io/chargefox/data-model/chargefox-data-model.yml
   title: ''
   type: DataModel
   url: data-model/chargefox-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/packages/chargefox-packages.yml
+  href: https://artifacts.apis.io/chargefox/packages/chargefox-packages.yml
   title: ''
   type: Packages
   url: packages/chargefox-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/well-known/chargefox-well-known.yml
+  href: https://artifacts.apis.io/chargefox/well-known/chargefox-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/chargefox-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/llms/chargefox-llms.txt
+  href: https://artifacts.apis.io/chargefox/llms/chargefox-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/chargefox-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/chargefox/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/examples/_index.yml
+  href: https://artifacts.apis.io/chargefox/examples/_index.yml
   title: ''
   type: Examples
   url: examples/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/overlays/chargefox-fleets-api-overlay.yaml
+  href: https://artifacts.apis.io/chargefox/overlays/chargefox-fleets-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/chargefox-fleets-api-overlay.yaml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/rate-limits/chargefox-rate-limits.yml
+  href: https://artifacts.apis.io/chargefox/rate-limits/chargefox-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/chargefox-rate-limits.yml
@@ -230,26 +233,42 @@ network: true
 overview: 'Chargefox publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Fleets API, and 1 more. Tagged areas include Energy, Australia, EV Charging, Electricity, and Utilities.
 
 
+  The Chargefox catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Chargefox''s developer surface includes authentication, documentation, API reference, engineering blog, support, getting-started guide, code examples, and 27 more developer resources.'
-random_paper: 5
+random_paper: 15
 rate_limits:
 - limit_count: 25
   name: Chargefox Rate Limits
   slug: chargefox-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 85
+  extends:
+  - spectral:oas
+  name: Chargefox API Rules
+  rule_count: 44
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 1
+  slug: chargefox-rules
 score:
   band: developing
-  composite: 47.9
+  composite: 49.5
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 49.0
+    artifact_dirs: 25
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 35.5
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 48.0
     developer_ergonomics: 58.9
     discoverability: 66.1
@@ -261,7 +280,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 47.9
+  previous_composite: 49.5
   provenance:
     conformance: first-party
     contracts:
@@ -277,14 +296,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 24.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/chargefox/refs/heads/main/screenshots/chargefox-2026-08-07T163259.png
+screenshot: https://apis.io/screenshots/chargefox/chargefox-2026-08-07T163259.png
 security:
 - kind: authentication
   name: Chargefox Authentication
@@ -298,6 +317,14 @@ security:
   name: Chargefox Trust Center
   slug: chargefox-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: Audit a Chargefox fleet's vehicle register and RFID cards
+  slug: chargefox-audit-fleet-vehicle-register
+- name: Reconcile fleet charging costs against a Chargefox invoice
+  slug: chargefox-reconcile-fleet-charging-costs
+- name: Report charge-station revenue for a Chargefox site host
+  slug: chargefox-report-site-host-revenue
 slug: chargefox
 tags:
 - Energy
@@ -308,7 +335,7 @@ tags:
 - OCPI
 - Charge Point Operator
 - Roaming
-- Fleet
+- Fleet Management
 - Mobility
 - Charging Sessions
 - Electrification

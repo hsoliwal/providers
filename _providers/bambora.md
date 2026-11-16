@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Payment APIs for merchants to accept payments, manage transactions, and access financial data.
@@ -32,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bambora/refs/heads/main/hosts/bambora-hosts.yml
+  href: https://artifacts.apis.io/bambora/hosts/bambora-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bambora-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bambora/refs/heads/main/vendors/bambora-vendors.yml
+  href: https://artifacts.apis.io/bambora/vendors/bambora-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bambora-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bambora/refs/heads/main/packages/bambora-packages.yml
+  href: https://artifacts.apis.io/bambora/packages/bambora-packages.yml
   title: ''
   type: SDKs
   url: packages/bambora-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bambora/refs/heads/main/packages/bambora-packages.yml
+  href: https://artifacts.apis.io/bambora/packages/bambora-packages.yml
   title: ''
   type: Packages
   url: packages/bambora-packages.yml
@@ -68,7 +81,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/bambora
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bambora/refs/heads/main/security/bambora-domain-security.yml
+  href: https://artifacts.apis.io/bambora/security/bambora-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bambora-domain-security.yml
@@ -111,24 +124,31 @@ overview: 'Bambora is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Bambora''s developer surface includes documentation, API reference, support, and 11 more developer resources.'
-random_paper: 20
+random_paper: 4
 score:
   band: emerging
-  composite: 18.6
+  composite: 11.1
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.5
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 38.1
+    developer_ergonomics: 22.6
     discoverability: 44.6
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+  previous_composite: 18.6
   provenance:
     mcp: derived
   regulatory:
@@ -136,13 +156,15 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 8.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/bambora/bambora-2026-11-03T121524.png
 security:
 - kind: domain-security
   name: Bambora Domain Security

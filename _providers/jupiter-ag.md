@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 24.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -77,14 +83,66 @@ apis:
   slug: terminal
 - baseURL: https://api.jup.ag/swap
   baseurl_source: declared
-  description: Quote and build Solana DEX-aggregator swap transactions.
-  name: Jupiter Swap API
-  slug: jupiter-ag-swap-api
-artifact_total: 20
+  description: The Events API from Jupiter — 6 operation(s) for events.
+  name: Jupiter Events API
+  slug: jupiter-ag-events-api
+- baseURL: https://api.jup.ag/swap
+  baseurl_source: declared
+  description: The Forecast API from Jupiter — 1 operation(s) for forecast.
+  name: Jupiter Forecast API
+  slug: jupiter-ag-forecast-api
+- baseURL: https://api.jup.ag/swap
+  baseurl_source: declared
+  description: The History API from Jupiter — 1 operation(s) for history.
+  name: Jupiter History API
+  slug: jupiter-ag-history-api
+- baseURL: https://api.jup.ag/swap
+  baseurl_source: declared
+  description: The Leaderboards API from Jupiter — 1 operation(s) for leaderboards.
+  name: Jupiter Leaderboards API
+  slug: jupiter-ag-leaderboards-api
+- baseURL: https://api.jup.ag/swap
+  baseurl_source: declared
+  description: The Markets API from Jupiter — 3 operation(s) for markets.
+  name: Jupiter Markets API
+  slug: jupiter-ag-markets-api
+- baseURL: https://api.jup.ag/swap
+  baseurl_source: declared
+  description: The Orderbook API from Jupiter — 1 operation(s) for orderbook.
+  name: Jupiter Orderbook API
+  slug: jupiter-ag-orderbook-api
+- baseURL: https://api.jup.ag/swap
+  baseurl_source: declared
+  description: The Orders API from Jupiter — 4 operation(s) for orders.
+  name: Jupiter Orders API
+  slug: jupiter-ag-orders-api
+- baseURL: https://api.jup.ag/swap
+  baseurl_source: declared
+  description: The Positions API from Jupiter — 3 operation(s) for positions.
+  name: Jupiter Positions API
+  slug: jupiter-ag-positions-api
+- baseURL: https://api.jup.ag/swap
+  baseurl_source: declared
+  description: The Profile API from Jupiter — 2 operation(s) for profile.
+  name: Jupiter Profile API
+  slug: jupiter-ag-profile-api
+- baseURL: https://api.jup.ag/swap
+  baseurl_source: declared
+  description: The Trades API from Jupiter — 1 operation(s) for trades.
+  name: Jupiter Trades API
+  slug: jupiter-ag-trades-api
+- baseURL: https://api.jup.ag/swap
+  baseurl_source: declared
+  description: The Trading API from Jupiter — 1 operation(s) for trading.
+  name: Jupiter Trading API
+  slug: jupiter-ag-trading-api
+- baseURL: https://api.jup.ag/swap
+  baseurl_source: declared
+  description: The Vault API from Jupiter — 1 operation(s) for vault.
+  name: Jupiter Vault API
+  slug: jupiter-ag-vault-api
+artifact_total: 31
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Jupiter Swap API
   slug: open-jupiter-ag-swap-api
@@ -93,17 +151,17 @@ collections:
   slug: open-jupiter-ag
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jupiter-ag/refs/heads/main/plans/jupiter-ag-plans-pricing.yml
+  href: https://artifacts.apis.io/jupiter-ag/plans/jupiter-ag-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/jupiter-ag-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/jupiter-ag/refs/heads/main/rate-limits/jupiter-ag-rate-limits.yml
+  href: https://artifacts.apis.io/jupiter-ag/rate-limits/jupiter-ag-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/jupiter-ag-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jupiter-ag/refs/heads/main/finops/jupiter-ag-finops.yml
+  href: https://artifacts.apis.io/jupiter-ag/finops/jupiter-ag-finops.yml
   title: ''
   type: FinOps
   url: finops/jupiter-ag-finops.yml
@@ -112,17 +170,17 @@ common:
   type: IssueTracker
   url: https://github.com/jup-ag/jupiter-quote-api-node/issues
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jupiter-ag/refs/heads/main/agentic-access/jupiter-ag-agentic-access.yml
+  href: https://artifacts.apis.io/jupiter-ag/agentic-access/jupiter-ag-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/jupiter-ag-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jupiter-ag/refs/heads/main/security/jupiter-ag-domain-security.yml
+  href: https://artifacts.apis.io/jupiter-ag/security/jupiter-ag-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jupiter-ag-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jupiter-ag/refs/heads/main/authentication/jupiter-ag-authentication.yml
+  href: https://artifacts.apis.io/jupiter-ag/authentication/jupiter-ag-authentication.yml
   title: ''
   type: Authentication
   url: authentication/jupiter-ag-authentication.yml
@@ -170,7 +228,10 @@ modified: '2026-05-23'
 name: Jupiter
 nav: Providers
 network: true
-overview: 'Jupiter publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Swap API, and 10 more. Tagged areas include Solana, DeFi, DEX Aggregator, Swap, and Perpetuals.
+overview: 'Jupiter publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Events API, Forecast API, History API, and 19 more. Tagged areas include Solana, DeFi, DEX Aggregator, Swap, and Perpetuals.
+
+
+  The Jupiter catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Jupiter''s developer surface includes authentication, documentation, GitHub presence, engineering blog, and 10 more developer resources.'
@@ -178,50 +239,63 @@ plans:
 - name: Jupiter Ag Plans Pricing
   plan_count: 1
   slug: jupiter-ag-plans-pricing
-random_paper: 4
+random_paper: 8
 rate_limits:
 - limit_count: 2
   name: Jupiter Ag Rate Limits
   slug: jupiter-ag-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Jupiter API Rules
+  rule_count: 60
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 3
+  slug: jupiter-ag-rules
 score:
-  band: emerging
-  composite: 25.3
+  band: thin
+  composite: 27.6
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 41.0
+    artifact_dirs: 16
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 1.1
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 49.0
+    contract_governance: 13.6
+    contract_quality: 51.5
     developer_ergonomics: 26.2
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 31.3
+  previous_composite: 26.5
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 1
+      marker_coverage: 85.7
+      total: 14
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/jupiter-ag/refs/heads/main/screenshots/jupiter-ag-2026-06-20T183836.png
+screenshot: https://apis.io/screenshots/jupiter-ag/jupiter-ag-2026-06-20T183836.png
 security:
 - kind: authentication
   name: Jupiter Ag Authentication

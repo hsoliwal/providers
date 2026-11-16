@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 2
@@ -94,7 +100,7 @@ arazzos:
 - description: Define a reusable output preset, then submit a transcoding job into an existing pipeline that uses the new preset.
   name: Amazon Elastic Transcoder Create Preset and Submit a Job Using It
   slug: amazon-elastic-transcoder-preset-job-workflow
-artifact_total: 463
+artifact_total: 462
 collections:
 - collection_type: postman
   name: Amazon Elastic Transcoder Jobs API
@@ -118,9 +124,6 @@ collections:
   name: Amazon Elastic Transcoder
   slug: postman-amazon-elastic-transcoder
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Amazon Elastic Transcoder Jobs API
   slug: open-amazon-elastic-transcoder-jobs-api
 - collection_type: open
@@ -143,17 +146,17 @@ collections:
   slug: open-amazon-elastic-transcoder
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/plans/amazon-elastic-transcoder-plans-pricing.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/plans/amazon-elastic-transcoder-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/amazon-elastic-transcoder-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/rate-limits/amazon-elastic-transcoder-rate-limits.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/rate-limits/amazon-elastic-transcoder-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/amazon-elastic-transcoder-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/finops/amazon-elastic-transcoder-finops.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/finops/amazon-elastic-transcoder-finops.yml
   title: ''
   type: FinOps
   url: finops/amazon-elastic-transcoder-finops.yml
@@ -162,32 +165,32 @@ common:
   type: Website
   url: https://amazon.com
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/capabilities/amazon-elastic-transcoder-capability-edges.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/capabilities/amazon-elastic-transcoder-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/amazon-elastic-transcoder-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/agentic-access/amazon-elastic-transcoder-agentic-access.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/agentic-access/amazon-elastic-transcoder-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amazon-elastic-transcoder-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/security/amazon-elastic-transcoder-trust-center.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/security/amazon-elastic-transcoder-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/amazon-elastic-transcoder-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/security/amazon-elastic-transcoder-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/security/amazon-elastic-transcoder-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-elastic-transcoder-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/security/amazon-elastic-transcoder-domain-security.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/security/amazon-elastic-transcoder-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-elastic-transcoder-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/authentication/amazon-elastic-transcoder-authentication.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/authentication/amazon-elastic-transcoder-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amazon-elastic-transcoder-authentication.yml
@@ -196,32 +199,32 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-elastic-transcoder/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/arazzo/amazon-elastic-transcoder-cancel-submitted-jobs-by-status-workflow.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/arazzo/amazon-elastic-transcoder-cancel-submitted-jobs-by-status-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-elastic-transcoder-cancel-submitted-jobs-by-status-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/arazzo/amazon-elastic-transcoder-list-jobs-by-pipeline-read-workflow.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/arazzo/amazon-elastic-transcoder-list-jobs-by-pipeline-read-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-elastic-transcoder-list-jobs-by-pipeline-read-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/arazzo/amazon-elastic-transcoder-pause-pipeline-cancel-submitted-jobs-workflow.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/arazzo/amazon-elastic-transcoder-pause-pipeline-cancel-submitted-jobs-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-elastic-transcoder-pause-pipeline-cancel-submitted-jobs-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/arazzo/amazon-elastic-transcoder-pipeline-job-poll-workflow.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/arazzo/amazon-elastic-transcoder-pipeline-job-poll-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-elastic-transcoder-pipeline-job-poll-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/arazzo/amazon-elastic-transcoder-pipeline-preset-job-poll-workflow.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/arazzo/amazon-elastic-transcoder-pipeline-preset-job-poll-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-elastic-transcoder-pipeline-preset-job-poll-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/arazzo/amazon-elastic-transcoder-preset-job-workflow.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/arazzo/amazon-elastic-transcoder-preset-job-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-elastic-transcoder-preset-job-workflow.yml
@@ -302,12 +305,12 @@ common:
   type: Contact
   url: https://aws.amazon.com/contact-us/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/rules/amazon-elastic-transcoder-spectral-rules.yml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/rules/amazon-elastic-transcoder-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/amazon-elastic-transcoder-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/vocabulary/amazon-elastic-transcoder-vocabulary.yaml
+  href: https://artifacts.apis.io/amazon-elastic-transcoder/vocabulary/amazon-elastic-transcoder-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/amazon-elastic-transcoder-vocabulary.yaml
@@ -551,7 +554,7 @@ finops:
 - has_sources: false
   method: generated
   name: Amazon Elastic Transcoder Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: amazon-elastic-transcoder-finops
   template: true
@@ -1605,7 +1608,7 @@ plans:
 - name: Amazon Elastic Transcoder Plans Pricing
   plan_count: 3
   slug: amazon-elastic-transcoder-plans-pricing
-random_paper: 2
+random_paper: 10
 rate_limits:
 - limit_count: 5
   name: Amazon Elastic Transcoder Rate Limits
@@ -1638,7 +1641,7 @@ score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 72.0
     catalog_earned_first_party: 0.0
     catalog_gap: 43.0
@@ -1667,13 +1670,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/amazon-elastic-transcoder/refs/heads/main/screenshots/amazon-elastic-transcoder-2026-06-20T171639.png
+screenshot: https://apis.io/screenshots/amazon-elastic-transcoder/amazon-elastic-transcoder-2026-06-20T171639.png
 security:
 - kind: authentication
   name: Amazon Elastic Transcoder Authentication

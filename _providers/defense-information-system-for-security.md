@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Free
+  confidence: low
+  label: Unknown
   onboarding: unknown
-  pricing: free
+  pricing: unknown
   public: false
   source:
-  - plans
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 collections:
@@ -42,22 +46,22 @@ collections:
   slug: open-defense-information-system-for-security
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/defense-information-system-for-security/refs/heads/main/plans/defense-information-system-for-security-plans-pricing.yml
+  href: https://artifacts.apis.io/defense-information-system-for-security/plans/defense-information-system-for-security-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/defense-information-system-for-security-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/defense-information-system-for-security/refs/heads/main/rate-limits/defense-information-system-for-security-rate-limits.yml
+  href: https://artifacts.apis.io/defense-information-system-for-security/rate-limits/defense-information-system-for-security-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/defense-information-system-for-security-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/defense-information-system-for-security/refs/heads/main/finops/defense-information-system-for-security-finops.yml
+  href: https://artifacts.apis.io/defense-information-system-for-security/finops/defense-information-system-for-security-finops.yml
   title: ''
   type: FinOps
   url: finops/defense-information-system-for-security-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/defense-information-system-for-security/refs/heads/main/security/defense-information-system-for-security-domain-security.yml
+  href: https://artifacts.apis.io/defense-information-system-for-security/security/defense-information-system-for-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/defense-information-system-for-security-domain-security.yml
@@ -78,7 +82,7 @@ common:
   type: Parent Agency
   url: https://www.dcsa.mil
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/defense-information-system-for-security/refs/heads/main/llms/defense-information-system-for-security-llms.txt
+  href: https://artifacts.apis.io/defense-information-system-for-security/llms/defense-information-system-for-security-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/defense-information-system-for-security-llms.txt
@@ -106,7 +110,7 @@ plans:
 - name: Defense Information System For Security Plans Pricing
   plan_count: 0
   slug: defense-information-system-for-security-plans-pricing
-random_paper: 10
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Defense Information System For Security Rate Limits
@@ -121,7 +125,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -134,21 +138,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 7.3
+  previous_composite: 5.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/defense-information-system-for-security/refs/heads/main/screenshots/defense-information-system-for-security-2026-06-20T175833.png
+screenshot: https://apis.io/screenshots/defense-information-system-for-security/defense-information-system-for-security-2026-06-20T175833.png
 security:
 - kind: domain-security
   name: Defense Information System For Security Domain Security

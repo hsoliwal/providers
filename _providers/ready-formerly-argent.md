@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -77,27 +81,27 @@ common:
   type: StatusPage
   url: https://status.ready.co
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ready-formerly-argent/refs/heads/main/packages/ready-formerly-argent-packages.yml
+  href: https://artifacts.apis.io/ready-formerly-argent/packages/ready-formerly-argent-packages.yml
   title: ''
   type: Packages
   url: packages/ready-formerly-argent-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ready-formerly-argent/refs/heads/main/packages/ready-formerly-argent-packages.yml
+  href: https://artifacts.apis.io/ready-formerly-argent/packages/ready-formerly-argent-packages.yml
   title: ''
   type: SDKs
   url: packages/ready-formerly-argent-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ready-formerly-argent/refs/heads/main/llms/ready-formerly-argent-llms.txt
+  href: https://artifacts.apis.io/ready-formerly-argent/llms/ready-formerly-argent-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ready-formerly-argent-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ready-formerly-argent/refs/heads/main/lifecycle/ready-formerly-argent-lifecycle.yml
+  href: https://artifacts.apis.io/ready-formerly-argent/lifecycle/ready-formerly-argent-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ready-formerly-argent-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ready-formerly-argent/refs/heads/main/security/ready-formerly-argent-domain-security.yml
+  href: https://artifacts.apis.io/ready-formerly-argent/security/ready-formerly-argent-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ready-formerly-argent-domain-security.yml
@@ -113,7 +117,7 @@ overview: 'Ready (formerly Argent) is profiled on the [APIs.io](https://apis.io/
 
 
   Ready (formerly Argent)''s developer surface includes documentation, getting-started guide, API reference, engineering blog, support, and 10 more developer resources.'
-random_paper: 10
+random_paper: 8
 score:
   band: emerging
   composite: 18.9
@@ -139,14 +143,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 8.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ready-formerly-argent/refs/heads/main/screenshots/ready-formerly-argent-2026-09-02T152952.png
+screenshot: https://apis.io/screenshots/ready-formerly-argent/ready-formerly-argent-2026-09-02T152952.png
 security:
 - kind: domain-security
   name: Ready Formerly Argent Domain Security

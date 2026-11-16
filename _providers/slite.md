@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.9
-  scored_at: '2026-10-17'
+  score: 44.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -44,7 +47,7 @@ agentic_access:
   operation_count: 25
   slug: slite-agentic-access
   summary_line: 25 operations · 10 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.slite.com/v1
   baseurl_source: declared
@@ -81,11 +84,8 @@ apis:
   description: The Users API from Slite — 2 operation(s) for users.
   name: Slite Users API
   slug: slite-users-api
-artifact_total: 83
+artifact_total: 82
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Public Slite api Ask API
   slug: open-slite-ask-api
@@ -109,7 +109,7 @@ collections:
   slug: open-slite-users-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/slite/refs/heads/main/capabilities/slite-capability-edges.yml
+  href: https://artifacts.apis.io/slite/capabilities/slite-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/slite-capability-edges.yml
@@ -118,17 +118,17 @@ common:
   type: Website
   url: https://www.slite.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/slite/refs/heads/main/agentic-access/slite-agentic-access.yml
+  href: https://artifacts.apis.io/slite/agentic-access/slite-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/slite-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/slite/refs/heads/main/security/slite-domain-security.yml
+  href: https://artifacts.apis.io/slite/security/slite-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/slite-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/slite/refs/heads/main/authentication/slite-authentication.yml
+  href: https://artifacts.apis.io/slite/authentication/slite-authentication.yml
   title: ''
   type: Authentication
   url: authentication/slite-authentication.yml
@@ -173,17 +173,17 @@ common:
   type: X
   url: https://twitter.com/slitehq
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/slite/refs/heads/main/plans/slite-plans-pricing.yml
+  href: https://artifacts.apis.io/slite/plans/slite-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/slite-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/slite/refs/heads/main/rate-limits/slite-rate-limits.yml
+  href: https://artifacts.apis.io/slite/rate-limits/slite-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/slite-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/slite/refs/heads/main/finops/slite-finops.yml
+  href: https://artifacts.apis.io/slite/finops/slite-finops.yml
   title: ''
   type: FinOps
   url: finops/slite-finops.yml
@@ -315,7 +315,7 @@ json_schemas:
   property_count: 2
   slug: NoteOwner
 - name: NoteWithContent
-  property_count: 0
+  property_count: 1
   slug: NoteWithContent
 - name: ObjectType
   property_count: 0
@@ -422,29 +422,29 @@ rules:
   slug: slite-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 29.7
+  composite: 32.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 51.3
     catalog_earned_first_party: 0.0
     catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 2.5
   facets:
     access_clarity: 7.9
     contract_governance: 9.8
-    contract_quality: 63.0
-    developer_ergonomics: 13.1
+    contract_quality: 69.0
+    developer_ergonomics: 17.9
     discoverability: 68.3
     operational_transparency: 18.4
-  previous_composite: 35.3
+  previous_composite: 29.7
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 7
     mcp: first-party
   regulatory:
@@ -453,13 +453,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/slite/refs/heads/main/screenshots/slite-2026-06-20T194030.png
+screenshot: https://apis.io/screenshots/slite/slite-2026-06-20T194030.png
 security:
 - kind: authentication
   name: Slite Authentication

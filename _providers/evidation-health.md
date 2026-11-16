@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/evidation-health/refs/heads/main/security/evidation-health-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/evidation-health/security/evidation-health-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/evidation-health-vulnerability-disclosure.yml
@@ -47,22 +50,22 @@ common:
   type: Security
   url: https://evidation.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/evidation-health/refs/heads/main/well-known/evidation-health-security.txt
+  href: https://artifacts.apis.io/evidation-health/well-known/evidation-health-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/evidation-health-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/evidation-health/refs/heads/main/security/evidation-health-domain-security.yml
+  href: https://artifacts.apis.io/evidation-health/security/evidation-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/evidation-health-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/evidation-health/refs/heads/main/well-known/evidation-health-well-known.yml
+  href: https://artifacts.apis.io/evidation-health/well-known/evidation-health-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/evidation-health-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/evidation-health/refs/heads/main/llms/evidation-health-llms.txt
+  href: https://artifacts.apis.io/evidation-health/llms/evidation-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/evidation-health-llms.txt
@@ -127,12 +130,12 @@ overview: 'Evidation Health is profiled on the [APIs.io](https://apis.io/) netwo
 
 
   Evidation Health''s developer surface includes engineering blog, support, signup flow, and 15 more developer resources.'
-random_paper: 10
+random_paper: 6
 score:
   band: emerging
   composite: 15.4
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -153,14 +156,14 @@ score:
     regime: Health
     regime_id: health
     score: 15.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/evidation-health/refs/heads/main/screenshots/evidation-health-2026-08-07T165048.png
+screenshot: https://apis.io/screenshots/evidation-health/evidation-health-2026-08-07T165048.png
 security:
 - kind: domain-security
   name: Evidation Health Domain Security

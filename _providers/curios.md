@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 17.3
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - baseURL: https://marketplace-api.curios.com
@@ -64,52 +82,52 @@ apis:
 artifact_total: 15
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/curios/refs/heads/main/plans/curios-plans-pricing.yml
+  href: https://artifacts.apis.io/curios/plans/curios-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/curios-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curios/refs/heads/main/rules/curios-rules.yml
+  href: https://artifacts.apis.io/curios/rules/curios-rules.yml
   title: ''
   type: Spectral
   url: rules/curios-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curios/refs/heads/main/json-ld/curios-context.jsonld
+  href: https://artifacts.apis.io/curios/json-ld/curios-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/curios-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curios/refs/heads/main/vocabulary/curios-vocabulary.yml
+  href: https://artifacts.apis.io/curios/vocabulary/curios-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/curios-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curios/refs/heads/main/data-model/curios-data-model.yml
+  href: https://artifacts.apis.io/curios/data-model/curios-data-model.yml
   title: ''
   type: DataModel
   url: data-model/curios-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curios/refs/heads/main/conventions/curios-conventions.yml
+  href: https://artifacts.apis.io/curios/conventions/curios-conventions.yml
   title: ''
   type: Conventions
   url: conventions/curios-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curios/refs/heads/main/authentication/curios-authentication.yml
+  href: https://artifacts.apis.io/curios/authentication/curios-authentication.yml
   title: ''
   type: Authentication
   url: authentication/curios-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curios/refs/heads/main/conformance/curios-conformance.yml
+  href: https://artifacts.apis.io/curios/conformance/curios-conformance.yml
   title: ''
   type: Conformance
   url: conformance/curios-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/curios/refs/heads/main/hosts/curios-hosts.yml
+  href: https://artifacts.apis.io/curios/hosts/curios-hosts.yml
   title: ''
   type: Hosts
   url: hosts/curios-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/curios/refs/heads/main/vendors/curios-vendors.yml
+  href: https://artifacts.apis.io/curios/vendors/curios-vendors.yml
   title: ''
   type: Vendors
   url: vendors/curios-vendors.yml
@@ -138,7 +156,7 @@ common:
   type: Documentation
   url: https://docs.curios.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curios/refs/heads/main/security/curios-domain-security.yml
+  href: https://artifacts.apis.io/curios/security/curios-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/curios-domain-security.yml
@@ -187,7 +205,7 @@ plans:
 - name: Curios Plans Pricing
   plan_count: 4
   slug: curios-plans-pricing
-random_paper: 1
+random_paper: 13
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -203,21 +221,23 @@ rules:
   slug: curios-rules
 score:
   band: thin
-  composite: 34.8
+  composite: 28.5
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 64.8
     catalog_earned_first_party: 12.0
     catalog_gap: 50.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.3
   facets:
-    access_clarity: 63.2
+    access_clarity: 47.4
     contract_governance: 22.0
     contract_quality: 21.4
-    developer_ergonomics: 38.1
+    developer_ergonomics: 25.0
     discoverability: 58.9
     operational_transparency: 0.0
+  previous_composite: 34.8
   provenance:
     conformance: derived
     contracts:
@@ -231,12 +251,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/curios/curios-2026-11-03T125902.png
 security:
 - kind: authentication
   name: Curios Authentication

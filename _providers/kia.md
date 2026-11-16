@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://prd.kr-ccapi.kia.com
@@ -51,47 +64,47 @@ common:
   type: Pricing
   url: https://www.kia.com/kr/vehicles/k9/price
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kia/refs/heads/main/rules/kia-rules.yml
+  href: https://artifacts.apis.io/kia/rules/kia-rules.yml
   title: ''
   type: Spectral
   url: rules/kia-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kia/refs/heads/main/asyncapi/kia-webhooks.yml
+  href: https://artifacts.apis.io/kia/asyncapi/kia-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/kia-webhooks.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kia/refs/heads/main/security/kia-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kia/security/kia-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/kia-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kia/refs/heads/main/errors/kia-problem-types.yml
+  href: https://artifacts.apis.io/kia/errors/kia-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/kia-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kia/refs/heads/main/conformance/kia-conformance.yml
+  href: https://artifacts.apis.io/kia/conformance/kia-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kia-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kia/refs/heads/main/well-known/kia-security.txt
+  href: https://artifacts.apis.io/kia/well-known/kia-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/kia-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kia/refs/heads/main/well-known/kia-well-known.yml
+  href: https://artifacts.apis.io/kia/well-known/kia-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kia-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kia/refs/heads/main/hosts/kia-hosts.yml
+  href: https://artifacts.apis.io/kia/hosts/kia-hosts.yml
   title: ''
   type: Hosts
   url: hosts/kia-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kia/refs/heads/main/vendors/kia-vendors.yml
+  href: https://artifacts.apis.io/kia/vendors/kia-vendors.yml
   title: ''
   type: Vendors
   url: vendors/kia-vendors.yml
@@ -100,12 +113,12 @@ common:
   type: Documentation
   url: https://developer.kia.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kia/refs/heads/main/security/kia-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kia/security/kia-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/kia-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kia/refs/heads/main/security/kia-domain-security.yml
+  href: https://artifacts.apis.io/kia/security/kia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kia-domain-security.yml
@@ -150,14 +163,14 @@ modified: '2026-10-13'
 name: Kia
 nav: Providers
 network: true
-overview: 'Kia is listed with 2 APIs on the [APIs.io](https://apis.io/) network: 계정 API and 개인정보 제공 동의 및 철회 API. Tagged areas include Automotive, Connected Vehicles, Vehicle Data, Authentication, and Company.
+overview: 'Kia is listed with 2 APIs on the [APIs.io](https://apis.io/) network: 계정 API and 개인정보 제공 동의 및 철회 API. Tagged areas include Automotive, Connected Vehicles, Vehicle Data, OAuth, and Company.
 
 
   The Kia catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Kia''s developer surface includes pricing, documentation, FAQ, support, and 16 more developer resources.'
-random_paper: 1
+random_paper: 21
 rules:
 - authorship: generated
   effective_rule_count: 56
@@ -172,22 +185,31 @@ rules:
     warn: 1
   slug: kia-rules
 score:
-  band: thin
-  composite: 32.8
+  band: emerging
+  composite: 24.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 41.5
     catalog_earned_first_party: 0.0
     catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.4
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 18.2
     contract_quality: 21.4
-    developer_ergonomics: 35.7
+    developer_ergonomics: 17.9
     discoverability: 66.1
-    operational_transparency: 34.2
+    operational_transparency: 26.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - south-korea
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - japan-korea
+  previous_composite: 32.8
   provenance:
     conformance: derived
     contracts:
@@ -201,12 +223,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/kia/kia-2026-11-03T134411.png
 security:
 - kind: domain-security
   name: Kia Domain Security
@@ -221,7 +245,8 @@ tags:
 - Automotive
 - Connected Vehicles
 - Vehicle Data
-- Authentication
+- OAuth
 - Company
+- Authentication
 website: https://www.kia.com/
 ---

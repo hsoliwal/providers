@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-10-17'
+  score: 28.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 41
   human_in_the_loop: 0
@@ -143,11 +149,8 @@ apis:
   description: The wikidata API from Wikimedia — 3 operation(s) for wikidata.
   name: Wikimedia Wikidata API
   slug: wikimedia-wikidata-api
-artifact_total: 123
+artifact_total: 122
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Wikimedia Enterprise API spec articles API
   slug: open-wikimedia-articles-api
@@ -206,38 +209,43 @@ collections:
   name: Wikimedia Enterprise API spec articles wikidata API
   slug: open-wikimedia-wikidata-api
 common:
+- group: other
+  href: https://artifacts.apis.io/wikimedia/capabilities/wikimedia-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/wikimedia-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/plans/wikimedia-enterprise.yml
+  href: https://artifacts.apis.io/wikimedia/plans/wikimedia-enterprise.yml
   title: ''
   type: Plans
   url: plans/wikimedia-enterprise.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/rate-limits/mediawiki-action-api.yml
+  href: https://artifacts.apis.io/wikimedia/rate-limits/mediawiki-action-api.yml
   title: ''
   type: RateLimits
   url: rate-limits/mediawiki-action-api.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/finops/wikimedia-enterprise.yml
+  href: https://artifacts.apis.io/wikimedia/finops/wikimedia-enterprise.yml
   title: ''
   type: FinOps
   url: finops/wikimedia-enterprise.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/agentic-access/wikimedia-agentic-access.yml
+  href: https://artifacts.apis.io/wikimedia/agentic-access/wikimedia-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/wikimedia-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/security/wikimedia-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/wikimedia/security/wikimedia-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/wikimedia-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/security/wikimedia-domain-security.yml
+  href: https://artifacts.apis.io/wikimedia/security/wikimedia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wikimedia-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/authentication/wikimedia-authentication.yml
+  href: https://artifacts.apis.io/wikimedia/authentication/wikimedia-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wikimedia-authentication.yml
@@ -300,8 +308,8 @@ examples:
   name: Page Summary
   slug: page-summary
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Wikimedia Enterprise
   primary_unit: ''
   service_category: ''
@@ -523,12 +531,12 @@ overview: 'Wikimedia publishes 20 API contracts indexed on the [APIs.io](https:/
   The Wikimedia catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Wikimedia''s developer surface includes authentication, developer portal, engineering blog, getting-started guide, GitHub presence, and 12 more developer resources.'
+  Wikimedia''s developer surface includes authentication, developer portal, engineering blog, getting-started guide, GitHub presence, and 13 more developer resources.'
 plans:
 - name: Wikimedia Enterprise
   plan_count: 2
   slug: wikimedia-enterprise
-random_paper: 2
+random_paper: 12
 rate_limits:
 - limit_count: 2
   name: Mediawiki Action Api
@@ -556,23 +564,23 @@ rules:
   slug: wikimedia-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 41.3
+  composite: 45.8
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 52.3
-    catalog_earned_first_party: 0.0
-    catalog_gap: 62.8
+    artifact_dirs: 17
+    catalog_earned: 58.3
+    catalog_earned_first_party: 8.0
+    catalog_gap: 56.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
-    access_clarity: 26.3
+    access_clarity: 42.1
     contract_governance: 9.8
     contract_quality: 54.4
     developer_ergonomics: 47.6
     discoverability: 73.2
-    operational_transparency: 26.3
-  previous_composite: 47.3
+    operational_transparency: 36.8
+  previous_composite: 45.8
   provenance:
     agentic_access: derived
     contracts:
@@ -586,13 +594,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/wikimedia/refs/heads/main/screenshots/wikimedia-2026-06-20T201454.png
+screenshot: https://apis.io/screenshots/wikimedia/wikimedia-2026-06-20T201454.png
 security:
 - kind: authentication
   name: Wikimedia Authentication

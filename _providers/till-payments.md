@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-10-17'
+  score: 35.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 26
   slug: till-payments-agentic-access
   summary_line: 26 operations · 21 acting
-api_count: 3
+api_count: 2
 apis:
 - description: The Till Payments Pay By Link API for generating shareable hosted payment links, documented on the Till developer documentation site. No downloadable OpenAPI specification was published for this produ
   name: Till Payments Pay By Link API
@@ -93,7 +96,7 @@ arazzos:
 - description: Register (tokenize) a payment instrument, then charge it with a debit using the returned transactionToken.
   name: Till Payments — tokenize and charge
   slug: till-payments-tokenize-and-charge
-artifact_total: 17
+artifact_total: 22
 asyncapis:
 - description: ''
   name: Till Payments Callbacks Webhooks
@@ -111,87 +114,87 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/nuvei/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/mcp/till-payments-mcp.yml
+  href: https://artifacts.apis.io/till-payments/mcp/till-payments-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/till-payments-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/overlays/till-payments-gateway-overlay.yaml
+  href: https://artifacts.apis.io/till-payments/overlays/till-payments-gateway-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/till-payments-gateway-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/overlays/till-payments-direct-pci-overlay.yaml
+  href: https://artifacts.apis.io/till-payments/overlays/till-payments-direct-pci-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/till-payments-direct-pci-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/agentic-access/till-payments-agentic-access.yml
+  href: https://artifacts.apis.io/till-payments/agentic-access/till-payments-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/till-payments-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/security/till-payments-domain-security.yml
+  href: https://artifacts.apis.io/till-payments/security/till-payments-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/till-payments-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/authentication/till-payments-authentication.yml
+  href: https://artifacts.apis.io/till-payments/authentication/till-payments-authentication.yml
   title: ''
   type: Authentication
   url: authentication/till-payments-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/conventions/till-payments-conventions.yml
+  href: https://artifacts.apis.io/till-payments/conventions/till-payments-conventions.yml
   title: ''
   type: Conventions
   url: conventions/till-payments-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/conventions/till-payments-conventions.yml
+  href: https://artifacts.apis.io/till-payments/conventions/till-payments-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/till-payments-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/errors/till-payments-problem-types.yml
+  href: https://artifacts.apis.io/till-payments/errors/till-payments-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/till-payments-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/lifecycle/till-payments-lifecycle.yml
+  href: https://artifacts.apis.io/till-payments/lifecycle/till-payments-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/till-payments-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/asyncapi/till-payments-callbacks-webhooks.yml
+  href: https://artifacts.apis.io/till-payments/asyncapi/till-payments-callbacks-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/till-payments-callbacks-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/data-model/till-payments-data-model.yml
+  href: https://artifacts.apis.io/till-payments/data-model/till-payments-data-model.yml
   title: ''
   type: DataModel
   url: data-model/till-payments-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/conformance/till-payments-conformance.yml
+  href: https://artifacts.apis.io/till-payments/conformance/till-payments-conformance.yml
   title: ''
   type: Conformance
   url: conformance/till-payments-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/llms/till-payments-llms.txt
+  href: https://artifacts.apis.io/till-payments/llms/till-payments-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/till-payments-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/till-payments/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/arazzo/till-payments-authorize-and-capture.yml
+  href: https://artifacts.apis.io/till-payments/arazzo/till-payments-authorize-and-capture.yml
   title: ''
   type: Arazzo
   url: arazzo/till-payments-authorize-and-capture.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/arazzo/till-payments-tokenize-and-charge.yml
+  href: https://artifacts.apis.io/till-payments/arazzo/till-payments-tokenize-and-charge.yml
   title: ''
   type: Arazzo
   url: arazzo/till-payments-tokenize-and-charge.yml
@@ -250,28 +253,41 @@ network: true
 overview: 'Till Payments publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Continue Dcc API, Dispute API, Options API, and 6 more. Tagged areas include Payments, Australia, Payment Gateway, Payment Processing, and Acquiring.
 
 
-  The Till Payments catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Till Payments catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Till Payments'' developer surface includes authentication, documentation, API reference, pricing, engineering blog, support, and 23 more developer resources.'
-random_paper: 21
+random_paper: 19
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Till Payments API Rules
+  rule_count: 59
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 2
+    warn: 5
+  slug: till-payments-rules
 score:
   band: thin
-  composite: 32.7
+  composite: 35.1
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 35.0
+    artifact_dirs: 23
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 1.2
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 53.3
+    contract_governance: 18.2
+    contract_quality: 58.3
     developer_ergonomics: 39.9
-    discoverability: 69.6
+    discoverability: 64.3
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -280,14 +296,14 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 32.2
+  previous_composite: 33.9
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 7
     mcp: derived
     skills: derived
@@ -301,13 +317,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 27.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/till-payments/refs/heads/main/screenshots/till-payments-2026-08-17T082354.png
+screenshot: https://apis.io/screenshots/till-payments/till-payments-2026-08-17T082354.png
 security:
 - kind: authentication
   name: Till Payments Authentication
@@ -317,6 +333,16 @@ security:
   name: Till Payments Domain Security
   slug: till-payments-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Authorize and capture a card payment
+  slug: till-payments-authorize-and-capture
+- name: Run a recurring payment schedule
+  slug: till-payments-recurring-schedule
+- name: Refund a transaction and reconcile status
+  slug: till-payments-refund-and-reconcile
+- name: Tokenize a card and charge it
+  slug: till-payments-tokenize-and-charge
 slug: till-payments
 tags:
 - Payments

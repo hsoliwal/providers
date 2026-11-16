@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: GraphQL API for Better Health Supplies
@@ -32,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/better-health-supplies-inc/refs/heads/main/llms/better-health-supplies-inc-llms.txt
+  href: https://artifacts.apis.io/better-health-supplies-inc/llms/better-health-supplies-inc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/better-health-supplies-inc-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/better-health-supplies-inc/refs/heads/main/well-known/better-health-supplies-inc-well-known.yml
+  href: https://artifacts.apis.io/better-health-supplies-inc/well-known/better-health-supplies-inc-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/better-health-supplies-inc-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/better-health-supplies-inc/refs/heads/main/hosts/better-health-supplies-inc-hosts.yml
+  href: https://artifacts.apis.io/better-health-supplies-inc/hosts/better-health-supplies-inc-hosts.yml
   title: ''
   type: Hosts
   url: hosts/better-health-supplies-inc-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/better-health-supplies-inc/refs/heads/main/vendors/better-health-supplies-inc-vendors.yml
+  href: https://artifacts.apis.io/better-health-supplies-inc/vendors/better-health-supplies-inc-vendors.yml
   title: ''
   type: Vendors
   url: vendors/better-health-supplies-inc-vendors.yml
@@ -68,7 +81,7 @@ common:
   type: Blog
   url: https://blog.joinbetter.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/better-health-supplies-inc/refs/heads/main/security/better-health-supplies-inc-domain-security.yml
+  href: https://artifacts.apis.io/better-health-supplies-inc/security/better-health-supplies-inc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/better-health-supplies-inc-domain-security.yml
@@ -88,24 +101,24 @@ overview: 'Better Health Supplies, Inc. is listed with 1 API on the [APIs.io](ht
 
 
   Better Health Supplies, Inc.''s developer surface includes engineering blog and 9 more developer resources.'
-random_paper: 14
+random_paper: 18
 score:
   band: emerging
-  composite: 12.0
+  composite: 11.9
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.1
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 75.0
+    discoverability: 74.1
     operational_transparency: 0.0
   previous_composite: 12.0
   provenance:
@@ -116,14 +129,14 @@ score:
     regime: Health
     regime_id: health
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/better-health-supplies-inc/refs/heads/main/screenshots/better-health-supplies-inc-2026-10-11T102014.png
+screenshot: https://apis.io/screenshots/better-health-supplies-inc/better-health-supplies-inc-2026-10-11T102014.png
 security:
 - kind: domain-security
   name: Better Health Supplies Inc Domain Security

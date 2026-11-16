@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Token-authenticated HTTP API behind the Charles conversational commerce platform. Clients authenticate against a per-tenant "universe" host and the central api.hello-charles.com service, then work wit
@@ -47,32 +50,32 @@ common:
   type: BlogRSS
   url: https://www.hello-charles.com/blog/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/charles-co/refs/heads/main/security/charles-co-domain-security.yml
+  href: https://artifacts.apis.io/charles-co/security/charles-co-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/charles-co-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/charles-co/refs/heads/main/packages/charles-co-packages.yml
+  href: https://artifacts.apis.io/charles-co/packages/charles-co-packages.yml
   title: ''
   type: Packages
   url: packages/charles-co-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/charles-co/refs/heads/main/packages/charles-co-packages.yml
+  href: https://artifacts.apis.io/charles-co/packages/charles-co-packages.yml
   title: ''
   type: SDKs
   url: packages/charles-co-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/charles-co/refs/heads/main/authentication/charles-co-authentication.yml
+  href: https://artifacts.apis.io/charles-co/authentication/charles-co-authentication.yml
   title: ''
   type: Authentication
   url: authentication/charles-co-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/charles-co/refs/heads/main/conventions/charles-co-conventions.yml
+  href: https://artifacts.apis.io/charles-co/conventions/charles-co-conventions.yml
   title: ''
   type: Conventions
   url: conventions/charles-co-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/charles-co/refs/heads/main/lifecycle/charles-co-lifecycle.yml
+  href: https://artifacts.apis.io/charles-co/lifecycle/charles-co-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/charles-co-lifecycle.yml
@@ -81,7 +84,7 @@ common:
   type: StatusPage
   url: https://status.hello-charles.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/charles-co/refs/heads/main/llms/charles-co-llms.txt
+  href: https://artifacts.apis.io/charles-co/llms/charles-co-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/charles-co-llms.txt
@@ -153,12 +156,12 @@ overview: 'Charles Co is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   Charles Co''s developer surface includes authentication, documentation, API reference, engineering blog, support, signup flow, and 16 more developer resources.'
-random_paper: 3
+random_paper: 9
 score:
   band: emerging
   composite: 20.4
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -189,14 +192,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/charles-co/refs/heads/main/screenshots/charles-co-2026-07-25T205103.png
+screenshot: https://apis.io/screenshots/charles-co/charles-co-2026-07-25T205103.png
 security:
 - kind: authentication
   name: Charles Co Authentication

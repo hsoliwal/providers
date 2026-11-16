@@ -1,4 +1,21 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +32,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +43,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Token-authenticated REST and WebSocket API for real-time and historical financial market data across crypto, forex, indices, stock, future, and fund product lines.
@@ -32,12 +52,12 @@ apis:
 artifact_total: 6
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/rate-limits/itick-rate-limits.yml
+  href: https://artifacts.apis.io/itick/rate-limits/itick-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/itick-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/security/itick-domain-security.yml
+  href: https://artifacts.apis.io/itick/security/itick-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/itick-domain-security.yml
@@ -94,32 +114,32 @@ common:
   type: PrivacyPolicy
   url: https://itick.org/en/privacy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/packages/itick-packages.yml
+  href: https://artifacts.apis.io/itick/packages/itick-packages.yml
   title: ''
   type: Packages
   url: packages/itick-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/packages/itick-packages.yml
+  href: https://artifacts.apis.io/itick/packages/itick-packages.yml
   title: ''
   type: SDKs
   url: packages/itick-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/components/itick-components.yml
+  href: https://artifacts.apis.io/itick/components/itick-components.yml
   title: ''
   type: Components
   url: components/itick-components.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/plans/itick-plans-pricing.yml
+  href: https://artifacts.apis.io/itick/plans/itick-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/itick-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/lifecycle/itick-lifecycle.yml
+  href: https://artifacts.apis.io/itick/lifecycle/itick-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/itick-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/conformance/itick-conformance.yml
+  href: https://artifacts.apis.io/itick/conformance/itick-conformance.yml
   title: ''
   type: Conformance
   url: conformance/itick-conformance.yml
@@ -151,7 +171,7 @@ score:
   band: thin
   composite: 38.7
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 20
     catalog_earned: 59.0
     catalog_earned_first_party: 24.0
     catalog_gap: 56.0
@@ -175,14 +195,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 28.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/itick/refs/heads/main/screenshots/itick-2026-10-11T105904.png
+screenshot: https://apis.io/screenshots/itick/itick-2026-10-11T105904.png
 security:
 - kind: authentication
   name: Itick Authentication

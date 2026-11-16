@@ -1,4 +1,20 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.3
-  scored_at: '2026-10-17'
+  score: 39.4
+  scored_at: '2026-11-06'
 api_count: 18
 apis:
 - description: The Ads API from ShapelessAI — 1 operation(s) for ads.
@@ -81,90 +100,90 @@ apis:
 - description: The Workspace API from ShapelessAI — 2 operation(s) for workspace.
   name: ShapelessAI Workspace API
   slug: shapelessai-workspace-api
-artifact_total: 30
+artifact_total: 32
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/rate-limits/shapelessai-rate-limits.yml
+  href: https://artifacts.apis.io/shapelessai/rate-limits/shapelessai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/shapelessai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/plans/shapelessai-plans-pricing.yml
+  href: https://artifacts.apis.io/shapelessai/plans/shapelessai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/shapelessai-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/rules/shapelessai-rules.yml
+  href: https://artifacts.apis.io/shapelessai/rules/shapelessai-rules.yml
   title: ''
   type: Spectral
   url: rules/shapelessai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/json-ld/shapelessai-context.jsonld
+  href: https://artifacts.apis.io/shapelessai/json-ld/shapelessai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/shapelessai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/vocabulary/shapelessai-vocabulary.yml
+  href: https://artifacts.apis.io/shapelessai/vocabulary/shapelessai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/shapelessai-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/shapelessai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/data-model/shapelessai-data-model.yml
+  href: https://artifacts.apis.io/shapelessai/data-model/shapelessai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/shapelessai-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/cli/shapelessai-cli.yml
+  href: https://artifacts.apis.io/shapelessai/cli/shapelessai-cli.yml
   title: ''
   type: CLI
   url: cli/shapelessai-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/conventions/shapelessai-conventions.yml
+  href: https://artifacts.apis.io/shapelessai/conventions/shapelessai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/shapelessai-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/authentication/shapelessai-authentication.yml
+  href: https://artifacts.apis.io/shapelessai/authentication/shapelessai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/shapelessai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/errors/shapelessai-problem-types.yml
+  href: https://artifacts.apis.io/shapelessai/errors/shapelessai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/shapelessai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/conformance/shapelessai-conformance.yml
+  href: https://artifacts.apis.io/shapelessai/conformance/shapelessai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/shapelessai-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/llms/shapelessai-llms.txt
+  href: https://artifacts.apis.io/shapelessai/llms/shapelessai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/shapelessai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/well-known/shapelessai-well-known.yml
+  href: https://artifacts.apis.io/shapelessai/well-known/shapelessai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/shapelessai-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/hosts/shapelessai-hosts.yml
+  href: https://artifacts.apis.io/shapelessai/hosts/shapelessai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/shapelessai-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/packages/shapelessai-packages.yml
+  href: https://artifacts.apis.io/shapelessai/packages/shapelessai-packages.yml
   title: ''
   type: SDKs
   url: packages/shapelessai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/packages/shapelessai-packages.yml
+  href: https://artifacts.apis.io/shapelessai/packages/shapelessai-packages.yml
   title: ''
   type: Packages
   url: packages/shapelessai-packages.yml
@@ -185,7 +204,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/FirstClassTree
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shapelessai/refs/heads/main/security/shapelessai-domain-security.yml
+  href: https://artifacts.apis.io/shapelessai/security/shapelessai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shapelessai-domain-security.yml
@@ -208,6 +227,14 @@ coverage:
   state: gated
 created: '2026-10-12'
 description: ShapelessAI provides an agentic social media automation platform that creates, designs, and publishes posts, carousels, and short videos across major social networks. Users input a brief description of their product; the AI researches current market trends, generates content, and schedules it, delivering compounded traffic growth. The service offers a free tier with limited daily posts and paid plans starting at $35/month for higher caps and credits. It supports API, CLI, and MCP integrations, enabling developers to drive the agents programmatically.
+finops:
+- has_sources: true
+  method: derived
+  name: Shapelessai Finops
+  primary_unit: seat
+  service_category: ''
+  slug: shapelessai-finops
+  template: false
 image: https://shapelessai.com/opengraph-image?d1f04df5468e4746
 json_schemas:
 - name: GetApiPostsIdResponse
@@ -249,7 +276,10 @@ plans:
 - name: Shapelessai Plans Pricing
   plan_count: 4
   slug: shapelessai-plans-pricing
-random_paper: 4
+- name: Shapelessai Price Estimates
+  plan_count: 0
+  slug: shapelessai-price-estimates
+random_paper: 18
 rate_limits:
 - limit_count: 19
   name: Shapelessai Rate Limits
@@ -268,22 +298,24 @@ rules:
     warn: 0
   slug: shapelessai-rules
 score:
-  band: developing
-  composite: 41.6
+  band: thin
+  composite: 38.2
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 84.0
+    artifact_dirs: 26
+    catalog_earned: 87.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 31.0
+    catalog_gap: 28.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.0
   facets:
-    access_clarity: 63.2
+    access_clarity: 55.3
     contract_governance: 19.7
     contract_quality: 24.1
-    developer_ergonomics: 42.1
+    developer_ergonomics: 37.4
     discoverability: 69.6
-    operational_transparency: 36.8
+    operational_transparency: 34.2
+  previous_composite: 43.2
   provenance:
     conformance: derived
     contracts:
@@ -298,9 +330,10 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

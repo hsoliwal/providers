@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://app.extensiontotal.com/api
@@ -43,17 +46,14 @@ apis:
   description: Extension risk assessment.
   name: Koi Security Risk API
   slug: koi-security-risk-api
-artifact_total: 5
+artifact_total: 6
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ExtensionTotal Risk API
   slug: open-koi-security-risk-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/capabilities/koi-security-capability-edges.yml
+  href: https://artifacts.apis.io/koi-security/capabilities/koi-security-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/koi-security-capability-edges.yml
@@ -62,7 +62,7 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/palo-alto-networks/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/overlays/koi-security-extensiontotal-overlay.yaml
+  href: https://artifacts.apis.io/koi-security/overlays/koi-security-extensiontotal-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/koi-security-extensiontotal-overlay.yaml
@@ -123,62 +123,62 @@ common:
   type: StatusPage
   url: https://status.koi.ai/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/lifecycle/koi-security-lifecycle.yml
+  href: https://artifacts.apis.io/koi-security/lifecycle/koi-security-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/koi-security-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/authentication/koi-security-authentication.yml
+  href: https://artifacts.apis.io/koi-security/authentication/koi-security-authentication.yml
   title: ''
   type: Authentication
   url: authentication/koi-security-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/conventions/koi-security-conventions.yml
+  href: https://artifacts.apis.io/koi-security/conventions/koi-security-conventions.yml
   title: ''
   type: Conventions
   url: conventions/koi-security-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/errors/koi-security-problem-types.yml
+  href: https://artifacts.apis.io/koi-security/errors/koi-security-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/koi-security-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/conformance/koi-security-conformance.yml
+  href: https://artifacts.apis.io/koi-security/conformance/koi-security-conformance.yml
   title: ''
   type: Conformance
   url: conformance/koi-security-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/data-model/koi-security-data-model.yml
+  href: https://artifacts.apis.io/koi-security/data-model/koi-security-data-model.yml
   title: ''
   type: DataModel
   url: data-model/koi-security-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/packages/koi-security-packages.yml
+  href: https://artifacts.apis.io/koi-security/packages/koi-security-packages.yml
   title: ''
   type: Packages
   url: packages/koi-security-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/well-known/koi-security-well-known.yml
+  href: https://artifacts.apis.io/koi-security/well-known/koi-security-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/koi-security-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/security/koi-security-domain-security.yml
+  href: https://artifacts.apis.io/koi-security/security/koi-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/koi-security-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/mcp/koi-security-mcp.yml
+  href: https://artifacts.apis.io/koi-security/mcp/koi-security-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/koi-security-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/llms/koi-security-llms.txt
+  href: https://artifacts.apis.io/koi-security/llms/koi-security-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/koi-security-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/koi-security/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -194,22 +194,38 @@ network: true
 overview: 'Koi Security publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Risk API. Tagged areas include Company, Security, Endpoint Security, Supply Chain Security, and Browser Extension.
 
 
+  The Koi Security catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Koi Security''s developer surface includes documentation, API reference, engineering blog, signup flow, support, authentication, and 23 more developer resources.'
-random_paper: 2
+random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: Koi Security API Rules
+  rule_count: 64
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 1
+  slug: koi-security-rules
 score:
   band: thin
-  composite: 34.8
+  composite: 36.3
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 53.9
     developer_ergonomics: 28.0
     discoverability: 73.2
@@ -217,7 +233,7 @@ score:
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 34.8
+  previous_composite: 36.3
   provenance:
     conformance: derived
     contracts:
@@ -233,13 +249,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/screenshots/koi-security-2026-07-25T224118.png
+screenshot: https://apis.io/screenshots/koi-security/koi-security-2026-07-25T224118.png
 security:
 - kind: authentication
   name: Koi Security Authentication
@@ -249,6 +265,10 @@ security:
   name: Koi Security Domain Security
   slug: koi-security-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: Screen a VS Code extension for risk with ExtensionTotal
+  slug: koi-security-screen-extension-risk
 slug: koi-security
 tags:
 - Company

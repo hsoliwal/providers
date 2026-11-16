@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.9
-  scored_at: '2026-10-17'
+  score: 25.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -50,48 +63,53 @@ apis:
   slug: bitcoinyield-yields-api
 artifact_total: 7
 common:
+- group: other
+  href: https://artifacts.apis.io/bitcoinyield/capabilities/bitcoinyield-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/bitcoinyield-capability-edges.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitcoinyield/refs/heads/main/errors/bitcoinyield-problem-types.yml
+  href: https://artifacts.apis.io/bitcoinyield/errors/bitcoinyield-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bitcoinyield-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitcoinyield/refs/heads/main/well-known/bitcoinyield-well-known.yml
+  href: https://artifacts.apis.io/bitcoinyield/well-known/bitcoinyield-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bitcoinyield-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitcoinyield/refs/heads/main/agentic-access/bitcoinyield-agentic-access.yml
+  href: https://artifacts.apis.io/bitcoinyield/agentic-access/bitcoinyield-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bitcoinyield-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitcoinyield/refs/heads/main/rules/bitcoinyield-rules.yml
+  href: https://artifacts.apis.io/bitcoinyield/rules/bitcoinyield-rules.yml
   title: ''
   type: Spectral
   url: rules/bitcoinyield-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitcoinyield/refs/heads/main/conformance/bitcoinyield-conformance.yml
+  href: https://artifacts.apis.io/bitcoinyield/conformance/bitcoinyield-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bitcoinyield-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitcoinyield/refs/heads/main/llms/bitcoinyield-llms.txt
+  href: https://artifacts.apis.io/bitcoinyield/llms/bitcoinyield-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bitcoinyield-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitcoinyield/refs/heads/main/hosts/bitcoinyield-hosts.yml
+  href: https://artifacts.apis.io/bitcoinyield/hosts/bitcoinyield-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bitcoinyield-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitcoinyield/refs/heads/main/vendors/bitcoinyield-vendors.yml
+  href: https://artifacts.apis.io/bitcoinyield/vendors/bitcoinyield-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bitcoinyield-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitcoinyield/refs/heads/main/security/bitcoinyield-domain-security.yml
+  href: https://artifacts.apis.io/bitcoinyield/security/bitcoinyield-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bitcoinyield-domain-security.yml
@@ -116,7 +134,7 @@ common:
   type: PrivacyPolicy
   url: https://bitcoinyield.co/legal/privacy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitcoinyield/refs/heads/main/mcp/bitcoinyield-mcp.yml
+  href: https://artifacts.apis.io/bitcoinyield/mcp/bitcoinyield-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/bitcoinyield-mcp.yml
@@ -142,8 +160,8 @@ overview: 'BitcoinYield publishes 3 API contracts indexed on the [APIs.io](https
   The BitcoinYield catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  BitcoinYield''s developer surface includes documentation, engineering blog, and 14 more developer resources.'
-random_paper: 3
+  BitcoinYield''s developer surface includes documentation, engineering blog, and 15 more developer resources.'
+random_paper: 7
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -159,28 +177,30 @@ rules:
   slug: bitcoinyield-rules
 score:
   band: thin
-  composite: 34.4
+  composite: 28.1
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 36.5
     catalog_earned_first_party: 0.0
     catalog_gap: 63.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.3
   facets:
-    access_clarity: 57.1
+    access_clarity: 28.6
     contract_governance: 18.2
-    contract_quality: 44.7
-    developer_ergonomics: 11.9
+    contract_quality: 49.7
+    developer_ergonomics: 6.0
     discoverability: 66.7
     operational_transparency: 0.0
+  previous_composite: 34.4
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 3
     mcp: first-party
   regulatory:
@@ -188,13 +208,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/bitcoinyield/bitcoinyield-2026-11-03T121752.png
 security:
 - kind: domain-security
   name: Bitcoinyield Domain Security

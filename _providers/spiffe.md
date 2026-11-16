@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -57,15 +61,12 @@ apis:
   description: SPIFFE trust bundle retrieval operations for fetching root CA certificates used to validate SVIDs issued by a trust domain
   name: SPIFFE Bundle API
   slug: spiffe-bundle-api
-artifact_total: 20
+artifact_total: 19
 asyncapis:
 - description: 'The SPIFFE Workload API is a gRPC streaming interface through which workloads request and receive SPIFFE Verifiable Identity Documents (SVIDs) and trust bundle updates. Workloads subscribe to the API '
   name: SPIFFE Workload API Events
   slug: spiffe-workload-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: SPIFFE Federation Endpoint Bundle API
   slug: open-spiffe-bundle-api
@@ -74,22 +75,22 @@ collections:
   slug: open-spiffe-federation
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/spiffe/refs/heads/main/plans/spiffe-plans-pricing.yml
+  href: https://artifacts.apis.io/spiffe/plans/spiffe-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/spiffe-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/spiffe/refs/heads/main/rate-limits/spiffe-rate-limits.yml
+  href: https://artifacts.apis.io/spiffe/rate-limits/spiffe-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/spiffe-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/spiffe/refs/heads/main/finops/spiffe-finops.yml
+  href: https://artifacts.apis.io/spiffe/finops/spiffe-finops.yml
   title: ''
   type: FinOps
   url: finops/spiffe-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/spiffe/refs/heads/main/capabilities/spiffe-capability-edges.yml
+  href: https://artifacts.apis.io/spiffe/capabilities/spiffe-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/spiffe-capability-edges.yml
@@ -110,12 +111,12 @@ common:
   type: License
   url: https://github.com/spiffe/spiffe/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/spiffe/refs/heads/main/agentic-access/spiffe-agentic-access.yml
+  href: https://artifacts.apis.io/spiffe/agentic-access/spiffe-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/spiffe-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/spiffe/refs/heads/main/security/spiffe-domain-security.yml
+  href: https://artifacts.apis.io/spiffe/security/spiffe-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/spiffe-domain-security.yml
@@ -124,22 +125,22 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/spiffe-secure-production-identity-framework-for-everyone
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/spiffe/refs/heads/main/json-schema/spiffe-svid-schema.json
+  href: https://artifacts.apis.io/spiffe/json-schema/spiffe-svid-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/spiffe-svid-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spiffe/refs/heads/main/json-ld/spiffe-context.jsonld
+  href: https://artifacts.apis.io/spiffe/json-ld/spiffe-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/spiffe-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spiffe/refs/heads/main/rules/spiffe-rules.yml
+  href: https://artifacts.apis.io/spiffe/rules/spiffe-rules.yml
   title: ''
   type: SpectralRules
   url: rules/spiffe-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/spiffe/refs/heads/main/vocabulary/spiffe-vocabulary.yml
+  href: https://artifacts.apis.io/spiffe/vocabulary/spiffe-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/spiffe-vocabulary.yml
@@ -193,7 +194,7 @@ finops:
 - has_sources: false
   method: generated
   name: Spiffe Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: spiffe-finops
   template: true
@@ -227,7 +228,7 @@ plans:
 - name: Spiffe Plans Pricing
   plan_count: 3
   slug: spiffe-plans-pricing
-random_paper: 21
+random_paper: 13
 rate_limits:
 - limit_count: 5
   name: Spiffe Rate Limits
@@ -272,13 +273,13 @@ score:
   band: thin
   composite: 32.9
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 52.0
     catalog_earned_first_party: 0.0
     catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 27.3
@@ -289,7 +290,7 @@ score:
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 31.4
+  previous_composite: 32.9
   provenance:
     agentic_access: derived
     contracts:
@@ -303,14 +304,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/spiffe/refs/heads/main/screenshots/spiffe-2026-06-20T194311.png
+screenshot: https://apis.io/screenshots/spiffe/spiffe-2026-06-20T194311.png
 security:
 - kind: domain-security
   name: Spiffe Domain Security

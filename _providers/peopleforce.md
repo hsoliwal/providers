@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 43.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -84,9 +90,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: PeopleForce Candidates API
   slug: open-peopleforce-candidates-api
 - collection_type: open
@@ -112,22 +115,22 @@ collections:
   slug: open-peopleforce
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/peopleforce/refs/heads/main/plans/peopleforce-plans-pricing.yml
+  href: https://artifacts.apis.io/peopleforce/plans/peopleforce-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/peopleforce-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/peopleforce/refs/heads/main/rate-limits/peopleforce-rate-limits.yml
+  href: https://artifacts.apis.io/peopleforce/rate-limits/peopleforce-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/peopleforce-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/peopleforce/refs/heads/main/finops/peopleforce-finops.yml
+  href: https://artifacts.apis.io/peopleforce/finops/peopleforce-finops.yml
   title: ''
   type: FinOps
   url: finops/peopleforce-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/peopleforce/refs/heads/main/capabilities/peopleforce-capability-edges.yml
+  href: https://artifacts.apis.io/peopleforce/capabilities/peopleforce-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/peopleforce-capability-edges.yml
@@ -136,17 +139,17 @@ common:
   type: Website
   url: https://peopleforce.io
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/peopleforce/refs/heads/main/agentic-access/peopleforce-agentic-access.yml
+  href: https://artifacts.apis.io/peopleforce/agentic-access/peopleforce-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/peopleforce-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peopleforce/refs/heads/main/security/peopleforce-domain-security.yml
+  href: https://artifacts.apis.io/peopleforce/security/peopleforce-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/peopleforce-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peopleforce/refs/heads/main/authentication/peopleforce-authentication.yml
+  href: https://artifacts.apis.io/peopleforce/authentication/peopleforce-authentication.yml
   title: ''
   type: Authentication
   url: authentication/peopleforce-authentication.yml
@@ -160,7 +163,7 @@ finops:
 - has_sources: false
   method: generated
   name: Peopleforce Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: peopleforce-finops
   template: true
@@ -177,32 +180,48 @@ network: true
 overview: 'PeopleForce publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Candidates API, Departments API, Divisions API, and 4 more. Tagged areas include Human Resources, Recruiting, and Employees.
 
 
+  The PeopleForce catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   PeopleForce''s developer surface includes authentication, engineering blog, and 7 more developer resources.'
 plans:
 - name: Peopleforce Plans Pricing
   plan_count: 3
   slug: peopleforce-plans-pricing
-random_paper: 6
+random_paper: 20
 rate_limits:
 - limit_count: 5
   name: Peopleforce Rate Limits
   slug: peopleforce-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: PeopleForce API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: peopleforce-rules
 score:
-  band: emerging
-  composite: 23.8
+  band: thin
+  composite: 26.4
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 38.0
+    artifact_dirs: 19
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 1.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 44.1
-    developer_ergonomics: 26.2
+    developer_ergonomics: 31.0
     discoverability: 66.7
     operational_transparency: 7.9
   previous_composite: 25.4
@@ -220,13 +239,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/peopleforce/refs/heads/main/screenshots/peopleforce-2026-06-20T191548.png
+screenshot: https://apis.io/screenshots/peopleforce/peopleforce-2026-06-20T191548.png
 security:
 - kind: authentication
   name: Peopleforce Authentication

@@ -1,6 +1,24 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Open access
+  onboarding: open
+  pricing: unknown
+  public: true
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -15,16 +33,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: derived
     mcp_server: documented
+    mcp_tool_quality: full
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 34.3
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 40.3
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - description: 'Hosted MCP server (Streamable HTTP) exposing 10 read-only tools for searching, comparing and fetching coworking spaces, market rates, locations, operators and guides. Independently health-verified on '
   name: CoworkingView MCP Server
@@ -84,15 +105,15 @@ apis:
   description: The search API from CoworkingView API — 1 operation(s) for search.
   name: CoworkingView API Search API
   slug: coworkingview-api-search-api
-artifact_total: 17
+artifact_total: 20
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/plans/coworkingview-api-plans-pricing.yml
+  href: https://artifacts.apis.io/coworkingview-api/plans/coworkingview-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/coworkingview-api-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/rate-limits/coworkingview-api-rate-limits.yml
+  href: https://artifacts.apis.io/coworkingview-api/rate-limits/coworkingview-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/coworkingview-api-rate-limits.yml
@@ -101,17 +122,17 @@ common:
   type: Blog
   url: https://coworkingview.com/en/insights
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/capabilities/coworkingview-api-capability-edges.yml
+  href: https://artifacts.apis.io/coworkingview-api/capabilities/coworkingview-api-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/coworkingview-api-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/overlays/coworkingview-api-openapi-overlay.yaml
+  href: https://artifacts.apis.io/coworkingview-api/overlays/coworkingview-api-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/coworkingview-api-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/coworkingview-api/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -120,22 +141,22 @@ common:
   type: Website
   url: https://coworkingview.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/security/coworkingview-api-domain-security.yml
+  href: https://artifacts.apis.io/coworkingview-api/security/coworkingview-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coworkingview-api-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/well-known/coworkingview-api-well-known.yml
+  href: https://artifacts.apis.io/coworkingview-api/well-known/coworkingview-api-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/coworkingview-api-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/conformance/coworkingview-api-conformance.yml
+  href: https://artifacts.apis.io/coworkingview-api/conformance/coworkingview-api-conformance.yml
   title: ''
   type: Conformance
   url: conformance/coworkingview-api-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/components/coworkingview-api-components.yml
+  href: https://artifacts.apis.io/coworkingview-api/components/coworkingview-api-components.yml
   title: ''
   type: Components
   url: components/coworkingview-api-components.yml
@@ -154,41 +175,57 @@ network: true
 overview: 'CoworkingView API publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Config API, Facets API, Geo API, and 9 more. Tagged areas include Co-Working, Flexible Workspace, Real Estate, Location Services, and Search.
 
 
+  The CoworkingView API catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   CoworkingView API''s developer surface includes engineering blog and 10 more developer resources.'
 plans:
 - name: Coworkingview Api Plans Pricing
   plan_count: 0
   slug: coworkingview-api-plans-pricing
-random_paper: 21
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Coworkingview Api Rate Limits
   slug: coworkingview-api-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: CoworkingView API API Rules
+  rule_count: 45
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 1
+  slug: coworkingview-api-rules
 score:
   band: thin
-  composite: 28.2
+  composite: 31.1
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 1.2
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 42.9
+    contract_governance: 18.2
+    contract_quality: 47.6
     developer_ergonomics: 44.6
     discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 27.7
+  previous_composite: 29.9
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 11
     mcp: first-party
     skills: derived
@@ -198,13 +235,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/screenshots/coworkingview-api-2026-10-11T103311.png
+screenshot: https://apis.io/screenshots/coworkingview-api/coworkingview-api-2026-10-11T103311.png
 security:
 - kind: authentication
   name: Coworkingview Api Authentication
@@ -214,6 +251,12 @@ security:
   name: Coworkingview Api Domain Security
   slug: coworkingview-api-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: coworkingview-search-and-compare
+  slug: coworkingview-api-search-and-compare
+- name: coworkingview-submit-inquiry
+  slug: coworkingview-api-submit-inquiry
 slug: coworkingview-api
 tags:
 - Co-Working

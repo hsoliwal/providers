@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: Deep-integration Mobility-as-a-Service API for partners to complete full user journeys inside their own apps - register users, discover vehicles by zone, get per-vehicle pricing, start and end rentals
@@ -52,7 +57,7 @@ common:
   type: License
   url: https://github.com/voiapp/mobility-data-specification/blob/dev/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voi/refs/heads/main/security/voi-domain-security.yml
+  href: https://artifacts.apis.io/voi/security/voi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/voi-domain-security.yml
@@ -97,47 +102,47 @@ common:
   type: PrivacyPolicy
   url: https://www.voi.com/legal/privacy-policy/uk
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voi/refs/heads/main/authentication/voi-authentication.yml
+  href: https://artifacts.apis.io/voi/authentication/voi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/voi-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voi/refs/heads/main/errors/voi-error-codes.yml
+  href: https://artifacts.apis.io/voi/errors/voi-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/voi-error-codes.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/voi/refs/heads/main/sandbox/voi-sandbox.yml
+  href: https://artifacts.apis.io/voi/sandbox/voi-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/voi-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voi/refs/heads/main/conventions/voi-conventions.yml
+  href: https://artifacts.apis.io/voi/conventions/voi-conventions.yml
   title: ''
   type: Conventions
   url: conventions/voi-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voi/refs/heads/main/lifecycle/voi-lifecycle.yml
+  href: https://artifacts.apis.io/voi/lifecycle/voi-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/voi-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voi/refs/heads/main/conformance/voi-conformance.yml
+  href: https://artifacts.apis.io/voi/conformance/voi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/voi-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voi/refs/heads/main/data-model/voi-data-model.yml
+  href: https://artifacts.apis.io/voi/data-model/voi-data-model.yml
   title: ''
   type: DataModel
   url: data-model/voi-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/voi/refs/heads/main/packages/voi-packages.yml
+  href: https://artifacts.apis.io/voi/packages/voi-packages.yml
   title: ''
   type: Packages
   url: packages/voi-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/voi/refs/heads/main/llms/voi-llms.txt
+  href: https://artifacts.apis.io/voi/llms/voi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/voi-llms.txt
@@ -205,18 +210,18 @@ overview: 'Voi is listed with 3 APIs on the [APIs.io](https://apis.io/) network.
 
 
   Voi''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 27 more developer resources.'
-random_paper: 4
+random_paper: 22
 score:
   band: thin
   composite: 30.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
@@ -232,7 +237,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 30.2
+  previous_composite: 30.3
   provenance:
     conformance: first-party
   regulatory:
@@ -241,14 +246,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/voi/refs/heads/main/screenshots/voi-2026-06-20T201128.png
+screenshot: https://apis.io/screenshots/voi/voi-2026-06-20T201128.png
 security:
 - kind: authentication
   name: Voi Authentication

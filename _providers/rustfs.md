@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -9,21 +24,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.0
-  scored_at: '2026-10-17'
+  score: 28.3
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - baseURL: http://localhost:9000
@@ -46,94 +64,94 @@ apis:
   description: The Rustfs API from RustFS — 13 operation(s) for rustfs.
   name: RustFS Rustfs API
   slug: rustfs-rustfs-api
-artifact_total: 17
+artifact_total: 18
 asyncapis:
 - description: ''
   name: Rustfs Webhooks
   slug: rustfs-webhooks
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/plans/rustfs-plans-pricing.yml
+  href: https://artifacts.apis.io/rustfs/plans/rustfs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/rustfs-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/rules/rustfs-rules.yml
+  href: https://artifacts.apis.io/rustfs/rules/rustfs-rules.yml
   title: ''
   type: Spectral
   url: rules/rustfs-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/json-ld/rustfs-context.jsonld
+  href: https://artifacts.apis.io/rustfs/json-ld/rustfs-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/rustfs-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/vocabulary/rustfs-vocabulary.yml
+  href: https://artifacts.apis.io/rustfs/vocabulary/rustfs-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/rustfs-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/asyncapi/rustfs-webhooks.yml
+  href: https://artifacts.apis.io/rustfs/asyncapi/rustfs-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/rustfs-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/data-model/rustfs-data-model.yml
+  href: https://artifacts.apis.io/rustfs/data-model/rustfs-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rustfs-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/cli/rustfs-cli.yml
+  href: https://artifacts.apis.io/rustfs/cli/rustfs-cli.yml
   title: ''
   type: CLI
   url: cli/rustfs-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/changelog/rustfs-changelog.yml
+  href: https://artifacts.apis.io/rustfs/changelog/rustfs-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/rustfs-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/authentication/rustfs-authentication.yml
+  href: https://artifacts.apis.io/rustfs/authentication/rustfs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rustfs-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/conformance/rustfs-conformance.yml
+  href: https://artifacts.apis.io/rustfs/conformance/rustfs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rustfs-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/llms/rustfs-llms.txt
+  href: https://artifacts.apis.io/rustfs/llms/rustfs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rustfs-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/mcp/rustfs-mcp.yml
+  href: https://artifacts.apis.io/rustfs/mcp/rustfs-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/rustfs-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/hosts/rustfs-hosts.yml
+  href: https://artifacts.apis.io/rustfs/hosts/rustfs-hosts.yml
   title: ''
   type: Hosts
   url: hosts/rustfs-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/integrations/rustfs-integration-edges.yml
+  href: https://artifacts.apis.io/rustfs/integrations/rustfs-integration-edges.yml
   title: ''
   type: IntegrationEdges
   url: integrations/rustfs-integration-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/vendors/rustfs-vendors.yml
+  href: https://artifacts.apis.io/rustfs/vendors/rustfs-vendors.yml
   title: ''
   type: Vendors
   url: vendors/rustfs-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/packages/rustfs-packages.yml
+  href: https://artifacts.apis.io/rustfs/packages/rustfs-packages.yml
   title: ''
   type: SDKs
   url: packages/rustfs-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/packages/rustfs-packages.yml
+  href: https://artifacts.apis.io/rustfs/packages/rustfs-packages.yml
   title: ''
   type: Packages
   url: packages/rustfs-packages.yml
@@ -142,7 +160,7 @@ common:
   type: GettingStarted
   url: https://docs.rustfs.com/en/installation/linux/quick-start
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rustfs/refs/heads/main/security/rustfs-domain-security.yml
+  href: https://artifacts.apis.io/rustfs/security/rustfs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rustfs-domain-security.yml
@@ -183,6 +201,14 @@ coverage:
   state: none
 created: '2026-10-13'
 description: 'RustFS is an Apache-2.0, Rust-built, S3-compatible distributed object storage system. It is self-hosted: each deployment serves the S3 API (plus admin API and health endpoints) on port 9000 and an embedded web console on port 9001, with an optional OpenStack Swift API, STS/OIDC identity, bucket event notifications, a Kubernetes operator and an MCP server.'
+finops:
+- has_sources: true
+  method: derived
+  name: Rustfs Finops
+  primary_unit: ''
+  service_category: ''
+  slug: rustfs-finops
+  template: true
 json_schemas:
 - name: GetHealthResponse
   property_count: 1
@@ -227,7 +253,7 @@ plans:
 - name: Rustfs Plans Pricing
   plan_count: 2
   slug: rustfs-plans-pricing
-random_paper: 19
+random_paper: 7
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -242,22 +268,24 @@ rules:
     warn: 2
   slug: rustfs-rules
 score:
-  band: developing
-  composite: 41.5
+  band: thin
+  composite: 36.4
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 25
     catalog_earned: 66.8
     catalog_earned_first_party: 8.0
     catalog_gap: 48.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.1
   facets:
-    access_clarity: 42.1
+    access_clarity: 31.6
     contract_governance: 22.0
     contract_quality: 31.3
-    developer_ergonomics: 50.0
+    developer_ergonomics: 38.1
     discoverability: 65.0
-    operational_transparency: 28.9
+    operational_transparency: 26.3
+  previous_composite: 41.5
   provenance:
     conformance: derived
     contracts:
@@ -271,12 +299,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
+screenshot: https://apis.io/screenshots/rustfs/rustfs-2026-11-03T142653.png
 security:
 - kind: authentication
   name: Rustfs Authentication

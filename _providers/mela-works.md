@@ -1,11 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Freemium
   onboarding: unknown
-  pricing: unknown
+  pricing: freemium
   public: false
-  source: []
+  source:
+  - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mela-works/refs/heads/main/plans/mela-works-plans-pricing.yml
+  href: https://artifacts.apis.io/mela-works/plans/mela-works-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mela-works-plans-pricing.yml
@@ -74,27 +79,27 @@ common:
   type: Compliance
   url: https://www.mela.work/compliance-center-legality-security-and-evidential-validity
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mela-works/refs/heads/main/security/mela-works-trust-center.yml
+  href: https://artifacts.apis.io/mela-works/security/mela-works-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/mela-works-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mela-works/refs/heads/main/conformance/mela-works-conformance.yml
+  href: https://artifacts.apis.io/mela-works/conformance/mela-works-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mela-works-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mela-works/refs/heads/main/security/mela-works-domain-security.yml
+  href: https://artifacts.apis.io/mela-works/security/mela-works-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mela-works-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mela-works/refs/heads/main/well-known/mela-works-well-known.yml
+  href: https://artifacts.apis.io/mela-works/well-known/mela-works-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/mela-works-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mela-works/refs/heads/main/llms/mela-works-llms.txt
+  href: https://artifacts.apis.io/mela-works/llms/mela-works-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mela-works-llms.txt
@@ -106,7 +111,7 @@ modified: '2026-07-20'
 name: Mela Works
 nav: Providers
 network: true
-overview: 'Mela Works is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Construction, Construction Technology, Field Service, and Site Management.
+overview: 'Mela Works is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Construction, Construction Technology, Field Service Management, and Site Management.
 
 
   Mela Works'' developer surface includes engineering blog, pricing, support, signup flow, and 10 more developer resources.'
@@ -114,18 +119,18 @@ plans:
 - name: Mela Works Plans Pricing
   plan_count: 13
   slug: mela-works-plans-pricing
-random_paper: 14
+random_paper: 18
 score:
   band: emerging
   composite: 25.9
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.0
   facets:
     access_clarity: 78.9
     contract_governance: 18.2
@@ -133,7 +138,7 @@ score:
     developer_ergonomics: 7.1
     discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 19.6
+  previous_composite: 25.9
   provenance:
     conformance: first-party
   regulatory:
@@ -146,14 +151,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mela-works/refs/heads/main/screenshots/mela-works-2026-08-07T172445.png
+screenshot: https://apis.io/screenshots/mela-works/mela-works-2026-08-07T172445.png
 security:
 - kind: domain-security
   name: Mela Works Domain Security
@@ -168,7 +173,7 @@ tags:
 - Company
 - Construction
 - Construction Technology
-- Field Service
+- Field Service Management
 - Site Management
 - Project Management
 - Productivity

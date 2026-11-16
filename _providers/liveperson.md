@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 9
 apis:
 - description: Comprehensive set of REST APIs for managing conversations across messaging channels, including agent operations, consumer messaging, conversation history, and engagement events.
@@ -66,27 +70,27 @@ apis:
 artifact_total: 14
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/liveperson/refs/heads/main/plans/liveperson-plans-pricing.yml
+  href: https://artifacts.apis.io/liveperson/plans/liveperson-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/liveperson-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/liveperson/refs/heads/main/rate-limits/liveperson-rate-limits.yml
+  href: https://artifacts.apis.io/liveperson/rate-limits/liveperson-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/liveperson-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/liveperson/refs/heads/main/finops/liveperson-finops.yml
+  href: https://artifacts.apis.io/liveperson/finops/liveperson-finops.yml
   title: ''
   type: FinOps
   url: finops/liveperson-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/liveperson/refs/heads/main/security/liveperson-trust-center.yml
+  href: https://artifacts.apis.io/liveperson/security/liveperson-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/liveperson-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/liveperson/refs/heads/main/security/liveperson-domain-security.yml
+  href: https://artifacts.apis.io/liveperson/security/liveperson-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/liveperson-domain-security.yml
@@ -132,7 +136,7 @@ finops:
 - has_sources: false
   method: generated
   name: Liveperson Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: liveperson-finops
   template: true
@@ -150,7 +154,7 @@ plans:
 - name: Liveperson Plans Pricing
   plan_count: 3
   slug: liveperson-plans-pricing
-random_paper: 17
+random_paper: 15
 rate_limits:
 - limit_count: 5
   name: Liveperson Rate Limits
@@ -159,13 +163,13 @@ score:
   band: emerging
   composite: 17.8
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.9
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
@@ -173,21 +177,21 @@ score:
     developer_ergonomics: 31.0
     discoverability: 62.5
     operational_transparency: 18.4
-  previous_composite: 19.7
+  previous_composite: 17.8
   regulatory:
     applies: true
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/liveperson/refs/heads/main/screenshots/liveperson-2026-06-20T184616.png
+screenshot: https://apis.io/screenshots/liveperson/liveperson-2026-06-20T184616.png
 security:
 - kind: domain-security
   name: Liveperson Domain Security

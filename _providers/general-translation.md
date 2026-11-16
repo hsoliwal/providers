@@ -1,19 +1,23 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - rate-limits
   - security
   - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,19 +28,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: derived
+    error_semantics: verified
     event_surface_described: true
     idempotency: false
     mcp_server: false
-    openapi_examples: partial
+    mcp_tool_quality: na
+    openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.2
-  scored_at: '2026-10-17'
+  score: 34.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -46,11 +53,6 @@ agentic_access:
   summary_line: 21 operations · 12 acting
 api_count: 1
 apis:
-- baseURL: https://api2.gtx.dev
-  baseurl_source: declared
-  description: Read and create project branches.
-  name: General Translation Branches API
-  slug: general-translation-branches-api
 - baseURL: https://api2.gtx.dev
   baseurl_source: declared
   description: Generate translation context such as glossaries and instructions.
@@ -63,25 +65,20 @@ apis:
   slug: general-translation-files-api
 - baseURL: https://api2.gtx.dev
   baseurl_source: declared
-  description: Read background job status.
-  name: General Translation Jobs API
-  slug: general-translation-jobs-api
-- baseURL: https://api2.gtx.dev
-  baseurl_source: declared
   description: Read and update project information.
   name: General Translation Project API
   slug: general-translation-project-api
 - baseURL: https://api2.gtx.dev
   baseurl_source: declared
-  description: Tag file versions.
-  name: General Translation Tags API
-  slug: general-translation-tags-api
-- baseURL: https://api2.gtx.dev
-  baseurl_source: declared
   description: Translate content at runtime and queue files for translation.
   name: General Translation API
   slug: general-translation-translation-api
-artifact_total: 28
+- baseURL: https://api2.gtx.dev
+  baseurl_source: declared
+  description: Manage context groups, glossary terms, custom prompts, and project assignments.
+  name: General Translation Context Management API
+  slug: general-translation-context-management-api
+artifact_total: 30
 asyncapis:
 - description: ''
   name: General Translation Webhooks
@@ -109,9 +106,6 @@ collections:
   name: General Branches Translation API
   slug: postman-general-translation-translation-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: General Translation Branches API
   slug: open-general-translation-branches-api
 - collection_type: open
@@ -134,7 +128,7 @@ collections:
   slug: open-general-translation-translation-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/plans/general-translation-plans-pricing.yml
+  href: https://artifacts.apis.io/general-translation/plans/general-translation-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/general-translation-plans-pricing.yml
@@ -143,7 +137,7 @@ common:
   type: BlogRSS
   url: https://generaltranslation.com/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/overlays/general-translation-openapi-overlay.yaml
+  href: https://artifacts.apis.io/general-translation/overlays/general-translation-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/general-translation-openapi-overlay.yaml
@@ -208,87 +202,87 @@ common:
   type: StatusPage
   url: https://gt-status.com
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/packages/general-translation-packages.yml
+  href: https://artifacts.apis.io/general-translation/packages/general-translation-packages.yml
   title: ''
   type: Packages
   url: packages/general-translation-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/packages/general-translation-packages.yml
+  href: https://artifacts.apis.io/general-translation/packages/general-translation-packages.yml
   title: ''
   type: SDKs
   url: packages/general-translation-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/cli/general-translation-cli.yml
+  href: https://artifacts.apis.io/general-translation/cli/general-translation-cli.yml
   title: ''
   type: CLI
   url: cli/general-translation-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/mcp/general-translation-mcp.yml
+  href: https://artifacts.apis.io/general-translation/mcp/general-translation-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/general-translation-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/llms/general-translation-llms.txt
+  href: https://artifacts.apis.io/general-translation/llms/general-translation-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/general-translation-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/general-translation/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/authentication/general-translation-authentication.yml
+  href: https://artifacts.apis.io/general-translation/authentication/general-translation-authentication.yml
   title: ''
   type: Authentication
   url: authentication/general-translation-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/conventions/general-translation-conventions.yml
+  href: https://artifacts.apis.io/general-translation/conventions/general-translation-conventions.yml
   title: ''
   type: Conventions
   url: conventions/general-translation-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/rate-limits/general-translation-rate-limits.yml
+  href: https://artifacts.apis.io/general-translation/rate-limits/general-translation-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/general-translation-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/errors/general-translation-problem-types.yml
+  href: https://artifacts.apis.io/general-translation/errors/general-translation-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/general-translation-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/lifecycle/general-translation-lifecycle.yml
+  href: https://artifacts.apis.io/general-translation/lifecycle/general-translation-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/general-translation-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/changelog/general-translation-changelog.yml
+  href: https://artifacts.apis.io/general-translation/changelog/general-translation-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/general-translation-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/sandbox/general-translation-sandbox.yml
+  href: https://artifacts.apis.io/general-translation/sandbox/general-translation-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/general-translation-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/components/general-translation-components.yml
+  href: https://artifacts.apis.io/general-translation/components/general-translation-components.yml
   title: ''
   type: Components
   url: components/general-translation-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/data-model/general-translation-data-model.yml
+  href: https://artifacts.apis.io/general-translation/data-model/general-translation-data-model.yml
   title: ''
   type: DataModel
   url: data-model/general-translation-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/asyncapi/general-translation-webhooks.yml
+  href: https://artifacts.apis.io/general-translation/asyncapi/general-translation-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/general-translation-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/conformance/general-translation-conformance.yml
+  href: https://artifacts.apis.io/general-translation/conformance/general-translation-conformance.yml
   title: ''
   type: Conformance
   url: conformance/general-translation-conformance.yml
@@ -297,32 +291,40 @@ common:
   type: Compliance
   url: https://generaltranslation.com/en-US/pricing
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/agentic-access/general-translation-agentic-access.yml
+  href: https://artifacts.apis.io/general-translation/agentic-access/general-translation-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/general-translation-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/security/general-translation-domain-security.yml
+  href: https://artifacts.apis.io/general-translation/security/general-translation-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/general-translation-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/well-known/general-translation-well-known.yml
+  href: https://artifacts.apis.io/general-translation/well-known/general-translation-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/general-translation-well-known.yml
 created: '2026-07-17'
 description: General Translation is an end-to-end internationalization (i18n) and localization platform for developers, backed by a16z. It combines open-source i18n libraries for React, Next.js, React Native, Node.js, and Python with an AI-powered translation API, a context platform (glossaries and translation instructions), and Locadex, an AI coding agent that internationalizes source code and opens pull requests. The public REST API (api2.gtx.dev, plus the runtime host runtime2.gtx.dev) uploads source files, queues and downloads translations, manages branches and tags, reads project and job status, and translates content at runtime. It is used by developer-first teams including Cursor, Windsurf, Ramp, Mintlify, and ClickHouse.
+finops:
+- has_sources: true
+  method: derived
+  name: General Translation Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: general-translation-finops
+  template: false
 image: https://avatars.githubusercontent.com/u/153253056?v=4
 layout: provider
 modified: '2026-10-06'
 name: General Translation
 nav: Providers
 network: true
-overview: 'General Translation publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Branches API, Context API, Files API, and 4 more. Tagged areas include Company, Internationalization, Localization, Translation, and Developer Tools.
+overview: 'General Translation publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Context API, Files API, Project API, and 2 more. Tagged areas include Company, Internationalization, Localization, Translation, and Developer Tools.
 
 
-  The General Translation catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The General Translation catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   General Translation''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 32 more developer resources.'
@@ -330,38 +332,51 @@ plans:
 - name: General Translation Plans Pricing
   plan_count: 2
   slug: general-translation-plans-pricing
-random_paper: 20
+random_paper: 10
 rate_limits:
 - limit_count: 4
   name: General Translation Rate Limits
   slug: general-translation-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 111
+  extends:
+  - spectral:oas
+  name: General Translation API Rules
+  rule_count: 70
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 7
+  slug: general-translation-rules
 score:
   band: exemplar
-  composite: 68.2
+  composite: 76.0
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 57.0
+    artifact_dirs: 33
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.3
+  delta: 0.6
   facets:
-    access_clarity: 73.7
-    contract_governance: 18.2
-    contract_quality: 54.3
+    access_clarity: 81.6
+    contract_governance: 31.8
+    contract_quality: 61.7
     developer_ergonomics: 81.5
     discoverability: 73.2
     operational_transparency: 73.7
-  previous_composite: 63.9
+  previous_composite: 75.4
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 7
+      marker_coverage: 38.5
+      total: 13
     mcp: derived
     skills: derived
   regulatory:
@@ -374,13 +389,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/general-translation/refs/heads/main/screenshots/general-translation-2026-07-25T215549.png
+    score: 61.1
+screenshot: https://apis.io/screenshots/general-translation/general-translation-2026-07-25T215549.png
 security:
 - kind: authentication
   name: General Translation Authentication
@@ -390,6 +405,14 @@ security:
   name: General Translation Domain Security
   slug: general-translation-domain-security
   summary_line: TLSv1.3
+skill_count: 3
+skills:
+- name: Generate translation context for a project
+  slug: general-translation-generate-context
+- name: Translate content at runtime
+  slug: general-translation-runtime-translate
+- name: Translate a project's source files
+  slug: general-translation-translate-files
 slug: general-translation
 tags:
 - Company

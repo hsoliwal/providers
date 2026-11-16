@@ -1,15 +1,18 @@
 ---
 access_model:
-  confidence: high
-  label: Freemium · Self-serve signup
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Enterprise · Self-serve signup
   onboarding: self-serve
-  pricing: freemium
+  pricing: enterprise
   public: false
   source:
-  - plans
   - authentication
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 24.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -54,7 +60,7 @@ apis:
   description: The Google Search Ads 360 Reporting API API from Google Search Ads 360 Reporting — 1 operation(s) for google search ads 360 reporting api.
   name: Google Search Ads 360 Reporting Google Search Ads 360 Reporting API
   slug: google-search-ads-360-google-search-ads-360-reporting-api-api
-artifact_total: 17
+artifact_total: 16
 collections:
 - collection_type: postman
   name: Google Search Ads 360 Reporting Customers API
@@ -62,9 +68,6 @@ collections:
 - collection_type: postman
   name: Google Search Ads 360 Reporting Customers Google Search Ads 360 Reporting API API
   slug: postman-google-search-ads-360-google-search-ads-360-reporting-api-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Google Search Ads 360 Reporting Customers API
   slug: open-google-search-ads-360-customers-api
@@ -76,22 +79,22 @@ collections:
   slug: open-openapi
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/google-search-ads-360/refs/heads/main/plans/google-search-ads-360-plans-pricing.yml
+  href: https://artifacts.apis.io/google-search-ads-360/plans/google-search-ads-360-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/google-search-ads-360-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/google-search-ads-360/refs/heads/main/rate-limits/google-search-ads-360-rate-limits.yml
+  href: https://artifacts.apis.io/google-search-ads-360/rate-limits/google-search-ads-360-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/google-search-ads-360-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/google-search-ads-360/refs/heads/main/finops/google-search-ads-360-finops.yml
+  href: https://artifacts.apis.io/google-search-ads-360/finops/google-search-ads-360-finops.yml
   title: ''
   type: FinOps
   url: finops/google-search-ads-360-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/google-search-ads-360/refs/heads/main/capabilities/google-search-ads-360-capability-edges.yml
+  href: https://artifacts.apis.io/google-search-ads-360/capabilities/google-search-ads-360-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/google-search-ads-360-capability-edges.yml
@@ -104,27 +107,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/google-search-ads-360-reporting/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/google-search-ads-360/refs/heads/main/agentic-access/google-search-ads-360-agentic-access.yml
+  href: https://artifacts.apis.io/google-search-ads-360/agentic-access/google-search-ads-360-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/google-search-ads-360-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-search-ads-360/refs/heads/main/security/google-search-ads-360-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/google-search-ads-360/security/google-search-ads-360-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/google-search-ads-360-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-search-ads-360/refs/heads/main/security/google-search-ads-360-domain-security.yml
+  href: https://artifacts.apis.io/google-search-ads-360/security/google-search-ads-360-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/google-search-ads-360-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-search-ads-360/refs/heads/main/authentication/google-search-ads-360-authentication.yml
+  href: https://artifacts.apis.io/google-search-ads-360/authentication/google-search-ads-360-authentication.yml
   title: ''
   type: Authentication
   url: authentication/google-search-ads-360-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/google-search-ads-360/refs/heads/main/scopes/google-search-ads-360-scopes.yml
+  href: https://artifacts.apis.io/google-search-ads-360/scopes/google-search-ads-360-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/google-search-ads-360-scopes.yml
@@ -169,18 +172,18 @@ common:
   type: Support
   url: https://developers.google.com/search-ads/reporting/support
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/google-search-ads-360/refs/heads/main/json-ld/json-ld.yml
+  href: https://artifacts.apis.io/google-search-ads-360/json-ld/json-ld.yml
   title: ''
   type: JSONLD
   url: json-ld/json-ld.yml
 created: '2026-03-13'
 description: The Search Ads 360 Reporting API enables automated report downloading and programmatic access to search advertising campaign data across multiple search engines. It provides search and streaming methods for querying campaign, ad group, keyword, and conversion data using a SQL-like query language.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Google Search Ads 360 Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: google-search-ads-360-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-search-ads-360.png
@@ -198,7 +201,7 @@ overview: 'Google Search Ads 360 Reporting publishes 2 API contracts indexed on 
   Google Search Ads 360 Reporting''s developer surface includes authentication, developer portal, getting-started guide, documentation, pricing, support, and 16 more developer resources.'
 plans:
 - name: Google Search Ads 360 Plans Pricing
-  plan_count: 3
+  plan_count: 0
   slug: google-search-ads-360-plans-pricing
 random_paper: 19
 rate_limits:
@@ -224,23 +227,23 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 43.6
+  composite: 43.4
   coverage:
     artifact_dirs: 18
-    catalog_earned: 51.7
+    catalog_earned: 48.7
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.4
+    catalog_gap: 66.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 31.6
     contract_governance: 9.8
     contract_quality: 53.6
     developer_ergonomics: 44.0
     discoverability: 66.1
-    operational_transparency: 26.3
-  previous_composite: 45.1
+    operational_transparency: 36.8
+  previous_composite: 43.4
   provenance:
     agentic_access: derived
     contracts:
@@ -254,13 +257,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/google-search-ads-360/refs/heads/main/screenshots/google-search-ads-360-2026-06-20T182242.png
+screenshot: https://apis.io/screenshots/google-search-ads-360/google-search-ads-360-2026-06-20T182242.png
 security:
 - kind: authentication
   name: Google Search Ads 360 Authentication

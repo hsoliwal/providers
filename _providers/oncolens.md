@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -37,17 +40,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/security/oncolens-trust-center.yml
+  href: https://artifacts.apis.io/oncolens/security/oncolens-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/oncolens-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/security/oncolens-domain-security.yml
+  href: https://artifacts.apis.io/oncolens/security/oncolens-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/oncolens-domain-security.yml
@@ -76,62 +79,62 @@ common:
   type: GitHubOrganization
   url: https://github.com/OncoLens
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/conformance/oncolens-conformance.yml
+  href: https://artifacts.apis.io/oncolens/conformance/oncolens-conformance.yml
   title: ''
   type: Compliance
   url: conformance/oncolens-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/conformance/oncolens-conformance.yml
+  href: https://artifacts.apis.io/oncolens/conformance/oncolens-conformance.yml
   title: ''
   type: Conformance
   url: conformance/oncolens-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/llms/oncolens-llms.txt
+  href: https://artifacts.apis.io/oncolens/llms/oncolens-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/oncolens-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/well-known/oncolens-well-known.yml
+  href: https://artifacts.apis.io/oncolens/well-known/oncolens-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/oncolens-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/authentication/oncolens-authentication.yml
+  href: https://artifacts.apis.io/oncolens/authentication/oncolens-authentication.yml
   title: ''
   type: Authentication
   url: authentication/oncolens-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/scopes/oncolens-scopes.yml
+  href: https://artifacts.apis.io/oncolens/scopes/oncolens-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/oncolens-scopes.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/well-known/oncolens-login-openid-configuration.json
+  href: https://artifacts.apis.io/oncolens/well-known/oncolens-login-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/oncolens-login-openid-configuration.json
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/plans/oncolens-plans-pricing.yml
+  href: https://artifacts.apis.io/oncolens/plans/oncolens-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/oncolens-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/rate-limits/oncolens-rate-limits.yml
+  href: https://artifacts.apis.io/oncolens/rate-limits/oncolens-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/oncolens-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/lifecycle/oncolens-lifecycle.yml
+  href: https://artifacts.apis.io/oncolens/lifecycle/oncolens-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/oncolens-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/packages/oncolens-packages.yml
+  href: https://artifacts.apis.io/oncolens/packages/oncolens-packages.yml
   title: ''
   type: Packages
   url: packages/oncolens-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/conventions/oncolens-conventions.yml
+  href: https://artifacts.apis.io/oncolens/conventions/oncolens-conventions.yml
   title: ''
   type: Conventions
   url: conventions/oncolens-conventions.yml
@@ -152,7 +155,7 @@ plans:
 - name: Oncolens Plans Pricing
   plan_count: 0
   slug: oncolens-plans-pricing
-random_paper: 7
+random_paper: 1
 rate_limits:
 - limit_count: 0
   name: Oncolens Rate Limits
@@ -166,7 +169,7 @@ score:
   band: emerging
   composite: 19.8
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -189,14 +192,14 @@ score:
     regime: Health
     regime_id: health
     score: 36.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/oncolens/refs/heads/main/screenshots/oncolens-2026-09-02T150840.png
+screenshot: https://apis.io/screenshots/oncolens/oncolens-2026-09-02T150840.png
 security:
 - kind: authentication
   name: Oncolens Authentication

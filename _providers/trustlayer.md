@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.6
-  scored_at: '2026-10-17'
+  score: 26.0
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.trustlayer.io/v2
@@ -143,15 +146,12 @@ apis:
   description: The Workspaces API from TrustLayer — 1 operation(s) for workspaces.
   name: TrustLayer Workspaces API
   slug: trustlayer-workspaces-api
-artifact_total: 47
+artifact_total: 50
 asyncapis:
 - description: ''
   name: Trustlayer Webhooks
   slug: trustlayer-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: TrustLayer Platform Auth API
   slug: open-trustlayer-auth-api
@@ -217,12 +217,12 @@ collections:
   slug: open-trustlayer-workspaces-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/capabilities/trustlayer-capability-edges.yml
+  href: https://artifacts.apis.io/trustlayer/capabilities/trustlayer-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/trustlayer-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/overlays/trustlayer-platform-v1-overlay.yaml
+  href: https://artifacts.apis.io/trustlayer/overlays/trustlayer-platform-v1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/trustlayer-platform-v1-overlay.yaml
@@ -239,62 +239,62 @@ common:
   type: APIReference
   url: https://www.trustlayer.io/pages/developers
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/authentication/trustlayer-authentication.yml
+  href: https://artifacts.apis.io/trustlayer/authentication/trustlayer-authentication.yml
   title: ''
   type: Authentication
   url: authentication/trustlayer-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/asyncapi/trustlayer-webhooks.yml
+  href: https://artifacts.apis.io/trustlayer/asyncapi/trustlayer-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/trustlayer-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/mcp/trustlayer-mcp.yml
+  href: https://artifacts.apis.io/trustlayer/mcp/trustlayer-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/trustlayer-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/trustlayer/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/llms/trustlayer-llms.txt
+  href: https://artifacts.apis.io/trustlayer/llms/trustlayer-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/trustlayer-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/well-known/trustlayer-well-known.yml
+  href: https://artifacts.apis.io/trustlayer/well-known/trustlayer-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/trustlayer-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/conformance/trustlayer-conformance.yml
+  href: https://artifacts.apis.io/trustlayer/conformance/trustlayer-conformance.yml
   title: ''
   type: Conformance
   url: conformance/trustlayer-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/errors/trustlayer-problem-types.yml
+  href: https://artifacts.apis.io/trustlayer/errors/trustlayer-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/trustlayer-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/conventions/trustlayer-conventions.yml
+  href: https://artifacts.apis.io/trustlayer/conventions/trustlayer-conventions.yml
   title: ''
   type: Conventions
   url: conventions/trustlayer-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/sandbox/trustlayer-sandbox.yml
+  href: https://artifacts.apis.io/trustlayer/sandbox/trustlayer-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/trustlayer-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/data-model/trustlayer-data-model.yml
+  href: https://artifacts.apis.io/trustlayer/data-model/trustlayer-data-model.yml
   title: ''
   type: DataModel
   url: data-model/trustlayer-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/lifecycle/trustlayer-lifecycle.yml
+  href: https://artifacts.apis.io/trustlayer/lifecycle/trustlayer-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/trustlayer-lifecycle.yml
@@ -307,7 +307,7 @@ common:
   type: Deprecation
   url: https://developers.trustlayer.io/v1/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/security/trustlayer-domain-security.yml
+  href: https://artifacts.apis.io/trustlayer/security/trustlayer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trustlayer-domain-security.yml
@@ -350,30 +350,43 @@ network: true
 overview: 'TrustLayer publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Branding API, Compliance Profiles API, and 18 more. Tagged areas include Company, Fintech, Insurtech, Insurance, and Risk Management.
 
 
-  The TrustLayer catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The TrustLayer catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   TrustLayer''s developer surface includes documentation, API reference, authentication, sandbox, engineering blog, signup flow, and 21 more developer resources.'
-random_paper: 19
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: TrustLayer API Rules
+  rule_count: 66
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 7
+    warn: 14
+  slug: trustlayer-rules
 score:
   band: developing
-  composite: 48.5
+  composite: 50.1
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 58.4
     developer_ergonomics: 49.4
     discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 48.5
+  previous_composite: 50.1
   provenance:
     conformance: derived
     contracts:
@@ -389,13 +402,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 26.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 38.9
-screenshot: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/screenshots/trustlayer-2026-08-17T082453.png
+screenshot: https://apis.io/screenshots/trustlayer/trustlayer-2026-08-17T082453.png
 security:
 - kind: authentication
   name: Trustlayer Authentication
@@ -409,6 +422,14 @@ security:
   name: Trustlayer Trust Center
   slug: trustlayer-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: Check a vendor's compliance status
+  slug: trustlayer-check-vendor-compliance
+- name: Create a project and attach vendors
+  slug: trustlayer-create-project-and-attach-vendors
+- name: Onboard a vendor and request their certificate of insurance
+  slug: trustlayer-onboard-vendor-and-request-coi
 slug: trustlayer
 tags:
 - Company

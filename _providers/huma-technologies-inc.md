@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -69,22 +73,22 @@ common:
   type: Support
   url: https://discord.com/invite/humafinance
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/huma-technologies-inc/refs/heads/main/llms/huma-technologies-inc-llms.txt
+  href: https://artifacts.apis.io/huma-technologies-inc/llms/huma-technologies-inc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/huma-technologies-inc-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/huma-technologies-inc/refs/heads/main/packages/huma-technologies-inc-packages.yml
+  href: https://artifacts.apis.io/huma-technologies-inc/packages/huma-technologies-inc-packages.yml
   title: ''
   type: Packages
   url: packages/huma-technologies-inc-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/huma-technologies-inc/refs/heads/main/packages/huma-technologies-inc-packages.yml
+  href: https://artifacts.apis.io/huma-technologies-inc/packages/huma-technologies-inc-packages.yml
   title: ''
   type: SDKs
   url: packages/huma-technologies-inc-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/huma-technologies-inc/refs/heads/main/security/huma-technologies-inc-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/huma-technologies-inc/security/huma-technologies-inc-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/huma-technologies-inc-vulnerability-disclosure.yml
@@ -93,7 +97,7 @@ common:
   type: Security
   url: https://docs.huma.finance/ecosystem-resources/security-audits
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/huma-technologies-inc/refs/heads/main/security/huma-technologies-inc-domain-security.yml
+  href: https://artifacts.apis.io/huma-technologies-inc/security/huma-technologies-inc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/huma-technologies-inc-domain-security.yml
@@ -114,7 +118,7 @@ score:
   band: minimal
   composite: 10.2
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -135,14 +139,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/huma-technologies-inc/refs/heads/main/screenshots/huma-technologies-inc-2026-07-25T221647.png
+screenshot: https://apis.io/screenshots/huma-technologies-inc/huma-technologies-inc-2026-07-25T221647.png
 security:
 - kind: domain-security
   name: Huma Technologies Inc Domain Security

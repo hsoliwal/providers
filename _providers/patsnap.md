@@ -1,16 +1,20 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium (free trial) · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   - sandbox
-  trial: false
-  try_now: false
+  trial: true
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: templated
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.2
-  scored_at: '2026-10-17'
+  score: 26.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 245
   human_in_the_loop: 0
@@ -280,11 +287,8 @@ apis:
   description: Trademark Data APIs.
   name: Patsnap Trademark Data API
   slug: patsnap-trademark-data-api
-artifact_total: 101
+artifact_total: 106
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Patsnap Open Platform AI Translation API
   slug: open-patsnap-ai-translation-api
@@ -432,7 +436,7 @@ common:
   type: Pricing
   url: https://www.patsnap.com/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/plans/patsnap-plans-pricing.yml
+  href: https://artifacts.apis.io/patsnap/plans/patsnap-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/patsnap-plans-pricing.yml
@@ -445,47 +449,47 @@ common:
   type: BlogRSS
   url: https://www.patsnap.com/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/capabilities/patsnap-capability-edges.yml
+  href: https://artifacts.apis.io/patsnap/capabilities/patsnap-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/patsnap-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/mcp/patsnap-mcp.yml
+  href: https://artifacts.apis.io/patsnap/mcp/patsnap-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/patsnap-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/patsnap/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/llms/patsnap-llms.txt
+  href: https://artifacts.apis.io/patsnap/llms/patsnap-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/patsnap-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/overlays/patsnap-openapi-overlay.yaml
+  href: https://artifacts.apis.io/patsnap/overlays/patsnap-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/patsnap-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/conventions/patsnap-conventions.yml
+  href: https://artifacts.apis.io/patsnap/conventions/patsnap-conventions.yml
   title: ''
   type: Conventions
   url: conventions/patsnap-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/errors/patsnap-error-codes.yml
+  href: https://artifacts.apis.io/patsnap/errors/patsnap-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/patsnap-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/lifecycle/patsnap-lifecycle.yml
+  href: https://artifacts.apis.io/patsnap/lifecycle/patsnap-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/patsnap-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/conformance/patsnap-conformance.yml
+  href: https://artifacts.apis.io/patsnap/conformance/patsnap-conformance.yml
   title: ''
   type: Conformance
   url: conformance/patsnap-conformance.yml
@@ -494,22 +498,22 @@ common:
   type: Compliance
   url: https://open.patsnap.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/components/patsnap-components.yml
+  href: https://artifacts.apis.io/patsnap/components/patsnap-components.yml
   title: ''
   type: Components
   url: components/patsnap-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/data-model/patsnap-data-model.yml
+  href: https://artifacts.apis.io/patsnap/data-model/patsnap-data-model.yml
   title: ''
   type: DataModel
   url: data-model/patsnap-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/well-known/patsnap-well-known.yml
+  href: https://artifacts.apis.io/patsnap/well-known/patsnap-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/patsnap-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/well-known/patsnap-security.txt
+  href: https://artifacts.apis.io/patsnap/well-known/patsnap-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/patsnap-security.txt
@@ -518,17 +522,17 @@ common:
   type: Security
   url: https://patsnap.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/security/patsnap-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/patsnap/security/patsnap-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/patsnap-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/security/patsnap-domain-security.yml
+  href: https://artifacts.apis.io/patsnap/security/patsnap-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/patsnap-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/agentic-access/patsnap-agentic-access.yml
+  href: https://artifacts.apis.io/patsnap/agentic-access/patsnap-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/patsnap-agentic-access.yml
@@ -578,6 +582,14 @@ common:
   url: https://www.patsnap.com/legal
 created: '2026-07-17'
 description: Patsnap is an AI-native innovation intelligence platform for patent, R&D and life-sciences data, serving more than 18,000 innovators worldwide. Its Eureka Open Platform exposes 300+ REST API endpoints (patent search, patent legal and mining data, enterprise and drug intelligence, and Eureka AI/LLM capabilities) across 210M+ patents and 2B+ structured data points, plus hosted MCP servers, 140+ Agent Skills and embeddable UI widgets. Backed by SoftBank Vision Fund and Hongshan (Sequoia China), Patsnap is headquartered in Singapore with offices in London, Tokyo, Shanghai and Toronto.
+finops:
+- has_sources: true
+  method: derived
+  name: Patsnap Finops
+  primary_unit: credits
+  service_category: ''
+  slug: patsnap-finops
+  template: false
 image: https://www.patsnap.com/favicon.ico
 layout: provider
 mcp_servers:
@@ -591,26 +603,45 @@ network: true
 overview: 'Patsnap publishes 47 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI Translation API, Bio-Pharma Encyclopedia Q&A API, Biopharmaceutical Dictionary Data API, and 44 more. Tagged areas include Company, Technology, Patents, Intellectual Property, and Innovation Intelligence.
 
 
+  The Patsnap catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Patsnap''s developer surface includes pricing, engineering blog, documentation, API reference, getting-started guide, sandbox, support, and 26 more developer resources.'
 plans:
 - name: Patsnap Plans Pricing
   plan_count: 8
   slug: patsnap-plans-pricing
-random_paper: 11
+- name: Patsnap Price Estimates
+  plan_count: 0
+  slug: patsnap-price-estimates
+random_paper: 15
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Patsnap API Rules
+  rule_count: 58
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 1
+    warn: 11
+  slug: patsnap-rules
 score:
-  band: developing
-  composite: 53.4
+  band: strong
+  composite: 55.5
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 49.0
+    artifact_dirs: 28
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 8.5
+  delta: -1.1
   facets:
-    access_clarity: 84.2
-    contract_governance: 18.2
+    access_clarity: 86.8
+    contract_governance: 31.8
     contract_quality: 50.6
     developer_ergonomics: 63.7
     discoverability: 68.3
@@ -620,7 +651,7 @@ score:
     countries:
     - singapore
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 44.9
+  previous_composite: 56.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -637,13 +668,13 @@ score:
     regime: Health
     regime_id: health
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/patsnap/refs/heads/main/screenshots/patsnap-2026-08-07T191600.png
+screenshot: https://apis.io/screenshots/patsnap/patsnap-2026-08-07T191600.png
 security:
 - kind: authentication
   name: Patsnap Authentication
@@ -657,6 +688,14 @@ security:
   name: Patsnap Vulnerability Disclosure
   slug: patsnap-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 3
+skills:
+- name: Analyze a company's patent portfolio
+  slug: patsnap-company-patent-portfolio
+- name: Search patents and retrieve bibliography and legal status
+  slug: patsnap-patent-search-and-details
+- name: Run a semantic prior-art / similarity search
+  slug: patsnap-semantic-prior-art-search
 slug: patsnap
 tags:
 - Company

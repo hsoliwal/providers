@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -78,9 +81,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Cloudflare Stream Analytics API
   slug: open-cloudflare-stream-analytics-api
 - collection_type: open
@@ -103,27 +103,27 @@ collections:
   slug: open-cloudflare-stream
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-stream/refs/heads/main/capabilities/cloudflare-stream-capability-edges.yml
+  href: https://artifacts.apis.io/cloudflare-stream/capabilities/cloudflare-stream-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cloudflare-stream-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-stream/refs/heads/main/agentic-access/cloudflare-stream-agentic-access.yml
+  href: https://artifacts.apis.io/cloudflare-stream/agentic-access/cloudflare-stream-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cloudflare-stream-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-stream/refs/heads/main/security/cloudflare-stream-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cloudflare-stream/security/cloudflare-stream-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cloudflare-stream-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-stream/refs/heads/main/security/cloudflare-stream-domain-security.yml
+  href: https://artifacts.apis.io/cloudflare-stream/security/cloudflare-stream-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudflare-stream-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-stream/refs/heads/main/authentication/cloudflare-stream-authentication.yml
+  href: https://artifacts.apis.io/cloudflare-stream/authentication/cloudflare-stream-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloudflare-stream-authentication.yml
@@ -140,17 +140,17 @@ common:
   type: Documentation
   url: https://developers.cloudflare.com/stream/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-stream/refs/heads/main/plans/cloudflare-stream-plans-pricing.yml
+  href: https://artifacts.apis.io/cloudflare-stream/plans/cloudflare-stream-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cloudflare-stream-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-stream/refs/heads/main/rate-limits/cloudflare-stream-rate-limits.yml
+  href: https://artifacts.apis.io/cloudflare-stream/rate-limits/cloudflare-stream-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cloudflare-stream-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-stream/refs/heads/main/finops/cloudflare-stream-finops.yml
+  href: https://artifacts.apis.io/cloudflare-stream/finops/cloudflare-stream-finops.yml
   title: ''
   type: FinOps
   url: finops/cloudflare-stream-finops.yml
@@ -185,55 +185,71 @@ network: true
 overview: 'Cloudflare Stream publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analytics API, Captions API, Live Inputs API, and 3 more. Tagged areas include Video, Streaming, Live Streaming, Media, and Video Hosting.
 
 
+  The Cloudflare Stream catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Cloudflare Stream''s developer surface includes authentication, documentation, pricing, engineering blog, and 10 more developer resources.'
 plans:
 - name: Cloudflare Stream Plans Pricing
   plan_count: 3
   slug: cloudflare-stream-plans-pricing
-random_paper: 16
+random_paper: 2
 rate_limits:
 - limit_count: 4
   name: Cloudflare Stream Rate Limits
   slug: cloudflare-stream-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Cloudflare Stream API Rules
+  rule_count: 65
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 2
+    warn: 3
+  slug: cloudflare-stream-rules
 score:
   band: thin
-  composite: 34.3
+  composite: 37.3
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 15
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: -0.6
   facets:
     access_clarity: 18.4
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 47.8
     developer_ergonomics: 44.0
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 42.6
+    operational_transparency: 21.1
+  previous_composite: 37.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 6
+      total: 13
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/cloudflare-stream/refs/heads/main/screenshots/cloudflare-stream-2026-07-25T205657.png
+screenshot: https://apis.io/screenshots/cloudflare-stream/cloudflare-stream-2026-07-25T205657.png
 security:
 - kind: authentication
   name: Cloudflare Stream Authentication

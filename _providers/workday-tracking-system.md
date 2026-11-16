@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 1
@@ -135,7 +138,7 @@ arazzos:
 - description: Read a worker's scheduling preferences, update them, and schedule a shift aligned to the preferred times.
   name: Workday Update Scheduling Preferences and Shift
   slug: workday-tracking-system-update-scheduling-preferences-and-shift-workflow
-artifact_total: 163
+artifact_total: 162
 collections:
 - collection_type: postman
   name: Workday Absence Management Accruals API
@@ -176,9 +179,6 @@ collections:
 - collection_type: postman
   name: Workday Absence Management Accruals Worker Preferences API
   slug: postman-workday-tracking-system-worker-preferences-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Workday Absence Management API
   slug: open-workday-tracking-system-absence-management
@@ -229,12 +229,12 @@ collections:
   slug: open-workday-tracking-system-worker-preferences-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/plans/workday-tracking-system-plans-pricing.yml
+  href: https://artifacts.apis.io/workday-tracking-system/plans/workday-tracking-system-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/workday-tracking-system-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/finops/workday-tracking-system-finops.yml
+  href: https://artifacts.apis.io/workday-tracking-system/finops/workday-tracking-system-finops.yml
   title: ''
   type: FinOps
   url: finops/workday-tracking-system-finops.yml
@@ -247,62 +247,62 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/workday-tracking-system/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/agentic-access/workday-tracking-system-agentic-access.yml
+  href: https://artifacts.apis.io/workday-tracking-system/agentic-access/workday-tracking-system-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/workday-tracking-system-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/security/workday-tracking-system-trust-center.yml
+  href: https://artifacts.apis.io/workday-tracking-system/security/workday-tracking-system-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/workday-tracking-system-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/security/workday-tracking-system-domain-security.yml
+  href: https://artifacts.apis.io/workday-tracking-system/security/workday-tracking-system-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/workday-tracking-system-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/authentication/workday-tracking-system-authentication.yml
+  href: https://artifacts.apis.io/workday-tracking-system/authentication/workday-tracking-system-authentication.yml
   title: ''
   type: Authentication
   url: authentication/workday-tracking-system-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/arazzo/workday-tracking-system-assign-work-schedule-workflow.yml
+  href: https://artifacts.apis.io/workday-tracking-system/arazzo/workday-tracking-system-assign-work-schedule-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-tracking-system-assign-work-schedule-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/arazzo/workday-tracking-system-clock-event-to-timesheet-workflow.yml
+  href: https://artifacts.apis.io/workday-tracking-system/arazzo/workday-tracking-system-clock-event-to-timesheet-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-tracking-system-clock-event-to-timesheet-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/arazzo/workday-tracking-system-create-scheduling-org-and-shift-workflow.yml
+  href: https://artifacts.apis.io/workday-tracking-system/arazzo/workday-tracking-system-create-scheduling-org-and-shift-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-tracking-system-create-scheduling-org-and-shift-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/arazzo/workday-tracking-system-leave-of-absence-lifecycle-workflow.yml
+  href: https://artifacts.apis.io/workday-tracking-system/arazzo/workday-tracking-system-leave-of-absence-lifecycle-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-tracking-system-leave-of-absence-lifecycle-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/arazzo/workday-tracking-system-request-time-off-with-balance-check-workflow.yml
+  href: https://artifacts.apis.io/workday-tracking-system/arazzo/workday-tracking-system-request-time-off-with-balance-check-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-tracking-system-request-time-off-with-balance-check-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/arazzo/workday-tracking-system-staff-against-labor-demand-workflow.yml
+  href: https://artifacts.apis.io/workday-tracking-system/arazzo/workday-tracking-system-staff-against-labor-demand-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-tracking-system-staff-against-labor-demand-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/arazzo/workday-tracking-system-time-block-lifecycle-workflow.yml
+  href: https://artifacts.apis.io/workday-tracking-system/arazzo/workday-tracking-system-time-block-lifecycle-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-tracking-system-time-block-lifecycle-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/arazzo/workday-tracking-system-update-scheduling-preferences-and-shift-workflow.yml
+  href: https://artifacts.apis.io/workday-tracking-system/arazzo/workday-tracking-system-update-scheduling-preferences-and-shift-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/workday-tracking-system-update-scheduling-preferences-and-shift-workflow.yml
@@ -733,13 +733,13 @@ score:
   band: thin
   composite: 36.1
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 65.5
     catalog_earned_first_party: 0.0
     catalog_gap: 49.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 36.8
     contract_governance: 13.6
@@ -747,7 +747,7 @@ score:
     developer_ergonomics: 39.3
     discoverability: 71.4
     operational_transparency: 34.2
-  previous_composite: 37.6
+  previous_composite: 36.1
   provenance:
     agentic_access: derived
     contracts:
@@ -761,13 +761,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/workday-tracking-system/refs/heads/main/screenshots/workday-tracking-system-2026-06-20T201611.png
+screenshot: https://apis.io/screenshots/workday-tracking-system/workday-tracking-system-2026-06-20T201611.png
 security:
 - kind: authentication
   name: Workday Tracking System Authentication

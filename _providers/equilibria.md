@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Equilibria provides premium CBD and wellness supplements specifically formulated for women.
@@ -32,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/equilibria/refs/heads/main/llms/equilibria-llms.txt
+  href: https://artifacts.apis.io/equilibria/llms/equilibria-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/equilibria-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/equilibria/refs/heads/main/well-known/equilibria-well-known.yml
+  href: https://artifacts.apis.io/equilibria/well-known/equilibria-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/equilibria-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/equilibria/refs/heads/main/hosts/equilibria-hosts.yml
+  href: https://artifacts.apis.io/equilibria/hosts/equilibria-hosts.yml
   title: ''
   type: Hosts
   url: hosts/equilibria-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/equilibria/refs/heads/main/vendors/equilibria-vendors.yml
+  href: https://artifacts.apis.io/equilibria/vendors/equilibria-vendors.yml
   title: ''
   type: Vendors
   url: vendors/equilibria-vendors.yml
@@ -72,7 +85,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/myeq
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/equilibria/refs/heads/main/security/equilibria-domain-security.yml
+  href: https://artifacts.apis.io/equilibria/security/equilibria-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/equilibria-domain-security.yml
@@ -102,22 +115,24 @@ overview: 'Equilibria is listed with 1 API on the [APIs.io](https://apis.io/) ne
   Equilibria''s developer surface includes pricing and 10 more developer resources.'
 random_paper: 7
 score:
-  band: emerging
-  composite: 13.4
+  band: minimal
+  composite: 9.4
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.0
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 66.1
-    operational_transparency: 5.3
+    discoverability: 65.2
+    operational_transparency: 2.6
+  previous_composite: 13.4
   provenance:
     mcp: derived
   regulatory:
@@ -125,13 +140,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 7.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/equilibria/equilibria-2026-11-03T131615.png
 security:
 - kind: domain-security
   name: Equilibria Domain Security

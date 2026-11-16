@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shoreline-biosciences/refs/heads/main/security/shoreline-biosciences-domain-security.yml
+  href: https://artifacts.apis.io/shoreline-biosciences/security/shoreline-biosciences-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shoreline-biosciences-domain-security.yml
@@ -68,7 +71,7 @@ name: Shoreline Biosciences
 nav: Providers
 network: true
 overview: Shoreline Biosciences is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Life Sciences, Cell Therapy, and Immunotherapy.
-random_paper: 17
+random_paper: 13
 score:
   band: minimal
   composite: 0.0
@@ -101,8 +104,8 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

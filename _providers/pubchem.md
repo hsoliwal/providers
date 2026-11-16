@@ -1,12 +1,13 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Free
   onboarding: unknown
-  pricing: unknown
+  pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-10-17'
+  score: 27.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -70,11 +74,8 @@ apis:
   description: Utility operations
   name: PubChem Utilities API
   slug: pubchem-utilities-api
-artifact_total: 23
+artifact_total: 22
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: PubChem PUG REST Compounds API
   slug: open-pubchem-compounds-api
@@ -90,12 +91,12 @@ common:
   type: Website
   url: https://www.nih.gov/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pubchem/refs/heads/main/agentic-access/pubchem-agentic-access.yml
+  href: https://artifacts.apis.io/pubchem/agentic-access/pubchem-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pubchem-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pubchem/refs/heads/main/security/pubchem-domain-security.yml
+  href: https://artifacts.apis.io/pubchem/security/pubchem-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pubchem-domain-security.yml
@@ -140,17 +141,17 @@ common:
   type: RateLimits
   url: https://pubchem.ncbi.nlm.nih.gov/docs/programmatic-access#section=Request-Volume-Limitations
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pubchem/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/pubchem/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pubchem/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/pubchem/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pubchem/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/pubchem/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
@@ -203,7 +204,7 @@ plans:
 - name: Plans
   plan_count: 2
   slug: plans
-random_paper: 14
+random_paper: 20
 rate_limits:
 - limit_count: 4
   name: Rate Limits
@@ -224,13 +225,13 @@ score:
   band: thin
   composite: 35.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 53.3
     catalog_earned_first_party: 0.0
     catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 39.5
     contract_governance: 9.8
@@ -238,7 +239,7 @@ score:
     developer_ergonomics: 14.3
     discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 41.9
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     contracts:
@@ -252,14 +253,14 @@ score:
     regime: Health
     regime_id: health
     score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/pubchem/refs/heads/main/screenshots/pubchem-2026-06-20T192236.png
+screenshot: https://apis.io/screenshots/pubchem/pubchem-2026-06-20T192236.png
 security:
 - kind: domain-security
   name: Pubchem Domain Security

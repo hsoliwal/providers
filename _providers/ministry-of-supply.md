@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The store's Universal Commerce Protocol service, exposed over MCP at /api/ucp/mcp. An anonymous tools/list returns thirteen tools covering catalog search and lookup, product detail, cart create / read
@@ -45,14 +48,14 @@ apis:
 - description: Read-only, unauthenticated storefront JSON the store's own agents.md points agents at — /products.json, /collections.json, /products/{handle}.json, /collections/{handle}/products.json and /search. Sho
   name: Ministry of Supply Storefront JSON
   slug: ministry-of-supply-storefront-json
-artifact_total: 8
+artifact_total: 10
 common:
 - group: company
   title: ''
   type: BlogRSS
   url: https://www.ministryofsupply.com/blogs/news.atom
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/security/ministry-of-supply-domain-security.yml
+  href: https://artifacts.apis.io/ministry-of-supply/security/ministry-of-supply-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ministry-of-supply-domain-security.yml
@@ -65,77 +68,77 @@ common:
   type: Documentation
   url: https://www.ministryofsupply.com/agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/llms/ministry-of-supply-llms.txt
+  href: https://artifacts.apis.io/ministry-of-supply/llms/ministry-of-supply-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ministry-of-supply-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/ministry-of-supply/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/mcp/ministry-of-supply-mcp.yml
+  href: https://artifacts.apis.io/ministry-of-supply/mcp/ministry-of-supply-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/ministry-of-supply-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/well-known/ministry-of-supply-well-known.yml
+  href: https://artifacts.apis.io/ministry-of-supply/well-known/ministry-of-supply-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ministry-of-supply-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/authentication/ministry-of-supply-authentication.yml
+  href: https://artifacts.apis.io/ministry-of-supply/authentication/ministry-of-supply-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ministry-of-supply-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/scopes/ministry-of-supply-scopes.yml
+  href: https://artifacts.apis.io/ministry-of-supply/scopes/ministry-of-supply-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/ministry-of-supply-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/conventions/ministry-of-supply-conventions.yml
+  href: https://artifacts.apis.io/ministry-of-supply/conventions/ministry-of-supply-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ministry-of-supply-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/conventions/ministry-of-supply-conventions.yml
+  href: https://artifacts.apis.io/ministry-of-supply/conventions/ministry-of-supply-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/ministry-of-supply-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/conformance/ministry-of-supply-conformance.yml
+  href: https://artifacts.apis.io/ministry-of-supply/conformance/ministry-of-supply-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ministry-of-supply-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/lifecycle/ministry-of-supply-lifecycle.yml
+  href: https://artifacts.apis.io/ministry-of-supply/lifecycle/ministry-of-supply-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ministry-of-supply-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/data-model/ministry-of-supply-data-model.yml
+  href: https://artifacts.apis.io/ministry-of-supply/data-model/ministry-of-supply-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ministry-of-supply-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/errors/ministry-of-supply-problem-types.yml
+  href: https://artifacts.apis.io/ministry-of-supply/errors/ministry-of-supply-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ministry-of-supply-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/rate-limits/ministry-of-supply-rate-limits.yml
+  href: https://artifacts.apis.io/ministry-of-supply/rate-limits/ministry-of-supply-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ministry-of-supply-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/plans/ministry-of-supply-plans-pricing.yml
+  href: https://artifacts.apis.io/ministry-of-supply/plans/ministry-of-supply-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ministry-of-supply-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/packages/ministry-of-supply-packages.yml
+  href: https://artifacts.apis.io/ministry-of-supply/packages/ministry-of-supply-packages.yml
   title: ''
   type: Packages
   url: packages/ministry-of-supply-packages.yml
@@ -179,7 +182,7 @@ plans:
 - name: Ministry Of Supply Plans Pricing
   plan_count: 0
   slug: ministry-of-supply-plans-pricing
-random_paper: 13
+random_paper: 11
 rate_limits:
 - limit_count: 1
   name: Ministry Of Supply Rate Limits
@@ -193,7 +196,7 @@ score:
   band: thin
   composite: 27.1
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 40.0
     catalog_earned_first_party: 8.0
     catalog_gap: 75.0
@@ -225,14 +228,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ministry-of-supply/refs/heads/main/screenshots/ministry-of-supply-2026-09-02T150557.png
+screenshot: https://apis.io/screenshots/ministry-of-supply/ministry-of-supply-2026-09-02T150557.png
 security:
 - kind: authentication
   name: Ministry Of Supply Authentication
@@ -242,6 +245,12 @@ security:
   name: Ministry Of Supply Domain Security
   slug: ministry-of-supply-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Browse the Ministry of Supply catalog
+  slug: ministry-of-supply-browse-catalog
+- name: Build a cart and take a Ministry of Supply checkout to buyer approval
+  slug: ministry-of-supply-cart-and-checkout
 slug: ministry-of-supply
 tags:
 - Company

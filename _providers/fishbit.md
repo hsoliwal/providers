@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Requires approval
   onboarding: approval
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fishbit/refs/heads/main/security/fishbit-domain-security.yml
+  href: https://artifacts.apis.io/fishbit/security/fishbit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fishbit-domain-security.yml
@@ -69,7 +73,7 @@ overview: 'Fishbit is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Fishbit''s developer surface includes pricing and 4 more developer resources.'
-random_paper: 19
+random_paper: 1
 score:
   band: minimal
   composite: 6.1
@@ -95,14 +99,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/fishbit/refs/heads/main/screenshots/fishbit-2026-07-25T214626.png
+screenshot: https://apis.io/screenshots/fishbit/fishbit-2026-07-25T214626.png
 security:
 - kind: domain-security
   name: Fishbit Domain Security

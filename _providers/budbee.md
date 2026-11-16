@@ -1,10 +1,20 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
     auth_clarity: false
     consent_identity: false
@@ -15,15 +25,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.2
-  scored_at: '2026-10-17'
+  score: 18.6
+  scored_at: '2026-11-06'
+agentic_access:
+- acting_count: 8
+  human_in_the_loop: 0
+  name: Budbee Agentic Access
+  operation_count: 23
+  slug: budbee-agentic-access
+  summary_line: 23 operations · 8 acting
 api_count: 9
 apis:
 - baseURL: https://api.budbee.com
@@ -71,35 +91,40 @@ apis:
   description: The Webhooks API from Budbee — 1 operation(s) for webhooks.
   name: Budbee Webhooks API
   slug: budbee-webhooks-api
-artifact_total: 19
+artifact_total: 20
 common:
+- group: agent
+  href: https://artifacts.apis.io/budbee/agentic-access/budbee-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/budbee-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/budbee/refs/heads/main/well-known/budbee-clarity-security.txt
+  href: https://artifacts.apis.io/budbee/well-known/budbee-clarity-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/budbee-clarity-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/budbee/refs/heads/main/well-known/budbee-well-known.yml
+  href: https://artifacts.apis.io/budbee/well-known/budbee-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/budbee-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/budbee/refs/heads/main/rules/budbee-rules.yml
+  href: https://artifacts.apis.io/budbee/rules/budbee-rules.yml
   title: ''
   type: Spectral
   url: rules/budbee-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/budbee/refs/heads/main/json-ld/budbee-context.jsonld
+  href: https://artifacts.apis.io/budbee/json-ld/budbee-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/budbee-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/budbee/refs/heads/main/vocabulary/budbee-vocabulary.yml
+  href: https://artifacts.apis.io/budbee/vocabulary/budbee-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/budbee-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/budbee/refs/heads/main/data-model/budbee-data-model.yml
+  href: https://artifacts.apis.io/budbee/data-model/budbee-data-model.yml
   title: ''
   type: DataModel
   url: data-model/budbee-data-model.yml
@@ -108,17 +133,17 @@ common:
   type: Security
   url: https://clarity.com/vdp
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/budbee/refs/heads/main/conformance/budbee-conformance.yml
+  href: https://artifacts.apis.io/budbee/conformance/budbee-conformance.yml
   title: ''
   type: Conformance
   url: conformance/budbee-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/budbee/refs/heads/main/hosts/budbee-hosts.yml
+  href: https://artifacts.apis.io/budbee/hosts/budbee-hosts.yml
   title: ''
   type: Hosts
   url: hosts/budbee-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/budbee/refs/heads/main/vendors/budbee-vendors.yml
+  href: https://artifacts.apis.io/budbee/vendors/budbee-vendors.yml
   title: ''
   type: Vendors
   url: vendors/budbee-vendors.yml
@@ -139,12 +164,12 @@ common:
   type: DeveloperPortal
   url: https://api.staging.budbee.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/budbee/refs/heads/main/security/budbee-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/budbee/security/budbee-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/budbee-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/budbee/refs/heads/main/security/budbee-domain-security.yml
+  href: https://artifacts.apis.io/budbee/security/budbee-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/budbee-domain-security.yml
@@ -198,39 +223,42 @@ overview: 'Budbee is listed with 9 APIs on the [APIs.io](https://apis.io/) netwo
   The Budbee catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Budbee''s developer surface includes documentation and 16 more developer resources.'
-random_paper: 21
+  Budbee''s developer surface includes documentation and 17 more developer resources.'
+random_paper: 15
 rules:
 - authorship: generated
-  effective_rule_count: 52
+  effective_rule_count: 84
   extends:
   - spectral:oas
   name: Budbee API Rules
-  rule_count: 11
+  rule_count: 43
   severity_counts:
-    error: 9
+    error: 38
     hint: 0
-    info: 1
-    warn: 1
+    info: 3
+    warn: 2
   slug: budbee-rules
 score:
   band: emerging
-  composite: 24.4
+  composite: 21.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 18
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.1
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 22.0
     contract_quality: 28.1
-    developer_ergonomics: 19.0
-    discoverability: 73.2
-    operational_transparency: 10.5
+    developer_ergonomics: 14.3
+    discoverability: 72.3
+    operational_transparency: 5.3
+  previous_composite: 24.4
   provenance:
+    agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
@@ -243,12 +271,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/budbee/budbee-2026-11-03T122732.png
 security:
 - kind: domain-security
   name: Budbee Domain Security

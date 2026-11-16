@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -35,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -60,11 +66,8 @@ apis:
   description: Get live top and breaking headlines
   name: NewsAPI Top Headlines API
   slug: newsapi-top-headlines-api
-artifact_total: 21
+artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: News Everything API
   slug: open-newsapi-everything-api
@@ -76,17 +79,17 @@ collections:
   slug: open-newsapi-top-headlines-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/newsapi/refs/heads/main/agentic-access/newsapi-agentic-access.yml
+  href: https://artifacts.apis.io/newsapi/agentic-access/newsapi-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/newsapi-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/newsapi/refs/heads/main/security/newsapi-domain-security.yml
+  href: https://artifacts.apis.io/newsapi/security/newsapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/newsapi-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/newsapi/refs/heads/main/authentication/newsapi-authentication.yml
+  href: https://artifacts.apis.io/newsapi/authentication/newsapi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/newsapi-authentication.yml
@@ -123,17 +126,17 @@ common:
   type: X
   url: https://x.com/newsapi
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/newsapi/refs/heads/main/plans/newsapi-plans-pricing.yml
+  href: https://artifacts.apis.io/newsapi/plans/newsapi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/newsapi-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/newsapi/refs/heads/main/rate-limits/newsapi-rate-limits.yml
+  href: https://artifacts.apis.io/newsapi/rate-limits/newsapi-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/newsapi-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/newsapi/refs/heads/main/finops/newsapi-finops.yml
+  href: https://artifacts.apis.io/newsapi/finops/newsapi-finops.yml
   title: ''
   type: FinOps
   url: finops/newsapi-finops.yml
@@ -189,7 +192,7 @@ plans:
 - name: Newsapi Plans Pricing
   plan_count: 4
   slug: newsapi-plans-pricing
-random_paper: 11
+random_paper: 15
 rate_limits:
 - limit_count: 5
   name: Newsapi Rate Limits
@@ -210,13 +213,13 @@ score:
   band: thin
   composite: 35.4
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 67.8
     catalog_earned_first_party: 0.0
     catalog_gap: 47.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 23.5
@@ -224,7 +227,7 @@ score:
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 43.7
+  previous_composite: 35.4
   provenance:
     agentic_access: derived
     contracts:
@@ -238,14 +241,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/newsapi/refs/heads/main/screenshots/newsapi-2026-06-20T190246.png
+screenshot: https://apis.io/screenshots/newsapi/newsapi-2026-06-20T190246.png
 security:
 - kind: authentication
   name: Newsapi Authentication

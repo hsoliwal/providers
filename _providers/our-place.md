@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -44,32 +47,32 @@ common:
   type: Website
   url: https://fromourplace.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/our-place/refs/heads/main/mcp/our-place-mcp.yml
+  href: https://artifacts.apis.io/our-place/mcp/our-place-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/our-place-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/our-place/refs/heads/main/llms/our-place-llms.txt
+  href: https://artifacts.apis.io/our-place/llms/our-place-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/our-place-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/our-place/refs/heads/main/well-known/our-place-well-known.yml
+  href: https://artifacts.apis.io/our-place/well-known/our-place-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/our-place-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/our-place/refs/heads/main/authentication/our-place-authentication.yml
+  href: https://artifacts.apis.io/our-place/authentication/our-place-authentication.yml
   title: ''
   type: Authentication
   url: authentication/our-place-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/our-place/refs/heads/main/scopes/our-place-scopes.yml
+  href: https://artifacts.apis.io/our-place/scopes/our-place-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/our-place-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/our-place/refs/heads/main/security/our-place-domain-security.yml
+  href: https://artifacts.apis.io/our-place/security/our-place-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/our-place-domain-security.yml
@@ -97,7 +100,7 @@ overview: 'Our Place is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Our Place''s developer surface includes authentication and 8 more developer resources.'
-random_paper: 2
+random_paper: 16
 scopes:
 - name: Our Place Scopes
   scope_count: 4
@@ -130,14 +133,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/our-place/refs/heads/main/screenshots/our-place-2026-08-07T191045.png
+screenshot: https://apis.io/screenshots/our-place/our-place-2026-08-07T191045.png
 security:
 - kind: authentication
   name: Our Place Authentication

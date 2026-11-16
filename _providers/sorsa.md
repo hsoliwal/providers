@@ -1,16 +1,19 @@
 ---
 access_model:
   confidence: medium
-  label: Paid
-  onboarding: unknown
-  pricing: paid
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium (free trial) · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
   - plans
   - authentication
   - security
-  trial: false
-  try_now: false
+  trial: true
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-10-17'
+  score: 28.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 40
   slug: sorsa-agentic-access
   summary_line: 40 operations · 13 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.sorsa.io/v3
   baseurl_source: declared
@@ -112,9 +118,6 @@ collections:
   name: Sorsa Community Verification API
   slug: postman-sorsa-verification-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Sorsa Community API
   slug: open-sorsa-community-api
 - collection_type: open
@@ -147,17 +150,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/sorsa/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sorsa/refs/heads/main/agentic-access/sorsa-agentic-access.yml
+  href: https://artifacts.apis.io/sorsa/agentic-access/sorsa-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/sorsa-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sorsa/refs/heads/main/security/sorsa-domain-security.yml
+  href: https://artifacts.apis.io/sorsa/security/sorsa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sorsa-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sorsa/refs/heads/main/authentication/sorsa-authentication.yml
+  href: https://artifacts.apis.io/sorsa/authentication/sorsa-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sorsa-authentication.yml
@@ -194,27 +197,27 @@ common:
   type: Pricing
   url: https://docs.sorsa.io/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sorsa/refs/heads/main/plans/sorsa-plans-pricing.yml
+  href: https://artifacts.apis.io/sorsa/plans/sorsa-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sorsa-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sorsa/refs/heads/main/rate-limits/sorsa-rate-limits.yml
+  href: https://artifacts.apis.io/sorsa/rate-limits/sorsa-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sorsa-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sorsa/refs/heads/main/finops/sorsa-finops.yml
+  href: https://artifacts.apis.io/sorsa/finops/sorsa-finops.yml
   title: ''
   type: FinOps
   url: finops/sorsa-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sorsa/refs/heads/main/rules/sorsa-rules.yml
+  href: https://artifacts.apis.io/sorsa/rules/sorsa-rules.yml
   title: ''
   type: SpectralRules
   url: rules/sorsa-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sorsa/refs/heads/main/vocabulary/sorsa-vocabulary.yml
+  href: https://artifacts.apis.io/sorsa/vocabulary/sorsa-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/sorsa-vocabulary.yml
@@ -333,13 +336,13 @@ features:
 - description: 1 API call = 1 request from the quota, regardless of which endpoint is hit.
   name: Flat-Rate Pricing
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Sorsa Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: ''
   slug: sorsa-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sorsa.png
 integrations:
 - description: Primary upstream data source — Sorsa surfaces public X data via REST.
@@ -412,7 +415,7 @@ modified: '2026-09-16'
 name: Sorsa
 nav: Providers
 network: true
-overview: 'Sorsa publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Community API, Lists API, Search API, and 5 more. Tagged areas include twitter, X, Social Media, Data Extraction, and Real-Time.
+overview: 'Sorsa publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Community API, Lists API, Search API, and 5 more. Tagged areas include Twitter, X, Social Media, Data Extraction, and Real-Time.
 
 
   The Sorsa catalog on APIs.io includes 2 JSON-LD contexts and 2 Spectral governance rulesets.
@@ -421,9 +424,12 @@ overview: 'Sorsa publishes 8 API contracts indexed on the [APIs.io](https://apis
   Sorsa''s developer surface includes authentication, documentation, signup flow, developer console, pricing, support, and 19 more developer resources.'
 plans:
 - name: Sorsa Plans Pricing
-  plan_count: 4
+  plan_count: 5
   slug: sorsa-plans-pricing
-random_paper: 2
+- name: Sorsa Price Estimates
+  plan_count: 0
+  slug: sorsa-price-estimates
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Sorsa Rate Limits
@@ -453,30 +459,30 @@ rules:
     warn: 2
   slug: sorsa-rules
 score:
-  band: developing
-  composite: 48.7
+  band: strong
+  composite: 56.5
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 69.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 46.0
+    artifact_dirs: 19
+    catalog_earned: 81.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 34.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 1.5
   facets:
-    access_clarity: 31.6
+    access_clarity: 63.2
     contract_governance: 27.3
-    contract_quality: 70.2
+    contract_quality: 76.2
     developer_ergonomics: 63.1
     discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 54.3
+  previous_composite: 55.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 8
   regulatory:
     applies: true
@@ -484,13 +490,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sorsa/refs/heads/main/screenshots/sorsa-2026-06-20T194217.png
+screenshot: https://apis.io/screenshots/sorsa/sorsa-2026-06-20T194217.png
 security:
 - kind: authentication
   name: Sorsa Authentication
@@ -511,7 +517,7 @@ solutions:
 - description: Volume arrangements beyond 500K monthly requests via sales@sorsa.io with dedicated rate-limit profiles.
   name: Custom
 tags:
-- twitter
+- Twitter
 - X
 - Social Media
 - Data Extraction

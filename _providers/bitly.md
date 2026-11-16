@@ -1,14 +1,22 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
+  - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -26,15 +34,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 60.6
-  scored_at: '2026-10-17'
+  score: 59.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -276,7 +287,7 @@ apis:
     question: How do I see the details of a Bitly OAuth app from its client ID?
   phrasing_ops: 1
   slug: bitly-apps-api
-artifact_total: 33
+artifact_total: 40
 asyncapis:
 - description: ''
   name: Bitly Engagement Webhooks
@@ -317,37 +328,37 @@ collections:
   slug: open-bitly
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/capabilities/bitly-capability-edges.yml
+  href: https://artifacts.apis.io/bitly/capabilities/bitly-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bitly-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/overlays/bitly-oauth-apps-overlay.yaml
+  href: https://artifacts.apis.io/bitly/overlays/bitly-oauth-apps-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bitly-oauth-apps-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/agentic-access/bitly-agentic-access.yml
+  href: https://artifacts.apis.io/bitly/agentic-access/bitly-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bitly-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/security/bitly-trust-center.yml
+  href: https://artifacts.apis.io/bitly/security/bitly-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/bitly-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/security/bitly-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bitly/security/bitly-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/bitly-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/security/bitly-domain-security.yml
+  href: https://artifacts.apis.io/bitly/security/bitly-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bitly-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/authentication/bitly-authentication.yml
+  href: https://artifacts.apis.io/bitly/authentication/bitly-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bitly-authentication.yml
@@ -404,97 +415,97 @@ common:
   type: Blog
   url: https://bitly.com/blog/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/packages/bitly-packages.yml
+  href: https://artifacts.apis.io/bitly/packages/bitly-packages.yml
   title: ''
   type: Packages
   url: packages/bitly-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/packages/bitly-packages.yml
+  href: https://artifacts.apis.io/bitly/packages/bitly-packages.yml
   title: ''
   type: SDKs
   url: packages/bitly-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/well-known/bitly-well-known.yml
+  href: https://artifacts.apis.io/bitly/well-known/bitly-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bitly-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/well-known/bitly-security.txt
+  href: https://artifacts.apis.io/bitly/well-known/bitly-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bitly-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/llms/bitly-llms.txt
+  href: https://artifacts.apis.io/bitly/llms/bitly-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bitly-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/conformance/bitly-conformance.yml
+  href: https://artifacts.apis.io/bitly/conformance/bitly-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bitly-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/security/bitly-trust-center.yml
+  href: https://artifacts.apis.io/bitly/security/bitly-trust-center.yml
   title: ''
   type: Compliance
   url: security/bitly-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/errors/bitly-problem-types.yml
+  href: https://artifacts.apis.io/bitly/errors/bitly-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bitly-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/lifecycle/bitly-lifecycle.yml
+  href: https://artifacts.apis.io/bitly/lifecycle/bitly-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bitly-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/conventions/bitly-conventions.yml
+  href: https://artifacts.apis.io/bitly/conventions/bitly-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bitly-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/changelog/bitly-changelog.yml
+  href: https://artifacts.apis.io/bitly/changelog/bitly-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/bitly-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/data-model/bitly-data-model.yml
+  href: https://artifacts.apis.io/bitly/data-model/bitly-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bitly-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/sandbox/bitly-sandbox.yml
+  href: https://artifacts.apis.io/bitly/sandbox/bitly-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/bitly-sandbox.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/plans/bitly-plans-pricing.yml
+  href: https://artifacts.apis.io/bitly/plans/bitly-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bitly-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/rate-limits/bitly-rate-limits.yml
+  href: https://artifacts.apis.io/bitly/rate-limits/bitly-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bitly-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/asyncapi/bitly-engagement-webhooks.yml
+  href: https://artifacts.apis.io/bitly/asyncapi/bitly-engagement-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/bitly-engagement-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bitly/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/security/bitly-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bitly/security/bitly-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/bitly-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/scopes/bitly-scopes.yml
+  href: https://artifacts.apis.io/bitly/scopes/bitly-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/bitly-scopes.yml
@@ -523,37 +534,45 @@ common:
   type: MCPServer
   url: https://dev.bitly.com/bitly-mcp/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/collections/bitly.postman_collection.json
+  href: https://artifacts.apis.io/bitly/collections/bitly.postman_collection.json
   title: ''
   type: PostmanCollection
   url: collections/bitly.postman_collection.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/collections/bitly.opencollection.json
+  href: https://artifacts.apis.io/bitly/collections/bitly.opencollection.json
   title: ''
   type: OpenCollection
   url: collections/bitly.opencollection.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/skills/bitly-shorten-and-brand-a-link.md
+  href: https://artifacts.apis.io/bitly/skills/bitly-shorten-and-brand-a-link.md
   title: ''
   type: AgentSkill
   url: skills/bitly-shorten-and-brand-a-link.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/skills/bitly-report-link-performance.md
+  href: https://artifacts.apis.io/bitly/skills/bitly-report-link-performance.md
   title: ''
   type: AgentSkill
   url: skills/bitly-report-link-performance.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/skills/bitly-create-and-measure-a-qr-code.md
+  href: https://artifacts.apis.io/bitly/skills/bitly-create-and-measure-a-qr-code.md
   title: ''
   type: AgentSkill
   url: skills/bitly-create-and-measure-a-qr-code.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/skills/bitly-subscribe-to-engagement-events.md
+  href: https://artifacts.apis.io/bitly/skills/bitly-subscribe-to-engagement-events.md
   title: ''
   type: AgentSkill
   url: skills/bitly-subscribe-to-engagement-events.md
 created: '2026-05-11'
 description: Bitly is a link management platform for creating, branding, routing and measuring short links, QR Codes and link-in-bio pages at scale. The Bitly v4 REST API is a 94-operation, bearer-authenticated JSON API at https://api-ssl.bitly.com/v4 covering Bitlink creation and expansion, custom back-halves, branded short domains, groups (workspaces) and organizations, campaigns and channels, dynamic and static QR Codes, bulk shortening, engagement webhooks, and a deep click/scan analytics surface sliced by country, city, device, OS, browser and referrer. Bitly publishes its own OpenAPI 3.0 definition and operates an official remote Model Context Protocol server, making it directly callable by AI agents.
+finops:
+- has_sources: true
+  method: derived
+  name: Bitly Finops
+  primary_unit: account
+  service_category: ''
+  slug: bitly-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bitly.png
 layout: provider
 mcp_servers:
@@ -570,7 +589,7 @@ network: true
 overview: 'Bitly publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including BSDs API, Bitlinks API, Campaigns API, and 8 more. Tagged areas include Links, URL Shorteners, QR Codes, Analytics, and Marketing.
 
 
-  The Bitly catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Bitly catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Bitly''s developer surface includes authentication, documentation, API reference, pricing, signup flow, support, engineering blog, and 44 more developer resources.'
@@ -578,11 +597,27 @@ plans:
 - name: Bitly Plans Pricing
   plan_count: 5
   slug: bitly-plans-pricing
+- name: Bitly Price Estimates
+  plan_count: 0
+  slug: bitly-price-estimates
 random_paper: 20
 rate_limits:
 - limit_count: 8
   name: Bitly Rate Limits
   slug: bitly-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Bitly API Rules
+  rule_count: 66
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 3
+    warn: 12
+  slug: bitly-rules
 scopes:
 - name: Bitly Scopes
   scope_count: 0
@@ -590,23 +625,28 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: exemplar
-  composite: 70.5
+  composite: 73.7
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 61.0
+    artifact_dirs: 32
+    catalog_earned: 68.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 85.5
-    contract_governance: 4.5
+    access_clarity: 93.4
+    contract_governance: 18.2
     contract_quality: 62.8
     developer_ergonomics: 74.4
     discoverability: 75.0
     operational_transparency: 84.2
-  previous_composite: 70.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 73.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -629,13 +669,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bitly/refs/heads/main/screenshots/bitly-2026-06-20T173312.png
+screenshot: https://apis.io/screenshots/bitly/bitly-2026-06-20T173312.png
 security:
 - kind: authentication
   name: Bitly Authentication
@@ -653,6 +693,16 @@ security:
   name: Bitly Trust Center
   slug: bitly-trust-center
   summary_line: SOC 2 Type 2, GDPR, CCPA
+skill_count: 4
+skills:
+- name: bitly-create-and-measure-a-qr-code
+  slug: bitly-create-and-measure-a-qr-code
+- name: bitly-report-link-performance
+  slug: bitly-report-link-performance
+- name: bitly-shorten-and-brand-a-link
+  slug: bitly-shorten-and-brand-a-link
+- name: bitly-subscribe-to-engagement-events
+  slug: bitly-subscribe-to-engagement-events
 slug: bitly
 tags:
 - Links

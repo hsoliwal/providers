@@ -5,34 +5,10 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
-agent_readiness:
-  band: agent-aware
-  dimensions:
-    agent_card: false
-    agent_skills: false
-    agentic_access: false
-    agentic_commerce: false
-    auth_clarity: false
-    consent_identity: false
-    delegated_identity: false
-    dry_run_mode: false
-    dynamic_client_registration: false
-    error_semantics: false
-    event_surface_described: false
-    idempotency: false
-    mcp_server: false
-    openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: false
-    reversibility_documented: false
-    spec_presence: true
-    well_known_catalog: false
-  schema_version: '0.2'
-  score: 12.9
-  scored_at: '2026-10-17'
 api_count: 6
 apis:
 - description: Endpoints for authenticating end-users and obtaining authorization grants.
@@ -53,15 +29,15 @@ apis:
 - description: Endpoint for retrieving claims about the authenticated end-user.
   name: OIDC User Info API
   slug: oidc-user-info-api
-artifact_total: 7
+artifact_total: 8
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/openid-connect/refs/heads/main/capabilities/openid-connect-capability-edges.yml
+  href: https://artifacts.apis.io/openid-connect/capabilities/openid-connect-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/openid-connect-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/openid-connect/refs/heads/main/security/openid-connect-domain-security.yml
+  href: https://artifacts.apis.io/openid-connect/security/openid-connect-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/openid-connect-domain-security.yml
@@ -93,49 +69,28 @@ modified: '2026-04-28'
 name: OpenID Connect
 nav: Providers
 network: true
-overview: 'OpenID Connect publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including OIDC Authentication API, OIDC Discovery API, OIDC JWKS API, and 3 more. Tagged areas include Authentication, Identity, JWT, and OpenID Connect.
+overview: 'OpenID Connect publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including OIDC Authentication API, OIDC Discovery API, OIDC JWKS API, and 3 more. Tagged areas include Authentication, Identity, JWT, OAuth, and OpenID Connect.
+
+
+  The OpenID Connect catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   OpenID Connect''s developer surface includes documentation, engineering blog, and 5 more developer resources.'
-random_paper: 0
-score:
-  band: emerging
-  composite: 13.8
-  coverage:
-    artifact_dirs: 7
-    catalog_earned: 30.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 85.0
-    catalog_max: 115.0
-    note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.8
-  facets:
-    access_clarity: 0.0
-    contract_governance: 0.0
-    contract_quality: 24.0
-    developer_ergonomics: 19.0
-    discoverability: 60.7
-    operational_transparency: 0.0
-  previous_composite: 19.6
-  provenance:
-    contracts:
-      callable: 0.0
-      derived: 0
-      marker_coverage: 0.0
-      total: 6
-  regulatory:
-    applies: true
-    matched_via: fallback
-    regime: Horizontal (data, software, accessibility, platform)
-    regime_id: horizontal
-    score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
-  upsert:
-    applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/openid-connect/refs/heads/main/screenshots/openid-connect-2026-06-20T191005.png
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: OpenID Connect API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: openid-connect-rules
+screenshot: https://apis.io/screenshots/openid-connect/openid-connect-2026-06-20T191005.png
 security:
 - kind: domain-security
   name: Openid Connect Domain Security
@@ -146,6 +101,7 @@ tags:
 - Authentication
 - Identity
 - JWT
+- OAuth
 - OpenID Connect
 website: https://openid.net/
 ---

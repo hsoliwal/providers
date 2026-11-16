@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/culina-health/refs/heads/main/hosts/culina-health-hosts.yml
+  href: https://artifacts.apis.io/culina-health/hosts/culina-health-hosts.yml
   title: ''
   type: Hosts
   url: hosts/culina-health-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/culina-health/refs/heads/main/vendors/culina-health-vendors.yml
+  href: https://artifacts.apis.io/culina-health/vendors/culina-health-vendors.yml
   title: ''
   type: Vendors
   url: vendors/culina-health-vendors.yml
@@ -50,7 +63,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/CulinaHealth
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/culina-health/refs/heads/main/security/culina-health-domain-security.yml
+  href: https://artifacts.apis.io/culina-health/security/culina-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/culina-health-domain-security.yml
@@ -77,28 +90,30 @@ modified: '2026-10-11'
 name: Culina Health
 nav: Providers
 network: true
-overview: 'Culina Health is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Health, Nutrition, Telehealth, Dietitian, and VirtualCare.
+overview: 'Culina Health is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Health, Nutrition, Telehealth, Dietitian, and Virtual Care.
 
 
   Culina Health''s developer surface includes signup flow, engineering blog, and 5 more developer resources.'
-random_paper: 13
+random_paper: 15
 score:
   band: minimal
-  composite: 7.5
+  composite: 5.6
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -1.9
   facets:
-    access_clarity: 13.2
+    access_clarity: 6.6
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 2.4
+    developer_ergonomics: 1.2
     discoverability: 48.2
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  previous_composite: 7.5
   provenance:
     mcp: derived
   regulatory:
@@ -107,12 +122,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/culina-health/culina-health-2026-11-03T125752.png
 security:
 - kind: domain-security
   name: Culina Health Domain Security
@@ -124,6 +141,6 @@ tags:
 - Nutrition
 - Telehealth
 - Dietitian
-- VirtualCare
+- Virtual Care
 website: https://culinahealth.com/
 ---

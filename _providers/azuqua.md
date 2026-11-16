@@ -5,13 +5,15 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
   band: human-only
   dimensions:
-    agent_card: conformant
+    agent_card: false
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 1
@@ -84,63 +89,63 @@ apis:
   slug: azuqua-user-api
 artifact_total: 12
 common:
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/agentic-access/azuqua-agentic-access.yml
-  title: ''
-  type: AgenticAccess
-  url: agentic-access/azuqua-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/rules/azuqua-rules.yml
+  href: https://artifacts.apis.io/azuqua/vocabulary/azuqua-vocabulary.yml
   title: ''
-  type: Spectral
-  url: rules/azuqua-rules.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/errors/azuqua-problem-types.yml
-  title: ''
-  type: ErrorCatalog
-  url: errors/azuqua-problem-types.yml
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/conformance/azuqua-conformance.yml
-  title: ''
-  type: Conformance
-  url: conformance/azuqua-conformance.yml
-- group: other
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/a2a/azuqua-a2a.yml
-  title: ''
-  type: AgentCard
-  url: a2a/azuqua-a2a.yml
+  type: Vocabulary
+  url: vocabulary/azuqua-vocabulary.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/well-known/azuqua-apis-security.txt
+  href: https://artifacts.apis.io/azuqua/well-known/azuqua-apis-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/azuqua-apis-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/well-known/azuqua-well-known.yml
+  href: https://artifacts.apis.io/azuqua/agentic-access/azuqua-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/azuqua-agentic-access.yml
+- group: design
+  href: https://artifacts.apis.io/azuqua/rules/azuqua-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/azuqua-rules.yml
+- group: design
+  href: https://artifacts.apis.io/azuqua/errors/azuqua-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/azuqua-problem-types.yml
+- group: design
+  href: https://artifacts.apis.io/azuqua/conformance/azuqua-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/azuqua-conformance.yml
+- group: agent
+  href: https://artifacts.apis.io/azuqua/well-known/azuqua-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/azuqua-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/hosts/azuqua-hosts.yml
+  href: https://artifacts.apis.io/azuqua/hosts/azuqua-hosts.yml
   title: ''
   type: Hosts
   url: hosts/azuqua-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/vendors/azuqua-vendors.yml
+  href: https://artifacts.apis.io/azuqua/vendors/azuqua-vendors.yml
   title: ''
   type: Vendors
   url: vendors/azuqua-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/packages/azuqua-packages.yml
+  href: https://artifacts.apis.io/azuqua/packages/azuqua-packages.yml
   title: ''
   type: SDKs
   url: packages/azuqua-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/packages/azuqua-packages.yml
+  href: https://artifacts.apis.io/azuqua/packages/azuqua-packages.yml
   title: ''
   type: Packages
   url: packages/azuqua-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/authentication/azuqua-authentication.yml
+  href: https://artifacts.apis.io/azuqua/authentication/azuqua-authentication.yml
   title: ''
   type: Authentication
   url: authentication/azuqua-authentication.yml
@@ -165,27 +170,27 @@ common:
   type: ChangeLog
   url: https://docs.azuqua.com/changelog/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/changelog/azuqua-changelog.yml
+  href: https://artifacts.apis.io/azuqua/changelog/azuqua-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/azuqua-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/llms/azuqua-llms.txt
+  href: https://artifacts.apis.io/azuqua/llms/azuqua-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/azuqua-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/lifecycle/azuqua-lifecycle.yml
+  href: https://artifacts.apis.io/azuqua/lifecycle/azuqua-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/azuqua-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/lifecycle/azuqua-lifecycle.yml
+  href: https://artifacts.apis.io/azuqua/lifecycle/azuqua-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/azuqua-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/security/azuqua-domain-security.yml
+  href: https://artifacts.apis.io/azuqua/security/azuqua-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/azuqua-domain-security.yml
@@ -204,28 +209,28 @@ overview: 'Azuqua publishes 8 API contracts indexed on the [APIs.io](https://api
 
 
   Azuqua''s developer surface includes authentication, documentation, API reference, changelog, and 18 more developer resources.'
-random_paper: 3
+random_paper: 15
 rules:
 - authorship: generated
-  effective_rule_count: 53
+  effective_rule_count: 89
   extends:
   - spectral:oas
   name: Azuqua API Rules
-  rule_count: 12
+  rule_count: 48
   severity_counts:
-    error: 10
+    error: 45
     hint: 0
     info: 1
-    warn: 1
+    warn: 2
   slug: azuqua-rules
 score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 31.5
+    artifact_dirs: 20
+    catalog_earned: 32.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.5
+    catalog_gap: 82.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -249,7 +254,7 @@ score:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 100.0
       total: 8
@@ -260,13 +265,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/azuqua/refs/heads/main/screenshots/azuqua-2026-07-25T202126.png
+screenshot: https://apis.io/screenshots/azuqua/azuqua-2026-07-25T202126.png
 security:
 - kind: authentication
   name: Azuqua Authentication

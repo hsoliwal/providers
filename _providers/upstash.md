@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.1
-  scored_at: '2026-10-17'
+  score: 41.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -79,9 +86,6 @@ apis:
 artifact_total: 20
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Upstash APIs Kafka API
   slug: open-upstash-kafka-api
 - collection_type: open
@@ -101,27 +105,27 @@ collections:
   slug: open-upstash
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/upstash/refs/heads/main/plans/upstash-plans-pricing.yml
+  href: https://artifacts.apis.io/upstash/plans/upstash-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/upstash-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/upstash/refs/heads/main/capabilities/upstash-capability-edges.yml
+  href: https://artifacts.apis.io/upstash/capabilities/upstash-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/upstash-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/upstash/refs/heads/main/agentic-access/upstash-agentic-access.yml
+  href: https://artifacts.apis.io/upstash/agentic-access/upstash-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/upstash-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/upstash/refs/heads/main/security/upstash-domain-security.yml
+  href: https://artifacts.apis.io/upstash/security/upstash-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/upstash-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/upstash/refs/heads/main/authentication/upstash-authentication.yml
+  href: https://artifacts.apis.io/upstash/authentication/upstash-authentication.yml
   title: ''
   type: Authentication
   url: authentication/upstash-authentication.yml
@@ -169,7 +173,10 @@ modified: '2026-05-11'
 name: Upstash
 nav: Providers
 network: true
-overview: 'Upstash publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Kafka API, Redis API, RedisCommand API, and 4 more. Tagged areas include Serverless, Redis, Kafka, Messaging, and Vector Database.
+overview: 'Upstash publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Kafka API, Redis API, RedisCommand API, and 4 more. Tagged areas include Serverless, Redis, Kafka, Messaging, and Vector Search.
+
+
+  The Upstash catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Upstash''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 8 more developer resources.'
@@ -180,26 +187,39 @@ plans:
 - name: Upstash Price Estimates
   plan_count: 0
   slug: upstash-price-estimates
-random_paper: 6
+random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: Upstash API Rules
+  rule_count: 64
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 1
+  slug: upstash-rules
 score:
   band: thin
-  composite: 36.3
+  composite: 37.9
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 49.0
+    artifact_dirs: 18
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 55.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 45.8
     developer_ergonomics: 35.7
     discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 36.2
+  previous_composite: 37.9
   provenance:
     agentic_access: derived
     contracts:
@@ -214,13 +234,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/upstash/refs/heads/main/screenshots/upstash-2026-06-20T200514.png
+screenshot: https://apis.io/screenshots/upstash/upstash-2026-06-20T200514.png
 security:
 - kind: authentication
   name: Upstash Authentication
@@ -236,9 +256,8 @@ tags:
 - Redis
 - Kafka
 - Messaging
-- Vector Database
+- Vector Search
 - Edge Computing
 - Database
-- Vector Search
 website: https://upstash.com
 ---

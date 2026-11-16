@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,20 +25,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.9
-  scored_at: '2026-10-17'
+  score: 31.3
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
-- description: FHIR‑based data platform API providing access to clinical data and analytics.
+- baseURL: https://sandbox.fhir.elationemr.com
+  baseurl_source: spec
+  description: FHIR‑based data platform API providing access to clinical data and analytics.
   name: Kodjin API
-  slug: kodjin-api-2
+  slug: kodjin-api
 - baseURL: https://sandbox.fhir.elationemr.com
   baseurl_source: declared
   description: The Auth API from Kodjin — 3 operation(s) for auth.
@@ -52,57 +67,57 @@ apis:
 artifact_total: 14
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/rules/kodjin-rules.yml
+  href: https://artifacts.apis.io/kodjin/rules/kodjin-rules.yml
   title: ''
   type: Spectral
   url: rules/kodjin-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/json-ld/kodjin-context.jsonld
+  href: https://artifacts.apis.io/kodjin/json-ld/kodjin-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/kodjin-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/vocabulary/kodjin-vocabulary.yml
+  href: https://artifacts.apis.io/kodjin/vocabulary/kodjin-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/kodjin-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/data-model/kodjin-data-model.yml
+  href: https://artifacts.apis.io/kodjin/data-model/kodjin-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kodjin-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/changelog/kodjin-changelog.yml
+  href: https://artifacts.apis.io/kodjin/changelog/kodjin-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/kodjin-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/conventions/kodjin-conventions.yml
+  href: https://artifacts.apis.io/kodjin/conventions/kodjin-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kodjin-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/conformance/kodjin-conformance.yml
+  href: https://artifacts.apis.io/kodjin/conformance/kodjin-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kodjin-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/llms/kodjin-llms.txt
+  href: https://artifacts.apis.io/kodjin/llms/kodjin-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kodjin-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/well-known/kodjin-well-known.yml
+  href: https://artifacts.apis.io/kodjin/well-known/kodjin-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kodjin-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/hosts/kodjin-hosts.yml
+  href: https://artifacts.apis.io/kodjin/hosts/kodjin-hosts.yml
   title: ''
   type: Hosts
   url: hosts/kodjin-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/vendors/kodjin-vendors.yml
+  href: https://artifacts.apis.io/kodjin/vendors/kodjin-vendors.yml
   title: ''
   type: Vendors
   url: vendors/kodjin-vendors.yml
@@ -131,7 +146,7 @@ common:
   type: Documentation
   url: https://dev.kodjin.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kodjin/refs/heads/main/security/kodjin-domain-security.yml
+  href: https://artifacts.apis.io/kodjin/security/kodjin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kodjin-domain-security.yml
@@ -185,14 +200,14 @@ modified: '2026-10-13'
 name: Kodjin
 nav: Providers
 network: true
-overview: 'Kodjin is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Fhir API, Patient API, and 2 more. Tagged areas include Company, Low-code, Platform, Automation, and Integration.
+overview: 'Kodjin is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Fhir API, and 3 more. Tagged areas include Company, Low-Code, Platform, Automation, and Integration.
 
 
   The Kodjin catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Kodjin''s developer surface includes changelog, getting-started guide, documentation, engineering blog, and 16 more developer resources.'
-random_paper: 1
+random_paper: 15
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -207,22 +222,24 @@ rules:
     warn: 1
   slug: kodjin-rules
 score:
-  band: thin
-  composite: 29.7
+  band: emerging
+  composite: 22.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.1
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
-    contract_quality: 25.7
-    developer_ergonomics: 33.3
+    contract_quality: 25.8
+    developer_ergonomics: 16.7
     discoverability: 69.6
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  previous_composite: 29.7
   provenance:
     conformance: derived
     contracts:
@@ -236,12 +253,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/kodjin/kodjin-2026-11-03T134506.png
 security:
 - kind: domain-security
   name: Kodjin Domain Security
@@ -250,7 +269,7 @@ security:
 slug: kodjin
 tags:
 - Company
-- Low-code
+- Low-Code
 - Platform
 - Automation
 - Integration

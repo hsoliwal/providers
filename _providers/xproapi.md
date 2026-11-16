@@ -1,6 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.9
-  scored_at: '2026-10-17'
+  score: 29.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -65,42 +78,42 @@ asyncapis:
   slug: xproapi-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/xproapi/refs/heads/main/agentic-access/xproapi-agentic-access.yml
+  href: https://artifacts.apis.io/xproapi/agentic-access/xproapi-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/xproapi-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/xproapi/refs/heads/main/rules/xproapi-rules.yml
+  href: https://artifacts.apis.io/xproapi/rules/xproapi-rules.yml
   title: ''
   type: Spectral
   url: rules/xproapi-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/xproapi/refs/heads/main/asyncapi/xproapi-webhooks.yml
+  href: https://artifacts.apis.io/xproapi/asyncapi/xproapi-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/xproapi-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/xproapi/refs/heads/main/conformance/xproapi-conformance.yml
+  href: https://artifacts.apis.io/xproapi/conformance/xproapi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/xproapi-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/xproapi/refs/heads/main/llms/xproapi-llms.txt
+  href: https://artifacts.apis.io/xproapi/llms/xproapi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/xproapi-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/xproapi/refs/heads/main/hosts/xproapi-hosts.yml
+  href: https://artifacts.apis.io/xproapi/hosts/xproapi-hosts.yml
   title: ''
   type: Hosts
   url: hosts/xproapi-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/xproapi/refs/heads/main/vendors/xproapi-vendors.yml
+  href: https://artifacts.apis.io/xproapi/vendors/xproapi-vendors.yml
   title: ''
   type: Vendors
   url: vendors/xproapi-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/xproapi/refs/heads/main/packages/xproapi-packages.yml
+  href: https://artifacts.apis.io/xproapi/packages/xproapi-packages.yml
   title: ''
   type: Packages
   url: packages/xproapi-packages.yml
@@ -133,7 +146,7 @@ common:
   type: GettingStarted
   url: https://xproapi.com/blog/getting-started-track-your-first-x-account-in-five-minutes
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/xproapi/refs/heads/main/security/xproapi-domain-security.yml
+  href: https://artifacts.apis.io/xproapi/security/xproapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/xproapi-domain-security.yml
@@ -159,7 +172,7 @@ overview: 'Xproapi publishes 5 API contracts indexed on the [APIs.io](https://ap
 
 
   Xproapi''s developer surface includes engineering blog, getting-started guide, documentation, and 15 more developer resources.'
-random_paper: 1
+random_paper: 3
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -174,22 +187,24 @@ rules:
     warn: 1
   slug: xproapi-rules
 score:
-  band: developing
-  composite: 40.7
+  band: thin
+  composite: 31.7
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 16
     catalog_earned: 34.5
     catalog_earned_first_party: 0.0
     catalog_gap: 65.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.0
   facets:
-    access_clarity: 57.1
+    access_clarity: 28.6
     contract_governance: 18.2
     contract_quality: 50.5
-    developer_ergonomics: 31.0
+    developer_ergonomics: 19.0
     discoverability: 60.7
-    operational_transparency: 13.2
+    operational_transparency: 10.5
+  previous_composite: 40.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -204,13 +219,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/xproapi/xproapi-2026-11-03T150311.png
 security:
 - kind: domain-security
   name: Xproapi Domain Security

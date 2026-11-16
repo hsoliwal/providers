@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.2
-  scored_at: '2026-10-17'
+  score: 27.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 2
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 9
   slug: nerdio-agentic-access
   summary_line: 9 operations · 4 acting · 2 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - description: REST API for Nerdio Manager for Enterprise. The API is disabled by default and is enabled per install from System > Settings > Integrations, which provisions an Entra ID application under the nerdio-n
   name: Nerdio Manager for Enterprise REST API
@@ -70,7 +73,7 @@ apis:
   description: The Usage API from Nerdio — 1 operation(s) for usage.
   name: Nerdio Usage API
   slug: nerdio-usage-api
-artifact_total: 13
+artifact_total: 16
 asyncapis:
 - description: ''
   name: Nerdio Notifications Webhooks
@@ -89,27 +92,27 @@ common:
   type: BlogRSS
   url: https://getnerdio.com/resources/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/capabilities/nerdio-capability-edges.yml
+  href: https://artifacts.apis.io/nerdio/capabilities/nerdio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/nerdio-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/overlays/nerdio-distributor-api-overlay.yaml
+  href: https://artifacts.apis.io/nerdio/overlays/nerdio-distributor-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nerdio-distributor-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/mcp/nerdio-mcp.yml
+  href: https://artifacts.apis.io/nerdio/mcp/nerdio-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/nerdio-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/agentic-access/nerdio-agentic-access.yml
+  href: https://artifacts.apis.io/nerdio/agentic-access/nerdio-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nerdio-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/security/nerdio-domain-security.yml
+  href: https://artifacts.apis.io/nerdio/security/nerdio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nerdio-domain-security.yml
@@ -170,12 +173,12 @@ common:
   type: Compliance
   url: https://getnerdio.com/nerdio-trust-center/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/changelog/nerdio-changelog.yml
+  href: https://artifacts.apis.io/nerdio/changelog/nerdio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/nerdio-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/lifecycle/nerdio-lifecycle.yml
+  href: https://artifacts.apis.io/nerdio/lifecycle/nerdio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nerdio-lifecycle.yml
@@ -184,57 +187,57 @@ common:
   type: Deprecation
   url: https://nmehelp.getnerdio.com/hc/en-us/articles/29088961923981-REST-API-Deprecated-Endpoints-and-Properties
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/authentication/nerdio-authentication.yml
+  href: https://artifacts.apis.io/nerdio/authentication/nerdio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nerdio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/conventions/nerdio-conventions.yml
+  href: https://artifacts.apis.io/nerdio/conventions/nerdio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nerdio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/conformance/nerdio-conformance.yml
+  href: https://artifacts.apis.io/nerdio/conformance/nerdio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nerdio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/errors/nerdio-problem-types.yml
+  href: https://artifacts.apis.io/nerdio/errors/nerdio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/nerdio-problem-types.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/packages/nerdio-packages.yml
+  href: https://artifacts.apis.io/nerdio/packages/nerdio-packages.yml
   title: ''
   type: Packages
   url: packages/nerdio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/packages/nerdio-packages.yml
+  href: https://artifacts.apis.io/nerdio/packages/nerdio-packages.yml
   title: ''
   type: SDKs
   url: packages/nerdio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/cli/nerdio-cli.yml
+  href: https://artifacts.apis.io/nerdio/cli/nerdio-cli.yml
   title: ''
   type: CLI
   url: cli/nerdio-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/data-model/nerdio-data-model.yml
+  href: https://artifacts.apis.io/nerdio/data-model/nerdio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/nerdio-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/asyncapi/nerdio-notifications-webhooks.yml
+  href: https://artifacts.apis.io/nerdio/asyncapi/nerdio-notifications-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/nerdio-notifications-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/nerdio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/llms/nerdio-llms.txt
+  href: https://artifacts.apis.io/nerdio/llms/nerdio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nerdio-llms.txt
@@ -250,37 +253,50 @@ network: true
 overview: 'Nerdio publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Health API, Install API, Invoices API, and 3 more. Tagged areas include Company, Azure Virtual Desktop, Windows 365, Virtual Desktop Infrastructure, and Cloud Desktop Management.
 
 
-  The Nerdio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Nerdio catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Nerdio''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 28 more developer resources.'
-random_paper: 3
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 69
+  extends:
+  - spectral:oas
+  name: Nerdio API Rules
+  rule_count: 28
+  severity_counts:
+    error: 26
+    hint: 0
+    info: 1
+    warn: 1
+  slug: nerdio-rules
 score:
   band: developing
-  composite: 50.0
+  composite: 52.7
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.0
   facets:
     access_clarity: 60.5
-    contract_governance: 4.5
-    contract_quality: 45.8
+    contract_governance: 18.2
+    contract_quality: 49.7
     developer_ergonomics: 63.7
     discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 50.0
+  previous_composite: 51.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 4
     mcp: derived
     skills: derived
@@ -290,13 +306,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/screenshots/nerdio-2026-08-07T184907.png
+screenshot: https://apis.io/screenshots/nerdio/nerdio-2026-08-07T184907.png
 security:
 - kind: authentication
   name: Nerdio Authentication
@@ -314,6 +330,12 @@ security:
   name: Nerdio Trust Center
   slug: nerdio-trust-center
   summary_line: SOC 2, GDPR
+skill_count: 2
+skills:
+- name: Collect Nerdio Manager usage and invoice data for billing
+  slug: nerdio-collect-usage-and-invoices
+- name: Register and manage a partner's Nerdio Manager installs
+  slug: nerdio-register-partner-install
 slug: nerdio
 tags:
 - Company

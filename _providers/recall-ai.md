@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +28,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: derived
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 48.2
-  scored_at: '2026-10-17'
+  score: 48.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 66
   human_in_the_loop: 2
@@ -150,88 +155,93 @@ asyncapis:
   name: Recall Ai Webhooks
   slug: recall-ai-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/recall-ai/capabilities/recall-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/recall-ai-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/agentic-access/recall-ai-agentic-access.yml
+  href: https://artifacts.apis.io/recall-ai/agentic-access/recall-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/recall-ai-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/rules/recall-ai-rules.yml
+  href: https://artifacts.apis.io/recall-ai/rules/recall-ai-rules.yml
   title: ''
   type: Spectral
   url: rules/recall-ai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/json-ld/recall-ai-context.jsonld
+  href: https://artifacts.apis.io/recall-ai/json-ld/recall-ai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/recall-ai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/vocabulary/recall-ai-vocabulary.yml
+  href: https://artifacts.apis.io/recall-ai/vocabulary/recall-ai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/recall-ai-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/asyncapi/recall-ai-webhooks.yml
+  href: https://artifacts.apis.io/recall-ai/asyncapi/recall-ai-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/recall-ai-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/data-model/recall-ai-data-model.yml
+  href: https://artifacts.apis.io/recall-ai/data-model/recall-ai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/recall-ai-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/conventions/recall-ai-conventions.yml
+  href: https://artifacts.apis.io/recall-ai/conventions/recall-ai-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/recall-ai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/conventions/recall-ai-conventions.yml
+  href: https://artifacts.apis.io/recall-ai/conventions/recall-ai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/recall-ai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/errors/recall-ai-problem-types.yml
+  href: https://artifacts.apis.io/recall-ai/errors/recall-ai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/recall-ai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/conformance/recall-ai-conformance.yml
+  href: https://artifacts.apis.io/recall-ai/conformance/recall-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/recall-ai-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/llms/recall-ai-llms.txt
+  href: https://artifacts.apis.io/recall-ai/llms/recall-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/recall-ai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/mcp/recall-ai-mcp.yml
+  href: https://artifacts.apis.io/recall-ai/mcp/recall-ai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/recall-ai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/well-known/recall-ai-well-known.yml
+  href: https://artifacts.apis.io/recall-ai/well-known/recall-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/recall-ai-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/hosts/recall-ai-hosts.yml
+  href: https://artifacts.apis.io/recall-ai/hosts/recall-ai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/recall-ai-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/vendors/recall-ai-vendors.yml
+  href: https://artifacts.apis.io/recall-ai/vendors/recall-ai-vendors.yml
   title: ''
   type: Vendors
   url: vendors/recall-ai-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/packages/recall-ai-packages.yml
+  href: https://artifacts.apis.io/recall-ai/packages/recall-ai-packages.yml
   title: ''
   type: SDKs
   url: packages/recall-ai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/packages/recall-ai-packages.yml
+  href: https://artifacts.apis.io/recall-ai/packages/recall-ai-packages.yml
   title: ''
   type: Packages
   url: packages/recall-ai-packages.yml
@@ -248,12 +258,12 @@ common:
   type: Login
   url: https://www.recall.ai/login
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/authentication/recall-ai-authentication.yml
+  href: https://artifacts.apis.io/recall-ai/authentication/recall-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/recall-ai-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/security/recall-ai-domain-security.yml
+  href: https://artifacts.apis.io/recall-ai/security/recall-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/recall-ai-domain-security.yml
@@ -290,40 +300,40 @@ common:
   type: X
   url: https://twitter.com/recall_ai
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/plans/recall-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/recall-ai/plans/recall-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/recall-ai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/rate-limits/recall-ai-rate-limits.yml
+  href: https://artifacts.apis.io/recall-ai/rate-limits/recall-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/recall-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/finops/recall-ai-finops.yml
+  href: https://artifacts.apis.io/recall-ai/finops/recall-ai-finops.yml
   title: ''
   type: FinOps
   url: finops/recall-ai-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/json-ld/recall-ai-context.jsonld
+  href: https://artifacts.apis.io/recall-ai/json-ld/recall-ai-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/recall-ai-context.jsonld
 - group: company
-  href: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/blogs/blogs.json
+  href: https://artifacts.apis.io/recall-ai/blogs/blogs.json
   title: ''
   type: BlogPosts
   url: blogs/blogs.json
 created: '2026-06-12'
 description: Recall.ai provides meeting bot infrastructure through a REST API that enables developers to programmatically join Zoom, Microsoft Teams, Google Meet, Webex, Slack Huddles, and other video conferencing platforms. The API delivers real-time and asynchronous access to meeting recordings, AI-powered transcription, participant metadata, and structured meeting data. Developers can deploy bots that stream audio and video, trigger calendar-driven automations, and extract actionable insights from meetings at scale. Recall.ai supports multi-region deployments across US West, US East, EU, and Asia-Pacific, with per-second usage billing and no monthly platform fee.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Recall Ai Finops
-  primary_unit: ''
+  primary_unit: hour of recording
   service_category: ''
   slug: recall-ai-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/recall-ai.png
 json_schemas:
 - name: BotGet
@@ -364,12 +374,12 @@ overview: 'Recall.ai publishes 20 API contracts indexed on the [APIs.io](https:/
   The Recall.ai catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Recall.ai''s developer surface includes authentication, documentation, engineering blog, pricing, and 31 more developer resources.'
+  Recall.ai''s developer surface includes authentication, documentation, engineering blog, pricing, and 32 more developer resources.'
 plans:
 - name: Recall Ai Plans Pricing
-  plan_count: 3
+  plan_count: 4
   slug: recall-ai-plans-pricing
-random_paper: 16
+random_paper: 10
 rate_limits:
 - limit_count: 7
   name: Recall Ai Rate Limits
@@ -388,24 +398,24 @@ rules:
     warn: 1
   slug: recall-ai-rules
 score:
-  band: developing
-  composite: 51.2
+  band: strong
+  composite: 58.7
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 68.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 46.3
+    artifact_dirs: 29
+    catalog_earned: 80.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 34.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 14.9
+  delta: 1.2
   facets:
-    access_clarity: 52.6
+    access_clarity: 67.1
     contract_governance: 22.0
-    contract_quality: 71.2
-    developer_ergonomics: 26.2
+    contract_quality: 76.3
+    developer_ergonomics: 42.9
     discoverability: 75.0
-    operational_transparency: 32.9
-  previous_composite: 36.3
+    operational_transparency: 36.8
+  previous_composite: 57.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -420,14 +430,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/recall-ai/refs/heads/main/screenshots/recall-ai-2026-06-20T192655.png
+screenshot: https://apis.io/screenshots/recall-ai/recall-ai-2026-06-20T192655.png
 security:
 - kind: authentication
   name: Recall Ai Authentication

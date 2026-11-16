@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Automotive data APIs providing vehicle identity, history, valuations, specs and images.
@@ -40,17 +53,17 @@ common:
   type: PrivacyPolicy
   url: https://www.oneautoapi.com/privacy-policy/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/oneautoapi/refs/heads/main/changelog/oneautoapi-changelog.yml
+  href: https://artifacts.apis.io/oneautoapi/changelog/oneautoapi-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/oneautoapi-changelog.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/oneautoapi/refs/heads/main/hosts/oneautoapi-hosts.yml
+  href: https://artifacts.apis.io/oneautoapi/hosts/oneautoapi-hosts.yml
   title: ''
   type: Hosts
   url: hosts/oneautoapi-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/oneautoapi/refs/heads/main/vendors/oneautoapi-vendors.yml
+  href: https://artifacts.apis.io/oneautoapi/vendors/oneautoapi-vendors.yml
   title: ''
   type: Vendors
   url: vendors/oneautoapi-vendors.yml
@@ -63,7 +76,7 @@ common:
   type: ChangeLog
   url: https://docs.oneautoapi.com/changelog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oneautoapi/refs/heads/main/security/oneautoapi-domain-security.yml
+  href: https://artifacts.apis.io/oneautoapi/security/oneautoapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/oneautoapi-domain-security.yml
@@ -122,22 +135,22 @@ overview: 'One Auto API is listed with 1 API on the [APIs.io](https://apis.io/) 
 random_paper: 21
 score:
   band: emerging
-  composite: 22.7
+  composite: 13.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -9.6
   facets:
-    access_clarity: 44.7
+    access_clarity: 22.4
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 35.7
+    developer_ergonomics: 17.9
     discoverability: 48.2
-    operational_transparency: 15.8
+    operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -154,15 +167,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 9.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/oneautoapi/refs/heads/main/screenshots/oneautoapi-2026-10-11T111909.png
+screenshot: https://apis.io/screenshots/oneautoapi/oneautoapi-2026-10-11T111909.png
 security:
 - kind: domain-security
   name: Oneautoapi Domain Security

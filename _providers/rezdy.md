@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 36.3
-  scored_at: '2026-10-17'
+  score: 35.5
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
 - baseURL: https://api.rezdy-staging.com
@@ -66,69 +80,69 @@ apis:
   description: The Vouchers API from Rezdy — 1 operation(s) for vouchers.
   name: Rezdy Vouchers API
   slug: rezdy-vouchers-api
-artifact_total: 20
+artifact_total: 22
 asyncapis:
 - description: ''
   name: Rezdy Webhooks
   slug: rezdy-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/well-known/rezdy-status-security.txt
+  href: https://artifacts.apis.io/rezdy/well-known/rezdy-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/rezdy-status-security.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/plans/rezdy-plans-pricing.yml
+  href: https://artifacts.apis.io/rezdy/plans/rezdy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/rezdy-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/rules/rezdy-rules.yml
+  href: https://artifacts.apis.io/rezdy/rules/rezdy-rules.yml
   title: ''
   type: Spectral
   url: rules/rezdy-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/json-ld/rezdy-context.jsonld
+  href: https://artifacts.apis.io/rezdy/json-ld/rezdy-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/rezdy-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/vocabulary/rezdy-vocabulary.yml
+  href: https://artifacts.apis.io/rezdy/vocabulary/rezdy-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/rezdy-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/asyncapi/rezdy-webhooks.yml
+  href: https://artifacts.apis.io/rezdy/asyncapi/rezdy-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/rezdy-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/data-model/rezdy-data-model.yml
+  href: https://artifacts.apis.io/rezdy/data-model/rezdy-data-model.yml
   title: ''
   type: DataModel
   url: data-model/rezdy-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/conformance/rezdy-conformance.yml
+  href: https://artifacts.apis.io/rezdy/conformance/rezdy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rezdy-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/llms/rezdy-llms.txt
+  href: https://artifacts.apis.io/rezdy/llms/rezdy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rezdy-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/well-known/rezdy-well-known.yml
+  href: https://artifacts.apis.io/rezdy/well-known/rezdy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rezdy-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/hosts/rezdy-hosts.yml
+  href: https://artifacts.apis.io/rezdy/hosts/rezdy-hosts.yml
   title: ''
   type: Hosts
   url: hosts/rezdy-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/vendors/rezdy-vendors.yml
+  href: https://artifacts.apis.io/rezdy/vendors/rezdy-vendors.yml
   title: ''
   type: Vendors
   url: vendors/rezdy-vendors.yml
@@ -149,12 +163,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/Rezdy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/security/rezdy-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/rezdy/security/rezdy-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/rezdy-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rezdy/refs/heads/main/security/rezdy-domain-security.yml
+  href: https://artifacts.apis.io/rezdy/security/rezdy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rezdy-domain-security.yml
@@ -212,6 +226,14 @@ coverage:
   state: unreadable
 created: '2026-10-12'
 description: Rezdy provides a comprehensive online booking system for tour and experience providers, offering a full-featured platform that includes automated communications, live availability, reporting and analytics, channel management, and integration tools. Their API enables developers to embed booking functionality, manage inventory, process payments, and access a large distribution network, supporting businesses of all sizes in the travel and tourism industry.
+finops:
+- has_sources: true
+  method: derived
+  name: Rezdy Finops
+  primary_unit: seat
+  service_category: ''
+  slug: rezdy-finops
+  template: false
 image: https://rezdy.com/wp-content/uploads/2017/09/rezdy-og-image.png
 json_schemas:
 - name: PostBookingsRequest
@@ -253,7 +275,10 @@ plans:
 - name: Rezdy Plans Pricing
   plan_count: 3
   slug: rezdy-plans-pricing
-random_paper: 8
+- name: Rezdy Price Estimates
+  plan_count: 0
+  slug: rezdy-price-estimates
+random_paper: 6
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -269,21 +294,23 @@ rules:
   slug: rezdy-rules
 score:
   band: developing
-  composite: 49.7
+  composite: 39.5
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 72.8
+    artifact_dirs: 20
+    catalog_earned: 75.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 42.3
+    catalog_gap: 39.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -11.8
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 22.0
     contract_quality: 35.5
-    developer_ergonomics: 45.2
-    discoverability: 71.4
-    operational_transparency: 39.5
+    developer_ergonomics: 22.6
+    discoverability: 70.5
+    operational_transparency: 23.7
+  previous_composite: 51.3
   provenance:
     conformance: derived
     contracts:
@@ -297,12 +324,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 26.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/rezdy/rezdy-2026-11-03T142248.png
 security:
 - kind: domain-security
   name: Rezdy Domain Security

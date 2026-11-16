@@ -27,16 +27,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 23.8
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://paxcheck-app-dev.staging.zamna.com
   baseurl_source: declared
@@ -58,11 +61,8 @@ apis:
   description: The Start2 API from Zamna — 1 operation(s) for start2.
   name: Zamna Start2 API
   slug: zamna-start2-api
-artifact_total: 11
+artifact_total: 12
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Zamna Ready To Fly Session API
   slug: open-zamna-session-api
@@ -77,12 +77,12 @@ collections:
   slug: open-zamna-start2-api
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/security/zamna-domain-security.yml
+  href: https://artifacts.apis.io/zamna/security/zamna-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zamna-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/authentication/zamna-authentication.yml
+  href: https://artifacts.apis.io/zamna/authentication/zamna-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zamna-authentication.yml
@@ -107,57 +107,57 @@ common:
   type: GettingStarted
   url: https://dev.zamna.com/start/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/mcp/zamna-mcp.yml
+  href: https://artifacts.apis.io/zamna/mcp/zamna-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/zamna-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/zamna/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/llms/zamna-llms.txt
+  href: https://artifacts.apis.io/zamna/llms/zamna-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zamna-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/overlays/zamna-paxcheck-overlay.yaml
+  href: https://artifacts.apis.io/zamna/overlays/zamna-paxcheck-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zamna-paxcheck-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/conformance/zamna-conformance.yml
+  href: https://artifacts.apis.io/zamna/conformance/zamna-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zamna-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/errors/zamna-problem-types.yml
+  href: https://artifacts.apis.io/zamna/errors/zamna-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/zamna-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/lifecycle/zamna-lifecycle.yml
+  href: https://artifacts.apis.io/zamna/lifecycle/zamna-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zamna-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/conventions/zamna-conventions.yml
+  href: https://artifacts.apis.io/zamna/conventions/zamna-conventions.yml
   title: ''
   type: Conventions
   url: conventions/zamna-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/sandbox/zamna-sandbox.yml
+  href: https://artifacts.apis.io/zamna/sandbox/zamna-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/zamna-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/components/zamna-components.yml
+  href: https://artifacts.apis.io/zamna/components/zamna-components.yml
   title: ''
   type: Components
   url: components/zamna-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/data-model/zamna-data-model.yml
+  href: https://artifacts.apis.io/zamna/data-model/zamna-data-model.yml
   title: ''
   type: DataModel
   url: data-model/zamna-data-model.yml
@@ -172,33 +172,49 @@ network: true
 overview: 'Zamna publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Session API, Start API, Start With Booking Id And Surname API, and 1 more. Tagged areas include Company, Aviation, Travel, Identity Verification, and Digital Identity.
 
 
+  The Zamna catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Zamna''s developer surface includes authentication, documentation, API reference, getting-started guide, sandbox, and 13 more developer resources.'
 random_paper: 7
+rules:
+- authorship: generated
+  effective_rule_count: 83
+  extends:
+  - spectral:oas
+  name: Zamna API Rules
+  rule_count: 42
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 2
+    warn: 4
+  slug: zamna-rules
 score:
   band: thin
-  composite: 29.2
+  composite: 32.0
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 20
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.1
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 40.3
+    contract_governance: 18.2
+    contract_quality: 44.7
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 29.2
+  previous_composite: 30.9
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 4
     mcp: derived
     skills: derived
@@ -212,13 +228,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zamna/refs/heads/main/screenshots/zamna-2026-09-02T171446.png
+screenshot: https://apis.io/screenshots/zamna/zamna-2026-09-02T171446.png
 security:
 - kind: authentication
   name: Zamna Authentication
@@ -228,6 +244,10 @@ security:
   name: Zamna Domain Security
   slug: zamna-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 1
+skills:
+- name: Complete a Ready To Fly passenger check
+  slug: zamna-ready-to-fly-passenger-check
 slug: zamna
 tags:
 - Company

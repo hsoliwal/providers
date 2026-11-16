@@ -1,11 +1,15 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,37 +39,37 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/von/refs/heads/main/plans/von-plans-pricing.yml
+  href: https://artifacts.apis.io/von/plans/von-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/von-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/von/refs/heads/main/security/von-trust-center.yml
+  href: https://artifacts.apis.io/von/security/von-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/von-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/von/refs/heads/main/security/von-trust-center.yml
+  href: https://artifacts.apis.io/von/security/von-trust-center.yml
   title: ''
   type: Compliance
   url: security/von-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/von/refs/heads/main/security/von-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/von/security/von-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/von-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/von/refs/heads/main/security/von-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/von/security/von-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/von-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/von/refs/heads/main/security/von-domain-security.yml
+  href: https://artifacts.apis.io/von/security/von-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/von-domain-security.yml
@@ -107,7 +114,7 @@ common:
   type: YouTube
   url: https://www.youtube.com/@Vonlabs
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/von/refs/heads/main/llms/von-llms.txt
+  href: https://artifacts.apis.io/von/llms/von-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/von-llms.txt
@@ -141,7 +148,7 @@ plans:
 - name: Von Plans Pricing
   plan_count: 0
   slug: von-plans-pricing
-random_paper: 9
+random_paper: 3
 score:
   band: emerging
   composite: 18.1
@@ -167,14 +174,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/von/refs/heads/main/screenshots/von-2026-09-02T170229.png
+screenshot: https://apis.io/screenshots/von/von-2026-09-02T170229.png
 security:
 - kind: domain-security
   name: Von Domain Security

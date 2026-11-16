@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Higher Logic community platform API (no public documentation found)
@@ -36,27 +49,27 @@ common:
   type: Compliance
   url: https://trust.higherlogic.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/higher-logic/refs/heads/main/conformance/higher-logic-conformance.yml
+  href: https://artifacts.apis.io/higher-logic/conformance/higher-logic-conformance.yml
   title: ''
   type: Conformance
   url: conformance/higher-logic-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/higher-logic/refs/heads/main/llms/higher-logic-llms.txt
+  href: https://artifacts.apis.io/higher-logic/llms/higher-logic-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/higher-logic-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/higher-logic/refs/heads/main/well-known/higher-logic-well-known.yml
+  href: https://artifacts.apis.io/higher-logic/well-known/higher-logic-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/higher-logic-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/higher-logic/refs/heads/main/hosts/higher-logic-hosts.yml
+  href: https://artifacts.apis.io/higher-logic/hosts/higher-logic-hosts.yml
   title: ''
   type: Hosts
   url: hosts/higher-logic-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/higher-logic/refs/heads/main/vendors/higher-logic-vendors.yml
+  href: https://artifacts.apis.io/higher-logic/vendors/higher-logic-vendors.yml
   title: ''
   type: Vendors
   url: vendors/higher-logic-vendors.yml
@@ -85,12 +98,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/higherlogic
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/higher-logic/refs/heads/main/security/higher-logic-trust-center.yml
+  href: https://artifacts.apis.io/higher-logic/security/higher-logic-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/higher-logic-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/higher-logic/refs/heads/main/security/higher-logic-domain-security.yml
+  href: https://artifacts.apis.io/higher-logic/security/higher-logic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/higher-logic-domain-security.yml
@@ -116,24 +129,26 @@ overview: 'Higher Logic is listed with 1 API on the [APIs.io](https://apis.io/) 
 
 
   Higher Logic''s developer surface includes support, engineering blog, and 13 more developer resources.'
-random_paper: 14
+random_paper: 2
 score:
   band: emerging
-  composite: 15.4
+  composite: 13.2
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 11
     catalog_earned: 30.0
     catalog_earned_first_party: 0.0
     catalog_gap: 85.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.2
   facets:
-    access_clarity: 26.3
+    access_clarity: 22.4
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 7.1
-    discoverability: 64.3
-    operational_transparency: 5.3
+    developer_ergonomics: 4.8
+    discoverability: 62.5
+    operational_transparency: 2.6
+  previous_composite: 15.4
   provenance:
     conformance: first-party
     mcp: unknown
@@ -142,13 +157,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/higher-logic/higher-logic-2026-11-03T133359.png
 security:
 - kind: domain-security
   name: Higher Logic Domain Security

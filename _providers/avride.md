@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -32,12 +45,12 @@ common:
   type: BlogRSS
   url: https://medium.com/feed/avride
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/avride/refs/heads/main/hosts/avride-hosts.yml
+  href: https://artifacts.apis.io/avride/hosts/avride-hosts.yml
   title: ''
   type: Hosts
   url: hosts/avride-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/avride/refs/heads/main/vendors/avride-vendors.yml
+  href: https://artifacts.apis.io/avride/vendors/avride-vendors.yml
   title: ''
   type: Vendors
   url: vendors/avride-vendors.yml
@@ -46,7 +59,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/avride
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avride/refs/heads/main/security/avride-domain-security.yml
+  href: https://artifacts.apis.io/avride/security/avride-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/avride-domain-security.yml
@@ -91,26 +104,26 @@ overview: 'Avride is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Avride''s developer surface includes engineering blog and 9 more developer resources.'
-random_paper: 19
+random_paper: 11
 score:
   band: minimal
-  composite: 9.5
+  composite: 6.2
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -3.3
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 2.4
+    developer_ergonomics: 1.2
     discoverability: 44.6
-    operational_transparency: 5.3
-  previous_composite: 9.4
+    operational_transparency: 2.6
+  previous_composite: 9.5
   provenance:
     mcp: unknown
   regulatory:
@@ -118,15 +131,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 12.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 9.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/avride/refs/heads/main/screenshots/avride-2026-10-11T101205.png
+screenshot: https://apis.io/screenshots/avride/avride-2026-10-11T101205.png
 security:
 - kind: domain-security
   name: Avride Domain Security

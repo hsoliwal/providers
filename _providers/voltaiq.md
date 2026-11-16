@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Paid · Open access
+  onboarding: open
+  pricing: paid
+  public: true
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
@@ -32,12 +48,12 @@ common:
   type: BlogRSS
   url: https://www.voltaiq.com/blog/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voltaiq/refs/heads/main/security/voltaiq-trust-center.yml
+  href: https://artifacts.apis.io/voltaiq/security/voltaiq-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/voltaiq-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voltaiq/refs/heads/main/security/voltaiq-domain-security.yml
+  href: https://artifacts.apis.io/voltaiq/security/voltaiq-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/voltaiq-domain-security.yml
@@ -70,42 +86,42 @@ common:
   type: Compliance
   url: https://www.voltaiq.com/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voltaiq/refs/heads/main/conformance/voltaiq-conformance.yml
+  href: https://artifacts.apis.io/voltaiq/conformance/voltaiq-conformance.yml
   title: ''
   type: Conformance
   url: conformance/voltaiq-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/voltaiq/refs/heads/main/lifecycle/voltaiq-lifecycle.yml
+  href: https://artifacts.apis.io/voltaiq/lifecycle/voltaiq-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/voltaiq-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/voltaiq/refs/heads/main/authentication/voltaiq-authentication.yml
+  href: https://artifacts.apis.io/voltaiq/authentication/voltaiq-authentication.yml
   title: ''
   type: Authentication
   url: authentication/voltaiq-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/voltaiq/refs/heads/main/packages/voltaiq-packages.yml
+  href: https://artifacts.apis.io/voltaiq/packages/voltaiq-packages.yml
   title: ''
   type: Packages
   url: packages/voltaiq-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/voltaiq/refs/heads/main/packages/voltaiq-packages.yml
+  href: https://artifacts.apis.io/voltaiq/packages/voltaiq-packages.yml
   title: ''
   type: SDKs
   url: packages/voltaiq-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/voltaiq/refs/heads/main/plans/voltaiq-plans-pricing.yml
+  href: https://artifacts.apis.io/voltaiq/plans/voltaiq-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/voltaiq-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/voltaiq/refs/heads/main/rate-limits/voltaiq-rate-limits.yml
+  href: https://artifacts.apis.io/voltaiq/rate-limits/voltaiq-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/voltaiq-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/voltaiq/refs/heads/main/llms/voltaiq-llms.txt
+  href: https://artifacts.apis.io/voltaiq/llms/voltaiq-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/voltaiq-llms.txt
@@ -139,7 +155,7 @@ plans:
 - name: Voltaiq Plans Pricing
   plan_count: 3
   slug: voltaiq-plans-pricing
-random_paper: 20
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Voltaiq Rate Limits
@@ -148,7 +164,7 @@ score:
   band: thin
   composite: 28.2
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -175,14 +191,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 21.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/voltaiq/refs/heads/main/screenshots/voltaiq-2026-10-11T133112.png
+screenshot: https://apis.io/screenshots/voltaiq/voltaiq-2026-10-11T133112.png
 security:
 - kind: authentication
   name: Voltaiq Authentication

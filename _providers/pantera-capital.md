@@ -1,7 +1,7 @@
 ---
 access_model:
   confidence: low
-  generated: '2026-07-22'
+  generated: '2026-11-06'
   label: Unknown
   method: derived
   onboarding: unknown
@@ -21,7 +21,7 @@ modified: '2026-10-06'
 name: Pantera Capital
 nav: Providers
 network: true
-random_paper: 8
+random_paper: 14
 slug: pantera-capital
 tags:
 - Venture Capital

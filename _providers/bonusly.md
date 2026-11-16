@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.1
-  scored_at: '2026-10-17'
+  score: 31.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -77,9 +84,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Bonusly Analytics API
   slug: open-bonusly-analytics-api
 - collection_type: open
@@ -102,22 +106,22 @@ collections:
   slug: open-bonusly
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/capabilities/bonusly-capability-edges.yml
+  href: https://artifacts.apis.io/bonusly/capabilities/bonusly-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bonusly-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/agentic-access/bonusly-agentic-access.yml
+  href: https://artifacts.apis.io/bonusly/agentic-access/bonusly-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bonusly-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/security/bonusly-domain-security.yml
+  href: https://artifacts.apis.io/bonusly/security/bonusly-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bonusly-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/authentication/bonusly-authentication.yml
+  href: https://artifacts.apis.io/bonusly/authentication/bonusly-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bonusly-authentication.yml
@@ -138,17 +142,17 @@ common:
   type: Documentation
   url: https://docs.bonus.ly/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/plans/bonusly-plans-pricing.yml
+  href: https://artifacts.apis.io/bonusly/plans/bonusly-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bonusly-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/rate-limits/bonusly-rate-limits.yml
+  href: https://artifacts.apis.io/bonusly/rate-limits/bonusly-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bonusly-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/finops/bonusly-finops.yml
+  href: https://artifacts.apis.io/bonusly/finops/bonusly-finops.yml
   title: ''
   type: FinOps
   url: finops/bonusly-finops.yml
@@ -179,35 +183,51 @@ network: true
 overview: 'Bonusly publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analytics API, Bonuses API, Company API, and 3 more. Tagged areas include Employee Recognition, Rewards, Employee Engagement, Human Resources, and Company Culture.
 
 
+  The Bonusly catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Bonusly''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Bonusly Plans Pricing
   plan_count: 4
   slug: bonusly-plans-pricing
-random_paper: 10
+random_paper: 12
 rate_limits:
 - limit_count: 3
   name: Bonusly Rate Limits
   slug: bonusly-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Bonusly API Rules
+  rule_count: 61
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 2
+    warn: 5
+  slug: bonusly-rules
 score:
-  band: emerging
-  composite: 26.0
+  band: thin
+  composite: 27.9
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
+    artifact_dirs: 18
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.4
+  delta: 0.2
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 53.0
-    developer_ergonomics: 23.8
+    developer_ergonomics: 25.0
     discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 34.4
+  previous_composite: 27.7
   provenance:
     agentic_access: derived
     contracts:
@@ -222,13 +242,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/screenshots/bonusly-2026-07-25T203601.png
+screenshot: https://apis.io/screenshots/bonusly/bonusly-2026-07-25T203601.png
 security:
 - kind: authentication
   name: Bonusly Authentication

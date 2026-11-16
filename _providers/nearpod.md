@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -73,7 +77,7 @@ common:
   type: StatusPage
   url: https://status.nearpod.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nearpod/refs/heads/main/lifecycle/nearpod-lifecycle.yml
+  href: https://artifacts.apis.io/nearpod/lifecycle/nearpod-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nearpod-lifecycle.yml
@@ -86,12 +90,12 @@ common:
   type: PrivacyPolicy
   url: https://nearpod.com/privacy-notice/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nearpod/refs/heads/main/llms/nearpod-llms.txt
+  href: https://artifacts.apis.io/nearpod/llms/nearpod-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nearpod-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nearpod/refs/heads/main/security/nearpod-domain-security.yml
+  href: https://artifacts.apis.io/nearpod/security/nearpod-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nearpod-domain-security.yml
@@ -107,12 +111,12 @@ overview: 'Nearpod is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Nearpod''s developer surface includes engineering blog, pricing, signup flow, support, getting-started guide, and 9 more developer resources.'
-random_paper: 19
+random_paper: 1
 score:
   band: emerging
   composite: 19.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -133,14 +137,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nearpod/refs/heads/main/screenshots/nearpod-2026-08-07T184759.png
+screenshot: https://apis.io/screenshots/nearpod/nearpod-2026-08-07T184759.png
 security:
 - kind: domain-security
   name: Nearpod Domain Security

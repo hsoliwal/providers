@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
-  - '{''url'': ''https://theranest.com'', ''status'': 301, ''note'': ''declared website redirects to https://ensorahealth.com/product/theranest-mental-health/ — a different registrable domain (theranest.com -> ensorahealth.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   - plans
+  - security
+  - '{''url'': ''https://theranest.com'', ''status'': 301, ''note'': ''declared website redirects to https://ensorahealth.com/product/theranest-mental-health/ — a different registrable domain (theranest.com -> ensorahealth.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -43,7 +47,7 @@ common:
   type: Blog
   url: https://ensorahealth.com/news/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/theranest/refs/heads/main/security/theranest-domain-security.yml
+  href: https://artifacts.apis.io/theranest/security/theranest-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/theranest-domain-security.yml
@@ -60,12 +64,12 @@ common:
   type: Documentation
   url: https://theranest.zendesk.com/hc/en-us
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/theranest/refs/heads/main/plans/theranest-plans-pricing.yml
+  href: https://artifacts.apis.io/theranest/plans/theranest-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/theranest-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/theranest/refs/heads/main/finops/theranest-finops.yml
+  href: https://artifacts.apis.io/theranest/finops/theranest-finops.yml
   title: ''
   type: FinOps
   url: finops/theranest-finops.yml
@@ -97,7 +101,7 @@ plans:
 - name: Theranest Plans Pricing
   plan_count: 5
   slug: theranest-plans-pricing
-random_paper: 6
+random_paper: 14
 score:
   band: minimal
   composite: 5.8
@@ -108,7 +112,7 @@ score:
     catalog_gap: 85.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.1
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
@@ -116,21 +120,21 @@ score:
     developer_ergonomics: 2.4
     discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 10.9
+  previous_composite: 5.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/theranest/refs/heads/main/screenshots/theranest-2026-09-02T163500.png
+screenshot: https://apis.io/screenshots/theranest/theranest-2026-09-02T163500.png
 security:
 - kind: domain-security
   name: Theranest Domain Security

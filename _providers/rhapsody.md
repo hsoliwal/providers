@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Enterprise · Sales-led · Gated documentation
+  confidence: low
+  label: Unknown
   onboarding: unknown
-  pricing: enterprise
+  pricing: unknown
   public: false
   source:
-  - website
-  - documentation
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: Rhapsody's flagship healthcare integration engine, connecting systems across FHIR, HL7 v2, REST, CDA, X12/EDI, SQL, DICOM, AMQP, and MCP from a single platform, with a REST administration/management A
@@ -66,47 +70,47 @@ common:
   type: BlogRSS
   url: https://rhapsody.health/resources/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/security/rhapsody-domain-security.yml
+  href: https://artifacts.apis.io/rhapsody/security/rhapsody-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rhapsody-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/security/rhapsody-trust-center.yml
+  href: https://artifacts.apis.io/rhapsody/security/rhapsody-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/rhapsody-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/conformance/rhapsody-conformance.yml
+  href: https://artifacts.apis.io/rhapsody/conformance/rhapsody-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rhapsody-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/authentication/rhapsody-authentication.yml
+  href: https://artifacts.apis.io/rhapsody/authentication/rhapsody-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rhapsody-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/llms/rhapsody-llms.txt
+  href: https://artifacts.apis.io/rhapsody/llms/rhapsody-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rhapsody-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/changelog/rhapsody-changelog.yml
+  href: https://artifacts.apis.io/rhapsody/changelog/rhapsody-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/rhapsody-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/lifecycle/rhapsody-lifecycle.yml
+  href: https://artifacts.apis.io/rhapsody/lifecycle/rhapsody-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rhapsody-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/plans/rhapsody-plans-pricing.yml
+  href: https://artifacts.apis.io/rhapsody/plans/rhapsody-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/rhapsody-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/rate-limits/rhapsody-rate-limits.yml
+  href: https://artifacts.apis.io/rhapsody/rate-limits/rhapsody-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rhapsody-rate-limits.yml
@@ -167,7 +171,7 @@ plans:
 - name: Rhapsody Plans Pricing
   plan_count: 0
   slug: rhapsody-plans-pricing
-random_paper: 16
+random_paper: 10
 rate_limits:
 - limit_count: 0
   name: Rhapsody Rate Limits
@@ -176,13 +180,13 @@ score:
   band: thin
   composite: 29.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
@@ -197,7 +201,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 28.9
+  previous_composite: 29.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -213,14 +217,14 @@ score:
     regime: Health
     regime_id: health
     score: 34.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/screenshots/rhapsody-2026-09-02T153757.png
+screenshot: https://apis.io/screenshots/rhapsody/rhapsody-2026-09-02T153757.png
 security:
 - kind: authentication
   name: Rhapsody Authentication

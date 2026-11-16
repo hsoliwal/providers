@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -49,12 +53,12 @@ common:
   type: Contact
   url: https://www.xonaspace.com/contact
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/xona-space-systems/refs/heads/main/security/xona-space-systems-domain-security.yml
+  href: https://artifacts.apis.io/xona-space-systems/security/xona-space-systems-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/xona-space-systems-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/xona-space-systems/refs/heads/main/llms/xona-space-systems-llms.txt
+  href: https://artifacts.apis.io/xona-space-systems/llms/xona-space-systems-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/xona-space-systems-llms.txt
@@ -70,12 +74,12 @@ overview: 'Xona Space Systems is profiled on the [APIs.io](https://apis.io/) net
 
 
   Xona Space Systems'' developer surface includes engineering blog and 4 more developer resources.'
-random_paper: 18
+random_paper: 20
 score:
   band: minimal
   composite: 4.6
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -96,14 +100,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/xona-space-systems/refs/heads/main/screenshots/xona-space-systems-2026-09-02T171139.png
+screenshot: https://apis.io/screenshots/xona-space-systems/xona-space-systems-2026-09-02T171139.png
 security:
 - kind: domain-security
   name: Xona Space Systems Domain Security

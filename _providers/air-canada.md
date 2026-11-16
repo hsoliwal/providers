@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -75,94 +78,94 @@ apis:
 - description: IATA NDC 17.2 OrderChangeNotif message. Air Canada-initiated notification of changes made to an Order outside the seller's own request, such as schedule change or involuntary disruption handling.
   name: Air Canada NDC OrderChangeNotification API
   slug: air-canada-ndc-orderchangenotification-api
-artifact_total: 14
+artifact_total: 17
 asyncapis:
 - description: ''
   name: Air Canada Ocn Webhooks
   slug: air-canada-ocn-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/security/air-canada-domain-security.yml
+  href: https://artifacts.apis.io/air-canada/security/air-canada-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/air-canada-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/authentication/air-canada-authentication.yml
+  href: https://artifacts.apis.io/air-canada/authentication/air-canada-authentication.yml
   title: ''
   type: Authentication
   url: authentication/air-canada-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/conventions/air-canada-conventions.yml
+  href: https://artifacts.apis.io/air-canada/conventions/air-canada-conventions.yml
   title: ''
   type: Conventions
   url: conventions/air-canada-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/errors/air-canada-error-codes.yml
+  href: https://artifacts.apis.io/air-canada/errors/air-canada-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/air-canada-error-codes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/errors/air-canada-decline-codes.yml
+  href: https://artifacts.apis.io/air-canada/errors/air-canada-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/air-canada-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/asyncapi/air-canada-ocn-webhooks.yml
+  href: https://artifacts.apis.io/air-canada/asyncapi/air-canada-ocn-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/air-canada-ocn-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/sandbox/air-canada-sandbox.yml
+  href: https://artifacts.apis.io/air-canada/sandbox/air-canada-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/air-canada-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/lifecycle/air-canada-lifecycle.yml
+  href: https://artifacts.apis.io/air-canada/lifecycle/air-canada-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/air-canada-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/changelog/air-canada-changelog.yml
+  href: https://artifacts.apis.io/air-canada/changelog/air-canada-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/air-canada-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/conformance/air-canada-conformance.yml
+  href: https://artifacts.apis.io/air-canada/conformance/air-canada-conformance.yml
   title: ''
   type: Conformance
   url: conformance/air-canada-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/data-model/air-canada-data-model.yml
+  href: https://artifacts.apis.io/air-canada/data-model/air-canada-data-model.yml
   title: ''
   type: DataModel
   url: data-model/air-canada-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/vocabulary/air-canada-vocabulary.yml
+  href: https://artifacts.apis.io/air-canada/vocabulary/air-canada-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/air-canada-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/agentic-access/air-canada-agentic-access.yml
+  href: https://artifacts.apis.io/air-canada/agentic-access/air-canada-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/air-canada-agentic-access.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/packages/air-canada-packages.yml
+  href: https://artifacts.apis.io/air-canada/packages/air-canada-packages.yml
   title: ''
   type: Packages
   url: packages/air-canada-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/examples/_index.yml
+  href: https://artifacts.apis.io/air-canada/examples/_index.yml
   title: ''
   type: Examples
   url: examples/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/air-canada/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/air-canada/refs/heads/main/llms/air-canada-llms.txt
+  href: https://artifacts.apis.io/air-canada/llms/air-canada-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/air-canada-llms.txt
@@ -290,7 +293,7 @@ overview: 'Air Canada is listed with 10 APIs on the [APIs.io](https://apis.io/) 
 
 
   Air Canada''s developer surface includes authentication, sandbox, changelog, code examples, documentation, API reference, getting-started guide, and 37 more developer resources.'
-random_paper: 15
+random_paper: 1
 score:
   band: thin
   composite: 32.7
@@ -327,8 +330,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
@@ -343,6 +346,14 @@ security:
   name: Air Canada Domain Security
   slug: air-canada-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Cancel an Air Canada NDC order and choose the refund method
+  slug: air-canada-cancel-and-refund
+- name: Receive and handle Air Canada OrderChangeNotification (OCN) disruptions
+  slug: air-canada-handle-disruption-notifications
+- name: Shop, price and book an Air Canada flight over NDC
+  slug: air-canada-shop-and-book
 slug: air-canada
 tags:
 - Travel

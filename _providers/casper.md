@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -50,37 +55,37 @@ common:
   type: Website
   url: https://casper.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/casper/refs/heads/main/mcp/casper-mcp.yml
+  href: https://artifacts.apis.io/casper/mcp/casper-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/casper-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/casper/refs/heads/main/well-known/casper-well-known.yml
+  href: https://artifacts.apis.io/casper/well-known/casper-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/casper-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/casper/refs/heads/main/llms/casper-llms.txt
+  href: https://artifacts.apis.io/casper/llms/casper-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/casper-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/casper/refs/heads/main/authentication/casper-authentication.yml
+  href: https://artifacts.apis.io/casper/authentication/casper-authentication.yml
   title: ''
   type: Authentication
   url: authentication/casper-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/casper/refs/heads/main/scopes/casper-scopes.yml
+  href: https://artifacts.apis.io/casper/scopes/casper-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/casper-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casper/refs/heads/main/conventions/casper-conventions.yml
+  href: https://artifacts.apis.io/casper/conventions/casper-conventions.yml
   title: ''
   type: Conventions
   url: conventions/casper-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/casper/refs/heads/main/security/casper-domain-security.yml
+  href: https://artifacts.apis.io/casper/security/casper-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/casper-domain-security.yml
@@ -108,7 +113,7 @@ overview: 'Casper is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Casper''s developer surface includes engineering blog, authentication, and 10 more developer resources.'
-random_paper: 0
+random_paper: 14
 scopes:
 - name: Casper Scopes
   scope_count: 4
@@ -118,13 +123,13 @@ score:
   band: emerging
   composite: 15.1
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
@@ -132,7 +137,7 @@ score:
     developer_ergonomics: 14.3
     discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 14.5
+  previous_composite: 15.1
   provenance:
     mcp: platform-generated
   regulatory:
@@ -141,14 +146,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/casper/refs/heads/main/screenshots/casper-2026-08-07T163102.png
+screenshot: https://apis.io/screenshots/casper/casper-2026-08-07T163102.png
 security:
 - kind: authentication
   name: Casper Authentication

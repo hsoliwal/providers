@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Tuum's modular, API-first core banking platform. Per-module REST APIs (auth, person, employee, account, payment, card, loan, deposit, data-import, notification) versioned independently in the URL path
@@ -46,7 +51,7 @@ asyncapis:
   slug: tuum-notification-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/security/tuum-domain-security.yml
+  href: https://artifacts.apis.io/tuum/security/tuum-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tuum-domain-security.yml
@@ -83,52 +88,52 @@ common:
   type: PrivacyPolicy
   url: https://tuumplatform.com/privacy-policy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/authentication/tuum-authentication.yml
+  href: https://artifacts.apis.io/tuum/authentication/tuum-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tuum-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/conventions/tuum-conventions.yml
+  href: https://artifacts.apis.io/tuum/conventions/tuum-conventions.yml
   title: ''
   type: Conventions
   url: conventions/tuum-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/conventions/tuum-conventions.yml
+  href: https://artifacts.apis.io/tuum/conventions/tuum-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/tuum-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/lifecycle/tuum-lifecycle.yml
+  href: https://artifacts.apis.io/tuum/lifecycle/tuum-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tuum-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/lifecycle/tuum-lifecycle.yml
+  href: https://artifacts.apis.io/tuum/lifecycle/tuum-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/tuum-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/sandbox/tuum-sandbox.yml
+  href: https://artifacts.apis.io/tuum/sandbox/tuum-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/tuum-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/asyncapi/tuum-notification-webhooks.yml
+  href: https://artifacts.apis.io/tuum/asyncapi/tuum-notification-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/tuum-notification-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/conformance/tuum-conformance.yml
+  href: https://artifacts.apis.io/tuum/conformance/tuum-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tuum-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/well-known/tuum-well-known.yml
+  href: https://artifacts.apis.io/tuum/well-known/tuum-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/tuum-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/llms/tuum-llms.txt
+  href: https://artifacts.apis.io/tuum/llms/tuum-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tuum-llms.txt
@@ -147,12 +152,12 @@ overview: 'Tuum is listed with 1 API on the [APIs.io](https://apis.io/) network.
 
 
   Tuum''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 12 more developer resources.'
-random_paper: 19
+random_paper: 3
 score:
   band: thin
   composite: 32.8
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -175,14 +180,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tuum/refs/heads/main/screenshots/tuum-2026-09-02T164559.png
+screenshot: https://apis.io/screenshots/tuum/tuum-2026-09-02T164559.png
 security:
 - kind: authentication
   name: Tuum Authentication

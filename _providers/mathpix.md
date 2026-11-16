@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-10-17'
+  score: 20.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -101,9 +107,6 @@ collections:
   name: Mathpix App Tokens Usage API
   slug: postman-mathpix-usage-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Mathpix App Tokens API
   slug: open-mathpix-app-tokens-api
 - collection_type: open
@@ -137,6 +140,11 @@ collections:
   name: Mathpix App Tokens Usage API
   slug: open-mathpix-usage-api
 common:
+- group: other
+  href: https://artifacts.apis.io/mathpix/capabilities/mathpix-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mathpix-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -146,17 +154,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/mathpix/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mathpix/refs/heads/main/agentic-access/mathpix-agentic-access.yml
+  href: https://artifacts.apis.io/mathpix/agentic-access/mathpix-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/mathpix-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mathpix/refs/heads/main/security/mathpix-domain-security.yml
+  href: https://artifacts.apis.io/mathpix/security/mathpix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mathpix-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mathpix/refs/heads/main/authentication/mathpix-authentication.yml
+  href: https://artifacts.apis.io/mathpix/authentication/mathpix-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mathpix-authentication.yml
@@ -261,32 +269,32 @@ common:
   type: Application
   url: https://chromewebstore.google.com/detail/mathpix-snipping-tool/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mathpix/refs/heads/main/plans/mathpix-plans-pricing.yml
+  href: https://artifacts.apis.io/mathpix/plans/mathpix-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mathpix-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mathpix/refs/heads/main/rate-limits/mathpix-rate-limits.yml
+  href: https://artifacts.apis.io/mathpix/rate-limits/mathpix-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/mathpix-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mathpix/refs/heads/main/finops/mathpix-finops.yml
+  href: https://artifacts.apis.io/mathpix/finops/mathpix-finops.yml
   title: ''
   type: FinOps
   url: finops/mathpix-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mathpix/refs/heads/main/vocabulary/mathpix-vocabulary.yml
+  href: https://artifacts.apis.io/mathpix/vocabulary/mathpix-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/mathpix-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mathpix/refs/heads/main/rules/mathpix-rules.yml
+  href: https://artifacts.apis.io/mathpix/rules/mathpix-rules.yml
   title: ''
   type: SpectralRules
   url: rules/mathpix-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mathpix/refs/heads/main/json-ld/mathpix-context.jsonld
+  href: https://artifacts.apis.io/mathpix/json-ld/mathpix-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/mathpix-context.jsonld
@@ -310,10 +318,10 @@ examples:
   slug: mathpix-strokes-example
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Mathpix Finops
   primary_unit: image
-  service_category: AI and Machine Learning
+  service_category: ''
   slug: mathpix-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mathpix.png
@@ -340,12 +348,15 @@ overview: 'Mathpix publishes 7 API contracts indexed on the [APIs.io](https://ap
   The Mathpix catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Mathpix''s developer surface includes authentication, GitHub presence, developer portal, documentation, pricing, signup flow, developer console, and 29 more developer resources.'
+  Mathpix''s developer surface includes authentication, GitHub presence, developer portal, documentation, pricing, signup flow, developer console, and 30 more developer resources.'
 plans:
 - name: Mathpix Plans Pricing
   plan_count: 5
   slug: mathpix-plans-pricing
-random_paper: 15
+- name: Mathpix Price Estimates
+  plan_count: 0
+  slug: mathpix-price-estimates
+random_paper: 19
 rate_limits:
 - limit_count: 7
   name: Mathpix Rate Limits
@@ -378,13 +389,13 @@ score:
   band: developing
   composite: 51.5
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 20
     catalog_earned: 72.4
     catalog_earned_first_party: 12.0
     catalog_gap: 42.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.9
+  delta: 0.0
   facets:
     access_clarity: 67.1
     contract_governance: 27.3
@@ -392,7 +403,7 @@ score:
     developer_ergonomics: 60.7
     discoverability: 62.5
     operational_transparency: 13.2
-  previous_composite: 53.4
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     contracts:
@@ -406,13 +417,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/mathpix/refs/heads/main/screenshots/mathpix-2026-06-20T185033.png
+screenshot: https://apis.io/screenshots/mathpix/mathpix-2026-06-20T185033.png
 security:
 - kind: authentication
   name: Mathpix Authentication

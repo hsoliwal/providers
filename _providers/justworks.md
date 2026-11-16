@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Paid · Self-serve signup
   onboarding: self-serve
   pricing: paid
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.1
-  scored_at: '2026-10-17'
+  score: 41.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -103,9 +110,6 @@ apis:
 artifact_total: 60
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Justworks Company API
   slug: open-justworks-company-api
 - collection_type: open
@@ -145,33 +149,37 @@ collections:
   name: Justworks Company Webhooks API
   slug: open-justworks-webhooks-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/justworks/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/capabilities/justworks-capability-edges.yml
+  href: https://artifacts.apis.io/justworks/capabilities/justworks-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/justworks-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/agentic-access/justworks-agentic-access.yml
+  href: https://artifacts.apis.io/justworks/agentic-access/justworks-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/justworks-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/security/justworks-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/justworks/security/justworks-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/justworks-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/security/justworks-domain-security.yml
+  href: https://artifacts.apis.io/justworks/security/justworks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/justworks-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/authentication/justworks-authentication.yml
+  href: https://artifacts.apis.io/justworks/authentication/justworks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/justworks-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/scopes/justworks-scopes.yml
+  href: https://artifacts.apis.io/justworks/scopes/justworks-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/justworks-scopes.yml
@@ -240,17 +248,17 @@ common:
   type: YouTube
   url: https://www.youtube.com/c/Justworks
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/plans/justworks-plans-pricing.yml
+  href: https://artifacts.apis.io/justworks/plans/justworks-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/justworks-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/rate-limits/justworks-rate-limits.yml
+  href: https://artifacts.apis.io/justworks/rate-limits/justworks-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/justworks-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/finops/justworks-finops.yml
+  href: https://artifacts.apis.io/justworks/finops/justworks-finops.yml
   title: ''
   type: FinOps
   url: finops/justworks-finops.yml
@@ -277,10 +285,10 @@ features:
 - Available via aggregator platforms Finch, Merge, and Apideck for cross-HRIS access
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Justworks Finops
-  primary_unit: employee-month
-  service_category: Human Capital Management
+  primary_unit: employee
+  service_category: ''
   slug: justworks-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/justworks.png
@@ -323,12 +331,15 @@ overview: 'Justworks publishes 11 API contracts indexed on the [APIs.io](https:/
   The Justworks catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Justworks'' developer surface includes authentication, documentation, developer portal, getting-started guide, pricing, engineering blog, YouTube channel, and 18 more developer resources.'
+  Justworks'' developer surface includes authentication, documentation, developer portal, getting-started guide, pricing, engineering blog, YouTube channel, and 19 more developer resources.'
 plans:
 - name: Justworks Plans Pricing
-  plan_count: 5
+  plan_count: 11
   slug: justworks-plans-pricing
-random_paper: 8
+- name: Justworks Price Estimates
+  plan_count: 0
+  slug: justworks-price-estimates
+random_paper: 12
 rate_limits:
 - limit_count: 2
   name: Justworks Rate Limits
@@ -352,22 +363,22 @@ scopes:
   summary_line: 15 scopes · authorizationCode
 score:
   band: developing
-  composite: 40.7
+  composite: 47.0
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 57.3
-    catalog_earned_first_party: 0.0
-    catalog_gap: 57.8
+    artifact_dirs: 21
+    catalog_earned: 66.3
+    catalog_earned_first_party: 12.0
+    catalog_gap: 48.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.9
+  delta: 0.0
   facets:
-    access_clarity: 30.3
+    access_clarity: 53.9
     contract_governance: 9.8
     contract_quality: 58.9
-    developer_ergonomics: 50.0
+    developer_ergonomics: 51.2
     discoverability: 60.0
-    operational_transparency: 7.9
+    operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -375,7 +386,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 46.6
+  previous_composite: 47.0
   provenance:
     agentic_access: derived
     contracts:
@@ -390,13 +401,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 34.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/screenshots/justworks-2026-06-20T183846.png
+screenshot: https://apis.io/screenshots/justworks/justworks-2026-06-20T183846.png
 security:
 - kind: authentication
   name: Justworks Authentication

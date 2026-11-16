@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.9
-  scored_at: '2026-10-17'
+  score: 25.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 40
   human_in_the_loop: 1
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 44
   slug: traceloop-agentic-access
   summary_line: 44 operations · 40 acting · 1 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.traceloop.com
   baseurl_source: declared
@@ -65,11 +71,8 @@ apis:
   description: The organizations API from Traceloop — 1 operation(s) for organizations.
   name: Traceloop Organizations API
   slug: traceloop-organizations-api
-artifact_total: 18
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Traceloop auto-monitor-setups API
   slug: open-traceloop-auto-monitor-setups-api
@@ -84,22 +87,22 @@ collections:
   slug: open-traceloop-organizations-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/traceloop/refs/heads/main/capabilities/traceloop-capability-edges.yml
+  href: https://artifacts.apis.io/traceloop/capabilities/traceloop-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/traceloop-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/traceloop/refs/heads/main/agentic-access/traceloop-agentic-access.yml
+  href: https://artifacts.apis.io/traceloop/agentic-access/traceloop-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/traceloop-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/traceloop/refs/heads/main/security/traceloop-domain-security.yml
+  href: https://artifacts.apis.io/traceloop/security/traceloop-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/traceloop-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/traceloop/refs/heads/main/authentication/traceloop-authentication.yml
+  href: https://artifacts.apis.io/traceloop/authentication/traceloop-authentication.yml
   title: ''
   type: Authentication
   url: authentication/traceloop-authentication.yml
@@ -136,17 +139,17 @@ common:
   type: X
   url: https://twitter.com/traceloopdev
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/traceloop/refs/heads/main/plans/traceloop-plans-pricing.yml
+  href: https://artifacts.apis.io/traceloop/plans/traceloop-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/traceloop-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/traceloop/refs/heads/main/rate-limits/traceloop-rate-limits.yml
+  href: https://artifacts.apis.io/traceloop/rate-limits/traceloop-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/traceloop-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/traceloop/refs/heads/main/finops/traceloop-finops.yml
+  href: https://artifacts.apis.io/traceloop/finops/traceloop-finops.yml
   title: ''
   type: FinOps
   url: finops/traceloop-finops.yml
@@ -186,7 +189,7 @@ plans:
 - name: Traceloop Plans Pricing
   plan_count: 2
   slug: traceloop-plans-pricing
-random_paper: 1
+random_paper: 9
 rate_limits:
 - limit_count: 5
   name: Traceloop Rate Limits
@@ -205,29 +208,29 @@ rules:
   slug: traceloop-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 37.9
+  composite: 39.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 66.2
     catalog_earned_first_party: 0.0
     catalog_gap: 48.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 1.3
   facets:
     access_clarity: 15.8
     contract_governance: 23.5
-    contract_quality: 62.5
+    contract_quality: 67.9
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 44.8
+  previous_composite: 37.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 4
   regulatory:
     applies: true
@@ -235,13 +238,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/traceloop/refs/heads/main/screenshots/traceloop-2026-06-20T195517.png
+screenshot: https://apis.io/screenshots/traceloop/traceloop-2026-06-20T195517.png
 security:
 - kind: authentication
   name: Traceloop Authentication

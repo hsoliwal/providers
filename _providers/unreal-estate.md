@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -45,12 +49,12 @@ common:
   type: Blog
   url: https://www.unrealestate.com/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unreal-estate/refs/heads/main/security/unreal-estate-domain-security.yml
+  href: https://artifacts.apis.io/unreal-estate/security/unreal-estate-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unreal-estate-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unreal-estate/refs/heads/main/llms/unreal-estate-llms.txt
+  href: https://artifacts.apis.io/unreal-estate/llms/unreal-estate-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/unreal-estate-llms.txt
@@ -92,8 +96,8 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 5.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

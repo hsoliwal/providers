@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: medium
-  label: Enterprise
+  label: Paid
   onboarding: unknown
-  pricing: enterprise
+  pricing: paid
   public: false
   source:
   - plans
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 20.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -83,9 +86,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Turvo Public Accounts API
   slug: open-turvo-accounts-api
 - collection_type: open
@@ -123,22 +123,22 @@ common:
   type: Pricing
   url: https://turvo.com/pricing/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/turvo/refs/heads/main/capabilities/turvo-capability-edges.yml
+  href: https://artifacts.apis.io/turvo/capabilities/turvo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/turvo-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/turvo/refs/heads/main/agentic-access/turvo-agentic-access.yml
+  href: https://artifacts.apis.io/turvo/agentic-access/turvo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/turvo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/turvo/refs/heads/main/security/turvo-domain-security.yml
+  href: https://artifacts.apis.io/turvo/security/turvo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/turvo-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/turvo/refs/heads/main/authentication/turvo-authentication.yml
+  href: https://artifacts.apis.io/turvo/authentication/turvo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/turvo-authentication.yml
@@ -155,17 +155,17 @@ common:
   type: Documentation
   url: https://help.turvo.com/hc/en-us/sections/12970447299987-API-Documentation
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/turvo/refs/heads/main/plans/turvo-plans-pricing.yml
+  href: https://artifacts.apis.io/turvo/plans/turvo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/turvo-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/turvo/refs/heads/main/rate-limits/turvo-rate-limits.yml
+  href: https://artifacts.apis.io/turvo/rate-limits/turvo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/turvo-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/turvo/refs/heads/main/finops/turvo-finops.yml
+  href: https://artifacts.apis.io/turvo/finops/turvo-finops.yml
   title: ''
   type: FinOps
   url: finops/turvo-finops.yml
@@ -188,6 +188,9 @@ network: true
 overview: 'Turvo publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Authentication API, Carriers API, and 4 more. Tagged areas include Logistics, Transportation Management System, TMS, Supply Chain, and Freight.
 
 
+  The Turvo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Turvo''s developer surface includes engineering blog, pricing, authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Turvo Plans Pricing
@@ -196,30 +199,43 @@ plans:
 - name: Turvo Price Estimates
   plan_count: 0
   slug: turvo-price-estimates
-random_paper: 4
+random_paper: 0
 rate_limits:
 - limit_count: 3
   name: Turvo Rate Limits
   slug: turvo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Turvo API Rules
+  rule_count: 59
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 1
+    warn: 3
+  slug: turvo-rules
 score:
   band: thin
-  composite: 30.5
+  composite: 31.0
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 48.0
+    artifact_dirs: 17
+    catalog_earned: 52.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 67.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.8
+  delta: -1.1
   facets:
-    access_clarity: 31.6
-    contract_governance: 0.0
+    access_clarity: 26.3
+    contract_governance: 13.6
     contract_quality: 53.2
     developer_ergonomics: 27.4
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 34.3
+  previous_composite: 32.1
   provenance:
     agentic_access: derived
     contracts:
@@ -233,13 +249,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/turvo/refs/heads/main/screenshots/turvo-2026-09-02T164550.png
+screenshot: https://apis.io/screenshots/turvo/turvo-2026-09-02T164550.png
 security:
 - kind: authentication
   name: Turvo Authentication

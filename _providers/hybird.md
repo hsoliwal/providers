@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hybird/refs/heads/main/security/hybird-domain-security.yml
+  href: https://artifacts.apis.io/hybird/security/hybird-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hybird-domain-security.yml
@@ -66,7 +70,7 @@ common:
   type: PrivacyPolicy
   url: https://www.hybird.ai/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hybird/refs/heads/main/llms/hybird-llms.txt
+  href: https://artifacts.apis.io/hybird/llms/hybird-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hybird-llms.txt
@@ -75,10 +79,14 @@ common:
   type: Compliance
   url: https://www.hybird.ai/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hybird/refs/heads/main/conformance/hybird-conformance.yml
+  href: https://artifacts.apis.io/hybird/conformance/hybird-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hybird-conformance.yml
+- group: company
+  title: ''
+  type: Website
+  url: https://hybird.ai/
 created: '2026-07-17'
 description: HyBird is an industrial software company behind Clarity, a modular Industrial Operating System built on a self-updating, photorealistic living digital twin. Clarity unifies 3D twin and document management, engineering and management of change, P&ID management, intelligent (preventive, predictive, reactive) maintenance, EHS, robotic inspection with AI defect detection, structural integrity, asset performance monitoring, and an AR-guided connected workforce for heavy industries such as oil & gas, cement and building materials, energy, terminals, and nuclear. It integrates with EAM/CMMS platforms including SAP PM, S/4HANA, Microsoft Dynamics, and IBM Maximo. HyBird is a Techstars-backed company profiled in the API Evangelist network; it publishes no public API, developer portal, or SDKs at this time.
 image: https://cdn.prod.website-files.com/686c29e8a1f8500d532e1314/68c14ab39b6f85f3dec958ae_Hybird-opengraph.png
@@ -90,8 +98,8 @@ network: true
 overview: 'HyBird is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Digital Twin, Industrial Operating System, Asset Management, and Maintenance Management.
 
 
-  HyBird''s developer surface includes support, signup flow, and 8 more developer resources.'
-random_paper: 4
+  HyBird''s developer surface includes support, signup flow, and 9 more developer resources.'
+random_paper: 18
 score:
   band: emerging
   composite: 18.1
@@ -119,14 +127,14 @@ score:
     regime: Health
     regime_id: health
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hybird/refs/heads/main/screenshots/hybird-2026-07-25T221809.png
+screenshot: https://apis.io/screenshots/hybird/hybird-2026-07-25T221809.png
 security:
 - kind: domain-security
   name: Hybird Domain Security
@@ -143,5 +151,10 @@ tags:
 - Environment Health and Safety
 - Reality Capture
 - Heavy Industry
+- IoT
+- Integration
+- Automation
+- Cloud
+- Edge
 website: https://www.hybird.ai/
 ---

@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'REST API (v1) for integration partners to synchronize property-management data with Yuhu: companies, sites/projects, buildings, unit types, units, site staff, roles and permissions, leases, tenants, s'
@@ -46,7 +54,7 @@ common:
   type: Website
   url: https://yuhu.io
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/security/yuhu-domain-security.yml
+  href: https://artifacts.apis.io/yuhu/security/yuhu-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/yuhu-domain-security.yml
@@ -95,52 +103,52 @@ common:
   type: Compliance
   url: https://happy.co/press/happyco-announces-soc-2-type-ii-security-certification
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/authentication/yuhu-authentication.yml
+  href: https://artifacts.apis.io/yuhu/authentication/yuhu-authentication.yml
   title: ''
   type: Authentication
   url: authentication/yuhu-authentication.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/rate-limits/yuhu-rate-limits.yml
+  href: https://artifacts.apis.io/yuhu/rate-limits/yuhu-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/yuhu-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/conventions/yuhu-conventions.yml
+  href: https://artifacts.apis.io/yuhu/conventions/yuhu-conventions.yml
   title: ''
   type: Conventions
   url: conventions/yuhu-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/conventions/yuhu-conventions.yml
+  href: https://artifacts.apis.io/yuhu/conventions/yuhu-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/yuhu-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/lifecycle/yuhu-lifecycle.yml
+  href: https://artifacts.apis.io/yuhu/lifecycle/yuhu-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/yuhu-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/conformance/yuhu-conformance.yml
+  href: https://artifacts.apis.io/yuhu/conformance/yuhu-conformance.yml
   title: ''
   type: Conformance
   url: conformance/yuhu-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/well-known/yuhu-well-known.yml
+  href: https://artifacts.apis.io/yuhu/well-known/yuhu-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/yuhu-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/mcp/yuhu-mcp.yml
+  href: https://artifacts.apis.io/yuhu/mcp/yuhu-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/yuhu-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/data-model/yuhu-data-model.yml
+  href: https://artifacts.apis.io/yuhu/data-model/yuhu-data-model.yml
   title: ''
   type: DataModel
   url: data-model/yuhu-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/llms/yuhu-llms.txt
+  href: https://artifacts.apis.io/yuhu/llms/yuhu-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/yuhu-llms.txt
@@ -156,7 +164,7 @@ overview: 'Yuhu is listed with 1 API on the [APIs.io](https://apis.io/) network.
 
 
   Yuhu''s developer surface includes documentation, API reference, signup flow, pricing, support, engineering blog, authentication, and 16 more developer resources.'
-random_paper: 19
+random_paper: 3
 rate_limits:
 - limit_count: 5
   name: Yuhu Rate Limits
@@ -189,14 +197,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 23.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/yuhu/refs/heads/main/screenshots/yuhu-2026-09-02T171359.png
+screenshot: https://apis.io/screenshots/yuhu/yuhu-2026-09-02T171359.png
 security:
 - kind: authentication
   name: Yuhu Authentication

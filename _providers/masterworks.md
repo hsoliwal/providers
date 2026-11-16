@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The single GraphQL endpoint behind the Masterworks web and mobile apps, covering art offerings, artists, auction and repeat-sale data, contributions, agreements and e-signature, KYC and accreditation,
@@ -43,7 +46,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/masterworks/refs/heads/main/security/masterworks-domain-security.yml
+  href: https://artifacts.apis.io/masterworks/security/masterworks-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/masterworks-domain-security.yml
@@ -52,42 +55,42 @@ common:
   type: Website
   url: https://www.masterworks.com/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/masterworks/refs/heads/main/graphql/masterworks-graphql.yml
+  href: https://artifacts.apis.io/masterworks/graphql/masterworks-graphql.yml
   title: ''
   type: GraphQL
   url: graphql/masterworks-graphql.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/masterworks/refs/heads/main/authentication/masterworks-authentication.yml
+  href: https://artifacts.apis.io/masterworks/authentication/masterworks-authentication.yml
   title: ''
   type: Authentication
   url: authentication/masterworks-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/masterworks/refs/heads/main/conventions/masterworks-conventions.yml
+  href: https://artifacts.apis.io/masterworks/conventions/masterworks-conventions.yml
   title: ''
   type: Conventions
   url: conventions/masterworks-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/masterworks/refs/heads/main/errors/masterworks-error-codes.yml
+  href: https://artifacts.apis.io/masterworks/errors/masterworks-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/masterworks-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/masterworks/refs/heads/main/data-model/masterworks-data-model.yml
+  href: https://artifacts.apis.io/masterworks/data-model/masterworks-data-model.yml
   title: ''
   type: DataModel
   url: data-model/masterworks-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/masterworks/refs/heads/main/lifecycle/masterworks-lifecycle.yml
+  href: https://artifacts.apis.io/masterworks/lifecycle/masterworks-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/masterworks-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/masterworks/refs/heads/main/conformance/masterworks-conformance.yml
+  href: https://artifacts.apis.io/masterworks/conformance/masterworks-conformance.yml
   title: ''
   type: Conformance
   url: conformance/masterworks-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/masterworks/refs/heads/main/llms/masterworks-llms.txt
+  href: https://artifacts.apis.io/masterworks/llms/masterworks-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/masterworks-llms.txt
@@ -152,12 +155,12 @@ overview: 'Masterworks is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Masterworks'' developer surface includes authentication, support, engineering blog, signup flow, and 18 more developer resources.'
-random_paper: 8
+random_paper: 18
 score:
   band: emerging
   composite: 19.3
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -180,14 +183,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/masterworks/refs/heads/main/screenshots/masterworks-2026-08-07T172123.png
+screenshot: https://apis.io/screenshots/masterworks/masterworks-2026-08-07T172123.png
 security:
 - kind: authentication
   name: Masterworks Authentication

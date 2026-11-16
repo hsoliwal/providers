@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -21,19 +22,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: na
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.8
-  scored_at: '2026-10-17'
+  score: 26.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -45,14 +49,26 @@ api_count: 1
 apis:
 - baseURL: https://freehoroscopeapi.com/api/v1
   baseurl_source: declared
-  description: Horoscope predictions by zodiac sign
-  name: Horoscope API Horoscope API
-  slug: horoscope-api-horoscope-api
-artifact_total: 10
+  description: Location-based daily calendar and Sun/Moon data.
+  name: Horoscope API Calendar API
+  slug: horoscope-api-calendar-api
+- baseURL: https://freehoroscopeapi.com/api/v1
+  baseurl_source: declared
+  description: Written daily, weekly and monthly readings.
+  name: Horoscope API Horoscopes API
+  slug: horoscope-api-horoscopes-api
+- baseURL: https://freehoroscopeapi.com/api/v1
+  baseurl_source: declared
+  description: Calculated positions and classifications.
+  name: Horoscope API Planetary data API
+  slug: horoscope-api-planetary-data-api
+- baseURL: https://freehoroscopeapi.com/api/v1
+  baseurl_source: declared
+  description: The 78-card deck and random draws.
+  name: Horoscope API Tarot API
+  slug: horoscope-api-tarot-api
+artifact_total: 12
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Horoscope API
   slug: open-horoscope-api-horoscope-api
@@ -61,27 +77,27 @@ collections:
   slug: open-horoscope-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/horoscope-api/refs/heads/main/plans/horoscope-api-plans-pricing.yml
+  href: https://artifacts.apis.io/horoscope-api/plans/horoscope-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/horoscope-api-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/horoscope-api/refs/heads/main/rate-limits/horoscope-api-rate-limits.yml
+  href: https://artifacts.apis.io/horoscope-api/rate-limits/horoscope-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/horoscope-api-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/horoscope-api/refs/heads/main/finops/horoscope-api-finops.yml
+  href: https://artifacts.apis.io/horoscope-api/finops/horoscope-api-finops.yml
   title: ''
   type: FinOps
   url: finops/horoscope-api-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/horoscope-api/refs/heads/main/agentic-access/horoscope-api-agentic-access.yml
+  href: https://artifacts.apis.io/horoscope-api/agentic-access/horoscope-api-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/horoscope-api-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/horoscope-api/refs/heads/main/security/horoscope-api-domain-security.yml
+  href: https://artifacts.apis.io/horoscope-api/security/horoscope-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/horoscope-api-domain-security.yml
@@ -95,7 +111,7 @@ finops:
 - has_sources: false
   method: generated
   name: Horoscope Api Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: horoscope-api-finops
   template: true
@@ -105,7 +121,7 @@ modified: '2026-05-19'
 name: Horoscope API
 nav: Providers
 network: true
-overview: 'Horoscope API publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Horoscope API. Tagged areas include Astrology, Content, Horoscope, and Zodiac.
+overview: 'Horoscope API publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Calendar API, Horoscopes API, Planetary data API, and 1 more. Tagged areas include Astrology, Content, Horoscope, and Zodiac.
 
 
   The Horoscope API catalog on APIs.io includes 1 Spectral governance ruleset.'
@@ -132,44 +148,44 @@ rules:
   slug: horoscope-api-rules
 score:
   band: emerging
-  composite: 20.3
+  composite: 20.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 38.0
     catalog_earned_first_party: 0.0
     catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.6
+  delta: 0.8
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 45.9
+    contract_quality: 47.4
     developer_ergonomics: 9.5
     discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 18.7
+  previous_composite: 19.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 1
+      marker_coverage: 66.7
+      total: 6
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/horoscope-api/refs/heads/main/screenshots/horoscope-api-2026-06-20T182833.png
+screenshot: https://apis.io/screenshots/horoscope-api/horoscope-api-2026-06-20T182833.png
 security:
 - kind: domain-security
   name: Horoscope Api Domain Security

@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 9.3
-  scored_at: '2026-10-17'
+  score: 12.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Podchaser's GraphQL API provides programmatic access to podcasts, episodes, creators, credits, reviews, and lists across the Podchaser database. Authentication is handled via OAuth-style API tokens an
@@ -42,17 +46,17 @@ apis:
 artifact_total: 7
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/podchaser/refs/heads/main/plans/podchaser-plans-pricing.yml
+  href: https://artifacts.apis.io/podchaser/plans/podchaser-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/podchaser-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/podchaser/refs/heads/main/rate-limits/podchaser-rate-limits.yml
+  href: https://artifacts.apis.io/podchaser/rate-limits/podchaser-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/podchaser-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/podchaser/refs/heads/main/finops/podchaser-finops.yml
+  href: https://artifacts.apis.io/podchaser/finops/podchaser-finops.yml
   title: ''
   type: FinOps
   url: finops/podchaser-finops.yml
@@ -61,7 +65,7 @@ common:
   type: Blog
   url: https://www.podchaser.com/blog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/podchaser/refs/heads/main/security/podchaser-domain-security.yml
+  href: https://artifacts.apis.io/podchaser/security/podchaser-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/podchaser-domain-security.yml
@@ -87,7 +91,7 @@ finops:
 - has_sources: false
   method: generated
   name: Podchaser Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: podchaser-finops
   template: true
@@ -113,7 +117,7 @@ plans:
 - name: Podchaser Plans Pricing
   plan_count: 3
   slug: podchaser-plans-pricing
-random_paper: 7
+random_paper: 17
 rate_limits:
 - limit_count: 5
   name: Podchaser Rate Limits
@@ -128,7 +132,7 @@ score:
     catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
@@ -136,7 +140,7 @@ score:
     developer_ergonomics: 11.9
     discoverability: 60.0
     operational_transparency: 7.9
-  previous_composite: 10.6
+  previous_composite: 9.6
   provenance:
     mcp: first-party
   regulatory:
@@ -145,14 +149,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/podchaser/refs/heads/main/screenshots/podchaser-2026-10-11T192203.png
+screenshot: https://apis.io/screenshots/podchaser/podchaser-2026-10-11T192203.png
 security:
 - kind: domain-security
   name: Podchaser Domain Security

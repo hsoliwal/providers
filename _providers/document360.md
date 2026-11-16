@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -26,16 +29,19 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: false
+    mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 27.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -96,9 +102,6 @@ collections:
   name: Document360 Articles Users API
   slug: postman-document360-users-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Document360 Articles API
   slug: open-document360-articles-api
 - collection_type: open
@@ -120,23 +123,110 @@ collections:
   name: Document360 Articles Users API
   slug: open-document360-users-api
 common:
+- group: design
+  href: https://artifacts.apis.io/document360/rules/document360-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/document360-rules.yml
+- group: design
+  href: https://artifacts.apis.io/document360/rules/document360-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/document360-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/document360/vocabulary/document360-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/document360-vocabulary.yml
+- group: design
+  href: https://artifacts.apis.io/document360/data-model/document360-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/document360-data-model.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://document360.com/compliance/soc2/
+- group: design
+  href: https://artifacts.apis.io/document360/conformance/document360-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/document360-conformance.yml
+- group: agent
+  href: https://artifacts.apis.io/document360/llms/document360-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/document360-llms.txt
+- group: agent
+  href: https://artifacts.apis.io/document360/mcp/document360-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/document360-mcp.yml
+- group: agent
+  href: https://artifacts.apis.io/document360/well-known/document360-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/document360-well-known.yml
+- group: other
+  href: https://artifacts.apis.io/document360/hosts/document360-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/document360-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/document360/integrations/document360-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/document360-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/document360/vendors/document360-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/document360-vendors.yml
+- group: operate
+  title: ''
+  type: StatusPage
+  url: https://status.document360.com/
+- group: start
+  title: ''
+  type: SignUp
+  url: https://document360.com/signup/
+- group: auth
+  title: ''
+  type: Security
+  url: https://document360.com/security/
+- group: other
+  title: ''
+  type: Leadership
+  url: https://document360.com/solutions/leadership/
+- group: start
+  title: ''
+  type: GettingStarted
+  url: https://docs.document360.com/docs/getting-started
+- group: operate
+  title: ''
+  type: ChangeLog
+  url: https://document360.com/blog/release-notes/
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://apidocs.document360.com/apidocs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/document360/refs/heads/main/plans/document360-plans-pricing.yml
+  href: https://artifacts.apis.io/document360/plans/document360-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/document360-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/document360/refs/heads/main/rate-limits/document360-rate-limits.yml
+  href: https://artifacts.apis.io/document360/rate-limits/document360-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/document360-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/document360/refs/heads/main/finops/document360-finops.yml
+  href: https://artifacts.apis.io/document360/finops/document360-finops.yml
   title: ''
   type: FinOps
   url: finops/document360-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/document360/refs/heads/main/capabilities/document360-capability-edges.yml
+  href: https://artifacts.apis.io/document360/capabilities/document360-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/document360-capability-edges.yml
@@ -149,22 +239,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/document360/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/document360/refs/heads/main/agentic-access/document360-agentic-access.yml
+  href: https://artifacts.apis.io/document360/agentic-access/document360-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/document360-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/document360/refs/heads/main/security/document360-trust-center.yml
+  href: https://artifacts.apis.io/document360/security/document360-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/document360-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/document360/refs/heads/main/security/document360-domain-security.yml
+  href: https://artifacts.apis.io/document360/security/document360-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/document360-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/document360/refs/heads/main/authentication/document360-authentication.yml
+  href: https://artifacts.apis.io/document360/authentication/document360-authentication.yml
   title: ''
   type: Authentication
   url: authentication/document360-authentication.yml
@@ -194,10 +284,6 @@ common:
   url: https://document360.com/blog/
 - group: commercial
   title: ''
-  type: TermsOfService
-  url: https://document360.com/terms-of-service/
-- group: commercial
-  title: ''
   type: PrivacyPolicy
   url: https://document360.com/privacy-policy/
 - group: operate
@@ -210,7 +296,7 @@ finops:
 - has_sources: false
   method: generated
   name: Document360 Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: document360-finops
   template: true
@@ -228,22 +314,26 @@ jsonld:
   property_count: 0
   slug: document360-context
 layout: provider
+mcp_servers:
+- description: Document360 publishes an MCP server card at https://document360.com/.well-known/mcp.json (saved verbatim as document360-mcp-server-card.json). It advertises the Document360 MCP Server, streamable HTTP
+  name: Document360 MCP Server
+  slug: document360-mcp-yml
 modified: '2026-05-19'
 name: Document360
 nav: Providers
 network: true
-overview: 'Document360 publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Articles API, Categories API, Drive API, and 3 more. Tagged areas include Documentation, Knowledge Base, Software-as-a-Service, and Knowledge Management.
+overview: 'Document360 publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Articles API, Categories API, Drive API, and 3 more. Tagged areas include Documentation, Knowledge Base, Software-as-a-Service, Knowledge Management, and API Documentation.
 
 
   The Document360 catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Document360''s developer surface includes authentication, developer portal, documentation, pricing, engineering blog, support, and 13 more developer resources.'
+  Document360''s developer surface includes signup flow, getting-started guide, changelog, API reference, authentication, developer portal, documentation, and 30 more developer resources.'
 plans:
 - name: Document360 Plans Pricing
   plan_count: 3
   slug: document360-plans-pricing
-random_paper: 4
+random_paper: 8
 rate_limits:
 - limit_count: 5
   name: Document360 Rate Limits
@@ -261,24 +351,24 @@ rules:
     warn: 3
   slug: document360-jsonschema-spectral-rules
 score:
-  band: thin
-  composite: 37.0
+  band: developing
+  composite: 44.6
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 58.3
+    artifact_dirs: 21
+    catalog_earned: 63.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.8
+    catalog_gap: 51.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: -4.8
   facets:
-    access_clarity: 26.3
+    access_clarity: 36.8
     contract_governance: 9.8
     contract_quality: 63.3
-    developer_ergonomics: 36.9
-    discoverability: 57.1
-    operational_transparency: 10.5
-  previous_composite: 38.5
+    developer_ergonomics: 46.4
+    discoverability: 69.2
+    operational_transparency: 31.6
+  previous_composite: 49.4
   provenance:
     agentic_access: derived
     contracts:
@@ -286,19 +376,20 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
+    mcp: first-party
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/document360/refs/heads/main/screenshots/document360-2026-06-20T180118.png
+screenshot: https://apis.io/screenshots/document360/document360-2026-06-20T180118.png
 security:
 - kind: authentication
   name: Document360 Authentication
@@ -318,5 +409,7 @@ tags:
 - Knowledge Base
 - Software-as-a-Service
 - Knowledge Management
+- API Documentation
+- Developer Portal
 website: https://www.document360.com/
 ---

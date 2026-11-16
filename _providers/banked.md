@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   - '{''url'': ''https://banked.com/'', ''status'': 301, ''note'': ''declared website redirects to https://paybyb.com/ — a different registrable domain (banked.com -> paybyb.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Account-to-account payments over open banking — create payment sessions (checkout), payouts, refunds, and webhooks. The Partner API onboards businesses on behalf of platforms. OAuth 2.0 client-credent
@@ -47,17 +54,17 @@ asyncapis:
   slug: banked-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/security/banked-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/banked/security/banked-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/banked-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/security/banked-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/banked/security/banked-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/banked-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/security/banked-domain-security.yml
+  href: https://artifacts.apis.io/banked/security/banked-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/banked-domain-security.yml
@@ -110,62 +117,62 @@ common:
   type: StatusPage
   url: https://status.banked.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/packages/banked-packages.yml
+  href: https://artifacts.apis.io/banked/packages/banked-packages.yml
   title: ''
   type: Packages
   url: packages/banked-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/packages/banked-packages.yml
+  href: https://artifacts.apis.io/banked/packages/banked-packages.yml
   title: ''
   type: SDKs
   url: packages/banked-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/well-known/banked-well-known.yml
+  href: https://artifacts.apis.io/banked/well-known/banked-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/banked-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/well-known/banked-security.txt
+  href: https://artifacts.apis.io/banked/well-known/banked-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/banked-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/mcp/banked-mcp.yml
+  href: https://artifacts.apis.io/banked/mcp/banked-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/banked-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/llms/banked-llms.txt
+  href: https://artifacts.apis.io/banked/llms/banked-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/banked-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/authentication/banked-authentication.yml
+  href: https://artifacts.apis.io/banked/authentication/banked-authentication.yml
   title: ''
   type: Authentication
   url: authentication/banked-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/conventions/banked-conventions.yml
+  href: https://artifacts.apis.io/banked/conventions/banked-conventions.yml
   title: ''
   type: Conventions
   url: conventions/banked-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/conformance/banked-conformance.yml
+  href: https://artifacts.apis.io/banked/conformance/banked-conformance.yml
   title: ''
   type: Conformance
   url: conformance/banked-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/lifecycle/banked-lifecycle.yml
+  href: https://artifacts.apis.io/banked/lifecycle/banked-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/banked-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/lifecycle/banked-lifecycle.yml
+  href: https://artifacts.apis.io/banked/lifecycle/banked-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/banked-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/asyncapi/banked-webhooks.yml
+  href: https://artifacts.apis.io/banked/asyncapi/banked-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/banked-webhooks.yml
@@ -188,23 +195,23 @@ overview: 'Banked is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Banked''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, and 21 more developer resources.'
-random_paper: 19
+random_paper: 13
 score:
   band: thin
-  composite: 37.8
+  composite: 38.3
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 17.1
     contract_governance: 18.2
     contract_quality: 39.0
-    developer_ergonomics: 45.2
+    developer_ergonomics: 47.6
     discoverability: 75.0
     operational_transparency: 44.7
   previous_composite: 37.8
@@ -217,14 +224,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 21.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/banked/refs/heads/main/screenshots/banked-2026-07-25T202342.png
+screenshot: https://apis.io/screenshots/banked/banked-2026-07-25T202342.png
 security:
 - kind: authentication
   name: Banked Authentication

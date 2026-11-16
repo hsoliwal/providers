@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://kount.com/'', ''status'': 301, ''note'': ''declared website redirects to https://www.equifax.com/business/identity-fraud/ — a different registrable domain (kount.com -> equifax.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: The Payments Fraud API is the core REST endpoint of the Kount 360 platform for AI-driven digital fraud prevention. Merchants submit order, payment, customer, and device session data, and receive a rea
@@ -52,7 +56,7 @@ common:
   type: Blog
   url: https://www.equifax.com/newsroom/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kount/refs/heads/main/security/kount-domain-security.yml
+  href: https://artifacts.apis.io/kount/security/kount-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kount-domain-security.yml
@@ -172,18 +176,18 @@ overview: 'Kount is listed with 3 APIs on the [APIs.io](https://apis.io/) networ
 
 
   Kount''s developer surface includes engineering blog, developer portal, documentation, getting-started guide, support, and 15 more developer resources.'
-random_paper: 11
+random_paper: 9
 score:
   band: emerging
   composite: 20.0
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -198,21 +202,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 19.5
+  previous_composite: 20.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kount/refs/heads/main/screenshots/kount-2026-06-20T184141.png
+screenshot: https://apis.io/screenshots/kount/kount-2026-06-20T184141.png
 security:
 - kind: domain-security
   name: Kount Domain Security

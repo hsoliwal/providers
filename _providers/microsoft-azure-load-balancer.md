@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: high
-  label: Freemium · Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
   onboarding: self-serve
-  pricing: freemium
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -57,9 +64,6 @@ apis:
 artifact_total: 25
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Azure Load Balancer REST Load Balancers API
   slug: open-microsoft-azure-load-balancer-load-balancers-api
 - collection_type: open
@@ -70,22 +74,22 @@ collections:
   slug: open-microsoft-azure-load-balancer
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-load-balancer/refs/heads/main/plans/microsoft-azure-load-balancer-plans-pricing.yml
+  href: https://artifacts.apis.io/microsoft-azure-load-balancer/plans/microsoft-azure-load-balancer-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/microsoft-azure-load-balancer-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-load-balancer/refs/heads/main/rate-limits/microsoft-azure-load-balancer-rate-limits.yml
+  href: https://artifacts.apis.io/microsoft-azure-load-balancer/rate-limits/microsoft-azure-load-balancer-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/microsoft-azure-load-balancer-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-load-balancer/refs/heads/main/finops/microsoft-azure-load-balancer-finops.yml
+  href: https://artifacts.apis.io/microsoft-azure-load-balancer/finops/microsoft-azure-load-balancer-finops.yml
   title: ''
   type: FinOps
   url: finops/microsoft-azure-load-balancer-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-load-balancer/refs/heads/main/capabilities/microsoft-azure-load-balancer-capability-edges.yml
+  href: https://artifacts.apis.io/microsoft-azure-load-balancer/capabilities/microsoft-azure-load-balancer-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/microsoft-azure-load-balancer-capability-edges.yml
@@ -94,22 +98,22 @@ common:
   type: Website
   url: https://www.microsoft.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-load-balancer/refs/heads/main/agentic-access/microsoft-azure-load-balancer-agentic-access.yml
+  href: https://artifacts.apis.io/microsoft-azure-load-balancer/agentic-access/microsoft-azure-load-balancer-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/microsoft-azure-load-balancer-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-load-balancer/refs/heads/main/security/microsoft-azure-load-balancer-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-azure-load-balancer/security/microsoft-azure-load-balancer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-azure-load-balancer-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-load-balancer/refs/heads/main/authentication/microsoft-azure-load-balancer-authentication.yml
+  href: https://artifacts.apis.io/microsoft-azure-load-balancer/authentication/microsoft-azure-load-balancer-authentication.yml
   title: ''
   type: Authentication
   url: authentication/microsoft-azure-load-balancer-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-load-balancer/refs/heads/main/scopes/microsoft-azure-load-balancer-scopes.yml
+  href: https://artifacts.apis.io/microsoft-azure-load-balancer/scopes/microsoft-azure-load-balancer-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/microsoft-azure-load-balancer-scopes.yml
@@ -169,11 +173,11 @@ features:
 - description: Distribute traffic across Azure regions for global high availability and disaster recovery.
   name: Cross-Region Load Balancing
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Microsoft Azure Load Balancer Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: microsoft-azure-load-balancer-finops
   template: true
 image: https://azure.microsoft.com/svghandler/load-balancer/
@@ -192,16 +196,32 @@ network: true
 overview: 'Azure Load Balancer is listed with 2 APIs on the [APIs.io](https://apis.io/) network: Load Balancers API and Operations API. Tagged areas include Microsoft Azure, High Availability, Layer 4, Load Balancing, and Networks.
 
 
+  The Azure Load Balancer catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Azure Load Balancer''s developer surface includes authentication, developer portal, documentation, pricing, engineering blog, support, and 13 more developer resources.'
 plans:
 - name: Microsoft Azure Load Balancer Plans Pricing
-  plan_count: 3
+  plan_count: 7
   slug: microsoft-azure-load-balancer-plans-pricing
 random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Microsoft Azure Load Balancer Rate Limits
   slug: microsoft-azure-load-balancer-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Azure Load Balancer API Rules
+  rule_count: 46
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 1
+  slug: microsoft-azure-load-balancer-rules
 scopes:
 - name: Microsoft Azure Load Balancer Scopes
   scope_count: 1
@@ -209,23 +229,23 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: developing
-  composite: 46.9
+  composite: 53.3
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 43.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    artifact_dirs: 17
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 39.5
-    contract_governance: 0.0
+    access_clarity: 63.2
+    contract_governance: 13.6
     contract_quality: 44.1
     developer_ergonomics: 64.3
     discoverability: 80.4
     operational_transparency: 26.3
-  previous_composite: 48.4
+  previous_composite: 53.3
   provenance:
     agentic_access: derived
     contracts:
@@ -239,13 +259,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-load-balancer/refs/heads/main/screenshots/microsoft-azure-load-balancer-2026-06-20T185420.png
+screenshot: https://apis.io/screenshots/microsoft-azure-load-balancer/microsoft-azure-load-balancer-2026-06-20T185420.png
 security:
 - kind: authentication
   name: Microsoft Azure Load Balancer Authentication

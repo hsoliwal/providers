@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +25,23 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 12.9
-  scored_at: '2026-10-17'
+  score: 14.8
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: The Axflow platform provides AI tooling and workflow APIs as documented.
   name: Axflow API
-  slug: axflow-api-2
+  slug: axflow-api
 - description: The Chat API from Axflow — 1 operation(s) for chat.
   name: Axflow Chat API
   slug: axflow-chat-api
@@ -38,47 +51,47 @@ apis:
 artifact_total: 10
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axflow/refs/heads/main/rules/axflow-rules.yml
+  href: https://artifacts.apis.io/axflow/rules/axflow-rules.yml
   title: ''
   type: Spectral
   url: rules/axflow-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axflow/refs/heads/main/json-ld/axflow-context.jsonld
+  href: https://artifacts.apis.io/axflow/json-ld/axflow-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/axflow-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axflow/refs/heads/main/vocabulary/axflow-vocabulary.yml
+  href: https://artifacts.apis.io/axflow/vocabulary/axflow-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/axflow-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axflow/refs/heads/main/data-model/axflow-data-model.yml
+  href: https://artifacts.apis.io/axflow/data-model/axflow-data-model.yml
   title: ''
   type: DataModel
   url: data-model/axflow-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axflow/refs/heads/main/conformance/axflow-conformance.yml
+  href: https://artifacts.apis.io/axflow/conformance/axflow-conformance.yml
   title: ''
   type: Conformance
   url: conformance/axflow-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axflow/refs/heads/main/hosts/axflow-hosts.yml
+  href: https://artifacts.apis.io/axflow/hosts/axflow-hosts.yml
   title: ''
   type: Hosts
   url: hosts/axflow-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axflow/refs/heads/main/vendors/axflow-vendors.yml
+  href: https://artifacts.apis.io/axflow/vendors/axflow-vendors.yml
   title: ''
   type: Vendors
   url: vendors/axflow-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/axflow/refs/heads/main/packages/axflow-packages.yml
+  href: https://artifacts.apis.io/axflow/packages/axflow-packages.yml
   title: ''
   type: SDKs
   url: packages/axflow-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/axflow/refs/heads/main/packages/axflow-packages.yml
+  href: https://artifacts.apis.io/axflow/packages/axflow-packages.yml
   title: ''
   type: Packages
   url: packages/axflow-packages.yml
@@ -87,7 +100,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/axflow
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axflow/refs/heads/main/security/axflow-domain-security.yml
+  href: https://artifacts.apis.io/axflow/security/axflow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/axflow-domain-security.yml
@@ -152,7 +165,7 @@ overview: 'Axflow is listed with 3 APIs on the [APIs.io](https://apis.io/) netwo
 
 
   Axflow''s developer surface includes documentation, engineering blog, signup flow, and 13 more developer resources.'
-random_paper: 19
+random_paper: 9
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -168,21 +181,23 @@ rules:
   slug: axflow-rules
 score:
   band: emerging
-  composite: 21.3
+  composite: 17.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 54.8
     catalog_earned_first_party: 0.0
     catalog_gap: 60.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.8
   facets:
-    access_clarity: 13.2
+    access_clarity: 6.6
     contract_governance: 22.0
-    contract_quality: 19.4
-    developer_ergonomics: 28.6
+    contract_quality: 19.2
+    developer_ergonomics: 17.9
     discoverability: 62.5
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  previous_composite: 21.3
   provenance:
     conformance: derived
     contracts:
@@ -197,11 +212,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/axflow/axflow-2026-11-03T121439.png
 security:
 - kind: domain-security
   name: Axflow Domain Security

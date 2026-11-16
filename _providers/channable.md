@@ -26,16 +26,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 27.9
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.channable.com/v1
   baseurl_source: declared
@@ -67,11 +70,8 @@ apis:
   description: The transporters API from Channable — 3 operation(s) for transporters.
   name: Channable Transporters API
   slug: channable-transporters-api
-artifact_total: 17
+artifact_total: 22
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Channable order connection order_attachments API
   slug: open-channable-order-attachments-api
@@ -92,32 +92,32 @@ collections:
   slug: open-channable-transporters-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/capabilities/channable-capability-edges.yml
+  href: https://artifacts.apis.io/channable/capabilities/channable-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/channable-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/skills/channable-fulfill-orders.md
+  href: https://artifacts.apis.io/channable/skills/channable-fulfill-orders.md
   title: ''
   type: AgentSkill
   url: skills/channable-fulfill-orders.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/skills/channable-update-stock.md
+  href: https://artifacts.apis.io/channable/skills/channable-update-stock.md
   title: ''
   type: AgentSkill
   url: skills/channable-update-stock.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/skills/channable-process-returns.md
+  href: https://artifacts.apis.io/channable/skills/channable-process-returns.md
   title: ''
   type: AgentSkill
   url: skills/channable-process-returns.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/mcp/channable-mcp.yml
+  href: https://artifacts.apis.io/channable/mcp/channable-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/channable-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/overlays/channable-order-connection-overlay.yaml
+  href: https://artifacts.apis.io/channable/overlays/channable-order-connection-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/channable-order-connection-overlay.yaml
@@ -190,52 +190,52 @@ common:
   type: Postman
   url: https://www.postman.com/docking-module-engineer-59598931/channable-integration-environement/collection/o2462ca/channable
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/packages/channable-packages.yml
+  href: https://artifacts.apis.io/channable/packages/channable-packages.yml
   title: ''
   type: Packages
   url: packages/channable-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/lifecycle/channable-lifecycle.yml
+  href: https://artifacts.apis.io/channable/lifecycle/channable-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/channable-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/lifecycle/channable-lifecycle.yml
+  href: https://artifacts.apis.io/channable/lifecycle/channable-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/channable-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/rate-limits/channable-rate-limits.yml
+  href: https://artifacts.apis.io/channable/rate-limits/channable-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/channable-rate-limits.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/changelog/channable-changelog.yml
+  href: https://artifacts.apis.io/channable/changelog/channable-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/channable-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/conventions/channable-conventions.yml
+  href: https://artifacts.apis.io/channable/conventions/channable-conventions.yml
   title: ''
   type: Conventions
   url: conventions/channable-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/security/channable-domain-security.yml
+  href: https://artifacts.apis.io/channable/security/channable-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/channable-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/llms/channable-llms.txt
+  href: https://artifacts.apis.io/channable/llms/channable-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/channable-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/plans/channable-plans-pricing.yml
+  href: https://artifacts.apis.io/channable/plans/channable-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/channable-plans-pricing.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/sandbox/channable-sandbox.yml
+  href: https://artifacts.apis.io/channable/sandbox/channable-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/channable-sandbox.yml
@@ -244,13 +244,21 @@ common:
   type: Quickstart
   url: https://helpcenter.channable.com/get-started/getting-started/quickstart-guide.md
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/conformance/channable-conformance.yml
+  href: https://artifacts.apis.io/channable/conformance/channable-conformance.yml
   title: ''
   type: Conformance
   url: conformance/channable-conformance.yml
 created: '2026-07-17'
 description: 'Channable is a feed management and marketplace integration platform that helps online retailers, brands, and agencies optimize, distribute, and advertise their product data across more than 2,500 marketing channels, price comparison sites, affiliate networks, and online marketplaces. Beyond feed optimization and PPC ad automation, Channable operates an order-connection layer that synchronizes orders, shipments, stock, and returns between marketplaces and a seller''s ERP, WMS, or e-commerce platform. The Channable order connection API (v1) exposes this layer programmatically: retailers and platform integrators can retrieve orders and returns, post shipment and cancellation updates, push stock/offer updates to every connected marketplace at once, upload order attachments, resolve standardized transporter codes, and pull order statistics. Authentication is a company-level bearer token, requests are rate limited per company with a leaky-bucket policy, and a Channable Sandbox connection
   lets integrators test order flows without touching live marketplaces.'
+finops:
+- has_sources: true
+  method: derived
+  name: Channable Finops
+  primary_unit: active shop (google merchant center id / domain)
+  service_category: ''
+  slug: channable-finops
+  template: false
 image: https://www.channable.com/favicon.ico
 layout: provider
 modified: '2026-08-13'
@@ -260,41 +268,60 @@ network: true
 overview: 'Channable publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Order Attachments API, Orders API, Returns API, and 3 more. Tagged areas include Company, Applicative Saas, Feed Management, Marketplace, and E-Commerce.
 
 
+  The Channable catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Channable''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, pricing, and 28 more developer resources.'
 plans:
 - name: Channable Plans Pricing
   plan_count: 6
   slug: channable-plans-pricing
-random_paper: 0
+- name: Channable Price Estimates
+  plan_count: 0
+  slug: channable-price-estimates
+random_paper: 12
 rate_limits:
 - limit_count: 2
   name: Channable Rate Limits
   slug: channable-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Channable API Rules
+  rule_count: 46
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 1
+    warn: 7
+  slug: channable-rules
 score:
   band: developing
-  composite: 49.5
+  composite: 53.9
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 57.0
+    artifact_dirs: 29
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.1
   facets:
-    access_clarity: 47.4
-    contract_governance: 4.5
-    contract_quality: 41.6
+    access_clarity: 55.3
+    contract_governance: 18.2
+    contract_quality: 46.3
     developer_ergonomics: 67.3
     discoverability: 73.2
     operational_transparency: 63.2
-  previous_composite: 49.5
+  previous_composite: 52.8
   provenance:
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 6
     mcp: derived
     skills: derived
@@ -304,13 +331,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/channable/refs/heads/main/screenshots/channable-2026-08-17T083552.png
+screenshot: https://apis.io/screenshots/channable/channable-2026-08-17T083552.png
 security:
 - kind: authentication
   name: Channable Authentication
@@ -320,6 +347,14 @@ security:
   name: Channable Domain Security
   slug: channable-domain-security
   summary_line: TLSv1.3 · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Fulfill Channable marketplace orders
+  slug: channable-fulfill-orders
+- name: Process Channable returns
+  slug: channable-process-returns
+- name: Update Channable stock and offers
+  slug: channable-update-stock
 slug: channable
 tags:
 - Company

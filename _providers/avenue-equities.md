@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,22 +36,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-equities/refs/heads/main/hosts/avenue-equities-hosts.yml
+  href: https://artifacts.apis.io/avenue-equities/hosts/avenue-equities-hosts.yml
   title: ''
   type: Hosts
   url: hosts/avenue-equities-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-equities/refs/heads/main/vendors/avenue-equities-vendors.yml
+  href: https://artifacts.apis.io/avenue-equities/vendors/avenue-equities-vendors.yml
   title: ''
   type: Vendors
   url: vendors/avenue-equities-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/avenue-equities/refs/heads/main/security/avenue-equities-domain-security.yml
+  href: https://artifacts.apis.io/avenue-equities/security/avenue-equities-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/avenue-equities-domain-security.yml
@@ -62,7 +75,7 @@ name: Avenue Equities
 nav: Providers
 network: true
 overview: Avenue Equities is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Finance, Private-Market, Equity, and Trading.
-random_paper: 0
+random_paper: 2
 score:
   band: minimal
   composite: 2.2
@@ -94,14 +107,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 5.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/avenue-equities/refs/heads/main/screenshots/avenue-equities-2026-10-11T101124.png
+screenshot: https://apis.io/screenshots/avenue-equities/avenue-equities-2026-10-11T101124.png
 security:
 - kind: domain-security
   name: Avenue Equities Domain Security

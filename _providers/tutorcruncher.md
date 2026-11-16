@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 0
@@ -98,9 +101,6 @@ apis:
 artifact_total: 30
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: TutorCruncher Agents API
   slug: open-tutorcruncher-agents-api
 - collection_type: open
@@ -139,27 +139,27 @@ common:
   type: Pricing
   url: https://tutorcruncher.com/pricing/us
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tutorcruncher/refs/heads/main/capabilities/tutorcruncher-capability-edges.yml
+  href: https://artifacts.apis.io/tutorcruncher/capabilities/tutorcruncher-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tutorcruncher-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tutorcruncher/refs/heads/main/agentic-access/tutorcruncher-agentic-access.yml
+  href: https://artifacts.apis.io/tutorcruncher/agentic-access/tutorcruncher-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tutorcruncher-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tutorcruncher/refs/heads/main/security/tutorcruncher-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tutorcruncher/security/tutorcruncher-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/tutorcruncher-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tutorcruncher/refs/heads/main/security/tutorcruncher-domain-security.yml
+  href: https://artifacts.apis.io/tutorcruncher/security/tutorcruncher-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tutorcruncher-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tutorcruncher/refs/heads/main/authentication/tutorcruncher-authentication.yml
+  href: https://artifacts.apis.io/tutorcruncher/authentication/tutorcruncher-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tutorcruncher-authentication.yml
@@ -180,17 +180,17 @@ common:
   type: Documentation
   url: https://api.tutorcruncher.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tutorcruncher/refs/heads/main/plans/tutorcruncher-plans-pricing.yml
+  href: https://artifacts.apis.io/tutorcruncher/plans/tutorcruncher-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tutorcruncher-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tutorcruncher/refs/heads/main/rate-limits/tutorcruncher-rate-limits.yml
+  href: https://artifacts.apis.io/tutorcruncher/rate-limits/tutorcruncher-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tutorcruncher-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tutorcruncher/refs/heads/main/finops/tutorcruncher-finops.yml
+  href: https://artifacts.apis.io/tutorcruncher/finops/tutorcruncher-finops.yml
   title: ''
   type: FinOps
   url: finops/tutorcruncher-finops.yml
@@ -213,6 +213,9 @@ network: true
 overview: 'TutorCruncher publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Appointments API, Clients API, and 7 more. Tagged areas include Tutoring, Education, Business Management, Scheduling, and Invoicing.
 
 
+  The TutorCruncher catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   TutorCruncher''s developer surface includes pricing, authentication, documentation, and 10 more developer resources.'
 plans:
 - name: Tutorcruncher Plans Pricing
@@ -221,30 +224,43 @@ plans:
 - name: Tutorcruncher Price Estimates
   plan_count: 0
   slug: tutorcruncher-price-estimates
-random_paper: 2
+random_paper: 16
 rate_limits:
 - limit_count: 3
   name: Tutorcruncher Rate Limits
   slug: tutorcruncher-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: TutorCruncher API Rules
+  rule_count: 56
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 1
+  slug: tutorcruncher-rules
 score:
   band: thin
-  composite: 30.2
+  composite: 32.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 52.0
+    artifact_dirs: 17
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.2
+  delta: -1.0
   facets:
-    access_clarity: 42.1
-    contract_governance: 0.0
+    access_clarity: 36.8
+    contract_governance: 13.6
     contract_quality: 48.1
     developer_ergonomics: 13.1
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 34.4
+    operational_transparency: 21.1
+  previous_composite: 33.2
   provenance:
     agentic_access: derived
     contracts:
@@ -258,13 +274,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tutorcruncher/refs/heads/main/screenshots/tutorcruncher-2026-09-02T164557.png
+screenshot: https://apis.io/screenshots/tutorcruncher/tutorcruncher-2026-09-02T164557.png
 security:
 - kind: authentication
   name: Tutorcruncher Authentication

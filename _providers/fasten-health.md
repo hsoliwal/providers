@@ -1,11 +1,17 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
-  source: []
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.8
-  scored_at: '2026-10-17'
+  score: 40.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 1
@@ -77,24 +86,24 @@ apis:
   description: Customer (organization) facing APIs
   name: Fasten Health Bridge API
   slug: fasten-health-bridge-api
-artifact_total: 19
+artifact_total: 22
 asyncapis:
 - description: ''
   name: Fasten Health Webhooks
   slug: fasten-health-webhooks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/capabilities/fasten-health-capability-edges.yml
+  href: https://artifacts.apis.io/fasten-health/capabilities/fasten-health-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/fasten-health-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/agentic-access/fasten-health-agentic-access.yml
+  href: https://artifacts.apis.io/fasten-health/agentic-access/fasten-health-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fasten-health-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/authentication/fasten-health-authentication.yml
+  href: https://artifacts.apis.io/fasten-health/authentication/fasten-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fasten-health-authentication.yml
@@ -103,7 +112,7 @@ common:
   type: ContributionGuide
   url: https://github.com/fastenhealth/fasten-onprem/blob/main/CONTRIBUTING.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/security/fasten-health-domain-security.yml
+  href: https://artifacts.apis.io/fasten-health/security/fasten-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fasten-health-domain-security.yml
@@ -208,62 +217,62 @@ common:
   type: PrivacyPolicy
   url: https://policy.fastenhealth.com/connect/privacy_policy.html
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/a2a/fasten-health-a2a.yml
+  href: https://artifacts.apis.io/fasten-health/a2a/fasten-health-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/fasten-health-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/fasten-health/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/llms/fasten-health-llms.txt
+  href: https://artifacts.apis.io/fasten-health/llms/fasten-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/fasten-health-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/well-known/fasten-health-well-known.yml
+  href: https://artifacts.apis.io/fasten-health/well-known/fasten-health-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/fasten-health-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/packages/fasten-health-packages.yml
+  href: https://artifacts.apis.io/fasten-health/packages/fasten-health-packages.yml
   title: ''
   type: Packages
   url: packages/fasten-health-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/packages/fasten-health-packages.yml
+  href: https://artifacts.apis.io/fasten-health/packages/fasten-health-packages.yml
   title: ''
   type: SDKs
   url: packages/fasten-health-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/conventions/fasten-health-conventions.yml
+  href: https://artifacts.apis.io/fasten-health/conventions/fasten-health-conventions.yml
   title: ''
   type: Conventions
   url: conventions/fasten-health-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/conventions/fasten-health-conventions.yml
+  href: https://artifacts.apis.io/fasten-health/conventions/fasten-health-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/fasten-health-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/errors/fasten-health-problem-types.yml
+  href: https://artifacts.apis.io/fasten-health/errors/fasten-health-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/fasten-health-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/lifecycle/fasten-health-lifecycle.yml
+  href: https://artifacts.apis.io/fasten-health/lifecycle/fasten-health-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/fasten-health-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/changelog/fasten-health-changelog.yml
+  href: https://artifacts.apis.io/fasten-health/changelog/fasten-health-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/fasten-health-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/conformance/fasten-health-conformance.yml
+  href: https://artifacts.apis.io/fasten-health/conformance/fasten-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/fasten-health-conformance.yml
@@ -272,47 +281,47 @@ common:
   type: Compliance
   url: https://trust.fastenhealth.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/security/fasten-health-trust-center.yml
+  href: https://artifacts.apis.io/fasten-health/security/fasten-health-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/fasten-health-trust-center.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/sandbox/fasten-health-sandbox.yml
+  href: https://artifacts.apis.io/fasten-health/sandbox/fasten-health-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/fasten-health-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/data-model/fasten-health-data-model.yml
+  href: https://artifacts.apis.io/fasten-health/data-model/fasten-health-data-model.yml
   title: ''
   type: DataModel
   url: data-model/fasten-health-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/components/fasten-health-components.yml
+  href: https://artifacts.apis.io/fasten-health/components/fasten-health-components.yml
   title: ''
   type: Components
   url: components/fasten-health-components.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/scopes/fasten-health-scopes.yml
+  href: https://artifacts.apis.io/fasten-health/scopes/fasten-health-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/fasten-health-scopes.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/plans/fasten-health-plans-pricing.yml
+  href: https://artifacts.apis.io/fasten-health/plans/fasten-health-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fasten-health-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/rate-limits/fasten-health-rate-limits.yml
+  href: https://artifacts.apis.io/fasten-health/rate-limits/fasten-health-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fasten-health-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/asyncapi/fasten-health-webhooks.yml
+  href: https://artifacts.apis.io/fasten-health/asyncapi/fasten-health-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/fasten-health-webhooks.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/overlays/fasten-health-connect-overlay.yaml
+  href: https://artifacts.apis.io/fasten-health/overlays/fasten-health-connect-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/fasten-health-connect-overlay.yaml
@@ -322,6 +331,14 @@ common:
   url: mailto:support@fastenhealth.com
 created: '2026-05-25'
 description: Fasten Health is a healthcare data interoperability company offering a unified medical record platform that gives patients and developers access to clinical data across the U.S. healthcare system. Fasten began as an open-source project — Fasten OnPrem, a self-hosted personal/family electronic medical record manager that ingests FHIR Bundles and is distributed under GPL-3.0 with 2.7k+ GitHub stars. The team then productized the connectivity layer as Fasten Connect, a commercial REST + FHIR API and Stitch client SDK suite that lets developers retrieve clinical records from 50,000+ healthcare systems and 60,000+ organizations including Epic, Cerner, MyChart, Kaiser Permanente, HCA, Ascension, Humana, and Medicare. Founded by engineers who lived through the fragmentation of health data firsthand and based in New York City, Fasten ships GPL/MIT/Apache 2.0 open source repos alongside the hosted Fasten Connect platform.
+finops:
+- has_sources: true
+  method: derived
+  name: Fasten Health Finops
+  primary_unit: ''
+  service_category: ''
+  slug: fasten-health-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fasten-health.png
 layout: provider
 modified: '2026-08-14'
@@ -331,19 +348,32 @@ network: true
 overview: 'Fasten Health publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bridge API, and 10 more. Tagged areas include Healthcare, FHIR, Personal Health Record, Electronic Medical Record, and Health Data Interoperability.
 
 
-  The Fasten Health catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Fasten Health catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Fasten Health''s developer surface includes authentication, documentation, GitHub presence, engineering blog, changelog, signup flow, pricing, and 46 more developer resources.'
 plans:
 - name: Fasten Health Plans Pricing
-  plan_count: 0
+  plan_count: 1
   slug: fasten-health-plans-pricing
-random_paper: 18
+random_paper: 20
 rate_limits:
 - limit_count: 0
   name: Fasten Health Rate Limits
   slug: fasten-health-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Fasten Health API Rules
+  rule_count: 62
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 2
+    warn: 1
+  slug: fasten-health-rules
 scopes:
 - name: Fasten Health Scopes
   scope_count: 5
@@ -351,18 +381,18 @@ scopes:
   summary_line: 5 scopes
 score:
   band: strong
-  composite: 56.1
+  composite: 62.0
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 32.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    artifact_dirs: 33
+    catalog_earned: 44.5
+    catalog_earned_first_party: 8.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
-    contract_governance: 18.2
+    access_clarity: 60.5
+    contract_governance: 31.8
     contract_quality: 58.9
     developer_ergonomics: 78.6
     discoverability: 64.3
@@ -372,7 +402,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 56.1
+  previous_composite: 62.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -389,13 +419,13 @@ score:
     regime: Health
     regime_id: health
     score: 41.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/fasten-health/refs/heads/main/screenshots/fasten-health-2026-06-20T181048.png
+screenshot: https://apis.io/screenshots/fasten-health/fasten-health-2026-06-20T181048.png
 security:
 - kind: authentication
   name: Fasten Health Authentication
@@ -409,6 +439,10 @@ security:
   name: Fasten Health Trust Center
   slug: fasten-health-trust-center
   summary_line: SOC 2, HIPAA
+skill_count: 1
+skills:
+- name: Fastenhealth
+  slug: fasten-health-fastenhealth-skill
 slug: fasten-health
 tags:
 - Healthcare

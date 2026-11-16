@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: RESTful API marketed to lenders for integrating loan portfolios with Clerkie's recovery platform — payment arrangement recommendations, multi-currency payment processing, delinquency intervention, and
@@ -66,17 +69,17 @@ common:
   type: PrivacyPolicy
   url: https://s3-us-west-2.amazonaws.com/clerkie-legal/Henry+Labs+-+Privacy+Policy.pdf
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clerkie/refs/heads/main/llms/clerkie-llms.txt
+  href: https://artifacts.apis.io/clerkie/llms/clerkie-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/clerkie-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clerkie/refs/heads/main/conformance/clerkie-conformance.yml
+  href: https://artifacts.apis.io/clerkie/conformance/clerkie-conformance.yml
   title: ''
   type: Conformance
   url: conformance/clerkie-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clerkie/refs/heads/main/security/clerkie-domain-security.yml
+  href: https://artifacts.apis.io/clerkie/security/clerkie-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/clerkie-domain-security.yml
@@ -109,7 +112,7 @@ overview: 'Clerkie is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   Clerkie''s developer surface includes developer portal, engineering blog, signup flow, and 6 more developer resources.'
-random_paper: 9
+random_paper: 15
 score:
   band: emerging
   composite: 12.8
@@ -137,14 +140,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 17.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/clerkie/refs/heads/main/screenshots/clerkie-2026-09-02T145106.png
+screenshot: https://apis.io/screenshots/clerkie/clerkie-2026-09-02T145106.png
 security:
 - kind: domain-security
   name: Clerkie Domain Security

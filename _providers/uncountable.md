@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -37,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The Uncountable External API is the authenticated REST surface of the Uncountable R&D platform. Its documented entry point is the list_entities endpoint, which returns rows from a Listing Configuratio
@@ -46,7 +49,7 @@ apis:
 - description: Uncountable ships a first-party hosted Model Context Protocol server at the /mcp path of each customer environment (https://app.uncountable.com/mcp for the US deployment, https://appeu.uncountable.com
   name: Uncountable MCP Server
   slug: uncountable-mcp
-artifact_total: 10
+artifact_total: 11
 common:
 - group: company
   title: ''
@@ -73,7 +76,7 @@ common:
   type: GettingStarted
   url: https://www.support.uncountable.com/article-categories/getting-started/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/changelog/uncountable-changelog.yml
+  href: https://artifacts.apis.io/uncountable/changelog/uncountable-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/uncountable-changelog.yml
@@ -98,87 +101,87 @@ common:
   type: Compliance
   url: https://www.uncountable.com/uncountable-security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/mcp/uncountable-mcp.yml
+  href: https://artifacts.apis.io/uncountable/mcp/uncountable-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/uncountable-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/authentication/uncountable-authentication.yml
+  href: https://artifacts.apis.io/uncountable/authentication/uncountable-authentication.yml
   title: ''
   type: Authentication
   url: authentication/uncountable-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/scopes/uncountable-scopes.yml
+  href: https://artifacts.apis.io/uncountable/scopes/uncountable-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/uncountable-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/well-known/uncountable-well-known.yml
+  href: https://artifacts.apis.io/uncountable/well-known/uncountable-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/uncountable-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/llms/uncountable-llms.txt
+  href: https://artifacts.apis.io/uncountable/llms/uncountable-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/uncountable-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/conventions/uncountable-conventions.yml
+  href: https://artifacts.apis.io/uncountable/conventions/uncountable-conventions.yml
   title: ''
   type: Conventions
   url: conventions/uncountable-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/errors/uncountable-problem-types.yml
+  href: https://artifacts.apis.io/uncountable/errors/uncountable-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/uncountable-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/conformance/uncountable-conformance.yml
+  href: https://artifacts.apis.io/uncountable/conformance/uncountable-conformance.yml
   title: ''
   type: Conformance
   url: conformance/uncountable-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/security/uncountable-domain-security.yml
+  href: https://artifacts.apis.io/uncountable/security/uncountable-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/uncountable-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/security/uncountable-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/uncountable/security/uncountable-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/uncountable-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/security/uncountable-trust-center.yml
+  href: https://artifacts.apis.io/uncountable/security/uncountable-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/uncountable-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/lifecycle/uncountable-lifecycle.yml
+  href: https://artifacts.apis.io/uncountable/lifecycle/uncountable-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/uncountable-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/rate-limits/uncountable-rate-limits.yml
+  href: https://artifacts.apis.io/uncountable/rate-limits/uncountable-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/uncountable-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/plans/uncountable-plans-pricing.yml
+  href: https://artifacts.apis.io/uncountable/plans/uncountable-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/uncountable-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/uncountable/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/data-model/uncountable-data-model.yml
+  href: https://artifacts.apis.io/uncountable/data-model/uncountable-data-model.yml
   title: ''
   type: DataModel
   url: data-model/uncountable-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/packages/uncountable-packages.yml
+  href: https://artifacts.apis.io/uncountable/packages/uncountable-packages.yml
   title: ''
   type: Packages
   url: packages/uncountable-packages.yml
@@ -202,7 +205,7 @@ plans:
 - name: Uncountable Plans Pricing
   plan_count: 0
   slug: uncountable-plans-pricing
-random_paper: 18
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Uncountable Rate Limits
@@ -216,7 +219,7 @@ score:
   band: thin
   composite: 36.6
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -241,14 +244,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/uncountable/refs/heads/main/screenshots/uncountable-2026-09-02T164847.png
+screenshot: https://apis.io/screenshots/uncountable/uncountable-2026-09-02T164847.png
 security:
 - kind: authentication
   name: Uncountable Authentication
@@ -266,6 +269,10 @@ security:
   name: Uncountable Trust Center
   slug: uncountable-trust-center
   summary_line: SOC 2 Type II, ISO/IEC 27001, ISO 22301:2019, GDPR, 21 CFR Part 11, EU GMP Annex 11, ISO/IEC 17025
+skill_count: 1
+skills:
+- name: uncountable-list-entities
+  slug: uncountable-list-entities
 slug: uncountable
 tags:
 - Company

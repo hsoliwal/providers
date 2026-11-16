@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: Cloud Custodian provides rules-engine capabilities for managing cloud resources with security, compliance, and cost optimization policies.
@@ -61,17 +65,17 @@ asyncapis:
   slug: cloud-custodian-mailer-asyncapi
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-custodian/refs/heads/main/plans/cloud-custodian-plans-pricing.yml
+  href: https://artifacts.apis.io/cloud-custodian/plans/cloud-custodian-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cloud-custodian-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-custodian/refs/heads/main/rate-limits/cloud-custodian-rate-limits.yml
+  href: https://artifacts.apis.io/cloud-custodian/rate-limits/cloud-custodian-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cloud-custodian-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-custodian/refs/heads/main/finops/cloud-custodian-finops.yml
+  href: https://artifacts.apis.io/cloud-custodian/finops/cloud-custodian-finops.yml
   title: ''
   type: FinOps
   url: finops/cloud-custodian-finops.yml
@@ -88,7 +92,7 @@ common:
   type: License
   url: https://github.com/cloud-custodian/cloud-custodian/blob/main/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-custodian/refs/heads/main/security/cloud-custodian-domain-security.yml
+  href: https://artifacts.apis.io/cloud-custodian/security/cloud-custodian-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloud-custodian-domain-security.yml
@@ -121,17 +125,17 @@ common:
   type: ChangeLog
   url: https://github.com/cloud-custodian/cloud-custodian/releases
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-custodian/refs/heads/main/json-ld/cloud-custodian-context.jsonld
+  href: https://artifacts.apis.io/cloud-custodian/json-ld/cloud-custodian-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/cloud-custodian-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-custodian/refs/heads/main/json-schema/cloud-custodian-policy-schema.json
+  href: https://artifacts.apis.io/cloud-custodian/json-schema/cloud-custodian-policy-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/cloud-custodian-policy-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cloud-custodian/refs/heads/main/asyncapi/cloud-custodian-mailer-asyncapi.yml
+  href: https://artifacts.apis.io/cloud-custodian/asyncapi/cloud-custodian-mailer-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/cloud-custodian-mailer-asyncapi.yml
@@ -141,7 +145,7 @@ finops:
 - has_sources: false
   method: generated
   name: Cloud Custodian Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: cloud-custodian-finops
   template: true
@@ -171,7 +175,7 @@ plans:
 - name: Cloud Custodian Plans Pricing
   plan_count: 3
   slug: cloud-custodian-plans-pricing
-random_paper: 10
+random_paper: 14
 rate_limits:
 - limit_count: 5
   name: Cloud Custodian Rate Limits
@@ -204,13 +208,13 @@ score:
   band: thin
   composite: 35.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 55.9
     catalog_earned_first_party: 0.0
     catalog_gap: 59.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 13.6
@@ -221,21 +225,21 @@ score:
   open_source:
     applies: true
     score: 60.0
-  previous_composite: 36.7
+  previous_composite: 35.3
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cloud-custodian/refs/heads/main/screenshots/cloud-custodian-2026-06-20T174534.png
+screenshot: https://apis.io/screenshots/cloud-custodian/cloud-custodian-2026-06-20T174534.png
 security:
 - kind: domain-security
   name: Cloud Custodian Domain Security

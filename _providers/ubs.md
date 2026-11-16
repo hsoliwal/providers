@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - description: 'UBS''s EU PSD2-compliant open banking API set covering Account Information Services (AIS), Payment Initiation Services (PIS), and Confirmation of Funds (CoF). Used by licensed third-party providers to '
@@ -59,7 +63,7 @@ apis:
 artifact_total: 22
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ubs/refs/heads/main/security/ubs-domain-security.yml
+  href: https://artifacts.apis.io/ubs/security/ubs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ubs-domain-security.yml
@@ -127,12 +131,12 @@ overview: 'UBS is listed with 7 APIs on the [APIs.io](https://apis.io/) network.
 
 
   UBS''s developer surface includes developer portal, documentation, getting-started guide, engineering blog, support, and 4 more developer resources.'
-random_paper: 0
+random_paper: 18
 score:
   band: emerging
   composite: 11.3
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -153,14 +157,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ubs/refs/heads/main/screenshots/ubs-2026-06-20T195946.png
+screenshot: https://apis.io/screenshots/ubs/ubs-2026-06-20T195946.png
 security:
 - kind: domain-security
   name: Ubs Domain Security

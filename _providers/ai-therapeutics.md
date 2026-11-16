@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -36,7 +49,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/AI-Therapeutics
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ai-therapeutics/refs/heads/main/security/ai-therapeutics-domain-security.yml
+  href: https://artifacts.apis.io/ai-therapeutics/security/ai-therapeutics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ai-therapeutics-domain-security.yml
@@ -63,7 +76,7 @@ name: AI Therapeutics
 nav: Providers
 network: true
 overview: AI Therapeutics is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Pharmaceuticals, Life Sciences, and Drug Discovery.
-random_paper: 4
+random_paper: 8
 score:
   band: minimal
   composite: 4.0
@@ -89,14 +102,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ai-therapeutics/refs/heads/main/screenshots/ai-therapeutics-2026-10-11T093219.png
+screenshot: https://apis.io/screenshots/ai-therapeutics/ai-therapeutics-2026-10-11T093219.png
 security:
 - kind: domain-security
   name: Ai Therapeutics Domain Security

@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: RESTful partner API for international mass payments — live FX rate quotes, recipient account management, and automated payment processing to 170+ countries in 50+ currencies. Authenticated with API ke
@@ -92,32 +95,32 @@ common:
   type: Compliance
   url: https://www.ofx.com/en-us/legal/sanctions-compliance-resources/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ozforex/refs/heads/main/authentication/ozforex-authentication.yml
+  href: https://artifacts.apis.io/ozforex/authentication/ozforex-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ozforex-authentication.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/ozforex/refs/heads/main/sandbox/ozforex-sandbox.yml
+  href: https://artifacts.apis.io/ozforex/sandbox/ozforex-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/ozforex-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ozforex/refs/heads/main/conventions/ozforex-conventions.yml
+  href: https://artifacts.apis.io/ozforex/conventions/ozforex-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ozforex-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ozforex/refs/heads/main/conformance/ozforex-conformance.yml
+  href: https://artifacts.apis.io/ozforex/conformance/ozforex-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ozforex-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ozforex/refs/heads/main/security/ozforex-domain-security.yml
+  href: https://artifacts.apis.io/ozforex/security/ozforex-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ozforex-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ozforex/refs/heads/main/well-known/ozforex-well-known.yml
+  href: https://artifacts.apis.io/ozforex/well-known/ozforex-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/ozforex-well-known.yml
@@ -133,7 +136,7 @@ overview: 'OFX (OzForex) is listed with 1 API on the [APIs.io](https://apis.io/)
 
 
   OFX (OzForex)''s developer surface includes documentation, getting-started guide, signup flow, pricing, support, engineering blog, authentication, and 11 more developer resources.'
-random_paper: 11
+random_paper: 13
 score:
   band: thin
   composite: 26.7
@@ -161,14 +164,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 26.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ozforex/refs/heads/main/screenshots/ozforex-2026-08-07T191224.png
+screenshot: https://apis.io/screenshots/ozforex/ozforex-2026-08-07T191224.png
 security:
 - kind: authentication
   name: Ozforex Authentication

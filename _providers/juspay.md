@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 21.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -73,9 +79,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Juspay Express Checkout Customers API
   slug: open-juspay-customers-api
 - collection_type: open
@@ -95,17 +98,17 @@ collections:
   slug: open-juspay
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/juspay/refs/heads/main/agentic-access/juspay-agentic-access.yml
+  href: https://artifacts.apis.io/juspay/agentic-access/juspay-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/juspay-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/juspay/refs/heads/main/security/juspay-domain-security.yml
+  href: https://artifacts.apis.io/juspay/security/juspay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/juspay-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/juspay/refs/heads/main/authentication/juspay-authentication.yml
+  href: https://artifacts.apis.io/juspay/authentication/juspay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/juspay-authentication.yml
@@ -126,17 +129,17 @@ common:
   type: Documentation
   url: https://juspay.io/in/docs/api-reference/docs/express-checkout/introduction
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/juspay/refs/heads/main/plans/juspay-plans-pricing.yml
+  href: https://artifacts.apis.io/juspay/plans/juspay-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/juspay-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/juspay/refs/heads/main/rate-limits/juspay-rate-limits.yml
+  href: https://artifacts.apis.io/juspay/rate-limits/juspay-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/juspay-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/juspay/refs/heads/main/finops/juspay-finops.yml
+  href: https://artifacts.apis.io/juspay/finops/juspay-finops.yml
   title: ''
   type: FinOps
   url: finops/juspay-finops.yml
@@ -163,30 +166,46 @@ network: true
 overview: 'Juspay publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Customers API, Orders API, Refunds API, and 2 more. Tagged areas include Payments, Payment Orchestration, Checkout, India, and UPI.
 
 
+  The Juspay catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Juspay''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Juspay Plans Pricing
   plan_count: 3
   slug: juspay-plans-pricing
-random_paper: 8
+random_paper: 20
 rate_limits:
 - limit_count: 3
   name: Juspay Rate Limits
   slug: juspay-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Juspay API Rules
+  rule_count: 59
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 2
+  slug: juspay-rules
 score:
   band: emerging
-  composite: 23.8
+  composite: 25.4
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 40.2
     developer_ergonomics: 31.0
     discoverability: 66.1
@@ -198,7 +217,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 32.1
+  previous_composite: 25.4
   provenance:
     agentic_access: derived
     contracts:
@@ -212,13 +231,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/juspay/refs/heads/main/screenshots/juspay-2026-07-25T223337.png
+screenshot: https://apis.io/screenshots/juspay/juspay-2026-07-25T223337.png
 security:
 - kind: authentication
   name: Juspay Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 1
@@ -87,9 +94,6 @@ apis:
 artifact_total: 24
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Beds24 API V2 Accounts API
   slug: open-beds24-accounts-api
 - collection_type: open
@@ -122,22 +126,22 @@ common:
   type: Blog
   url: https://beds24.com/en/company/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/beds24/refs/heads/main/capabilities/beds24-capability-edges.yml
+  href: https://artifacts.apis.io/beds24/capabilities/beds24-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/beds24-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/beds24/refs/heads/main/agentic-access/beds24-agentic-access.yml
+  href: https://artifacts.apis.io/beds24/agentic-access/beds24-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/beds24-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beds24/refs/heads/main/security/beds24-domain-security.yml
+  href: https://artifacts.apis.io/beds24/security/beds24-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/beds24-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beds24/refs/heads/main/authentication/beds24-authentication.yml
+  href: https://artifacts.apis.io/beds24/authentication/beds24-authentication.yml
   title: ''
   type: Authentication
   url: authentication/beds24-authentication.yml
@@ -154,17 +158,17 @@ common:
   type: Documentation
   url: https://wiki.beds24.com/index.php/Category:API_V2
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/beds24/refs/heads/main/plans/beds24-plans-pricing.yml
+  href: https://artifacts.apis.io/beds24/plans/beds24-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/beds24-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/beds24/refs/heads/main/rate-limits/beds24-rate-limits.yml
+  href: https://artifacts.apis.io/beds24/rate-limits/beds24-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/beds24-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/beds24/refs/heads/main/finops/beds24-finops.yml
+  href: https://artifacts.apis.io/beds24/finops/beds24-finops.yml
   title: ''
   type: FinOps
   url: finops/beds24-finops.yml
@@ -187,35 +191,51 @@ network: true
 overview: 'Beds24 publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Authentication API, Bookings API, and 5 more. Tagged areas include Vacation Rentals, Hotels, Channel Manager, Property Management System, and Booking Engine.
 
 
+  The Beds24 catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Beds24''s developer surface includes engineering blog, authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Beds24 Plans Pricing
   plan_count: 5
   slug: beds24-plans-pricing
-random_paper: 10
+random_paper: 12
 rate_limits:
 - limit_count: 4
   name: Beds24 Rate Limits
   slug: beds24-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: Beds24 API Rules
+  rule_count: 69
+  severity_counts:
+    error: 67
+    hint: 0
+    info: 1
+    warn: 1
+  slug: beds24-rules
 score:
   band: thin
-  composite: 27.2
+  composite: 28.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.8
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 51.1
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 35.0
+  previous_composite: 28.8
   provenance:
     agentic_access: derived
     contracts:
@@ -229,13 +249,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/beds24/refs/heads/main/screenshots/beds24-2026-07-25T202622.png
+screenshot: https://apis.io/screenshots/beds24/beds24-2026-07-25T202622.png
 security:
 - kind: authentication
   name: Beds24 Authentication

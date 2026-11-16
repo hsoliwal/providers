@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Janio''s production REST API for cross-border logistics: order creation and batch order management, unified multi-carrier tracking, rate and transit-time quotes, shipping label and customs document gen'
@@ -44,7 +47,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/janio/refs/heads/main/security/janio-domain-security.yml
+  href: https://artifacts.apis.io/janio/security/janio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/janio-domain-security.yml
@@ -53,7 +56,7 @@ common:
   type: Website
   url: https://www.janio.asia/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/janio/refs/heads/main/llms/janio-llms.txt
+  href: https://artifacts.apis.io/janio/llms/janio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/janio-llms.txt
@@ -102,37 +105,37 @@ common:
   type: Careers
   url: https://www.janio.asia/careers
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/janio/refs/heads/main/plans/janio-plans-pricing.yml
+  href: https://artifacts.apis.io/janio/plans/janio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/janio-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/janio/refs/heads/main/rate-limits/janio-rate-limits.yml
+  href: https://artifacts.apis.io/janio/rate-limits/janio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/janio-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/janio/refs/heads/main/conformance/janio-conformance.yml
+  href: https://artifacts.apis.io/janio/conformance/janio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/janio-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/janio/refs/heads/main/conformance/janio-conformance.yml
+  href: https://artifacts.apis.io/janio/conformance/janio-conformance.yml
   title: ''
   type: Compliance
   url: conformance/janio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/janio/refs/heads/main/lifecycle/janio-lifecycle.yml
+  href: https://artifacts.apis.io/janio/lifecycle/janio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/janio-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/janio/refs/heads/main/conventions/janio-conventions.yml
+  href: https://artifacts.apis.io/janio/conventions/janio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/janio-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/janio/refs/heads/main/packages/janio-packages.yml
+  href: https://artifacts.apis.io/janio/packages/janio-packages.yml
   title: ''
   type: Packages
   url: packages/janio-packages.yml
@@ -181,7 +184,7 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 77.6
     contract_governance: 18.2
@@ -196,7 +199,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 27.6
+  previous_composite: 27.7
   provenance:
     conformance: first-party
   regulatory:
@@ -205,14 +208,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 23.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/janio/refs/heads/main/screenshots/janio-2026-09-02T150157.png
+screenshot: https://apis.io/screenshots/janio/janio-2026-09-02T150157.png
 security:
 - kind: domain-security
   name: Janio Domain Security

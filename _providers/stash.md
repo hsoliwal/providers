@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Stash provides a mobile-first investing and banking platform enabling fractional share purchases, automated smart portfolio management, retirement accounts, and a Stock-Back debit card. The platform i
@@ -46,12 +50,12 @@ common:
   type: Website
   url: https://stash.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stash/refs/heads/main/security/stash-trust-center.yml
+  href: https://artifacts.apis.io/stash/security/stash-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/stash-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stash/refs/heads/main/security/stash-domain-security.yml
+  href: https://artifacts.apis.io/stash/security/stash-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/stash-domain-security.yml
@@ -128,13 +132,13 @@ score:
   band: emerging
   composite: 11.3
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 39.0
     catalog_earned_first_party: 0.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -4.3
+  delta: 0.0
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
@@ -142,21 +146,21 @@ score:
     developer_ergonomics: 11.9
     discoverability: 67.0
     operational_transparency: 10.5
-  previous_composite: 15.6
+  previous_composite: 11.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 8.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/stash/refs/heads/main/screenshots/stash-2026-06-20T194517.png
+screenshot: https://apis.io/screenshots/stash/stash-2026-06-20T194517.png
 security:
 - kind: domain-security
   name: Stash Domain Security

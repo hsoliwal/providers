@@ -29,15 +29,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.1
-  scored_at: '2026-10-17'
+  score: 54.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.karmacheck.io
@@ -85,19 +88,19 @@ apis:
   description: The Verification Book API from KarmaCheck — 1 operation(s) for verification book.
   name: KarmaCheck Verification Book API
   slug: karmacheck-verification-book-api
-artifact_total: 15
+artifact_total: 19
 asyncapis:
 - description: ''
   name: Karmacheck Webhooks
   slug: karmacheck-webhooks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/capabilities/karmacheck-capability-edges.yml
+  href: https://artifacts.apis.io/karmacheck/capabilities/karmacheck-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/karmacheck-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/overlays/karmacheck-api-overlay.yaml
+  href: https://artifacts.apis.io/karmacheck/overlays/karmacheck-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/karmacheck-api-overlay.yaml
@@ -142,98 +145,106 @@ common:
   type: PrivacyPolicy
   url: https://www.karmacheck.com/privacy-policy
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/changelog/karmacheck-changelog.yml
+  href: https://artifacts.apis.io/karmacheck/changelog/karmacheck-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/karmacheck-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/llms/karmacheck-llms.txt
+  href: https://artifacts.apis.io/karmacheck/llms/karmacheck-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/karmacheck-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/mcp/karmacheck-mcp.yml
+  href: https://artifacts.apis.io/karmacheck/mcp/karmacheck-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/karmacheck-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/mcp/karmacheck-tool-crosswalk.yml
+  href: https://artifacts.apis.io/karmacheck/mcp/karmacheck-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/karmacheck-tool-crosswalk.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/asyncapi/karmacheck-webhooks.yml
+  href: https://artifacts.apis.io/karmacheck/asyncapi/karmacheck-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/karmacheck-webhooks.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/authentication/karmacheck-authentication.yml
+  href: https://artifacts.apis.io/karmacheck/authentication/karmacheck-authentication.yml
   title: ''
   type: Authentication
   url: authentication/karmacheck-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/conventions/karmacheck-conventions.yml
+  href: https://artifacts.apis.io/karmacheck/conventions/karmacheck-conventions.yml
   title: ''
   type: Conventions
   url: conventions/karmacheck-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/errors/karmacheck-problem-types.yml
+  href: https://artifacts.apis.io/karmacheck/errors/karmacheck-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/karmacheck-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/data-model/karmacheck-data-model.yml
+  href: https://artifacts.apis.io/karmacheck/data-model/karmacheck-data-model.yml
   title: ''
   type: DataModel
   url: data-model/karmacheck-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/lifecycle/karmacheck-lifecycle.yml
+  href: https://artifacts.apis.io/karmacheck/lifecycle/karmacheck-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/karmacheck-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/sandbox/karmacheck-sandbox.yml
+  href: https://artifacts.apis.io/karmacheck/sandbox/karmacheck-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/karmacheck-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/conformance/karmacheck-conformance.yml
+  href: https://artifacts.apis.io/karmacheck/conformance/karmacheck-conformance.yml
   title: ''
   type: Conformance
   url: conformance/karmacheck-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/conformance/karmacheck-conformance.yml
+  href: https://artifacts.apis.io/karmacheck/conformance/karmacheck-conformance.yml
   title: ''
   type: Compliance
   url: conformance/karmacheck-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/plans/karmacheck-plans-pricing.yml
+  href: https://artifacts.apis.io/karmacheck/plans/karmacheck-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/karmacheck-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/rate-limits/karmacheck-rate-limits.yml
+  href: https://artifacts.apis.io/karmacheck/rate-limits/karmacheck-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/karmacheck-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/karmacheck/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/security/karmacheck-domain-security.yml
+  href: https://artifacts.apis.io/karmacheck/security/karmacheck-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/karmacheck-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/well-known/karmacheck-well-known.yml
+  href: https://artifacts.apis.io/karmacheck/well-known/karmacheck-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/karmacheck-well-known.yml
 created: '2026-08-23'
 description: 'KarmaCheck Inc. is a San Francisco based, API-first background check and credential verification company serving staffing, healthcare, gig-economy, call-center and IT/tech hiring workflows. The KarmaCheck API is a REST contract on api.karmacheck.io covering the full screening lifecycle: creating and placing cases, candidate onboarding with FCRA, e-signature, Canada, international and location-specific disclosure acknowledgement, criminal, identity, motor vehicle record, education, employment, professional-licence and occupational-health screenings, secure document upload and retrieval, package and service catalogs, jurisdiction lookup, verification-book search, adjudication and pre-adverse-action documents. Results are pushed asynchronously through Svix-delivered, HMAC-SHA256 signed webhooks (case.statuschange and casedata.statuschange). KarmaCheck also operates a remote MCP server so agents can order and track screenings from natural language, and integrates with Bullhorn,
   Workday and symplr CTM. The company holds a SOC 2 Type 2 report and operates as an FCRA consumer reporting agency.'
+finops:
+- has_sources: true
+  method: derived
+  name: Karmacheck Finops
+  primary_unit: ''
+  service_category: ''
+  slug: karmacheck-finops
+  template: true
 image: https://cdn.prod.website-files.com/673634b37e2e1340c1ee5f3d/6736aa68f0e954a84817b9c0_Favicon-Icon.png
 layout: provider
 mcp_servers:
@@ -247,7 +258,7 @@ network: true
 overview: 'KarmaCheck publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Candidate onboarding API, Case API, and 6 more. Tagged areas include Background Checks, Employment Screening, Identity Verification, Credential Verification, and Motor Vehicle Records.
 
 
-  The KarmaCheck catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The KarmaCheck catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   KarmaCheck''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, authentication, and 23 more developer resources.'
@@ -255,30 +266,43 @@ plans:
 - name: Karmacheck Plans Pricing
   plan_count: 0
   slug: karmacheck-plans-pricing
-random_paper: 0
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Karmacheck Rate Limits
   slug: karmacheck-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: KarmaCheck API Rules
+  rule_count: 57
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 3
+    warn: 10
+  slug: karmacheck-rules
 score:
   band: developing
-  composite: 49.3
+  composite: 52.4
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.4
   facets:
     access_clarity: 35.5
-    contract_governance: 18.2
-    contract_quality: 61.0
+    contract_governance: 31.8
+    contract_quality: 66.9
     developer_ergonomics: 66.1
     discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 49.3
+  previous_composite: 51.0
   provenance:
     conformance: first-party
     contracts:
@@ -294,13 +318,13 @@ score:
     regime: Health
     regime_id: health
     score: 23.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/karmacheck/refs/heads/main/screenshots/karmacheck-2026-09-02T150133.png
+screenshot: https://apis.io/screenshots/karmacheck/karmacheck-2026-09-02T150133.png
 security:
 - kind: authentication
   name: Karmacheck Authentication
@@ -310,6 +334,12 @@ security:
   name: Karmacheck Domain Security
   slug: karmacheck-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: karmacheck-order-background-check
+  slug: karmacheck-order-background-check
+- name: karmacheck-track-and-adjudicate-case
+  slug: karmacheck-track-and-adjudicate-case
 slug: karmacheck
 tags:
 - Background Checks

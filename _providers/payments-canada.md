@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.8
-  scored_at: '2026-10-17'
+  score: 24.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -101,7 +104,7 @@ apis:
   description: Update Extract Resource
   name: Payments Canada Update Extract Resource API
   slug: payments-canada-update-extract-resource-api
-artifact_total: 24
+artifact_total: 28
 collections:
 - collection_type: open
   name: CCIN Output API
@@ -133,122 +136,122 @@ common:
   type: BlogRSS
   url: https://www.payments.ca/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/capabilities/payments-canada-capability-edges.yml
+  href: https://artifacts.apis.io/payments-canada/capabilities/payments-canada-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/payments-canada-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/overlays/rtr-inbound-participant-payment-api-overlay.yaml
+  href: https://artifacts.apis.io/payments-canada/overlays/rtr-inbound-participant-payment-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rtr-inbound-participant-payment-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/overlays/rtr-inbound-csp-heartbeat-api-overlay.yaml
+  href: https://artifacts.apis.io/payments-canada/overlays/rtr-inbound-csp-heartbeat-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rtr-inbound-csp-heartbeat-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/overlays/rtr-interest-report-api-overlay.yaml
+  href: https://artifacts.apis.io/payments-canada/overlays/rtr-interest-report-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rtr-interest-report-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/overlays/rtr-balance-report-api-overlay.yaml
+  href: https://artifacts.apis.io/payments-canada/overlays/rtr-balance-report-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rtr-balance-report-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/overlays/fif-extracts-api-overlay.yaml
+  href: https://artifacts.apis.io/payments-canada/overlays/fif-extracts-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/fif-extracts-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/overlays/fif-branch-api-overlay.yaml
+  href: https://artifacts.apis.io/payments-canada/overlays/fif-branch-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/fif-branch-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/overlays/ccin-extracts-api-overlay.yaml
+  href: https://artifacts.apis.io/payments-canada/overlays/ccin-extracts-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ccin-extracts-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/overlays/ccin-lookup-api-overlay.yaml
+  href: https://artifacts.apis.io/payments-canada/overlays/ccin-lookup-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/ccin-lookup-api-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/security/payments-canada-domain-security.yml
+  href: https://artifacts.apis.io/payments-canada/security/payments-canada-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/payments-canada-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/agentic-access/payments-canada-agentic-access.yml
+  href: https://artifacts.apis.io/payments-canada/agentic-access/payments-canada-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/payments-canada-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/scopes/payments-canada-scopes.yml
+  href: https://artifacts.apis.io/payments-canada/scopes/payments-canada-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/payments-canada-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/authentication/payments-canada-authentication.yml
+  href: https://artifacts.apis.io/payments-canada/authentication/payments-canada-authentication.yml
   title: ''
   type: Authentication
   url: authentication/payments-canada-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/conventions/payments-canada-conventions.yml
+  href: https://artifacts.apis.io/payments-canada/conventions/payments-canada-conventions.yml
   title: ''
   type: Conventions
   url: conventions/payments-canada-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/errors/payments-canada-problem-types.yml
+  href: https://artifacts.apis.io/payments-canada/errors/payments-canada-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/payments-canada-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/conformance/payments-canada-conformance.yml
+  href: https://artifacts.apis.io/payments-canada/conformance/payments-canada-conformance.yml
   title: ''
   type: Conformance
   url: conformance/payments-canada-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/lifecycle/payments-canada-lifecycle.yml
+  href: https://artifacts.apis.io/payments-canada/lifecycle/payments-canada-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/payments-canada-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/data-model/payments-canada-data-model.yml
+  href: https://artifacts.apis.io/payments-canada/data-model/payments-canada-data-model.yml
   title: ''
   type: DataModel
   url: data-model/payments-canada-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/well-known/payments-canada-well-known.yml
+  href: https://artifacts.apis.io/payments-canada/well-known/payments-canada-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/payments-canada-well-known.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/sandbox/payments-canada-sandbox.yml
+  href: https://artifacts.apis.io/payments-canada/sandbox/payments-canada-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/payments-canada-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/mcp/payments-canada-mcp.yml
+  href: https://artifacts.apis.io/payments-canada/mcp/payments-canada-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/payments-canada-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/mcp/payments-canada-tool-crosswalk.yml
+  href: https://artifacts.apis.io/payments-canada/mcp/payments-canada-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/payments-canada-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/llms/payments-canada-llms.txt
+  href: https://artifacts.apis.io/payments-canada/llms/payments-canada-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/payments-canada-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/payments-canada/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -312,8 +315,24 @@ network: true
 overview: 'Payments Canada publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including application level heartbeat API, Ccin Extract Resource API, Fif Branches Resource API, and 9 more. Tagged areas include Financial Services, Payments, Canada, Payment Infrastructure, and Clearing and Settlement.
 
 
+  The Payments Canada catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Payments Canada''s developer surface includes authentication, sandbox, documentation, getting-started guide, support, and 32 more developer resources.'
-random_paper: 8
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Payments Canada API Rules
+  rule_count: 49
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 1
+  slug: payments-canada-rules
 scopes:
 - name: Payments Canada Scopes
   scope_count: 1
@@ -321,18 +340,18 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: developing
-  composite: 40.7
+  composite: 42.4
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 35.0
+    artifact_dirs: 25
+    catalog_earned: 39.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 44.8
     developer_ergonomics: 68.5
     discoverability: 69.6
@@ -344,7 +363,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 40.7
+  previous_composite: 42.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -361,13 +380,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 38.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/payments-canada/refs/heads/main/screenshots/payments-canada-2026-08-07T191642.png
+screenshot: https://apis.io/screenshots/payments-canada/payments-canada-2026-08-07T191642.png
 security:
 - kind: authentication
   name: Payments Canada Authentication
@@ -377,6 +396,14 @@ security:
   name: Payments Canada Domain Security
   slug: payments-canada-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Look up Canadian financial-institution and creditor reference data
+  slug: payments-canada-lookup-reference-data
+- name: Retrieve RTR interest and balance reports
+  slug: payments-canada-rtr-account-reports
+- name: Send an RTR credit transfer and check its status
+  slug: payments-canada-send-rtr-payment
 slug: payments-canada
 tags:
 - Financial Services

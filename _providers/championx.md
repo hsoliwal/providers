@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/championx/refs/heads/main/security/championx-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/championx/security/championx-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/championx-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/championx/refs/heads/main/security/championx-domain-security.yml
+  href: https://artifacts.apis.io/championx/security/championx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/championx-domain-security.yml
@@ -66,10 +70,10 @@ name: ChampionX
 nav: Providers
 network: true
 overview: ChampionX is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Oil and Gas, Oilfield Services, Chemical Technologies, and Industrial.
-random_paper: 21
+random_paper: 7
 score:
   band: minimal
-  composite: 3.4
+  composite: 4.8
   coverage:
     artifact_dirs: 3
     catalog_earned: 22.0
@@ -84,22 +88,22 @@ score:
     contract_quality: 0.0
     developer_ergonomics: 0.0
     discoverability: 39.3
-    operational_transparency: 0.0
-  previous_composite: 3.4
+    operational_transparency: 10.5
+  previous_composite: 4.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/championx/refs/heads/main/screenshots/championx-2026-06-20T174207.png
+screenshot: https://apis.io/screenshots/championx/championx-2026-06-20T174207.png
 security:
 - kind: domain-security
   name: Championx Domain Security

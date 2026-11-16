@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 43.8
-  scored_at: '2026-10-17'
+  score: 42.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 502
   human_in_the_loop: 21
@@ -297,62 +310,62 @@ apis:
 artifact_total: 62
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/agentic-access/callidus-legal-ai-agentic-access.yml
+  href: https://artifacts.apis.io/callidus-legal-ai/agentic-access/callidus-legal-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/callidus-legal-ai-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/rules/callidus-legal-ai-rules.yml
+  href: https://artifacts.apis.io/callidus-legal-ai/rules/callidus-legal-ai-rules.yml
   title: ''
   type: Spectral
   url: rules/callidus-legal-ai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/json-ld/callidus-legal-ai-context.jsonld
+  href: https://artifacts.apis.io/callidus-legal-ai/json-ld/callidus-legal-ai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/callidus-legal-ai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/vocabulary/callidus-legal-ai-vocabulary.yml
+  href: https://artifacts.apis.io/callidus-legal-ai/vocabulary/callidus-legal-ai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/callidus-legal-ai-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/data-model/callidus-legal-ai-data-model.yml
+  href: https://artifacts.apis.io/callidus-legal-ai/data-model/callidus-legal-ai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/callidus-legal-ai-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/errors/callidus-legal-ai-problem-types.yml
+  href: https://artifacts.apis.io/callidus-legal-ai/errors/callidus-legal-ai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/callidus-legal-ai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/conformance/callidus-legal-ai-conformance.yml
+  href: https://artifacts.apis.io/callidus-legal-ai/conformance/callidus-legal-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/callidus-legal-ai-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/llms/callidus-legal-ai-llms.txt
+  href: https://artifacts.apis.io/callidus-legal-ai/llms/callidus-legal-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/callidus-legal-ai-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/well-known/callidus-legal-ai-help-security.txt
+  href: https://artifacts.apis.io/callidus-legal-ai/well-known/callidus-legal-ai-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/callidus-legal-ai-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/well-known/callidus-legal-ai-well-known.yml
+  href: https://artifacts.apis.io/callidus-legal-ai/well-known/callidus-legal-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/callidus-legal-ai-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/hosts/callidus-legal-ai-hosts.yml
+  href: https://artifacts.apis.io/callidus-legal-ai/hosts/callidus-legal-ai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/callidus-legal-ai-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/vendors/callidus-legal-ai-vendors.yml
+  href: https://artifacts.apis.io/callidus-legal-ai/vendors/callidus-legal-ai-vendors.yml
   title: ''
   type: Vendors
   url: vendors/callidus-legal-ai-vendors.yml
@@ -369,7 +382,7 @@ common:
   type: Documentation
   url: https://help.strongsuit.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/callidus-legal-ai/refs/heads/main/security/callidus-legal-ai-domain-security.yml
+  href: https://artifacts.apis.io/callidus-legal-ai/security/callidus-legal-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/callidus-legal-ai-domain-security.yml
@@ -419,14 +432,14 @@ modified: '2026-10-06'
 name: Callidus Legal AI
 nav: Providers
 network: true
-overview: 'Callidus Legal AI publishes 52 API contracts indexed on the [APIs.io](https://apis.io/) network, including Addin Doc Utils API, Addin Litigate API, Addin Live Edit API, and 49 more. Tagged areas include Legal Tech, Artificial Intelligence, Litigation, ContractAutomation, and Research.
+overview: 'Callidus Legal AI publishes 52 API contracts indexed on the [APIs.io](https://apis.io/) network, including Addin Doc Utils API, Addin Litigate API, Addin Live Edit API, and 49 more. Tagged areas include Legal Tech, Artificial Intelligence, Litigation, Contract Automation, and Research.
 
 
   The Callidus Legal AI catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Callidus Legal AI''s developer surface includes support, getting-started guide, documentation, and 14 more developer resources.'
-random_paper: 8
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -442,21 +455,23 @@ rules:
   slug: callidus-legal-ai-rules
 score:
   band: thin
-  composite: 33.7
+  composite: 32.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.6
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 53.4
-    developer_ergonomics: 26.2
+    developer_ergonomics: 13.1
     discoverability: 69.6
-    operational_transparency: 0.0
+    operational_transparency: 10.5
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -472,11 +487,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 61.1
+screenshot: https://apis.io/screenshots/callidus-legal-ai/callidus-legal-ai-2026-11-03T123031.png
 security:
 - kind: domain-security
   name: Callidus Legal Ai Domain Security
@@ -487,7 +504,7 @@ tags:
 - Legal Tech
 - Artificial Intelligence
 - Litigation
-- ContractAutomation
+- Contract Automation
 - Research
 website: https://strongsuit.com
 ---

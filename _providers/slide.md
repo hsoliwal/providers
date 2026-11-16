@@ -26,16 +26,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.3
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 25.6
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.slide.tech
   baseurl_source: declared
@@ -107,11 +110,8 @@ apis:
   description: Everything about [users](#model/user)
   name: Slide Users API
   slug: slide-users-api
-artifact_total: 32
+artifact_total: 35
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Slide Accounts API
   slug: open-slide-accounts-api
@@ -160,17 +160,17 @@ common:
   type: Blog
   url: https://slide.tech/news
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/capabilities/slide-capability-edges.yml
+  href: https://artifacts.apis.io/slide/capabilities/slide-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/slide-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/security/slide-domain-security.yml
+  href: https://artifacts.apis.io/slide/security/slide-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/slide-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/authentication/slide-authentication.yml
+  href: https://artifacts.apis.io/slide/authentication/slide-authentication.yml
   title: ''
   type: Authentication
   url: authentication/slide-authentication.yml
@@ -227,57 +227,57 @@ common:
   type: Compliance
   url: https://docs.slide.tech/security-and-trust/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/errors/slide-error-codes.yml
+  href: https://artifacts.apis.io/slide/errors/slide-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/slide-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/conventions/slide-conventions.yml
+  href: https://artifacts.apis.io/slide/conventions/slide-conventions.yml
   title: ''
   type: Conventions
   url: conventions/slide-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/data-model/slide-data-model.yml
+  href: https://artifacts.apis.io/slide/data-model/slide-data-model.yml
   title: ''
   type: DataModel
   url: data-model/slide-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/lifecycle/slide-lifecycle.yml
+  href: https://artifacts.apis.io/slide/lifecycle/slide-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/slide-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/changelog/slide-changelog.yml
+  href: https://artifacts.apis.io/slide/changelog/slide-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/slide-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/mcp/slide-mcp.yml
+  href: https://artifacts.apis.io/slide/mcp/slide-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/slide-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/overlays/slide-openapi-overlay.yaml
+  href: https://artifacts.apis.io/slide/overlays/slide-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/slide-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/conformance/slide-conformance.yml
+  href: https://artifacts.apis.io/slide/conformance/slide-conformance.yml
   title: ''
   type: Conformance
   url: conformance/slide-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/security/slide-trust-center.yml
+  href: https://artifacts.apis.io/slide/security/slide-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/slide-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/slide/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/llms/slide-llms.txt
+  href: https://artifacts.apis.io/slide/llms/slide-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/slide-llms.txt
@@ -292,33 +292,49 @@ network: true
 overview: 'Slide publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Agents API, Alerts API, and 11 more. Tagged areas include Company, Backup, Disaster Recovery, Business Continuity, and BCDR.
 
 
+  The Slide catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Slide''s developer surface includes engineering blog, authentication, documentation, API reference, getting-started guide, support, changelog, and 21 more developer resources.'
 random_paper: 1
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: Slide API Rules
+  rule_count: 65
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 2
+    warn: 11
+  slug: slide-rules
 score:
   band: developing
-  composite: 48.3
+  composite: 51.4
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 1.4
   facets:
     access_clarity: 43.4
-    contract_governance: 4.5
-    contract_quality: 53.8
+    contract_governance: 18.2
+    contract_quality: 59.4
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 47.8
+  previous_composite: 50.0
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 14
     mcp: derived
     skills: derived
@@ -328,13 +344,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/slide/refs/heads/main/screenshots/slide-2026-08-17T081918.png
+screenshot: https://apis.io/screenshots/slide/slide-2026-08-17T081918.png
 security:
 - kind: authentication
   name: Slide Authentication
@@ -348,6 +364,14 @@ security:
   name: Slide Trust Center
   slug: slide-trust-center
   summary_line: SOC 2 Type 1 (Security and Availability Trust Services Criteria)
+skill_count: 3
+skills:
+- name: Restore files from a Slide snapshot
+  slug: slide-file-restore
+- name: Pair a Slide protection agent and start a backup
+  slug: slide-pair-agent-and-backup
+- name: Virtualize a Slide snapshot for disaster recovery
+  slug: slide-virtualize-snapshot
 slug: slide
 tags:
 - Company

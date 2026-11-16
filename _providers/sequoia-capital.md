@@ -1,7 +1,7 @@
 ---
 access_model:
-  confidence: medium
-  generated: '2026-07-22'
+  confidence: low
+  generated: '2026-11-06'
   label: Freemium
   method: derived
   onboarding: unknown
@@ -9,6 +9,7 @@ access_model:
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 api_count: 0
@@ -21,7 +22,7 @@ modified: '2026-07-17'
 name: Sequoia Capital
 nav: Providers
 network: true
-random_paper: 20
+random_paper: 2
 slug: sequoia-capital
 tags:
 - Venture Capital

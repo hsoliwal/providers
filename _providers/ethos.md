@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Partner-gated API surface exposing Ethos's underwriting and interview engines. Partners can retrieve customized quotes, conduct interviews and instant underwriting, collect required policy and billing
@@ -75,27 +78,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/getethos
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ethos/refs/heads/main/llms/ethos-llms.txt
+  href: https://artifacts.apis.io/ethos/llms/ethos-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ethos-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ethos/refs/heads/main/authentication/ethos-authentication.yml
+  href: https://artifacts.apis.io/ethos/authentication/ethos-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ethos-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ethos/refs/heads/main/conventions/ethos-conventions.yml
+  href: https://artifacts.apis.io/ethos/conventions/ethos-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ethos-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ethos/refs/heads/main/conformance/ethos-conformance.yml
+  href: https://artifacts.apis.io/ethos/conformance/ethos-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ethos-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ethos/refs/heads/main/security/ethos-domain-security.yml
+  href: https://artifacts.apis.io/ethos/security/ethos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ethos-domain-security.yml
@@ -120,7 +123,7 @@ score:
   band: emerging
   composite: 17.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -143,14 +146,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 18.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ethos/refs/heads/main/screenshots/ethos-2026-07-25T213654.png
+screenshot: https://apis.io/screenshots/ethos/ethos-2026-07-25T213654.png
 security:
 - kind: authentication
   name: Ethos Authentication
@@ -170,5 +173,7 @@ tags:
 - Financial Services
 - Estate Planning
 - Partnership API
+- Fintech
+- Digital
 website: https://www.ethos.com
 ---

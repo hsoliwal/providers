@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -53,17 +57,17 @@ common:
   type: PrivacyPolicy
   url: https://www.projectcanary.com/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/project-canary/refs/heads/main/llms/project-canary-llms.txt
+  href: https://artifacts.apis.io/project-canary/llms/project-canary-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/project-canary-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/project-canary/refs/heads/main/well-known/project-canary-well-known.yml
+  href: https://artifacts.apis.io/project-canary/well-known/project-canary-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/project-canary-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/project-canary/refs/heads/main/security/project-canary-domain-security.yml
+  href: https://artifacts.apis.io/project-canary/security/project-canary-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/project-canary-domain-security.yml
@@ -80,12 +84,12 @@ overview: 'Project Canary is profiled on the [APIs.io](https://apis.io/) network
 
 
   Project Canary''s developer surface includes engineering blog, support, and 5 more developer resources.'
-random_paper: 12
+random_paper: 2
 score:
   band: minimal
   composite: 8.3
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -113,14 +117,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 8.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/project-canary/refs/heads/main/screenshots/project-canary-2026-09-02T152128.png
+screenshot: https://apis.io/screenshots/project-canary/project-canary-2026-09-02T152128.png
 security:
 - kind: domain-security
   name: Project Canary Domain Security

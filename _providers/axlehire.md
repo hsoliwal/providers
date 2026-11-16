@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.8
-  scored_at: '2026-10-17'
+  score: 33.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.gojitsu.com
@@ -64,15 +67,12 @@ apis:
   description: Tracking specific calls
   name: AxleHire (Jitsu) Tracking Information API
   slug: axlehire-tracking-information-api
-artifact_total: 21
+artifact_total: 26
 asyncapis:
 - description: ''
   name: Axlehire Webhooks
   slug: axlehire-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Jitsu REST Assignment Information API
   slug: open-axlehire-assignment-information-api
@@ -94,12 +94,12 @@ common:
   type: BlogRSS
   url: https://gojitsu.com/news-insights/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/capabilities/axlehire-capability-edges.yml
+  href: https://artifacts.apis.io/axlehire/capabilities/axlehire-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/axlehire-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/security/axlehire-domain-security.yml
+  href: https://artifacts.apis.io/axlehire/security/axlehire-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/axlehire-domain-security.yml
@@ -120,22 +120,22 @@ common:
   type: GettingStarted
   url: https://docs.gojitsu.com/#/docs/QuickStart.md
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/authentication/axlehire-authentication.yml
+  href: https://artifacts.apis.io/axlehire/authentication/axlehire-authentication.yml
   title: ''
   type: Authentication
   url: authentication/axlehire-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/packages/axlehire-packages.yml
+  href: https://artifacts.apis.io/axlehire/packages/axlehire-packages.yml
   title: ''
   type: SDKs
   url: packages/axlehire-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/packages/axlehire-packages.yml
+  href: https://artifacts.apis.io/axlehire/packages/axlehire-packages.yml
   title: ''
   type: Packages
   url: packages/axlehire-packages.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/sandbox/axlehire-sandbox.yml
+  href: https://artifacts.apis.io/axlehire/sandbox/axlehire-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/axlehire-sandbox.yml
@@ -164,62 +164,62 @@ common:
   type: StatusPage
   url: https://status.gojitsu.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/lifecycle/axlehire-lifecycle.yml
+  href: https://artifacts.apis.io/axlehire/lifecycle/axlehire-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/axlehire-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/asyncapi/axlehire-webhooks.yml
+  href: https://artifacts.apis.io/axlehire/asyncapi/axlehire-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/axlehire-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/errors/axlehire-problem-types.yml
+  href: https://artifacts.apis.io/axlehire/errors/axlehire-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/axlehire-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/rate-limits/axlehire-rate-limits.yml
+  href: https://artifacts.apis.io/axlehire/rate-limits/axlehire-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/axlehire-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/conventions/axlehire-conventions.yml
+  href: https://artifacts.apis.io/axlehire/conventions/axlehire-conventions.yml
   title: ''
   type: Conventions
   url: conventions/axlehire-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/conformance/axlehire-conformance.yml
+  href: https://artifacts.apis.io/axlehire/conformance/axlehire-conformance.yml
   title: ''
   type: Conformance
   url: conformance/axlehire-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/components/axlehire-components.yml
+  href: https://artifacts.apis.io/axlehire/components/axlehire-components.yml
   title: ''
   type: Components
   url: components/axlehire-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/data-model/axlehire-data-model.yml
+  href: https://artifacts.apis.io/axlehire/data-model/axlehire-data-model.yml
   title: ''
   type: DataModel
   url: data-model/axlehire-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/examples/axlehire-submit-shipment-example.json
+  href: https://artifacts.apis.io/axlehire/examples/axlehire-submit-shipment-example.json
   title: ''
   type: Examples
   url: examples/axlehire-submit-shipment-example.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/axlehire/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/llms/axlehire-llms.txt
+  href: https://artifacts.apis.io/axlehire/llms/axlehire-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/axlehire-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/overlays/axlehire-jitsu-rest-api-overlay.yaml
+  href: https://artifacts.apis.io/axlehire/overlays/axlehire-jitsu-rest-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/axlehire-jitsu-rest-api-overlay.yaml
@@ -228,12 +228,12 @@ common:
   type: DeveloperPortal
   url: https://docs.gojitsu.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/security/axlehire-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/axlehire/security/axlehire-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/axlehire-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/security/axlehire-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/axlehire/security/axlehire-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/axlehire-vulnerability-disclosure.yml
@@ -242,12 +242,12 @@ common:
   type: SecurityPolicy
   url: https://gojitsu.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/security/axlehire-trust-center.yml
+  href: https://artifacts.apis.io/axlehire/security/axlehire-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/axlehire-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/security/axlehire-trust-center.yml
+  href: https://artifacts.apis.io/axlehire/security/axlehire-trust-center.yml
   title: ''
   type: Compliance
   url: security/axlehire-trust-center.yml
@@ -275,34 +275,47 @@ network: true
 overview: 'AxleHire (Jitsu) publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assignment Information API, Driver Information API, Partner Information API, and 2 more. Tagged areas include Company, Logistics, Last Mile Delivery, Shipping, and Parcel.
 
 
-  The AxleHire (Jitsu) catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The AxleHire (Jitsu) catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   AxleHire (Jitsu)''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, support, engineering blog, and 28 more developer resources.'
-random_paper: 14
+random_paper: 10
 rate_limits:
 - limit_count: 1
   name: Axlehire Rate Limits
   slug: axlehire-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: AxleHire (Jitsu) API Rules
+  rule_count: 62
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 13
+  slug: axlehire-rules
 score:
   band: developing
-  composite: 49.2
+  composite: 50.9
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 45.0
+    artifact_dirs: 27
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 43.4
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 60.9
     developer_ergonomics: 35.1
     discoverability: 66.1
     operational_transparency: 55.3
-  previous_composite: 49.2
+  previous_composite: 50.9
   provenance:
     conformance: first-party
     contracts:
@@ -317,13 +330,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/axlehire/refs/heads/main/screenshots/axlehire-2026-08-07T162043.png
+screenshot: https://apis.io/screenshots/axlehire/axlehire-2026-08-07T162043.png
 security:
 - kind: authentication
   name: Axlehire Authentication
@@ -341,6 +354,18 @@ security:
   name: Axlehire Trust Center
   slug: axlehire-trust-center
   summary_line: SOC 2 Type 2
+skill_count: 5
+skills:
+- name: Cancel or reschedule a shipment
+  slug: axlehire-cancel-or-reschedule
+- name: Retrieve and print a shipping label
+  slug: axlehire-print-shipping-label
+- name: Rate a delivery and mark it shipped
+  slug: axlehire-rate-and-handoff
+- name: Submit a shipment for last-mile delivery
+  slug: axlehire-submit-shipment
+- name: Track a delivery end to end
+  slug: axlehire-track-delivery
 slug: axlehire
 tags:
 - Company

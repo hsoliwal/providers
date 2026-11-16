@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Ethereum-compatible JSON-RPC 2.0 API served by SKALE Chains (per-chain RPC/WSS endpoints), plus SKALE Programmable Privacy methods (bite_getDecryptedTransactionData, bite_getCommitteesInfo).
@@ -42,7 +47,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/skale-labs/refs/heads/main/security/skale-labs-domain-security.yml
+  href: https://artifacts.apis.io/skale-labs/security/skale-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/skale-labs-domain-security.yml
@@ -142,12 +147,12 @@ overview: 'Skale Labs is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   Skale Labs'' developer surface includes documentation, API reference, getting-started guide, support, pricing, CLI, sandbox, and 14 more developer resources.'
-random_paper: 1
+random_paper: 7
 score:
   band: thin
   composite: 26.9
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -172,14 +177,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 12.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/skale-labs/refs/heads/main/screenshots/skale-labs-2026-09-02T155705.png
+screenshot: https://apis.io/screenshots/skale-labs/skale-labs-2026-09-02T155705.png
 security:
 - kind: authentication
   name: Skale Labs Authentication

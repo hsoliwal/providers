@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The API behind the Leaf Logistics platform. api.leaflogistics.com runs Hasura GraphQL Engine v2.35.1 (community edition, pro-lite console) and exposes a GraphQL endpoint at /v1/graphql plus a Hasura R
@@ -44,7 +47,7 @@ apis:
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/leaf-logistics/refs/heads/main/security/leaf-logistics-domain-security.yml
+  href: https://artifacts.apis.io/leaf-logistics/security/leaf-logistics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/leaf-logistics-domain-security.yml
@@ -93,37 +96,37 @@ common:
   type: Press
   url: https://www.leaflogistics.com/press.html
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/leaf-logistics/refs/heads/main/llms/leaf-logistics-llms.txt
+  href: https://artifacts.apis.io/leaf-logistics/llms/leaf-logistics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/leaf-logistics-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/leaf-logistics/refs/heads/main/errors/leaf-logistics-problem-types.yml
+  href: https://artifacts.apis.io/leaf-logistics/errors/leaf-logistics-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/leaf-logistics-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/leaf-logistics/refs/heads/main/conformance/leaf-logistics-conformance.yml
+  href: https://artifacts.apis.io/leaf-logistics/conformance/leaf-logistics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/leaf-logistics-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/leaf-logistics/refs/heads/main/lifecycle/leaf-logistics-lifecycle.yml
+  href: https://artifacts.apis.io/leaf-logistics/lifecycle/leaf-logistics-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/leaf-logistics-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/leaf-logistics/refs/heads/main/plans/leaf-logistics-plans-pricing.yml
+  href: https://artifacts.apis.io/leaf-logistics/plans/leaf-logistics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/leaf-logistics-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/leaf-logistics/refs/heads/main/rate-limits/leaf-logistics-rate-limits.yml
+  href: https://artifacts.apis.io/leaf-logistics/rate-limits/leaf-logistics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/leaf-logistics-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/leaf-logistics/refs/heads/main/packages/leaf-logistics-packages.yml
+  href: https://artifacts.apis.io/leaf-logistics/packages/leaf-logistics-packages.yml
   title: ''
   type: Packages
   url: packages/leaf-logistics-packages.yml
@@ -158,7 +161,7 @@ plans:
 - name: Leaf Logistics Plans Pricing
   plan_count: 0
   slug: leaf-logistics-plans-pricing
-random_paper: 0
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Leaf Logistics Rate Limits
@@ -167,7 +170,7 @@ score:
   band: emerging
   composite: 20.9
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -197,14 +200,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/leaf-logistics/refs/heads/main/screenshots/leaf-logistics-2026-09-02T150228.png
+screenshot: https://apis.io/screenshots/leaf-logistics/leaf-logistics-2026-09-02T150228.png
 security:
 - kind: authentication
   name: Leaf Logistics Authentication

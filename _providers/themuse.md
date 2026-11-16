@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Paid
+  confidence: low
+  label: Freemium
   onboarding: unknown
-  pricing: paid
+  pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 22.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -56,9 +60,6 @@ apis:
 artifact_total: 11
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: The Muse Public Companies API
   slug: open-themuse-companies-api
 - collection_type: open
@@ -69,7 +70,7 @@ collections:
   slug: open-themuse
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/themuse/refs/heads/main/agentic-access/themuse-agentic-access.yml
+  href: https://artifacts.apis.io/themuse/agentic-access/themuse-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/themuse-agentic-access.yml
@@ -86,22 +87,22 @@ common:
   type: Documentation
   url: https://www.themuse.com/developers/api/v2
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/themuse/refs/heads/main/plans/themuse-plans-pricing.yml
+  href: https://artifacts.apis.io/themuse/plans/themuse-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/themuse-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/themuse/refs/heads/main/rate-limits/themuse-rate-limits.yml
+  href: https://artifacts.apis.io/themuse/rate-limits/themuse-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/themuse-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/themuse/refs/heads/main/finops/themuse-finops.yml
+  href: https://artifacts.apis.io/themuse/finops/themuse-finops.yml
   title: ''
   type: FinOps
   url: finops/themuse-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/themuse/refs/heads/main/security/themuse-domain-security.yml
+  href: https://artifacts.apis.io/themuse/security/themuse-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/themuse-domain-security.yml
@@ -125,7 +126,10 @@ modified: '2026-08-08'
 name: The Muse
 nav: Providers
 network: true
-overview: 'The Muse publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Companies API and Jobs API. Tagged areas include Job Openings, Job, Careers, Recruiting, and Employment.
+overview: 'The Muse publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Companies API and Jobs API. Tagged areas include Job Postings, Job, Careers, Recruiting, and Employment.
+
+
+  The The Muse catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   The Muse''s developer surface includes documentation and 8 more developer resources.'
@@ -133,30 +137,43 @@ plans:
 - name: Themuse Plans Pricing
   plan_count: 3
   slug: themuse-plans-pricing
-random_paper: 15
+random_paper: 19
 rate_limits:
 - limit_count: 3
   name: Themuse Rate Limits
   slug: themuse-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: The Muse API Rules
+  rule_count: 61
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 1
+    warn: 1
+  slug: themuse-rules
 score:
   band: emerging
-  composite: 23.4
+  composite: 25.0
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 43.0
+    artifact_dirs: 12
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.2
     developer_ergonomics: 17.9
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 31.8
+  previous_composite: 25.0
   provenance:
     agentic_access: derived
     contracts:
@@ -170,14 +187,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/themuse/refs/heads/main/screenshots/themuse-2026-06-20T195325.png
+screenshot: https://apis.io/screenshots/themuse/themuse-2026-06-20T195325.png
 security:
 - kind: domain-security
   name: Themuse Domain Security
@@ -185,7 +202,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: themuse
 tags:
-- Job Openings
+- Job Postings
 - Job
 - Careers
 - Recruiting

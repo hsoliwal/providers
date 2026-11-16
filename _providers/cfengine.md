@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +26,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.2
-  scored_at: '2026-10-17'
+  score: 25.4
+  scored_at: '2026-11-06'
 api_count: 10
 apis:
-- description: API reference for Cfengine automation platform
+- baseURL: https://hub.cfengine.com
+  baseurl_source: spec
+  description: API reference for Cfengine automation platform
   name: Cfengine API
-  slug: cfengine-api-2
+  slug: cfengine-api
 - baseURL: https://hub.cfengine.com
   baseurl_source: declared
   description: The Ai API from Cfengine — 1 operation(s) for ai.
@@ -77,32 +93,32 @@ apis:
 artifact_total: 22
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/rules/cfengine-rules.yml
+  href: https://artifacts.apis.io/cfengine/rules/cfengine-rules.yml
   title: ''
   type: Spectral
   url: rules/cfengine-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/json-ld/cfengine-context.jsonld
+  href: https://artifacts.apis.io/cfengine/json-ld/cfengine-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cfengine-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/vocabulary/cfengine-vocabulary.yml
+  href: https://artifacts.apis.io/cfengine/vocabulary/cfengine-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cfengine-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/data-model/cfengine-data-model.yml
+  href: https://artifacts.apis.io/cfengine/data-model/cfengine-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cfengine-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/cli/cfengine-cli.yml
+  href: https://artifacts.apis.io/cfengine/cli/cfengine-cli.yml
   title: ''
   type: CLI
   url: cli/cfengine-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/changelog/cfengine-changelog.yml
+  href: https://artifacts.apis.io/cfengine/changelog/cfengine-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/cfengine-changelog.yml
@@ -111,42 +127,42 @@ common:
   type: Compliance
   url: https://cfengine.com/solutions/security-automation/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/authentication/cfengine-authentication.yml
+  href: https://artifacts.apis.io/cfengine/authentication/cfengine-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cfengine-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/conformance/cfengine-conformance.yml
+  href: https://artifacts.apis.io/cfengine/conformance/cfengine-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cfengine-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/well-known/cfengine-security.txt
+  href: https://artifacts.apis.io/cfengine/well-known/cfengine-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cfengine-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/well-known/cfengine-northerntech-security.txt
+  href: https://artifacts.apis.io/cfengine/well-known/cfengine-northerntech-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cfengine-northerntech-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/well-known/cfengine-docs-security.txt
+  href: https://artifacts.apis.io/cfengine/well-known/cfengine-docs-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cfengine-docs-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/well-known/cfengine-build-security.txt
+  href: https://artifacts.apis.io/cfengine/well-known/cfengine-build-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/cfengine-build-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/well-known/cfengine-well-known.yml
+  href: https://artifacts.apis.io/cfengine/well-known/cfengine-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cfengine-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/hosts/cfengine-hosts.yml
+  href: https://artifacts.apis.io/cfengine/hosts/cfengine-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cfengine-hosts.yml
@@ -171,17 +187,17 @@ common:
   type: APIReference
   url: https://docs.cfengine.com/docs/lts/reference/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/security/cfengine-trust-center.yml
+  href: https://artifacts.apis.io/cfengine/security/cfengine-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/cfengine-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/security/cfengine-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cfengine/security/cfengine-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cfengine-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cfengine/refs/heads/main/security/cfengine-domain-security.yml
+  href: https://artifacts.apis.io/cfengine/security/cfengine-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cfengine-domain-security.yml
@@ -245,14 +261,14 @@ modified: '2026-10-07'
 name: Cfengine
 nav: Providers
 network: true
-overview: 'Cfengine is listed with 10 APIs on the [APIs.io](https://apis.io/) network, including AI API, Build API, Cfengine API, and 7 more. Tagged areas include Company, Automation, Infrastructure, Security, and Compliance.
+overview: 'Cfengine is listed with 10 APIs on the [APIs.io](https://apis.io/) network, including AI API, Build API, and 8 more. Tagged areas include Company, Automation, Infrastructure, Security, and Compliance.
 
 
   The Cfengine catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Cfengine''s developer surface includes CLI, changelog, authentication, API reference, documentation, engineering blog, getting-started guide, and 21 more developer resources.'
-random_paper: 17
+random_paper: 15
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -268,21 +284,23 @@ rules:
   slug: cfengine-rules
 score:
   band: thin
-  composite: 36.7
+  composite: 28.9
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 20
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.7
   facets:
-    access_clarity: 15.8
+    access_clarity: 11.8
     contract_governance: 22.0
-    contract_quality: 26.1
-    developer_ergonomics: 64.3
+    contract_quality: 25.9
+    developer_ergonomics: 41.7
     discoverability: 62.5
-    operational_transparency: 31.6
+    operational_transparency: 15.8
+  previous_composite: 36.6
   provenance:
     conformance: derived
     contracts:
@@ -296,12 +314,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 25.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cfengine/cfengine-2026-11-03T123735.png
 security:
 - kind: authentication
   name: Cfengine Authentication

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -61,7 +65,7 @@ common:
   type: TermsOfService
   url: https://sonarmentalhealth.com/terms-of-use
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sonar-mental-health/refs/heads/main/security/sonar-mental-health-trust-center.yml
+  href: https://artifacts.apis.io/sonar-mental-health/security/sonar-mental-health-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/sonar-mental-health-trust-center.yml
@@ -70,7 +74,7 @@ common:
   type: Compliance
   url: https://app.vanta.com/sonarmentalhealth.com/trust/y30dgfee7tm5xlmeos21y
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sonar-mental-health/refs/heads/main/security/sonar-mental-health-domain-security.yml
+  href: https://artifacts.apis.io/sonar-mental-health/security/sonar-mental-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sonar-mental-health-domain-security.yml
@@ -86,12 +90,12 @@ overview: 'Sonar Mental Health is profiled on the [APIs.io](https://apis.io/) ne
 
 
   Sonar Mental Health''s developer surface includes engineering blog and 8 more developer resources.'
-random_paper: 16
+random_paper: 12
 score:
   band: emerging
   composite: 12.2
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -112,14 +116,14 @@ score:
     regime: Health
     regime_id: health
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sonar-mental-health/refs/heads/main/screenshots/sonar-mental-health-2026-09-02T160203.png
+screenshot: https://apis.io/screenshots/sonar-mental-health/sonar-mental-health-2026-09-02T160203.png
 security:
 - kind: domain-security
   name: Sonar Mental Health Domain Security

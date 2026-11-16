@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
+  - plans
   - authentication
   - scopes
   - rate-limits
@@ -28,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,22 +40,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 7
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/plans/sparrow-plans-pricing.yml
+  href: https://artifacts.apis.io/sparrow/plans/sparrow-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sparrow-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/rate-limits/sparrow-rate-limits.yml
+  href: https://artifacts.apis.io/sparrow/rate-limits/sparrow-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sparrow-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/security/sparrow-domain-security.yml
+  href: https://artifacts.apis.io/sparrow/security/sparrow-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sparrow-domain-security.yml
@@ -100,57 +104,57 @@ common:
   type: StatusPage
   url: https://status.trysparrow.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/lifecycle/sparrow-lifecycle.yml
+  href: https://artifacts.apis.io/sparrow/lifecycle/sparrow-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sparrow-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/security/sparrow-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/sparrow/security/sparrow-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/sparrow-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/security/sparrow-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/sparrow/security/sparrow-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/sparrow-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/security/sparrow-trust-center.yml
+  href: https://artifacts.apis.io/sparrow/security/sparrow-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/sparrow-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/security/sparrow-trust-center.yml
+  href: https://artifacts.apis.io/sparrow/security/sparrow-trust-center.yml
   title: ''
   type: Compliance
   url: security/sparrow-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/conformance/sparrow-conformance.yml
+  href: https://artifacts.apis.io/sparrow/conformance/sparrow-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sparrow-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/llms/sparrow-llms.txt
+  href: https://artifacts.apis.io/sparrow/llms/sparrow-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sparrow-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/well-known/sparrow-well-known.yml
+  href: https://artifacts.apis.io/sparrow/well-known/sparrow-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sparrow-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/authentication/sparrow-authentication.yml
+  href: https://artifacts.apis.io/sparrow/authentication/sparrow-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sparrow-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/scopes/sparrow-scopes.yml
+  href: https://artifacts.apis.io/sparrow/scopes/sparrow-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/sparrow-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/conventions/sparrow-conventions.yml
+  href: https://artifacts.apis.io/sparrow/conventions/sparrow-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sparrow-conventions.yml
@@ -184,7 +188,7 @@ plans:
 - name: Sparrow Plans Pricing
   plan_count: 0
   slug: sparrow-plans-pricing
-random_paper: 12
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Sparrow Rate Limits
@@ -198,7 +202,7 @@ score:
   band: thin
   composite: 27.4
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -229,14 +233,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 52.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sparrow/refs/heads/main/screenshots/sparrow-2026-09-02T160337.png
+screenshot: https://apis.io/screenshots/sparrow/sparrow-2026-09-02T160337.png
 security:
 - kind: authentication
   name: Sparrow Authentication

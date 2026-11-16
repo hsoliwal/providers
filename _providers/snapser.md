@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -86,47 +90,47 @@ common:
   type: Support
   url: https://discord.gg/snapser
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/snapser/refs/heads/main/authentication/snapser-authentication.yml
+  href: https://artifacts.apis.io/snapser/authentication/snapser-authentication.yml
   title: ''
   type: Authentication
   url: authentication/snapser-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/snapser/refs/heads/main/packages/snapser-packages.yml
+  href: https://artifacts.apis.io/snapser/packages/snapser-packages.yml
   title: ''
   type: Packages
   url: packages/snapser-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/snapser/refs/heads/main/packages/snapser-packages.yml
+  href: https://artifacts.apis.io/snapser/packages/snapser-packages.yml
   title: ''
   type: SDKs
   url: packages/snapser-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/snapser/refs/heads/main/cli/snapser-cli.yml
+  href: https://artifacts.apis.io/snapser/cli/snapser-cli.yml
   title: ''
   type: CLI
   url: cli/snapser-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/snapser/refs/heads/main/conventions/snapser-conventions.yml
+  href: https://artifacts.apis.io/snapser/conventions/snapser-conventions.yml
   title: ''
   type: Conventions
   url: conventions/snapser-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/snapser/refs/heads/main/changelog/snapser-changelog.yml
+  href: https://artifacts.apis.io/snapser/changelog/snapser-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/snapser-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/snapser/refs/heads/main/conformance/snapser-conformance.yml
+  href: https://artifacts.apis.io/snapser/conformance/snapser-conformance.yml
   title: ''
   type: Conformance
   url: conformance/snapser-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/snapser/refs/heads/main/lifecycle/snapser-lifecycle.yml
+  href: https://artifacts.apis.io/snapser/lifecycle/snapser-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/snapser-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/snapser/refs/heads/main/security/snapser-domain-security.yml
+  href: https://artifacts.apis.io/snapser/security/snapser-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/snapser-domain-security.yml
@@ -142,18 +146,18 @@ overview: 'Snapser is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Snapser''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, support, and 14 more developer resources.'
-random_paper: 16
+random_paper: 20
 score:
   band: thin
   composite: 27.0
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
@@ -161,7 +165,7 @@ score:
     developer_ergonomics: 71.4
     discoverability: 48.2
     operational_transparency: 18.4
-  previous_composite: 26.9
+  previous_composite: 27.0
   provenance:
     conformance: derived
   regulatory:
@@ -170,14 +174,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/snapser/refs/heads/main/screenshots/snapser-2026-09-02T160010.png
+screenshot: https://apis.io/screenshots/snapser/snapser-2026-09-02T160010.png
 security:
 - kind: authentication
   name: Snapser Authentication

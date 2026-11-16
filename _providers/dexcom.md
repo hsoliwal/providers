@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.0
-  scored_at: '2026-10-17'
+  score: 28.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -79,7 +86,7 @@ apis:
   description: User-entered events such as carbohydrate intake, insulin doses, exercise, and health events.
   name: Dexcom Events API
   slug: dexcom-events-api
-artifact_total: 124
+artifact_total: 123
 collections:
 - collection_type: postman
   name: Dexcom Developer Alerts API
@@ -102,9 +109,6 @@ collections:
 - collection_type: postman
   name: Dexcom Developer Alerts Events API
   slug: postman-dexcom-events-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Dexcom Developer Alerts API
   slug: open-dexcom-alerts-api
@@ -131,17 +135,17 @@ collections:
   slug: open-dexcom-events-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dexcom/refs/heads/main/plans/dexcom-plans-pricing.yml
+  href: https://artifacts.apis.io/dexcom/plans/dexcom-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dexcom-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dexcom/refs/heads/main/rate-limits/dexcom-rate-limits.yml
+  href: https://artifacts.apis.io/dexcom/rate-limits/dexcom-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dexcom-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dexcom/refs/heads/main/finops/dexcom-finops.yml
+  href: https://artifacts.apis.io/dexcom/finops/dexcom-finops.yml
   title: ''
   type: FinOps
   url: finops/dexcom-finops.yml
@@ -150,22 +154,22 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/dexcom/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dexcom/refs/heads/main/agentic-access/dexcom-agentic-access.yml
+  href: https://artifacts.apis.io/dexcom/agentic-access/dexcom-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dexcom-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dexcom/refs/heads/main/security/dexcom-domain-security.yml
+  href: https://artifacts.apis.io/dexcom/security/dexcom-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dexcom-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dexcom/refs/heads/main/authentication/dexcom-authentication.yml
+  href: https://artifacts.apis.io/dexcom/authentication/dexcom-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dexcom-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dexcom/refs/heads/main/scopes/dexcom-scopes.yml
+  href: https://artifacts.apis.io/dexcom/scopes/dexcom-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/dexcom-scopes.yml
@@ -496,7 +500,7 @@ plans:
 - name: Dexcom Plans Pricing
   plan_count: 1
   slug: dexcom-plans-pricing
-random_paper: 2
+random_paper: 16
 rate_limits:
 - limit_count: 2
   name: Dexcom Rate Limits
@@ -533,13 +537,13 @@ score:
   band: thin
   composite: 32.0
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 70.0
     catalog_earned_first_party: 0.0
     catalog_gap: 45.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 27.3
@@ -547,7 +551,7 @@ score:
     developer_ergonomics: 25.0
     discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 38.0
+  previous_composite: 32.0
   provenance:
     agentic_access: derived
     contracts:
@@ -561,13 +565,13 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/dexcom/refs/heads/main/screenshots/dexcom-2026-06-20T175957.png
+screenshot: https://apis.io/screenshots/dexcom/dexcom-2026-06-20T175957.png
 security:
 - kind: authentication
   name: Dexcom Authentication

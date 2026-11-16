@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
-    openapi_examples: verified
+    mcp_tool_quality: na
+    openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.1
-  scored_at: '2026-10-17'
+  score: 40.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -49,80 +52,17 @@ apis:
 - description: Remote Model Context Protocol server operated by Arkestro, authorized with OAuth 2.1 authorization code flow and mandatory PKCE S256 against the mcp:read, mcp:write and offline_access scopes. The endp
   name: Arkestro MCP Server
   slug: arkestro-mcp-server
-- baseURL: https://api.arkestro.com
+- baseURL: https://api.arkestro.com/api/v2/mcp
   baseurl_source: declared
-  description: The awards API from Arkestro — 1 operation(s) for awards.
-  name: Arkestro Awards API
-  slug: arkestro-awards-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: The business unit API from Arkestro — 1 operation(s) for business unit.
-  name: Arkestro business unit API
-  slug: arkestro-business-unit-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: Categories represent item or service groupings used in various reports and programs
-  name: Arkestro corporate categories API
-  slug: arkestro-corporate-categories-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: Items represent goods or services under agreement in Arkestro.
-  name: Arkestro corporate items API
-  slug: arkestro-corporate-items-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: Purchase Orders for an organization
-  name: Arkestro corporate purchase orders API
-  slug: arkestro-corporate-purchase-orders-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: Vendor document submissions for an event
-  name: Arkestro document submissions API
-  slug: arkestro-document-submissions-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: The event analytics API from Arkestro — 6 operation(s) for event analytics.
-  name: Arkestro event analytics API
-  slug: arkestro-event-analytics-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: Documents attached to an event for supplier review or submission
-  name: Arkestro event documents API
-  slug: arkestro-event-documents-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: The events API from Arkestro — 2 operation(s) for events.
-  name: Arkestro Events API
-  slug: arkestro-events-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: Quote submissions from suppliers on events
-  name: Arkestro quote submissions API
-  slug: arkestro-quote-submissions-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: The schedules API from Arkestro — 1 operation(s) for schedules.
-  name: Arkestro Schedules API
-  slug: arkestro-schedules-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: Contacts represent an individual at a supplier organization
-  name: Arkestro supplier contacts API
-  slug: arkestro-supplier-contacts-api
-- baseURL: https://api.arkestro.com
-  baseurl_source: declared
-  description: Supplier organizations represent external companies that supply goods or services
-  name: Arkestro supplier organizations API
-  slug: arkestro-supplier-organizations-api
-artifact_total: 35
+  description: '# Verifying webhook signatures Arkestro signs **every** outbound webhook with **HMAC-SHA256**. The instructions below apply to all webhook events. Before you trust a delivery, verify the signature so '
+  name: Arkestro Webhooks API
+  slug: arkestro-webhooks-api
+artifact_total: 26
 asyncapis:
 - description: ''
   name: Arkestro Webhooks
   slug: arkestro-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: V2 Awards API
   slug: open-arkestro-awards-api
@@ -164,7 +104,7 @@ collections:
   slug: open-arkestro-supplier-organizations-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/capabilities/arkestro-capability-edges.yml
+  href: https://artifacts.apis.io/arkestro/capabilities/arkestro-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/arkestro-capability-edges.yml
@@ -217,92 +157,92 @@ common:
   type: Compliance
   url: https://arkestro.com/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/security/arkestro-trust-center.yml
+  href: https://artifacts.apis.io/arkestro/security/arkestro-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/arkestro-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/asyncapi/arkestro-webhooks.yml
+  href: https://artifacts.apis.io/arkestro/asyncapi/arkestro-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/arkestro-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/mcp/arkestro-mcp.yml
+  href: https://artifacts.apis.io/arkestro/mcp/arkestro-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/arkestro-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/scopes/arkestro-scopes.yml
+  href: https://artifacts.apis.io/arkestro/scopes/arkestro-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/arkestro-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/authentication/arkestro-authentication.yml
+  href: https://artifacts.apis.io/arkestro/authentication/arkestro-authentication.yml
   title: ''
   type: Authentication
   url: authentication/arkestro-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/conventions/arkestro-conventions.yml
+  href: https://artifacts.apis.io/arkestro/conventions/arkestro-conventions.yml
   title: ''
   type: Conventions
   url: conventions/arkestro-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/errors/arkestro-problem-types.yml
+  href: https://artifacts.apis.io/arkestro/errors/arkestro-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/arkestro-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/lifecycle/arkestro-lifecycle.yml
+  href: https://artifacts.apis.io/arkestro/lifecycle/arkestro-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/arkestro-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/conformance/arkestro-conformance.yml
+  href: https://artifacts.apis.io/arkestro/conformance/arkestro-conformance.yml
   title: ''
   type: Conformance
   url: conformance/arkestro-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/data-model/arkestro-data-model.yml
+  href: https://artifacts.apis.io/arkestro/data-model/arkestro-data-model.yml
   title: ''
   type: DataModel
   url: data-model/arkestro-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/well-known/arkestro-well-known.yml
+  href: https://artifacts.apis.io/arkestro/well-known/arkestro-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/arkestro-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/packages/arkestro-packages.yml
+  href: https://artifacts.apis.io/arkestro/packages/arkestro-packages.yml
   title: ''
   type: Packages
   url: packages/arkestro-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/llms/arkestro-llms.txt
+  href: https://artifacts.apis.io/arkestro/llms/arkestro-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/arkestro-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/arkestro/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/agentic-access/arkestro-agentic-access.yml
+  href: https://artifacts.apis.io/arkestro/agentic-access/arkestro-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/arkestro-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/security/arkestro-domain-security.yml
+  href: https://artifacts.apis.io/arkestro/security/arkestro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arkestro-domain-security.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/overlays/arkestro-api-v2-overlay.yaml
+  href: https://artifacts.apis.io/arkestro/overlays/arkestro-api-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/arkestro-api-v2-overlay.yaml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/mcp/arkestro-tool-crosswalk.yml
+  href: https://artifacts.apis.io/arkestro/mcp/arkestro-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/arkestro-tool-crosswalk.yml
@@ -318,14 +258,14 @@ modified: '2026-08-06'
 name: Arkestro
 nav: Providers
 network: true
-overview: 'Arkestro publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Awards API, business unit API, corporate categories API, and 11 more. Tagged areas include Procurement, Sourcing, Supply Chain, Spend Management, and eSourcing.
+overview: 'Arkestro publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Webhooks API, and 1 more. Tagged areas include Procurement, Sourcing, Supply Chain, Spend Management, and eSourcing.
 
 
   The Arkestro catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
   Arkestro''s developer surface includes documentation, API reference, support, engineering blog, authentication, and 26 more developer resources.'
-random_paper: 17
+random_paper: 11
 scopes:
 - name: Arkestro Scopes
   scope_count: 3
@@ -333,23 +273,23 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: developing
-  composite: 50.3
+  composite: 45.3
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 60.3
+    contract_quality: 48.7
     developer_ergonomics: 47.0
     discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 50.2
+  previous_composite: 45.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -357,7 +297,7 @@ score:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 13
+      total: 15
     mcp: first-party
     skills: derived
   regulatory:
@@ -366,13 +306,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
-    applies: true
-    score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/arkestro/refs/heads/main/screenshots/arkestro-2026-08-17T122406.png
+    applies: false
+    note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
+    reason: read_only
+screenshot: https://apis.io/screenshots/arkestro/arkestro-2026-08-17T122406.png
 security:
 - kind: authentication
   name: Arkestro Authentication
@@ -386,6 +327,16 @@ security:
   name: Arkestro Trust Center
   slug: arkestro-trust-center
   summary_line: ISO 27001:2022, SOC 2 Type II
+skill_count: 4
+skills:
+- name: Pull Arkestro event analytics incrementally
+  slug: arkestro-pull-event-analytics
+- name: Run an Arkestro sourcing event
+  slug: arkestro-run-a-sourcing-event
+- name: Sync suppliers and the spend catalog into Arkestro
+  slug: arkestro-sync-suppliers-and-spend-catalog
+- name: Verify and handle Arkestro webhooks
+  slug: arkestro-verify-webhooks
 slug: arkestro
 tags:
 - Procurement

@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/koho/refs/heads/main/security/koho-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/koho/security/koho-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/koho-vulnerability-disclosure.yml
@@ -47,7 +50,7 @@ common:
   type: Security
   url: https://hackerone.com/koho
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/koho/refs/heads/main/security/koho-domain-security.yml
+  href: https://artifacts.apis.io/koho/security/koho-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/koho-domain-security.yml
@@ -60,12 +63,12 @@ common:
   type: Compliance
   url: https://www.koho.ca/security/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/koho/refs/heads/main/well-known/koho-well-known.yml
+  href: https://artifacts.apis.io/koho/well-known/koho-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/koho-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/koho/refs/heads/main/well-known/koho-security.txt
+  href: https://artifacts.apis.io/koho/well-known/koho-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/koho-security.txt
@@ -110,7 +113,7 @@ overview: 'KOHO is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   KOHO''s developer surface includes support, signup flow, and 12 more developer resources.'
-random_paper: 15
+random_paper: 1
 score:
   band: emerging
   composite: 14.4
@@ -143,8 +146,8 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 19.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

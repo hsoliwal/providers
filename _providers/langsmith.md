@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: medium
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
   - security
   trial: false
   try_now: true
@@ -21,21 +25,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.8
-  scored_at: '2026-10-17'
+  score: 31.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 335
   human_in_the_loop: 16
@@ -413,9 +420,6 @@ apis:
 artifact_total: 155
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: LangSmith access_policies API
   slug: open-langsmith-access-policies-api
 - collection_type: open
@@ -639,22 +643,22 @@ collections:
   slug: open-langsmith
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/langsmith/refs/heads/main/capabilities/langsmith-capability-edges.yml
+  href: https://artifacts.apis.io/langsmith/capabilities/langsmith-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/langsmith-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/langsmith/refs/heads/main/agentic-access/langsmith-agentic-access.yml
+  href: https://artifacts.apis.io/langsmith/agentic-access/langsmith-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/langsmith-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/langsmith/refs/heads/main/security/langsmith-domain-security.yml
+  href: https://artifacts.apis.io/langsmith/security/langsmith-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/langsmith-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/langsmith/refs/heads/main/authentication/langsmith-authentication.yml
+  href: https://artifacts.apis.io/langsmith/authentication/langsmith-authentication.yml
   title: ''
   type: Authentication
   url: authentication/langsmith-authentication.yml
@@ -671,17 +675,17 @@ common:
   type: Pricing
   url: https://www.langchain.com/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/langsmith/refs/heads/main/plans/langsmith-plans-pricing.yml
+  href: https://artifacts.apis.io/langsmith/plans/langsmith-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/langsmith-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/langsmith/refs/heads/main/rate-limits/langsmith-rate-limits.yml
+  href: https://artifacts.apis.io/langsmith/rate-limits/langsmith-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/langsmith-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/langsmith/refs/heads/main/finops/langsmith-finops.yml
+  href: https://artifacts.apis.io/langsmith/finops/langsmith-finops.yml
   title: ''
   type: FinOps
   url: finops/langsmith-finops.yml
@@ -708,6 +712,9 @@ network: true
 overview: 'LangSmith publishes 73 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Policies API, Ace API, Agents API, and 70 more. Tagged areas include Artificial Intelligence, LLM, Observability, Evaluation, and LangChain.
 
 
+  The LangSmith catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   LangSmith''s developer surface includes authentication, documentation, pricing, engineering blog, and 7 more developer resources.'
 plans:
 - name: Langsmith Plans Pricing
@@ -716,50 +723,63 @@ plans:
 - name: Langsmith Price Estimates
   plan_count: 0
   slug: langsmith-price-estimates
-random_paper: 21
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Langsmith Rate Limits
   slug: langsmith-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: LangSmith API Rules
+  rule_count: 54
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 5
+    warn: 15
+  slug: langsmith-rules
 score:
   band: thin
-  composite: 36.9
+  composite: 38.5
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 49.0
+    artifact_dirs: 15
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 42.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 49.3
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 38.4
+  previous_composite: 38.5
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
       marker_coverage: 0.0
-      total: 73
+      total: 146
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/langsmith/refs/heads/main/screenshots/langsmith-2026-06-20T184315.png
+screenshot: https://apis.io/screenshots/langsmith/langsmith-2026-06-20T184315.png
 security:
 - kind: authentication
   name: Langsmith Authentication

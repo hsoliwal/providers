@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Paid · Self-serve signup
-  onboarding: self-serve
+  confidence: medium
+  label: Paid
+  onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -97,9 +101,6 @@ apis:
 artifact_total: 29
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Submittable Assignments API
   slug: open-submittable-assignments-api
 - collection_type: open
@@ -138,22 +139,22 @@ common:
   type: Blog
   url: https://www.submittable.com/blog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/submittable/refs/heads/main/agentic-access/submittable-agentic-access.yml
+  href: https://artifacts.apis.io/submittable/agentic-access/submittable-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/submittable-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/submittable/refs/heads/main/security/submittable-trust-center.yml
+  href: https://artifacts.apis.io/submittable/security/submittable-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/submittable-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/submittable/refs/heads/main/security/submittable-domain-security.yml
+  href: https://artifacts.apis.io/submittable/security/submittable-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/submittable-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/submittable/refs/heads/main/authentication/submittable-authentication.yml
+  href: https://artifacts.apis.io/submittable/authentication/submittable-authentication.yml
   title: ''
   type: Authentication
   url: authentication/submittable-authentication.yml
@@ -174,17 +175,17 @@ common:
   type: SupportDocumentation
   url: https://submittable.help/en/collections/1728753-integrations-api
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/submittable/refs/heads/main/plans/submittable-plans-pricing.yml
+  href: https://artifacts.apis.io/submittable/plans/submittable-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/submittable-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/submittable/refs/heads/main/rate-limits/submittable-rate-limits.yml
+  href: https://artifacts.apis.io/submittable/rate-limits/submittable-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/submittable-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/submittable/refs/heads/main/finops/submittable-finops.yml
+  href: https://artifacts.apis.io/submittable/finops/submittable-finops.yml
   title: ''
   type: FinOps
   url: finops/submittable-finops.yml
@@ -211,35 +212,51 @@ network: true
 overview: 'Submittable publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assignments API, Entries API, Funds API, and 7 more. Tagged areas include Submission Management, Grants Management, Application, Forms, and Non-Profit.
 
 
+  The Submittable catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Submittable''s developer surface includes engineering blog, authentication, documentation, pricing, and 9 more developer resources.'
 plans:
 - name: Submittable Plans Pricing
   plan_count: 3
   slug: submittable-plans-pricing
-random_paper: 14
+random_paper: 4
 rate_limits:
 - limit_count: 2
   name: Submittable Rate Limits
   slug: submittable-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Submittable API Rules
+  rule_count: 61
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 1
+    warn: 1
+  slug: submittable-rules
 score:
   band: thin
-  composite: 31.2
+  composite: 32.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 42.0
+    artifact_dirs: 15
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 26.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 50.8
     developer_ergonomics: 32.1
     discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 38.1
+  previous_composite: 32.8
   provenance:
     agentic_access: derived
     contracts:
@@ -253,13 +270,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/submittable/refs/heads/main/screenshots/submittable-2026-09-02T161056.png
+screenshot: https://apis.io/screenshots/submittable/submittable-2026-09-02T161056.png
 security:
 - kind: authentication
   name: Submittable Authentication

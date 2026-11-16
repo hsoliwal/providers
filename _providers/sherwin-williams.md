@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Enterprise
   onboarding: unknown
   pricing: enterprise
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The Sherwin-Williams Supplier API enables B2B partners to integrate supply chain workflows, manage purchase orders, submit invoices, and exchange product and inventory data with Sherwin-Williams enter
@@ -45,17 +49,17 @@ apis:
 artifact_total: 13
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sherwin-williams/refs/heads/main/plans/sherwin-williams-plans-pricing.yml
+  href: https://artifacts.apis.io/sherwin-williams/plans/sherwin-williams-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sherwin-williams-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sherwin-williams/refs/heads/main/rate-limits/sherwin-williams-rate-limits.yml
+  href: https://artifacts.apis.io/sherwin-williams/rate-limits/sherwin-williams-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sherwin-williams-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sherwin-williams/refs/heads/main/finops/sherwin-williams-finops.yml
+  href: https://artifacts.apis.io/sherwin-williams/finops/sherwin-williams-finops.yml
   title: ''
   type: FinOps
   url: finops/sherwin-williams-finops.yml
@@ -64,7 +68,7 @@ common:
   type: BlogRSS
   url: https://blog.sherwin-williams.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sherwin-williams/refs/heads/main/security/sherwin-williams-domain-security.yml
+  href: https://artifacts.apis.io/sherwin-williams/security/sherwin-williams-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sherwin-williams-domain-security.yml
@@ -156,7 +160,7 @@ press:
 - date: ''
   title: Sherwin-Williams Positions Itself as the One Partner for ...
   url: https://www.prnewswire.com/news-releases/sherwin-williams-positions-itself-as-the-one-partner-for-data-center-construction-302764452.html
-random_paper: 7
+random_paper: 23
 rate_limits:
 - limit_count: 1
   name: Sherwin Williams Rate Limits
@@ -189,13 +193,13 @@ score:
   band: emerging
   composite: 23.7
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 62.0
     catalog_earned_first_party: 0.0
     catalog_gap: 53.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 27.3
@@ -203,21 +207,21 @@ score:
     developer_ergonomics: 9.5
     discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 25.2
+  previous_composite: 23.7
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sherwin-williams/refs/heads/main/screenshots/sherwin-williams-2026-06-20T193801.png
+screenshot: https://apis.io/screenshots/sherwin-williams/sherwin-williams-2026-06-20T193801.png
 security:
 - kind: domain-security
   name: Sherwin Williams Domain Security

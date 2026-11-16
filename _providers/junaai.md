@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/junaai/refs/heads/main/security/junaai-domain-security.yml
+  href: https://artifacts.apis.io/junaai/security/junaai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/junaai-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/junaai/refs/heads/main/llms/junaai-llms.txt
+  href: https://artifacts.apis.io/junaai/llms/junaai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/junaai-llms.txt
@@ -91,7 +95,7 @@ overview: 'Juna.ai is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Juna.ai''s developer surface includes engineering blog, support, YouTube channel, and 7 more developer resources.'
-random_paper: 16
+random_paper: 8
 score:
   band: minimal
   composite: 8.2
@@ -125,14 +129,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 7.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/junaai/refs/heads/main/screenshots/junaai-2026-07-25T223318.png
+screenshot: https://apis.io/screenshots/junaai/junaai-2026-07-25T223318.png
 security:
 - kind: domain-security
   name: Junaai Domain Security

@@ -1,4 +1,20 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Free read-only REST API for football statistics, standings, results, fixtures, match probabilities, season projections, goal timing, and prediction track record. Bearer API key auth (or X-API-Key) wit
@@ -32,7 +51,7 @@ apis:
 - description: Hosted MCP server (protocol 2025-06-18) exposing ten read-only football statistics tools (list_leagues, get_league_table, get_rankings, get_results, get_fixtures, get_match, get_season_projection, get
   name: Football Charts MCP Server
   slug: football-charts-mcp-server
-artifact_total: 7
+artifact_total: 10
 common:
 - group: company
   title: ''
@@ -83,72 +102,72 @@ common:
   type: SourceCode
   url: https://github.com/ddevetak/footballcharts-mcp
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/mcp/football-charts-mcp.yml
+  href: https://artifacts.apis.io/football-charts/mcp/football-charts-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/football-charts-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/mcp/football-charts-tool-crosswalk.yml
+  href: https://artifacts.apis.io/football-charts/mcp/football-charts-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/football-charts-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/football-charts/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/llms/football-charts-llms.txt
+  href: https://artifacts.apis.io/football-charts/llms/football-charts-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/football-charts-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/packages/football-charts-packages.yml
+  href: https://artifacts.apis.io/football-charts/packages/football-charts-packages.yml
   title: ''
   type: Packages
   url: packages/football-charts-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/authentication/football-charts-authentication.yml
+  href: https://artifacts.apis.io/football-charts/authentication/football-charts-authentication.yml
   title: ''
   type: Authentication
   url: authentication/football-charts-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/conventions/football-charts-conventions.yml
+  href: https://artifacts.apis.io/football-charts/conventions/football-charts-conventions.yml
   title: ''
   type: Conventions
   url: conventions/football-charts-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/errors/football-charts-problem-types.yml
+  href: https://artifacts.apis.io/football-charts/errors/football-charts-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/football-charts-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/lifecycle/football-charts-lifecycle.yml
+  href: https://artifacts.apis.io/football-charts/lifecycle/football-charts-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/football-charts-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/conformance/football-charts-conformance.yml
+  href: https://artifacts.apis.io/football-charts/conformance/football-charts-conformance.yml
   title: ''
   type: Conformance
   url: conformance/football-charts-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/data-model/football-charts-data-model.yml
+  href: https://artifacts.apis.io/football-charts/data-model/football-charts-data-model.yml
   title: ''
   type: DataModel
   url: data-model/football-charts-data-model.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/plans/football-charts-plans-pricing.yml
+  href: https://artifacts.apis.io/football-charts/plans/football-charts-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/football-charts-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/rate-limits/football-charts-rate-limits.yml
+  href: https://artifacts.apis.io/football-charts/rate-limits/football-charts-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/football-charts-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/security/football-charts-domain-security.yml
+  href: https://artifacts.apis.io/football-charts/security/football-charts-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/football-charts-domain-security.yml
@@ -172,7 +191,7 @@ plans:
 - name: Football Charts Plans Pricing
   plan_count: 2
   slug: football-charts-plans-pricing
-random_paper: 1
+random_paper: 5
 rate_limits:
 - limit_count: 2
   name: Football Charts Rate Limits
@@ -187,7 +206,7 @@ score:
     catalog_gap: 62.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 65.8
     contract_governance: 4.5
@@ -195,7 +214,7 @@ score:
     developer_ergonomics: 58.9
     discoverability: 68.3
     operational_transparency: 26.3
-  previous_composite: 36.6
+  previous_composite: 37.1
   provenance:
     conformance: derived
     mcp: first-party
@@ -206,14 +225,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/screenshots/football-charts-2026-10-11T104606.png
+screenshot: https://apis.io/screenshots/football-charts/football-charts-2026-10-11T104606.png
 security:
 - kind: authentication
   name: Football Charts Authentication
@@ -223,6 +242,14 @@ security:
   name: Football Charts Domain Security
   slug: football-charts-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Read a Football Charts league table
+  slug: football-charts-league-standings
+- name: Get Football Charts match probabilities
+  slug: football-charts-match-probabilities
+- name: Project a Football Charts season and check the model's record
+  slug: football-charts-season-projection-and-record
 slug: football-charts
 tags:
 - Football

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -53,22 +57,22 @@ common:
   type: Pricing
   url: https://recess.gg/school/tuition
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/recess/refs/heads/main/well-known/recess-security.txt
+  href: https://artifacts.apis.io/recess/well-known/recess-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/recess-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/recess/refs/heads/main/well-known/recess-well-known.yml
+  href: https://artifacts.apis.io/recess/well-known/recess-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/recess-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/recess/refs/heads/main/security/recess-domain-security.yml
+  href: https://artifacts.apis.io/recess/security/recess-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/recess-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/recess/refs/heads/main/security/recess-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/recess/security/recess-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/recess-vulnerability-disclosure.yml
@@ -92,7 +96,7 @@ overview: 'Recess is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Recess'' developer surface includes signup flow, pricing, and 7 more developer resources.'
-random_paper: 7
+random_paper: 21
 score:
   band: minimal
   composite: 9.6
@@ -120,14 +124,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/recess/refs/heads/main/screenshots/recess-2026-09-02T153046.png
+screenshot: https://apis.io/screenshots/recess/recess-2026-09-02T153046.png
 security:
 - kind: domain-security
   name: Recess Domain Security

@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,16 +27,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 27.5
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 31.5
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.happycabbage.ai
   baseurl_source: declared
@@ -108,10 +111,10 @@ apis:
   description: Canonical product category metadata across POS systems
   name: Happy Cabbage Analytics Universal Categories API
   slug: happy-cabbage-analytics-universal-categories-api
-artifact_total: 18
+artifact_total: 22
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/capabilities/happy-cabbage-analytics-capability-edges.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/capabilities/happy-cabbage-analytics-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/happy-cabbage-analytics-capability-edges.yml
@@ -156,77 +159,77 @@ common:
   type: ChangeLog
   url: https://www.happycabbage.io/release-notes
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/changelog/happy-cabbage-analytics-changelog.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/changelog/happy-cabbage-analytics-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/happy-cabbage-analytics-changelog.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/openapi/_original/happy-cabbage-analytics-happy-buyers-external-openapi.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/openapi/_original/happy-cabbage-analytics-happy-buyers-external-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/happy-cabbage-analytics-happy-buyers-external-openapi.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/authentication/happy-cabbage-analytics-authentication.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/authentication/happy-cabbage-analytics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/happy-cabbage-analytics-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/conventions/happy-cabbage-analytics-conventions.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/conventions/happy-cabbage-analytics-conventions.yml
   title: ''
   type: Conventions
   url: conventions/happy-cabbage-analytics-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/errors/happy-cabbage-analytics-problem-types.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/errors/happy-cabbage-analytics-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/happy-cabbage-analytics-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/data-model/happy-cabbage-analytics-data-model.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/data-model/happy-cabbage-analytics-data-model.yml
   title: ''
   type: DataModel
   url: data-model/happy-cabbage-analytics-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/lifecycle/happy-cabbage-analytics-lifecycle.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/lifecycle/happy-cabbage-analytics-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/happy-cabbage-analytics-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/conformance/happy-cabbage-analytics-conformance.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/conformance/happy-cabbage-analytics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/happy-cabbage-analytics-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/packages/happy-cabbage-analytics-packages.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/packages/happy-cabbage-analytics-packages.yml
   title: ''
   type: Packages
   url: packages/happy-cabbage-analytics-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/plans/happy-cabbage-analytics-plans-pricing.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/plans/happy-cabbage-analytics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/happy-cabbage-analytics-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/rate-limits/happy-cabbage-analytics-rate-limits.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/rate-limits/happy-cabbage-analytics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/happy-cabbage-analytics-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/llms/happy-cabbage-analytics-llms.txt
+  href: https://artifacts.apis.io/happy-cabbage-analytics/llms/happy-cabbage-analytics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/happy-cabbage-analytics-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/overlays/happy-cabbage-analytics-happy-buyers-external-overlay.yaml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/overlays/happy-cabbage-analytics-happy-buyers-external-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/happy-cabbage-analytics-happy-buyers-external-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/security/happy-cabbage-analytics-domain-security.yml
+  href: https://artifacts.apis.io/happy-cabbage-analytics/security/happy-cabbage-analytics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/happy-cabbage-analytics-domain-security.yml
@@ -242,30 +245,46 @@ network: true
 overview: 'Happy Cabbage Analytics publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Blockout Dates API, Daily Sales Metadata API, Identity API, and 11 more. Tagged areas include Cannabis, Retail, Inventory, Analytics, and Purchasing.
 
 
+  The Happy Cabbage Analytics catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Happy Cabbage Analytics'' developer surface includes documentation, API reference, engineering blog, support, signup flow, changelog, authentication, and 19 more developer resources.'
 plans:
 - name: Happy Cabbage Analytics Plans Pricing
   plan_count: 0
   slug: happy-cabbage-analytics-plans-pricing
-random_paper: 9
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Happy Cabbage Analytics Rate Limits
   slug: happy-cabbage-analytics-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Happy Cabbage Analytics API Rules
+  rule_count: 62
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 7
+  slug: happy-cabbage-analytics-rules
 score:
   band: thin
-  composite: 35.2
+  composite: 36.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 23.7
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 53.1
     developer_ergonomics: 37.5
     discoverability: 66.1
@@ -277,7 +296,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 35.1
+  previous_composite: 36.8
   provenance:
     conformance: derived
     contracts:
@@ -293,13 +312,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/happy-cabbage-analytics/refs/heads/main/screenshots/happy-cabbage-analytics-2026-09-02T145659.png
+screenshot: https://apis.io/screenshots/happy-cabbage-analytics/happy-cabbage-analytics-2026-09-02T145659.png
 security:
 - kind: authentication
   name: Happy Cabbage Analytics Authentication
@@ -309,6 +328,14 @@ security:
   name: Happy Cabbage Analytics Domain Security
   slug: happy-cabbage-analytics-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: happy-cabbage-draft-replenishment-order
+  slug: happy-cabbage-analytics-draft-replenishment-order
+- name: happy-cabbage-inventory-health-review
+  slug: happy-cabbage-analytics-inventory-health-review
+- name: happy-cabbage-manage-product-lines
+  slug: happy-cabbage-analytics-manage-product-lines
 slug: happy-cabbage-analytics
 tags:
 - Cannabis

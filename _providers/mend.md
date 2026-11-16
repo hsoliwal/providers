@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-10-17'
+  score: 26.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 150
   human_in_the_loop: 3
@@ -42,7 +46,7 @@ agentic_access:
   operation_count: 293
   slug: mend-agentic-access
   summary_line: 293 operations · 150 acting · 3 human-in-the-loop
-api_count: 2
+api_count: 3
 apis:
 - baseURL: https://api-saas.mend.io
   baseurl_source: declared
@@ -279,11 +283,483 @@ apis:
   description: The Zero-Day Events API from Mend — 2 operation(s) for zero-day events.
   name: Mend Zero-Day Events API
   slug: mend-zero-day-events-api
-artifact_total: 245
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Administration - Activity Log API from Mend — 2 operation(s) for administration - activity log.
+  name: Mend Administration - Activity Log API
+  slug: mend-administration-activity-log-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Adoption Wizard API from Mend — 7 operation(s) for adoption wizard.
+  name: Mend Adoption Wizard API
+  slug: mend-adoption-wizard-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Alerts - Organization API from Mend — 5 operation(s) for alerts - organization.
+  name: Mend Alerts - Organization API
+  slug: mend-alerts-organization-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Allowlist IP API from Mend — 8 operation(s) for allowlist ip.
+  name: Mend Allowlist IP API
+  slug: mend-allowlist-ip-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The application-approval-requests-controller API from Mend — 1 operation(s) for application-approval-requests-controller.
+  name: Mend Application Approval Requests Controller API
+  slug: mend-application-approval-requests-controller-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The application-violations-controller API from Mend — 2 operation(s) for application-violations-controller.
+  name: Mend Application Violations Controller API
+  slug: mend-application-violations-controller-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The ASPM API from Mend — 30 operation(s) for aspm.
+  name: Mend ASPM API
+  slug: mend-aspm-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Audit API from Mend — 1 operation(s) for audit.
+  name: Mend Audit API
+  slug: mend-audit-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The automation-engine-controller API from Mend — 8 operation(s) for automation-engine-controller.
+  name: Mend Automation Engine Controller API
+  slug: mend-automation-engine-controller-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Backfill - Projects API from Mend — 1 operation(s) for backfill - projects.
+  name: Mend Backfill - Projects API
+  slug: mend-backfill-projects-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The CVSS Settings API from Mend — 2 operation(s) for cvss settings.
+  name: Mend CVSS Settings API
+  slug: mend-cvss-settings-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Dashboard API from Mend — 3 operation(s) for dashboard.
+  name: Mend Dashboard API
+  slug: mend-dashboard-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The domain-approval-requests-controller API from Mend — 1 operation(s) for domain-approval-requests-controller.
+  name: Mend Domain Approval Requests Controller API
+  slug: mend-domain-approval-requests-controller-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The DomainReports API from Mend — 8 operation(s) for domainreports.
+  name: Mend Domain Reports API
+  slug: mend-domainreports-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Downloads - CLI API from Mend — 2 operation(s) for downloads - cli.
+  name: Mend Downloads - CLI API
+  slug: mend-downloads-cli-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Application Configurations API from Mend — 1 operation(s) for entities - application configurations.
+  name: Mend Entities - Application Configurations API
+  slug: mend-entities-application-configurations-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Code Configurations API from Mend — 10 operation(s) for entities - code configurations.
+  name: Mend Entities - Code Configurations API
+  slug: mend-entities-code-configurations-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - General Tech Tags API from Mend — 2 operation(s) for entities - general tech tags.
+  name: Mend Entities - General Tech Tags API
+  slug: mend-entities-general-tech-tags-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Labels API from Mend — 2 operation(s) for entities - labels.
+  name: Mend Entities - Labels API
+  slug: mend-entities-labels-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Organization Configurations API from Mend — 6 operation(s) for entities - organization configurations.
+  name: Mend Entities - Organization Configurations API
+  slug: mend-entities-organization-configurations-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Product Configurations API from Mend — 3 operation(s) for entities - product configurations.
+  name: Mend Entities - Product Configurations API
+  slug: mend-entities-product-configurations-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Product Labels API from Mend — 4 operation(s) for entities - product labels.
+  name: Mend Entities - Product Labels API
+  slug: mend-entities-product-labels-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Product Tags API from Mend — 1 operation(s) for entities - product tags.
+  name: Mend Entities - Product Tags API
+  slug: mend-entities-product-tags-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Product Tech Tags API from Mend — 2 operation(s) for entities - product tech tags.
+  name: Mend Entities - Product Tech Tags API
+  slug: mend-entities-product-tech-tags-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Project Configurations API from Mend — 4 operation(s) for entities - project configurations.
+  name: Mend Entities - Project Configurations API
+  slug: mend-entities-project-configurations-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Project Labels API from Mend — 3 operation(s) for entities - project labels.
+  name: Mend Entities - Project Labels API
+  slug: mend-entities-project-labels-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Project Tags API from Mend — 1 operation(s) for entities - project tags.
+  name: Mend Entities - Project Tags API
+  slug: mend-entities-project-tags-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Entities - Project Tech Tags API from Mend — 2 operation(s) for entities - project tech tags.
+  name: Mend Entities - Project Tech Tags API
+  slug: mend-entities-project-tech-tags-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Findings API from Mend — 5 operation(s) for findings.
+  name: Mend Findings API
+  slug: mend-findings-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Findings - Comments API from Mend — 2 operation(s) for findings - comments.
+  name: Mend Findings - Comments API
+  slug: mend-findings-comments-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The General Info - Library Types API from Mend — 1 operation(s) for general info - library types.
+  name: Mend General Info - Library Types API
+  slug: mend-general-info-library-types-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The General Info - Versions API from Mend — 1 operation(s) for general info - versions.
+  name: Mend General Info - Versions API
+  slug: mend-general-info-versions-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Integrations - Domain API from Mend — 1 operation(s) for integrations - domain.
+  name: Mend Integrations - Domain API
+  slug: mend-integrations-domain-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Internal - Notifications API from Mend — 1 operation(s) for internal - notifications.
+  name: Mend Internal - Notifications API
+  slug: mend-internal-notifications-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Internal Organizations API from Mend — 11 operation(s) for internal organizations.
+  name: Mend Internal Organizations API
+  slug: mend-internal-organizations-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Internal Projects API from Mend — 6 operation(s) for internal projects.
+  name: Mend Internal Projects API
+  slug: mend-internal-projects-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The internal-service-controller API from Mend — 1 operation(s) for internal-service-controller.
+  name: Mend Internal Service Controller API
+  slug: mend-internal-service-controller-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Issues - Project API from Mend — 5 operation(s) for issues - project.
+  name: Mend Issues - Project API
+  slug: mend-issues-project-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Label Management API from Mend — 2 operation(s) for label management.
+  name: Mend Label Management API
+  slug: mend-label-management-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The NewSCAProjectReports API from Mend — 12 operation(s) for newscaprojectreports.
+  name: Mend New SCA Project Reports API
+  slug: mend-newscaprojectreports-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The NLP API from Mend — 1 operation(s) for nlp.
+  name: Mend NLP API
+  slug: mend-nlp-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Organizations API from Mend — 7 operation(s) for organizations.
+  name: Mend Organizations API
+  slug: mend-organizations-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Platform Assistant API from Mend — 2 operation(s) for platform assistant.
+  name: Mend Platform Assistant API
+  slug: mend-platform-assistant-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The ProductReports API from Mend — 3 operation(s) for productreports.
+  name: Mend Product Reports API
+  slug: mend-productreports-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The ProductsReports API from Mend — 5 operation(s) for productsreports.
+  name: Mend Products Reports API
+  slug: mend-productsreports-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The project-approval-requests-controller API from Mend — 1 operation(s) for project-approval-requests-controller.
+  name: Mend Project Approval Requests Controller API
+  slug: mend-project-approval-requests-controller-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Project Classification Evidence API from Mend — 1 operation(s) for project classification evidence.
+  name: Mend Project Classification Evidence API
+  slug: mend-project-classification-evidence-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The project-hierarchy-controller API from Mend — 4 operation(s) for project-hierarchy-controller.
+  name: Mend Project Hierarchy Controller API
+  slug: mend-project-hierarchy-controller-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The project-violations-controller API from Mend — 2 operation(s) for project-violations-controller.
+  name: Mend Project Violations Controller API
+  slug: mend-project-violations-controller-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The ProjectReports API from Mend — 8 operation(s) for projectreports.
+  name: Mend Project Reports API
+  slug: mend-projectreports-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The redis-test-controller API from Mend — 1 operation(s) for redis-test-controller.
+  name: Mend Redis Test Controller API
+  slug: mend-redis-test-controller-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Remediations API from Mend — 5 operation(s) for remediations.
+  name: Mend Remediations API
+  slug: mend-remediations-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Risk Report API from Mend — 2 operation(s) for risk report.
+  name: Mend Risk Report API
+  slug: mend-risk-report-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAML Integration - Account API from Mend — 6 operation(s) for saml integration - account.
+  name: Mend SAML Integration - Account API
+  slug: mend-saml-integration-account-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAML Integration - Internal API from Mend — 2 operation(s) for saml integration - internal.
+  name: Mend SAML Integration - Internal API
+  slug: mend-saml-integration-internal-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAML Integration - Organization API from Mend — 6 operation(s) for saml integration - organization.
+  name: Mend SAML Integration - Organization API
+  slug: mend-saml-integration-organization-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Agents API API from Mend — 12 operation(s) for sast agents api.
+  name: Mend SAST Agents API
+  slug: mend-sast-agents-api-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Agents V1 API API from Mend — 4 operation(s) for sast agents v1 api.
+  name: Mend SAST Agents V1 API
+  slug: mend-sast-agents-v1-api-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST API from Mend — 1 operation(s) for sast.
+  name: Mend SAST API
+  slug: mend-sast-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Applications API from Mend — 3 operation(s) for sast applications.
+  name: Mend SAST Applications API
+  slug: mend-sast-applications-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Custom Rules API from Mend — 2 operation(s) for sast custom rules.
+  name: Mend SAST Custom Rules API
+  slug: mend-sast-custom-rules-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Engines API from Mend — 1 operation(s) for sast engines.
+  name: Mend SAST Engines API
+  slug: mend-sast-engines-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Findings API from Mend — 3 operation(s) for sast findings.
+  name: Mend SAST Findings API
+  slug: mend-sast-findings-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Findings - Product API from Mend — 8 operation(s) for sast findings - product.
+  name: Mend SAST Findings - Product API
+  slug: mend-sast-findings-product-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Findings - Project API from Mend — 26 operation(s) for sast findings - project.
+  name: Mend SAST Findings - Project API
+  slug: mend-sast-findings-project-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Findings V4 API from Mend — 3 operation(s) for sast findings v4.
+  name: Mend SAST Findings V4 API
+  slug: mend-sast-findings-v4-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Internal Findings API from Mend — 1 operation(s) for sast internal findings.
+  name: Mend SAST Internal Findings API
+  slug: mend-sast-internal-findings-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Organizations API from Mend — 1 operation(s) for sast organizations.
+  name: Mend SAST Organizations API
+  slug: mend-sast-organizations-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Scans API from Mend — 2 operation(s) for sast scans.
+  name: Mend SAST Scans API
+  slug: mend-sast-scans-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST Scans V2 API from Mend — 11 operation(s) for sast scans v2.
+  name: Mend SAST Scans V2 API
+  slug: mend-sast-scans-v2-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SAST System Access API from Mend — 1 operation(s) for sast system access.
+  name: Mend SAST System Access API
+  slug: mend-sast-system-access-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Scans - Project API from Mend — 10 operation(s) for scans - project.
+  name: Mend Scans - Project API
+  slug: mend-scans-project-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The SCM Scan Requests API from Mend — 1 operation(s) for scm scan requests.
+  name: Mend SCM Scan Requests API
+  slug: mend-scm-scan-requests-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Settings - Add Product To Admins Group API from Mend — 1 operation(s) for settings - add product to admins group.
+  name: Mend Settings - Add Product To Admins Group API
+  slug: mend-settings-add-product-to-admins-group-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Settings - AI Usage API from Mend — 6 operation(s) for settings - ai usage.
+  name: Mend Settings - AI Usage API
+  slug: mend-settings-ai-usage-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Settings - Alerts API from Mend — 3 operation(s) for settings - alerts.
+  name: Mend Settings - Alerts API
+  slug: mend-settings-alerts-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Settings - CLI Version API from Mend — 2 operation(s) for settings - cli version.
+  name: Mend Settings - CLI Version API
+  slug: mend-settings-cli-version-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Settings - Notifications API from Mend — 1 operation(s) for settings - notifications.
+  name: Mend Settings - Notifications API
+  slug: mend-settings-notifications-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Settings - Organization API from Mend — 1 operation(s) for settings - organization.
+  name: Mend Settings - Organization API
+  slug: mend-settings-organization-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Settings - Repo Integration API from Mend — 1 operation(s) for settings - repo integration.
+  name: Mend Settings - Repo Integration API
+  slug: mend-settings-repo-integration-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Statistics - Organization API from Mend — 3 operation(s) for statistics - organization.
+  name: Mend Statistics - Organization API
+  slug: mend-statistics-organization-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Statistics - Product API from Mend — 5 operation(s) for statistics - product.
+  name: Mend Statistics - Product API
+  slug: mend-statistics-product-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Statistics - Project API from Mend — 3 operation(s) for statistics - project.
+  name: Mend Statistics - Project API
+  slug: mend-statistics-project-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The suggested-fix-setting-controller API from Mend — 2 operation(s) for suggested-fix-setting-controller.
+  name: Mend Suggested Fix Setting Controller API
+  slug: mend-suggested-fix-setting-controller-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Summary - Label API from Mend — 1 operation(s) for summary - label.
+  name: Mend Summary - Label API
+  slug: mend-summary-label-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Summary - Project API from Mend — 2 operation(s) for summary - project.
+  name: Mend Summary - Project API
+  slug: mend-summary-project-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Summary - Scan API from Mend — 1 operation(s) for summary - scan.
+  name: Mend Summary - Scan API
+  slug: mend-summary-scan-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Suppression Requests API from Mend — 3 operation(s) for suppression requests.
+  name: Mend Suppression Requests API
+  slug: mend-suppression-requests-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Tracked Issues API from Mend — 4 operation(s) for tracked issues.
+  name: Mend Tracked Issues API
+  slug: mend-tracked-issues-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Usage Events API from Mend — 2 operation(s) for usage events.
+  name: Mend Usage Events API
+  slug: mend-usage-events-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The User Management API from Mend — 4 operation(s) for user management.
+  name: Mend User Management API
+  slug: mend-user-management-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The User Management - Permissions API from Mend — 3 operation(s) for user management - permissions.
+  name: Mend User Management - Permissions API
+  slug: mend-user-management-permissions-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The User Management - Roles Definitions API from Mend — 8 operation(s) for user management - roles definitions.
+  name: Mend User Management - Roles Definitions API
+  slug: mend-user-management-roles-definitions-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The User Notifications API from Mend — 2 operation(s) for user notifications.
+  name: Mend User Notifications API
+  slug: mend-user-notifications-api
+- baseURL: https://api-saas.mend.io
+  baseurl_source: declared
+  description: The Workflows API from Mend — 13 operation(s) for workflows.
+  name: Mend Workflows API
+  slug: mend-workflows-api
+artifact_total: 343
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Mend Access Management API
   slug: open-mend-access-management-api
@@ -427,32 +903,32 @@ collections:
   slug: open-mend-zero-day-events-api
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/rules/mend-rules.yml
+  href: https://artifacts.apis.io/mend/rules/mend-rules.yml
   title: ''
   type: Spectral
   url: rules/mend-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/json-ld/mend-context.jsonld
+  href: https://artifacts.apis.io/mend/json-ld/mend-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/mend-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/vocabulary/mend-vocabulary.yml
+  href: https://artifacts.apis.io/mend/vocabulary/mend-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/mend-vocabulary.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/a2a/mend-a2a.yml
+  href: https://artifacts.apis.io/mend/a2a/mend-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/mend-a2a.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/hosts/mend-hosts.yml
+  href: https://artifacts.apis.io/mend/hosts/mend-hosts.yml
   title: ''
   type: Hosts
   url: hosts/mend-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/vendors/mend-vendors.yml
+  href: https://artifacts.apis.io/mend/vendors/mend-vendors.yml
   title: ''
   type: Vendors
   url: vendors/mend-vendors.yml
@@ -473,87 +949,87 @@ common:
   type: Pricing
   url: https://www.mend.io/pricing/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/plans/mend-plans-pricing.yml
+  href: https://artifacts.apis.io/mend/plans/mend-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mend-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/capabilities/mend-capability-edges.yml
+  href: https://artifacts.apis.io/mend/capabilities/mend-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/mend-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/overlays/mend-platform-overlay.yaml
+  href: https://artifacts.apis.io/mend/overlays/mend-platform-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/mend-platform-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/agentic-access/mend-agentic-access.yml
+  href: https://artifacts.apis.io/mend/agentic-access/mend-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/mend-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/security/mend-trust-center.yml
+  href: https://artifacts.apis.io/mend/security/mend-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/mend-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/security/mend-domain-security.yml
+  href: https://artifacts.apis.io/mend/security/mend-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mend-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/authentication/mend-authentication.yml
+  href: https://artifacts.apis.io/mend/authentication/mend-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mend-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/conventions/mend-conventions.yml
+  href: https://artifacts.apis.io/mend/conventions/mend-conventions.yml
   title: ''
   type: Conventions
   url: conventions/mend-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/errors/mend-problem-types.yml
+  href: https://artifacts.apis.io/mend/errors/mend-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/mend-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/lifecycle/mend-lifecycle.yml
+  href: https://artifacts.apis.io/mend/lifecycle/mend-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mend-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/changelog/mend-changelog.yml
+  href: https://artifacts.apis.io/mend/changelog/mend-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/mend-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/conformance/mend-conformance.yml
+  href: https://artifacts.apis.io/mend/conformance/mend-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mend-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/data-model/mend-data-model.yml
+  href: https://artifacts.apis.io/mend/data-model/mend-data-model.yml
   title: ''
   type: DataModel
   url: data-model/mend-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/mcp/mend-mcp.yml
+  href: https://artifacts.apis.io/mend/mcp/mend-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/mend-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/llms/mend-llms.txt
+  href: https://artifacts.apis.io/mend/llms/mend-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mend-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/cli/mend-cli.yml
+  href: https://artifacts.apis.io/mend/cli/mend-cli.yml
   title: ''
   type: CLI
   url: cli/mend-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/mend/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -611,6 +1087,14 @@ common:
   url: https://trust.mend.io/
 created: '2026-07-17'
 description: Mend.io (formerly WhiteSource) is a unified application security and AI security platform that helps engineering and security teams find and automatically remediate vulnerabilities across open-source dependencies, proprietary code, containers, and AI models/agents. Its products span Software Composition Analysis (SCA), Static Application Security Testing (SAST), container image scanning, SBOM generation, automated dependency updates (Renovate), and AI-native security for LLM-powered applications. Mend exposes a REST-compliant AppSec Platform API (v3.0) and an SCA API (v2.0) for automating scans, projects, applications, findings, reports, and administration, secured with a short-lived per-organization JWT obtained from a user key.
+finops:
+- has_sources: true
+  method: derived
+  name: Mend Finops
+  primary_unit: dev
+  service_category: ''
+  slug: mend-finops
+  template: false
 image: https://api-docs.mend.io/assets/mend-io-logo.06cad8388af3f063d8c0af6ef0386393959988075733a762b0899791865771ba.9c1bb791.svg
 json_schemas:
 - name: AttributionImgReportExportDTO
@@ -1053,7 +1537,7 @@ modified: '2026-07-20'
 name: Mend
 nav: Providers
 network: true
-overview: 'Mend publishes 47 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Management API, Access Management - Organizations API, Administration - Groups API, and 44 more. Tagged areas include Application Security, Software Composition Analysis, SAST, Container Security, and AI Security.
+overview: 'Mend publishes 142 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Management API, Access Management - Organizations API, Administration - Groups API, and 139 more. Tagged areas include Application Security, Software Composition Analysis, SAST, Container Security, and AI Security.
 
 
   The Mend catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -1064,7 +1548,7 @@ plans:
 - name: Mend Plans Pricing
   plan_count: 3
   slug: mend-plans-pricing
-random_paper: 2
+random_paper: 12
 rules:
 - authorship: generated
   effective_rule_count: 58
@@ -1080,31 +1564,31 @@ rules:
   slug: mend-rules
 score:
   band: strong
-  composite: 63.4
+  composite: 64.9
   coverage:
-    artifact_dirs: 33
-    catalog_earned: 74.8
+    artifact_dirs: 36
+    catalog_earned: 80.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 40.3
+    catalog_gap: 34.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.4
+  delta: -4.2
   facets:
-    access_clarity: 92.1
+    access_clarity: 84.2
     contract_governance: 22.0
-    contract_quality: 61.7
+    contract_quality: 61.2
     developer_ergonomics: 66.1
-    discoverability: 75.0
+    discoverability: 79.5
     operational_transparency: 36.8
-  previous_composite: 68.8
+  previous_composite: 69.1
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 70.2
+      callable: 89.0
       derived: 0
       marker_coverage: 0.0
-      total: 47
+      total: 191
     mcp: first-party
     skills: derived
   regulatory:
@@ -1112,14 +1596,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+    score: 25.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/mend/refs/heads/main/screenshots/mend-2026-08-07T172510.png
+    score: 33.3
+screenshot: https://apis.io/screenshots/mend/mend-2026-08-07T172510.png
 security:
 - kind: authentication
   name: Mend Authentication
@@ -1133,6 +1617,14 @@ security:
   name: Mend Trust Center
   slug: mend-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: export-sbom-report
+  slug: mend-export-sbom-report
+- name: monitor-zero-day-events
+  slug: mend-monitor-zero-day-events
+- name: triage-security-findings
+  slug: mend-triage-security-findings
 slug: mend
 tags:
 - Application Security

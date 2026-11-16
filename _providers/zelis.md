@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Zelis'' partner-facing API platform, published through the Zelis developer portal and API marketplace. The catalog spans claims document search and viewing, member ID card search and viewing, provider '
@@ -90,27 +94,27 @@ common:
   type: TermsOfService
   url: https://www.zelis.com/terms-of-use/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zelis/refs/heads/main/authentication/zelis-authentication.yml
+  href: https://artifacts.apis.io/zelis/authentication/zelis-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zelis-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zelis/refs/heads/main/conventions/zelis-conventions.yml
+  href: https://artifacts.apis.io/zelis/conventions/zelis-conventions.yml
   title: ''
   type: Conventions
   url: conventions/zelis-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zelis/refs/heads/main/conformance/zelis-conformance.yml
+  href: https://artifacts.apis.io/zelis/conformance/zelis-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zelis-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zelis/refs/heads/main/llms/zelis-llms.txt
+  href: https://artifacts.apis.io/zelis/llms/zelis-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zelis-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zelis/refs/heads/main/security/zelis-domain-security.yml
+  href: https://artifacts.apis.io/zelis/security/zelis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zelis-domain-security.yml
@@ -126,12 +130,12 @@ overview: 'Zelis is listed with 1 API on the [APIs.io](https://apis.io/) network
 
 
   Zelis'' developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, support, engineering blog, and 10 more developer resources.'
-random_paper: 1
+random_paper: 23
 score:
   band: emerging
   composite: 24.5
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -154,14 +158,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/zelis/refs/heads/main/screenshots/zelis-2026-09-02T171548.png
+screenshot: https://apis.io/screenshots/zelis/zelis-2026-09-02T171548.png
 security:
 - kind: authentication
   name: Zelis Authentication

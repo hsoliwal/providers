@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -96,9 +99,6 @@ collections:
   name: Keen Cached Queries Saved Queries API
   slug: postman-keen-saved-queries-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Keen Cached Queries API
   slug: open-keen-cached-queries-api
 - collection_type: open
@@ -127,22 +127,22 @@ collections:
   slug: open-keen-saved-queries-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/keen/refs/heads/main/plans/keen-plans-pricing.yml
+  href: https://artifacts.apis.io/keen/plans/keen-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/keen-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/keen/refs/heads/main/rate-limits/keen-rate-limits.yml
+  href: https://artifacts.apis.io/keen/rate-limits/keen-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/keen-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/keen/refs/heads/main/finops/keen-finops.yml
+  href: https://artifacts.apis.io/keen/finops/keen-finops.yml
   title: ''
   type: FinOps
   url: finops/keen-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/keen/refs/heads/main/capabilities/keen-capability-edges.yml
+  href: https://artifacts.apis.io/keen/capabilities/keen-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/keen-capability-edges.yml
@@ -151,17 +151,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/keen/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/keen/refs/heads/main/agentic-access/keen-agentic-access.yml
+  href: https://artifacts.apis.io/keen/agentic-access/keen-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/keen-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/keen/refs/heads/main/security/keen-domain-security.yml
+  href: https://artifacts.apis.io/keen/security/keen-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/keen-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/keen/refs/heads/main/authentication/keen-authentication.yml
+  href: https://artifacts.apis.io/keen/authentication/keen-authentication.yml
   title: ''
   type: Authentication
   url: authentication/keen-authentication.yml
@@ -233,16 +233,16 @@ created: '2026-03-26'
 description: Keen is an event analytics platform and API that enables developers to collect, store, analyze, and visualize custom event data. It provides a flexible RESTful API for streaming events, running multi-dimensional queries, and building embedded analytics dashboards for products and internal tools.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Keen Finops
-  primary_unit: ''
-  service_category: Analytics
+  primary_unit: subscription
+  service_category: ''
   slug: keen-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/keen.png
 json_schemas:
 - name: CachedQuery
-  property_count: 0
+  property_count: 3
   slug: keen-cachedquery
 - name: CachedQueryDefinition
   property_count: 2
@@ -251,7 +251,7 @@ json_schemas:
   property_count: 2
   slug: keen-error
 - name: SavedQuery
-  property_count: 0
+  property_count: 2
   slug: keen-savedquery
 - name: SavedQueryDefinition
   property_count: 2
@@ -274,9 +274,12 @@ overview: 'Keen publishes 6 API contracts indexed on the [APIs.io](https://apis.
   Keen''s developer surface includes authentication, documentation, getting-started guide, engineering blog, pricing, GitHub presence, signup flow, and 17 more developer resources.'
 plans:
 - name: Keen Plans Pricing
-  plan_count: 4
+  plan_count: 5
   slug: keen-plans-pricing
-random_paper: 1
+- name: Keen Price Estimates
+  plan_count: 0
+  slug: keen-price-estimates
+random_paper: 11
 rate_limits:
 - limit_count: 13
   name: Keen Rate Limits
@@ -295,23 +298,23 @@ rules:
   slug: keen-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 47.8
+  composite: 54.1
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 44.3
-    catalog_earned_first_party: 0.0
-    catalog_gap: 70.8
+    artifact_dirs: 21
+    catalog_earned: 56.3
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 35.5
+    access_clarity: 67.1
     contract_governance: 9.8
     contract_quality: 51.4
     developer_ergonomics: 56.0
     discoverability: 62.5
     operational_transparency: 28.9
-  previous_composite: 49.3
+  previous_composite: 54.1
   provenance:
     agentic_access: derived
     contracts:
@@ -325,13 +328,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/keen/refs/heads/main/screenshots/keen-2026-06-20T183939.png
+screenshot: https://apis.io/screenshots/keen/keen-2026-06-20T183939.png
 security:
 - kind: authentication
   name: Keen Authentication

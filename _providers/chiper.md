@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Chiper is a B2B e-commerce platform for corner stores in Latin America.
@@ -32,17 +45,17 @@ apis:
 artifact_total: 2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chiper/refs/heads/main/hosts/chiper-hosts.yml
+  href: https://artifacts.apis.io/chiper/hosts/chiper-hosts.yml
   title: ''
   type: Hosts
   url: hosts/chiper-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chiper/refs/heads/main/vendors/chiper-vendors.yml
+  href: https://artifacts.apis.io/chiper/vendors/chiper-vendors.yml
   title: ''
   type: Vendors
   url: vendors/chiper-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chiper/refs/heads/main/security/chiper-domain-security.yml
+  href: https://artifacts.apis.io/chiper/security/chiper-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chiper-domain-security.yml
@@ -66,17 +79,18 @@ name: Chiper
 nav: Providers
 network: true
 overview: Chiper is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company.
-random_paper: 19
+random_paper: 11
 score:
   band: minimal
   composite: 2.2
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 20.0
     catalog_earned_first_party: 0.0
     catalog_gap: 95.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -90,18 +104,21 @@ score:
     reasons:
     - owner: catalog
       reason: venue_as_website
+  previous_composite: 2.2
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/chiper/chiper-2026-11-03T124050.png
 security:
 - kind: domain-security
   name: Chiper Domain Security

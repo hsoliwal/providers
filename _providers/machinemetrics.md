@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 25.4
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - baseURL: https://api.machinemetrics.com
@@ -54,62 +68,62 @@ apis:
 artifact_total: 10
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/rules/machinemetrics-rules.yml
+  href: https://artifacts.apis.io/machinemetrics/rules/machinemetrics-rules.yml
   title: ''
   type: Spectral
   url: rules/machinemetrics-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/json-ld/machinemetrics-context.jsonld
+  href: https://artifacts.apis.io/machinemetrics/json-ld/machinemetrics-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/machinemetrics-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/vocabulary/machinemetrics-vocabulary.yml
+  href: https://artifacts.apis.io/machinemetrics/vocabulary/machinemetrics-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/machinemetrics-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/data-model/machinemetrics-data-model.yml
+  href: https://artifacts.apis.io/machinemetrics/data-model/machinemetrics-data-model.yml
   title: ''
   type: DataModel
   url: data-model/machinemetrics-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/cli/machinemetrics-cli.yml
+  href: https://artifacts.apis.io/machinemetrics/cli/machinemetrics-cli.yml
   title: ''
   type: CLI
   url: cli/machinemetrics-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/authentication/machinemetrics-authentication.yml
+  href: https://artifacts.apis.io/machinemetrics/authentication/machinemetrics-authentication.yml
   title: ''
   type: Authentication
   url: authentication/machinemetrics-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/conformance/machinemetrics-conformance.yml
+  href: https://artifacts.apis.io/machinemetrics/conformance/machinemetrics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/machinemetrics-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/llms/machinemetrics-llms.txt
+  href: https://artifacts.apis.io/machinemetrics/llms/machinemetrics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/machinemetrics-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/well-known/machinemetrics-status-security.txt
+  href: https://artifacts.apis.io/machinemetrics/well-known/machinemetrics-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/machinemetrics-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/well-known/machinemetrics-well-known.yml
+  href: https://artifacts.apis.io/machinemetrics/well-known/machinemetrics-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/machinemetrics-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/hosts/machinemetrics-hosts.yml
+  href: https://artifacts.apis.io/machinemetrics/hosts/machinemetrics-hosts.yml
   title: ''
   type: Hosts
   url: hosts/machinemetrics-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/vendors/machinemetrics-vendors.yml
+  href: https://artifacts.apis.io/machinemetrics/vendors/machinemetrics-vendors.yml
   title: ''
   type: Vendors
   url: vendors/machinemetrics-vendors.yml
@@ -162,7 +176,7 @@ common:
   type: Documentation
   url: https://developers.machinemetrics.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/machinemetrics/refs/heads/main/security/machinemetrics-domain-security.yml
+  href: https://artifacts.apis.io/machinemetrics/security/machinemetrics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/machinemetrics-domain-security.yml
@@ -202,7 +216,7 @@ overview: 'MachineMetrics is listed with 5 APIs on the [APIs.io](https://apis.io
 
 
   MachineMetrics'' developer surface includes CLI, authentication, support, pricing, changelog, engineering blog, API reference, and 19 more developer resources.'
-random_paper: 10
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -218,21 +232,23 @@ rules:
   slug: machinemetrics-rules
 score:
   band: thin
-  composite: 39.0
+  composite: 30.9
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 56.2
     catalog_earned_first_party: 0.0
     catalog_gap: 58.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.5
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 35.6
     contract_quality: 19.0
-    developer_ergonomics: 54.8
-    discoverability: 82.1
-    operational_transparency: 31.6
+    developer_ergonomics: 36.9
+    discoverability: 80.4
+    operational_transparency: 26.3
+  previous_composite: 40.4
   provenance:
     conformance: first-party
     contracts:
@@ -250,12 +266,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 17.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/machinemetrics/machinemetrics-2026-11-03T135158.png
 security:
 - kind: authentication
   name: Machinemetrics Authentication

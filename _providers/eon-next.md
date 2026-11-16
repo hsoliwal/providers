@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The OpenID Connect / OAuth 2.0 authorization server that authenticates E.ON Next customers into the online account and mobile app. It is an Auth0-hosted E.ON group CIAM tenant (certificate CN eon-next
@@ -44,37 +47,37 @@ apis:
 artifact_total: 5
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eon-next/refs/heads/main/well-known/eon-next-well-known.yml
+  href: https://artifacts.apis.io/eon-next/well-known/eon-next-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/eon-next-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eon-next/refs/heads/main/well-known/eon-next-security.txt
+  href: https://artifacts.apis.io/eon-next/well-known/eon-next-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/eon-next-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eon-next/refs/heads/main/authentication/eon-next-authentication.yml
+  href: https://artifacts.apis.io/eon-next/authentication/eon-next-authentication.yml
   title: ''
   type: Authentication
   url: authentication/eon-next-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eon-next/refs/heads/main/scopes/eon-next-scopes.yml
+  href: https://artifacts.apis.io/eon-next/scopes/eon-next-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/eon-next-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eon-next/refs/heads/main/conformance/eon-next-conformance.yml
+  href: https://artifacts.apis.io/eon-next/conformance/eon-next-conformance.yml
   title: ''
   type: Conformance
   url: conformance/eon-next-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eon-next/refs/heads/main/llms/eon-next-llms.txt
+  href: https://artifacts.apis.io/eon-next/llms/eon-next-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/eon-next-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eon-next/refs/heads/main/security/eon-next-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/eon-next/security/eon-next-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/eon-next-vulnerability-disclosure.yml
@@ -83,7 +86,7 @@ common:
   type: Security
   url: https://www.eonnext.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eon-next/refs/heads/main/security/eon-next-domain-security.yml
+  href: https://artifacts.apis.io/eon-next/security/eon-next-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/eon-next-domain-security.yml
@@ -140,7 +143,7 @@ overview: 'E.ON Next is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   E.ON Next''s developer surface includes authentication, engineering blog, support, pricing, and 15 more developer resources.'
-random_paper: 0
+random_paper: 22
 scopes:
 - name: Eon Next Scopes
   scope_count: 14
@@ -181,14 +184,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 36.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/eon-next/refs/heads/main/screenshots/eon-next-2026-08-07T164948.png
+screenshot: https://apis.io/screenshots/eon-next/eon-next-2026-08-07T164948.png
 security:
 - kind: authentication
   name: Eon Next Authentication

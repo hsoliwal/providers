@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: medium
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
   - security
   trial: false
   try_now: true
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.0
-  scored_at: '2026-10-17'
+  score: 24.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1166
   human_in_the_loop: 7
@@ -337,11 +344,6 @@ apis:
   slug: infisical-secret-rotations-api
 - baseURL: https://app.infisical.com
   baseurl_source: declared
-  description: The Secret Scanning API from Infisical — 26 operation(s) for secret scanning.
-  name: Infisical Secret Scanning API
-  slug: infisical-secret-scanning-api
-- baseURL: https://app.infisical.com
-  baseurl_source: declared
   description: The Secret Sharing API from Infisical — 3 operation(s) for secret sharing.
   name: Infisical Secret Sharing API
   slug: infisical-secret-sharing-api
@@ -367,31 +369,6 @@ apis:
   slug: infisical-spiffe-auth-api
 - baseURL: https://app.infisical.com
   baseurl_source: declared
-  description: The SSH Certificate Authorities API from Infisical — 6 operation(s) for ssh certificate authorities.
-  name: Infisical SSH Certificate Authorities API
-  slug: infisical-ssh-certificate-authorities-api
-- baseURL: https://app.infisical.com
-  baseurl_source: declared
-  description: The SSH Certificate Templates API from Infisical — 4 operation(s) for ssh certificate templates.
-  name: Infisical SSH Certificate Templates API
-  slug: infisical-ssh-certificate-templates-api
-- baseURL: https://app.infisical.com
-  baseurl_source: declared
-  description: The SSH Certificates API from Infisical — 2 operation(s) for ssh certificates.
-  name: Infisical SSH Certificates API
-  slug: infisical-ssh-certificates-api
-- baseURL: https://app.infisical.com
-  baseurl_source: declared
-  description: The SSH Host Groups API from Infisical — 6 operation(s) for ssh host groups.
-  name: Infisical SSH Host Groups API
-  slug: infisical-ssh-host-groups-api
-- baseURL: https://app.infisical.com
-  baseurl_source: declared
-  description: The SSH Hosts API from Infisical — 8 operation(s) for ssh hosts.
-  name: Infisical SSH Hosts API
-  slug: infisical-ssh-hosts-api
-- baseURL: https://app.infisical.com
-  baseurl_source: declared
   description: The Sub Organizations API from Infisical — 3 operation(s) for sub organizations.
   name: Infisical Sub Organizations API
   slug: infisical-sub-organizations-api
@@ -410,11 +387,73 @@ apis:
   description: The Universal Auth API from Infisical — 8 operation(s) for universal auth.
   name: Infisical Universal Auth API
   slug: infisical-universal-auth-api
-artifact_total: 165
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Agent Vault Access Bundles API from Infisical — 6 operation(s) for agent vault access bundles.
+  name: Infisical Agent Vault Access Bundles API
+  slug: infisical-agent-vault-access-bundles-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Agent Vault App Connections API from Infisical — 2 operation(s) for agent vault app connections.
+  name: Infisical Agent Vault App Connections API
+  slug: infisical-agent-vault-app-connections-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Agent Vault Members API from Infisical — 2 operation(s) for agent vault members.
+  name: Infisical Agent Vault Members API
+  slug: infisical-agent-vault-members-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Agent Vault Proxies API from Infisical — 4 operation(s) for agent vault proxies.
+  name: Infisical Agent Vault Proxies API
+  slug: infisical-agent-vault-proxies-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Agent Vault Session Logs API from Infisical — 2 operation(s) for agent vault session logs.
+  name: Infisical Agent Vault Session Logs API
+  slug: infisical-agent-vault-session-logs-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Agent Vault Sessions API from Infisical — 3 operation(s) for agent vault sessions.
+  name: Infisical Agent Vault Sessions API
+  slug: infisical-agent-vault-sessions-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Agent Vault Settings API from Infisical — 1 operation(s) for agent vault settings.
+  name: Infisical Agent Vault Settings API
+  slug: infisical-agent-vault-settings-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Agent Vault Variables API from Infisical — 3 operation(s) for agent vault variables.
+  name: Infisical Agent Vault Variables API
+  slug: infisical-agent-vault-variables-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Gateways API from Infisical — 3 operation(s) for gateways.
+  name: Infisical Gateways API
+  slug: infisical-gateways-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The HSM Connectors API from Infisical — 4 operation(s) for hsm connectors.
+  name: Infisical HSM Connectors API
+  slug: infisical-hsm-connectors-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Instance API from Infisical — 1 operation(s) for instance.
+  name: Infisical Instance API
+  slug: infisical-instance-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Proxied Services API from Infisical — 3 operation(s) for proxied services.
+  name: Infisical Proxied Services API
+  slug: infisical-proxied-services-api
+- baseURL: https://app.infisical.com
+  baseurl_source: declared
+  description: The Secret Validation Rules API from Infisical — 7 operation(s) for secret validation rules.
+  name: Infisical Secret Validation Rules API
+  slug: infisical-secret-validation-rules-api
+artifact_total: 171
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Infisical Admin API
   slug: open-infisical-admin-api
@@ -636,27 +675,27 @@ collections:
   slug: open-infisical-universal-auth-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/capabilities/infisical-capability-edges.yml
+  href: https://artifacts.apis.io/infisical/capabilities/infisical-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/infisical-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/agentic-access/infisical-agentic-access.yml
+  href: https://artifacts.apis.io/infisical/agentic-access/infisical-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/infisical-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/security/infisical-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/infisical/security/infisical-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/infisical-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/security/infisical-domain-security.yml
+  href: https://artifacts.apis.io/infisical/security/infisical-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/infisical-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/authentication/infisical-authentication.yml
+  href: https://artifacts.apis.io/infisical/authentication/infisical-authentication.yml
   title: ''
   type: Authentication
   url: authentication/infisical-authentication.yml
@@ -693,67 +732,67 @@ common:
   type: X
   url: https://twitter.com/infisical
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/plans/infisical-plans-pricing.yml
+  href: https://artifacts.apis.io/infisical/plans/infisical-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/infisical-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/rate-limits/infisical-rate-limits.yml
+  href: https://artifacts.apis.io/infisical/rate-limits/infisical-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/infisical-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/finops/infisical-finops.yml
+  href: https://artifacts.apis.io/infisical/finops/infisical-finops.yml
   title: ''
   type: FinOps
   url: finops/infisical-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/vocabulary/infisical-vocabulary.yml
+  href: https://artifacts.apis.io/infisical/vocabulary/infisical-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/infisical-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/json-ld/infisical-context.jsonld
+  href: https://artifacts.apis.io/infisical/json-ld/infisical-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/infisical-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/json-schema/infisical-secret-create.json
+  href: https://artifacts.apis.io/infisical/json-schema/infisical-secret-create.json
   title: ''
   type: JSONSchema
   url: json-schema/infisical-secret-create.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/json-schema/infisical-secret-update.json
+  href: https://artifacts.apis.io/infisical/json-schema/infisical-secret-update.json
   title: ''
   type: JSONSchema
   url: json-schema/infisical-secret-update.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/json-schema/infisical-secret-delete.json
+  href: https://artifacts.apis.io/infisical/json-schema/infisical-secret-delete.json
   title: ''
   type: JSONSchema
   url: json-schema/infisical-secret-delete.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/json-schema/infisical-universal-auth-login.json
+  href: https://artifacts.apis.io/infisical/json-schema/infisical-universal-auth-login.json
   title: ''
   type: JSONSchema
   url: json-schema/infisical-universal-auth-login.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/json-schema/infisical-dynamic-secret-create.json
+  href: https://artifacts.apis.io/infisical/json-schema/infisical-dynamic-secret-create.json
   title: ''
   type: JSONSchema
   url: json-schema/infisical-dynamic-secret-create.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/examples/infisical-universal-auth-login-example.json
+  href: https://artifacts.apis.io/infisical/examples/infisical-universal-auth-login-example.json
   title: ''
   type: Examples
   url: examples/infisical-universal-auth-login-example.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/examples/infisical-secret-create-example.json
+  href: https://artifacts.apis.io/infisical/examples/infisical-secret-create-example.json
   title: ''
   type: Examples
   url: examples/infisical-secret-create-example.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/examples/infisical-dynamic-secret-create-example.json
+  href: https://artifacts.apis.io/infisical/examples/infisical-dynamic-secret-create-example.json
   title: ''
   type: Examples
   url: examples/infisical-dynamic-secret-create-example.json
@@ -770,13 +809,13 @@ examples:
   name: Infisical Universal Auth Login Example
   slug: infisical-universal-auth-login-example
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Infisical Finops
-  primary_unit: ''
+  primary_unit: identity/month
   service_category: ''
   slug: infisical-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/infisical.png
 json_schemas:
 - name: Dynamic Secret Create
@@ -804,7 +843,7 @@ modified: 2026-06-13
 name: Infisical
 nav: Providers
 network: true
-overview: 'Infisical publishes 73 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Alibaba Cloud Auth API, App Connections API, and 70 more. Tagged areas include Secrets Management, Security, DevOps, Developer Tools, and Open Source.
+overview: 'Infisical publishes 80 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Alibaba Cloud Auth API, App Connections API, and 77 more. Tagged areas include Secrets Management, Security, DevOps, Developer Tools, and Open Source.
 
 
   The Infisical catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -818,7 +857,7 @@ plans:
 - name: Infisical Price Estimates
   plan_count: 0
   slug: infisical-price-estimates
-random_paper: 0
+random_paper: 10
 rate_limits:
 - limit_count: 8
   name: Infisical Rate Limits
@@ -837,43 +876,43 @@ rules:
   slug: infisical-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 43.9
+  composite: 47.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 76.8
+    artifact_dirs: 21
+    catalog_earned: 79.8
     catalog_earned_first_party: 24.0
-    catalog_gap: 38.3
+    catalog_gap: 35.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.6
   facets:
-    access_clarity: 42.1
+    access_clarity: 50.0
     contract_governance: 23.5
-    contract_quality: 56.0
+    contract_quality: 58.7
     developer_ergonomics: 23.8
     discoverability: 66.1
-    operational_transparency: 52.6
-  previous_composite: 45.4
+    operational_transparency: 63.2
+  previous_composite: 46.9
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 99.4
       derived: 0
-      marker_coverage: 0.0
-      total: 73
+      marker_coverage: 51.3
+      total: 154
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/infisical/refs/heads/main/screenshots/infisical-2026-06-20T183331.png
+screenshot: https://apis.io/screenshots/infisical/infisical-2026-06-20T183331.png
 security:
 - kind: authentication
   name: Infisical Authentication

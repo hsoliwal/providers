@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 12.9
-  scored_at: '2026-10-17'
+  score: 12.7
+  scored_at: '2026-11-06'
 api_count: 11
 apis:
 - description: Explore available APIs and their documentation, including Reseller API and Customer API.
@@ -82,37 +95,37 @@ apis:
 artifact_total: 20
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sj-se/refs/heads/main/rules/sj-se-rules.yml
+  href: https://artifacts.apis.io/sj-se/rules/sj-se-rules.yml
   title: ''
   type: Spectral
   url: rules/sj-se-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sj-se/refs/heads/main/json-ld/sj-se-context.jsonld
+  href: https://artifacts.apis.io/sj-se/json-ld/sj-se-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/sj-se-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sj-se/refs/heads/main/vocabulary/sj-se-vocabulary.yml
+  href: https://artifacts.apis.io/sj-se/vocabulary/sj-se-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/sj-se-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sj-se/refs/heads/main/data-model/sj-se-data-model.yml
+  href: https://artifacts.apis.io/sj-se/data-model/sj-se-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sj-se-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sj-se/refs/heads/main/conformance/sj-se-conformance.yml
+  href: https://artifacts.apis.io/sj-se/conformance/sj-se-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sj-se-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sj-se/refs/heads/main/hosts/sj-se-hosts.yml
+  href: https://artifacts.apis.io/sj-se/hosts/sj-se-hosts.yml
   title: ''
   type: Hosts
   url: hosts/sj-se-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/sj-se/refs/heads/main/vendors/sj-se-vendors.yml
+  href: https://artifacts.apis.io/sj-se/vendors/sj-se-vendors.yml
   title: ''
   type: Vendors
   url: vendors/sj-se-vendors.yml
@@ -129,7 +142,7 @@ common:
   type: Documentation
   url: https://developer.sj.se/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sj-se/refs/heads/main/security/sj-se-domain-security.yml
+  href: https://artifacts.apis.io/sj-se/security/sj-se-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sj-se-domain-security.yml
@@ -182,7 +195,7 @@ overview: 'SJ is listed with 11 APIs on the [APIs.io](https://apis.io/) network,
 
 
   SJ''s developer surface includes documentation and 11 more developer resources.'
-random_paper: 20
+random_paper: 2
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -198,21 +211,23 @@ rules:
   slug: sj-se-rules
 score:
   band: emerging
-  composite: 17.9
+  composite: 14.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 48.0
     catalog_earned_first_party: 0.0
     catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.3
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 19.7
     contract_quality: 24.4
-    developer_ergonomics: 9.5
+    developer_ergonomics: 4.8
     discoverability: 41.1
-    operational_transparency: 15.8
+    operational_transparency: 7.9
+  previous_composite: 17.9
   provenance:
     conformance: derived
     contracts:
@@ -226,12 +241,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/sj-se/sj-se-2026-11-03T143305.png
 security:
 - kind: domain-security
   name: Sj Se Domain Security

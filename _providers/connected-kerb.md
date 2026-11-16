@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Connected Kerb operates a live Open Charge Point Interface (OCPI) CPO endpoint on its own charge point management host. The version negotiation endpoint and the 2.1.1 / 2.2 / 2.2.1 version detail endp
@@ -110,37 +113,37 @@ common:
   type: Profile
   url: https://forgeglobal.com/connected-kerb_stock/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/connected-kerb/refs/heads/main/authentication/connected-kerb-authentication.yml
+  href: https://artifacts.apis.io/connected-kerb/authentication/connected-kerb-authentication.yml
   title: ''
   type: Authentication
   url: authentication/connected-kerb-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/connected-kerb/refs/heads/main/conventions/connected-kerb-conventions.yml
+  href: https://artifacts.apis.io/connected-kerb/conventions/connected-kerb-conventions.yml
   title: ''
   type: Conventions
   url: conventions/connected-kerb-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/connected-kerb/refs/heads/main/conformance/connected-kerb-conformance.yml
+  href: https://artifacts.apis.io/connected-kerb/conformance/connected-kerb-conformance.yml
   title: ''
   type: Conformance
   url: conformance/connected-kerb-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/connected-kerb/refs/heads/main/errors/connected-kerb-problem-types.yml
+  href: https://artifacts.apis.io/connected-kerb/errors/connected-kerb-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/connected-kerb-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/connected-kerb/refs/heads/main/lifecycle/connected-kerb-lifecycle.yml
+  href: https://artifacts.apis.io/connected-kerb/lifecycle/connected-kerb-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/connected-kerb-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/connected-kerb/refs/heads/main/security/connected-kerb-domain-security.yml
+  href: https://artifacts.apis.io/connected-kerb/security/connected-kerb-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/connected-kerb-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/connected-kerb/refs/heads/main/llms/connected-kerb-llms.txt
+  href: https://artifacts.apis.io/connected-kerb/llms/connected-kerb-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/connected-kerb-llms.txt
@@ -156,7 +159,7 @@ overview: 'Connected Kerb is listed with 2 APIs on the [APIs.io](https://apis.io
 
 
   Connected Kerb''s developer surface includes engineering blog, support, pricing, authentication, and 19 more developer resources.'
-random_paper: 4
+random_paper: 20
 score:
   band: emerging
   composite: 21.7
@@ -192,14 +195,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/connected-kerb/refs/heads/main/screenshots/connected-kerb-2026-08-07T163755.png
+screenshot: https://apis.io/screenshots/connected-kerb/connected-kerb-2026-08-07T163755.png
 security:
 - kind: authentication
   name: Connected Kerb Authentication

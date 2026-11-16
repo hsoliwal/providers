@@ -31,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 47.9
-  scored_at: '2026-10-17'
+  score: 47.4
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.loopio.com/data/v2
@@ -117,29 +120,29 @@ apis:
   description: Create & Manage webhook subscriptions
   name: Loopio Webhooks API
   slug: loopio-webhooks-api
-artifact_total: 21
+artifact_total: 26
 asyncapis:
 - description: ''
   name: Loopio Events Webhooks
   slug: loopio-events-webhooks
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/capabilities/loopio-capability-edges.yml
+  href: https://artifacts.apis.io/loopio/capabilities/loopio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/loopio-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/security/loopio-domain-security.yml
+  href: https://artifacts.apis.io/loopio/security/loopio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/loopio-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/scopes/loopio-scopes.yml
+  href: https://artifacts.apis.io/loopio/scopes/loopio-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/loopio-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/authentication/loopio-authentication.yml
+  href: https://artifacts.apis.io/loopio/authentication/loopio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/loopio-authentication.yml
@@ -188,42 +191,42 @@ common:
   type: StatusPage
   url: https://www.loopiostatus.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/well-known/loopio-well-known.yml
+  href: https://artifacts.apis.io/loopio/well-known/loopio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/loopio-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/llms/loopio-llms.txt
+  href: https://artifacts.apis.io/loopio/llms/loopio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/loopio-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/packages/loopio-packages.yml
+  href: https://artifacts.apis.io/loopio/packages/loopio-packages.yml
   title: ''
   type: Packages
   url: packages/loopio-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/conventions/loopio-conventions.yml
+  href: https://artifacts.apis.io/loopio/conventions/loopio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/loopio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/errors/loopio-problem-types.yml
+  href: https://artifacts.apis.io/loopio/errors/loopio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/loopio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/data-model/loopio-data-model.yml
+  href: https://artifacts.apis.io/loopio/data-model/loopio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/loopio-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/lifecycle/loopio-lifecycle.yml
+  href: https://artifacts.apis.io/loopio/lifecycle/loopio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/loopio-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/conformance/loopio-conformance.yml
+  href: https://artifacts.apis.io/loopio/conformance/loopio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/loopio-conformance.yml
@@ -232,27 +235,27 @@ common:
   type: Compliance
   url: https://loopio.com/legal/compliance-statement/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/asyncapi/loopio-events-webhooks.yml
+  href: https://artifacts.apis.io/loopio/asyncapi/loopio-events-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/loopio-events-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/loopio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/rate-limits/loopio-rate-limits.yml
+  href: https://artifacts.apis.io/loopio/rate-limits/loopio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/loopio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/plans/loopio-plans-pricing.yml
+  href: https://artifacts.apis.io/loopio/plans/loopio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/loopio-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/overlays/loopio-openapi-overlay.yaml
+  href: https://artifacts.apis.io/loopio/overlays/loopio-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/loopio-openapi-overlay.yaml
@@ -267,7 +270,7 @@ network: true
 overview: 'Loopio publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Asynchronous API, CRM API, Custom Project Fields API, and 12 more. Tagged areas include Company, RFP, Proposals, Response Management, and Content Library.
 
 
-  The Loopio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Loopio catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Loopio''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 22 more developer resources.'
@@ -275,11 +278,24 @@ plans:
 - name: Loopio Plans Pricing
   plan_count: 0
   slug: loopio-plans-pricing
-random_paper: 20
+random_paper: 10
 rate_limits:
 - limit_count: 0
   name: Loopio Rate Limits
   slug: loopio-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 108
+  extends:
+  - spectral:oas
+  name: Loopio API Rules
+  rule_count: 67
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 2
+    warn: 11
+  slug: loopio-rules
 scopes:
 - name: Loopio Scopes
   scope_count: 52
@@ -287,18 +303,18 @@ scopes:
   summary_line: 52 scopes · authorizationCode/clientCredentials
 score:
   band: thin
-  composite: 30.2
+  composite: 31.9
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 56.6
     developer_ergonomics: 18.5
     discoverability: 66.1
@@ -310,7 +326,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 30.2
+  previous_composite: 31.9
   provenance:
     conformance: first-party
     contracts:
@@ -326,13 +342,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/screenshots/loopio-2026-09-02T150315.png
+screenshot: https://apis.io/screenshots/loopio/loopio-2026-09-02T150315.png
 security:
 - kind: authentication
   name: Loopio Authentication
@@ -342,6 +358,16 @@ security:
   name: Loopio Domain Security
   slug: loopio-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: loopio-answer-project-entries
+  slug: loopio-answer-project-entries
+- name: loopio-launch-project-from-template
+  slug: loopio-launch-project-from-template
+- name: loopio-provision-users
+  slug: loopio-provision-users
+- name: loopio-sync-library-content
+  slug: loopio-sync-library-content
 slug: loopio
 tags:
 - Company

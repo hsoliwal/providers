@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -37,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Solve Intelligence's first-party remote Model Context Protocol server. A streamable-HTTP MCP endpoint, authorized with OAuth against the company's own authorization server, that exposes patent and non
@@ -46,17 +49,17 @@ apis:
 artifact_total: 8
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/solve-intelligence/refs/heads/main/rate-limits/solve-intelligence-rate-limits.yml
+  href: https://artifacts.apis.io/solve-intelligence/rate-limits/solve-intelligence-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/solve-intelligence-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/solve-intelligence/refs/heads/main/security/solve-intelligence-trust-center.yml
+  href: https://artifacts.apis.io/solve-intelligence/security/solve-intelligence-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/solve-intelligence-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/solve-intelligence/refs/heads/main/security/solve-intelligence-domain-security.yml
+  href: https://artifacts.apis.io/solve-intelligence/security/solve-intelligence-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/solve-intelligence-domain-security.yml
@@ -93,32 +96,32 @@ common:
   type: Security
   url: https://www.solveintelligence.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/solve-intelligence/refs/heads/main/conformance/solve-intelligence-conformance.yml
+  href: https://artifacts.apis.io/solve-intelligence/conformance/solve-intelligence-conformance.yml
   title: ''
   type: Compliance
   url: conformance/solve-intelligence-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/solve-intelligence/refs/heads/main/conformance/solve-intelligence-conformance.yml
+  href: https://artifacts.apis.io/solve-intelligence/conformance/solve-intelligence-conformance.yml
   title: ''
   type: Conformance
   url: conformance/solve-intelligence-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/solve-intelligence/refs/heads/main/well-known/solve-intelligence-well-known.yml
+  href: https://artifacts.apis.io/solve-intelligence/well-known/solve-intelligence-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/solve-intelligence-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/solve-intelligence/refs/heads/main/llms/solve-intelligence-llms.txt
+  href: https://artifacts.apis.io/solve-intelligence/llms/solve-intelligence-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/solve-intelligence-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/solve-intelligence/refs/heads/main/packages/solve-intelligence-packages.yml
+  href: https://artifacts.apis.io/solve-intelligence/packages/solve-intelligence-packages.yml
   title: ''
   type: Packages
   url: packages/solve-intelligence-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/solve-intelligence/refs/heads/main/plans/solve-intelligence-plans-pricing.yml
+  href: https://artifacts.apis.io/solve-intelligence/plans/solve-intelligence-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/solve-intelligence-plans-pricing.yml
@@ -157,7 +160,7 @@ score:
   band: thin
   composite: 28.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -181,14 +184,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 36.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/solve-intelligence/refs/heads/main/screenshots/solve-intelligence-2026-09-02T160137.png
+screenshot: https://apis.io/screenshots/solve-intelligence/solve-intelligence-2026-09-02T160137.png
 security:
 - kind: authentication
   name: Solve Intelligence Authentication

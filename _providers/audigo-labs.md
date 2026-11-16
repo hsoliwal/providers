@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -89,27 +93,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/AudigoLabs
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/audigo-labs/refs/heads/main/mcp/audigo-labs-mcp.yml
+  href: https://artifacts.apis.io/audigo-labs/mcp/audigo-labs-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/audigo-labs-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/audigo-labs/refs/heads/main/well-known/audigo-labs-well-known.yml
+  href: https://artifacts.apis.io/audigo-labs/well-known/audigo-labs-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/audigo-labs-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/audigo-labs/refs/heads/main/well-known/audigo-labs-ucp.json
+  href: https://artifacts.apis.io/audigo-labs/well-known/audigo-labs-ucp.json
   title: ''
   type: APICatalog
   url: well-known/audigo-labs-ucp.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/audigo-labs/refs/heads/main/llms/audigo-labs-llms.txt
+  href: https://artifacts.apis.io/audigo-labs/llms/audigo-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/audigo-labs-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/audigo-labs/refs/heads/main/security/audigo-labs-domain-security.yml
+  href: https://artifacts.apis.io/audigo-labs/security/audigo-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/audigo-labs-domain-security.yml
@@ -129,18 +133,18 @@ overview: 'Audigo Labs is profiled on the [APIs.io](https://apis.io/) network. T
 
 
   Audigo Labs'' developer surface includes engineering blog, support, getting-started guide, pricing, signup flow, and 13 more developer resources.'
-random_paper: 18
+random_paper: 16
 score:
   band: emerging
   composite: 19.6
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
@@ -148,7 +152,7 @@ score:
     developer_ergonomics: 19.0
     discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 19.5
+  previous_composite: 19.6
   provenance:
     mcp: platform-generated
   regulatory:
@@ -157,14 +161,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/audigo-labs/refs/heads/main/screenshots/audigo-labs-2026-08-07T161923.png
+screenshot: https://apis.io/screenshots/audigo-labs/audigo-labs-2026-08-07T161923.png
 security:
 - kind: domain-security
   name: Audigo Labs Domain Security

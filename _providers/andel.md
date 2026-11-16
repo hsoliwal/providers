@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-10-17'
+  score: 32.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -41,7 +47,7 @@ agentic_access:
   operation_count: 5
   slug: andel-agentic-access
   summary_line: 5 operations · 2 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.andel.org/exchange/v1
   baseurl_source: declared
@@ -53,15 +59,12 @@ apis:
   description: The webhooks API from Andel — 2 operation(s) for webhooks.
   name: Andel Webhooks API
   slug: andel-webhooks-api
-artifact_total: 11
+artifact_total: 13
 asyncapis:
 - description: ''
   name: Andel Data Exchange Webhooks
   slug: andel-data-exchange-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Data Exchange purchases API
   slug: open-andel-purchases-api
@@ -110,77 +113,77 @@ common:
   type: StatusPage
   url: https://status.andel.org
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/mcp/andel-mcp.yml
+  href: https://artifacts.apis.io/andel/mcp/andel-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/andel-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/llms/andel-llms.txt
+  href: https://artifacts.apis.io/andel/llms/andel-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/andel-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/authentication/andel-authentication.yml
+  href: https://artifacts.apis.io/andel/authentication/andel-authentication.yml
   title: ''
   type: Authentication
   url: authentication/andel-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/scopes/andel-scopes.yml
+  href: https://artifacts.apis.io/andel/scopes/andel-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/andel-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/errors/andel-problem-types.yml
+  href: https://artifacts.apis.io/andel/errors/andel-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/andel-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/conventions/andel-conventions.yml
+  href: https://artifacts.apis.io/andel/conventions/andel-conventions.yml
   title: ''
   type: Conventions
   url: conventions/andel-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/lifecycle/andel-lifecycle.yml
+  href: https://artifacts.apis.io/andel/lifecycle/andel-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/andel-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/sandbox/andel-sandbox.yml
+  href: https://artifacts.apis.io/andel/sandbox/andel-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/andel-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/data-model/andel-data-model.yml
+  href: https://artifacts.apis.io/andel/data-model/andel-data-model.yml
   title: ''
   type: DataModel
   url: data-model/andel-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/conformance/andel-conformance.yml
+  href: https://artifacts.apis.io/andel/conformance/andel-conformance.yml
   title: ''
   type: Conformance
   url: conformance/andel-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/overlays/andel-data-exchange-overlay.yaml
+  href: https://artifacts.apis.io/andel/overlays/andel-data-exchange-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/andel-data-exchange-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/asyncapi/andel-data-exchange-webhooks.yml
+  href: https://artifacts.apis.io/andel/asyncapi/andel-data-exchange-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/andel-data-exchange-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/andel/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/security/andel-domain-security.yml
+  href: https://artifacts.apis.io/andel/security/andel-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/andel-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/agentic-access/andel-agentic-access.yml
+  href: https://artifacts.apis.io/andel/agentic-access/andel-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/andel-agentic-access.yml
@@ -203,11 +206,24 @@ network: true
 overview: 'Andel publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Purchases API and Webhooks API. Tagged areas include Company, Healthcare, Pharmacy, Pharmacy Benefits, and Drug Pricing.
 
 
-  The Andel catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Andel catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Andel''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 19 more developer resources.'
-random_paper: 10
+random_paper: 12
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Andel API Rules
+  rule_count: 50
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 1
+  slug: andel-rules
 scopes:
 - name: Andel Scopes
   scope_count: 1
@@ -215,30 +231,30 @@ scopes:
   summary_line: 1 scope
 score:
   band: developing
-  composite: 45.8
+  composite: 48.6
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.2
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 52.8
+    contract_governance: 18.2
+    contract_quality: 57.7
     developer_ergonomics: 66.1
     discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 45.7
+  previous_composite: 47.4
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
     mcp: first-party
     skills: derived
@@ -248,13 +264,13 @@ score:
     regime: Health
     regime_id: health
     score: 32.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/andel/refs/heads/main/screenshots/andel-2026-07-25T200224.png
+screenshot: https://apis.io/screenshots/andel/andel-2026-07-25T200224.png
 security:
 - kind: authentication
   name: Andel Authentication
@@ -264,6 +280,12 @@ security:
   name: Andel Domain Security
   slug: andel-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Read member purchases from the Andel Data Exchange
+  slug: andel-read-purchases
+- name: Subscribe to Andel purchase webhooks
+  slug: andel-subscribe-webhooks
 slug: andel
 tags:
 - Company

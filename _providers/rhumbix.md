@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-10-17'
+  score: 20.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://async-api.rhumbix.com
@@ -52,11 +56,8 @@ apis:
   description: Returns appropriate headers to enable CORS for cross-domain API requests
   name: Rhumbix CORS API
   slug: rhumbix-cors-api
-artifact_total: 9
+artifact_total: 13
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Rhumbix Public Batch Export API
   slug: open-rhumbix-batch-export-api
@@ -67,18 +68,23 @@ collections:
   name: Rhumbix Public Batch Export CORS API
   slug: open-rhumbix-cors-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/rhumbix/plans/rhumbix-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/rhumbix-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rhumbix/refs/heads/main/skills/rhumbix-export-workshifts.md
+  href: https://artifacts.apis.io/rhumbix/skills/rhumbix-export-workshifts.md
   title: ''
   type: AgentSkill
   url: skills/rhumbix-export-workshifts.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rhumbix/refs/heads/main/mcp/rhumbix-mcp.yml
+  href: https://artifacts.apis.io/rhumbix/mcp/rhumbix-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/rhumbix-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/rhumbix/refs/heads/main/overlays/rhumbix-public-api-overlay.yaml
+  href: https://artifacts.apis.io/rhumbix/overlays/rhumbix-public-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/rhumbix-public-api-overlay.yaml
@@ -139,12 +145,20 @@ common:
   type: PrivacyPolicy
   url: https://www.rhumbix.com/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rhumbix/refs/heads/main/security/rhumbix-domain-security.yml
+  href: https://artifacts.apis.io/rhumbix/security/rhumbix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rhumbix-domain-security.yml
 created: '2026-07-17'
 description: Rhumbix is a field-first workforce management platform for construction that consolidates timekeeping, production tracking, time & materials, change orders, daily field reports, and custom forms into real-time visibility on labor and job costs for trade contractors and general contractors. Rhumbix publishes a REST Public API (Swagger 2.0, x-api-key auth) for batch import of employees and projects and batch export of workshift/timecard data, enabling bidirectional flow between the field and ERP/accounting and project-management systems (Sage, Oracle, SAP, QuickBooks, Viewpoint, CMiC, Procore, Autodesk Construction Cloud). Autodesk has signed a definitive agreement to acquire Rhumbix.
+finops:
+- has_sources: true
+  method: derived
+  name: Rhumbix Finops
+  primary_unit: ''
+  service_category: ''
+  slug: rhumbix-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rhumbix.png
 layout: provider
 modified: '2026-07-21'
@@ -154,27 +168,47 @@ network: true
 overview: 'Rhumbix publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Batch Export API, Batch Import API, and CORS API. Tagged areas include Company, Application, Construction, Construction Technology, and Workforce Management.
 
 
-  Rhumbix''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, and 12 more developer resources.'
-random_paper: 19
+  The Rhumbix catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Rhumbix''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, and 13 more developer resources.'
+plans:
+- name: Rhumbix Plans Pricing
+  plan_count: 4
+  slug: rhumbix-plans-pricing
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Rhumbix API Rules
+  rule_count: 53
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 2
+    warn: 2
+  slug: rhumbix-rules
 score:
   band: developing
-  composite: 40.1
+  composite: 48.0
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 22
+    catalog_earned: 53.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 44.7
-    contract_governance: 4.5
+    access_clarity: 76.3
+    contract_governance: 18.2
     contract_quality: 45.3
     developer_ergonomics: 47.0
     discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 40.1
+  previous_composite: 48.0
   provenance:
     conformance: derived
     contracts:
@@ -190,13 +224,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/rhumbix/refs/heads/main/screenshots/rhumbix-2026-09-02T153759.png
+screenshot: https://apis.io/screenshots/rhumbix/rhumbix-2026-09-02T153759.png
 security:
 - kind: authentication
   name: Rhumbix Authentication
@@ -206,6 +240,12 @@ security:
   name: Rhumbix Domain Security
   slug: rhumbix-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Export workshift/timecard data from Rhumbix
+  slug: rhumbix-export-workshifts
+- name: Import employees into Rhumbix
+  slug: rhumbix-import-employees
 slug: rhumbix
 tags:
 - Company

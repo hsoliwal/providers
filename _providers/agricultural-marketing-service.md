@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.2
-  scored_at: '2026-10-17'
+  score: 35.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -61,7 +67,7 @@ apis:
 - description: The Livestock Mandatory Price Reporting System (LMPRS) API provides programmatic access to federally mandated livestock price report data. The API requires no authentication for public access and retu
   name: USDA AMS LMPRS API (Livestock Mandatory Price Reporting)
   slug: usda-ams-lmprs-api-livestock-mandatory-price-reporting
-artifact_total: 55
+artifact_total: 54
 collections:
 - collection_type: postman
   name: USDA AMS MARS API (MyMarketNews) Offices API
@@ -70,9 +76,6 @@ collections:
   name: USDA AMS MARS API (MyMarketNews) Offices Reports API
   slug: postman-agricultural-marketing-service-reports-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: USDA AMS MARS API (MyMarketNews) Offices API
   slug: open-agricultural-marketing-service-offices-api
 - collection_type: open
@@ -80,17 +83,17 @@ collections:
   slug: open-agricultural-marketing-service-reports-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/agricultural-marketing-service/refs/heads/main/plans/agricultural-marketing-service-plans-pricing.yml
+  href: https://artifacts.apis.io/agricultural-marketing-service/plans/agricultural-marketing-service-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/agricultural-marketing-service-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/agricultural-marketing-service/refs/heads/main/rate-limits/agricultural-marketing-service-rate-limits.yml
+  href: https://artifacts.apis.io/agricultural-marketing-service/rate-limits/agricultural-marketing-service-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/agricultural-marketing-service-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/agricultural-marketing-service/refs/heads/main/finops/agricultural-marketing-service-finops.yml
+  href: https://artifacts.apis.io/agricultural-marketing-service/finops/agricultural-marketing-service-finops.yml
   title: ''
   type: FinOps
   url: finops/agricultural-marketing-service-finops.yml
@@ -99,17 +102,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/agricultural-marketing-service/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agricultural-marketing-service/refs/heads/main/agentic-access/agricultural-marketing-service-agentic-access.yml
+  href: https://artifacts.apis.io/agricultural-marketing-service/agentic-access/agricultural-marketing-service-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/agricultural-marketing-service-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agricultural-marketing-service/refs/heads/main/security/agricultural-marketing-service-domain-security.yml
+  href: https://artifacts.apis.io/agricultural-marketing-service/security/agricultural-marketing-service-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/agricultural-marketing-service-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agricultural-marketing-service/refs/heads/main/authentication/agricultural-marketing-service-authentication.yml
+  href: https://artifacts.apis.io/agricultural-marketing-service/authentication/agricultural-marketing-service-authentication.yml
   title: ''
   type: Authentication
   url: authentication/agricultural-marketing-service-authentication.yml
@@ -142,12 +145,12 @@ common:
   type: PrivacyPolicy
   url: https://www.usda.gov/privacy-policy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agricultural-marketing-service/refs/heads/main/rules/agricultural-marketing-service-spectral-rules.yml
+  href: https://artifacts.apis.io/agricultural-marketing-service/rules/agricultural-marketing-service-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/agricultural-marketing-service-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agricultural-marketing-service/refs/heads/main/vocabulary/agricultural-marketing-service-vocabulary.yaml
+  href: https://artifacts.apis.io/agricultural-marketing-service/vocabulary/agricultural-marketing-service-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/agricultural-marketing-service-vocabulary.yaml
@@ -195,7 +198,7 @@ finops:
 - has_sources: false
   method: generated
   name: Agricultural Marketing Service Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: agricultural-marketing-service-finops
   template: true
@@ -276,7 +279,7 @@ plans:
 - name: Agricultural Marketing Service Plans Pricing
   plan_count: 3
   slug: agricultural-marketing-service-plans-pricing
-random_paper: 20
+random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Agricultural Marketing Service Rate Limits
@@ -309,13 +312,13 @@ score:
   band: thin
   composite: 33.1
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 75.0
     catalog_earned_first_party: 0.0
     catalog_gap: 40.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.7
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 27.3
@@ -328,7 +331,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 34.8
+  previous_composite: 33.1
   provenance:
     agentic_access: derived
     contracts:
@@ -342,14 +345,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/agricultural-marketing-service/refs/heads/main/screenshots/agricultural-marketing-service-2026-06-20T170415.png
+screenshot: https://apis.io/screenshots/agricultural-marketing-service/agricultural-marketing-service-2026-06-20T170415.png
 security:
 - kind: authentication
   name: Agricultural Marketing Service Authentication

@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Public API endpoints are not publicly documented; no OpenAPI spec was found.
@@ -32,12 +45,12 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cognata/refs/heads/main/well-known/cognata-well-known.yml
+  href: https://artifacts.apis.io/cognata/well-known/cognata-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cognata-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cognata/refs/heads/main/hosts/cognata-hosts.yml
+  href: https://artifacts.apis.io/cognata/hosts/cognata-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cognata-hosts.yml
@@ -58,7 +71,7 @@ common:
   type: Blog
   url: https://www.cognata.com/jp/blog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cognata/refs/heads/main/security/cognata-domain-security.yml
+  href: https://artifacts.apis.io/cognata/security/cognata-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cognata-domain-security.yml
@@ -83,40 +96,44 @@ modified: '2026-10-09'
 name: Cognata
 nav: Providers
 network: true
-overview: 'Cognata is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Autonomous Vehicles, Simulation, Defense, Off‑Road, and Hardware Retrofit.
+overview: 'Cognata is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Autonomous Vehicles, Simulation, Defense, Off-Road, and Hardware Retrofit.
 
 
   Cognata''s developer surface includes engineering blog and 7 more developer resources.'
-random_paper: 7
+random_paper: 13
 score:
-  band: emerging
-  composite: 11.3
+  band: minimal
+  composite: 8.2
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 6
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.1
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 2.4
-    discoverability: 58.9
+    developer_ergonomics: 1.2
+    discoverability: 58.0
     operational_transparency: 0.0
+  previous_composite: 11.3
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 15.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/cognata/cognata-2026-11-03T124803.png
 security:
 - kind: domain-security
   name: Cognata Domain Security
@@ -127,7 +144,7 @@ tags:
 - Autonomous Vehicles
 - Simulation
 - Defense
-- Off‑Road
+- Off-Road
 - Hardware Retrofit
 - AI Data Augmentation
 - Sensor Fusion

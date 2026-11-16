@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The GraphQL contract served by INK Games' Strapi headless CMS, which supplies the content rendered on www.inkgames.com. Schema introspection is enabled and unauthenticated, so the complete type system
@@ -48,7 +51,7 @@ common:
   type: Blog
   url: https://www.inkgames.com/blog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/security/ink-games-domain-security.yml
+  href: https://artifacts.apis.io/ink-games/security/ink-games-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ink-games-domain-security.yml
@@ -81,62 +84,62 @@ common:
   type: GitHubOrganization
   url: https://github.com/Ink-Games
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/graphql/ink-games-graphql.yml
+  href: https://artifacts.apis.io/ink-games/graphql/ink-games-graphql.yml
   title: ''
   type: GraphQL
   url: graphql/ink-games-graphql.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/authentication/ink-games-authentication.yml
+  href: https://artifacts.apis.io/ink-games/authentication/ink-games-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ink-games-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/data-model/ink-games-data-model.yml
+  href: https://artifacts.apis.io/ink-games/data-model/ink-games-data-model.yml
   title: ''
   type: DataModel
   url: data-model/ink-games-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/errors/ink-games-problem-types.yml
+  href: https://artifacts.apis.io/ink-games/errors/ink-games-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/ink-games-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/conventions/ink-games-conventions.yml
+  href: https://artifacts.apis.io/ink-games/conventions/ink-games-conventions.yml
   title: ''
   type: Conventions
   url: conventions/ink-games-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/conformance/ink-games-conformance.yml
+  href: https://artifacts.apis.io/ink-games/conformance/ink-games-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ink-games-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/lifecycle/ink-games-lifecycle.yml
+  href: https://artifacts.apis.io/ink-games/lifecycle/ink-games-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/ink-games-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/plans/ink-games-plans-pricing.yml
+  href: https://artifacts.apis.io/ink-games/plans/ink-games-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ink-games-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/rate-limits/ink-games-rate-limits.yml
+  href: https://artifacts.apis.io/ink-games/rate-limits/ink-games-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ink-games-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/packages/ink-games-packages.yml
+  href: https://artifacts.apis.io/ink-games/packages/ink-games-packages.yml
   title: ''
   type: Packages
   url: packages/ink-games-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/mcp/ink-games-mcp.yml
+  href: https://artifacts.apis.io/ink-games/mcp/ink-games-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/ink-games-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/llms/ink-games-llms.txt
+  href: https://artifacts.apis.io/ink-games/llms/ink-games-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ink-games-llms.txt
@@ -160,7 +163,7 @@ plans:
 - name: Ink Games Plans Pricing
   plan_count: 0
   slug: ink-games-plans-pricing
-random_paper: 12
+random_paper: 4
 rate_limits:
 - limit_count: 0
   name: Ink Games Rate Limits
@@ -175,7 +178,7 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
@@ -183,7 +186,7 @@ score:
     developer_ergonomics: 14.3
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 19.3
+  previous_composite: 19.8
   provenance:
     conformance: derived
     mcp: derived
@@ -193,14 +196,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ink-games/refs/heads/main/screenshots/ink-games-2026-10-11T190452.png
+screenshot: https://apis.io/screenshots/ink-games/ink-games-2026-10-11T190452.png
 security:
 - kind: authentication
   name: Ink Games Authentication

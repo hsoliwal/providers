@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 asyncapis:
@@ -45,22 +49,22 @@ common:
   type: Blog
   url: https://www.anyroad.com/blog
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/anyroad/refs/heads/main/asyncapi/anyroad-webhooks.yml
+  href: https://artifacts.apis.io/anyroad/asyncapi/anyroad-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/anyroad-webhooks.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anyroad/refs/heads/main/security/anyroad-trust-center.yml
+  href: https://artifacts.apis.io/anyroad/security/anyroad-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/anyroad-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anyroad/refs/heads/main/security/anyroad-trust-center.yml
+  href: https://artifacts.apis.io/anyroad/security/anyroad-trust-center.yml
   title: ''
   type: Compliance
   url: security/anyroad-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/anyroad/refs/heads/main/security/anyroad-domain-security.yml
+  href: https://artifacts.apis.io/anyroad/security/anyroad-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/anyroad-domain-security.yml
@@ -103,18 +107,18 @@ overview: 'Anyroad is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Anyroad''s developer surface includes engineering blog, support, pricing, and 8 more developer resources.'
-random_paper: 2
+random_paper: 6
 score:
   band: thin
   composite: 26.2
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 43.4
     contract_governance: 0.0
@@ -122,21 +126,21 @@ score:
     developer_ergonomics: 7.1
     discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 25.7
+  previous_composite: 26.2
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/anyroad/refs/heads/main/screenshots/anyroad-2026-07-25T200517.png
+screenshot: https://apis.io/screenshots/anyroad/anyroad-2026-07-25T200517.png
 security:
 - kind: domain-security
   name: Anyroad Domain Security

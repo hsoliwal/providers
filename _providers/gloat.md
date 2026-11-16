@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.8
-  scored_at: '2026-10-17'
+  score: 31.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 62
   human_in_the_loop: 24
@@ -236,44 +241,49 @@ apis:
   description: The Users API from Gloat — 2 operation(s) for users.
   name: Gloat Users API
   slug: gloat-users-api
-artifact_total: 72
+artifact_total: 75
 asyncapis:
 - description: ''
   name: Gloat Webhooks
   slug: gloat-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/gloat/capabilities/gloat-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gloat-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/agentic-access/gloat-agentic-access.yml
+  href: https://artifacts.apis.io/gloat/agentic-access/gloat-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gloat-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/rules/gloat-rules.yml
+  href: https://artifacts.apis.io/gloat/rules/gloat-rules.yml
   title: ''
   type: Spectral
   url: rules/gloat-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/json-ld/gloat-context.jsonld
+  href: https://artifacts.apis.io/gloat/json-ld/gloat-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/gloat-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/vocabulary/gloat-vocabulary.yml
+  href: https://artifacts.apis.io/gloat/vocabulary/gloat-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/gloat-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/errors/gloat-problem-types.yml
+  href: https://artifacts.apis.io/gloat/errors/gloat-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/gloat-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/hosts/gloat-hosts.yml
+  href: https://artifacts.apis.io/gloat/hosts/gloat-hosts.yml
   title: ''
   type: Hosts
   url: hosts/gloat-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/vendors/gloat-vendors.yml
+  href: https://artifacts.apis.io/gloat/vendors/gloat-vendors.yml
   title: ''
   type: Vendors
   url: vendors/gloat-vendors.yml
@@ -306,12 +316,12 @@ common:
   type: GettingStarted
   url: https://developer.gloat.com/docs/using-gloat-apis
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/authentication/gloat-authentication.yml
+  href: https://artifacts.apis.io/gloat/authentication/gloat-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gloat-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/llms/gloat-llms.txt
+  href: https://artifacts.apis.io/gloat/llms/gloat-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/gloat-llms.txt
@@ -340,52 +350,52 @@ common:
   type: Compliance
   url: https://gloat.com/security-and-compliance/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/conformance/gloat-conformance.yml
+  href: https://artifacts.apis.io/gloat/conformance/gloat-conformance.yml
   title: ''
   type: Conformance
   url: conformance/gloat-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/lifecycle/gloat-lifecycle.yml
+  href: https://artifacts.apis.io/gloat/lifecycle/gloat-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/gloat-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/conventions/gloat-conventions.yml
+  href: https://artifacts.apis.io/gloat/conventions/gloat-conventions.yml
   title: ''
   type: Conventions
   url: conventions/gloat-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/data-model/gloat-data-model.yml
+  href: https://artifacts.apis.io/gloat/data-model/gloat-data-model.yml
   title: ''
   type: DataModel
   url: data-model/gloat-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/sandbox/gloat-sandbox.yml
+  href: https://artifacts.apis.io/gloat/sandbox/gloat-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/gloat-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/mcp/gloat-mcp.yml
+  href: https://artifacts.apis.io/gloat/mcp/gloat-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/gloat-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/asyncapi/gloat-webhooks.yml
+  href: https://artifacts.apis.io/gloat/asyncapi/gloat-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/gloat-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/gloat/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/security/gloat-trust-center.yml
+  href: https://artifacts.apis.io/gloat/security/gloat-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/gloat-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/security/gloat-domain-security.yml
+  href: https://artifacts.apis.io/gloat/security/gloat-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gloat-domain-security.yml
@@ -487,7 +497,7 @@ overview: 'Gloat publishes 39 API contracts indexed on the [APIs.io](https://api
   The Gloat catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Gloat''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, sandbox, and 26 more developer resources.'
+  Gloat''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, sandbox, and 27 more developer resources.'
 random_paper: 7
 rules:
 - authorship: generated
@@ -504,28 +514,28 @@ rules:
   slug: gloat-rules
 score:
   band: strong
-  composite: 54.5
+  composite: 58.2
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 27
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 15.1
+  delta: 4.0
   facets:
     access_clarity: 36.8
     contract_governance: 35.6
-    contract_quality: 70.7
-    developer_ergonomics: 42.3
-    discoverability: 80.4
+    contract_quality: 74.8
+    developer_ergonomics: 56.5
+    discoverability: 79.5
     operational_transparency: 23.7
-  previous_composite: 39.4
+  previous_composite: 54.2
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
-      callable: 36.8
+      callable: 0.0
       derived: 0
       marker_coverage: 100.0
       total: 38
@@ -537,13 +547,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 50.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/gloat/refs/heads/main/screenshots/gloat-2026-07-25T215912.png
+screenshot: https://apis.io/screenshots/gloat/gloat-2026-07-25T215912.png
 security:
 - kind: authentication
   name: Gloat Authentication
@@ -557,6 +567,14 @@ security:
   name: Gloat Trust Center
   slug: gloat-trust-center
   summary_line: SOC 2 Type II, ISO/IEC 27001, ISO/IEC 27017, ISO/IEC 27018, GDPR, CSA / Cloud Controls Matrix (CCM)
+skill_count: 3
+skills:
+- name: Discover opportunities and recommendations
+  slug: gloat-discover-opportunities
+- name: Manage the Skills Foundation job architecture
+  slug: gloat-manage-job-architecture
+- name: Sync workforce data into Gloat
+  slug: gloat-sync-workforce-data
 slug: gloat
 tags:
 - Company

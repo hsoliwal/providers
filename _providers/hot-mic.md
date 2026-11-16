@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-10-17'
+  score: 24.5
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: API reference for Hot Mic platform covering REST endpoints, authentication, and webhooks.
@@ -56,67 +70,67 @@ asyncapis:
   slug: hot-mic-webhooks
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/rules/hot-mic-rules.yml
+  href: https://artifacts.apis.io/hot-mic/rules/hot-mic-rules.yml
   title: ''
   type: Spectral
   url: rules/hot-mic-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/json-ld/hot-mic-context.jsonld
+  href: https://artifacts.apis.io/hot-mic/json-ld/hot-mic-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/hot-mic-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/vocabulary/hot-mic-vocabulary.yml
+  href: https://artifacts.apis.io/hot-mic/vocabulary/hot-mic-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/hot-mic-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/asyncapi/hot-mic-webhooks.yml
+  href: https://artifacts.apis.io/hot-mic/asyncapi/hot-mic-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/hot-mic-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/data-model/hot-mic-data-model.yml
+  href: https://artifacts.apis.io/hot-mic/data-model/hot-mic-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hot-mic-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/conventions/hot-mic-conventions.yml
+  href: https://artifacts.apis.io/hot-mic/conventions/hot-mic-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hot-mic-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/authentication/hot-mic-authentication.yml
+  href: https://artifacts.apis.io/hot-mic/authentication/hot-mic-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hot-mic-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/conformance/hot-mic-conformance.yml
+  href: https://artifacts.apis.io/hot-mic/conformance/hot-mic-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hot-mic-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/hosts/hot-mic-hosts.yml
+  href: https://artifacts.apis.io/hot-mic/hosts/hot-mic-hosts.yml
   title: ''
   type: Hosts
   url: hosts/hot-mic-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/vendors/hot-mic-vendors.yml
+  href: https://artifacts.apis.io/hot-mic/vendors/hot-mic-vendors.yml
   title: ''
   type: Vendors
   url: vendors/hot-mic-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/packages/hot-mic-packages.yml
+  href: https://artifacts.apis.io/hot-mic/packages/hot-mic-packages.yml
   title: ''
   type: SDKs
   url: packages/hot-mic-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/packages/hot-mic-packages.yml
+  href: https://artifacts.apis.io/hot-mic/packages/hot-mic-packages.yml
   title: ''
   type: Packages
   url: packages/hot-mic-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hot-mic/refs/heads/main/security/hot-mic-domain-security.yml
+  href: https://artifacts.apis.io/hot-mic/security/hot-mic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hot-mic-domain-security.yml
@@ -190,14 +204,14 @@ modified: '2026-10-12'
 name: Hot Mic
 nav: Providers
 network: true
-overview: 'Hot Mic is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Presence API, Streams API, Studio API, and 2 more. Tagged areas include Company, Video, LiveStreaming, CreatorContent, and SDK.
+overview: 'Hot Mic is listed with 5 APIs on the [APIs.io](https://apis.io/) network, including Presence API, Streams API, Studio API, and 2 more. Tagged areas include Company, Video, Live Streaming, CreatorContent, and SDK.
 
 
   The Hot Mic catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
   Hot Mic''s developer surface includes authentication, documentation, pricing, getting-started guide, and 13 more developer resources.'
-random_paper: 7
+random_paper: 17
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -212,22 +226,24 @@ rules:
     warn: 0
   slug: hot-mic-rules
 score:
-  band: thin
-  composite: 27.4
+  band: emerging
+  composite: 24.2
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 58.0
     catalog_earned_first_party: 0.0
     catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.2
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 19.7
     contract_quality: 33.6
-    developer_ergonomics: 40.5
+    developer_ergonomics: 29.8
     discoverability: 58.9
     operational_transparency: 7.9
+  previous_composite: 27.4
   provenance:
     conformance: derived
     contracts:
@@ -242,11 +258,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/hot-mic/hot-mic-2026-11-03T133457.png
 security:
 - kind: authentication
   name: Hot Mic Authentication
@@ -260,7 +278,7 @@ slug: hot-mic
 tags:
 - Company
 - Video
-- LiveStreaming
+- Live Streaming
 - CreatorContent
 - SDK
 website: https://hotmic.io

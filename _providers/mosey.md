@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.6
-  scored_at: '2026-10-17'
+  score: 24.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 29
   human_in_the_loop: 0
@@ -103,11 +110,8 @@ apis:
   description: The Tasks API from Mosey — 9 operation(s) for tasks.
   name: Mosey Tasks API
   slug: mosey-tasks-api
-artifact_total: 28
+artifact_total: 30
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Mosey Accounts API
   slug: open-mosey-accounts-api
@@ -146,7 +150,7 @@ collections:
   slug: open-mosey-tasks-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/capabilities/mosey-capability-edges.yml
+  href: https://artifacts.apis.io/mosey/capabilities/mosey-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/mosey-capability-edges.yml
@@ -159,7 +163,7 @@ common:
   type: ParentCompany
   url: https://apis.io/providers/gusto/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/security/mosey-domain-security.yml
+  href: https://artifacts.apis.io/mosey/security/mosey-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mosey-domain-security.yml
@@ -200,62 +204,62 @@ common:
   type: PrivacyPolicy
   url: https://mosey.com/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/llms/mosey-llms.txt
+  href: https://artifacts.apis.io/mosey/llms/mosey-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mosey-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/authentication/mosey-authentication.yml
+  href: https://artifacts.apis.io/mosey/authentication/mosey-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mosey-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/agentic-access/mosey-agentic-access.yml
+  href: https://artifacts.apis.io/mosey/agentic-access/mosey-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/mosey-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/mcp/mosey-mcp.yml
+  href: https://artifacts.apis.io/mosey/mcp/mosey-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/mosey-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/overlays/mosey-openapi-overlay.yaml
+  href: https://artifacts.apis.io/mosey/overlays/mosey-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/mosey-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/conformance/mosey-conformance.yml
+  href: https://artifacts.apis.io/mosey/conformance/mosey-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mosey-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/errors/mosey-problem-types.yml
+  href: https://artifacts.apis.io/mosey/errors/mosey-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/mosey-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/lifecycle/mosey-lifecycle.yml
+  href: https://artifacts.apis.io/mosey/lifecycle/mosey-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mosey-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/conventions/mosey-conventions.yml
+  href: https://artifacts.apis.io/mosey/conventions/mosey-conventions.yml
   title: ''
   type: Conventions
   url: conventions/mosey-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/components/mosey-components.yml
+  href: https://artifacts.apis.io/mosey/components/mosey-components.yml
   title: ''
   type: Components
   url: components/mosey-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/data-model/mosey-data-model.yml
+  href: https://artifacts.apis.io/mosey/data-model/mosey-data-model.yml
   title: ''
   type: DataModel
   url: data-model/mosey-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/mosey/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -270,27 +274,43 @@ network: true
 overview: 'Mosey publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Agency Accounts API, Auth API, and 9 more. Tagged areas include Company, Compliance, RegTech, State Compliance, and Tax.
 
 
+  The Mosey catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Mosey''s developer surface includes documentation, API reference, engineering blog, pricing, signup flow, authentication, and 19 more developer resources.'
-random_paper: 7
+random_paper: 5
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Mosey API Rules
+  rule_count: 50
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 5
+    warn: 6
+  slug: mosey-rules
 score:
   band: thin
-  composite: 34.2
+  composite: 35.9
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 40.0
+    artifact_dirs: 23
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 38.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 38.4
     developer_ergonomics: 42.3
     discoverability: 78.6
     operational_transparency: 0.0
-  previous_composite: 34.2
+  previous_composite: 35.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -307,13 +327,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/mosey/refs/heads/main/screenshots/mosey-2026-08-07T184318.png
+screenshot: https://apis.io/screenshots/mosey/mosey-2026-08-07T184318.png
 security:
 - kind: authentication
   name: Mosey Authentication
@@ -323,6 +343,12 @@ security:
   name: Mosey Domain Security
   slug: mosey-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Monitor and resolve compliance tasks
+  slug: mosey-monitor-and-resolve-tasks
+- name: Onboard a legal entity and generate compliance tasks
+  slug: mosey-onboard-and-generate-tasks
 slug: mosey
 tags:
 - Company

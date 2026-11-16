@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +26,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.7
-  scored_at: '2026-10-17'
+  score: 20.4
+  scored_at: '2026-11-06'
 api_count: 9
 apis:
-- description: Ticketing and event APIs provided via Ticketmaster developer portal.
+- baseURL: https://app.ticketmaster.eu
+  baseurl_source: spec
+  description: Ticketing and event APIs provided via Ticketmaster developer portal.
   name: Live Nation API
-  slug: live-nation-api-2
+  slug: live-nation-api
 - baseURL: https://app.ticketmaster.eu
   baseurl_source: declared
   description: The Bookings API from Live Nation — 2 operation(s) for bookings.
@@ -72,42 +88,42 @@ apis:
 artifact_total: 19
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/live-nation/refs/heads/main/rules/live-nation-rules.yml
+  href: https://artifacts.apis.io/live-nation/rules/live-nation-rules.yml
   title: ''
   type: Spectral
   url: rules/live-nation-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/live-nation/refs/heads/main/json-ld/live-nation-context.jsonld
+  href: https://artifacts.apis.io/live-nation/json-ld/live-nation-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/live-nation-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/live-nation/refs/heads/main/vocabulary/live-nation-vocabulary.yml
+  href: https://artifacts.apis.io/live-nation/vocabulary/live-nation-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/live-nation-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/live-nation/refs/heads/main/data-model/live-nation-data-model.yml
+  href: https://artifacts.apis.io/live-nation/data-model/live-nation-data-model.yml
   title: ''
   type: DataModel
   url: data-model/live-nation-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/live-nation/refs/heads/main/authentication/live-nation-authentication.yml
+  href: https://artifacts.apis.io/live-nation/authentication/live-nation-authentication.yml
   title: ''
   type: Authentication
   url: authentication/live-nation-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/live-nation/refs/heads/main/conformance/live-nation-conformance.yml
+  href: https://artifacts.apis.io/live-nation/conformance/live-nation-conformance.yml
   title: ''
   type: Conformance
   url: conformance/live-nation-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/live-nation/refs/heads/main/hosts/live-nation-hosts.yml
+  href: https://artifacts.apis.io/live-nation/hosts/live-nation-hosts.yml
   title: ''
   type: Hosts
   url: hosts/live-nation-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/live-nation/refs/heads/main/vendors/live-nation-vendors.yml
+  href: https://artifacts.apis.io/live-nation/vendors/live-nation-vendors.yml
   title: ''
   type: Vendors
   url: vendors/live-nation-vendors.yml
@@ -120,7 +136,7 @@ common:
   type: GettingStarted
   url: http://developer.ticketmaster.com/products-and-docs/apis/getting-started/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/live-nation/refs/heads/main/security/live-nation-domain-security.yml
+  href: https://artifacts.apis.io/live-nation/security/live-nation-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/live-nation-domain-security.yml
@@ -180,14 +196,14 @@ modified: '2026-10-13'
 name: Live Nation
 nav: Providers
 network: true
-overview: 'Live Nation is listed with 9 APIs on the [APIs.io](https://apis.io/) network, including Bookings API, Events API, Healhtcheck API, and 6 more. Tagged areas include Entertainment, Ticketing, Live Events, Music, and Technology.
+overview: 'Live Nation is listed with 9 APIs on the [APIs.io](https://apis.io/) network, including Bookings API, Events API, and 7 more. Tagged areas include Entertainment, Ticketing, Live Events, Music, and Technology.
 
 
   The Live Nation catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Live Nation''s developer surface includes authentication, support, getting-started guide, documentation, API reference, and 10 more developer resources.'
-random_paper: 4
+random_paper: 22
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -203,21 +219,23 @@ rules:
   slug: live-nation-rules
 score:
   band: emerging
-  composite: 25.8
+  composite: 24.1
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 60.8
     catalog_earned_first_party: 0.0
     catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -1.7
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 25.7
-    developer_ergonomics: 54.8
+    developer_ergonomics: 46.4
     discoverability: 62.5
     operational_transparency: 0.0
+  previous_composite: 25.8
   provenance:
     conformance: derived
     contracts:
@@ -232,11 +250,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/live-nation/live-nation-2026-11-03T134934.png
 security:
 - kind: authentication
   name: Live Nation Authentication

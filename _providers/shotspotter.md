@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: REST data APIs for ShotSpotter gunfire detection — incident data, CAD incident ID lookup, and ILS (Investigative Lead Summary) retrieval.
@@ -64,7 +68,7 @@ common:
   type: Authentication
   url: https://docs.soundthinking.com/api/authentication
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/shotspotter/refs/heads/main/asyncapi/shotspotter-napi-webhooks.yml
+  href: https://artifacts.apis.io/shotspotter/asyncapi/shotspotter-napi-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/shotspotter-napi-webhooks.yml
@@ -81,22 +85,22 @@ common:
   type: PrivacyPolicy
   url: https://www.soundthinking.com/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shotspotter/refs/heads/main/well-known/shotspotter-well-known.yml
+  href: https://artifacts.apis.io/shotspotter/well-known/shotspotter-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/shotspotter-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shotspotter/refs/heads/main/llms/shotspotter-llms.txt
+  href: https://artifacts.apis.io/shotspotter/llms/shotspotter-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/shotspotter-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shotspotter/refs/heads/main/mcp/shotspotter-mcp.yml
+  href: https://artifacts.apis.io/shotspotter/mcp/shotspotter-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/shotspotter-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shotspotter/refs/heads/main/security/shotspotter-domain-security.yml
+  href: https://artifacts.apis.io/shotspotter/security/shotspotter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shotspotter-domain-security.yml
@@ -119,12 +123,12 @@ overview: 'ShotSpotter (SoundThinking) is listed with 2 APIs on the [APIs.io](ht
 
 
   ShotSpotter (SoundThinking)''s developer surface includes documentation, API reference, authentication, support, engineering blog, and 8 more developer resources.'
-random_paper: 21
+random_paper: 7
 score:
   band: emerging
   composite: 21.1
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -147,14 +151,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/shotspotter/refs/heads/main/screenshots/shotspotter-2026-09-02T155315.png
+screenshot: https://apis.io/screenshots/shotspotter/shotspotter-2026-09-02T155315.png
 security:
 - kind: domain-security
   name: Shotspotter Domain Security

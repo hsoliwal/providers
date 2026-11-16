@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -28,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: 'The production JSON API behind the Sdui school-communication platform, serving the Sdui web app, the iOS/Android clients and the WebUntis messenger integration. Every resource path probed (/v1/users, '
@@ -80,52 +86,52 @@ common:
   type: Security
   url: https://support.sdui.de/en_US/96472-allgemeine-fragen/security-concern-what-to-do
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sdui/refs/heads/main/well-known/sdui-security.txt
+  href: https://artifacts.apis.io/sdui/well-known/sdui-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/sdui-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sdui/refs/heads/main/well-known/sdui-well-known.yml
+  href: https://artifacts.apis.io/sdui/well-known/sdui-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/sdui-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sdui/refs/heads/main/security/sdui-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/sdui/security/sdui-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/sdui-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sdui/refs/heads/main/security/sdui-domain-security.yml
+  href: https://artifacts.apis.io/sdui/security/sdui-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sdui-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sdui/refs/heads/main/lifecycle/sdui-lifecycle.yml
+  href: https://artifacts.apis.io/sdui/lifecycle/sdui-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sdui-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sdui/refs/heads/main/conformance/sdui-conformance.yml
+  href: https://artifacts.apis.io/sdui/conformance/sdui-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sdui-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/sdui/refs/heads/main/packages/sdui-packages.yml
+  href: https://artifacts.apis.io/sdui/packages/sdui-packages.yml
   title: ''
   type: Packages
   url: packages/sdui-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sdui/refs/heads/main/llms/sdui-llms.txt
+  href: https://artifacts.apis.io/sdui/llms/sdui-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sdui-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sdui/refs/heads/main/plans/sdui-plans-pricing.yml
+  href: https://artifacts.apis.io/sdui/plans/sdui-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/sdui-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sdui/refs/heads/main/rate-limits/sdui-rate-limits.yml
+  href: https://artifacts.apis.io/sdui/rate-limits/sdui-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sdui-rate-limits.yml
@@ -150,7 +156,7 @@ plans:
 - name: Sdui Plans Pricing
   plan_count: 0
   slug: sdui-plans-pricing
-random_paper: 19
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Sdui Rate Limits
@@ -164,7 +170,7 @@ score:
   band: emerging
   composite: 23.7
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -200,14 +206,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/sdui/refs/heads/main/screenshots/sdui-2026-09-02T154629.png
+screenshot: https://apis.io/screenshots/sdui/sdui-2026-09-02T154629.png
 security:
 - kind: authentication
   name: Sdui Authentication

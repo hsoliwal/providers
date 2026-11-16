@@ -1,11 +1,14 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,27 +38,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/per-vices/refs/heads/main/security/per-vices-domain-security.yml
+  href: https://artifacts.apis.io/per-vices/security/per-vices-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/per-vices-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/per-vices/refs/heads/main/packages/per-vices-packages.yml
+  href: https://artifacts.apis.io/per-vices/packages/per-vices-packages.yml
   title: ''
   type: Packages
   url: packages/per-vices-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/per-vices/refs/heads/main/packages/per-vices-packages.yml
+  href: https://artifacts.apis.io/per-vices/packages/per-vices-packages.yml
   title: ''
   type: SDKs
   url: packages/per-vices-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/per-vices/refs/heads/main/llms/per-vices-llms.txt
+  href: https://artifacts.apis.io/per-vices/llms/per-vices-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/per-vices-llms.txt
@@ -97,32 +103,32 @@ common:
   type: TermsOfService
   url: https://www.pervices.com/terms-conditions/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/per-vices/refs/heads/main/plans/per-vices-plans-pricing.yml
+  href: https://artifacts.apis.io/per-vices/plans/per-vices-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/per-vices-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/per-vices/refs/heads/main/rate-limits/per-vices-rate-limits.yml
+  href: https://artifacts.apis.io/per-vices/rate-limits/per-vices-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/per-vices-rate-limits.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/per-vices/refs/heads/main/changelog/per-vices-changelog.yml
+  href: https://artifacts.apis.io/per-vices/changelog/per-vices-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/per-vices-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/per-vices/refs/heads/main/cli/per-vices-cli.yml
+  href: https://artifacts.apis.io/per-vices/cli/per-vices-cli.yml
   title: ''
   type: CLI
   url: cli/per-vices-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/per-vices/refs/heads/main/conventions/per-vices-conventions.yml
+  href: https://artifacts.apis.io/per-vices/conventions/per-vices-conventions.yml
   title: ''
   type: Conventions
   url: conventions/per-vices-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/per-vices/refs/heads/main/lifecycle/per-vices-lifecycle.yml
+  href: https://artifacts.apis.io/per-vices/lifecycle/per-vices-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/per-vices-lifecycle.yml
@@ -157,7 +163,7 @@ plans:
 - name: Per Vices Plans Pricing
   plan_count: 13
   slug: per-vices-plans-pricing
-random_paper: 8
+random_paper: 22
 rate_limits:
 - limit_count: 0
   name: Per Vices Rate Limits
@@ -166,7 +172,7 @@ score:
   band: emerging
   composite: 25.2
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -194,14 +200,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 8.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/per-vices/refs/heads/main/screenshots/per-vices-2026-09-02T151029.png
+screenshot: https://apis.io/screenshots/per-vices/per-vices-2026-09-02T151029.png
 security:
 - kind: domain-security
   name: Per Vices Domain Security

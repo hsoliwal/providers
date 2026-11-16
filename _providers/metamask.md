@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Token API from MetaMask — 1 operation(s) for token.
@@ -32,52 +45,52 @@ apis:
 artifact_total: 4
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/rules/metamask-rules.yml
+  href: https://artifacts.apis.io/metamask/rules/metamask-rules.yml
   title: ''
   type: Spectral
   url: rules/metamask-rules.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/cli/metamask-cli.yml
+  href: https://artifacts.apis.io/metamask/cli/metamask-cli.yml
   title: ''
   type: CLI
   url: cli/metamask-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/conformance/metamask-conformance.yml
+  href: https://artifacts.apis.io/metamask/conformance/metamask-conformance.yml
   title: ''
   type: Conformance
   url: conformance/metamask-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/llms/metamask-llms.txt
+  href: https://artifacts.apis.io/metamask/llms/metamask-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/metamask-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/well-known/metamask-security.txt
+  href: https://artifacts.apis.io/metamask/well-known/metamask-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/metamask-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/well-known/metamask-well-known.yml
+  href: https://artifacts.apis.io/metamask/well-known/metamask-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/metamask-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/hosts/metamask-hosts.yml
+  href: https://artifacts.apis.io/metamask/hosts/metamask-hosts.yml
   title: ''
   type: Hosts
   url: hosts/metamask-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/vendors/metamask-vendors.yml
+  href: https://artifacts.apis.io/metamask/vendors/metamask-vendors.yml
   title: ''
   type: Vendors
   url: vendors/metamask-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/packages/metamask-packages.yml
+  href: https://artifacts.apis.io/metamask/packages/metamask-packages.yml
   title: ''
   type: SDKs
   url: packages/metamask-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/packages/metamask-packages.yml
+  href: https://artifacts.apis.io/metamask/packages/metamask-packages.yml
   title: ''
   type: Packages
   url: packages/metamask-packages.yml
@@ -94,12 +107,12 @@ common:
   type: ChangeLog
   url: https://github.com/MetaMask/snaps/releases
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/security/metamask-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/metamask/security/metamask-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/metamask-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/metamask/refs/heads/main/security/metamask-domain-security.yml
+  href: https://artifacts.apis.io/metamask/security/metamask-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/metamask-domain-security.yml
@@ -170,7 +183,7 @@ overview: 'MetaMask is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   MetaMask''s developer surface includes CLI, changelog, documentation, API reference, getting-started guide, support, engineering blog, and 19 more developer resources.'
-random_paper: 15
+random_paper: 11
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -185,22 +198,24 @@ rules:
     warn: 1
   slug: metamask-rules
 score:
-  band: thin
-  composite: 32.9
+  band: emerging
+  composite: 23.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 15
     catalog_earned: 36.5
     catalog_earned_first_party: 0.0
     catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.4
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 18.2
     contract_quality: 9.4
-    developer_ergonomics: 64.3
-    discoverability: 66.1
-    operational_transparency: 31.6
+    developer_ergonomics: 41.7
+    discoverability: 65.2
+    operational_transparency: 15.8
+  previous_composite: 32.9
   provenance:
     conformance: derived
     contracts:
@@ -214,12 +229,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 27.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 24.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/metamask/metamask-2026-11-03T135527.png
 security:
 - kind: domain-security
   name: Metamask Domain Security

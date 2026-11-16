@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 23.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -61,11 +68,6 @@ apis:
   slug: decentro-accounts-api
 - baseURL: https://in.decentro.tech
   baseurl_source: declared
-  description: The Collections API from Decentro — 2 operation(s) for collections.
-  name: Decentro Collections API
-  slug: decentro-collections-api
-- baseURL: https://in.decentro.tech
-  baseurl_source: declared
   description: The Forensics API from Decentro — 2 operation(s) for forensics.
   name: Decentro Forensics API
   slug: decentro-forensics-api
@@ -76,21 +78,6 @@ apis:
   slug: decentro-journals-api
 - baseURL: https://in.decentro.tech
   baseurl_source: declared
-  description: The Mandates API from Decentro — 2 operation(s) for mandates.
-  name: Decentro Mandates API
-  slug: decentro-mandates-api
-- baseURL: https://in.decentro.tech
-  baseurl_source: declared
-  description: The Payouts API from Decentro — 2 operation(s) for payouts.
-  name: Decentro Payouts API
-  slug: decentro-payouts-api
-- baseURL: https://in.decentro.tech
-  baseurl_source: declared
-  description: The Settlements API from Decentro — 1 operation(s) for settlements.
-  name: Decentro Settlements API
-  slug: decentro-settlements-api
-- baseURL: https://in.decentro.tech
-  baseurl_source: declared
   description: The Transactions API from Decentro — 1 operation(s) for transactions.
   name: Decentro Transactions API
   slug: decentro-transactions-api
@@ -99,11 +86,33 @@ apis:
   description: The Verification API from Decentro — 1 operation(s) for verification.
   name: Decentro Verification API
   slug: decentro-verification-api
+- baseURL: https://in.decentro.tech
+  baseurl_source: declared
+  description: The Auth API from Decentro — 1 operation(s) for auth.
+  name: Decentro Auth API
+  slug: decentro-auth-api
+- baseURL: https://in.decentro.tech
+  baseurl_source: declared
+  description: The Banking API from Decentro — 11 operation(s) for banking.
+  name: Decentro Banking API
+  slug: decentro-banking-api
+- baseURL: https://in.decentro.tech
+  baseurl_source: declared
+  description: The Decentro API from Decentro — 2 operation(s) for decentro.
+  name: Decentro Decentro API
+  slug: decentro-decentro-api
+- baseURL: https://in.decentro.tech
+  baseurl_source: declared
+  description: The Deposit Simulation API from Decentro — 1 operation(s) for deposit simulation.
+  name: Decentro Deposit Simulation API
+  slug: decentro-deposit-simulation-api
+- baseURL: https://in.decentro.tech
+  baseurl_source: declared
+  description: The Payments API from Decentro — 29 operation(s) for payments.
+  name: Decentro Payments API
+  slug: decentro-payments-api
 artifact_total: 36
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Decentro KYC & Onboarding Accounts API
   slug: open-decentro-accounts-api
@@ -145,37 +154,37 @@ collections:
   slug: open-decentro-virtual-accounts-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/decentro/refs/heads/main/plans/decentro-plans-pricing.yml
+  href: https://artifacts.apis.io/decentro/plans/decentro-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/decentro-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/decentro/refs/heads/main/rate-limits/decentro-rate-limits.yml
+  href: https://artifacts.apis.io/decentro/rate-limits/decentro-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/decentro-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/decentro/refs/heads/main/finops/decentro-finops.yml
+  href: https://artifacts.apis.io/decentro/finops/decentro-finops.yml
   title: ''
   type: FinOps
   url: finops/decentro-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/decentro/refs/heads/main/capabilities/decentro-capability-edges.yml
+  href: https://artifacts.apis.io/decentro/capabilities/decentro-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/decentro-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/decentro/refs/heads/main/agentic-access/decentro-agentic-access.yml
+  href: https://artifacts.apis.io/decentro/agentic-access/decentro-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/decentro-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/decentro/refs/heads/main/security/decentro-domain-security.yml
+  href: https://artifacts.apis.io/decentro/security/decentro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/decentro-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/decentro/refs/heads/main/authentication/decentro-authentication.yml
+  href: https://artifacts.apis.io/decentro/authentication/decentro-authentication.yml
   title: ''
   type: Authentication
   url: authentication/decentro-authentication.yml
@@ -208,12 +217,12 @@ common:
   type: Pricing
   url: https://decentro.tech/pricing/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/decentro/refs/heads/main/json-ld/decentro-context.jsonld
+  href: https://artifacts.apis.io/decentro/json-ld/decentro-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/decentro-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/decentro/refs/heads/main/vocabulary/decentro-vocabulary.yml
+  href: https://artifacts.apis.io/decentro/vocabulary/decentro-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/decentro-vocabulary.yml
@@ -227,7 +236,7 @@ finops:
 - has_sources: true
   method: generated
   name: Decentro Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: Banking-as-a-Service
   slug: decentro-finops
   template: false
@@ -249,7 +258,7 @@ modified: '2026-05-19'
 name: Decentro
 nav: Providers
 network: true
-overview: 'Decentro publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including KYC & Onboarding API, Virtual Accounts API, Accounts API, and 8 more. Tagged areas include Banking, Banking as a Service, Fintech, India, and KYC.
+overview: 'Decentro publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including KYC & Onboarding API, Virtual Accounts API, Accounts API, and 9 more. Tagged areas include Banking, Banking as a Service, Fintech, India, and KYC.
 
 
   The Decentro catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -260,7 +269,7 @@ plans:
 - name: Decentro Plans Pricing
   plan_count: 2
   slug: decentro-plans-pricing
-random_paper: 16
+random_paper: 12
 rate_limits:
 - limit_count: 2
   name: Decentro Rate Limits
@@ -291,20 +300,20 @@ rules:
   slug: decentro-payments-api-rules
 score:
   band: thin
-  composite: 31.0
+  composite: 34.1
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 60.4
+    artifact_dirs: 20
+    catalog_earned: 63.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 54.6
+    catalog_gap: 51.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.3
   facets:
-    access_clarity: 5.3
+    access_clarity: 13.2
     contract_governance: 27.3
-    contract_quality: 51.7
-    developer_ergonomics: 35.7
+    contract_quality: 54.0
+    developer_ergonomics: 40.5
     discoverability: 73.2
     operational_transparency: 7.9
   jurisdiction:
@@ -314,27 +323,27 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 32.5
+  previous_composite: 32.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 11
+      marker_coverage: 29.4
+      total: 17
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 13.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/decentro/refs/heads/main/screenshots/decentro-2026-06-20T175753.png
+screenshot: https://apis.io/screenshots/decentro/decentro-2026-06-20T175753.png
 security:
 - kind: authentication
   name: Decentro Authentication

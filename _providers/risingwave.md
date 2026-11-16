@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium (free trial)
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: true
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -67,11 +71,8 @@ apis:
   description: The Sql API from RisingWave — 1 operation(s) for sql.
   name: RisingWave Sql API
   slug: risingwave-sql-api
-artifact_total: 22
+artifact_total: 21
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: RisingWave Events API
   slug: open-risingwave-events-api
@@ -87,12 +88,12 @@ common:
   type: IssueTracker
   url: https://github.com/risingwavelabs/risingwave-mcp/issues
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/risingwave/refs/heads/main/agentic-access/risingwave-agentic-access.yml
+  href: https://artifacts.apis.io/risingwave/agentic-access/risingwave-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/risingwave-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/risingwave/refs/heads/main/security/risingwave-domain-security.yml
+  href: https://artifacts.apis.io/risingwave/security/risingwave-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/risingwave-domain-security.yml
@@ -137,17 +138,17 @@ common:
   type: Slack
   url: https://go.risingwave.com/slack
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/risingwave/refs/heads/main/plans/risingwave-plans-pricing.yml
+  href: https://artifacts.apis.io/risingwave/plans/risingwave-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/risingwave-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/risingwave/refs/heads/main/rate-limits/risingwave-rate-limits.yml
+  href: https://artifacts.apis.io/risingwave/rate-limits/risingwave-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/risingwave-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/risingwave/refs/heads/main/finops/risingwave-finops.yml
+  href: https://artifacts.apis.io/risingwave/finops/risingwave-finops.yml
   title: ''
   type: FinOps
   url: finops/risingwave-finops.yml
@@ -194,7 +195,7 @@ plans:
 - name: Risingwave Plans Pricing
   plan_count: 4
   slug: risingwave-plans-pricing
-random_paper: 9
+random_paper: 7
 rate_limits:
 - limit_count: 3
   name: Risingwave Rate Limits
@@ -215,13 +216,13 @@ score:
   band: thin
   composite: 31.3
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 57.3
     catalog_earned_first_party: 0.0
     catalog_gap: 57.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.2
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 9.8
@@ -229,7 +230,7 @@ score:
     developer_ergonomics: 23.1
     discoverability: 71.4
     operational_transparency: 26.3
-  previous_composite: 39.5
+  previous_composite: 31.3
   provenance:
     agentic_access: derived
     contracts:
@@ -243,13 +244,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/risingwave/refs/heads/main/screenshots/risingwave-2026-06-20T193128.png
+screenshot: https://apis.io/screenshots/risingwave/risingwave-2026-06-20T193128.png
 security:
 - kind: domain-security
   name: Risingwave Domain Security

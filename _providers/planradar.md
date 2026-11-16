@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.6
-  scored_at: '2026-10-17'
+  score: 27.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://www.planradar.com/api/v1
@@ -217,15 +221,12 @@ apis:
   description: The videos API from PlanRadar — 3 operation(s) for videos.
   name: PlanRadar Videos API
   slug: planradar-videos-api
-artifact_total: 79
+artifact_total: 83
 asyncapis:
 - description: ''
   name: Planradar Webhooks
   slug: planradar-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: PlanRadar's API Documentation Approval Requests V2 API
   slug: open-planradar-approval-requests-v2-api
@@ -336,22 +337,22 @@ collections:
   slug: open-planradar-videos-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/plans/planradar-plans-pricing.yml
+  href: https://artifacts.apis.io/planradar/plans/planradar-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/planradar-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/capabilities/planradar-capability-edges.yml
+  href: https://artifacts.apis.io/planradar/capabilities/planradar-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/planradar-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/security/planradar-domain-security.yml
+  href: https://artifacts.apis.io/planradar/security/planradar-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/planradar-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/authentication/planradar-authentication.yml
+  href: https://artifacts.apis.io/planradar/authentication/planradar-authentication.yml
   title: ''
   type: Authentication
   url: authentication/planradar-authentication.yml
@@ -408,27 +409,27 @@ common:
   type: ChangeLog
   url: https://help.planradar.com/hc/en-gb/articles/28730384282653
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/errors/planradar-problem-types.yml
+  href: https://artifacts.apis.io/planradar/errors/planradar-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/planradar-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/conventions/planradar-conventions.yml
+  href: https://artifacts.apis.io/planradar/conventions/planradar-conventions.yml
   title: ''
   type: Conventions
   url: conventions/planradar-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/data-model/planradar-data-model.yml
+  href: https://artifacts.apis.io/planradar/data-model/planradar-data-model.yml
   title: ''
   type: DataModel
   url: data-model/planradar-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/mcp/planradar-mcp.yml
+  href: https://artifacts.apis.io/planradar/mcp/planradar-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/planradar-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/conformance/planradar-conformance.yml
+  href: https://artifacts.apis.io/planradar/conformance/planradar-conformance.yml
   title: ''
   type: Conformance
   url: conformance/planradar-conformance.yml
@@ -437,42 +438,50 @@ common:
   type: Compliance
   url: https://www.planradar.com/data-security-and-privacy-at-planradar/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/security/planradar-trust-center.yml
+  href: https://artifacts.apis.io/planradar/security/planradar-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/planradar-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/lifecycle/planradar-lifecycle.yml
+  href: https://artifacts.apis.io/planradar/lifecycle/planradar-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/planradar-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/asyncapi/planradar-webhooks.yml
+  href: https://artifacts.apis.io/planradar/asyncapi/planradar-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/planradar-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/planradar/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/llms/planradar-llms.txt
+  href: https://artifacts.apis.io/planradar/llms/planradar-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/planradar-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/overlays/planradar-openapi-overlay.yaml
+  href: https://artifacts.apis.io/planradar/overlays/planradar-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/planradar-openapi-overlay.yaml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/changelog/planradar-changelog.yml
+  href: https://artifacts.apis.io/planradar/changelog/planradar-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/planradar-changelog.yml
 created: '2026-07-17'
 description: PlanRadar is a SaaS platform for construction and real estate documentation, defect and task management, and site inspections, used by builders, owners, facility managers, architects and engineers in more than 75 countries. Its secure REST Open API (v1 and v2) lets Pro and Enterprise customers read and manage projects, tickets, documents, DMS nodes, forms, plans, roles, approval requests and workflows, and Site View captures, generate asynchronous Excel and PDF exports, and subscribe to event webhooks. PlanRadar Connect, built on Workato, layers 200+ no-code integrations on top of the API for tools such as SharePoint, Power BI, Salesforce, Procore, SAP, Jira and Slack.
+finops:
+- has_sources: true
+  method: derived
+  name: Planradar Finops
+  primary_unit: user
+  service_category: ''
+  slug: planradar-finops
+  template: false
 image: https://www.planradar.com/wp-content/themes/planradar/images/favicon_192.png
 layout: provider
 modified: '2026-07-20'
@@ -482,7 +491,7 @@ network: true
 overview: 'PlanRadar publishes 36 API contracts indexed on the [APIs.io](https://apis.io/) network, including Approval Requests V2 API, Approval Workflows V2 API, Components-Plans API, and 33 more. Tagged areas include Company, Construction, Real Estate, Project Management, and Documentation.
 
 
-  The PlanRadar catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The PlanRadar catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   PlanRadar''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 23 more developer resources.'
@@ -493,26 +502,39 @@ plans:
 - name: Planradar Price Estimates
   plan_count: 0
   slug: planradar-price-estimates
-random_paper: 3
+random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: PlanRadar API Rules
+  rule_count: 50
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 4
+    warn: 13
+  slug: planradar-rules
 score:
-  band: developing
-  composite: 52.2
+  band: strong
+  composite: 55.4
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 49.0
+    artifact_dirs: 27
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 92.1
-    contract_governance: 4.5
+    access_clarity: 100.0
+    contract_governance: 18.2
     contract_quality: 46.1
     developer_ergonomics: 49.4
     discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 52.1
+  previous_composite: 55.4
   provenance:
     conformance: derived
     contracts:
@@ -532,13 +554,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/planradar/refs/heads/main/screenshots/planradar-2026-08-17T081300.png
+screenshot: https://apis.io/screenshots/planradar/planradar-2026-08-17T081300.png
 security:
 - kind: authentication
   name: Planradar Authentication
@@ -552,6 +574,14 @@ security:
   name: Planradar Trust Center
   slug: planradar-trust-center
   summary_line: ISO 27001, GDPR
+skill_count: 3
+skills:
+- name: Raise a PlanRadar document approval request
+  slug: planradar-approval-request
+- name: Create a PlanRadar ticket with a document
+  slug: planradar-create-ticket
+- name: Export PlanRadar project tickets to Excel or PDF
+  slug: planradar-export-tickets
 slug: planradar
 tags:
 - Company
@@ -560,7 +590,7 @@ tags:
 - Project Management
 - Documentation
 - Defect Management
-- Field Service
+- Field Service Management
 - Facility Management
 - BIM
 - Software-as-a-Service

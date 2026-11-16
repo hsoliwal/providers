@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -53,11 +57,8 @@ apis:
   description: Wine price check and data lookup
   name: Wine-Searcher Wine Check API
   slug: wine-searcher-wine-check-api
-artifact_total: 18
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Wine-Searcher market-price API
   slug: open-wine-searcher-market-price-api
@@ -69,27 +70,27 @@ collections:
   slug: open-wine-searcher
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wine-searcher/refs/heads/main/plans/wine-searcher-plans-pricing.yml
+  href: https://artifacts.apis.io/wine-searcher/plans/wine-searcher-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/wine-searcher-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wine-searcher/refs/heads/main/rate-limits/wine-searcher-rate-limits.yml
+  href: https://artifacts.apis.io/wine-searcher/rate-limits/wine-searcher-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/wine-searcher-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wine-searcher/refs/heads/main/finops/wine-searcher-finops.yml
+  href: https://artifacts.apis.io/wine-searcher/finops/wine-searcher-finops.yml
   title: ''
   type: FinOps
   url: finops/wine-searcher-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wine-searcher/refs/heads/main/agentic-access/wine-searcher-agentic-access.yml
+  href: https://artifacts.apis.io/wine-searcher/agentic-access/wine-searcher-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/wine-searcher-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wine-searcher/refs/heads/main/security/wine-searcher-domain-security.yml
+  href: https://artifacts.apis.io/wine-searcher/security/wine-searcher-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wine-searcher-domain-security.yml
@@ -146,7 +147,7 @@ finops:
 - has_sources: false
   method: generated
   name: Wine Searcher Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: wine-searcher-finops
   template: true
@@ -212,13 +213,13 @@ score:
   band: thin
   composite: 29.7
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 63.0
     catalog_earned_first_party: 0.0
     catalog_gap: 52.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 27.3
@@ -226,7 +227,7 @@ score:
     developer_ergonomics: 19.0
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 31.2
+  previous_composite: 29.7
   provenance:
     agentic_access: derived
     contracts:
@@ -240,14 +241,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/wine-searcher/refs/heads/main/screenshots/wine-searcher-2026-06-20T201514.png
+screenshot: https://apis.io/screenshots/wine-searcher/wine-searcher-2026-06-20T201514.png
 security:
 - kind: domain-security
   name: Wine Searcher Domain Security

@@ -1,11 +1,14 @@
 ---
 access_model:
   confidence: medium
-  label: Requires approval
+  label: Paid · Requires approval
   onboarding: approval
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -89,27 +95,27 @@ common:
   type: PrivacyPolicy
   url: https://www.launchrock.com/legal/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/launchrock/refs/heads/main/security/launchrock-domain-security.yml
+  href: https://artifacts.apis.io/launchrock/security/launchrock-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/launchrock-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/launchrock/refs/heads/main/llms/launchrock-llms.txt
+  href: https://artifacts.apis.io/launchrock/llms/launchrock-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/launchrock-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/launchrock/refs/heads/main/plans/launchrock-plans-pricing.yml
+  href: https://artifacts.apis.io/launchrock/plans/launchrock-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/launchrock-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/launchrock/refs/heads/main/packages/launchrock-packages.yml
+  href: https://artifacts.apis.io/launchrock/packages/launchrock-packages.yml
   title: ''
   type: Packages
   url: packages/launchrock-packages.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/launchrock/refs/heads/main/rate-limits/launchrock-rate-limits.yml
+  href: https://artifacts.apis.io/launchrock/rate-limits/launchrock-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/launchrock-rate-limits.yml
@@ -155,7 +161,7 @@ score:
   band: emerging
   composite: 21.5
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -176,14 +182,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/launchrock/refs/heads/main/screenshots/launchrock-2026-07-25T224622.png
+screenshot: https://apis.io/screenshots/launchrock/launchrock-2026-07-25T224622.png
 security:
 - kind: domain-security
   name: Launchrock Domain Security

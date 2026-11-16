@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.1
-  scored_at: '2026-10-17'
+  score: 32.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 76
   human_in_the_loop: 1
@@ -200,7 +203,7 @@ apis:
   description: <h3> Overview </h3> <p> This feature enables whitelisting of bank accounts when receiving funds in automatcher accounts. Funds received from a non-whitelisted account will be automatically returned. U
   name: Monoova Whitelisting for Automatcher (Bank Account Receivables) API
   slug: monoova-whitelisting-for-automatcher-bank-account-receivables-api
-artifact_total: 39
+artifact_total: 44
 asyncapis:
 - description: ''
   name: Monoova Webhooks
@@ -216,33 +219,37 @@ collections:
   name: Monoova PayTo API
   slug: open-monoova-payto
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/monoova/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/capabilities/monoova-capability-edges.yml
+  href: https://artifacts.apis.io/monoova/capabilities/monoova-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/monoova-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/overlays/monoova-cc-overlay.yaml
+  href: https://artifacts.apis.io/monoova/overlays/monoova-cc-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/monoova-cc-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/security/monoova-trust-center.yml
+  href: https://artifacts.apis.io/monoova/security/monoova-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/monoova-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/security/monoova-domain-security.yml
+  href: https://artifacts.apis.io/monoova/security/monoova-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/monoova-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/agentic-access/monoova-agentic-access.yml
+  href: https://artifacts.apis.io/monoova/agentic-access/monoova-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/monoova-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/authentication/monoova-authentication.yml
+  href: https://artifacts.apis.io/monoova/authentication/monoova-authentication.yml
   title: ''
   type: Authentication
   url: authentication/monoova-authentication.yml
@@ -311,42 +318,42 @@ common:
   type: Security
   url: https://www.monoova.com/security
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/packages/monoova-packages.yml
+  href: https://artifacts.apis.io/monoova/packages/monoova-packages.yml
   title: ''
   type: Packages
   url: packages/monoova-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/packages/monoova-packages.yml
+  href: https://artifacts.apis.io/monoova/packages/monoova-packages.yml
   title: ''
   type: SDKs
   url: packages/monoova-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/conventions/monoova-conventions.yml
+  href: https://artifacts.apis.io/monoova/conventions/monoova-conventions.yml
   title: ''
   type: Conventions
   url: conventions/monoova-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/lifecycle/monoova-lifecycle.yml
+  href: https://artifacts.apis.io/monoova/lifecycle/monoova-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/monoova-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/mcp/monoova-mcp.yml
+  href: https://artifacts.apis.io/monoova/mcp/monoova-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/monoova-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/mcp/monoova-tool-crosswalk.yml
+  href: https://artifacts.apis.io/monoova/mcp/monoova-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/monoova-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/llms/monoova-llms.txt
+  href: https://artifacts.apis.io/monoova/llms/monoova-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/monoova-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/conformance/monoova-conformance.yml
+  href: https://artifacts.apis.io/monoova/conformance/monoova-conformance.yml
   title: ''
   type: Conformance
   url: conformance/monoova-conformance.yml
@@ -355,42 +362,42 @@ common:
   type: Compliance
   url: https://www.monoova.com/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/errors/monoova-problem-types.yml
+  href: https://artifacts.apis.io/monoova/errors/monoova-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/monoova-problem-types.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/errors/monoova-decline-codes.yml
+  href: https://artifacts.apis.io/monoova/errors/monoova-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/monoova-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/asyncapi/monoova-webhooks.yml
+  href: https://artifacts.apis.io/monoova/asyncapi/monoova-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/monoova-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/monoova/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/data-model/monoova-data-model.yml
+  href: https://artifacts.apis.io/monoova/data-model/monoova-data-model.yml
   title: ''
   type: DataModel
   url: data-model/monoova-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/sandbox/monoova-sandbox.yml
+  href: https://artifacts.apis.io/monoova/sandbox/monoova-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/monoova-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/components/monoova-components.yml
+  href: https://artifacts.apis.io/monoova/components/monoova-components.yml
   title: ''
   type: Components
   url: components/monoova-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/well-known/monoova-well-known.yml
+  href: https://artifacts.apis.io/monoova/well-known/monoova-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/monoova-well-known.yml
@@ -402,28 +409,41 @@ modified: '2026-07-24'
 name: Monoova
 nav: Providers
 network: true
-overview: 'Monoova publishes 31 API contracts indexed on the [APIs.io](https://apis.io/) network, including Automatcher (Bank Account Receivables) API, BPAY API, Create Payment Using Token API, and 28 more. Tagged areas include Payments, Australia, Real-Time Payments, NPP, and PayTo.
+overview: 'Monoova publishes 31 API contracts indexed on the [APIs.io](https://apis.io/) network, including Automatcher (Bank Account Receivables) API, BPAY API, Create Payment Using Token API, and 28 more. Tagged areas include Payments, Australia, Real-Time Payments, New Payments Platform, and PayTo.
 
 
-  The Monoova catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Monoova catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Monoova''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, signup flow, support, and 32 more developer resources.'
-random_paper: 19
+  Monoova''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, signup flow, support, and 33 more developer resources.'
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Monoova API Rules
+  rule_count: 59
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 3
+    warn: 13
+  slug: monoova-rules
 score:
   band: developing
-  composite: 51.2
+  composite: 52.8
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 40.0
+    artifact_dirs: 26
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 36.8
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 59.8
     developer_ergonomics: 68.5
     discoverability: 78.6
@@ -435,7 +455,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 51.2
+  previous_composite: 52.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -452,13 +472,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 37.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/monoova/refs/heads/main/screenshots/monoova-2026-08-07T184216.png
+screenshot: https://apis.io/screenshots/monoova/monoova-2026-08-07T184216.png
 security:
 - kind: authentication
   name: Monoova Authentication
@@ -472,12 +492,22 @@ security:
   name: Monoova Trust Center
   slug: monoova-trust-center
   summary_line: SOC 2, PCI DSS
+skill_count: 4
+skills:
+- name: Accept a tokenised card payment
+  slug: monoova-accept-card-payment
+- name: Make a real-time outbound payment (NPP/Osko)
+  slug: monoova-pay-out-npp
+- name: Create a PayTo agreement and debit against it
+  slug: monoova-payto-mandate-and-debit
+- name: Receive real-time funds into a virtual account via PayID
+  slug: monoova-receive-via-payid
 slug: monoova
 tags:
 - Payments
 - Australia
 - Real-Time Payments
-- NPP
+- New Payments Platform
 - PayTo
 - PayID
 - Account-to-Account

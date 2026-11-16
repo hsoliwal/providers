@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.9
-  scored_at: '2026-10-17'
+  score: 19.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -56,11 +59,6 @@ apis:
   slug: curse-files-api
 - baseURL: https://api.curseforge.com
   baseurl_source: declared
-  description: The Fingerprints API from Curse — 4 operation(s) for fingerprints.
-  name: Curse Fingerprints API
-  slug: curse-fingerprints-api
-- baseURL: https://api.curseforge.com
-  baseurl_source: declared
   description: The Games API from Curse — 6 operation(s) for games.
   name: Curse Games API
   slug: curse-games-api
@@ -79,11 +77,13 @@ apis:
   description: The Subscriptions API from Curse — 5 operation(s) for subscriptions.
   name: Curse Subscriptions API
   slug: curse-subscriptions-api
-artifact_total: 19
+- baseURL: https://api.curseforge.com
+  baseurl_source: declared
+  description: The UserMods API from Curse — 2 operation(s) for usermods.
+  name: Curse User Mods API
+  slug: curse-usermods-api
+artifact_total: 21
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CurseForge Core Categories API
   slug: open-curse-categories-api
@@ -155,77 +155,77 @@ common:
   type: PrivacyPolicy
   url: https://www.fandom.com/privacy-policy
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/openapi/_original/curse-core-openapi-original.yml
+  href: https://artifacts.apis.io/curse/openapi/_original/curse-core-openapi-original.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/curse-core-openapi-original.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/overlays/curse-core-overlay.yaml
+  href: https://artifacts.apis.io/curse/overlays/curse-core-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/curse-core-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/mcp/curse-mcp.yml
+  href: https://artifacts.apis.io/curse/mcp/curse-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/curse-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/llms/curse-llms.txt
+  href: https://artifacts.apis.io/curse/llms/curse-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/curse-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/curse/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/authentication/curse-authentication.yml
+  href: https://artifacts.apis.io/curse/authentication/curse-authentication.yml
   title: ''
   type: Authentication
   url: authentication/curse-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/agentic-access/curse-agentic-access.yml
+  href: https://artifacts.apis.io/curse/agentic-access/curse-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/curse-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/conventions/curse-conventions.yml
+  href: https://artifacts.apis.io/curse/conventions/curse-conventions.yml
   title: ''
   type: Conventions
   url: conventions/curse-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/errors/curse-problem-types.yml
+  href: https://artifacts.apis.io/curse/errors/curse-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/curse-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/lifecycle/curse-lifecycle.yml
+  href: https://artifacts.apis.io/curse/lifecycle/curse-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/curse-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/conformance/curse-conformance.yml
+  href: https://artifacts.apis.io/curse/conformance/curse-conformance.yml
   title: ''
   type: Conformance
   url: conformance/curse-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/data-model/curse-data-model.yml
+  href: https://artifacts.apis.io/curse/data-model/curse-data-model.yml
   title: ''
   type: DataModel
   url: data-model/curse-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/packages/curse-packages.yml
+  href: https://artifacts.apis.io/curse/packages/curse-packages.yml
   title: ''
   type: Packages
   url: packages/curse-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/well-known/curse-well-known.yml
+  href: https://artifacts.apis.io/curse/well-known/curse-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/curse-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/security/curse-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/curse/security/curse-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/curse-vulnerability-disclosure.yml
@@ -234,7 +234,7 @@ common:
   type: Security
   url: https://hackerone.com/fandom_bbp
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/security/curse-domain-security.yml
+  href: https://artifacts.apis.io/curse/security/curse-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/curse-domain-security.yml
@@ -246,38 +246,54 @@ modified: '2026-10-06'
 name: Curse
 nav: Providers
 network: true
-overview: 'Curse publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Categories API, Files API, Fingerprints API, and 4 more. Tagged areas include Company, Gaming, MODS, Minecraft, and Game Content.
+overview: 'Curse publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Categories API, Files API, Games API, and 4 more. Tagged areas include Company, Gaming, MODS, Minecraft, and Game Content.
+
+
+  The Curse catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Curse''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, signup flow, authentication, and 22 more developer resources.'
 random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: Curse API Rules
+  rule_count: 54
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 5
+    warn: 8
+  slug: curse-rules
 score:
   band: developing
-  composite: 43.3
+  composite: 45.6
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 21
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.6
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
-    contract_quality: 47.3
+    contract_governance: 18.2
+    contract_quality: 49.8
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 43.2
+  previous_composite: 45.0
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 7
+      marker_coverage: 46.7
+      total: 15
     mcp: derived
     skills: derived
   regulatory:
@@ -286,13 +302,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/curse/refs/heads/main/screenshots/curse-2026-07-25T210958.png
+screenshot: https://apis.io/screenshots/curse/curse-2026-07-25T210958.png
 security:
 - kind: authentication
   name: Curse Authentication
@@ -306,6 +322,12 @@ security:
   name: Curse Vulnerability Disclosure
   slug: curse-vulnerability-disclosure
   summary_line: Hackerone · security.txt · contact published
+skill_count: 2
+skills:
+- name: Match installed mods by fingerprint
+  slug: curse-match-installed-mods-by-fingerprint
+- name: Search and download a CurseForge mod
+  slug: curse-search-and-download-mod
 slug: curse
 tags:
 - Company

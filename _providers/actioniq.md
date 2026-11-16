@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - plans
+  - rate-limits
+  - security
   - '{''url'': ''https://www.actioniq.com'', ''status'': 301, ''note'': ''declared website redirects to https://www.uniphore.com/actioniq/ — a different registrable domain (actioniq.com -> uniphore.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -26,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: 'The ActionIQ Profile API provides real-time access to customer identities, attributes, and audience membership within milliseconds. It powers inbound decisioning use cases such as web personalization '
@@ -46,7 +51,7 @@ apis:
 artifact_total: 9
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/security/actioniq-domain-security.yml
+  href: https://artifacts.apis.io/actioniq/security/actioniq-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/actioniq-domain-security.yml
@@ -87,52 +92,52 @@ common:
   type: PrivacyPolicy
   url: https://www.uniphore.com/legal/privacy-policy/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/plans/actioniq-plans-pricing.yml
+  href: https://artifacts.apis.io/actioniq/plans/actioniq-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/actioniq-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/rate-limits/actioniq-rate-limits.yml
+  href: https://artifacts.apis.io/actioniq/rate-limits/actioniq-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/actioniq-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/finops/actioniq-finops.yml
+  href: https://artifacts.apis.io/actioniq/finops/actioniq-finops.yml
   title: ''
   type: FinOps
   url: finops/actioniq-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/llms/actioniq-llms.txt
+  href: https://artifacts.apis.io/actioniq/llms/actioniq-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/actioniq-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/security/actioniq-trust-center.yml
+  href: https://artifacts.apis.io/actioniq/security/actioniq-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/actioniq-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/security/actioniq-trust-center.yml
+  href: https://artifacts.apis.io/actioniq/security/actioniq-trust-center.yml
   title: ''
   type: Compliance
   url: security/actioniq-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/security/actioniq-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/actioniq/security/actioniq-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/actioniq-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/security/actioniq-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/actioniq/security/actioniq-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/actioniq-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/conformance/actioniq-conformance.yml
+  href: https://artifacts.apis.io/actioniq/conformance/actioniq-conformance.yml
   title: ''
   type: Conformance
   url: conformance/actioniq-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/lifecycle/actioniq-lifecycle.yml
+  href: https://artifacts.apis.io/actioniq/lifecycle/actioniq-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/actioniq-lifecycle.yml
@@ -182,30 +187,30 @@ plans:
 - name: Actioniq Plans Pricing
   plan_count: 1
   slug: actioniq-plans-pricing
-random_paper: 20
+random_paper: 16
 rate_limits:
 - limit_count: 0
   name: Actioniq Rate Limits
   slug: actioniq-rate-limits
 score:
   band: thin
-  composite: 28.9
+  composite: 29.1
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 50.0
     catalog_earned_first_party: 8.0
     catalog_gap: 65.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.2
   facets:
     access_clarity: 57.9
     contract_governance: 18.2
     contract_quality: 6.7
-    developer_ergonomics: 9.5
+    developer_ergonomics: 10.7
     discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 30.4
+  previous_composite: 28.9
   provenance:
     conformance: first-party
   regulatory:
@@ -214,14 +219,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/actioniq/refs/heads/main/screenshots/actioniq-2026-06-20T164035.png
+screenshot: https://apis.io/screenshots/actioniq/actioniq-2026-06-20T164035.png
 security:
 - kind: domain-security
   name: Actioniq Domain Security

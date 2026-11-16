@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The commercial API behind the Rapid Technology Partner Program, which lets technology partners integrate Rapid imaging results into their own products and services. Access is granted through the partn
@@ -107,17 +110,17 @@ common:
   type: SecondaryMarket
   url: https://forgeglobal.com/rapidai_stock/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rapidai/refs/heads/main/authentication/rapidai-authentication.yml
+  href: https://artifacts.apis.io/rapidai/authentication/rapidai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rapidai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rapidai/refs/heads/main/lifecycle/rapidai-lifecycle.yml
+  href: https://artifacts.apis.io/rapidai/lifecycle/rapidai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rapidai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rapidai/refs/heads/main/conformance/rapidai-conformance.yml
+  href: https://artifacts.apis.io/rapidai/conformance/rapidai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/rapidai-conformance.yml
@@ -126,17 +129,17 @@ common:
   type: Compliance
   url: https://www.rapidai.com/it
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rapidai/refs/heads/main/security/rapidai-trust-center.yml
+  href: https://artifacts.apis.io/rapidai/security/rapidai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/rapidai-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rapidai/refs/heads/main/security/rapidai-domain-security.yml
+  href: https://artifacts.apis.io/rapidai/security/rapidai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rapidai-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rapidai/refs/heads/main/llms/rapidai-llms.txt
+  href: https://artifacts.apis.io/rapidai/llms/rapidai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rapidai-llms.txt
@@ -153,12 +156,12 @@ overview: 'RapidAI is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   RapidAI''s developer surface includes support, engineering blog, authentication, and 20 more developer resources.'
-random_paper: 4
+random_paper: 10
 score:
   band: emerging
   composite: 22.2
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -187,14 +190,14 @@ score:
     regime: Health
     regime_id: health
     score: 25.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rapidai/refs/heads/main/screenshots/rapidai-2026-09-02T152850.png
+screenshot: https://apis.io/screenshots/rapidai/rapidai-2026-09-02T152850.png
 security:
 - kind: authentication
   name: Rapidai Authentication

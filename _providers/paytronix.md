@@ -1,9 +1,9 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 25.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -105,11 +108,8 @@ apis:
   description: Guest authentication and token issuance.
   name: Paytronix O Auth API
   slug: paytronix-oauth-api
-artifact_total: 187
+artifact_total: 186
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Paytronix Online Ordering Check API
   slug: open-paytronix-check-api
@@ -154,17 +154,17 @@ collections:
   slug: open-paytronix-transaction-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paytronix/refs/heads/main/agentic-access/paytronix-agentic-access.yml
+  href: https://artifacts.apis.io/paytronix/agentic-access/paytronix-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/paytronix-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paytronix/refs/heads/main/security/paytronix-domain-security.yml
+  href: https://artifacts.apis.io/paytronix/security/paytronix-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/paytronix-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paytronix/refs/heads/main/authentication/paytronix-authentication.yml
+  href: https://artifacts.apis.io/paytronix/authentication/paytronix-authentication.yml
   title: ''
   type: Authentication
   url: authentication/paytronix-authentication.yml
@@ -201,27 +201,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/paytronix
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paytronix/refs/heads/main/rules/paytronix-spectral-rules.yml
+  href: https://artifacts.apis.io/paytronix/rules/paytronix-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/paytronix-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paytronix/refs/heads/main/vocabulary/paytronix-vocabulary.yml
+  href: https://artifacts.apis.io/paytronix/vocabulary/paytronix-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/paytronix-vocabulary.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/paytronix/refs/heads/main/plans/paytronix-plans-pricing.yml
+  href: https://artifacts.apis.io/paytronix/plans/paytronix-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/paytronix-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/paytronix/refs/heads/main/rate-limits/paytronix-rate-limits.yml
+  href: https://artifacts.apis.io/paytronix/rate-limits/paytronix-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/paytronix-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/paytronix/refs/heads/main/finops/paytronix-finops.yml
+  href: https://artifacts.apis.io/paytronix/finops/paytronix-finops.yml
   title: ''
   type: FinOps
   url: finops/paytronix-finops.yml
@@ -482,7 +482,7 @@ json_schemas:
   property_count: 3
   slug: server-api-gift-balance-request
 - name: GiftRedeemRequest
-  property_count: 0
+  property_count: 1
   slug: server-api-gift-redeem-request
 - name: GiftReply
   property_count: 6
@@ -693,7 +693,7 @@ plans:
 - name: Paytronix Plans Pricing
   plan_count: 2
   slug: paytronix-plans-pricing
-random_paper: 16
+random_paper: 22
 rate_limits:
 - limit_count: 2
   name: Paytronix Rate Limits
@@ -726,13 +726,13 @@ score:
   band: thin
   composite: 30.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 73.0
     catalog_earned_first_party: 0.0
     catalog_gap: 42.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.1
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 27.3
@@ -740,7 +740,7 @@ score:
     developer_ergonomics: 47.6
     discoverability: 71.4
     operational_transparency: 7.9
-  previous_composite: 36.3
+  previous_composite: 30.2
   provenance:
     agentic_access: derived
     contracts:
@@ -754,13 +754,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/paytronix/refs/heads/main/screenshots/paytronix-2026-06-20T191510.png
+screenshot: https://apis.io/screenshots/paytronix/paytronix-2026-06-20T191510.png
 security:
 - kind: authentication
   name: Paytronix Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: quarter
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.2
-  scored_at: '2026-10-17'
+  score: 33.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -70,7 +76,7 @@ apis:
   description: The Venues API from SeatGeek — 2 operation(s) for venues.
   name: SeatGeek Venues API
   slug: seatgeek-venues-api
-artifact_total: 31
+artifact_total: 30
 collections:
 - collection_type: postman
   name: SeatGeek Platform Events API
@@ -87,9 +93,6 @@ collections:
 - collection_type: postman
   name: SeatGeek Platform Events Venues API
   slug: postman-seatgeek-venues-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: SeatGeek Platform Events API
   slug: open-seatgeek-events-api
@@ -110,17 +113,17 @@ collections:
   slug: open-seatgeek-venues-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/plans/seatgeek-plans-pricing.yml
+  href: https://artifacts.apis.io/seatgeek/plans/seatgeek-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/seatgeek-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/rate-limits/seatgeek-rate-limits.yml
+  href: https://artifacts.apis.io/seatgeek/rate-limits/seatgeek-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/seatgeek-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/finops/seatgeek-finops.yml
+  href: https://artifacts.apis.io/seatgeek/finops/seatgeek-finops.yml
   title: ''
   type: FinOps
   url: finops/seatgeek-finops.yml
@@ -129,17 +132,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/seatgeek/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/agentic-access/seatgeek-agentic-access.yml
+  href: https://artifacts.apis.io/seatgeek/agentic-access/seatgeek-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/seatgeek-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/security/seatgeek-domain-security.yml
+  href: https://artifacts.apis.io/seatgeek/security/seatgeek-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/seatgeek-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/authentication/seatgeek-authentication.yml
+  href: https://artifacts.apis.io/seatgeek/authentication/seatgeek-authentication.yml
   title: ''
   type: Authentication
   url: authentication/seatgeek-authentication.yml
@@ -176,32 +179,32 @@ common:
   type: TermsOfService
   url: https://seatgeek.com/api-terms
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/json-schema/seatgeek-event-schema.json
+  href: https://artifacts.apis.io/seatgeek/json-schema/seatgeek-event-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/seatgeek-event-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/json-structure/seatgeek-event-structure.json
+  href: https://artifacts.apis.io/seatgeek/json-structure/seatgeek-event-structure.json
   title: ''
   type: JSONStructure
   url: json-structure/seatgeek-event-structure.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/json-ld/seatgeek-context.jsonld
+  href: https://artifacts.apis.io/seatgeek/json-ld/seatgeek-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/seatgeek-context.jsonld
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/examples/seatgeek-list-events-example.json
+  href: https://artifacts.apis.io/seatgeek/examples/seatgeek-list-events-example.json
   title: ''
   type: Examples
   url: examples/seatgeek-list-events-example.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/rules/seatgeek-rules.yml
+  href: https://artifacts.apis.io/seatgeek/rules/seatgeek-rules.yml
   title: ''
   type: SpectralRuleset
   url: rules/seatgeek-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/vocabulary/seatgeek-vocabulary.yml
+  href: https://artifacts.apis.io/seatgeek/vocabulary/seatgeek-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/seatgeek-vocabulary.yml
@@ -219,7 +222,7 @@ finops:
 - has_sources: false
   method: generated
   name: Seatgeek Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: seatgeek-finops
   template: true
@@ -260,7 +263,7 @@ plans:
 - name: Seatgeek Plans Pricing
   plan_count: 3
   slug: seatgeek-plans-pricing
-random_paper: 5
+random_paper: 1
 rate_limits:
 - limit_count: 5
   name: Seatgeek Rate Limits
@@ -293,13 +296,13 @@ score:
   band: developing
   composite: 39.3
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 60.0
     catalog_earned_first_party: 0.0
     catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 27.3
@@ -307,7 +310,7 @@ score:
     developer_ergonomics: 44.0
     discoverability: 68.3
     operational_transparency: 13.2
-  previous_composite: 40.8
+  previous_composite: 39.3
   provenance:
     agentic_access: derived
     contracts:
@@ -322,14 +325,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/seatgeek/refs/heads/main/screenshots/seatgeek-2026-06-20T193620.png
+screenshot: https://apis.io/screenshots/seatgeek/seatgeek-2026-06-20T193620.png
 security:
 - kind: authentication
   name: Seatgeek Authentication

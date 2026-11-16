@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,27 +38,27 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mosaic-tech/refs/heads/main/plans/mosaic-tech-plans-pricing.yml
+  href: https://artifacts.apis.io/mosaic-tech/plans/mosaic-tech-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mosaic-tech-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mosaic-tech/refs/heads/main/rate-limits/mosaic-tech-rate-limits.yml
+  href: https://artifacts.apis.io/mosaic-tech/rate-limits/mosaic-tech-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/mosaic-tech-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mosaic-tech/refs/heads/main/security/mosaic-tech-trust-center.yml
+  href: https://artifacts.apis.io/mosaic-tech/security/mosaic-tech-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/mosaic-tech-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mosaic-tech/refs/heads/main/security/mosaic-tech-domain-security.yml
+  href: https://artifacts.apis.io/mosaic-tech/security/mosaic-tech-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mosaic-tech-domain-security.yml
@@ -80,22 +83,22 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/mosaictech
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mosaic-tech/refs/heads/main/security/mosaic-tech-trust-center.yml
+  href: https://artifacts.apis.io/mosaic-tech/security/mosaic-tech-trust-center.yml
   title: ''
   type: Compliance
   url: security/mosaic-tech-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mosaic-tech/refs/heads/main/conformance/mosaic-tech-conformance.yml
+  href: https://artifacts.apis.io/mosaic-tech/conformance/mosaic-tech-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mosaic-tech-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mosaic-tech/refs/heads/main/lifecycle/mosaic-tech-lifecycle.yml
+  href: https://artifacts.apis.io/mosaic-tech/lifecycle/mosaic-tech-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mosaic-tech-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mosaic-tech/refs/heads/main/llms/mosaic-tech-llms.txt
+  href: https://artifacts.apis.io/mosaic-tech/llms/mosaic-tech-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mosaic-tech-llms.txt
@@ -127,7 +130,7 @@ plans:
 - name: Mosaic Tech Plans Pricing
   plan_count: 0
   slug: mosaic-tech-plans-pricing
-random_paper: 1
+random_paper: 21
 rate_limits:
 - limit_count: 0
   name: Mosaic Tech Rate Limits
@@ -142,7 +145,7 @@ score:
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 18.2
@@ -157,7 +160,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 10.5
+  previous_composite: 10.6
   provenance:
     conformance: first-party
   regulatory:
@@ -166,14 +169,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mosaic-tech/refs/heads/main/screenshots/mosaic-tech-2026-09-02T150639.png
+screenshot: https://apis.io/screenshots/mosaic-tech/mosaic-tech-2026-09-02T150639.png
 security:
 - kind: domain-security
   name: Mosaic Tech Domain Security

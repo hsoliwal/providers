@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.6
-  scored_at: '2026-10-17'
+  score: 26.4
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://vault-content-api.teahouse.finance
@@ -52,11 +55,8 @@ apis:
   description: Vault catalog and metadata
   name: Teahouse Finance Vaults API
   slug: teahouse-vaults-api
-artifact_total: 9
+artifact_total: 10
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Teahouse Vault Logs API
   slug: open-teahouse-logs-api
@@ -68,12 +68,12 @@ collections:
   slug: open-teahouse-vaults-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/overlays/teahouse-vault-overlay.yaml
+  href: https://artifacts.apis.io/teahouse/overlays/teahouse-vault-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/teahouse-vault-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/security/teahouse-domain-security.yml
+  href: https://artifacts.apis.io/teahouse/security/teahouse-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/teahouse-domain-security.yml
@@ -114,47 +114,47 @@ common:
   type: SignUp
   url: https://vault.teahouse.finance/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/authentication/teahouse-authentication.yml
+  href: https://artifacts.apis.io/teahouse/authentication/teahouse-authentication.yml
   title: ''
   type: Authentication
   url: authentication/teahouse-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/errors/teahouse-problem-types.yml
+  href: https://artifacts.apis.io/teahouse/errors/teahouse-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/teahouse-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/conventions/teahouse-conventions.yml
+  href: https://artifacts.apis.io/teahouse/conventions/teahouse-conventions.yml
   title: ''
   type: Conventions
   url: conventions/teahouse-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/data-model/teahouse-data-model.yml
+  href: https://artifacts.apis.io/teahouse/data-model/teahouse-data-model.yml
   title: ''
   type: DataModel
   url: data-model/teahouse-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/lifecycle/teahouse-lifecycle.yml
+  href: https://artifacts.apis.io/teahouse/lifecycle/teahouse-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/teahouse-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/conformance/teahouse-conformance.yml
+  href: https://artifacts.apis.io/teahouse/conformance/teahouse-conformance.yml
   title: ''
   type: Conformance
   url: conformance/teahouse-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/mcp/teahouse-mcp.yml
+  href: https://artifacts.apis.io/teahouse/mcp/teahouse-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/teahouse-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/llms/teahouse-llms.txt
+  href: https://artifacts.apis.io/teahouse/llms/teahouse-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/teahouse-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/teahouse/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -169,27 +169,43 @@ network: true
 overview: 'Teahouse Finance publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Logs API, Performance API, and Vaults API. Tagged areas include Company, Cryptocurrency, DeFi, Blockchain, and Vault.
 
 
+  The Teahouse Finance catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Teahouse Finance''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 13 more developer resources.'
-random_paper: 4
+random_paper: 22
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Teahouse Finance API Rules
+  rule_count: 60
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 1
+    warn: 1
+  slug: teahouse-rules
 score:
   band: thin
-  composite: 35.3
+  composite: 36.9
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 37.0
+    artifact_dirs: 20
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 13.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.6
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 35.2
+  previous_composite: 36.9
   provenance:
     conformance: derived
     contracts:
@@ -205,14 +221,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/teahouse/refs/heads/main/screenshots/teahouse-2026-09-02T162648.png
+screenshot: https://apis.io/screenshots/teahouse/teahouse-2026-09-02T162648.png
 security:
 - kind: authentication
   name: Teahouse Authentication
@@ -222,6 +238,10 @@ security:
   name: Teahouse Domain Security
   slug: teahouse-domain-security
   summary_line: TLSv1.3 · DNSSEC · DMARC
+skill_count: 1
+skills:
+- name: Monitor Teahouse vault performance and flows
+  slug: teahouse-vault-monitoring
 slug: teahouse
 tags:
 - Company

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: medium
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
   - security
   trial: false
   try_now: true
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.7
-  scored_at: '2026-10-17'
+  score: 32.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 217
   human_in_the_loop: 9
@@ -43,7 +50,7 @@ agentic_access:
   operation_count: 322
   slug: fusionauth-agentic-access
   summary_line: 322 operations · 217 acting · 9 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://sandbox.fusionauth.io
   baseurl_source: declared
@@ -233,9 +240,6 @@ apis:
 artifact_total: 99
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: FusionAuth Api Key API
   slug: open-fusionauth-api-key-api
 - collection_type: open
@@ -348,22 +352,22 @@ collections:
   slug: open-fusionauth-well-known-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fusionauth/refs/heads/main/finops/fusionauth-finops.yml
+  href: https://artifacts.apis.io/fusionauth/finops/fusionauth-finops.yml
   title: ''
   type: FinOps
   url: finops/fusionauth-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fusionauth/refs/heads/main/vendor-facets/fusionauth-vendor-facets.yml
+  href: https://artifacts.apis.io/fusionauth/vendor-facets/fusionauth-vendor-facets.yml
   title: ''
   type: VendorFacets
   url: vendor-facets/fusionauth-vendor-facets.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fusionauth/refs/heads/main/rate-limits/fusionauth-rate-limits.yml
+  href: https://artifacts.apis.io/fusionauth/rate-limits/fusionauth-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fusionauth-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fusionauth/refs/heads/main/plans/fusionauth-plans-pricing.yml
+  href: https://artifacts.apis.io/fusionauth/plans/fusionauth-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fusionauth-plans-pricing.yml
@@ -372,32 +376,32 @@ common:
   type: Website
   url: https://www.fusionauth.io/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fusionauth/refs/heads/main/capabilities/fusionauth-capability-edges.yml
+  href: https://artifacts.apis.io/fusionauth/capabilities/fusionauth-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/fusionauth-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fusionauth/refs/heads/main/agentic-access/fusionauth-agentic-access.yml
+  href: https://artifacts.apis.io/fusionauth/agentic-access/fusionauth-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fusionauth-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fusionauth/refs/heads/main/security/fusionauth-trust-center.yml
+  href: https://artifacts.apis.io/fusionauth/security/fusionauth-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/fusionauth-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fusionauth/refs/heads/main/security/fusionauth-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/fusionauth/security/fusionauth-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/fusionauth-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fusionauth/refs/heads/main/security/fusionauth-domain-security.yml
+  href: https://artifacts.apis.io/fusionauth/security/fusionauth-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fusionauth-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fusionauth/refs/heads/main/authentication/fusionauth-authentication.yml
+  href: https://artifacts.apis.io/fusionauth/authentication/fusionauth-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fusionauth-authentication.yml
@@ -456,13 +460,13 @@ common:
 created: '2024-09-26'
 description: FusionAuth is a developer-focused customer identity and access management (CIAM) platform that delivers authentication, authorization, registration, multi-factor authentication, single sign-on, OAuth2 and OpenID Connect, and user management capabilities through a comprehensive REST API and self-hostable identity service.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Fusionauth Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: subscription
+  service_category: ''
   slug: fusionauth-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fusionauth.png
 layout: provider
 mcp_servers:
@@ -473,7 +477,10 @@ modified: '2026-05-25'
 name: FusionAuth
 nav: Providers
 network: true
-overview: 'FusionAuth publishes 37 API contracts indexed on the [APIs.io](https://apis.io/) network, including Api Key API, Application API, Connector API, and 34 more. Tagged areas include Authentication, Authorization, Identity, CIAM, and OpenID Connect.
+overview: 'FusionAuth publishes 37 API contracts indexed on the [APIs.io](https://apis.io/) network, including Api Key API, Application API, Connector API, and 34 more. Tagged areas include Authentication, Authorization, Identity, CIAM, and OAuth.
+
+
+  The FusionAuth catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   FusionAuth''s developer surface includes authentication, getting-started guide, changelog, engineering blog, signup flow, pricing, and 18 more developer resources.'
@@ -484,36 +491,49 @@ plans:
 - name: Fusionauth Price Estimates
   plan_count: 0
   slug: fusionauth-price-estimates
-random_paper: 16
+random_paper: 14
 rate_limits:
 - limit_count: 1
   name: Fusionauth Rate Limits
   slug: fusionauth-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: FusionAuth API Rules
+  rule_count: 54
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 1
+    warn: 12
+  slug: fusionauth-rules
 score:
-  band: developing
-  composite: 50.8
+  band: strong
+  composite: 56.6
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 57.0
+    artifact_dirs: 20
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.2
   facets:
-    access_clarity: 67.1
-    contract_governance: 0.0
-    contract_quality: 47.9
+    access_clarity: 75.0
+    contract_governance: 13.6
+    contract_quality: 52.9
     developer_ergonomics: 49.3
     discoverability: 71.7
-    operational_transparency: 39.5
-  previous_composite: 52.3
+    operational_transparency: 50.0
+  previous_composite: 55.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 37
   regulatory:
     applies: true
@@ -521,13 +541,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/fusionauth/refs/heads/main/screenshots/fusionauth-2026-06-20T181624.png
+screenshot: https://apis.io/screenshots/fusionauth/fusionauth-2026-06-20T181624.png
 security:
 - kind: authentication
   name: Fusionauth Authentication
@@ -581,6 +601,7 @@ tags:
 - Authorization
 - Identity
 - CIAM
+- OAuth
 - OpenID Connect
 - SSO
 - Multi-Factor Authentication

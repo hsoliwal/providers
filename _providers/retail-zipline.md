@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -37,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: An OAuth-protected Model Context Protocol (MCP) endpoint published on Zipline's marketing site (getzipline.com), declared by the site's own RFC 9728 OAuth Protected Resource Metadata. The endpoint liv
@@ -98,57 +101,57 @@ common:
   type: TrustCenter
   url: https://trust.getzipline.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/conformance/retail-zipline-conformance.yml
+  href: https://artifacts.apis.io/retail-zipline/conformance/retail-zipline-conformance.yml
   title: ''
   type: Compliance
   url: conformance/retail-zipline-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/well-known/retail-zipline-well-known.yml
+  href: https://artifacts.apis.io/retail-zipline/well-known/retail-zipline-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/retail-zipline-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/llms/retail-zipline-llms.txt
+  href: https://artifacts.apis.io/retail-zipline/llms/retail-zipline-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/retail-zipline-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/conformance/retail-zipline-conformance.yml
+  href: https://artifacts.apis.io/retail-zipline/conformance/retail-zipline-conformance.yml
   title: ''
   type: Conformance
   url: conformance/retail-zipline-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/lifecycle/retail-zipline-lifecycle.yml
+  href: https://artifacts.apis.io/retail-zipline/lifecycle/retail-zipline-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/retail-zipline-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/conventions/retail-zipline-conventions.yml
+  href: https://artifacts.apis.io/retail-zipline/conventions/retail-zipline-conventions.yml
   title: ''
   type: Conventions
   url: conventions/retail-zipline-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/security/retail-zipline-domain-security.yml
+  href: https://artifacts.apis.io/retail-zipline/security/retail-zipline-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/retail-zipline-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/security/retail-zipline-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/retail-zipline/security/retail-zipline-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/retail-zipline-vulnerability-disclosure.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/plans/retail-zipline-plans-pricing.yml
+  href: https://artifacts.apis.io/retail-zipline/plans/retail-zipline-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/retail-zipline-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/rate-limits/retail-zipline-rate-limits.yml
+  href: https://artifacts.apis.io/retail-zipline/rate-limits/retail-zipline-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/retail-zipline-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/packages/retail-zipline-packages.yml
+  href: https://artifacts.apis.io/retail-zipline/packages/retail-zipline-packages.yml
   title: ''
   type: Packages
   url: packages/retail-zipline-packages.yml
@@ -172,7 +175,7 @@ plans:
 - name: Retail Zipline Plans Pricing
   plan_count: 0
   slug: retail-zipline-plans-pricing
-random_paper: 19
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Retail Zipline Rate Limits
@@ -186,13 +189,13 @@ score:
   band: thin
   composite: 37.7
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
@@ -207,7 +210,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 37.6
+  previous_composite: 37.7
   provenance:
     conformance: first-party
     mcp: site-plugin
@@ -217,14 +220,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/screenshots/retail-zipline-2026-09-02T153616.png
+screenshot: https://apis.io/screenshots/retail-zipline/retail-zipline-2026-09-02T153616.png
 security:
 - kind: authentication
   name: Retail Zipline Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: medium
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - rate-limits
   - security
   trial: false
   try_now: true
@@ -28,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 54.3
-  scored_at: '2026-10-17'
+  score: 53.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 633
   human_in_the_loop: 25
@@ -44,7 +51,7 @@ agentic_access:
   operation_count: 1140
   slug: gitlab-ci-agentic-access
   summary_line: 1140 operations · 633 acting · 25 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - description: GitLab's GraphQL API at /api/graphql. Many CI/CD entities (Pipeline, CiJob, CiRunner, MergeRequest pipelines) are exposed via GraphQL queries and mutations.
   name: GitLab GraphQL API
@@ -537,9 +544,6 @@ apis:
 artifact_total: 209
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: GitLab access_requests API
   slug: open-gitlab-ci-access-requests-api
 - collection_type: open
@@ -835,32 +839,32 @@ collections:
   slug: open-gitlab-ci
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gitlab-ci/refs/heads/main/capabilities/gitlab-ci-capability-edges.yml
+  href: https://artifacts.apis.io/gitlab-ci/capabilities/gitlab-ci-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/gitlab-ci-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gitlab-ci/refs/heads/main/agentic-access/gitlab-ci-agentic-access.yml
+  href: https://artifacts.apis.io/gitlab-ci/agentic-access/gitlab-ci-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/gitlab-ci-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitlab-ci/refs/heads/main/security/gitlab-ci-trust-center.yml
+  href: https://artifacts.apis.io/gitlab-ci/security/gitlab-ci-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/gitlab-ci-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitlab-ci/refs/heads/main/security/gitlab-ci-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/gitlab-ci/security/gitlab-ci-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/gitlab-ci-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitlab-ci/refs/heads/main/security/gitlab-ci-domain-security.yml
+  href: https://artifacts.apis.io/gitlab-ci/security/gitlab-ci-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gitlab-ci-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gitlab-ci/refs/heads/main/authentication/gitlab-ci-authentication.yml
+  href: https://artifacts.apis.io/gitlab-ci/authentication/gitlab-ci-authentication.yml
   title: ''
   type: Authentication
   url: authentication/gitlab-ci-authentication.yml
@@ -885,17 +889,17 @@ common:
   type: StatusPage
   url: https://status.gitlab.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gitlab-ci/refs/heads/main/plans/gitlab-ci-plans-pricing.yml
+  href: https://artifacts.apis.io/gitlab-ci/plans/gitlab-ci-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/gitlab-ci-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/gitlab-ci/refs/heads/main/rate-limits/gitlab-ci-rate-limits.yml
+  href: https://artifacts.apis.io/gitlab-ci/rate-limits/gitlab-ci-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/gitlab-ci-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/gitlab-ci/refs/heads/main/finops/gitlab-ci-finops.yml
+  href: https://artifacts.apis.io/gitlab-ci/finops/gitlab-ci-finops.yml
   title: ''
   type: FinOps
   url: finops/gitlab-ci-finops.yml
@@ -911,10 +915,10 @@ created: '2026-05-08'
 description: GitLab CI/CD is the built-in continuous integration, delivery and deployment platform for GitLab. The CI/CD surface area within GitLab's REST API v4 covers pipelines, jobs, pipeline schedules, pipeline triggers, runners, agents, releases, environments, deployments, package and container registries, and the security/dependency scanners. GitLab also exposes a GraphQL API.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Gitlab Ci Finops
-  primary_unit: ''
-  service_category: DevOps / CI/CD
+  primary_unit: user
+  service_category: ''
   slug: gitlab-ci-finops
   template: false
 graphqls:
@@ -938,6 +942,9 @@ network: true
 overview: 'GitLab CI/CD publishes 98 API contracts indexed on the [APIs.io](https://apis.io/) network, including access_requests API, access_tokens API, Agents API, and 95 more. Tagged areas include DevOps, CI/CD, Pipelines, GitLab, and DevSecOps.
 
 
+  The GitLab CI/CD catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   GitLab CI/CD''s developer surface includes authentication, documentation, pricing, GitHub presence, engineering blog, and 11 more developer resources.'
 plans:
 - name: Gitlab Ci Plans Pricing
@@ -946,36 +953,49 @@ plans:
 - name: Gitlab Ci Price Estimates
   plan_count: 0
   slug: gitlab-ci-price-estimates
-random_paper: 18
+random_paper: 12
 rate_limits:
 - limit_count: 2
   name: Gitlab Ci Rate Limits
   slug: gitlab-ci-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: GitLab CI/CD API Rules
+  rule_count: 59
+  severity_counts:
+    error: 36
+    hint: 0
+    info: 4
+    warn: 19
+  slug: gitlab-ci-rules
 score:
   band: developing
-  composite: 44.1
+  composite: 49.8
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 57.0
+    artifact_dirs: 23
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.2
   facets:
-    access_clarity: 50.0
-    contract_governance: 0.0
-    contract_quality: 44.6
+    access_clarity: 57.9
+    contract_governance: 13.6
+    contract_quality: 49.4
     developer_ergonomics: 31.0
     discoverability: 75.0
-    operational_transparency: 42.1
-  previous_composite: 45.6
+    operational_transparency: 52.6
+  previous_composite: 48.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 97
     mcp: first-party
   regulatory:
@@ -984,13 +1004,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/gitlab-ci/refs/heads/main/screenshots/gitlab-ci-2026-06-20T181847.png
+screenshot: https://apis.io/screenshots/gitlab-ci/gitlab-ci-2026-06-20T181847.png
 security:
 - kind: authentication
   name: Gitlab Ci Authentication

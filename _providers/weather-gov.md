@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-10-17'
+  score: 23.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 65
   slug: weather-gov-agentic-access
   summary_line: 65 operations
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.weather.gov
   baseurl_source: declared
@@ -110,11 +116,8 @@ apis:
   description: The Zones API from Weather.gov — 6 operation(s) for zones.
   name: Weather.gov Zones API
   slug: weather-gov-zones-api
-artifact_total: 371
+artifact_total: 370
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: weather.gov API
   slug: open-openapi
@@ -159,17 +162,17 @@ collections:
   slug: open-weather-gov-zones-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/plans/weather-gov-plans-pricing.yml
+  href: https://artifacts.apis.io/weather-gov/plans/weather-gov-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/weather-gov-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/rate-limits/weather-gov-rate-limits.yml
+  href: https://artifacts.apis.io/weather-gov/rate-limits/weather-gov-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/weather-gov-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/finops/weather-gov-finops.yml
+  href: https://artifacts.apis.io/weather-gov/finops/weather-gov-finops.yml
   title: ''
   type: FinOps
   url: finops/weather-gov-finops.yml
@@ -182,17 +185,17 @@ common:
   type: Website
   url: https://www.weather.gov/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/agentic-access/weather-gov-agentic-access.yml
+  href: https://artifacts.apis.io/weather-gov/agentic-access/weather-gov-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/weather-gov-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/security/weather-gov-domain-security.yml
+  href: https://artifacts.apis.io/weather-gov/security/weather-gov-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/weather-gov-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/authentication/weather-gov-authentication.yml
+  href: https://artifacts.apis.io/weather-gov/authentication/weather-gov-authentication.yml
   title: ''
   type: Authentication
   url: authentication/weather-gov-authentication.yml
@@ -225,12 +228,12 @@ common:
   type: Glossary
   url: https://api.weather.gov/glossary
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/rules/weather-gov-spectral-rules.yml
+  href: https://artifacts.apis.io/weather-gov/rules/weather-gov-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/weather-gov-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/vocabulary/weather-gov-vocabulary.yml
+  href: https://artifacts.apis.io/weather-gov/vocabulary/weather-gov-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/weather-gov-vocabulary.yml
@@ -583,7 +586,7 @@ finops:
 - has_sources: false
   method: generated
   name: Weather Gov Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: weather-gov-finops
   template: true
@@ -602,16 +605,16 @@ json_schemas:
   property_count: 0
   slug: weather-gov-alert-certainty
 - name: AlertCollectionGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-alert-collection-geo-json
 - name: AlertCollectionJsonLd
-  property_count: 0
+  property_count: 2
   slug: weather-gov-alert-collection-json-ld
 - name: AlertCollection
   property_count: 3
   slug: weather-gov-alert-collection
 - name: AlertGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-alert-geo-json
 - name: AlertId
   property_count: 0
@@ -650,10 +653,10 @@ json_schemas:
   property_count: 0
   slug: weather-gov-binary-file
 - name: CenterWeatherAdvisoryCollectionGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-center-weather-advisory-collection-geo-json
 - name: CenterWeatherAdvisoryGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-center-weather-advisory-geo-json
 - name: CenterWeatherAdvisory
   property_count: 8
@@ -692,13 +695,13 @@ json_schemas:
   property_count: 0
   slug: weather-gov-gridpoint-forecast-units
 - name: GridpointGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-gridpoint-geo-json
 - name: GridpointHourlyForecastGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-gridpoint-hourly-forecast-geo-json
 - name: GridpointHourlyForecastJsonLd
-  property_count: 0
+  property_count: 2
   slug: weather-gov-gridpoint-hourly-forecast-json-ld
 - name: GridpointHourlyForecastPeriod
   property_count: 17
@@ -716,10 +719,10 @@ json_schemas:
   property_count: 13
   slug: weather-gov-gridpoint
 - name: Gridpoint12hForecastGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-gridpoint12h-forecast-geo-json
 - name: Gridpoint12hForecastJsonLd
-  property_count: 0
+  property_count: 2
   slug: weather-gov-gridpoint12h-forecast-json-ld
 - name: Gridpoint12hForecastPeriod
   property_count: 15
@@ -776,13 +779,13 @@ json_schemas:
   property_count: 0
   slug: weather-gov-nws-zone-type
 - name: ObservationCollectionGeoJson
-  property_count: 0
+  property_count: 2
   slug: weather-gov-observation-collection-geo-json
 - name: ObservationCollectionJsonLd
   property_count: 3
   slug: weather-gov-observation-collection-json-ld
 - name: ObservationGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-observation-geo-json
 - name: ObservationJsonLd
   property_count: 0
@@ -791,16 +794,16 @@ json_schemas:
   property_count: 30
   slug: weather-gov-observation
 - name: ObservationStationCollectionGeoJson
-  property_count: 0
+  property_count: 3
   slug: weather-gov-observation-station-collection-geo-json
 - name: ObservationStationCollectionJsonLd
   property_count: 4
   slug: weather-gov-observation-station-collection-json-ld
 - name: ObservationStationGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-observation-station-geo-json
 - name: ObservationStationJsonLd
-  property_count: 0
+  property_count: 2
   slug: weather-gov-observation-station-json-ld
 - name: ObservationStation
   property_count: 15
@@ -821,16 +824,16 @@ json_schemas:
   property_count: 0
   slug: weather-gov-office-weather-story-collection
 - name: OfficeWeatherStory
-  property_count: 0
+  property_count: 2
   slug: weather-gov-office-weather-story
 - name: PaginationInfo
   property_count: 1
   slug: weather-gov-pagination-info
 - name: PointGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-point-geo-json
 - name: PointJsonLd
-  property_count: 0
+  property_count: 2
   slug: weather-gov-point-json-ld
 - name: Point
   property_count: 22
@@ -845,19 +848,19 @@ json_schemas:
   property_count: 0
   slug: weather-gov-region-code
 - name: RelativeLocationGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-relative-location-geo-json
 - name: RelativeLocationJsonLd
-  property_count: 0
+  property_count: 1
   slug: weather-gov-relative-location-json-ld
 - name: RelativeLocation
   property_count: 4
   slug: weather-gov-relative-location
 - name: SigmetCollectionGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-sigmet-collection-geo-json
 - name: SigmetGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-sigmet-geo-json
 - name: Sigmet
   property_count: 8
@@ -887,13 +890,13 @@ json_schemas:
   property_count: 0
   slug: weather-gov-unit-of-measure
 - name: ZoneCollectionGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-zone-collection-geo-json
 - name: ZoneCollectionJsonLd
   property_count: 2
   slug: weather-gov-zone-collection-json-ld
 - name: ZoneForecastGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-zone-forecast-geo-json
 - name: ZoneForecastJsonLd
   property_count: 0
@@ -902,7 +905,7 @@ json_schemas:
   property_count: 5
   slug: weather-gov-zone-forecast
 - name: ZoneGeoJson
-  property_count: 0
+  property_count: 1
   slug: weather-gov-zone-geo-json
 - name: ZoneJsonLd
   property_count: 0
@@ -1253,7 +1256,7 @@ plans:
 - name: Weather Gov Plans Pricing
   plan_count: 3
   slug: weather-gov-plans-pricing
-random_paper: 7
+random_paper: 1
 rate_limits:
 - limit_count: 5
   name: Weather Gov Rate Limits
@@ -1284,22 +1287,22 @@ rules:
   slug: weather-gov-spectral-rules
 score:
   band: thin
-  composite: 35.6
+  composite: 36.6
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 63.0
     catalog_earned_first_party: 0.0
     catalog_gap: 52.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.2
+  delta: 1.0
   facets:
     access_clarity: 7.9
     contract_governance: 27.3
-    contract_quality: 55.4
+    contract_quality: 60.8
     developer_ergonomics: 40.5
     discoverability: 66.1
-    operational_transparency: 13.2
+    operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -1307,13 +1310,13 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 36.8
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 13
   regulatory:
     applies: true
@@ -1321,14 +1324,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/screenshots/weather-gov-2026-06-20T201308.png
+screenshot: https://apis.io/screenshots/weather-gov/weather-gov-2026-06-20T201308.png
 security:
 - kind: authentication
   name: Weather Gov Authentication

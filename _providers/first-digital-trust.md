@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'First Digital''s RESTful API suite for programmatic access to its trust and custody data and services. The provider''s product page describes seven capability areas: client onboarding (business and indi'
@@ -96,52 +99,52 @@ common:
   type: Compliance
   url: https://1stdigital.com/legal-and-regulatory/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/security/first-digital-trust-trust-center.yml
+  href: https://artifacts.apis.io/first-digital-trust/security/first-digital-trust-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/first-digital-trust-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/security/first-digital-trust-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/first-digital-trust/security/first-digital-trust-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/first-digital-trust-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/security/first-digital-trust-domain-security.yml
+  href: https://artifacts.apis.io/first-digital-trust/security/first-digital-trust-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/first-digital-trust-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/well-known/first-digital-trust-security.txt
+  href: https://artifacts.apis.io/first-digital-trust/well-known/first-digital-trust-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/first-digital-trust-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/well-known/first-digital-trust-well-known.yml
+  href: https://artifacts.apis.io/first-digital-trust/well-known/first-digital-trust-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/first-digital-trust-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/conformance/first-digital-trust-conformance.yml
+  href: https://artifacts.apis.io/first-digital-trust/conformance/first-digital-trust-conformance.yml
   title: ''
   type: Conformance
   url: conformance/first-digital-trust-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/packages/first-digital-trust-packages.yml
+  href: https://artifacts.apis.io/first-digital-trust/packages/first-digital-trust-packages.yml
   title: ''
   type: Packages
   url: packages/first-digital-trust-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/plans/first-digital-trust-plans-pricing.yml
+  href: https://artifacts.apis.io/first-digital-trust/plans/first-digital-trust-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/first-digital-trust-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/rate-limits/first-digital-trust-rate-limits.yml
+  href: https://artifacts.apis.io/first-digital-trust/rate-limits/first-digital-trust-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/first-digital-trust-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/llms/first-digital-trust-llms.txt
+  href: https://artifacts.apis.io/first-digital-trust/llms/first-digital-trust-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/first-digital-trust-llms.txt
@@ -181,7 +184,7 @@ plans:
 - name: First Digital Trust Plans Pricing
   plan_count: 0
   slug: first-digital-trust-plans-pricing
-random_paper: 18
+random_paper: 10
 rate_limits:
 - limit_count: 0
   name: First Digital Trust Rate Limits
@@ -190,7 +193,7 @@ score:
   band: thin
   composite: 32.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -218,14 +221,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 23.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/first-digital-trust/refs/heads/main/screenshots/first-digital-trust-2026-09-02T145519.png
+screenshot: https://apis.io/screenshots/first-digital-trust/first-digital-trust-2026-09-02T145519.png
 security:
 - kind: domain-security
   name: First Digital Trust Domain Security

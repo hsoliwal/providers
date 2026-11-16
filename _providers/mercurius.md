@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: GraphQL adapter for Fastify enabling high-performance GraphQL servers and gateways with JIT compilation, query caching, subscriptions, and federation.
@@ -41,7 +45,7 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mercurius/refs/heads/main/security/mercurius-domain-security.yml
+  href: https://artifacts.apis.io/mercurius/security/mercurius-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mercurius-domain-security.yml
@@ -66,17 +70,17 @@ common:
   type: Licensing
   url: https://github.com/mercurius-js/mercurius/blob/master/LICENSE
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mercurius/refs/heads/main/plans/mercurius-plans.md
+  href: https://artifacts.apis.io/mercurius/plans/mercurius-plans.md
   title: ''
   type: Plans
   url: plans/mercurius-plans.md
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mercurius/refs/heads/main/rate-limits/mercurius-rate-limits.md
+  href: https://artifacts.apis.io/mercurius/rate-limits/mercurius-rate-limits.md
   title: ''
   type: RateLimits
   url: rate-limits/mercurius-rate-limits.md
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mercurius/refs/heads/main/finops/mercurius-finops.md
+  href: https://artifacts.apis.io/mercurius/finops/mercurius-finops.md
   title: ''
   type: FinOps
   url: finops/mercurius-finops.md
@@ -96,12 +100,12 @@ overview: 'Mercurius is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Mercurius'' developer surface includes documentation and 8 more developer resources.'
-random_paper: 1
+random_paper: 7
 score:
   band: emerging
   composite: 16.1
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -122,14 +126,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mercurius/refs/heads/main/screenshots/mercurius-2026-06-20T185212.png
+screenshot: https://apis.io/screenshots/mercurius/mercurius-2026-06-20T185212.png
 security:
 - kind: domain-security
   name: Mercurius Domain Security

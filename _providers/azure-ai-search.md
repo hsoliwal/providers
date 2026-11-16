@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +26,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-10-17'
+  score: 17.6
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
-- description: Azure AI Search REST API
+- baseURL: https://management.azure.com
+  baseurl_source: spec
+  description: Azure AI Search REST API
   name: Azure AI Search API
-  slug: azure-ai-search-api-2
+  slug: azure-ai-search-api
 - baseURL: https://management.azure.com
   baseurl_source: declared
   description: The Azure AI Search API API from Azure AI Search — 1 operation(s) for azure ai search api.
@@ -62,12 +78,12 @@ apis:
 artifact_total: 19
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/well-known/azure-ai-search-www-security.txt
+  href: https://artifacts.apis.io/azure-ai-search/well-known/azure-ai-search-www-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/azure-ai-search-www-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/well-known/azure-ai-search-well-known.yml
+  href: https://artifacts.apis.io/azure-ai-search/well-known/azure-ai-search-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/azure-ai-search-well-known.yml
@@ -84,47 +100,47 @@ common:
   type: Blog
   url: https://azure.microsoft.com/en-us/blog/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/rules/azure-ai-search-rules.yml
+  href: https://artifacts.apis.io/azure-ai-search/rules/azure-ai-search-rules.yml
   title: ''
   type: Spectral
   url: rules/azure-ai-search-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/json-ld/azure-ai-search-context.jsonld
+  href: https://artifacts.apis.io/azure-ai-search/json-ld/azure-ai-search-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/azure-ai-search-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/vocabulary/azure-ai-search-vocabulary.yml
+  href: https://artifacts.apis.io/azure-ai-search/vocabulary/azure-ai-search-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/azure-ai-search-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/data-model/azure-ai-search-data-model.yml
+  href: https://artifacts.apis.io/azure-ai-search/data-model/azure-ai-search-data-model.yml
   title: ''
   type: DataModel
   url: data-model/azure-ai-search-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/authentication/azure-ai-search-authentication.yml
+  href: https://artifacts.apis.io/azure-ai-search/authentication/azure-ai-search-authentication.yml
   title: ''
   type: Authentication
   url: authentication/azure-ai-search-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/conformance/azure-ai-search-conformance.yml
+  href: https://artifacts.apis.io/azure-ai-search/conformance/azure-ai-search-conformance.yml
   title: ''
   type: Conformance
   url: conformance/azure-ai-search-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/llms/azure-ai-search-llms.txt
+  href: https://artifacts.apis.io/azure-ai-search/llms/azure-ai-search-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/azure-ai-search-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/hosts/azure-ai-search-hosts.yml
+  href: https://artifacts.apis.io/azure-ai-search/hosts/azure-ai-search-hosts.yml
   title: ''
   type: Hosts
   url: hosts/azure-ai-search-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/vendors/azure-ai-search-vendors.yml
+  href: https://artifacts.apis.io/azure-ai-search/vendors/azure-ai-search-vendors.yml
   title: ''
   type: Vendors
   url: vendors/azure-ai-search-vendors.yml
@@ -145,12 +161,12 @@ common:
   type: ChangeLog
   url: https://developer.microsoft.com/en-us/changelog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/security/azure-ai-search-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/azure-ai-search/security/azure-ai-search-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/azure-ai-search-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-search/refs/heads/main/security/azure-ai-search-domain-security.yml
+  href: https://artifacts.apis.io/azure-ai-search/security/azure-ai-search-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/azure-ai-search-domain-security.yml
@@ -213,7 +229,7 @@ modified: '2026-10-13'
 name: Azure AI Search
 nav: Providers
 network: true
-overview: 'Azure AI Search is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Azure AI Search API, Indexes API, Subscriptions API, and 4 more. Tagged areas include Artificial Intelligence, Search, Microsoft Azure, Cloud, and Services.
+overview: 'Azure AI Search is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Azure AI Search API, Indexes API, and 5 more. Tagged areas include Artificial Intelligence, Search, Microsoft Azure, Cloud, and Services.
 
 
   The Azure AI Search catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -224,7 +240,7 @@ plans:
 - name: Azure Ai Search Plans Pricing
   plan_count: 0
   slug: azure-ai-search-plans-pricing
-random_paper: 21
+random_paper: 9
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -240,21 +256,23 @@ rules:
   slug: azure-ai-search-rules
 score:
   band: thin
-  composite: 36.5
+  composite: 30.5
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 55.8
     catalog_earned_first_party: 0.0
     catalog_gap: 59.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.0
   facets:
-    access_clarity: 21.1
+    access_clarity: 15.8
     contract_governance: 22.0
     contract_quality: 27.2
-    developer_ergonomics: 57.1
+    developer_ergonomics: 44.0
     discoverability: 66.1
-    operational_transparency: 31.6
+    operational_transparency: 15.8
+  previous_composite: 36.5
   provenance:
     conformance: derived
     contracts:
@@ -268,12 +286,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 22.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/azure-ai-search/azure-ai-search-2026-11-03T121500.png
 security:
 - kind: authentication
   name: Azure Ai Search Authentication

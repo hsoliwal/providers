@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
   public: true
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: derived
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.5
-  scored_at: '2026-10-17'
+  score: 26.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://kusama-rpc.polkadot.io/
@@ -141,15 +149,12 @@ apis:
   description: The transaction API from Kusama — 6 operation(s) for transaction.
   name: Kusama Transaction API
   slug: kusama-transaction-api
-artifact_total: 48
+artifact_total: 52
 asyncapis:
 - description: The event/streaming surface of the Kusama relay chain, served over WebSocket at wss://kusama-rpc.polkadot.io. Kusama publishes no webhooks — there is no vendor to register a callback URL with. Push de
   name: Kusama JSON-RPC Subscription API
   slug: kusama-jsonrpc-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Substrate API Sidecar accounts API
   slug: open-kusama-accounts-api
@@ -212,7 +217,7 @@ collections:
   slug: open-kusama-transaction-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/overlays/kusama-sidecar-overlay.yaml
+  href: https://artifacts.apis.io/kusama/overlays/kusama-sidecar-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kusama-sidecar-overlay.yaml
@@ -257,97 +262,97 @@ common:
   type: PrivacyPolicy
   url: https://kusama.network/privacy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/packages/kusama-packages.yml
+  href: https://artifacts.apis.io/kusama/packages/kusama-packages.yml
   title: ''
   type: Packages
   url: packages/kusama-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/packages/kusama-packages.yml
+  href: https://artifacts.apis.io/kusama/packages/kusama-packages.yml
   title: ''
   type: SDKs
   url: packages/kusama-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/cli/kusama-cli.yml
+  href: https://artifacts.apis.io/kusama/cli/kusama-cli.yml
   title: ''
   type: CLI
   url: cli/kusama-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/mcp/kusama-mcp.yml
+  href: https://artifacts.apis.io/kusama/mcp/kusama-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/kusama-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/llms/kusama-llms.txt
+  href: https://artifacts.apis.io/kusama/llms/kusama-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kusama-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kusama/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/well-known/kusama-well-known.yml
+  href: https://artifacts.apis.io/kusama/well-known/kusama-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kusama-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/authentication/kusama-authentication.yml
+  href: https://artifacts.apis.io/kusama/authentication/kusama-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kusama-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/conventions/kusama-conventions.yml
+  href: https://artifacts.apis.io/kusama/conventions/kusama-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kusama-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/conventions/kusama-conventions.yml
+  href: https://artifacts.apis.io/kusama/conventions/kusama-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/kusama-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/conformance/kusama-conformance.yml
+  href: https://artifacts.apis.io/kusama/conformance/kusama-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kusama-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/lifecycle/kusama-lifecycle.yml
+  href: https://artifacts.apis.io/kusama/lifecycle/kusama-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kusama-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/lifecycle/kusama-lifecycle.yml
+  href: https://artifacts.apis.io/kusama/lifecycle/kusama-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/kusama-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/changelog/kusama-changelog.yml
+  href: https://artifacts.apis.io/kusama/changelog/kusama-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/kusama-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/sandbox/kusama-sandbox.yml
+  href: https://artifacts.apis.io/kusama/sandbox/kusama-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/kusama-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/security/kusama-domain-security.yml
+  href: https://artifacts.apis.io/kusama/security/kusama-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kusama-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/security/kusama-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kusama/security/kusama-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/kusama-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/security/kusama-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kusama/security/kusama-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/kusama-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/asyncapi/kusama-jsonrpc-asyncapi.yml
+  href: https://artifacts.apis.io/kusama/asyncapi/kusama-jsonrpc-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/kusama-jsonrpc-asyncapi.yml
@@ -370,30 +375,43 @@ network: true
 overview: 'Kusama publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including JSON-RPC API, Accounts API, Ahm API, and 18 more. Tagged areas include Company, Cryptocurrency, Blockchain, Web3, and Polkadot.
 
 
-  The Kusama catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Kusama catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Kusama''s developer surface includes documentation, API reference, getting-started guide, support, CLI, authentication, changelog, and 23 more developer resources.'
-random_paper: 4
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Kusama API Rules
+  rule_count: 58
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 3
+    warn: 11
+  slug: kusama-rules
 score:
   band: developing
-  composite: 48.6
+  composite: 50.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 53.9
     developer_ergonomics: 78.0
     discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 48.5
+  previous_composite: 50.2
   provenance:
     conformance: derived
     contracts:
@@ -409,13 +427,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kusama/refs/heads/main/screenshots/kusama-2026-07-25T224336.png
+screenshot: https://apis.io/screenshots/kusama/kusama-2026-07-25T224336.png
 security:
 - kind: authentication
   name: Kusama Authentication
@@ -429,6 +447,16 @@ security:
   name: Kusama Vulnerability Disclosure
   slug: kusama-vulnerability-disclosure
   summary_line: no policy recorded
+skill_count: 4
+skills:
+- name: kusama-explore-chain-state
+  slug: kusama-explore-chain-state
+- name: kusama-follow-finalized-blocks
+  slug: kusama-follow-finalized-blocks
+- name: kusama-read-account-state
+  slug: kusama-read-account-state
+- name: kusama-submit-transaction
+  slug: kusama-submit-transaction
 slug: kusama
 tags:
 - Company

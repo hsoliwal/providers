@@ -1,16 +1,20 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -27,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.8
-  scored_at: '2026-10-17'
+  score: 38.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.scalapay.com
@@ -53,15 +60,12 @@ apis:
   description: The Reporting API from Scalapay — 6 operation(s) for reporting.
   name: Scalapay Reporting API
   slug: scalapay-reporting-api
-artifact_total: 12
+artifact_total: 17
 asyncapis:
 - description: ''
   name: Scalapay Webhooks
   slug: scalapay-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Scalapay Instore API
   slug: open-scalapay-instore-api
@@ -77,22 +81,22 @@ common:
   type: Pricing
   url: https://universe.development.scalapay.com/pricing-table-shortcode/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/plans/scalapay-plans-pricing.yml
+  href: https://artifacts.apis.io/scalapay/plans/scalapay-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/scalapay-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/capabilities/scalapay-capability-edges.yml
+  href: https://artifacts.apis.io/scalapay/capabilities/scalapay-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/scalapay-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/mcp/scalapay-mcp.yml
+  href: https://artifacts.apis.io/scalapay/mcp/scalapay-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/scalapay-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/overlays/scalapay-overlay.yaml
+  href: https://artifacts.apis.io/scalapay/overlays/scalapay-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/scalapay-overlay.yaml
@@ -153,92 +157,100 @@ common:
   type: SourceCode
   url: https://bitbucket.org/scalapay
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/authentication/scalapay-authentication.yml
+  href: https://artifacts.apis.io/scalapay/authentication/scalapay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/scalapay-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/conventions/scalapay-conventions.yml
+  href: https://artifacts.apis.io/scalapay/conventions/scalapay-conventions.yml
   title: ''
   type: Conventions
   url: conventions/scalapay-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/conventions/scalapay-conventions.yml
+  href: https://artifacts.apis.io/scalapay/conventions/scalapay-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/scalapay-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/packages/scalapay-packages.yml
+  href: https://artifacts.apis.io/scalapay/packages/scalapay-packages.yml
   title: ''
   type: Packages
   url: packages/scalapay-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/packages/scalapay-packages.yml
+  href: https://artifacts.apis.io/scalapay/packages/scalapay-packages.yml
   title: ''
   type: SDKs
   url: packages/scalapay-packages.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/sandbox/scalapay-sandbox.yml
+  href: https://artifacts.apis.io/scalapay/sandbox/scalapay-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/scalapay-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/components/scalapay-components.yml
+  href: https://artifacts.apis.io/scalapay/components/scalapay-components.yml
   title: ''
   type: Components
   url: components/scalapay-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/errors/scalapay-problem-types.yml
+  href: https://artifacts.apis.io/scalapay/errors/scalapay-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/scalapay-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/errors/scalapay-error-codes.yml
+  href: https://artifacts.apis.io/scalapay/errors/scalapay-error-codes.yml
   title: ''
   type: ErrorCodes
   url: errors/scalapay-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/lifecycle/scalapay-lifecycle.yml
+  href: https://artifacts.apis.io/scalapay/lifecycle/scalapay-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/scalapay-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/changelog/scalapay-changelog.yml
+  href: https://artifacts.apis.io/scalapay/changelog/scalapay-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/scalapay-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/conformance/scalapay-conformance.yml
+  href: https://artifacts.apis.io/scalapay/conformance/scalapay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/scalapay-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/data-model/scalapay-data-model.yml
+  href: https://artifacts.apis.io/scalapay/data-model/scalapay-data-model.yml
   title: ''
   type: DataModel
   url: data-model/scalapay-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/asyncapi/scalapay-webhooks.yml
+  href: https://artifacts.apis.io/scalapay/asyncapi/scalapay-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/scalapay-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/scalapay/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/llms/scalapay-llms.txt
+  href: https://artifacts.apis.io/scalapay/llms/scalapay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/scalapay-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/security/scalapay-domain-security.yml
+  href: https://artifacts.apis.io/scalapay/security/scalapay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/scalapay-domain-security.yml
 created: '2026-08-02'
 description: 'Scalapay is an Italian buy-now-pay-later (BNPL) payment provider that lets shoppers split a purchase into instalments — pay in 3, pay in 4, or pay later — while the merchant is settled by Scalapay. Its REST API is a compact, order-centric surface: create an instalment order, redirect the shopper to Scalapay Checkout, then capture, delay, void or refund against the order token, with a parallel in-store and offline pay-by-link family authenticated by a device-scoped key, plus reporting endpoints for reconciling orders, refunds, payouts and disputes against Scalapay''s bank transfers. Merchants integrate through a CDN-loaded web component (the Scalapay Suite Widget) on the product, cart and checkout pages, or through prebuilt modules for Magento, WooCommerce, PrestaShop, Shopify, Shopware, BigCommerce, VTEX, Salesforce and others. Scalapay operates in EUR across 14 authorised European territories.'
+finops:
+- has_sources: true
+  method: derived
+  name: Scalapay Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: scalapay-finops
+  template: false
 image: https://cdn.prod.website-files.com/614b9948e0cc06785c60efe7/67c9cc48ae95dd9c93be62c3_favicon-256.png
 layout: provider
 modified: '2026-08-02'
@@ -248,7 +260,7 @@ network: true
 overview: 'Scalapay publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Instore API, Orders API, and Reporting API. Tagged areas include Payments, Buy Now Pay Later, Instalments, E-Commerce, and Checkout.
 
 
-  The Scalapay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Scalapay catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Scalapay''s developer surface includes pricing, documentation, API reference, getting-started guide, support, signup flow, authentication, and 29 more developer resources.'
@@ -259,23 +271,36 @@ plans:
 - name: Scalapay Price Estimates
   plan_count: 0
   slug: scalapay-price-estimates
-random_paper: 10
+random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Scalapay API Rules
+  rule_count: 66
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 4
+    warn: 3
+  slug: scalapay-rules
 score:
   band: strong
-  composite: 54.5
+  composite: 58.8
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 49.0
+    artifact_dirs: 28
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.1
   facets:
-    access_clarity: 77.6
-    contract_governance: 4.5
+    access_clarity: 80.3
+    contract_governance: 18.2
     contract_quality: 58.2
-    developer_ergonomics: 51.8
+    developer_ergonomics: 62.5
     discoverability: 73.2
     operational_transparency: 44.7
   jurisdiction:
@@ -285,7 +310,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 54.5
+  previous_composite: 57.7
   provenance:
     conformance: derived
     contracts:
@@ -305,13 +330,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 26.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/scalapay/refs/heads/main/screenshots/scalapay-2026-08-17T081726.png
+screenshot: https://apis.io/screenshots/scalapay/scalapay-2026-08-17T081726.png
 security:
 - kind: authentication
   name: Scalapay Authentication
@@ -321,6 +346,16 @@ security:
   name: Scalapay Domain Security
   slug: scalapay-domain-security
   summary_line: TLSv1.2 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Create and capture a Scalapay order
+  slug: scalapay-create-and-capture-order
+- name: Run a Scalapay delayed-capture order
+  slug: scalapay-delayed-capture
+- name: Take a Scalapay in-store or pay-by-link order
+  slug: scalapay-instore-and-pay-by-link
+- name: Refund a Scalapay order and reconcile the payout
+  slug: scalapay-refund-and-reconcile
 slug: scalapay
 tags:
 - Payments

@@ -1,11 +1,15 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
+  confidence: medium
+  label: Open access
+  onboarding: open
   pricing: unknown
-  public: false
-  source: []
+  public: true
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 6
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/security/clarify-health-domain-security.yml
+  href: https://artifacts.apis.io/clarify-health/security/clarify-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/clarify-health-domain-security.yml
@@ -94,52 +101,52 @@ common:
   type: Compliance
   url: https://clarifyhealth.com/qe-public-reports
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/well-known/clarify-health-well-known.yml
+  href: https://artifacts.apis.io/clarify-health/well-known/clarify-health-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/clarify-health-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/authentication/clarify-health-authentication.yml
+  href: https://artifacts.apis.io/clarify-health/authentication/clarify-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/clarify-health-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/scopes/clarify-health-scopes.yml
+  href: https://artifacts.apis.io/clarify-health/scopes/clarify-health-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/clarify-health-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/lifecycle/clarify-health-lifecycle.yml
+  href: https://artifacts.apis.io/clarify-health/lifecycle/clarify-health-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/clarify-health-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/mcp/clarify-health-mcp.yml
+  href: https://artifacts.apis.io/clarify-health/mcp/clarify-health-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/clarify-health-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/packages/clarify-health-packages.yml
+  href: https://artifacts.apis.io/clarify-health/packages/clarify-health-packages.yml
   title: ''
   type: Packages
   url: packages/clarify-health-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/conformance/clarify-health-conformance.yml
+  href: https://artifacts.apis.io/clarify-health/conformance/clarify-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/clarify-health-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/llms/clarify-health-llms.txt
+  href: https://artifacts.apis.io/clarify-health/llms/clarify-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/clarify-health-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/plans/clarify-health-plans-pricing.yml
+  href: https://artifacts.apis.io/clarify-health/plans/clarify-health-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/clarify-health-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/rate-limits/clarify-health-rate-limits.yml
+  href: https://artifacts.apis.io/clarify-health/rate-limits/clarify-health-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/clarify-health-rate-limits.yml
@@ -179,7 +186,7 @@ plans:
 - name: Clarify Health Plans Pricing
   plan_count: 0
   slug: clarify-health-plans-pricing
-random_paper: 13
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Clarify Health Rate Limits
@@ -193,7 +200,7 @@ score:
   band: emerging
   composite: 21.7
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -217,14 +224,14 @@ score:
     regime: Health
     regime_id: health
     score: 36.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/clarify-health/refs/heads/main/screenshots/clarify-health-2026-07-25T205504.png
+screenshot: https://apis.io/screenshots/clarify-health/clarify-health-2026-07-25T205504.png
 security:
 - kind: authentication
   name: Clarify Health Authentication

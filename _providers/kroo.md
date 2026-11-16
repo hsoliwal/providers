@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
-  label: TPP onboarding · FAPI-secured
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-10-17'
+  score: 36.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -183,50 +190,50 @@ apis:
   description: The Transactions API from Kroo — 2 operation(s) for transactions.
   name: Kroo Transactions API
   slug: kroo-transactions-api
-artifact_total: 33
+artifact_total: 36
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/capabilities/kroo-capability-edges.yml
+  href: https://artifacts.apis.io/kroo/capabilities/kroo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/kroo-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/overlays/kroo-account-info-overlay.yaml
+  href: https://artifacts.apis.io/kroo/overlays/kroo-account-info-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kroo-account-info-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/overlays/kroo-payment-initiation-overlay.yaml
+  href: https://artifacts.apis.io/kroo/overlays/kroo-payment-initiation-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kroo-payment-initiation-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/overlays/kroo-confirmation-funds-overlay.yaml
+  href: https://artifacts.apis.io/kroo/overlays/kroo-confirmation-funds-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kroo-confirmation-funds-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/agentic-access/kroo-agentic-access.yml
+  href: https://artifacts.apis.io/kroo/agentic-access/kroo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kroo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/security/kroo-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/kroo/security/kroo-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/kroo-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/security/kroo-domain-security.yml
+  href: https://artifacts.apis.io/kroo/security/kroo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kroo-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/scopes/kroo-scopes.yml
+  href: https://artifacts.apis.io/kroo/scopes/kroo-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/kroo-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/authentication/kroo-authentication.yml
+  href: https://artifacts.apis.io/kroo/authentication/kroo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kroo-authentication.yml
@@ -267,12 +274,12 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/kroobank
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/well-known/kroo-security.txt
+  href: https://artifacts.apis.io/kroo/well-known/kroo-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/kroo-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/well-known/kroo-well-known.yml
+  href: https://artifacts.apis.io/kroo/well-known/kroo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kroo-well-known.yml
@@ -281,47 +288,47 @@ common:
   type: Security
   url: https://kroo.com/.well-known/security.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/conventions/kroo-conventions.yml
+  href: https://artifacts.apis.io/kroo/conventions/kroo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kroo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/conventions/kroo-conventions.yml
+  href: https://artifacts.apis.io/kroo/conventions/kroo-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/kroo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/errors/kroo-problem-types.yml
+  href: https://artifacts.apis.io/kroo/errors/kroo-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/kroo-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/lifecycle/kroo-lifecycle.yml
+  href: https://artifacts.apis.io/kroo/lifecycle/kroo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kroo-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/conformance/kroo-conformance.yml
+  href: https://artifacts.apis.io/kroo/conformance/kroo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kroo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/data-model/kroo-data-model.yml
+  href: https://artifacts.apis.io/kroo/data-model/kroo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kroo-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/llms/kroo-llms.txt
+  href: https://artifacts.apis.io/kroo/llms/kroo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kroo-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/mcp/kroo-mcp.yml
+  href: https://artifacts.apis.io/kroo/mcp/kroo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/kroo-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kroo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -337,8 +344,24 @@ network: true
 overview: 'Kroo publishes 28 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 25 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
+  The Kroo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Kroo''s developer surface includes authentication, documentation, engineering blog, support, and 26 more developer resources.'
-random_paper: 3
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Kroo API Rules
+  rule_count: 59
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 5
+  slug: kroo-rules
 scopes:
 - name: Kroo Scopes
   scope_count: 3
@@ -346,18 +369,18 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 37.5
+  composite: 39.1
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 35.0
+    artifact_dirs: 23
+    catalog_earned: 39.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.0
     developer_ergonomics: 37.5
     discoverability: 69.6
@@ -370,7 +393,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 37.5
+  previous_composite: 39.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -391,13 +414,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 42.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kroo/refs/heads/main/screenshots/kroo-2026-07-25T224303.png
+screenshot: https://apis.io/screenshots/kroo/kroo-2026-07-25T224303.png
 security:
 - kind: authentication
   name: Kroo Authentication
@@ -411,6 +434,12 @@ security:
   name: Kroo Vulnerability Disclosure
   slug: kroo-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 2
+skills:
+- name: Retrieve Kroo account data with an AIS consent
+  slug: kroo-account-information
+- name: Initiate a Kroo domestic payment (PIS)
+  slug: kroo-domestic-payment
 slug: kroo
 tags:
 - Financial Services

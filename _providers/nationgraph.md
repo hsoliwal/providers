@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.4
-  scored_at: '2026-10-17'
+  score: 44.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 115
   human_in_the_loop: 0
@@ -324,11 +330,8 @@ apis:
   description: The RFPs API from NationGraph — 5 operation(s) for rfps.
   name: NationGraph RF Ps API
   slug: nationgraph-rfps-api
-artifact_total: 120
+artifact_total: 123
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Nationgraph Accounts API
   slug: open-nationgraph-accounts-api
@@ -499,17 +502,17 @@ collections:
   slug: open-nationgraph-youtube-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/capabilities/nationgraph-capability-edges.yml
+  href: https://artifacts.apis.io/nationgraph/capabilities/nationgraph-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/nationgraph-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/agentic-access/nationgraph-agentic-access.yml
+  href: https://artifacts.apis.io/nationgraph/agentic-access/nationgraph-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nationgraph-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/authentication/nationgraph-authentication.yml
+  href: https://artifacts.apis.io/nationgraph/authentication/nationgraph-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nationgraph-authentication.yml
@@ -542,17 +545,17 @@ common:
   type: PrivacyPolicy
   url: https://app.termly.io/policy-viewer/policy.html?policyUUID=b511e122-cf74-4d55-9eae-8928fc2d36f2
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/security/nationgraph-trust-center.yml
+  href: https://artifacts.apis.io/nationgraph/security/nationgraph-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/nationgraph-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/llms/nationgraph-llms.txt
+  href: https://artifacts.apis.io/nationgraph/llms/nationgraph-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nationgraph-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/security/nationgraph-domain-security.yml
+  href: https://artifacts.apis.io/nationgraph/security/nationgraph-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nationgraph-domain-security.yml
@@ -561,72 +564,80 @@ common:
   type: GitHubOrganization
   url: https://github.com/nationgraph
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/mcp/nationgraph-mcp.yml
+  href: https://artifacts.apis.io/nationgraph/mcp/nationgraph-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/nationgraph-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/errors/nationgraph-problem-types.yml
+  href: https://artifacts.apis.io/nationgraph/errors/nationgraph-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/nationgraph-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/conventions/nationgraph-conventions.yml
+  href: https://artifacts.apis.io/nationgraph/conventions/nationgraph-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nationgraph-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/lifecycle/nationgraph-lifecycle.yml
+  href: https://artifacts.apis.io/nationgraph/lifecycle/nationgraph-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nationgraph-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/conformance/nationgraph-conformance.yml
+  href: https://artifacts.apis.io/nationgraph/conformance/nationgraph-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nationgraph-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/data-model/nationgraph-data-model.yml
+  href: https://artifacts.apis.io/nationgraph/data-model/nationgraph-data-model.yml
   title: ''
   type: DataModel
   url: data-model/nationgraph-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/overlays/nationgraph-openapi-overlay.yaml
+  href: https://artifacts.apis.io/nationgraph/overlays/nationgraph-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nationgraph-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/well-known/nationgraph-well-known.yml
+  href: https://artifacts.apis.io/nationgraph/well-known/nationgraph-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/nationgraph-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/nationgraph/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/scopes/nationgraph-scopes.yml
+  href: https://artifacts.apis.io/nationgraph/scopes/nationgraph-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/nationgraph-scopes.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/packages/nationgraph-packages.yml
+  href: https://artifacts.apis.io/nationgraph/packages/nationgraph-packages.yml
   title: ''
   type: Packages
   url: packages/nationgraph-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/plans/nationgraph-plans-pricing.yml
+  href: https://artifacts.apis.io/nationgraph/plans/nationgraph-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/nationgraph-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/rate-limits/nationgraph-rate-limits.yml
+  href: https://artifacts.apis.io/nationgraph/rate-limits/nationgraph-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/nationgraph-rate-limits.yml
 created: '2026-07-17'
 description: NationGraph is a public-sector sales intelligence platform that makes government buying legible to businesses selling into state, local, and education (SLED) markets. It indexes roughly 110,000 government institutions and ~4 million government webpages — council meeting minutes, budgets, purchase orders, contracts, capital improvement plans, and active RFPs — to surface predictive buying signals before a formal RFP is published. Its Signals product flags buying intent, Contacts matches verified government decision-makers with emails and phone numbers, and Public Record Automations run FOIA requests and structured document extraction into existing CRM and communications tools (Salesforce, HubSpot, Slack). Founded in 2024 (Miami, with Toronto and San Francisco offices), NationGraph has raised $22.5M, with a Series A led by Menlo Ventures.
+finops:
+- has_sources: true
+  method: derived
+  name: Nationgraph Finops
+  primary_unit: ''
+  service_category: ''
+  slug: nationgraph-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nationgraph.png
 layout: provider
 modified: '2026-08-14'
@@ -636,16 +647,32 @@ network: true
 overview: 'NationGraph publishes 56 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Automations API, Budgets API, and 53 more. Tagged areas include Company, Sales Intelligence, Public Sector, Government, and SLED.
 
 
+  The NationGraph catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   NationGraph''s developer surface includes authentication, documentation, support, engineering blog, and 23 more developer resources.'
 plans:
 - name: Nationgraph Plans Pricing
   plan_count: 0
   slug: nationgraph-plans-pricing
-random_paper: 13
+random_paper: 3
 rate_limits:
 - limit_count: 0
   name: Nationgraph Rate Limits
   slug: nationgraph-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 88
+  extends:
+  - spectral:oas
+  name: NationGraph API Rules
+  rule_count: 47
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 2
+    warn: 12
+  slug: nationgraph-rules
 scopes:
 - name: Nationgraph Scopes
   scope_count: 5
@@ -653,23 +680,23 @@ scopes:
   summary_line: 5 scopes
 score:
   band: developing
-  composite: 43.4
+  composite: 45.0
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 35.5
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 44.3
     developer_ergonomics: 30.4
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 43.4
+  previous_composite: 45.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -686,13 +713,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 61.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/nationgraph/refs/heads/main/screenshots/nationgraph-2026-08-07T184651.png
+screenshot: https://apis.io/screenshots/nationgraph/nationgraph-2026-08-07T184651.png
 security:
 - kind: authentication
   name: Nationgraph Authentication
@@ -706,6 +733,12 @@ security:
   name: Nationgraph Trust Center
   slug: nationgraph-trust-center
   summary_line: trust center published
+skill_count: 2
+skills:
+- name: Find government buying signals and save them to a list
+  slug: nationgraph-find-buying-signals
+- name: Find verified government decision-maker contacts
+  slug: nationgraph-find-contacts
 slug: nationgraph
 tags:
 - Company

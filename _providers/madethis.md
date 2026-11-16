@@ -1,11 +1,16 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,17 +40,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/madethis/refs/heads/main/rate-limits/madethis-rate-limits.yml
+  href: https://artifacts.apis.io/madethis/rate-limits/madethis-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/madethis-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/madethis/refs/heads/main/security/madethis-domain-security.yml
+  href: https://artifacts.apis.io/madethis/security/madethis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/madethis-domain-security.yml
@@ -67,32 +75,32 @@ common:
   type: PrivacyPolicy
   url: https://madethis.com/privacy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/madethis/refs/heads/main/llms/madethis-llms.txt
+  href: https://artifacts.apis.io/madethis/llms/madethis-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/madethis-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/madethis/refs/heads/main/well-known/madethis-well-known.yml
+  href: https://artifacts.apis.io/madethis/well-known/madethis-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/madethis-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/madethis/refs/heads/main/authentication/madethis-authentication.yml
+  href: https://artifacts.apis.io/madethis/authentication/madethis-authentication.yml
   title: ''
   type: Authentication
   url: authentication/madethis-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/madethis/refs/heads/main/scopes/madethis-scopes.yml
+  href: https://artifacts.apis.io/madethis/scopes/madethis-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/madethis-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/madethis/refs/heads/main/conformance/madethis-conformance.yml
+  href: https://artifacts.apis.io/madethis/conformance/madethis-conformance.yml
   title: ''
   type: Conformance
   url: conformance/madethis-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/madethis/refs/heads/main/plans/madethis-plans-pricing.yml
+  href: https://artifacts.apis.io/madethis/plans/madethis-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/madethis-plans-pricing.yml
@@ -137,7 +145,7 @@ plans:
 - name: Madethis Plans Pricing
   plan_count: 4
   slug: madethis-plans-pricing
-random_paper: 11
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Madethis Rate Limits
@@ -182,14 +190,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/madethis/refs/heads/main/screenshots/madethis-2026-07-25T225830.png
+screenshot: https://apis.io/screenshots/madethis/madethis-2026-07-25T225830.png
 security:
 - kind: authentication
   name: Madethis Authentication

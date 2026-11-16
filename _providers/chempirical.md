@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Free
+  onboarding: unknown
+  pricing: free
+  public: false
+  source:
+  - plans
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - baseURL: https://chempirical.com/api
@@ -49,52 +64,52 @@ apis:
 artifact_total: 15
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/chempirical/refs/heads/main/rate-limits/chempirical-rate-limits.yml
+  href: https://artifacts.apis.io/chempirical/rate-limits/chempirical-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/chempirical-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chempirical/refs/heads/main/plans/chempirical-plans-pricing.yml
+  href: https://artifacts.apis.io/chempirical/plans/chempirical-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/chempirical-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chempirical/refs/heads/main/rules/chempirical-rules.yml
+  href: https://artifacts.apis.io/chempirical/rules/chempirical-rules.yml
   title: ''
   type: Spectral
   url: rules/chempirical-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chempirical/refs/heads/main/json-ld/chempirical-context.jsonld
+  href: https://artifacts.apis.io/chempirical/json-ld/chempirical-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/chempirical-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chempirical/refs/heads/main/vocabulary/chempirical-vocabulary.yml
+  href: https://artifacts.apis.io/chempirical/vocabulary/chempirical-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/chempirical-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chempirical/refs/heads/main/data-model/chempirical-data-model.yml
+  href: https://artifacts.apis.io/chempirical/data-model/chempirical-data-model.yml
   title: ''
   type: DataModel
   url: data-model/chempirical-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chempirical/refs/heads/main/conventions/chempirical-conventions.yml
+  href: https://artifacts.apis.io/chempirical/conventions/chempirical-conventions.yml
   title: ''
   type: Conventions
   url: conventions/chempirical-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chempirical/refs/heads/main/conformance/chempirical-conformance.yml
+  href: https://artifacts.apis.io/chempirical/conformance/chempirical-conformance.yml
   title: ''
   type: Conformance
   url: conformance/chempirical-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chempirical/refs/heads/main/hosts/chempirical-hosts.yml
+  href: https://artifacts.apis.io/chempirical/hosts/chempirical-hosts.yml
   title: ''
   type: Hosts
   url: hosts/chempirical-hosts.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chempirical/refs/heads/main/security/chempirical-domain-security.yml
+  href: https://artifacts.apis.io/chempirical/security/chempirical-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chempirical-domain-security.yml
@@ -164,7 +179,7 @@ plans:
 - name: Chempirical Plans Pricing
   plan_count: 1
   slug: chempirical-plans-pricing
-random_paper: 9
+random_paper: 1
 rate_limits:
 - limit_count: 1
   name: Chempirical Rate Limits
@@ -184,23 +199,23 @@ rules:
   slug: chempirical-rules
 score:
   band: emerging
-  composite: 25.9
+  composite: 23.4
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 78.8
     catalog_earned_first_party: 16.0
     catalog_gap: 36.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.3
+  delta: -2.5
   facets:
-    access_clarity: 34.2
+    access_clarity: 27.6
     contract_governance: 22.0
     contract_quality: 21.0
-    developer_ergonomics: 11.9
+    developer_ergonomics: 6.0
     discoverability: 71.4
     operational_transparency: 21.1
-  previous_composite: 26.2
+  previous_composite: 25.9
   provenance:
     conformance: derived
     contracts:
@@ -215,13 +230,13 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/chempirical/refs/heads/main/screenshots/chempirical-2026-10-11T102859.png
+screenshot: https://apis.io/screenshots/chempirical/chempirical-2026-10-11T102859.png
 security:
 - kind: domain-security
   name: Chempirical Domain Security

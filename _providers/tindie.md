@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 24.8
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://www.tindie.com/api/v1
@@ -52,11 +55,8 @@ apis:
   description: Store product listings (public read).
   name: Tindie Product API
   slug: tindie-product-api
-artifact_total: 10
+artifact_total: 12
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Tindie order API
   slug: open-tindie-order-api
@@ -71,7 +71,7 @@ collections:
   slug: open-tindie-product-schema
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/security/tindie-domain-security.yml
+  href: https://artifacts.apis.io/tindie/security/tindie-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tindie-domain-security.yml
@@ -100,57 +100,57 @@ common:
   type: GitHubOrganization
   url: https://github.com/tindie
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/authentication/tindie-authentication.yml
+  href: https://artifacts.apis.io/tindie/authentication/tindie-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tindie-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/conventions/tindie-conventions.yml
+  href: https://artifacts.apis.io/tindie/conventions/tindie-conventions.yml
   title: ''
   type: Conventions
   url: conventions/tindie-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/errors/tindie-problem-types.yml
+  href: https://artifacts.apis.io/tindie/errors/tindie-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/tindie-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/data-model/tindie-data-model.yml
+  href: https://artifacts.apis.io/tindie/data-model/tindie-data-model.yml
   title: ''
   type: DataModel
   url: data-model/tindie-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/lifecycle/tindie-lifecycle.yml
+  href: https://artifacts.apis.io/tindie/lifecycle/tindie-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tindie-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/well-known/tindie-well-known.yml
+  href: https://artifacts.apis.io/tindie/well-known/tindie-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/tindie-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/mcp/tindie-mcp.yml
+  href: https://artifacts.apis.io/tindie/mcp/tindie-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/tindie-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/llms/tindie-llms.txt
+  href: https://artifacts.apis.io/tindie/llms/tindie-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tindie-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/conformance/tindie-conformance.yml
+  href: https://artifacts.apis.io/tindie/conformance/tindie-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tindie-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/overlays/tindie-openapi-overlay.yaml
+  href: https://artifacts.apis.io/tindie/overlays/tindie-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/tindie-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tindie/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/tindie/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -165,27 +165,43 @@ network: true
 overview: 'Tindie publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Order API, Orderitem API, and Product API. Tagged areas include Company, Marketplace, Hardware, Electronics, and Maker.
 
 
+  The Tindie catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Tindie''s developer surface includes API reference, support, engineering blog, authentication, and 14 more developer resources.'
-random_paper: 21
+random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Tindie API Rules
+  rule_count: 58
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 3
+    warn: 1
+  slug: tindie-rules
 score:
   band: thin
-  composite: 28.0
+  composite: 29.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 47.8
     developer_ergonomics: 24.4
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 27.9
+  previous_composite: 29.6
   provenance:
     conformance: derived
     contracts:
@@ -201,8 +217,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
@@ -217,6 +233,12 @@ security:
   name: Tindie Domain Security
   slug: tindie-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 2
+skills:
+- name: Browse Tindie products
+  slug: tindie-browse-products
+- name: Fetch Tindie seller orders
+  slug: tindie-fetch-orders
 slug: tindie
 tags:
 - Company

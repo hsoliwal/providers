@@ -1,4 +1,21 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Enterprise · Open access
+  onboarding: open
+  pricing: enterprise
+  public: true
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +32,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +43,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Atomik is CaboLabs' standardized Clinical Data Repository and Demographic Data Repository. Its REST API implements the official openEHR ITS REST specification Release 1.0.2 for EHR, EHR_STATUS, CONTRI
@@ -71,87 +91,87 @@ common:
   type: Pricing
   url: https://cabolabs.com/our_software/atomik/pricing
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/llms/cabolabs-llms.txt
+  href: https://artifacts.apis.io/cabolabs/llms/cabolabs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cabolabs-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/packages/cabolabs-packages.yml
+  href: https://artifacts.apis.io/cabolabs/packages/cabolabs-packages.yml
   title: ''
   type: Packages
   url: packages/cabolabs-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/packages/cabolabs-packages.yml
+  href: https://artifacts.apis.io/cabolabs/packages/cabolabs-packages.yml
   title: ''
   type: SDKs
   url: packages/cabolabs-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/cli/cabolabs-cli.yml
+  href: https://artifacts.apis.io/cabolabs/cli/cabolabs-cli.yml
   title: ''
   type: CLI
   url: cli/cabolabs-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/mcp/cabolabs-mcp.yml
+  href: https://artifacts.apis.io/cabolabs/mcp/cabolabs-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/cabolabs-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/authentication/cabolabs-authentication.yml
+  href: https://artifacts.apis.io/cabolabs/authentication/cabolabs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cabolabs-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/conventions/cabolabs-conventions.yml
+  href: https://artifacts.apis.io/cabolabs/conventions/cabolabs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cabolabs-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/lifecycle/cabolabs-lifecycle.yml
+  href: https://artifacts.apis.io/cabolabs/lifecycle/cabolabs-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cabolabs-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/changelog/cabolabs-changelog.yml
+  href: https://artifacts.apis.io/cabolabs/changelog/cabolabs-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/cabolabs-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/conformance/cabolabs-conformance.yml
+  href: https://artifacts.apis.io/cabolabs/conformance/cabolabs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cabolabs-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/errors/cabolabs-problem-types.yml
+  href: https://artifacts.apis.io/cabolabs/errors/cabolabs-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cabolabs-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/data-model/cabolabs-data-model.yml
+  href: https://artifacts.apis.io/cabolabs/data-model/cabolabs-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cabolabs-data-model.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/plans/cabolabs-plans-pricing.yml
+  href: https://artifacts.apis.io/cabolabs/plans/cabolabs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cabolabs-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/rate-limits/cabolabs-rate-limits.yml
+  href: https://artifacts.apis.io/cabolabs/rate-limits/cabolabs-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cabolabs-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/security/cabolabs-domain-security.yml
+  href: https://artifacts.apis.io/cabolabs/security/cabolabs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cabolabs-domain-security.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/sandbox/cabolabs-sandbox.yml
+  href: https://artifacts.apis.io/cabolabs/sandbox/cabolabs-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/cabolabs-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/examples/cabolabs-ehrserver-2.0-insomnia.json
+  href: https://artifacts.apis.io/cabolabs/examples/cabolabs-ehrserver-2.0-insomnia.json
   title: ''
   type: Examples
   url: examples/cabolabs-ehrserver-2.0-insomnia.json
@@ -179,7 +199,7 @@ plans:
 - name: Cabolabs Plans Pricing
   plan_count: 3
   slug: cabolabs-plans-pricing
-random_paper: 9
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Cabolabs Rate Limits
@@ -188,13 +208,13 @@ score:
   band: thin
   composite: 37.7
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
@@ -204,10 +224,12 @@ score:
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - uruguay
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 37.6
+  previous_composite: 37.7
   provenance:
     conformance: first-party
     mcp: first-party
@@ -217,14 +239,14 @@ score:
     regime: Health
     regime_id: health
     score: 13.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cabolabs/refs/heads/main/screenshots/cabolabs-2026-10-11T102633.png
+screenshot: https://apis.io/screenshots/cabolabs/cabolabs-2026-10-11T102633.png
 security:
 - kind: authentication
   name: Cabolabs Authentication

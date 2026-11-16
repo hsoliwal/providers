@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -62,11 +68,6 @@ apis:
   slug: dbt-jobs-api
 - baseURL: https://cloud.getdbt.com/api/v3
   baseurl_source: declared
-  description: The Metadata API from dbt — 1 operation(s) for metadata.
-  name: dbt Metadata API
-  slug: dbt-metadata-api
-- baseURL: https://cloud.getdbt.com/api/v3
-  baseurl_source: declared
   description: The Metrics API from dbt — 1 operation(s) for metrics.
   name: dbt Metrics API
   slug: dbt-metrics-api
@@ -80,6 +81,26 @@ apis:
   description: The Runs API from dbt — 4 operation(s) for runs.
   name: dbt Runs API
   slug: dbt-runs-api
+- baseURL: https://cloud.getdbt.com/api/v3
+  baseurl_source: declared
+  description: The FastAPI API from dbt — 1 operation(s) for fastapi.
+  name: dbt Fast API
+  slug: dbt-fastapi-api
+- baseURL: https://cloud.getdbt.com/api/v3
+  baseurl_source: declared
+  description: The Private API from dbt — 1 operation(s) for private.
+  name: dbt Private API
+  slug: dbt-private-api
+- baseURL: https://cloud.getdbt.com/api/v3
+  baseurl_source: declared
+  description: The Ready API from dbt — 1 operation(s) for ready.
+  name: dbt Ready API
+  slug: dbt-ready-api
+- baseURL: https://cloud.getdbt.com/api/v3
+  baseurl_source: declared
+  description: The Graph QL API from dbt — 1 operation(s) for graph ql.
+  name: dbt Graph QL API
+  slug: dbt-graph-ql-api
 arazzos:
 - description: Walk from the first account to its projects to its jobs to build a hierarchy snapshot.
   name: dbt Cloud Account, Project and Job Inventory
@@ -120,7 +141,7 @@ arazzos:
 - description: Trigger a dbt Cloud job run, poll the run until it succeeds, then list its artifacts.
   name: dbt Cloud Trigger Run and Poll to Completion
   slug: dbt-trigger-run-and-poll-workflow
-artifact_total: 47
+artifact_total: 50
 collections:
 - collection_type: postman
   name: dbt Cloud Administrative API
@@ -131,9 +152,6 @@ collections:
 - collection_type: postman
   name: dbt Cloud Semantic Layer API
   slug: postman-dbt-cloud-semantic-layer-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: dbt Cloud Administrative Accounts API
   slug: open-dbt-accounts-api
@@ -166,17 +184,17 @@ collections:
   slug: open-dbt-runs-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/plans/dbt-plans-pricing.yml
+  href: https://artifacts.apis.io/dbt/plans/dbt-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dbt-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/rate-limits/dbt-rate-limits.yml
+  href: https://artifacts.apis.io/dbt/rate-limits/dbt-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dbt-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/finops/dbt-finops.yml
+  href: https://artifacts.apis.io/dbt/finops/dbt-finops.yml
   title: ''
   type: FinOps
   url: finops/dbt-finops.yml
@@ -189,27 +207,27 @@ common:
   type: BlogRSS
   url: https://docs.getdbt.com/blog/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/capabilities/dbt-capability-edges.yml
+  href: https://artifacts.apis.io/dbt/capabilities/dbt-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/dbt-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/agentic-access/dbt-agentic-access.yml
+  href: https://artifacts.apis.io/dbt/agentic-access/dbt-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dbt-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/security/dbt-trust-center.yml
+  href: https://artifacts.apis.io/dbt/security/dbt-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/dbt-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/security/dbt-domain-security.yml
+  href: https://artifacts.apis.io/dbt/security/dbt-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dbt-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/authentication/dbt-authentication.yml
+  href: https://artifacts.apis.io/dbt/authentication/dbt-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dbt-authentication.yml
@@ -218,67 +236,67 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/dbt/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-account-project-job-inventory-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-account-project-job-inventory-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-account-project-job-inventory-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-bootstrap-account-and-run-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-bootstrap-account-and-run-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-bootstrap-account-and-run-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-create-job-and-run-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-create-job-and-run-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-create-job-and-run-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-create-run-poll-artifacts-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-create-run-poll-artifacts-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-create-run-poll-artifacts-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-environment-job-run-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-environment-job-run-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-environment-job-run-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-find-job-and-run-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-find-job-and-run-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-find-job-and-run-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-job-run-history-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-job-run-history-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-job-run-history-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-provision-job-in-environment-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-provision-job-in-environment-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-provision-job-in-environment-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-rerun-latest-failed-run-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-rerun-latest-failed-run-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-rerun-latest-failed-run-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-run-and-fetch-artifacts-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-run-and-fetch-artifacts-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-run-and-fetch-artifacts-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-run-metadata-discovery-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-run-metadata-discovery-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-run-metadata-discovery-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-run-to-semantic-metrics-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-run-to-semantic-metrics-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-run-to-semantic-metrics-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/arazzo/dbt-trigger-run-and-poll-workflow.yml
+  href: https://artifacts.apis.io/dbt/arazzo/dbt-trigger-run-and-poll-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/dbt-trigger-run-and-poll-workflow.yml
@@ -323,25 +341,25 @@ common:
   type: PrivacyPolicy
   url: https://www.getdbt.com/cloud/privacy-policy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/json-ld/dbt-context.jsonld
+  href: https://artifacts.apis.io/dbt/json-ld/dbt-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/dbt-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/vocabulary/dbt-vocabulary.yml
+  href: https://artifacts.apis.io/dbt/vocabulary/dbt-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/dbt-vocabulary.yml
 created: '2025-01-08'
 description: dbt Labs operates dbt Cloud, the managed platform for the open-source dbt (data build tool) used to transform data inside cloud warehouses. dbt Cloud exposes a set of APIs for managing accounts, projects, jobs, and runs programmatically (Administrative API), inspecting project metadata (Discovery API), and querying governed metrics (Semantic Layer API).
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Dbt Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: user
+  service_category: ''
   slug: dbt-finops
-  template: true
+  template: false
 graphqls:
 - description: Every time dbt Cloud runs a project, it generates and stores information about the project. The Discovery API exposes that metadata including details about models, sources, exposures, and execution re
   name: dbt GraphQL API
@@ -364,7 +382,7 @@ modified: '2026-10-06'
 name: dbt
 nav: Providers
 network: true
-overview: 'dbt publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Environments API, Jobs API, and 4 more. Tagged areas include Analytics Engineering, Data, ELT, Metrics, and Project.
+overview: 'dbt publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Environments API, Jobs API, and 7 more. Tagged areas include Analytics Engineering, Data, ELT, Metrics, and Project.
 
 
   The dbt catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -373,9 +391,12 @@ overview: 'dbt publishes 7 API contracts indexed on the [APIs.io](https://apis.i
   dbt''s developer surface includes engineering blog, authentication, documentation, developer portal, pricing, GitHub presence, and 30 more developer resources.'
 plans:
 - name: Dbt Plans Pricing
-  plan_count: 3
+  plan_count: 6
   slug: dbt-plans-pricing
-random_paper: 6
+- name: Dbt Price Estimates
+  plan_count: 0
+  slug: dbt-price-estimates
+random_paper: 2
 rate_limits:
 - limit_count: 5
   name: Dbt Rate Limits
@@ -406,43 +427,43 @@ rules:
   slug: dbt-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 45.9
+  composite: 51.8
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 75.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 40.0
+    artifact_dirs: 22
+    catalog_earned: 87.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 28.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.3
+  delta: 0.3
   facets:
-    access_clarity: 47.4
+    access_clarity: 78.9
     contract_governance: 27.3
-    contract_quality: 58.2
+    contract_quality: 56.6
     developer_ergonomics: 41.7
     discoverability: 71.4
     operational_transparency: 13.2
-  previous_composite: 51.2
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 66.7
       derived: 0
-      marker_coverage: 0.0
-      total: 7
+      marker_coverage: 33.3
+      total: 12
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/dbt/refs/heads/main/screenshots/dbt-2026-06-20T175739.png
+screenshot: https://apis.io/screenshots/dbt/dbt-2026-06-20T175739.png
 security:
 - kind: authentication
   name: Dbt Authentication

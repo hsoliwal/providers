@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.7
-  scored_at: '2026-10-17'
+  score: 30.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -65,7 +71,7 @@ apis:
   description: Manage virtual and physical racing tracks
   name: Amazon DeepRacer Tracks API
   slug: amazon-deepracer-tracks-api
-artifact_total: 58
+artifact_total: 57
 collections:
 - collection_type: postman
   name: Amazon DeepRacer Cars API
@@ -79,9 +85,6 @@ collections:
 - collection_type: postman
   name: Amazon DeepRacer Cars Tracks API
   slug: postman-amazon-deepracer-tracks-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Amazon DeepRacer Cars API
   slug: open-amazon-deepracer-cars-api
@@ -99,22 +102,22 @@ collections:
   slug: open-amazon-deepracer
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-deepracer/refs/heads/main/plans/amazon-deepracer-plans-pricing.yml
+  href: https://artifacts.apis.io/amazon-deepracer/plans/amazon-deepracer-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/amazon-deepracer-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-deepracer/refs/heads/main/rate-limits/amazon-deepracer-rate-limits.yml
+  href: https://artifacts.apis.io/amazon-deepracer/rate-limits/amazon-deepracer-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/amazon-deepracer-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-deepracer/refs/heads/main/finops/amazon-deepracer-finops.yml
+  href: https://artifacts.apis.io/amazon-deepracer/finops/amazon-deepracer-finops.yml
   title: ''
   type: FinOps
   url: finops/amazon-deepracer-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-deepracer/refs/heads/main/capabilities/amazon-deepracer-capability-edges.yml
+  href: https://artifacts.apis.io/amazon-deepracer/capabilities/amazon-deepracer-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/amazon-deepracer-capability-edges.yml
@@ -123,27 +126,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-deepracer/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-deepracer/refs/heads/main/agentic-access/amazon-deepracer-agentic-access.yml
+  href: https://artifacts.apis.io/amazon-deepracer/agentic-access/amazon-deepracer-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amazon-deepracer-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-deepracer/refs/heads/main/security/amazon-deepracer-trust-center.yml
+  href: https://artifacts.apis.io/amazon-deepracer/security/amazon-deepracer-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/amazon-deepracer-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-deepracer/refs/heads/main/security/amazon-deepracer-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-deepracer/security/amazon-deepracer-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-deepracer-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-deepracer/refs/heads/main/security/amazon-deepracer-domain-security.yml
+  href: https://artifacts.apis.io/amazon-deepracer/security/amazon-deepracer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-deepracer-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-deepracer/refs/heads/main/authentication/amazon-deepracer-authentication.yml
+  href: https://artifacts.apis.io/amazon-deepracer/authentication/amazon-deepracer-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amazon-deepracer-authentication.yml
@@ -239,7 +242,7 @@ finops:
 - has_sources: false
   method: generated
   name: Amazon Deepracer Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: amazon-deepracer-finops
   template: true
@@ -322,7 +325,7 @@ modified: '2026-05-19'
 name: Amazon DeepRacer
 nav: Providers
 network: true
-overview: 'Amazon DeepRacer publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Cars API, Leaderboards API, Models API, and 1 more. Tagged areas include Autonomous Vehicles, Machine Learning, Reinforcement Learning, and Robotics.
+overview: 'Amazon DeepRacer publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Cars API, Leaderboards API, Models API, and 1 more. Tagged areas include Autonomous Vehicles, Amazon Web Services, Machine Learning, Reinforcement Learning, and Robotics.
 
 
   The Amazon DeepRacer catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -333,7 +336,7 @@ plans:
 - name: Amazon Deepracer Plans Pricing
   plan_count: 3
   slug: amazon-deepracer-plans-pricing
-random_paper: 2
+random_paper: 22
 rate_limits:
 - limit_count: 5
   name: Amazon Deepracer Rate Limits
@@ -364,23 +367,23 @@ rules:
   slug: amazon-deepracer-spectral-rules
 score:
   band: developing
-  composite: 49.2
+  composite: 51.4
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 55.0
+    artifact_dirs: 21
+    catalog_earned: 60.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 60.0
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.9
   facets:
     access_clarity: 53.9
     contract_governance: 27.3
     contract_quality: 57.2
     developer_ergonomics: 48.8
-    discoverability: 57.1
-    operational_transparency: 26.3
-  previous_composite: 50.7
+    discoverability: 66.1
+    operational_transparency: 36.8
+  previous_composite: 50.5
   provenance:
     agentic_access: derived
     contracts:
@@ -394,13 +397,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/amazon-deepracer/refs/heads/main/screenshots/amazon-deepracer-2026-06-20T171619.png
+screenshot: https://apis.io/screenshots/amazon-deepracer/amazon-deepracer-2026-06-20T171619.png
 security:
 - kind: authentication
   name: Amazon Deepracer Authentication
@@ -421,6 +424,7 @@ security:
 slug: amazon-deepracer
 tags:
 - Autonomous Vehicles
+- Amazon Web Services
 - Machine Learning
 - Reinforcement Learning
 - Robotics

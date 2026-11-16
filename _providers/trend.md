@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 20.6
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.trend.io
@@ -139,14 +142,14 @@ apis:
   description: The Upload API from Trend — 2 operation(s) for upload.
   name: Trend Upload API
   slug: trend-upload-api
-artifact_total: 25
+artifact_total: 30
 collections:
 - collection_type: open
   name: Trend API - 1.28.31
   slug: open-trend-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/capabilities/trend-capability-edges.yml
+  href: https://artifacts.apis.io/trend/capabilities/trend-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/trend-capability-edges.yml
@@ -187,7 +190,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/Trend-io
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/openapi/_original/trend-api-openapi.yml
+  href: https://artifacts.apis.io/trend/openapi/_original/trend-api-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/trend-api-openapi.yml
@@ -196,67 +199,67 @@ common:
   type: APIReference
   url: https://api.trend.io/docs-json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/authentication/trend-authentication.yml
+  href: https://artifacts.apis.io/trend/authentication/trend-authentication.yml
   title: ''
   type: Authentication
   url: authentication/trend-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/conventions/trend-conventions.yml
+  href: https://artifacts.apis.io/trend/conventions/trend-conventions.yml
   title: ''
   type: Conventions
   url: conventions/trend-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/data-model/trend-data-model.yml
+  href: https://artifacts.apis.io/trend/data-model/trend-data-model.yml
   title: ''
   type: DataModel
   url: data-model/trend-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/errors/trend-problem-types.yml
+  href: https://artifacts.apis.io/trend/errors/trend-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/trend-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/conformance/trend-conformance.yml
+  href: https://artifacts.apis.io/trend/conformance/trend-conformance.yml
   title: ''
   type: Conformance
   url: conformance/trend-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/lifecycle/trend-lifecycle.yml
+  href: https://artifacts.apis.io/trend/lifecycle/trend-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/trend-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/plans/trend-plans-pricing.yml
+  href: https://artifacts.apis.io/trend/plans/trend-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/trend-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/rate-limits/trend-rate-limits.yml
+  href: https://artifacts.apis.io/trend/rate-limits/trend-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/trend-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/mcp/trend-mcp.yml
+  href: https://artifacts.apis.io/trend/mcp/trend-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/trend-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/overlays/trend-api-overlay.yaml
+  href: https://artifacts.apis.io/trend/overlays/trend-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/trend-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/llms/trend-llms.txt
+  href: https://artifacts.apis.io/trend/llms/trend-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/trend-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/trend/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/security/trend-domain-security.yml
+  href: https://artifacts.apis.io/trend/security/trend-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trend-domain-security.yml
@@ -272,6 +275,9 @@ network: true
 overview: 'Trend publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI API, Auth API, Basic Authentication (AI) API, and 17 more. Tagged areas include Company, User Generated Content, Creator Economy, Content Marketing, and Video Production.
 
 
+  The Trend catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Trend''s developer surface includes pricing, signup flow, support, engineering blog, API reference, authentication, and 19 more developer resources.'
 plans:
 - name: Trend Plans Pricing
@@ -282,29 +288,42 @@ rate_limits:
 - limit_count: 0
   name: Trend Rate Limits
   slug: trend-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Trend API Rules
+  rule_count: 50
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 5
+  slug: trend-rules
 score:
-  band: thin
-  composite: 38.6
+  band: developing
+  composite: 39.5
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 49.0
+    artifact_dirs: 25
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 76.3
-    contract_governance: 4.5
-    contract_quality: 42.2
+    contract_governance: 18.2
+    contract_quality: 39.1
     developer_ergonomics: 28.0
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 38.6
+  previous_composite: 39.5
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 20
@@ -316,13 +335,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/trend/refs/heads/main/screenshots/trend-2026-08-17T082448.png
+screenshot: https://apis.io/screenshots/trend/trend-2026-08-17T082448.png
 security:
 - kind: authentication
   name: Trend Authentication
@@ -332,6 +351,16 @@ security:
   name: Trend Domain Security
   slug: trend-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Buy credits and generate AI product scenes
+  slug: trend-buy-credits-and-generate-ai-scenes
+- name: Find and hire a creator
+  slug: trend-find-and-hire-a-creator
+- name: Run a UGC campaign end to end
+  slug: trend-run-a-ugc-campaign
+- name: Submit content as a creator
+  slug: trend-submit-content-as-a-creator
 slug: trend
 tags:
 - Company

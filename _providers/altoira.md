@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.6
-  scored_at: '2026-10-17'
+  score: 42.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 17
   slug: altoira-agentic-access
   summary_line: 17 operations · 11 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://altoira.sandbox.altoira.com
   baseurl_source: declared
@@ -70,7 +73,7 @@ apis:
   description: Provides access to an investor's account. Generates a token to be used with the "user" endpoints below
   name: AltoIRA OAUTH API
   slug: altoira-oauth-api
-artifact_total: 18
+artifact_total: 21
 asyncapis:
 - description: Alto pushes investment-lifecycle events to a Platform Partner's registered webhook endpoint so the partner can track an investor's progress through the Direction of Investment (DOI), funding and any p
   name: Alto Investment Status Webhooks
@@ -79,9 +82,6 @@ asyncapis:
   name: Altoira Investments Webhooks
   slug: altoira-investments-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: AltoIRA.com Handoffs API
   slug: open-altoira-handoffs-api
@@ -159,97 +159,97 @@ common:
   type: TrustCenter
   url: https://trust.altoira.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/lifecycle/altoira-lifecycle.yml
+  href: https://artifacts.apis.io/altoira/lifecycle/altoira-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/altoira-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/llms/altoira-llms.txt
+  href: https://artifacts.apis.io/altoira/llms/altoira-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/altoira-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/well-known/altoira-well-known.yml
+  href: https://artifacts.apis.io/altoira/well-known/altoira-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/altoira-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/authentication/altoira-authentication.yml
+  href: https://artifacts.apis.io/altoira/authentication/altoira-authentication.yml
   title: ''
   type: Authentication
   url: authentication/altoira-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/scopes/altoira-scopes.yml
+  href: https://artifacts.apis.io/altoira/scopes/altoira-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/altoira-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/conformance/altoira-conformance.yml
+  href: https://artifacts.apis.io/altoira/conformance/altoira-conformance.yml
   title: ''
   type: Conformance
   url: conformance/altoira-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/security/altoira-domain-security.yml
+  href: https://artifacts.apis.io/altoira/security/altoira-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/altoira-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/conventions/altoira-conventions.yml
+  href: https://artifacts.apis.io/altoira/conventions/altoira-conventions.yml
   title: ''
   type: Conventions
   url: conventions/altoira-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/data-model/altoira-data-model.yml
+  href: https://artifacts.apis.io/altoira/data-model/altoira-data-model.yml
   title: ''
   type: DataModel
   url: data-model/altoira-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/sandbox/altoira-sandbox.yml
+  href: https://artifacts.apis.io/altoira/sandbox/altoira-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/altoira-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/agentic-access/altoira-agentic-access.yml
+  href: https://artifacts.apis.io/altoira/agentic-access/altoira-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/altoira-agentic-access.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/openapi/_original/altoira-partner-api-openapi.yml
+  href: https://artifacts.apis.io/altoira/openapi/_original/altoira-partner-api-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/altoira-partner-api-openapi.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/overlays/altoira-partner-api-overlay.yaml
+  href: https://artifacts.apis.io/altoira/overlays/altoira-partner-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/altoira-partner-api-overlay.yaml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/asyncapi/altoira-investments-asyncapi.yml
+  href: https://artifacts.apis.io/altoira/asyncapi/altoira-investments-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/altoira-investments-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/asyncapi/altoira-investments-webhooks.yml
+  href: https://artifacts.apis.io/altoira/asyncapi/altoira-investments-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/altoira-investments-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/errors/altoira-problem-types.yml
+  href: https://artifacts.apis.io/altoira/errors/altoira-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/altoira-problem-types.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/mcp/altoira-mcp.yml
+  href: https://artifacts.apis.io/altoira/mcp/altoira-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/altoira-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/mcp/altoira-tool-crosswalk.yml
+  href: https://artifacts.apis.io/altoira/mcp/altoira-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/altoira-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/altoira/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -264,11 +264,24 @@ network: true
 overview: 'AltoIRA publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Handoffs API, Investment API, Offering API, and 2 more. Tagged areas include Company, Financial Services, Retirement, Self-Directed IRA, and Alternative Investments.
 
 
-  The AltoIRA catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
+  The AltoIRA catalog on APIs.io includes 2 event-driven AsyncAPI specifications and 1 Spectral governance ruleset.
 
 
   AltoIRA''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 27 more developer resources.'
-random_paper: 0
+random_paper: 4
+rules:
+- authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: AltoIRA API Rules
+  rule_count: 69
+  severity_counts:
+    error: 63
+    hint: 0
+    info: 5
+    warn: 1
+  slug: altoira-rules
 scopes:
 - name: Altoira Scopes
   scope_count: 0
@@ -276,20 +289,20 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 46.7
+  composite: 52.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 3.8
   facets:
     access_clarity: 38.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 53.8
-    developer_ergonomics: 47.0
+    developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 26.3
   jurisdiction:
@@ -299,7 +312,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 46.6
+  previous_composite: 48.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -316,13 +329,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/altoira/refs/heads/main/screenshots/altoira-2026-08-07T161253.png
+screenshot: https://apis.io/screenshots/altoira/altoira-2026-08-07T161253.png
 security:
 - kind: authentication
   name: Altoira Authentication
@@ -336,6 +349,14 @@ security:
   name: Altoira Trust Center
   slug: altoira-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: Launch an Alto offering
+  slug: altoira-launch-offering
+- name: Onboard an investor into an Alto offering
+  slug: altoira-onboard-investor
+- name: Return capital to an Alto IRA
+  slug: altoira-return-capital
 slug: altoira
 tags:
 - Company

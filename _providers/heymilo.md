@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 52.3
-  scored_at: '2026-10-17'
+  score: 53.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -44,7 +47,7 @@ agentic_access:
   operation_count: 56
   slug: heymilo-agentic-access
   summary_line: 56 operations · 20 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.heymilo.ai
   baseurl_source: declared
@@ -136,15 +139,12 @@ apis:
   description: List the workspaces accessible to the authenticated caller. API-key callers receive a single entry; OAuth callers receive every workspace they are a member of.
   name: HeyMilo Workspaces API
   slug: heymilo-workspaces-api
-artifact_total: 44
+artifact_total: 47
 asyncapis:
 - description: HeyMilo delivers real-time HTTP notifications across the candidate interview lifecycle. Register a webhook via the Public REST API (POST /api/v2/webhooks) with a destination URL, an event_type, and th
   name: HeyMilo Webhooks
   slug: heymilo-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: HeyMilo Public ATS API
   slug: open-heymilo-ats-api
@@ -200,18 +200,22 @@ collections:
   name: HeyMilo Public ATS Workspaces API
   slug: open-heymilo-workspaces-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/heymilo/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/capabilities/heymilo-capability-edges.yml
+  href: https://artifacts.apis.io/heymilo/capabilities/heymilo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/heymilo-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/agentic-access/heymilo-agentic-access.yml
+  href: https://artifacts.apis.io/heymilo/agentic-access/heymilo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/heymilo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/security/heymilo-domain-security.yml
+  href: https://artifacts.apis.io/heymilo/security/heymilo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/heymilo-domain-security.yml
@@ -276,77 +280,77 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/heymilo/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/mcp/heymilo-mcp.yml
+  href: https://artifacts.apis.io/heymilo/mcp/heymilo-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/heymilo-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/llms/heymilo-llms.txt
+  href: https://artifacts.apis.io/heymilo/llms/heymilo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/heymilo-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/well-known/heymilo-well-known.yml
+  href: https://artifacts.apis.io/heymilo/well-known/heymilo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/heymilo-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/authentication/heymilo-authentication.yml
+  href: https://artifacts.apis.io/heymilo/authentication/heymilo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/heymilo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/conventions/heymilo-conventions.yml
+  href: https://artifacts.apis.io/heymilo/conventions/heymilo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/heymilo-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/rate-limits/heymilo-rate-limits.yml
+  href: https://artifacts.apis.io/heymilo/rate-limits/heymilo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/heymilo-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/errors/heymilo-problem-types.yml
+  href: https://artifacts.apis.io/heymilo/errors/heymilo-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/heymilo-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/lifecycle/heymilo-lifecycle.yml
+  href: https://artifacts.apis.io/heymilo/lifecycle/heymilo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/heymilo-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/conformance/heymilo-conformance.yml
+  href: https://artifacts.apis.io/heymilo/conformance/heymilo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/heymilo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/asyncapi/heymilo-webhooks.yml
+  href: https://artifacts.apis.io/heymilo/asyncapi/heymilo-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/heymilo-webhooks.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/asyncapi/heymilo-webhooks.yml
+  href: https://artifacts.apis.io/heymilo/asyncapi/heymilo-webhooks.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/heymilo-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/data-model/heymilo-data-model.yml
+  href: https://artifacts.apis.io/heymilo/data-model/heymilo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/heymilo-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/components/heymilo-components.yml
+  href: https://artifacts.apis.io/heymilo/components/heymilo-components.yml
   title: ''
   type: Components
   url: components/heymilo-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/heymilo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/overlays/heymilo-openapi-overlay.yaml
+  href: https://artifacts.apis.io/heymilo/overlays/heymilo-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/heymilo-openapi-overlay.yaml
@@ -366,41 +370,54 @@ network: true
 overview: 'HeyMilo publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including ATS API, Candidates API, Design Template Groups API, and 15 more. Tagged areas include Company, Recruiting, Hiring, Human Resources, and Artificial Intelligence.
 
 
-  The HeyMilo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The HeyMilo catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  HeyMilo''s developer surface includes documentation, API reference, getting-started guide, signup flow, engineering blog, support, authentication, and 26 more developer resources.'
-random_paper: 11
+  HeyMilo''s developer surface includes documentation, API reference, getting-started guide, signup flow, engineering blog, support, authentication, and 27 more developer resources.'
+random_paper: 15
 rate_limits:
 - limit_count: 1
   name: Heymilo Rate Limits
   slug: heymilo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: HeyMilo API Rules
+  rule_count: 64
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 2
+    warn: 14
+  slug: heymilo-rules
 score:
   band: developing
-  composite: 50.8
+  composite: 54.1
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 45.0
+    artifact_dirs: 27
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.4
   facets:
     access_clarity: 46.1
-    contract_governance: 18.2
-    contract_quality: 57.7
-    developer_ergonomics: 58.9
+    contract_governance: 31.8
+    contract_quality: 63.2
+    developer_ergonomics: 60.1
     discoverability: 75.0
     operational_transparency: 39.5
-  previous_composite: 50.8
+  previous_composite: 52.7
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 18
     mcp: first-party
     skills: derived
@@ -410,13 +427,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/heymilo/refs/heads/main/screenshots/heymilo-2026-07-25T221122.png
+screenshot: https://apis.io/screenshots/heymilo/heymilo-2026-07-25T221122.png
 security:
 - kind: authentication
   name: Heymilo Authentication
@@ -430,6 +447,14 @@ security:
   name: Heymilo Trust Center
   slug: heymilo-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: Create an interviewer and ingest candidates
+  slug: heymilo-create-interviewer-and-ingest
+- name: Review a candidate pipeline and pull interview results
+  slug: heymilo-review-pipeline
+- name: Subscribe to interview events and sync candidates to the ATS
+  slug: heymilo-webhooks-and-ats-sync
 slug: heymilo
 tags:
 - Company

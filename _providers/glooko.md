@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -86,32 +90,32 @@ common:
   type: Security
   url: https://glooko.com/trust-privacy/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/glooko/refs/heads/main/conformance/glooko-conformance.yml
+  href: https://artifacts.apis.io/glooko/conformance/glooko-conformance.yml
   title: ''
   type: Conformance
   url: conformance/glooko-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/glooko/refs/heads/main/security/glooko-trust-center.yml
+  href: https://artifacts.apis.io/glooko/security/glooko-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/glooko-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/glooko/refs/heads/main/security/glooko-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/glooko/security/glooko-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/glooko-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/glooko/refs/heads/main/security/glooko-domain-security.yml
+  href: https://artifacts.apis.io/glooko/security/glooko-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/glooko-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/glooko/refs/heads/main/authentication/glooko-authentication.yml
+  href: https://artifacts.apis.io/glooko/authentication/glooko-authentication.yml
   title: ''
   type: Authentication
   url: authentication/glooko-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/glooko/refs/heads/main/llms/glooko-llms.txt
+  href: https://artifacts.apis.io/glooko/llms/glooko-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/glooko-llms.txt
@@ -127,12 +131,12 @@ overview: 'Glooko is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Glooko''s developer surface includes documentation, support, engineering blog, authentication, and 14 more developer resources.'
-random_paper: 13
+random_paper: 3
 score:
   band: emerging
   composite: 24.3
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -165,14 +169,14 @@ score:
     regime: Health
     regime_id: health
     score: 39.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/glooko/refs/heads/main/screenshots/glooko-2026-07-25T215919.png
+screenshot: https://apis.io/screenshots/glooko/glooko-2026-07-25T215919.png
 security:
 - kind: authentication
   name: Glooko Authentication

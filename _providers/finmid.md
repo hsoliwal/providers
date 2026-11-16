@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 43
   human_in_the_loop: 0
@@ -148,37 +151,37 @@ asyncapis:
   slug: finmid-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/agentic-access/finmid-agentic-access.yml
+  href: https://artifacts.apis.io/finmid/agentic-access/finmid-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/finmid-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/rules/finmid-rules.yml
+  href: https://artifacts.apis.io/finmid/rules/finmid-rules.yml
   title: ''
   type: Spectral
   url: rules/finmid-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/vocabulary/finmid-vocabulary.yml
+  href: https://artifacts.apis.io/finmid/vocabulary/finmid-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/finmid-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/errors/finmid-problem-types.yml
+  href: https://artifacts.apis.io/finmid/errors/finmid-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/finmid-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/hosts/finmid-hosts.yml
+  href: https://artifacts.apis.io/finmid/hosts/finmid-hosts.yml
   title: ''
   type: Hosts
   url: hosts/finmid-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/vendors/finmid-vendors.yml
+  href: https://artifacts.apis.io/finmid/vendors/finmid-vendors.yml
   title: ''
   type: Vendors
   url: vendors/finmid-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/security/finmid-domain-security.yml
+  href: https://artifacts.apis.io/finmid/security/finmid-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/finmid-domain-security.yml
@@ -235,57 +238,57 @@ common:
   type: StatusPage
   url: https://finmid.statuspage.io
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/lifecycle/finmid-lifecycle.yml
+  href: https://artifacts.apis.io/finmid/lifecycle/finmid-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/finmid-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/llms/finmid-llms.txt
+  href: https://artifacts.apis.io/finmid/llms/finmid-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/finmid-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/authentication/finmid-authentication.yml
+  href: https://artifacts.apis.io/finmid/authentication/finmid-authentication.yml
   title: ''
   type: Authentication
   url: authentication/finmid-authentication.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/sandbox/finmid-sandbox.yml
+  href: https://artifacts.apis.io/finmid/sandbox/finmid-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/finmid-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/errors/finmid-error-codes.yml
+  href: https://artifacts.apis.io/finmid/errors/finmid-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/finmid-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/asyncapi/finmid-webhooks.yml
+  href: https://artifacts.apis.io/finmid/asyncapi/finmid-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/finmid-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/conventions/finmid-conventions.yml
+  href: https://artifacts.apis.io/finmid/conventions/finmid-conventions.yml
   title: ''
   type: Conventions
   url: conventions/finmid-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/components/finmid-components.yml
+  href: https://artifacts.apis.io/finmid/components/finmid-components.yml
   title: ''
   type: Components
   url: components/finmid-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/conformance/finmid-conformance.yml
+  href: https://artifacts.apis.io/finmid/conformance/finmid-conformance.yml
   title: ''
   type: Conformance
   url: conformance/finmid-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/mcp/finmid-mcp.yml
+  href: https://artifacts.apis.io/finmid/mcp/finmid-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/finmid-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/data-model/finmid-data-model.yml
+  href: https://artifacts.apis.io/finmid/data-model/finmid-data-model.yml
   title: ''
   type: DataModel
   url: data-model/finmid-data-model.yml
@@ -304,7 +307,7 @@ overview: 'Finmid publishes 20 API contracts indexed on the [APIs.io](https://ap
 
 
   Finmid''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, support, authentication, and 24 more developer resources.'
-random_paper: 15
+random_paper: 7
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -320,22 +323,22 @@ rules:
   slug: finmid-rules
 score:
   band: developing
-  composite: 44.2
+  composite: 48.7
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 42.8
     catalog_earned_first_party: 0.0
     catalog_gap: 72.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 9.3
+  delta: 4.5
   facets:
     access_clarity: 21.1
     contract_governance: 22.0
-    contract_quality: 57.3
-    developer_ergonomics: 48.8
+    contract_quality: 62.7
+    developer_ergonomics: 61.9
     discoverability: 73.2
-    operational_transparency: 22.4
+    operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -344,7 +347,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 34.9
+  previous_composite: 44.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -360,13 +363,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 25.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/finmid/refs/heads/main/screenshots/finmid-2026-07-25T214532.png
+screenshot: https://apis.io/screenshots/finmid/finmid-2026-07-25T214532.png
 security:
 - kind: authentication
   name: Finmid Authentication

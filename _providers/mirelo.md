@@ -1,15 +1,19 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: human-only
   dimensions:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Self-serve REST API to generate and edit sound effects from video or text. Bearer-token (API key) auth; JSON request/response returning generated audio asset URLs; synchronous and asynchronous (job-po
@@ -43,7 +50,7 @@ apis:
 artifact_total: 4
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/plans/mirelo-plans-pricing.yml
+  href: https://artifacts.apis.io/mirelo/plans/mirelo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mirelo-plans-pricing.yml
@@ -96,52 +103,52 @@ common:
   type: StatusPage
   url: https://status.mirelo.ai
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/authentication/mirelo-authentication.yml
+  href: https://artifacts.apis.io/mirelo/authentication/mirelo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mirelo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/conventions/mirelo-conventions.yml
+  href: https://artifacts.apis.io/mirelo/conventions/mirelo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/mirelo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/lifecycle/mirelo-lifecycle.yml
+  href: https://artifacts.apis.io/mirelo/lifecycle/mirelo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mirelo-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/changelog/mirelo-changelog.yml
+  href: https://artifacts.apis.io/mirelo/changelog/mirelo-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/mirelo-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/packages/mirelo-packages.yml
+  href: https://artifacts.apis.io/mirelo/packages/mirelo-packages.yml
   title: ''
   type: Packages
   url: packages/mirelo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/packages/mirelo-packages.yml
+  href: https://artifacts.apis.io/mirelo/packages/mirelo-packages.yml
   title: ''
   type: SDKs
   url: packages/mirelo-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/mcp/mirelo-mcp.yml
+  href: https://artifacts.apis.io/mirelo/mcp/mirelo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/mirelo-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/components/mirelo-components.yml
+  href: https://artifacts.apis.io/mirelo/components/mirelo-components.yml
   title: ''
   type: Components
   url: components/mirelo-components.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/security/mirelo-domain-security.yml
+  href: https://artifacts.apis.io/mirelo/security/mirelo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mirelo-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/llms/mirelo-llms.txt
+  href: https://artifacts.apis.io/mirelo/llms/mirelo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mirelo-llms.txt
@@ -161,18 +168,18 @@ plans:
 - name: Mirelo Plans Pricing
   plan_count: 6
   slug: mirelo-plans-pricing
-random_paper: 10
+random_paper: 0
 score:
   band: thin
   composite: 35.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.0
+  delta: 0.0
   facets:
     access_clarity: 76.3
     contract_governance: 0.0
@@ -188,7 +195,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 29.5
+  previous_composite: 35.5
   provenance:
     mcp: third-party
   regulatory:
@@ -197,14 +204,14 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 18.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mirelo/refs/heads/main/screenshots/mirelo-2026-08-07T183717.png
+screenshot: https://apis.io/screenshots/mirelo/mirelo-2026-08-07T183717.png
 security:
 - kind: authentication
   name: Mirelo Authentication

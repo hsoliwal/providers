@@ -22,21 +22,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.9
-  scored_at: '2026-10-17'
+  score: 48.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 48
   human_in_the_loop: 0
@@ -131,7 +134,7 @@ apis:
   description: 'This section describes the Viator built API(s) available for reservation system consumption. **Note**: For these APIs, the request is sent **to** Viator and the response is received **from** Viator.'
   name: Viator APIs
   slug: viator-viator-apis-api
-artifact_total: 26
+artifact_total: 32
 asyncapis:
 - description: ''
   name: Viator Events
@@ -151,22 +154,22 @@ collections:
   slug: open-viator-reservation-system-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/capabilities/viator-capability-edges.yml
+  href: https://artifacts.apis.io/viator/capabilities/viator-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/viator-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/agentic-access/viator-agentic-access.yml
+  href: https://artifacts.apis.io/viator/agentic-access/viator-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/viator-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/security/viator-domain-security.yml
+  href: https://artifacts.apis.io/viator/security/viator-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/viator-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/authentication/viator-authentication.yml
+  href: https://artifacts.apis.io/viator/authentication/viator-authentication.yml
   title: ''
   type: Authentication
   url: authentication/viator-authentication.yml
@@ -195,22 +198,22 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/viator
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/collections/Viator-Basic-Access-Affiliate-API-v2.postman_collection.json
+  href: https://artifacts.apis.io/viator/collections/Viator-Basic-Access-Affiliate-API-v2.postman_collection.json
   title: ''
   type: PostmanCollection
   url: collections/Viator-Basic-Access-Affiliate-API-v2.postman_collection.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/collections/Viator-Affiliate-API-v2.postman_collection.json
+  href: https://artifacts.apis.io/viator/collections/Viator-Affiliate-API-v2.postman_collection.json
   title: ''
   type: PostmanCollection
   url: collections/Viator-Affiliate-API-v2.postman_collection.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/collections/Viator-Affiliate-Booking-API-v2.postman_collection.json
+  href: https://artifacts.apis.io/viator/collections/Viator-Affiliate-Booking-API-v2.postman_collection.json
   title: ''
   type: PostmanCollection
   url: collections/Viator-Affiliate-Booking-API-v2.postman_collection.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/collections/Viator-Merchant-API-v2.postman_collection.json
+  href: https://artifacts.apis.io/viator/collections/Viator-Merchant-API-v2.postman_collection.json
   title: ''
   type: PostmanCollection
   url: collections/Viator-Merchant-API-v2.postman_collection.json
@@ -247,27 +250,27 @@ common:
   type: PrivacyPolicy
   url: https://www.viator.com/support/privacyPolicy
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/conventions/viator-conventions.yml
+  href: https://artifacts.apis.io/viator/conventions/viator-conventions.yml
   title: ''
   type: Conventions
   url: conventions/viator-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/conventions/viator-conventions.yml
+  href: https://artifacts.apis.io/viator/conventions/viator-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/viator-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/errors/viator-problem-types.yml
+  href: https://artifacts.apis.io/viator/errors/viator-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/viator-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/rate-limits/viator-rate-limits.yml
+  href: https://artifacts.apis.io/viator/rate-limits/viator-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/viator-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/lifecycle/viator-lifecycle.yml
+  href: https://artifacts.apis.io/viator/lifecycle/viator-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/viator-lifecycle.yml
@@ -276,77 +279,77 @@ common:
   type: Deprecation
   url: https://docs.viator.com/partner-api/technical/#section/Localization/API-versioning-strategy
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/changelog/viator-changelog.yml
+  href: https://artifacts.apis.io/viator/changelog/viator-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/viator-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/conformance/viator-conformance.yml
+  href: https://artifacts.apis.io/viator/conformance/viator-conformance.yml
   title: ''
   type: Conformance
   url: conformance/viator-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/data-model/viator-data-model.yml
+  href: https://artifacts.apis.io/viator/data-model/viator-data-model.yml
   title: ''
   type: DataModel
   url: data-model/viator-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/sandbox/viator-sandbox.yml
+  href: https://artifacts.apis.io/viator/sandbox/viator-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/viator-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/packages/viator-packages.yml
+  href: https://artifacts.apis.io/viator/packages/viator-packages.yml
   title: ''
   type: Packages
   url: packages/viator-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/components/viator-components.yml
+  href: https://artifacts.apis.io/viator/components/viator-components.yml
   title: ''
   type: Components
   url: components/viator-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/asyncapi/viator-events.yml
+  href: https://artifacts.apis.io/viator/asyncapi/viator-events.yml
   title: ''
   type: Webhooks
   url: asyncapi/viator-events.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/mcp/viator-mcp.yml
+  href: https://artifacts.apis.io/viator/mcp/viator-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/viator-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/mcp/viator-tool-crosswalk.yml
+  href: https://artifacts.apis.io/viator/mcp/viator-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/viator-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/viator/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/llms/viator-llms.txt
+  href: https://artifacts.apis.io/viator/llms/viator-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/viator-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/overlays/viator-partner-api-v2-overlay.yaml
+  href: https://artifacts.apis.io/viator/overlays/viator-partner-api-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/viator-partner-api-v2-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/overlays/viator-reservation-system-api-overlay.yaml
+  href: https://artifacts.apis.io/viator/overlays/viator-reservation-system-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/viator-reservation-system-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/overlays/viator-merchant-api-v1-overlay.yaml
+  href: https://artifacts.apis.io/viator/overlays/viator-merchant-api-v1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/viator-merchant-api-v1-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/overlays/viator-affiliate-api-v1-overlay.yaml
+  href: https://artifacts.apis.io/viator/overlays/viator-affiliate-api-v1-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/viator-affiliate-api-v1-overlay.yaml
@@ -362,30 +365,43 @@ network: true
 overview: 'Viator publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Attraction services API, Attractions API, Auxiliary API, and 14 more. Tagged areas include Travel, United States, Tours and Activities, Experience, and OTA.
 
 
-  The Viator catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Viator catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Viator''s developer surface includes authentication, documentation, developer portal, support, engineering blog, API reference, getting-started guide, and 36 more developer resources.'
-random_paper: 1
+random_paper: 13
 rate_limits:
 - limit_count: 0
   name: Viator Rate Limits
   slug: viator-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Viator API Rules
+  rule_count: 62
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 7
+    warn: 10
+  slug: viator-rules
 score:
   band: developing
-  composite: 48.2
+  composite: 49.7
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 40.0
+    artifact_dirs: 28
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
-    contract_quality: 56.9
+    contract_governance: 18.2
+    contract_quality: 56.4
     developer_ergonomics: 62.5
     discoverability: 71.4
     operational_transparency: 31.6
@@ -396,12 +412,12 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.1
+  previous_composite: 49.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 82.4
+      callable: 64.7
       derived: 0
       marker_coverage: 0.0
       total: 17
@@ -413,13 +429,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/viator/refs/heads/main/screenshots/viator-2026-08-17T082742.png
+screenshot: https://apis.io/screenshots/viator/viator-2026-08-17T082742.png
 security:
 - kind: authentication
   name: Viator Authentication
@@ -429,6 +445,18 @@ security:
   name: Viator Domain Security
   slug: viator-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 5
+skills:
+- name: Amend, cancel and reconcile Viator bookings
+  slug: viator-amend-cancel-and-reconcile
+- name: Book a multi-item Viator cart and tokenise payment
+  slug: viator-cart-booking-and-payment
+- name: Ingest and maintain the Viator product catalogue
+  slug: viator-ingest-product-catalogue
+- name: Implement Viator reservation-system connectivity (supplier side)
+  slug: viator-reservation-system-connectivity
+- name: Search, check availability and complete a Viator booking
+  slug: viator-search-and-book
 slug: viator
 tags:
 - Travel

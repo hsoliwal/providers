@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,20 +26,23 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.4
-  scored_at: '2026-10-17'
+  score: 33.8
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: Checkout API provides payment processing endpoints as documented in the API reference.
   name: Checkout API
-  slug: checkout-api-2
+  slug: checkout-api
 - description: The Checkout API API from Checkout — 1 operation(s) for checkout api.
   name: Checkout Checkout API
   slug: checkout-checkout-api-api
@@ -38,79 +52,84 @@ apis:
 - description: The Payments API from Checkout — 1 operation(s) for payments.
   name: Checkout Payments API
   slug: checkout-payments-api
-artifact_total: 11
+artifact_total: 13
 asyncapis:
 - description: ''
   name: Checkout Webhooks
   slug: checkout-webhooks
 common:
+- group: commercial
+  href: https://artifacts.apis.io/checkout/plans/checkout-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/checkout-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/rules/checkout-rules.yml
+  href: https://artifacts.apis.io/checkout/rules/checkout-rules.yml
   title: ''
   type: Spectral
   url: rules/checkout-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/json-ld/checkout-context.jsonld
+  href: https://artifacts.apis.io/checkout/json-ld/checkout-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/checkout-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/vocabulary/checkout-vocabulary.yml
+  href: https://artifacts.apis.io/checkout/vocabulary/checkout-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/checkout-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/asyncapi/checkout-webhooks.yml
+  href: https://artifacts.apis.io/checkout/asyncapi/checkout-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/checkout-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/data-model/checkout-data-model.yml
+  href: https://artifacts.apis.io/checkout/data-model/checkout-data-model.yml
   title: ''
   type: DataModel
   url: data-model/checkout-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/security/checkout-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/checkout/security/checkout-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/checkout-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/authentication/checkout-authentication.yml
+  href: https://artifacts.apis.io/checkout/authentication/checkout-authentication.yml
   title: ''
   type: Authentication
   url: authentication/checkout-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/conformance/checkout-conformance.yml
+  href: https://artifacts.apis.io/checkout/conformance/checkout-conformance.yml
   title: ''
   type: Conformance
   url: conformance/checkout-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/llms/checkout-llms.txt
+  href: https://artifacts.apis.io/checkout/llms/checkout-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/checkout-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/well-known/checkout-well-known.yml
+  href: https://artifacts.apis.io/checkout/well-known/checkout-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/checkout-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/hosts/checkout-hosts.yml
+  href: https://artifacts.apis.io/checkout/hosts/checkout-hosts.yml
   title: ''
   type: Hosts
   url: hosts/checkout-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/vendors/checkout-vendors.yml
+  href: https://artifacts.apis.io/checkout/vendors/checkout-vendors.yml
   title: ''
   type: Vendors
   url: vendors/checkout-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/packages/checkout-packages.yml
+  href: https://artifacts.apis.io/checkout/packages/checkout-packages.yml
   title: ''
   type: SDKs
   url: packages/checkout-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/packages/checkout-packages.yml
+  href: https://artifacts.apis.io/checkout/packages/checkout-packages.yml
   title: ''
   type: Packages
   url: packages/checkout-packages.yml
@@ -171,12 +190,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/checkout
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/security/checkout-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/checkout/security/checkout-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/checkout-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/checkout/refs/heads/main/security/checkout-domain-security.yml
+  href: https://artifacts.apis.io/checkout/security/checkout-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/checkout-domain-security.yml
@@ -195,6 +214,14 @@ coverage:
   state: gated
 created: '2026-10-08'
 description: Checkout is a global payments platform offering a suite of APIs and tools that enable businesses to accept, process, and manage online payments. It provides unified payments API, hosted payment pages, mobile SDKs, fraud detection, authentication, issuing, payouts, and advanced features like AI-driven intelligent acceptance and real‑time account updates. Checkout serves enterprises across e‑commerce, marketplaces, travel, gaming, fintech, and more, delivering high‑performance, secure, and scalable payment solutions worldwide.
+finops:
+- has_sources: true
+  method: derived
+  name: Checkout Finops
+  primary_unit: ''
+  service_category: ''
+  slug: checkout-finops
+  template: true
 image: https://cdn.prod.website-files.com/64db80a5e88c6b1723ff760b/67e2bd4ddf0a87a1400c020d_website-thumbnail.jpg
 json_schemas:
 - name: PostRequest
@@ -210,14 +237,18 @@ modified: '2026-10-08'
 name: Checkout
 nav: Providers
 network: true
-overview: 'Checkout is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Checkout API, Connect API, Payments API, and 1 more. Tagged areas include Payments, Fintech, E-Commerce, and Global.
+overview: 'Checkout is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Checkout API, Connect API, and 2 more. Tagged areas include Payments, Fintech, E-Commerce, and Global.
 
 
   The Checkout catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Checkout''s developer surface includes authentication, support, signup flow, pricing, engineering blog, getting-started guide, documentation, and 24 more developer resources.'
-random_paper: 18
+  Checkout''s developer surface includes authentication, support, signup flow, pricing, engineering blog, getting-started guide, documentation, and 25 more developer resources.'
+plans:
+- name: Checkout Plans Pricing
+  plan_count: 0
+  slug: checkout-plans-pricing
+random_paper: 14
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -232,22 +263,29 @@ rules:
     warn: 1
   slug: checkout-rules
 score:
-  band: developing
-  composite: 43.2
+  band: thin
+  composite: 34.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 23
     catalog_earned: 46.2
     catalog_earned_first_party: 0.0
     catalog_gap: 68.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.0
   facets:
-    access_clarity: 52.6
+    access_clarity: 31.6
     contract_governance: 22.0
     contract_quality: 25.4
-    developer_ergonomics: 54.8
-    discoverability: 64.3
-    operational_transparency: 39.5
+    developer_ergonomics: 41.7
+    discoverability: 62.5
+    operational_transparency: 28.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - global
+  previous_composite: 43.2
   provenance:
     conformance: derived
     contracts:
@@ -261,12 +299,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 32.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 28.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/checkout/checkout-2026-11-03T123933.png
 security:
 - kind: authentication
   name: Checkout Authentication

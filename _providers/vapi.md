@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 48
   human_in_the_loop: 48
@@ -123,11 +126,8 @@ apis:
   description: The Tools API from Vapi — 2 operation(s) for tools.
   name: Vapi Tools API
   slug: vapi-tools-api
-artifact_total: 922
+artifact_total: 921
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Vapi Analytics API
   slug: open-vapi-analytics-api
@@ -182,27 +182,27 @@ common:
   type: Blog
   url: https://vapi.ai/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vapi/refs/heads/main/capabilities/vapi-capability-edges.yml
+  href: https://artifacts.apis.io/vapi/capabilities/vapi-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/vapi-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vapi/refs/heads/main/agentic-access/vapi-agentic-access.yml
+  href: https://artifacts.apis.io/vapi/agentic-access/vapi-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/vapi-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vapi/refs/heads/main/security/vapi-trust-center.yml
+  href: https://artifacts.apis.io/vapi/security/vapi-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/vapi-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vapi/refs/heads/main/security/vapi-domain-security.yml
+  href: https://artifacts.apis.io/vapi/security/vapi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vapi-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vapi/refs/heads/main/authentication/vapi-authentication.yml
+  href: https://artifacts.apis.io/vapi/authentication/vapi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/vapi-authentication.yml
@@ -223,22 +223,22 @@ common:
   type: Documentation
   url: https://docs.vapi.ai/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/vapi/refs/heads/main/openapi/_original/vapi-openapi.yml
+  href: https://artifacts.apis.io/vapi/openapi/_original/vapi-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/vapi-openapi.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vapi/refs/heads/main/plans/vapi-plans-pricing.yml
+  href: https://artifacts.apis.io/vapi/plans/vapi-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/vapi-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vapi/refs/heads/main/rate-limits/vapi-rate-limits.yml
+  href: https://artifacts.apis.io/vapi/rate-limits/vapi-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/vapi-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vapi/refs/heads/main/finops/vapi-finops.yml
+  href: https://artifacts.apis.io/vapi/finops/vapi-finops.yml
   title: ''
   type: FinOps
   url: finops/vapi-finops.yml
@@ -2918,7 +2918,7 @@ plans:
 - name: Vapi Plans Pricing
   plan_count: 2
   slug: vapi-plans-pricing
-random_paper: 14
+random_paper: 0
 rate_limits:
 - limit_count: 2
   name: Vapi Rate Limits
@@ -2937,23 +2937,23 @@ rules:
   slug: vapi-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 34.4
+  composite: 35.1
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 44.3
+    artifact_dirs: 20
+    catalog_earned: 46.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 70.8
+    catalog_gap: 68.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.1
+  delta: 0.7
   facets:
     access_clarity: 36.8
-    contract_governance: 9.8
+    contract_governance: 15.9
     contract_quality: 46.8
     developer_ergonomics: 23.8
     discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 35.5
+  previous_composite: 34.4
   provenance:
     agentic_access: derived
     contracts:
@@ -2967,13 +2967,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 13.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/vapi/refs/heads/main/screenshots/vapi-2026-06-20T200920.png
+screenshot: https://apis.io/screenshots/vapi/vapi-2026-06-20T200920.png
 security:
 - kind: authentication
   name: Vapi Authentication

@@ -27,16 +27,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 30.0
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 29.4
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - description: The institution-facing integration surface behind vle.kortext.com — 1EdTech LTI 1.1 launch and LTI 1.3 Deep Linking endpoints that place Kortext content and KeyLinks reading lists inside Blackboard, M
   name: Kortext VLE / LTI Integration API
@@ -84,19 +87,19 @@ apis:
   description: The Test API from Kortext — 2 operation(s) for test.
   name: Kortext Test API
   slug: kortext-test-api
-artifact_total: 14
+artifact_total: 18
 common:
 - group: company
   title: ''
   type: BlogRSS
   url: https://kortext.com/us/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/capabilities/kortext-capability-edges.yml
+  href: https://artifacts.apis.io/kortext/capabilities/kortext-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/kortext-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/security/kortext-domain-security.yml
+  href: https://artifacts.apis.io/kortext/security/kortext-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kortext-domain-security.yml
@@ -153,67 +156,67 @@ common:
   type: HelpCenter
   url: https://support.na1.kortext.com/s/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/authentication/kortext-authentication.yml
+  href: https://artifacts.apis.io/kortext/authentication/kortext-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kortext-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/conventions/kortext-conventions.yml
+  href: https://artifacts.apis.io/kortext/conventions/kortext-conventions.yml
   title: ''
   type: Conventions
   url: conventions/kortext-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/errors/kortext-problem-types.yml
+  href: https://artifacts.apis.io/kortext/errors/kortext-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/kortext-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/data-model/kortext-data-model.yml
+  href: https://artifacts.apis.io/kortext/data-model/kortext-data-model.yml
   title: ''
   type: DataModel
   url: data-model/kortext-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/lifecycle/kortext-lifecycle.yml
+  href: https://artifacts.apis.io/kortext/lifecycle/kortext-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kortext-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/conformance/kortext-conformance.yml
+  href: https://artifacts.apis.io/kortext/conformance/kortext-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kortext-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/packages/kortext-packages.yml
+  href: https://artifacts.apis.io/kortext/packages/kortext-packages.yml
   title: ''
   type: Packages
   url: packages/kortext-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/llms/kortext-llms.txt
+  href: https://artifacts.apis.io/kortext/llms/kortext-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kortext-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/overlays/kortext-labs-api-overlay.yaml
+  href: https://artifacts.apis.io/kortext/overlays/kortext-labs-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/kortext-labs-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/kortext/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/plans/kortext-plans-pricing.yml
+  href: https://artifacts.apis.io/kortext/plans/kortext-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kortext-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/rate-limits/kortext-rate-limits.yml
+  href: https://artifacts.apis.io/kortext/rate-limits/kortext-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kortext-rate-limits.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/changelog/kortext-changelog.yml
+  href: https://artifacts.apis.io/kortext/changelog/kortext-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/kortext-changelog.yml
@@ -232,6 +235,14 @@ common:
 created: '2026-08-23'
 description: Kortext is a UK-headquartered digital learning and student engagement company, founded in 2013 and led by CEO James Gray, that supplies etextbooks, course content, AI study tools and learning analytics to higher education institutions in the UK, US, Ireland, Australia and the Middle East. Its platform family covers content delivery and reading (Kortext study, read.kortext.com), the AI-assisted study layer (Kortext study+, Kortext IQ), teaching and reading-list tools (Kortext teach, KeyLinks), library acquisition workflows (Kortext acquire), engagement analytics (Kortext insights) and the unified Kortext fusion content and data layer. Publisher partners include Pearson, Wiley, McGraw Hill, Taylor & Francis, Oxford University Press and Palgrave, and in 2025 Follett Higher Education moved its North American ebook delivery onto Kortext. Institutional integration runs over 1EdTech LTI 1.1 and LTI 1.3 (including Deep Linking) into Blackboard, Moodle, Canvas and other VLEs, plus EDI
   and API integration with library management systems such as Ex Libris Alma. Kortext does not operate a public developer portal; its production APIs are authenticated and undocumented publicly, and the only openly published machine-readable contract is the OpenAPI 3.1 description of its AI "labs" study-tools API.
+finops:
+- has_sources: true
+  method: derived
+  name: Kortext Finops
+  primary_unit: ''
+  service_category: ''
+  slug: kortext-finops
+  template: true
 image: https://kortext.com/us/wp-content/uploads/2024/07/Kortext-White-EST-logo-transparent-980x255.png
 layout: provider
 modified: '2026-10-06'
@@ -241,31 +252,47 @@ network: true
 overview: 'Kortext publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Chat API, Content API, Health Checks API, and 7 more. Tagged areas include Education, EdTech, Higher Education, Digital Textbooks, and Learning Analytics.
 
 
+  The Kortext catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Kortext''s developer surface includes documentation, API reference, support, engineering blog, signup flow, getting-started guide, authentication, and 25 more developer resources.'
 plans:
 - name: Kortext Plans Pricing
   plan_count: 0
   slug: kortext-plans-pricing
-random_paper: 15
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Kortext Rate Limits
   slug: kortext-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: Kortext API Rules
+  rule_count: 48
+  severity_counts:
+    error: 35
+    hint: 0
+    info: 3
+    warn: 10
+  slug: kortext-rules
 score:
   band: developing
-  composite: 40.1
+  composite: 43.0
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.2
   facets:
     access_clarity: 34.2
-    contract_governance: 18.2
-    contract_quality: 42.9
+    contract_governance: 31.8
+    contract_quality: 47.7
     developer_ergonomics: 58.9
     discoverability: 66.1
     operational_transparency: 15.8
@@ -274,13 +301,13 @@ score:
     countries:
     - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 40.1
+  previous_composite: 41.8
   provenance:
     conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 8
     mcp: derived
     skills: derived
@@ -290,13 +317,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kortext/refs/heads/main/screenshots/kortext-2026-09-02T150138.png
+screenshot: https://apis.io/screenshots/kortext/kortext-2026-09-02T150138.png
 security:
 - kind: authentication
   name: Kortext Authentication
@@ -306,6 +333,12 @@ security:
   name: Kortext Domain Security
   slug: kortext-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 2
+skills:
+- name: kortext-quiz-a-textbook
+  slug: kortext-quiz-a-textbook
+- name: kortext-study-artifacts-from-content
+  slug: kortext-study-artifacts-from-content
 slug: kortext
 tags:
 - Education

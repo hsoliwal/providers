@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.2
-  scored_at: '2026-10-17'
+  score: 26.0
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: OBIE Read/Write Account and Transaction Information (AIS) API providing consented access to Nationwide account, balance, and transaction data for authorised third-party providers. FAPI-secured (OAuth2
@@ -63,7 +68,7 @@ apis:
   description: Endpoint for getting Personal Current Account data
   name: Nationwide Building Society PCA API
   slug: nationwide-building-society-pca-api
-artifact_total: 14
+artifact_total: 16
 collections:
 - collection_type: open
   name: Open Data API
@@ -76,17 +81,17 @@ collections:
   slug: open-obie-open-data-personal-current-accounts
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/capabilities/nationwide-building-society-capability-edges.yml
+  href: https://artifacts.apis.io/nationwide-building-society/capabilities/nationwide-building-society-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/nationwide-building-society-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/security/nationwide-building-society-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/nationwide-building-society/security/nationwide-building-society-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/nationwide-building-society-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/security/nationwide-building-society-domain-security.yml
+  href: https://artifacts.apis.io/nationwide-building-society/security/nationwide-building-society-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nationwide-building-society-domain-security.yml
@@ -135,92 +140,92 @@ common:
   type: Security
   url: https://www.nationwide.co.uk/help/fraud-and-security/report-security-vulnerability
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/well-known/nationwide-building-society-security.txt
+  href: https://artifacts.apis.io/nationwide-building-society/well-known/nationwide-building-society-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/nationwide-building-society-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/well-known/nationwide-building-society-well-known.yml
+  href: https://artifacts.apis.io/nationwide-building-society/well-known/nationwide-building-society-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/nationwide-building-society-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/authentication/nationwide-building-society-authentication.yml
+  href: https://artifacts.apis.io/nationwide-building-society/authentication/nationwide-building-society-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nationwide-building-society-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/scopes/nationwide-building-society-scopes.yml
+  href: https://artifacts.apis.io/nationwide-building-society/scopes/nationwide-building-society-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/nationwide-building-society-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/conventions/nationwide-building-society-conventions.yml
+  href: https://artifacts.apis.io/nationwide-building-society/conventions/nationwide-building-society-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nationwide-building-society-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/conventions/nationwide-building-society-conventions.yml
+  href: https://artifacts.apis.io/nationwide-building-society/conventions/nationwide-building-society-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/nationwide-building-society-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/conformance/nationwide-building-society-conformance.yml
+  href: https://artifacts.apis.io/nationwide-building-society/conformance/nationwide-building-society-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nationwide-building-society-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/errors/nationwide-building-society-problem-types.yml
+  href: https://artifacts.apis.io/nationwide-building-society/errors/nationwide-building-society-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/nationwide-building-society-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/lifecycle/nationwide-building-society-lifecycle.yml
+  href: https://artifacts.apis.io/nationwide-building-society/lifecycle/nationwide-building-society-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nationwide-building-society-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/lifecycle/nationwide-building-society-lifecycle.yml
+  href: https://artifacts.apis.io/nationwide-building-society/lifecycle/nationwide-building-society-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/nationwide-building-society-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/data-model/nationwide-building-society-data-model.yml
+  href: https://artifacts.apis.io/nationwide-building-society/data-model/nationwide-building-society-data-model.yml
   title: ''
   type: DataModel
   url: data-model/nationwide-building-society-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/mcp/nationwide-building-society-mcp.yml
+  href: https://artifacts.apis.io/nationwide-building-society/mcp/nationwide-building-society-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/nationwide-building-society-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/mcp/nationwide-building-society-tool-crosswalk.yml
+  href: https://artifacts.apis.io/nationwide-building-society/mcp/nationwide-building-society-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/nationwide-building-society-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/skills/nationwide-building-society-open-data-discovery.md
+  href: https://artifacts.apis.io/nationwide-building-society/skills/nationwide-building-society-open-data-discovery.md
   title: ''
   type: AgentSkill
   url: skills/nationwide-building-society-open-data-discovery.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/llms/nationwide-building-society-llms.txt
+  href: https://artifacts.apis.io/nationwide-building-society/llms/nationwide-building-society-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nationwide-building-society-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/overlays/nationwide-building-society-atm-locator-overlay.yaml
+  href: https://artifacts.apis.io/nationwide-building-society/overlays/nationwide-building-society-atm-locator-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nationwide-building-society-atm-locator-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/overlays/nationwide-building-society-branch-locator-overlay.yaml
+  href: https://artifacts.apis.io/nationwide-building-society/overlays/nationwide-building-society-branch-locator-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nationwide-building-society-branch-locator-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/overlays/nationwide-building-society-personal-current-accounts-overlay.yaml
+  href: https://artifacts.apis.io/nationwide-building-society/overlays/nationwide-building-society-personal-current-accounts-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nationwide-building-society-personal-current-accounts-overlay.yaml
@@ -236,8 +241,24 @@ network: true
 overview: 'Nationwide Building Society publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including ATM API, Branch API, PCA API, and 4 more. Tagged areas include Financial Services, Banking, Building Society, Open Banking, and PSD2.
 
 
+  The Nationwide Building Society catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Nationwide Building Society''s developer surface includes documentation, getting-started guide, support, signup flow, authentication, and 27 more developer resources.'
-random_paper: 6
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Nationwide Building Society API Rules
+  rule_count: 45
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 1
+  slug: nationwide-building-society-rules
 scopes:
 - name: Nationwide Building Society Scopes
   scope_count: 4
@@ -245,18 +266,18 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 40.6
+  composite: 42.2
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 40.0
+    artifact_dirs: 21
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 13.2
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 36.3
     developer_ergonomics: 56.5
     discoverability: 78.6
@@ -269,7 +290,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 40.5
+  previous_composite: 42.2
   provenance:
     conformance: first-party
     contracts:
@@ -285,14 +306,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 36.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/nationwide-building-society/refs/heads/main/screenshots/nationwide-building-society-2026-08-07T184659.png
+screenshot: https://apis.io/screenshots/nationwide-building-society/nationwide-building-society-2026-08-07T184659.png
 security:
 - kind: authentication
   name: Nationwide Building Society Authentication
@@ -306,6 +327,10 @@ security:
   name: Nationwide Building Society Vulnerability Disclosure
   slug: nationwide-building-society-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 1
+skills:
+- name: Nationwide Open Data discovery
+  slug: nationwide-building-society-open-data-discovery
 slug: nationwide-building-society
 tags:
 - Financial Services

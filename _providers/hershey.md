@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://www.hershey.com'', ''status'': 301, ''note'': "hershey.com 301s to the consumer brand site www.hersheyland.com. Re-probed 2026-09-13: this is neither a rename nor an acquisition — The Hershey Company''s corporate site is www.thehersheycompany.com (HTTP 200), and hershey.com is a brand redirect. Website pointer corrected to the corporate host."}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hershey/refs/heads/main/security/hershey-domain-security.yml
+  href: https://artifacts.apis.io/hershey/security/hershey-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hershey-domain-security.yml
@@ -104,10 +108,10 @@ press:
 - date: ''
   title: HERSHEY ANNOUNCES AI-ENABLED DECISION
   url: https://www.facebook.com/tristatenewscenter/posts/hershey-announces-ai-enabled-decision-making-the-hershey-company-is-embracing-ai/1553526290109232/
-random_paper: 12
+random_paper: 16
 score:
   band: minimal
-  composite: 3.4
+  composite: 6.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -115,12 +119,12 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.2
   facets:
-    access_clarity: 0.0
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 0.0
+    developer_ergonomics: 2.4
     discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
@@ -136,15 +140,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 9.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hershey/refs/heads/main/screenshots/hershey-2026-06-20T182650.png
+screenshot: https://apis.io/screenshots/hershey/hershey-2026-06-20T182650.png
 security:
 - kind: domain-security
   name: Hershey Domain Security

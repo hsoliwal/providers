@@ -1,4 +1,20 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +42,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'A remote Model Context Protocol (streamable HTTP) server operated by WayUp, a Yello company, at https://www.wayup.com/mcp. Discovered by probe: the host publishes RFC 9728 protected-resource metadata '
@@ -31,8 +50,32 @@ apis:
   slug: wayup-mcp-server
 artifact_total: 8
 common:
+- group: operate
+  href: https://artifacts.apis.io/yello/lifecycle/yello-lifecycle.yml
+  title: ''
+  type: Deprecation
+  url: lifecycle/yello-lifecycle.yml
+- group: other
+  href: https://artifacts.apis.io/yello/hosts/yello-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/yello-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/yello/integrations/yello-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/yello-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/yello/vendors/yello-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/yello-vendors.yml
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://yello.co/about/newsroom/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/security/yello-trust-center.yml
+  href: https://artifacts.apis.io/yello/security/yello-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/yello-trust-center.yml
@@ -73,52 +116,52 @@ common:
   type: Compliance
   url: https://yello.co/trust-and-security/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/lifecycle/yello-lifecycle.yml
+  href: https://artifacts.apis.io/yello/lifecycle/yello-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/yello-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/well-known/yello-well-known.yml
+  href: https://artifacts.apis.io/yello/well-known/yello-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/yello-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/conformance/yello-conformance.yml
+  href: https://artifacts.apis.io/yello/conformance/yello-conformance.yml
   title: ''
   type: Conformance
   url: conformance/yello-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/security/yello-domain-security.yml
+  href: https://artifacts.apis.io/yello/security/yello-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/yello-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/conventions/yello-conventions.yml
+  href: https://artifacts.apis.io/yello/conventions/yello-conventions.yml
   title: ''
   type: Conventions
   url: conventions/yello-conventions.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/plans/yello-plans-pricing.yml
+  href: https://artifacts.apis.io/yello/plans/yello-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/yello-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/rate-limits/yello-rate-limits.yml
+  href: https://artifacts.apis.io/yello/rate-limits/yello-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/yello-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/packages/yello-packages.yml
+  href: https://artifacts.apis.io/yello/packages/yello-packages.yml
   title: ''
   type: Packages
   url: packages/yello-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/llms/yello-wayup-llms.txt
+  href: https://artifacts.apis.io/yello/llms/yello-wayup-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/yello-wayup-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/llms/yello-llms.txt
+  href: https://artifacts.apis.io/yello/llms/yello-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/yello-llms.txt
@@ -138,7 +181,7 @@ network: true
 overview: 'Yello is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Talent Acquisition, Recruiting, Human Resources, Campus Recruiting, and Applicant Tracking.
 
 
-  Yello''s developer surface includes engineering blog, support, signup flow, pricing, and 16 more developer resources.'
+  Yello''s developer surface includes engineering blog, support, signup flow, pricing, and 21 more developer resources.'
 plans:
 - name: Yello Plans Pricing
   plan_count: 0
@@ -155,22 +198,22 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 32.7
+  composite: 33.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.2
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.0
-    operational_transparency: 15.8
+    discoverability: 76.7
+    operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -196,14 +239,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 47.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/screenshots/yello-2026-10-11T194854.png
+screenshot: https://apis.io/screenshots/yello/yello-2026-10-11T194854.png
 security:
 - kind: authentication
   name: Yello Authentication

@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.4
-  scored_at: '2026-10-17'
+  score: 29.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 1
@@ -43,7 +46,7 @@ agentic_access:
   operation_count: 22
   slug: cariqa-agentic-access
   summary_line: 22 operations · 9 acting · 1 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://connect.cariqa.com
   baseurl_source: declared
@@ -80,11 +83,8 @@ apis:
   description: The Users API from Cariqa — 2 operation(s) for users.
   name: Cariqa Users API
   slug: cariqa-users-api
-artifact_total: 19
+artifact_total: 22
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Cariqa Connect Billing Details API
   slug: open-cariqa-billing-details-api
@@ -108,87 +108,87 @@ collections:
   slug: open-cariqa-users-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/capabilities/cariqa-capability-edges.yml
+  href: https://artifacts.apis.io/cariqa/capabilities/cariqa-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cariqa-capability-edges.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/openapi/_original/cariqa-openapi-original.yml
+  href: https://artifacts.apis.io/cariqa/openapi/_original/cariqa-openapi-original.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/cariqa-openapi-original.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/overlays/cariqa-openapi-overlay.yaml
+  href: https://artifacts.apis.io/cariqa/overlays/cariqa-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/cariqa-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/authentication/cariqa-authentication.yml
+  href: https://artifacts.apis.io/cariqa/authentication/cariqa-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cariqa-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/mcp/cariqa-mcp.yml
+  href: https://artifacts.apis.io/cariqa/mcp/cariqa-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/cariqa-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/llms/cariqa-llms.txt
+  href: https://artifacts.apis.io/cariqa/llms/cariqa-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cariqa-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/agentic-access/cariqa-agentic-access.yml
+  href: https://artifacts.apis.io/cariqa/agentic-access/cariqa-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cariqa-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/conventions/cariqa-conventions.yml
+  href: https://artifacts.apis.io/cariqa/conventions/cariqa-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cariqa-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/errors/cariqa-problem-types.yml
+  href: https://artifacts.apis.io/cariqa/errors/cariqa-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cariqa-problem-types.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/errors/cariqa-decline-codes.yml
+  href: https://artifacts.apis.io/cariqa/errors/cariqa-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/cariqa-decline-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/conformance/cariqa-conformance.yml
+  href: https://artifacts.apis.io/cariqa/conformance/cariqa-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cariqa-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/lifecycle/cariqa-lifecycle.yml
+  href: https://artifacts.apis.io/cariqa/lifecycle/cariqa-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cariqa-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/changelog/cariqa-changelog.yml
+  href: https://artifacts.apis.io/cariqa/changelog/cariqa-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/cariqa-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/data-model/cariqa-data-model.yml
+  href: https://artifacts.apis.io/cariqa/data-model/cariqa-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cariqa-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/sandbox/cariqa-sandbox.yml
+  href: https://artifacts.apis.io/cariqa/sandbox/cariqa-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/cariqa-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/security/cariqa-domain-security.yml
+  href: https://artifacts.apis.io/cariqa/security/cariqa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cariqa-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/cariqa/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -251,34 +251,50 @@ network: true
 overview: 'Cariqa publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing Details API, Charging Sessions API, Debts API, and 4 more. Tagged areas include Company, EV Charging, Electric Vehicles, Payments, and Mobility.
 
 
+  The Cariqa catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Cariqa''s developer surface includes authentication, changelog, sandbox, documentation, API reference, getting-started guide, quickstart, and 21 more developer resources.'
-random_paper: 9
+random_paper: 1
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Cariqa API Rules
+  rule_count: 56
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 1
+    warn: 9
+  slug: cariqa-rules
 score:
   band: developing
-  composite: 44.3
+  composite: 47.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.4
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 51.9
+    contract_governance: 18.2
+    contract_quality: 57.3
     developer_ergonomics: 66.1
     discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 44.3
+  previous_composite: 45.9
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 7
     mcp: first-party
     skills: derived
@@ -292,13 +308,13 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 24.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/cariqa/refs/heads/main/screenshots/cariqa-2026-07-25T204619.png
+screenshot: https://apis.io/screenshots/cariqa/cariqa-2026-07-25T204619.png
 security:
 - kind: authentication
   name: Cariqa Authentication
@@ -308,6 +324,14 @@ security:
   name: Cariqa Domain Security
   slug: cariqa-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Discover charging stations near a location
+  slug: cariqa-discover-stations
+- name: Onboard a user and attach a payment method
+  slug: cariqa-onboard-user-and-payment
+- name: Start and stop a charging session
+  slug: cariqa-start-and-stop-charging
 slug: cariqa
 tags:
 - Company

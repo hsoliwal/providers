@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,12 +36,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
-- description: MISP provides a RESTful API for threat sharing, documented at the official documentation site.
+- baseURL: https://github.com
+  baseurl_source: spec
+  description: MISP provides a RESTful API for threat sharing, documented at the official documentation site.
   name: MISP API
-  slug: misp-api-2
+  slug: misp-api
 - baseURL: https://github.com
   baseurl_source: declared
   description: The Agent Threat Rule API from MISP — 1 operation(s) for agent threat rule.
@@ -37,32 +52,32 @@ apis:
 artifact_total: 5
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/misp/refs/heads/main/rules/misp-rules.yml
+  href: https://artifacts.apis.io/misp/rules/misp-rules.yml
   title: ''
   type: Spectral
   url: rules/misp-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/misp/refs/heads/main/conformance/misp-conformance.yml
+  href: https://artifacts.apis.io/misp/conformance/misp-conformance.yml
   title: ''
   type: Conformance
   url: conformance/misp-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/misp/refs/heads/main/well-known/misp-security.txt
+  href: https://artifacts.apis.io/misp/well-known/misp-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/misp-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/misp/refs/heads/main/well-known/misp-well-known.yml
+  href: https://artifacts.apis.io/misp/well-known/misp-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/misp-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/misp/refs/heads/main/hosts/misp-hosts.yml
+  href: https://artifacts.apis.io/misp/hosts/misp-hosts.yml
   title: ''
   type: Hosts
   url: hosts/misp-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/misp/refs/heads/main/vendors/misp-vendors.yml
+  href: https://artifacts.apis.io/misp/vendors/misp-vendors.yml
   title: ''
   type: Vendors
   url: vendors/misp-vendors.yml
@@ -91,12 +106,12 @@ common:
   type: Blog
   url: https://www.misp-project.org/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/misp/refs/heads/main/security/misp-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/misp/security/misp-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/misp-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/misp/refs/heads/main/security/misp-domain-security.yml
+  href: https://artifacts.apis.io/misp/security/misp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/misp-domain-security.yml
@@ -120,14 +135,14 @@ modified: '2026-10-14'
 name: MISP
 nav: Providers
 network: true
-overview: 'MISP is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Agent Threat Rule API, and 1 more. Tagged areas include Open Source, ThreatIntelligence, Community, Security, and Collaboration.
+overview: 'MISP is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Agent Threat Rule API, and 1 more. Tagged areas include Open Source, Threat Intelligence, Community, Security, and Collaboration.
 
 
   The MISP catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   MISP''s developer surface includes support, documentation, engineering blog, and 12 more developer resources.'
-random_paper: 1
+random_paper: 9
 rules:
 - authorship: generated
   effective_rule_count: 49
@@ -143,21 +158,23 @@ rules:
   slug: misp-rules
 score:
   band: emerging
-  composite: 16.4
+  composite: 13.6
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 13
     catalog_earned: 36.5
     catalog_earned_first_party: 0.0
     catalog_gap: 63.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.8
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
     contract_quality: 10.7
-    developer_ergonomics: 16.7
-    discoverability: 58.9
-    operational_transparency: 15.8
+    developer_ergonomics: 8.3
+    discoverability: 58.0
+    operational_transparency: 7.9
+  previous_composite: 16.4
   provenance:
     conformance: derived
     contracts:
@@ -172,12 +189,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/misp/misp-2026-11-03T135659.png
 security:
 - kind: domain-security
   name: Misp Domain Security
@@ -190,7 +209,7 @@ security:
 slug: misp
 tags:
 - Open Source
-- ThreatIntelligence
+- Threat Intelligence
 - Community
 - Security
 - Collaboration

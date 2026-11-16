@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -78,11 +83,8 @@ apis:
   description: Banking Product endpoints
   name: Australian Unity Bank Banking Products API
   slug: australian-unity-bank-banking-products-api
-artifact_total: 19
+artifact_total: 22
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CDR Banking Banking Account Balances API
   slug: open-australian-unity-bank-banking-account-balances-api
@@ -110,62 +112,62 @@ common:
   type: Blog
   url: https://www.australianunity.com.au/home-services/articles
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/agentic-access/australian-unity-bank-agentic-access.yml
+  href: https://artifacts.apis.io/australian-unity-bank/agentic-access/australian-unity-bank-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/australian-unity-bank-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/security/australian-unity-bank-domain-security.yml
+  href: https://artifacts.apis.io/australian-unity-bank/security/australian-unity-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/australian-unity-bank-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/authentication/australian-unity-bank-authentication.yml
+  href: https://artifacts.apis.io/australian-unity-bank/authentication/australian-unity-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/australian-unity-bank-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/scopes/australian-unity-bank-scopes.yml
+  href: https://artifacts.apis.io/australian-unity-bank/scopes/australian-unity-bank-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/australian-unity-bank-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/conventions/australian-unity-bank-conventions.yml
+  href: https://artifacts.apis.io/australian-unity-bank/conventions/australian-unity-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/australian-unity-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/errors/australian-unity-bank-problem-types.yml
+  href: https://artifacts.apis.io/australian-unity-bank/errors/australian-unity-bank-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/australian-unity-bank-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/conformance/australian-unity-bank-conformance.yml
+  href: https://artifacts.apis.io/australian-unity-bank/conformance/australian-unity-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/australian-unity-bank-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/data-model/australian-unity-bank-data-model.yml
+  href: https://artifacts.apis.io/australian-unity-bank/data-model/australian-unity-bank-data-model.yml
   title: ''
   type: DataModel
   url: data-model/australian-unity-bank-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/lifecycle/australian-unity-bank-lifecycle.yml
+  href: https://artifacts.apis.io/australian-unity-bank/lifecycle/australian-unity-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/australian-unity-bank-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/mcp/australian-unity-bank-mcp.yml
+  href: https://artifacts.apis.io/australian-unity-bank/mcp/australian-unity-bank-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/australian-unity-bank-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/overlays/australian-unity-bank-cds-banking-overlay.yaml
+  href: https://artifacts.apis.io/australian-unity-bank/overlays/australian-unity-bank-cds-banking-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/australian-unity-bank-cds-banking-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/australian-unity-bank/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -178,7 +180,7 @@ common:
   type: APIReference
   url: https://consumerdatastandardsaustralia.github.io/standards/#cdr-banking-api
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/llms/australian-unity-bank-llms.txt
+  href: https://artifacts.apis.io/australian-unity-bank/llms/australian-unity-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/australian-unity-bank-llms.txt
@@ -214,27 +216,43 @@ network: true
 overview: 'Australian Unity Bank publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
+  The Australian Unity Bank catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Australian Unity Bank''s developer surface includes engineering blog, authentication, documentation, API reference, and 17 more developer resources.'
-random_paper: 13
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: Australian Unity Bank API Rules
+  rule_count: 68
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 5
+  slug: australian-unity-bank-rules
 scopes:
 - name: Australian Unity Bank Scopes
   scope_count: 9
   slug: australian-unity-bank-scopes
   summary_line: 9 scopes · authorizationCode/hybrid
 score:
-  band: emerging
-  composite: 24.6
+  band: thin
+  composite: 26.2
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 12.4
     developer_ergonomics: 32.7
     discoverability: 73.2
@@ -246,7 +264,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 24.1
+  previous_composite: 26.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -267,13 +285,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 44.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/australian-unity-bank/refs/heads/main/screenshots/australian-unity-bank-2026-07-21T114715.png
+screenshot: https://apis.io/screenshots/australian-unity-bank/australian-unity-bank-2026-07-21T114715.png
 security:
 - kind: authentication
   name: Australian Unity Bank Authentication
@@ -283,6 +301,14 @@ security:
   name: Australian Unity Bank Domain Security
   slug: australian-unity-bank-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Retrieve Australian Unity Bank accounts and balances
+  slug: australian-unity-bank-accounts-and-balances
+- name: Retrieve Australian Unity Bank product reference data
+  slug: australian-unity-bank-product-reference-data
+- name: Retrieve Australian Unity Bank transactions and payment arrangements
+  slug: australian-unity-bank-transactions-and-payments
 slug: australian-unity-bank
 tags:
 - Finance

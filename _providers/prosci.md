@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -85,11 +91,8 @@ apis:
   description: Training programs and enrollment management
   name: Prosci Training API
   slug: prosci-training-api
-artifact_total: 28
+artifact_total: 27
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Prosci Change Management ADKAR Assessments API
   slug: open-prosci-adkar-assessments-api
@@ -119,37 +122,37 @@ collections:
   slug: open-prosci-training-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/prosci/refs/heads/main/plans/prosci-plans-pricing.yml
+  href: https://artifacts.apis.io/prosci/plans/prosci-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/prosci-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/prosci/refs/heads/main/rate-limits/prosci-rate-limits.yml
+  href: https://artifacts.apis.io/prosci/rate-limits/prosci-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/prosci-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/prosci/refs/heads/main/finops/prosci-finops.yml
+  href: https://artifacts.apis.io/prosci/finops/prosci-finops.yml
   title: ''
   type: FinOps
   url: finops/prosci-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/prosci/refs/heads/main/capabilities/prosci-capability-edges.yml
+  href: https://artifacts.apis.io/prosci/capabilities/prosci-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/prosci-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/prosci/refs/heads/main/agentic-access/prosci-agentic-access.yml
+  href: https://artifacts.apis.io/prosci/agentic-access/prosci-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/prosci-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prosci/refs/heads/main/security/prosci-domain-security.yml
+  href: https://artifacts.apis.io/prosci/security/prosci-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/prosci-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/prosci/refs/heads/main/authentication/prosci-authentication.yml
+  href: https://artifacts.apis.io/prosci/authentication/prosci-authentication.yml
   title: ''
   type: Authentication
   url: authentication/prosci-authentication.yml
@@ -179,7 +182,7 @@ finops:
 - has_sources: false
   method: generated
   name: Prosci Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: prosci-finops
   template: true
@@ -212,7 +215,7 @@ plans:
 - name: Prosci Plans Pricing
   plan_count: 3
   slug: prosci-plans-pricing
-random_paper: 18
+random_paper: 8
 rate_limits:
 - limit_count: 5
   name: Prosci Rate Limits
@@ -233,13 +236,13 @@ score:
   band: thin
   composite: 31.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 52.3
     catalog_earned_first_party: 0.0
     catalog_gap: 62.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 9.8
@@ -247,7 +250,7 @@ score:
     developer_ergonomics: 23.8
     discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 33.1
+  previous_composite: 31.6
   provenance:
     agentic_access: derived
     contracts:
@@ -261,13 +264,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/prosci/refs/heads/main/screenshots/prosci-2026-08-17T124907.png
+screenshot: https://apis.io/screenshots/prosci/prosci-2026-08-17T124907.png
 security:
 - kind: authentication
   name: Prosci Authentication

@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +26,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-10-17'
+  score: 24.9
+  scored_at: '2026-11-06'
 api_count: 15
 apis:
-- description: API for ApiPosture platform providing scanning and compliance features.
+- baseURL: https://github.com
+  baseurl_source: spec
+  description: API for ApiPosture platform providing scanning and compliance features.
   name: ApiPosture API
-  slug: apiposture-api-2
+  slug: apiposture-api
 - baseURL: https://github.com
   baseurl_source: declared
   description: The Account API from APIPosture — 1 operation(s) for account.
@@ -102,52 +118,52 @@ apis:
 artifact_total: 22
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apiposture/refs/heads/main/plans/apiposture-plans-pricing.yml
+  href: https://artifacts.apis.io/apiposture/plans/apiposture-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apiposture-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiposture/refs/heads/main/rules/apiposture-rules.yml
+  href: https://artifacts.apis.io/apiposture/rules/apiposture-rules.yml
   title: ''
   type: Spectral
   url: rules/apiposture-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiposture/refs/heads/main/json-ld/apiposture-context.jsonld
+  href: https://artifacts.apis.io/apiposture/json-ld/apiposture-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/apiposture-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiposture/refs/heads/main/vocabulary/apiposture-vocabulary.yml
+  href: https://artifacts.apis.io/apiposture/vocabulary/apiposture-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/apiposture-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiposture/refs/heads/main/data-model/apiposture-data-model.yml
+  href: https://artifacts.apis.io/apiposture/data-model/apiposture-data-model.yml
   title: ''
   type: DataModel
   url: data-model/apiposture-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apiposture/refs/heads/main/conformance/apiposture-conformance.yml
+  href: https://artifacts.apis.io/apiposture/conformance/apiposture-conformance.yml
   title: ''
   type: Conformance
   url: conformance/apiposture-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiposture/refs/heads/main/llms/apiposture-llms.txt
+  href: https://artifacts.apis.io/apiposture/llms/apiposture-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/apiposture-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apiposture/refs/heads/main/well-known/apiposture-well-known.yml
+  href: https://artifacts.apis.io/apiposture/well-known/apiposture-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/apiposture-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apiposture/refs/heads/main/hosts/apiposture-hosts.yml
+  href: https://artifacts.apis.io/apiposture/hosts/apiposture-hosts.yml
   title: ''
   type: Hosts
   url: hosts/apiposture-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apiposture/refs/heads/main/vendors/apiposture-vendors.yml
+  href: https://artifacts.apis.io/apiposture/vendors/apiposture-vendors.yml
   title: ''
   type: Vendors
   url: vendors/apiposture-vendors.yml
@@ -164,7 +180,7 @@ common:
   type: Documentation
   url: https://www.apiposture.com/documentation
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apiposture/refs/heads/main/security/apiposture-domain-security.yml
+  href: https://artifacts.apis.io/apiposture/security/apiposture-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apiposture-domain-security.yml
@@ -203,7 +219,7 @@ modified: '2026-10-15'
 name: APIPosture
 nav: Providers
 network: true
-overview: 'APIPosture is listed with 15 APIs on the [APIs.io](https://apis.io/) network, including Account API, Admin API, Apiposture API, and 12 more. Tagged areas include Company, API Security, Compliance, Automation, and DevOps.
+overview: 'APIPosture is listed with 15 APIs on the [APIs.io](https://apis.io/) network, including Account API, Admin API, and 13 more. Tagged areas include Company, API Security, Compliance, Automation, and DevOps.
 
 
   The APIPosture catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -214,7 +230,7 @@ plans:
 - name: Apiposture Plans Pricing
   plan_count: 4
   slug: apiposture-plans-pricing
-random_paper: 0
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -229,22 +245,24 @@ rules:
     warn: 1
   slug: apiposture-rules
 score:
-  band: thin
-  composite: 27.2
+  band: emerging
+  composite: 23.8
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 66.8
     catalog_earned_first_party: 12.0
     catalog_gap: 48.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.4
   facets:
-    access_clarity: 52.6
+    access_clarity: 42.1
     contract_governance: 22.0
     contract_quality: 20.2
-    developer_ergonomics: 9.5
+    developer_ergonomics: 4.8
     discoverability: 69.6
     operational_transparency: 0.0
+  previous_composite: 27.2
   provenance:
     conformance: derived
     contracts:
@@ -258,12 +276,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 18.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/apiposture/apiposture-2026-11-03T121002.png
 security:
 - kind: domain-security
   name: Apiposture Domain Security

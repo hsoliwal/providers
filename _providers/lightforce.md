@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The public OpenID Connect / OAuth 2.0 identity surface that fronts the LightForce Doctor Portal. Published as a live OIDC discovery document at id.lightforceortho.com/.well-known/openid-configuration,
@@ -78,42 +83,42 @@ common:
   type: Compliance
   url: https://lf.co/legal/hipaa
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lightforce/refs/heads/main/well-known/lightforce-well-known.yml
+  href: https://artifacts.apis.io/lightforce/well-known/lightforce-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lightforce-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lightforce/refs/heads/main/authentication/lightforce-authentication.yml
+  href: https://artifacts.apis.io/lightforce/authentication/lightforce-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lightforce-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lightforce/refs/heads/main/scopes/lightforce-scopes.yml
+  href: https://artifacts.apis.io/lightforce/scopes/lightforce-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/lightforce-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightforce/refs/heads/main/conformance/lightforce-conformance.yml
+  href: https://artifacts.apis.io/lightforce/conformance/lightforce-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lightforce-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lightforce/refs/heads/main/security/lightforce-domain-security.yml
+  href: https://artifacts.apis.io/lightforce/security/lightforce-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lightforce-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightforce/refs/heads/main/conventions/lightforce-conventions.yml
+  href: https://artifacts.apis.io/lightforce/conventions/lightforce-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lightforce-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lightforce/refs/heads/main/llms/lightforce-llms.txt
+  href: https://artifacts.apis.io/lightforce/llms/lightforce-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lightforce-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lightforce/refs/heads/main/packages/lightforce-packages.yml
+  href: https://artifacts.apis.io/lightforce/packages/lightforce-packages.yml
   title: ''
   type: Packages
   url: packages/lightforce-packages.yml
@@ -139,13 +144,13 @@ score:
   band: emerging
   composite: 25.8
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
@@ -153,7 +158,7 @@ score:
     developer_ergonomics: 19.0
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 25.7
+  previous_composite: 25.8
   provenance:
     conformance: first-party
   regulatory:
@@ -166,14 +171,14 @@ score:
     regime: Health
     regime_id: health
     score: 36.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/lightforce/refs/heads/main/screenshots/lightforce-2026-07-25T225116.png
+screenshot: https://apis.io/screenshots/lightforce/lightforce-2026-07-25T225116.png
 security:
 - kind: authentication
   name: Lightforce Authentication

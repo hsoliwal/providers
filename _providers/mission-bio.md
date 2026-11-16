@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mission-bio/refs/heads/main/security/mission-bio-domain-security.yml
+  href: https://artifacts.apis.io/mission-bio/security/mission-bio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mission-bio-domain-security.yml
@@ -95,42 +98,42 @@ common:
   type: ChangeLog
   url: https://missionbio.github.io/mosaic/manual/changelog.html
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mission-bio/refs/heads/main/packages/mission-bio-packages.yml
+  href: https://artifacts.apis.io/mission-bio/packages/mission-bio-packages.yml
   title: ''
   type: Packages
   url: packages/mission-bio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mission-bio/refs/heads/main/packages/mission-bio-packages.yml
+  href: https://artifacts.apis.io/mission-bio/packages/mission-bio-packages.yml
   title: ''
   type: SDKs
   url: packages/mission-bio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mission-bio/refs/heads/main/cli/mission-bio-cli.yml
+  href: https://artifacts.apis.io/mission-bio/cli/mission-bio-cli.yml
   title: ''
   type: CLI
   url: cli/mission-bio-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mission-bio/refs/heads/main/changelog/mission-bio-changelog.yml
+  href: https://artifacts.apis.io/mission-bio/changelog/mission-bio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/mission-bio-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mission-bio/refs/heads/main/lifecycle/mission-bio-lifecycle.yml
+  href: https://artifacts.apis.io/mission-bio/lifecycle/mission-bio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mission-bio-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mission-bio/refs/heads/main/data-model/mission-bio-data-model.yml
+  href: https://artifacts.apis.io/mission-bio/data-model/mission-bio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/mission-bio-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mission-bio/refs/heads/main/conformance/mission-bio-conformance.yml
+  href: https://artifacts.apis.io/mission-bio/conformance/mission-bio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mission-bio-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mission-bio/refs/heads/main/llms/mission-bio-llms.txt
+  href: https://artifacts.apis.io/mission-bio/llms/mission-bio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mission-bio-llms.txt
@@ -146,12 +149,12 @@ overview: 'Mission Bio is profiled on the [APIs.io](https://apis.io/) network. T
 
 
   Mission Bio''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, CLI, and 15 more developer resources.'
-random_paper: 7
+random_paper: 1
 score:
   band: thin
   composite: 26.3
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -174,14 +177,14 @@ score:
     regime: Health
     regime_id: health
     score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mission-bio/refs/heads/main/screenshots/mission-bio-2026-08-07T183750.png
+screenshot: https://apis.io/screenshots/mission-bio/mission-bio-2026-08-07T183750.png
 security:
 - kind: domain-security
   name: Mission Bio Domain Security

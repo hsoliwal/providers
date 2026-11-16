@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: half
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.0
-  scored_at: '2026-10-17'
+  score: 16.5
+  scored_at: '2026-11-06'
 api_count: 11
 apis:
 - description: The Agora Video Calling API enables real-time, interactive video communication with sub-200ms global latency. Supports one-to-one calls, group calls, and multi-host scenarios across mobile, web, deskt
@@ -79,12 +83,12 @@ common:
   type: Releases
   url: https://github.com/AgoraIO/openai-realtime-python/releases
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agora-io/refs/heads/main/security/agora-io-trust-center.yml
+  href: https://artifacts.apis.io/agora-io/security/agora-io-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/agora-io-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agora-io/refs/heads/main/security/agora-io-domain-security.yml
+  href: https://artifacts.apis.io/agora-io/security/agora-io-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/agora-io-domain-security.yml
@@ -292,26 +296,26 @@ overview: 'Agora is listed with 11 APIs on the [APIs.io](https://apis.io/) netwo
 
 
   Agora''s developer surface includes developer portal, documentation, API reference, developer console, signup flow, pricing, authentication, and 35 more developer resources.'
-random_paper: 13
+random_paper: 15
 score:
   band: thin
-  composite: 30.3
+  composite: 38.2
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.3
+  delta: 7.9
   facets:
-    access_clarity: 21.1
+    access_clarity: 52.6
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 69.0
+    developer_ergonomics: 71.4
     discoverability: 80.0
     operational_transparency: 34.2
-  previous_composite: 30.6
+  previous_composite: 30.3
   provenance:
     mcp: first-party
   regulatory:
@@ -319,15 +323,15 @@ score:
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
-    score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 24.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/agora-io/refs/heads/main/screenshots/agora-io-2026-06-20T170349.png
+screenshot: https://apis.io/screenshots/agora-io/agora-io-2026-06-20T170349.png
 security:
 - kind: domain-security
   name: Agora Io Domain Security

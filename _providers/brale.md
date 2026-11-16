@@ -1,14 +1,20 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
+  - security
+  - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-native
   dimensions:
@@ -23,17 +29,20 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: true
-    idempotency: documented
+    idempotency: verified
     mcp_server: verified
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 51.6
-  scored_at: '2026-10-17'
+  score: 56.3
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.brale.xyz
@@ -63,10 +72,15 @@ apis:
   slug: brale-orders-api
 - baseURL: https://api.brale.xyz
   baseurl_source: declared
-  description: The Webhooks API from Brale — 6 operation(s) for webhooks.
-  name: Brale Webhooks API
-  slug: brale-webhooks-api
-artifact_total: 25
+  description: Bank linking and ACH debit via Plaid.
+  name: Brale Plaid API
+  slug: brale-plaid-api
+- baseURL: https://api.brale.xyz
+  baseurl_source: declared
+  description: Endpoints for creating and retrieving transfers (fiat to stablecoins, etc.)
+  name: Brale Transfers API
+  slug: brale-transfers-api
+artifact_total: 33
 asyncapis:
 - description: ''
   name: Brale Webhooks
@@ -91,9 +105,6 @@ collections:
   name: Brale Accounts Webhooks API
   slug: postman-brale-webhooks-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Brale Accounts API
   slug: open-brale-accounts-api
 - collection_type: open
@@ -112,6 +123,11 @@ collections:
   name: Brale Accounts Webhooks API
   slug: open-brale-webhooks-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/brale/plans/brale-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/brale-plans-pricing.yml
 - group: company
   title: ''
   type: BlogRSS
@@ -121,7 +137,7 @@ common:
   type: Website
   url: https://www.brale.xyz/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/capabilities/brale-capability-edges.yml
+  href: https://artifacts.apis.io/brale/capabilities/brale-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/brale-capability-edges.yml
@@ -130,7 +146,7 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/brale/overview
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/a2a/brale-a2a.yml
+  href: https://artifacts.apis.io/brale/a2a/brale-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/brale-a2a.yml
@@ -187,37 +203,37 @@ common:
   type: Postman
   url: https://www.postman.com/brale-xyz/brale-api/overview
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/openapi/_original/brale-openapi-original.yml
+  href: https://artifacts.apis.io/brale/openapi/_original/brale-openapi-original.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/brale-openapi-original.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/authentication/brale-authentication.yml
+  href: https://artifacts.apis.io/brale/authentication/brale-authentication.yml
   title: ''
   type: Authentication
   url: authentication/brale-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/scopes/brale-scopes.yml
+  href: https://artifacts.apis.io/brale/scopes/brale-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/brale-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/security/brale-domain-security.yml
+  href: https://artifacts.apis.io/brale/security/brale-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brale-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/well-known/brale-security.txt
+  href: https://artifacts.apis.io/brale/well-known/brale-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/brale-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/well-known/brale-well-known.yml
+  href: https://artifacts.apis.io/brale/well-known/brale-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/brale-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/security/brale-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/brale/security/brale-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/brale-vulnerability-disclosure.yml
@@ -226,42 +242,42 @@ common:
   type: Security
   url: https://brale.xyz/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/mcp/brale-mcp.yml
+  href: https://artifacts.apis.io/brale/mcp/brale-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/brale-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/llms/brale-llms.txt
+  href: https://artifacts.apis.io/brale/llms/brale-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/brale-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/packages/brale-packages.yml
+  href: https://artifacts.apis.io/brale/packages/brale-packages.yml
   title: ''
   type: Packages
   url: packages/brale-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/cli/brale-cli.yml
+  href: https://artifacts.apis.io/brale/cli/brale-cli.yml
   title: ''
   type: CLI
   url: cli/brale-cli.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/overlays/brale-openapi-overlay.yaml
+  href: https://artifacts.apis.io/brale/overlays/brale-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/brale-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/conformance/brale-conformance.yml
+  href: https://artifacts.apis.io/brale/conformance/brale-conformance.yml
   title: ''
   type: Conformance
   url: conformance/brale-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/errors/brale-problem-types.yml
+  href: https://artifacts.apis.io/brale/errors/brale-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/brale-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/lifecycle/brale-lifecycle.yml
+  href: https://artifacts.apis.io/brale/lifecycle/brale-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/brale-lifecycle.yml
@@ -270,47 +286,55 @@ common:
   type: StatusPage
   url: https://status.brale.xyz
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/lifecycle/brale-lifecycle.yml
+  href: https://artifacts.apis.io/brale/lifecycle/brale-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/brale-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/conventions/brale-conventions.yml
+  href: https://artifacts.apis.io/brale/conventions/brale-conventions.yml
   title: ''
   type: Conventions
   url: conventions/brale-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/conventions/brale-conventions.yml
+  href: https://artifacts.apis.io/brale/conventions/brale-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/brale-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/changelog/brale-changelog.yml
+  href: https://artifacts.apis.io/brale/changelog/brale-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/brale-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/sandbox/brale-sandbox.yml
+  href: https://artifacts.apis.io/brale/sandbox/brale-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/brale-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/data-model/brale-data-model.yml
+  href: https://artifacts.apis.io/brale/data-model/brale-data-model.yml
   title: ''
   type: DataModel
   url: data-model/brale-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/asyncapi/brale-webhooks.yml
+  href: https://artifacts.apis.io/brale/asyncapi/brale-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/brale-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/brale/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: Brale is a regulated stablecoin issuance and orchestration platform. Its Issuance and Orchestration API lets businesses create their own fiat-backed stablecoins and move value across fiat rails and blockchains — onramps, offramps, swaps, custody, and payouts — with mint/burn execution, reserves, custody, settlement, and reporting handled by Brale. Developers authenticate with OAuth2 client-credentials and manage customer accounts (KYB/KYC), on-chain and off-chain addresses, transfers, automations (virtual U.S. account/routing numbers that auto-mint stablecoins on fiat deposit), self-attested tokenization (mints, burns, transfers), and webhooks across Stellar, Solana, Base, Ethereum, Polygon, Avalanche, Celo, Optimism, Arbitrum, and Canton.
+finops:
+- has_sources: true
+  method: derived
+  name: Brale Finops
+  primary_unit: account
+  service_category: ''
+  slug: brale-finops
+  template: false
 image: https://brale.xyz/assets/site/global-og-image.png
 layout: provider
 mcp_servers:
@@ -321,14 +345,34 @@ modified: '2026-10-06'
 name: Brale
 nav: Providers
 network: true
-overview: 'Brale publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Addresses API, Automations API, and 3 more. Tagged areas include Company, Stablecoins, Stablecoin Issuance, Payments, and Blockchain.
+overview: 'Brale publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Addresses API, Automations API, and 4 more. Tagged areas include Company, Stablecoins, Stablecoin Issuance, Payments, and Blockchain.
 
 
-  The Brale catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Brale catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Brale''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 36 more developer resources.'
-random_paper: 12
+  Brale''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 37 more developer resources.'
+plans:
+- name: Brale Plans Pricing
+  plan_count: 15
+  slug: brale-plans-pricing
+- name: Brale Price Estimates
+  plan_count: 0
+  slug: brale-price-estimates
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Brale API Rules
+  rule_count: 66
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 5
+    warn: 13
+  slug: brale-rules
 scopes:
 - name: Brale Scopes
   scope_count: 20
@@ -336,30 +380,30 @@ scopes:
   summary_line: 20 scopes · clientCredentials
 score:
   band: strong
-  composite: 56.2
+  composite: 65.8
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 33
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
-    access_clarity: 44.7
-    contract_governance: 4.5
-    contract_quality: 57.6
+    access_clarity: 84.2
+    contract_governance: 18.2
+    contract_quality: 57.9
     developer_ergonomics: 75.6
     discoverability: 75.0
     operational_transparency: 60.5
-  previous_composite: 56.2
+  previous_composite: 65.2
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 6
+      marker_coverage: 50.0
+      total: 14
     mcp: first-party
     skills: derived
   regulatory:
@@ -368,13 +412,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 36.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/brale/refs/heads/main/screenshots/brale-2026-07-25T203713.png
+screenshot: https://apis.io/screenshots/brale/brale-2026-07-25T203713.png
 security:
 - kind: authentication
   name: Brale Authentication
@@ -388,6 +432,16 @@ security:
   name: Brale Vulnerability Disclosure
   slug: brale-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 4
+skills:
+- name: Create a deposit automation (auto-mint on fiat deposit)
+  slug: brale-create-automation
+- name: Onramp fiat to a stablecoin
+  slug: brale-onramp-fiat-to-stablecoin
+- name: Send a stablecoin payout to an external wallet
+  slug: brale-stablecoin-payout
+- name: Subscribe to and debug Brale webhooks
+  slug: brale-webhook-setup
 slug: brale
 tags:
 - Company

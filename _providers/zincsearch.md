@@ -1,30 +1,43 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-ready
-  band_gated_from: agent-native
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: served
+    auth_clarity: bearer
     consent_identity: false
-    delegated_identity: served
+    delegated_identity: false
     dry_run_mode: false
-    dynamic_client_registration: true
+    dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
-    protected_resource_metadata: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: false
+    protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.2
-  scored_at: '2026-10-17'
+  score: 22.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -32,7 +45,7 @@ agentic_access:
   operation_count: 48
   slug: zincsearch-agentic-access
   summary_line: 48 operations · 28 acting
-api_count: 3
+api_count: 2
 apis:
 - baseURL: http://localhost:4080
   baseurl_source: declared
@@ -74,75 +87,109 @@ apis:
   description: The Version API from ZincSearch — 1 operation(s) for version.
   name: ZincSearch Version API
   slug: zincsearch-version-api
-artifact_total: 12
+artifact_total: 36
 common:
+- group: design
+  href: https://artifacts.apis.io/zincsearch/json-ld/zincsearch-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/zincsearch-context.jsonld
+- group: build
+  href: https://artifacts.apis.io/zincsearch/integrations/zincsearch-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/zincsearch-integration-edges.yml
+- group: commercial
+  title: ''
+  type: PrivacyPolicy
+  url: https://openobserve.ai/legal/privacy-policy/
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://openobserve.ai/pricing/
+- group: start
+  title: ''
+  type: GettingStarted
+  url: https://openobserve.ai/docs/getting-started/
+- group: operate
+  title: ''
+  type: ChangeLog
+  url: https://openobserve.ai/whats-new/
+- group: company
+  title: ''
+  type: Blog
+  url: https://openobserve.ai/blog/
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://openobserve.ai/docs/reference/api/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/agentic-access/zincsearch-agentic-access.yml
+  href: https://artifacts.apis.io/zincsearch/agentic-access/zincsearch-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zincsearch-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/rules/zincsearch-rules.yml
+  href: https://artifacts.apis.io/zincsearch/rules/zincsearch-rules.yml
   title: ''
   type: Spectral
   url: rules/zincsearch-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/vocabulary/zincsearch-vocabulary.yml
+  href: https://artifacts.apis.io/zincsearch/vocabulary/zincsearch-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/zincsearch-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/data-model/zincsearch-data-model.yml
+  href: https://artifacts.apis.io/zincsearch/data-model/zincsearch-data-model.yml
   title: ''
   type: DataModel
   url: data-model/zincsearch-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/errors/zincsearch-problem-types.yml
+  href: https://artifacts.apis.io/zincsearch/errors/zincsearch-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/zincsearch-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/conformance/zincsearch-conformance.yml
+  href: https://artifacts.apis.io/zincsearch/conformance/zincsearch-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zincsearch-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/llms/zincsearch-llms.txt
+  href: https://artifacts.apis.io/zincsearch/llms/zincsearch-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zincsearch-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/well-known/zincsearch-well-known.yml
+  href: https://artifacts.apis.io/zincsearch/well-known/zincsearch-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/zincsearch-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/hosts/zincsearch-hosts.yml
+  href: https://artifacts.apis.io/zincsearch/hosts/zincsearch-hosts.yml
   title: ''
   type: Hosts
   url: hosts/zincsearch-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/vendors/zincsearch-vendors.yml
+  href: https://artifacts.apis.io/zincsearch/vendors/zincsearch-vendors.yml
   title: ''
   type: Vendors
   url: vendors/zincsearch-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/packages/zincsearch-packages.yml
+  href: https://artifacts.apis.io/zincsearch/packages/zincsearch-packages.yml
   title: ''
   type: SDKs
   url: packages/zincsearch-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/packages/zincsearch-packages.yml
+  href: https://artifacts.apis.io/zincsearch/packages/zincsearch-packages.yml
   title: ''
   type: Packages
   url: packages/zincsearch-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/authentication/zincsearch-authentication.yml
+  href: https://artifacts.apis.io/zincsearch/authentication/zincsearch-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zincsearch-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zincsearch/refs/heads/main/security/zincsearch-domain-security.yml
+  href: https://artifacts.apis.io/zincsearch/security/zincsearch-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zincsearch-domain-security.yml
@@ -165,6 +212,81 @@ common:
 created: '2026-10-13'
 description: ZincSearch is an open source, self-hosted, lightweight full-text search engine written in Go (Apache 2.0) with an Elasticsearch-compatible ingestion and search API, built by Zinc Labs. The company now develops OpenObserve as its successor, and zincsearch.com redirects to openobserve.ai.
 image: https://openobserve.ai/o2-seo-image.png
+json_schemas:
+- name: auth.LoginRequest
+  property_count: 2
+  slug: zincsearch-auth-login-request
+- name: auth.LoginResponse
+  property_count: 2
+  slug: zincsearch-auth-login-response
+- name: auth.LoginUser
+  property_count: 3
+  slug: zincsearch-auth-login-user
+- name: auth.UpdateAccountRequest
+  property_count: 4
+  slug: zincsearch-auth-update-account-request
+- name: index.AnalyzeResponse
+  property_count: 1
+  slug: zincsearch-index-analyze-response
+- name: index.IndexListResponse
+  property_count: 2
+  slug: zincsearch-index-index-list-response
+- name: meta.HealthzResponse
+  property_count: 1
+  slug: zincsearch-meta-healthz-response
+- name: meta.Hit
+  property_count: 8
+  slug: zincsearch-meta-hit
+- name: meta.HTTPResponseDeleteByQuery
+  property_count: 12
+  slug: zincsearch-meta-httpresponse-delete-by-query
+- name: meta.HTTPResponseDocument
+  property_count: 3
+  slug: zincsearch-meta-httpresponse-document
+- name: meta.HTTPResponseID
+  property_count: 2
+  slug: zincsearch-meta-httpresponse-id
+- name: meta.HTTPResponseRecordCount
+  property_count: 2
+  slug: zincsearch-meta-httpresponse-record-count
+- name: meta.IndexSettings
+  property_count: 3
+  slug: zincsearch-meta-index-settings
+- name: meta.IndexSimple
+  property_count: 5
+  slug: zincsearch-meta-index-simple
+- name: meta.IndexTemplate
+  property_count: 5
+  slug: zincsearch-meta-index-template
+- name: meta.JSONIngest
+  property_count: 2
+  slug: zincsearch-meta-jsoningest
+- name: meta.Mappings
+  property_count: 1
+  slug: zincsearch-meta-mappings
+- name: meta.Role
+  property_count: 6
+  slug: zincsearch-meta-role
+- name: meta.SearchResponse
+  property_count: 6
+  slug: zincsearch-meta-search-response
+- name: meta.User
+  property_count: 7
+  slug: zincsearch-meta-user
+- name: meta.VersionResponse
+  property_count: 5
+  slug: zincsearch-meta-version-response
+- name: meta.ZincQueryForSDK
+  property_count: 11
+  slug: zincsearch-meta-zinc-query-for-sdk
+- name: v1.ZincQueryForSDK
+  property_count: 9
+  slug: zincsearch-v1-zinc-query-for-sdk
+jsonld:
+- class_count: 74
+  name: Zincsearch Context
+  property_count: 174
+  slug: zincsearch-context
 layout: provider
 modified: '2026-10-14'
 name: ZincSearch
@@ -173,41 +295,43 @@ network: true
 overview: 'ZincSearch publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Document API, Healthz API, Index API, and 5 more. Tagged areas include Company, Search, Full-Text Search, Open Source, and Self-Hosted.
 
 
-  The ZincSearch catalog on APIs.io includes 1 Spectral governance ruleset.
+  The ZincSearch catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  ZincSearch''s developer surface includes authentication, documentation, and 16 more developer resources.'
+  ZincSearch''s developer surface includes pricing, getting-started guide, changelog, engineering blog, API reference, authentication, documentation, and 19 more developer resources.'
 random_paper: 10
 rules:
 - authorship: generated
-  effective_rule_count: 51
+  effective_rule_count: 100
   extends:
   - spectral:oas
   name: ZincSearch API Rules
-  rule_count: 10
+  rule_count: 59
   severity_counts:
-    error: 8
+    error: 52
     hint: 0
     info: 1
-    warn: 1
+    warn: 6
   slug: zincsearch-rules
 score:
-  band: thin
-  composite: 29.4
+  band: developing
+  composite: 40.0
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 40.8
+    artifact_dirs: 21
+    catalog_earned: 57.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.3
+    catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: 11.1
   facets:
-    access_clarity: 0.0
+    access_clarity: 21.1
     contract_governance: 22.0
-    contract_quality: 40.9
-    developer_ergonomics: 35.7
-    discoverability: 69.6
-    operational_transparency: 5.3
+    contract_quality: 54.5
+    developer_ergonomics: 41.7
+    discoverability: 64.3
+    operational_transparency: 18.4
+  previous_composite: 28.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -222,12 +346,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 22.2
+screenshot: https://apis.io/screenshots/zincsearch/zincsearch-2026-11-03T150559.png
 security:
 - kind: authentication
   name: Zincsearch Authentication

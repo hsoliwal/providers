@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: RESTful Poka API for building integrations with third-party manufacturing and enterprise systems, plus SCIM for automated user provisioning. Developer/API documentation is delivered per-tenant (behind
@@ -89,27 +93,27 @@ common:
   type: PrivacyPolicy
   url: https://www.iubenda.com/privacy-policy/45914112
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/poka/refs/heads/main/lifecycle/poka-lifecycle.yml
+  href: https://artifacts.apis.io/poka/lifecycle/poka-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/poka-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/poka/refs/heads/main/conformance/poka-conformance.yml
+  href: https://artifacts.apis.io/poka/conformance/poka-conformance.yml
   title: ''
   type: Conformance
   url: conformance/poka-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/poka/refs/heads/main/security/poka-domain-security.yml
+  href: https://artifacts.apis.io/poka/security/poka-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/poka-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/poka/refs/heads/main/well-known/poka-well-known.yml
+  href: https://artifacts.apis.io/poka/well-known/poka-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/poka-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/poka/refs/heads/main/llms/poka-llms.txt
+  href: https://artifacts.apis.io/poka/llms/poka-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/poka-llms.txt
@@ -125,18 +129,18 @@ overview: 'Poka is listed with 1 API on the [APIs.io](https://apis.io/) network.
 
 
   Poka''s developer surface includes getting-started guide, signup flow, support, engineering blog, pricing, and 12 more developer resources.'
-random_paper: 9
+random_paper: 19
 score:
   band: emerging
   composite: 13.7
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
@@ -144,7 +148,7 @@ score:
     developer_ergonomics: 4.8
     discoverability: 64.3
     operational_transparency: 15.8
-  previous_composite: 13.6
+  previous_composite: 13.7
   provenance:
     conformance: first-party
   regulatory:
@@ -153,14 +157,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/poka/refs/heads/main/screenshots/poka-2026-09-02T151636.png
+screenshot: https://apis.io/screenshots/poka/poka-2026-09-02T151636.png
 security:
 - kind: domain-security
   name: Poka Domain Security

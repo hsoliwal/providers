@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.7
-  scored_at: '2026-10-17'
+  score: 23.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -75,9 +79,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: ModelServer General API
   slug: open-pdb-general-api
 - collection_type: open
@@ -95,17 +96,17 @@ common:
   type: Blog
   url: https://www.rcsb.org/pages/news
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pdb/refs/heads/main/agentic-access/pdb-agentic-access.yml
+  href: https://artifacts.apis.io/pdb/agentic-access/pdb-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pdb-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pdb/refs/heads/main/security/pdb-domain-security.yml
+  href: https://artifacts.apis.io/pdb/security/pdb-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pdb-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pdb/refs/heads/main/json-ld/pdb.json
+  href: https://artifacts.apis.io/pdb/json-ld/pdb.json
   title: ''
   type: JSONLD
   url: json-ld/pdb.json
@@ -142,17 +143,17 @@ common:
   type: StatusPage
   url: https://www.rcsb.org/pages/policies
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pdb/refs/heads/main/rate-limits/pdb-rate-limits.yml
+  href: https://artifacts.apis.io/pdb/rate-limits/pdb-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pdb-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pdb/refs/heads/main/plans/pdb-plans-pricing.yml
+  href: https://artifacts.apis.io/pdb/plans/pdb-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pdb-plans-pricing.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pdb/refs/heads/main/finops/pdb-finops.yml
+  href: https://artifacts.apis.io/pdb/finops/pdb-finops.yml
   title: ''
   type: FinOps
   url: finops/pdb-finops.yml
@@ -170,7 +171,7 @@ finops:
 - has_sources: true
   method: generated
   name: Pdb Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: Open Scientific Data API
   slug: pdb-finops
   template: false
@@ -187,35 +188,51 @@ network: true
 overview: 'RCSB PDB publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including General API, Metadata Service API, Search Service API, and 4 more. Tagged areas include Structural Biology, Proteomics, Bioinformatics, Genomics, and Life Sciences.
 
 
+  The RCSB PDB catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   RCSB PDB''s developer surface includes engineering blog, documentation, getting-started guide, GitHub presence, and 13 more developer resources.'
 plans:
 - name: Pdb Plans Pricing
   plan_count: 1
   slug: pdb-plans-pricing
-random_paper: 2
+random_paper: 22
 rate_limits:
 - limit_count: 7
   name: Pdb Rate Limits
   slug: pdb-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 82
+  extends:
+  - spectral:oas
+  name: RCSB PDB API Rules
+  rule_count: 41
+  severity_counts:
+    error: 32
+    hint: 0
+    info: 2
+    warn: 7
+  slug: pdb-rules
 score:
-  band: emerging
-  composite: 25.0
+  band: thin
+  composite: 28.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 45.0
+    artifact_dirs: 17
+    catalog_earned: 52.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 70.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.4
+  delta: 0.0
   facets:
-    access_clarity: 5.3
-    contract_governance: 0.0
+    access_clarity: 13.2
+    contract_governance: 13.6
     contract_quality: 40.3
     developer_ergonomics: 23.8
     discoverability: 71.4
     operational_transparency: 28.9
-  previous_composite: 31.4
+  previous_composite: 28.2
   provenance:
     agentic_access: derived
     contracts:
@@ -229,13 +246,13 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pdb/refs/heads/main/screenshots/pdb-2026-06-20T191514.png
+screenshot: https://apis.io/screenshots/pdb/pdb-2026-06-20T191514.png
 security:
 - kind: domain-security
   name: Pdb Domain Security

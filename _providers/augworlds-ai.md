@@ -1,4 +1,21 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Free · Self-serve signup
+  onboarding: self-serve
+  pricing: free
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +32,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +43,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Remote Model Context Protocol server (Streamable HTTP) at https://travel.augworlds.ai/mcp. Clients authenticate with OAuth 2.1 — the client registers itself and runs authorization_code + PKCE with a b
@@ -63,62 +83,62 @@ common:
   type: TermsOfService
   url: https://travel.augworlds.ai/terms
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/mcp/augworlds-ai-mcp.yml
+  href: https://artifacts.apis.io/augworlds-ai/mcp/augworlds-ai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/augworlds-ai-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/a2a/augworlds-ai-a2a.yml
+  href: https://artifacts.apis.io/augworlds-ai/a2a/augworlds-ai-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/augworlds-ai-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/well-known/augworlds-ai-well-known.yml
+  href: https://artifacts.apis.io/augworlds-ai/well-known/augworlds-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/augworlds-ai-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/scopes/augworlds-ai-scopes.yml
+  href: https://artifacts.apis.io/augworlds-ai/scopes/augworlds-ai-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/augworlds-ai-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/authentication/augworlds-ai-authentication.yml
+  href: https://artifacts.apis.io/augworlds-ai/authentication/augworlds-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/augworlds-ai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/conformance/augworlds-ai-conformance.yml
+  href: https://artifacts.apis.io/augworlds-ai/conformance/augworlds-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/augworlds-ai-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/conventions/augworlds-ai-conventions.yml
+  href: https://artifacts.apis.io/augworlds-ai/conventions/augworlds-ai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/augworlds-ai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/errors/augworlds-ai-problem-types.yml
+  href: https://artifacts.apis.io/augworlds-ai/errors/augworlds-ai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/augworlds-ai-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/rate-limits/augworlds-ai-rate-limits.yml
+  href: https://artifacts.apis.io/augworlds-ai/rate-limits/augworlds-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/augworlds-ai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/plans/augworlds-ai-plans-pricing.yml
+  href: https://artifacts.apis.io/augworlds-ai/plans/augworlds-ai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/augworlds-ai-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/llms/augworlds-ai-llms.txt
+  href: https://artifacts.apis.io/augworlds-ai/llms/augworlds-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/augworlds-ai-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/security/augworlds-ai-domain-security.yml
+  href: https://artifacts.apis.io/augworlds-ai/security/augworlds-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/augworlds-ai-domain-security.yml
@@ -142,7 +162,7 @@ plans:
 - name: Augworlds Ai Plans Pricing
   plan_count: 1
   slug: augworlds-ai-plans-pricing
-random_paper: 21
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Augworlds Ai Rate Limits
@@ -162,7 +182,7 @@ score:
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.1
+  delta: 0.0
   facets:
     access_clarity: 65.8
     contract_governance: 18.2
@@ -170,7 +190,7 @@ score:
     developer_ergonomics: 21.4
     discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 27.2
+  previous_composite: 29.3
   provenance:
     conformance: first-party
     mcp: first-party
@@ -180,14 +200,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/augworlds-ai/refs/heads/main/screenshots/augworlds-ai-2026-10-11T100829.png
+screenshot: https://apis.io/screenshots/augworlds-ai/augworlds-ai-2026-10-11T100829.png
 security:
 - kind: authentication
   name: Augworlds Ai Authentication
@@ -207,7 +227,8 @@ tags:
 - MCP
 - A2A
 - AI Agents
-- Authentication
+- OAuth
 - Marketplace
+- Authentication
 website: https://augworlds.ai/
 ---

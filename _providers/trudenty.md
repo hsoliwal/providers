@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -49,7 +53,7 @@ common:
   type: Blog
   url: https://trudenty.com/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trudenty/refs/heads/main/security/trudenty-trust-center.yml
+  href: https://artifacts.apis.io/trudenty/security/trudenty-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/trudenty-trust-center.yml
@@ -70,7 +74,7 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/trudenty
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trudenty/refs/heads/main/security/trudenty-domain-security.yml
+  href: https://artifacts.apis.io/trudenty/security/trudenty-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trudenty-domain-security.yml
@@ -86,12 +90,12 @@ overview: 'Trudenty is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   Trudenty''s developer surface includes documentation, engineering blog, and 7 more developer resources.'
-random_paper: 15
+random_paper: 7
 score:
   band: emerging
   composite: 13.0
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -112,14 +116,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 15.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/trudenty/refs/heads/main/screenshots/trudenty-2026-09-02T164321.png
+screenshot: https://apis.io/screenshots/trudenty/trudenty-2026-09-02T164321.png
 security:
 - kind: domain-security
   name: Trudenty Domain Security

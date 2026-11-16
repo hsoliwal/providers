@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 23.4
-  scored_at: '2026-10-17'
+  score: 22.9
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
 - baseURL: https://api.volumental.com
@@ -69,52 +83,52 @@ apis:
 artifact_total: 18
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/volumental/refs/heads/main/rules/volumental-rules.yml
+  href: https://artifacts.apis.io/volumental/rules/volumental-rules.yml
   title: ''
   type: Spectral
   url: rules/volumental-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/volumental/refs/heads/main/json-ld/volumental-context.jsonld
+  href: https://artifacts.apis.io/volumental/json-ld/volumental-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/volumental-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/volumental/refs/heads/main/vocabulary/volumental-vocabulary.yml
+  href: https://artifacts.apis.io/volumental/vocabulary/volumental-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/volumental-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/volumental/refs/heads/main/data-model/volumental-data-model.yml
+  href: https://artifacts.apis.io/volumental/data-model/volumental-data-model.yml
   title: ''
   type: DataModel
   url: data-model/volumental-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/volumental/refs/heads/main/authentication/volumental-authentication.yml
+  href: https://artifacts.apis.io/volumental/authentication/volumental-authentication.yml
   title: ''
   type: Authentication
   url: authentication/volumental-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/volumental/refs/heads/main/conformance/volumental-conformance.yml
+  href: https://artifacts.apis.io/volumental/conformance/volumental-conformance.yml
   title: ''
   type: Conformance
   url: conformance/volumental-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/volumental/refs/heads/main/llms/volumental-llms.txt
+  href: https://artifacts.apis.io/volumental/llms/volumental-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/volumental-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/volumental/refs/heads/main/well-known/volumental-well-known.yml
+  href: https://artifacts.apis.io/volumental/well-known/volumental-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/volumental-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/volumental/refs/heads/main/hosts/volumental-hosts.yml
+  href: https://artifacts.apis.io/volumental/hosts/volumental-hosts.yml
   title: ''
   type: Hosts
   url: hosts/volumental-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/volumental/refs/heads/main/vendors/volumental-vendors.yml
+  href: https://artifacts.apis.io/volumental/vendors/volumental-vendors.yml
   title: ''
   type: Vendors
   url: vendors/volumental-vendors.yml
@@ -139,7 +153,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/Volumental
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/volumental/refs/heads/main/security/volumental-domain-security.yml
+  href: https://artifacts.apis.io/volumental/security/volumental-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/volumental-domain-security.yml
@@ -203,14 +217,14 @@ modified: '2026-10-15'
 name: Volumental
 nav: Providers
 network: true
-overview: 'Volumental is listed with 8 APIs on the [APIs.io](https://apis.io/) network, including Auth API, OAuth API, Recommendations API, and 5 more. Tagged areas include Company, Retail, Footwear, 3DScanning, and Artificial Intelligence.
+overview: 'Volumental is listed with 8 APIs on the [APIs.io](https://apis.io/) network, including Auth API, OAuth API, Recommendations API, and 5 more. Tagged areas include Company, Retail, Footwear, 3D Scanning, and Artificial Intelligence.
 
 
   The Volumental catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Volumental''s developer surface includes authentication, API reference, getting-started guide, documentation, engineering blog, support, and 15 more developer resources.'
-random_paper: 17
+random_paper: 15
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -225,22 +239,24 @@ rules:
     warn: 1
   slug: volumental-rules
 score:
-  band: thin
-  composite: 32.0
+  band: emerging
+  composite: 25.4
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.6
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
     contract_quality: 26.0
-    developer_ergonomics: 47.6
-    discoverability: 80.4
-    operational_transparency: 5.3
+    developer_ergonomics: 29.8
+    discoverability: 79.5
+    operational_transparency: 2.6
+  previous_composite: 32.0
   provenance:
     conformance: derived
     contracts:
@@ -254,12 +270,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/volumental/volumental-2026-11-03T145919.png
 security:
 - kind: authentication
   name: Volumental Authentication
@@ -274,7 +292,7 @@ tags:
 - Company
 - Retail
 - Footwear
-- 3DScanning
+- 3D Scanning
 - Artificial Intelligence
 website: https://volumental.com/
 ---

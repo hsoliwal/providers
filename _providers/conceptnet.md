@@ -1,16 +1,17 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.4
-  scored_at: '2026-10-17'
+  score: 29.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -81,11 +85,8 @@ apis:
   description: URI normalization and text standardization
   name: ConceptNet Utilities API
   slug: conceptnet-utilities-api
-artifact_total: 30
+artifact_total: 29
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: ConceptNet REST Concepts API
   slug: open-conceptnet-concepts-api
@@ -113,12 +114,12 @@ common:
   type: IssueTracker
   url: https://github.com/commonsense/conceptnet5/issues
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/conceptnet/refs/heads/main/agentic-access/conceptnet-agentic-access.yml
+  href: https://artifacts.apis.io/conceptnet/agentic-access/conceptnet-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/conceptnet-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/conceptnet/refs/heads/main/security/conceptnet-domain-security.yml
+  href: https://artifacts.apis.io/conceptnet/security/conceptnet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/conceptnet-domain-security.yml
@@ -159,17 +160,17 @@ common:
   type: Support
   url: https://groups.google.com/g/conceptnet-users
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/conceptnet/refs/heads/main/plans/conceptnet-plans-pricing.yml
+  href: https://artifacts.apis.io/conceptnet/plans/conceptnet-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/conceptnet-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/conceptnet/refs/heads/main/rate-limits/conceptnet-rate-limits.yml
+  href: https://artifacts.apis.io/conceptnet/rate-limits/conceptnet-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/conceptnet-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/conceptnet/refs/heads/main/finops/conceptnet-finops.yml
+  href: https://artifacts.apis.io/conceptnet/finops/conceptnet-finops.yml
   title: ''
   type: FinOps
   url: finops/conceptnet-finops.yml
@@ -247,13 +248,13 @@ score:
   band: thin
   composite: 27.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 45.3
     catalog_earned_first_party: 0.0
     catalog_gap: 69.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.9
+  delta: 0.0
   facets:
     access_clarity: 5.3
     contract_governance: 9.8
@@ -261,7 +262,7 @@ score:
     developer_ergonomics: 26.2
     discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 34.1
+  previous_composite: 27.2
   provenance:
     agentic_access: derived
     contracts:
@@ -275,14 +276,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/conceptnet/refs/heads/main/screenshots/conceptnet-2026-06-20T174840.png
+screenshot: https://apis.io/screenshots/conceptnet/conceptnet-2026-06-20T174840.png
 security:
 - kind: domain-security
   name: Conceptnet Domain Security

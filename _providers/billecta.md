@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +25,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 17.3
+  scored_at: '2026-11-06'
 api_count: 16
 apis:
-- description: Main API documented at Billecta Docs reference page.
+- baseURL: https://api.billecta.com
+  baseurl_source: spec
+  description: Main API documented at Billecta Docs reference page.
   name: Billecta API
-  slug: billecta-api-2
+  slug: billecta-api
 - baseURL: https://api.billecta.com
   baseurl_source: declared
   description: The Accounting API from Billecta — 3 operation(s) for accounting.
@@ -107,37 +122,37 @@ apis:
 artifact_total: 25
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/billecta/refs/heads/main/rules/billecta-rules.yml
+  href: https://artifacts.apis.io/billecta/rules/billecta-rules.yml
   title: ''
   type: Spectral
   url: rules/billecta-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/billecta/refs/heads/main/json-ld/billecta-context.jsonld
+  href: https://artifacts.apis.io/billecta/json-ld/billecta-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/billecta-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/billecta/refs/heads/main/vocabulary/billecta-vocabulary.yml
+  href: https://artifacts.apis.io/billecta/vocabulary/billecta-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/billecta-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/billecta/refs/heads/main/data-model/billecta-data-model.yml
+  href: https://artifacts.apis.io/billecta/data-model/billecta-data-model.yml
   title: ''
   type: DataModel
   url: data-model/billecta-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/billecta/refs/heads/main/conformance/billecta-conformance.yml
+  href: https://artifacts.apis.io/billecta/conformance/billecta-conformance.yml
   title: ''
   type: Conformance
   url: conformance/billecta-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/billecta/refs/heads/main/hosts/billecta-hosts.yml
+  href: https://artifacts.apis.io/billecta/hosts/billecta-hosts.yml
   title: ''
   type: Hosts
   url: hosts/billecta-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/billecta/refs/heads/main/vendors/billecta-vendors.yml
+  href: https://artifacts.apis.io/billecta/vendors/billecta-vendors.yml
   title: ''
   type: Vendors
   url: vendors/billecta-vendors.yml
@@ -154,7 +169,7 @@ common:
   type: Documentation
   url: https://docs.billecta.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/billecta/refs/heads/main/security/billecta-domain-security.yml
+  href: https://artifacts.apis.io/billecta/security/billecta-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/billecta-domain-security.yml
@@ -203,14 +218,14 @@ modified: '2026-10-15'
 name: Billecta
 nav: Providers
 network: true
-overview: 'Billecta is listed with 16 APIs on the [APIs.io](https://apis.io/) network, including Accounting API, Accountingdimensions API, Action API, and 13 more. Tagged areas include Fintech, Invoicing, Payments, Software-as-a-Service, and Sweden.
+overview: 'Billecta is listed with 16 APIs on the [APIs.io](https://apis.io/) network, including Accounting API, Accountingdimensions API, and 14 more. Tagged areas include Fintech, Invoicing, Payments, Software-as-a-Service, and Sweden.
 
 
   The Billecta catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Billecta''s developer surface includes API reference, getting-started guide, documentation, and 9 more developer resources.'
-random_paper: 18
+random_paper: 16
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -226,25 +241,35 @@ rules:
   slug: billecta-rules
 score:
   band: emerging
-  composite: 20.7
+  composite: 17.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 58.8
     catalog_earned_first_party: 0.0
     catalog_gap: 56.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.9
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
-    contract_quality: 25.5
-    developer_ergonomics: 28.6
+    contract_quality: 24.6
+    developer_ergonomics: 14.3
     discoverability: 58.9
     operational_transparency: 0.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - sweden
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+    - nordics
+  previous_composite: 20.5
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 16
       marker_coverage: 100.0
       total: 16
@@ -255,11 +280,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 9.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 22.2
+screenshot: https://apis.io/screenshots/billecta/billecta-2026-11-03T121725.png
 security:
 - kind: domain-security
   name: Billecta Domain Security
@@ -272,6 +299,6 @@ tags:
 - Payments
 - Software-as-a-Service
 - Sweden
-- BusinessAutomation
+- Business Automation
 website: https://billecta.com/
 ---

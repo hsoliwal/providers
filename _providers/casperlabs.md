@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: API for Casper blockchain developers, providing endpoints for deploying contracts, querying state, and managing accounts.
@@ -47,42 +60,42 @@ apis:
 artifact_total: 9
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casperlabs/refs/heads/main/rules/casperlabs-rules.yml
+  href: https://artifacts.apis.io/casperlabs/rules/casperlabs-rules.yml
   title: ''
   type: Spectral
   url: rules/casperlabs-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casperlabs/refs/heads/main/json-ld/casperlabs-context.jsonld
+  href: https://artifacts.apis.io/casperlabs/json-ld/casperlabs-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/casperlabs-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casperlabs/refs/heads/main/vocabulary/casperlabs-vocabulary.yml
+  href: https://artifacts.apis.io/casperlabs/vocabulary/casperlabs-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/casperlabs-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casperlabs/refs/heads/main/data-model/casperlabs-data-model.yml
+  href: https://artifacts.apis.io/casperlabs/data-model/casperlabs-data-model.yml
   title: ''
   type: DataModel
   url: data-model/casperlabs-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casperlabs/refs/heads/main/conformance/casperlabs-conformance.yml
+  href: https://artifacts.apis.io/casperlabs/conformance/casperlabs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/casperlabs-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/casperlabs/refs/heads/main/llms/casperlabs-llms.txt
+  href: https://artifacts.apis.io/casperlabs/llms/casperlabs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/casperlabs-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/casperlabs/refs/heads/main/hosts/casperlabs-hosts.yml
+  href: https://artifacts.apis.io/casperlabs/hosts/casperlabs-hosts.yml
   title: ''
   type: Hosts
   url: hosts/casperlabs-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/casperlabs/refs/heads/main/vendors/casperlabs-vendors.yml
+  href: https://artifacts.apis.io/casperlabs/vendors/casperlabs-vendors.yml
   title: ''
   type: Vendors
   url: vendors/casperlabs-vendors.yml
@@ -123,7 +136,7 @@ common:
   type: Documentation
   url: https://developer.casper.network/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/casperlabs/refs/heads/main/security/casperlabs-domain-security.yml
+  href: https://artifacts.apis.io/casperlabs/security/casperlabs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/casperlabs-domain-security.yml
@@ -159,7 +172,7 @@ modified: '2026-10-07'
 name: Casperlabs
 nav: Providers
 network: true
-overview: 'Casperlabs is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Casperlabs API, Metrics API, Status API, and 1 more. Tagged areas include Blockchain, Smart-Contracts, Enterprise, AI-Toolkit, and Decentralized-Finance.
+overview: 'Casperlabs is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Casperlabs API, Metrics API, Status API, and 1 more. Tagged areas include Blockchain, Smart Contracts, Enterprise, AI-Toolkit, and Decentralized Finance.
 
 
   The Casperlabs catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -181,22 +194,24 @@ rules:
     warn: 1
   slug: casperlabs-rules
 score:
-  band: thin
-  composite: 33.6
+  band: emerging
+  composite: 24.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 16
     catalog_earned: 57.8
     catalog_earned_first_party: 0.0
     catalog_gap: 42.3
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.5
   facets:
-    access_clarity: 57.1
+    access_clarity: 28.6
     contract_governance: 22.0
     contract_quality: 22.3
-    developer_ergonomics: 23.8
-    discoverability: 73.2
-    operational_transparency: 10.5
+    developer_ergonomics: 11.9
+    discoverability: 71.4
+    operational_transparency: 5.3
+  previous_composite: 33.6
   provenance:
     conformance: derived
     contracts:
@@ -210,13 +225,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/casperlabs/casperlabs-2026-11-03T123446.png
 security:
 - kind: domain-security
   name: Casperlabs Domain Security
@@ -225,9 +242,9 @@ security:
 slug: casperlabs
 tags:
 - Blockchain
-- Smart-Contracts
+- Smart Contracts
 - Enterprise
 - AI-Toolkit
-- Decentralized-Finance
+- Decentralized Finance
 website: https://www.casper.network
 ---

@@ -1,14 +1,17 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium · Open access
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Open access
   onboarding: open
-  pricing: freemium
+  pricing: unknown
   public: true
   source:
-  - plans
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -19,21 +22,24 @@ agent_readiness:
     auth_clarity: false
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: na
+    dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
-    idempotency: na
+    idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
-    reversibility_documented: na
+    reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.3
-  scored_at: '2026-10-17'
+  score: 21.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -45,19 +51,16 @@ api_count: 1
 apis:
 - baseURL: https://api.datamuse.com
   baseurl_source: declared
-  description: Autocomplete suggestions with spelling correction and semantic fallback.
-  name: Datamuse Suggestions API
-  slug: datamuse-suggestions-api
-- baseURL: https://api.datamuse.com
-  baseurl_source: declared
   description: Word-finding queries combining semantic, phonetic, orthographic, and vocabulary constraints.
   name: Datamuse Words API
   slug: datamuse-words-api
-artifact_total: 54
+- baseURL: https://api.datamuse.com
+  baseurl_source: declared
+  description: The Pets API from Datamuse — 1 operation(s) for pets.
+  name: Datamuse Pets API
+  slug: datamuse-pets-api
+artifact_total: 53
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Datamuse Suggestions API
   slug: open-datamuse-suggestions-api
@@ -68,17 +71,21 @@ collections:
   name: Datamuse API
   slug: open-datamuse
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/datamuse/overview
 - group: company
   title: ''
   type: Blog
   url: https://www.datamuse.com/blog/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/datamuse/refs/heads/main/agentic-access/datamuse-agentic-access.yml
+  href: https://artifacts.apis.io/datamuse/agentic-access/datamuse-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/datamuse-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/datamuse/refs/heads/main/security/datamuse-domain-security.yml
+  href: https://artifacts.apis.io/datamuse/security/datamuse-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/datamuse-domain-security.yml
@@ -111,27 +118,27 @@ common:
   type: Support
   url: https://www.datamuse.com/api/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/datamuse/refs/heads/main/rules/datamuse-rules.yml
+  href: https://artifacts.apis.io/datamuse/rules/datamuse-rules.yml
   title: ''
   type: SpectralRules
   url: rules/datamuse-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/datamuse/refs/heads/main/vocabulary/datamuse-vocabulary.yml
+  href: https://artifacts.apis.io/datamuse/vocabulary/datamuse-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/datamuse-vocabulary.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/datamuse/refs/heads/main/plans/datamuse-plans-pricing.yml
+  href: https://artifacts.apis.io/datamuse/plans/datamuse-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/datamuse-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/datamuse/refs/heads/main/rate-limits/datamuse-rate-limits.yml
+  href: https://artifacts.apis.io/datamuse/rate-limits/datamuse-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/datamuse-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/datamuse/refs/heads/main/finops/datamuse-finops.yml
+  href: https://artifacts.apis.io/datamuse/finops/datamuse-finops.yml
   title: ''
   type: FinOps
   url: finops/datamuse-finops.yml
@@ -228,8 +235,8 @@ features:
 - description: Prepends the result list with a record describing the query string, useful for one-shot word-metadata lookups.
   name: Query Echo (qe)
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Datamuse Finops
   primary_unit: ''
   service_category: ''
@@ -285,18 +292,18 @@ modified: '2026-10-06'
 name: Datamuse
 nav: Providers
 network: true
-overview: 'Datamuse publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Suggestions API and Words API. Tagged areas include Word Finding, Lexical Search, Natural-Language, Vocabulary, and Synonyms.
+overview: 'Datamuse publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Words API and Pets API. Tagged areas include Word Finding, Lexical Search, Natural-Language, Vocabulary, and Synonyms.
 
 
   The Datamuse catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Datamuse''s developer surface includes engineering blog, documentation, API reference, pricing, support, tooling, and 24 more developer resources.'
+  Datamuse''s developer surface includes engineering blog, documentation, API reference, pricing, support, tooling, and 25 more developer resources.'
 plans:
 - name: Datamuse Plans Pricing
-  plan_count: 2
+  plan_count: 0
   slug: datamuse-plans-pricing
-random_paper: 16
+random_paper: 12
 rate_limits:
 - limit_count: 0
   name: Datamuse Rate Limits
@@ -326,45 +333,44 @@ rules:
     warn: 6
   slug: datamuse-rules
 score:
-  band: developing
-  composite: 42.1
+  band: thin
+  composite: 39.1
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 65.0
+    artifact_dirs: 18
+    catalog_earned: 63.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.0
+    catalog_gap: 52.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.7
+  delta: 0.5
   facets:
-    access_clarity: 36.8
+    access_clarity: 31.6
     contract_governance: 27.3
-    contract_quality: 62.0
-    developer_ergonomics: 40.5
+    contract_quality: 55.9
+    developer_ergonomics: 41.7
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 45.8
+  previous_composite: 38.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 2
+      marker_coverage: 40.0
+      total: 5
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
-    applies: false
-    note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
-    reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/datamuse/refs/heads/main/screenshots/datamuse-2026-08-17T083151.png
+    applies: true
+    score: 0.0
+screenshot: https://apis.io/screenshots/datamuse/datamuse-2026-08-17T083151.png
 security:
 - kind: domain-security
   name: Datamuse Domain Security

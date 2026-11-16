@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.2
-  scored_at: '2026-10-17'
+  score: 22.9
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: External developer API for Pixepi tools providing PDF, image and text processing.
@@ -47,42 +60,42 @@ apis:
 artifact_total: 8
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pixepi/refs/heads/main/rules/pixepi-rules.yml
+  href: https://artifacts.apis.io/pixepi/rules/pixepi-rules.yml
   title: ''
   type: Spectral
   url: rules/pixepi-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pixepi/refs/heads/main/json-ld/pixepi-context.jsonld
+  href: https://artifacts.apis.io/pixepi/json-ld/pixepi-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/pixepi-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pixepi/refs/heads/main/vocabulary/pixepi-vocabulary.yml
+  href: https://artifacts.apis.io/pixepi/vocabulary/pixepi-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/pixepi-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pixepi/refs/heads/main/conformance/pixepi-conformance.yml
+  href: https://artifacts.apis.io/pixepi/conformance/pixepi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pixepi-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pixepi/refs/heads/main/data-model/pixepi-data-model.yml
+  href: https://artifacts.apis.io/pixepi/data-model/pixepi-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pixepi-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pixepi/refs/heads/main/errors/pixepi-problem-types.yml
+  href: https://artifacts.apis.io/pixepi/errors/pixepi-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pixepi-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pixepi/refs/heads/main/hosts/pixepi-hosts.yml
+  href: https://artifacts.apis.io/pixepi/hosts/pixepi-hosts.yml
   title: ''
   type: Hosts
   url: hosts/pixepi-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pixepi/refs/heads/main/vendors/pixepi-vendors.yml
+  href: https://artifacts.apis.io/pixepi/vendors/pixepi-vendors.yml
   title: ''
   type: Vendors
   url: vendors/pixepi-vendors.yml
@@ -103,7 +116,7 @@ common:
   type: APIReference
   url: https://pixepi.com/developers
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pixepi/refs/heads/main/security/pixepi-domain-security.yml
+  href: https://artifacts.apis.io/pixepi/security/pixepi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pixepi-domain-security.yml
@@ -146,7 +159,7 @@ overview: 'Pixepi publishes 4 API contracts indexed on the [APIs.io](https://api
 
 
   Pixepi''s developer surface includes API reference, documentation, and 13 more developer resources.'
-random_paper: 17
+random_paper: 7
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -161,22 +174,24 @@ rules:
     warn: 1
   slug: pixepi-rules
 score:
-  band: thin
-  composite: 31.0
+  band: emerging
+  composite: 25.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 48.2
     catalog_earned_first_party: 0.0
     catalog_gap: 66.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.7
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 22.0
     contract_quality: 50.7
-    developer_ergonomics: 16.7
+    developer_ergonomics: 8.3
     discoverability: 57.1
     operational_transparency: 0.0
+  previous_composite: 31.0
   provenance:
     conformance: derived
     contracts:
@@ -190,12 +205,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/pixepi/pixepi-2026-11-03T141247.png
 security:
 - kind: domain-security
   name: Pixepi Domain Security

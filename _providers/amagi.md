@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -144,11 +147,8 @@ apis:
   description: The Submit API from Amagi — 1 operation(s) for submit.
   name: Amagi Submit API
   slug: amagi-submit-api
-artifact_total: 44
+artifact_total: 46
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: services-amagi-tv Add User API
   slug: open-amagi-add-user-api
@@ -215,7 +215,7 @@ common:
   type: BlogRSS
   url: https://www.amagi.com/blog/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/overlays/amagi-callisto-overlay.yaml
+  href: https://artifacts.apis.io/amagi/overlays/amagi-callisto-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amagi-callisto-overlay.yaml
@@ -244,62 +244,62 @@ common:
   type: PrivacyPolicy
   url: https://www.amagi.com/website-privacy-policy/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/authentication/amagi-authentication.yml
+  href: https://artifacts.apis.io/amagi/authentication/amagi-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amagi-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/conventions/amagi-conventions.yml
+  href: https://artifacts.apis.io/amagi/conventions/amagi-conventions.yml
   title: ''
   type: Conventions
   url: conventions/amagi-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/errors/amagi-problem-types.yml
+  href: https://artifacts.apis.io/amagi/errors/amagi-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/amagi-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/conformance/amagi-conformance.yml
+  href: https://artifacts.apis.io/amagi/conformance/amagi-conformance.yml
   title: ''
   type: Conformance
   url: conformance/amagi-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/data-model/amagi-data-model.yml
+  href: https://artifacts.apis.io/amagi/data-model/amagi-data-model.yml
   title: ''
   type: DataModel
   url: data-model/amagi-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/agentic-access/amagi-agentic-access.yml
+  href: https://artifacts.apis.io/amagi/agentic-access/amagi-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amagi-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/security/amagi-domain-security.yml
+  href: https://artifacts.apis.io/amagi/security/amagi-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amagi-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/mcp/amagi-mcp.yml
+  href: https://artifacts.apis.io/amagi/mcp/amagi-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/amagi-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/llms/amagi-llms.txt
+  href: https://artifacts.apis.io/amagi/llms/amagi-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/amagi-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/packages/amagi-packages.yml
+  href: https://artifacts.apis.io/amagi/packages/amagi-packages.yml
   title: ''
   type: Packages
   url: packages/amagi-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/cli/amagi-cli.yml
+  href: https://artifacts.apis.io/amagi/cli/amagi-cli.yml
   title: ''
   type: CLI
   url: cli/amagi-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/amagi/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -314,27 +314,43 @@ network: true
 overview: 'Amagi publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Add User API, Cancel API, Create Customer API, and 17 more. Tagged areas include Company, Media, Broadcast, Streaming, and Video.
 
 
+  The Amagi catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Amagi''s developer surface includes documentation, support, engineering blog, authentication, CLI, and 15 more developer resources.'
-random_paper: 5
+random_paper: 7
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Amagi API Rules
+  rule_count: 57
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 6
+  slug: amagi-rules
 score:
   band: thin
-  composite: 29.0
+  composite: 30.7
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 46.4
     developer_ergonomics: 35.1
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 29.0
+  previous_composite: 30.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -351,13 +367,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/amagi/refs/heads/main/screenshots/amagi-2026-07-25T195909.png
+screenshot: https://apis.io/screenshots/amagi/amagi-2026-07-25T195909.png
 security:
 - kind: authentication
   name: Amagi Authentication
@@ -367,6 +383,12 @@ security:
   name: Amagi Domain Security
   slug: amagi-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Manage services-amagi-tv customers and keys
+  slug: amagi-callisto-key-management
+- name: Provision and manage Mapsor users
+  slug: amagi-mapsor-user-provisioning
 slug: amagi
 tags:
 - Company

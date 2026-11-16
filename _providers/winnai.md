@@ -1,11 +1,16 @@
 ---
 access_model:
-  confidence: medium
-  label: Requires approval
+  confidence: high
+  label: Paid · Requires approval
   onboarding: approval
-  pricing: unknown
+  pricing: paid
   public: false
-  source: []
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'A live remote Model Context Protocol endpoint serving WINN.AI conversation data to agents. It is published nowhere on the company''s website — it was found by probing RFC 9728 OAuth protected-resource '
@@ -65,7 +73,7 @@ common:
   type: Login
   url: https://app.winn.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/security/winnai-trust-center.yml
+  href: https://artifacts.apis.io/winnai/security/winnai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/winnai-trust-center.yml
@@ -74,7 +82,7 @@ common:
   type: Compliance
   url: https://trust.winn.ai/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/security/winnai-domain-security.yml
+  href: https://artifacts.apis.io/winnai/security/winnai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/winnai-domain-security.yml
@@ -83,57 +91,57 @@ common:
   type: Support
   url: https://winn.ai/support/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/mcp/winnai-mcp.yml
+  href: https://artifacts.apis.io/winnai/mcp/winnai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/winnai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/well-known/winnai-well-known.yml
+  href: https://artifacts.apis.io/winnai/well-known/winnai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/winnai-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/authentication/winnai-authentication.yml
+  href: https://artifacts.apis.io/winnai/authentication/winnai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/winnai-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/scopes/winnai-scopes.yml
+  href: https://artifacts.apis.io/winnai/scopes/winnai-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/winnai-scopes.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/rate-limits/winnai-rate-limits.yml
+  href: https://artifacts.apis.io/winnai/rate-limits/winnai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/winnai-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/errors/winnai-problem-types.yml
+  href: https://artifacts.apis.io/winnai/errors/winnai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/winnai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/conventions/winnai-conventions.yml
+  href: https://artifacts.apis.io/winnai/conventions/winnai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/winnai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/lifecycle/winnai-lifecycle.yml
+  href: https://artifacts.apis.io/winnai/lifecycle/winnai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/winnai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/conformance/winnai-conformance.yml
+  href: https://artifacts.apis.io/winnai/conformance/winnai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/winnai-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/plans/winnai-plans-pricing.yml
+  href: https://artifacts.apis.io/winnai/plans/winnai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/winnai-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/llms/winnai-llms.txt
+  href: https://artifacts.apis.io/winnai/llms/winnai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/winnai-llms.txt
@@ -158,7 +166,7 @@ plans:
 - name: Winnai Plans Pricing
   plan_count: 2
   slug: winnai-plans-pricing
-random_paper: 8
+random_paper: 22
 rate_limits:
 - limit_count: 2
   name: Winnai Rate Limits
@@ -172,13 +180,13 @@ score:
   band: thin
   composite: 33.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 53.0
     catalog_earned_first_party: 16.0
     catalog_gap: 62.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 75.0
     contract_governance: 18.2
@@ -186,7 +194,7 @@ score:
     developer_ergonomics: 19.0
     discoverability: 68.3
     operational_transparency: 21.1
-  previous_composite: 33.2
+  previous_composite: 33.8
   provenance:
     conformance: first-party
     mcp: first-party
@@ -196,14 +204,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 36.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/winnai/refs/heads/main/screenshots/winnai-2026-09-02T170810.png
+screenshot: https://apis.io/screenshots/winnai/winnai-2026-09-02T170810.png
 security:
 - kind: authentication
   name: Winnai Authentication

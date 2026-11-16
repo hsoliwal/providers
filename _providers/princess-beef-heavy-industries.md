@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 6
   slug: princess-beef-heavy-industries-agentic-access
   summary_line: 6 operations · 3 acting
-api_count: 2
+api_count: 1
 apis:
 - description: At Princess Beef Heavy Industries (or as we call it pb33f), we build beautifully designed heavy-duty and enterprise grade software for code hackers and ...
   name: Princess Beef Heavy Industries
@@ -53,11 +59,8 @@ apis:
   description: product operations
   name: Princess Beef Heavy Industries Product API
   slug: princess-beef-heavy-industries-product-api
-artifact_total: 15
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Princess Beef Heavy Industries pb33f Giftshop API
   slug: open-princess-beef-heavy-industries-giftshop
@@ -66,32 +69,32 @@ collections:
   slug: open-princess-beef-heavy-industries-product-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/princess-beef-heavy-industries/refs/heads/main/plans/princess-beef-heavy-industries-plans-pricing.yml
+  href: https://artifacts.apis.io/princess-beef-heavy-industries/plans/princess-beef-heavy-industries-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/princess-beef-heavy-industries-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/princess-beef-heavy-industries/refs/heads/main/rate-limits/princess-beef-heavy-industries-rate-limits.yml
+  href: https://artifacts.apis.io/princess-beef-heavy-industries/rate-limits/princess-beef-heavy-industries-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/princess-beef-heavy-industries-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/princess-beef-heavy-industries/refs/heads/main/finops/princess-beef-heavy-industries-finops.yml
+  href: https://artifacts.apis.io/princess-beef-heavy-industries/finops/princess-beef-heavy-industries-finops.yml
   title: ''
   type: FinOps
   url: finops/princess-beef-heavy-industries-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/princess-beef-heavy-industries/refs/heads/main/agentic-access/princess-beef-heavy-industries-agentic-access.yml
+  href: https://artifacts.apis.io/princess-beef-heavy-industries/agentic-access/princess-beef-heavy-industries-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/princess-beef-heavy-industries-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/princess-beef-heavy-industries/refs/heads/main/security/princess-beef-heavy-industries-domain-security.yml
+  href: https://artifacts.apis.io/princess-beef-heavy-industries/security/princess-beef-heavy-industries-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/princess-beef-heavy-industries-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/princess-beef-heavy-industries/refs/heads/main/authentication/princess-beef-heavy-industries-authentication.yml
+  href: https://artifacts.apis.io/princess-beef-heavy-industries/authentication/princess-beef-heavy-industries-authentication.yml
   title: ''
   type: Authentication
   url: authentication/princess-beef-heavy-industries-authentication.yml
@@ -105,7 +108,7 @@ finops:
 - has_sources: false
   method: generated
   name: Princess Beef Heavy Industries Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: princess-beef-heavy-industries-finops
   template: true
@@ -138,7 +141,7 @@ plans:
 - name: Princess Beef Heavy Industries Plans Pricing
   plan_count: 3
   slug: princess-beef-heavy-industries-plans-pricing
-random_paper: 11
+random_paper: 23
 rate_limits:
 - limit_count: 5
   name: Princess Beef Heavy Industries Rate Limits
@@ -157,29 +160,29 @@ rules:
   slug: princess-beef-heavy-industries-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 29.1
+  composite: 30.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 50.3
     catalog_earned_first_party: 0.0
     catalog_gap: 64.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.4
   facets:
     access_clarity: 7.9
     contract_governance: 9.8
-    contract_quality: 65.2
+    contract_quality: 71.0
     developer_ergonomics: 21.4
     discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 30.6
+  previous_composite: 29.1
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
   regulatory:
     applies: true
@@ -187,13 +190,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/princess-beef-heavy-industries/refs/heads/main/screenshots/princess-beef-heavy-industries-2026-06-20T192117.png
+screenshot: https://apis.io/screenshots/princess-beef-heavy-industries/princess-beef-heavy-industries-2026-06-20T192117.png
 security:
 - kind: authentication
   name: Princess Beef Heavy Industries Authentication

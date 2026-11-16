@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.7
-  scored_at: '2026-10-17'
+  score: 36.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.open-banking.greatsouthernbank.com.au/cds-au/v1/banking/products
@@ -71,11 +76,8 @@ apis:
   description: Banking Product endpoints
   name: Great Southern Bank Banking Products API
   slug: great-southern-bank-banking-products-api
-artifact_total: 18
+artifact_total: 19
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CDR Banking Banking Account Balances API
   slug: open-great-southern-bank-banking-account-balances-api
@@ -99,87 +101,87 @@ collections:
   slug: open-great-southern-bank-banking-products-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/capabilities/great-southern-bank-capability-edges.yml
+  href: https://artifacts.apis.io/great-southern-bank/capabilities/great-southern-bank-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/great-southern-bank-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/security/great-southern-bank-domain-security.yml
+  href: https://artifacts.apis.io/great-southern-bank/security/great-southern-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/great-southern-bank-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/authentication/great-southern-bank-authentication.yml
+  href: https://artifacts.apis.io/great-southern-bank/authentication/great-southern-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/great-southern-bank-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/scopes/great-southern-bank-scopes.yml
+  href: https://artifacts.apis.io/great-southern-bank/scopes/great-southern-bank-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/great-southern-bank-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/conventions/great-southern-bank-conventions.yml
+  href: https://artifacts.apis.io/great-southern-bank/conventions/great-southern-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/great-southern-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/errors/great-southern-bank-problem-types.yml
+  href: https://artifacts.apis.io/great-southern-bank/errors/great-southern-bank-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/great-southern-bank-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/lifecycle/great-southern-bank-lifecycle.yml
+  href: https://artifacts.apis.io/great-southern-bank/lifecycle/great-southern-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/great-southern-bank-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/lifecycle/great-southern-bank-lifecycle.yml
+  href: https://artifacts.apis.io/great-southern-bank/lifecycle/great-southern-bank-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/great-southern-bank-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/conformance/great-southern-bank-conformance.yml
+  href: https://artifacts.apis.io/great-southern-bank/conformance/great-southern-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/great-southern-bank-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/conformance/great-southern-bank-conformance.yml
+  href: https://artifacts.apis.io/great-southern-bank/conformance/great-southern-bank-conformance.yml
   title: ''
   type: Compliance
   url: conformance/great-southern-bank-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/data-model/great-southern-bank-data-model.yml
+  href: https://artifacts.apis.io/great-southern-bank/data-model/great-southern-bank-data-model.yml
   title: ''
   type: DataModel
   url: data-model/great-southern-bank-data-model.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/overlays/great-southern-bank-cds-banking-products-overlay.yaml
+  href: https://artifacts.apis.io/great-southern-bank/overlays/great-southern-bank-cds-banking-products-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/great-southern-bank-cds-banking-products-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/well-known/great-southern-bank-well-known.yml
+  href: https://artifacts.apis.io/great-southern-bank/well-known/great-southern-bank-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/great-southern-bank-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/well-known/great-southern-bank-openid-configuration.json
+  href: https://artifacts.apis.io/great-southern-bank/well-known/great-southern-bank-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/great-southern-bank-openid-configuration.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/mcp/great-southern-bank-mcp.yml
+  href: https://artifacts.apis.io/great-southern-bank/mcp/great-southern-bank-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/great-southern-bank-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/llms/great-southern-bank-llms.txt
+  href: https://artifacts.apis.io/great-southern-bank/llms/great-southern-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/great-southern-bank-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/skills/great-southern-bank-lookup-products.md
+  href: https://artifacts.apis.io/great-southern-bank/skills/great-southern-bank-lookup-products.md
   title: ''
   type: AgentSkill
   url: skills/great-southern-bank-lookup-products.md
@@ -235,8 +237,24 @@ network: true
 overview: 'Great Southern Bank publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
+  The Great Southern Bank catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Great Southern Bank''s developer surface includes authentication, API reference, developer portal, documentation, support, engineering blog, and 21 more developer resources.'
-random_paper: 7
+random_paper: 1
+rules:
+- authorship: generated
+  effective_rule_count: 109
+  extends:
+  - spectral:oas
+  name: Great Southern Bank API Rules
+  rule_count: 68
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 1
+    warn: 5
+  slug: great-southern-bank-rules
 scopes:
 - name: Great Southern Bank Scopes
   scope_count: 13
@@ -244,18 +262,18 @@ scopes:
   summary_line: 13 scopes · authorizationCode
 score:
   band: developing
-  composite: 39.4
+  composite: 41.0
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 28.9
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 44.7
     developer_ergonomics: 47.0
     discoverability: 73.2
@@ -267,7 +285,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 39.3
+  previous_composite: 41.0
   provenance:
     conformance: first-party
     contracts:
@@ -283,13 +301,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 41.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/great-southern-bank/refs/heads/main/screenshots/great-southern-bank-2026-07-21T114729.png
+screenshot: https://apis.io/screenshots/great-southern-bank/great-southern-bank-2026-07-21T114729.png
 security:
 - kind: authentication
   name: Great Southern Bank Authentication
@@ -299,6 +317,10 @@ security:
   name: Great Southern Bank Domain Security
   slug: great-southern-bank-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 1
+skills:
+- name: Look up Great Southern Bank products
+  slug: great-southern-bank-lookup-products
 slug: great-southern-bank
 tags:
 - Finance

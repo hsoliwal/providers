@@ -1,6 +1,7 @@
 ---
 access_model:
   confidence: low
+  gated_conflict: 'x-api-posture: private but 2 published API entries'
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Bi-directional API for technology platforms to request insurance coverage for their customers' suppliers and receive real-time, source-verified policy data, PDF certificates of insurance and endorseme
@@ -74,22 +78,22 @@ common:
   type: Blog
   url: https://www.certificial.com/news
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/certificial/refs/heads/main/authentication/certificial-authentication.yml
+  href: https://artifacts.apis.io/certificial/authentication/certificial-authentication.yml
   title: ''
   type: Authentication
   url: authentication/certificial-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/certificial/refs/heads/main/conformance/certificial-conformance.yml
+  href: https://artifacts.apis.io/certificial/conformance/certificial-conformance.yml
   title: ''
   type: Conformance
   url: conformance/certificial-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/certificial/refs/heads/main/security/certificial-domain-security.yml
+  href: https://artifacts.apis.io/certificial/security/certificial-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/certificial-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/certificial/refs/heads/main/llms/certificial-llms.txt
+  href: https://artifacts.apis.io/certificial/llms/certificial-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/certificial-llms.txt
@@ -119,7 +123,7 @@ overview: 'Certificial is listed with 2 APIs on the [APIs.io](https://apis.io/) 
 
 
   Certificial''s developer surface includes pricing, signup flow, support, engineering blog, authentication, and 6 more developer resources.'
-random_paper: 7
+random_paper: 23
 score:
   band: emerging
   composite: 20.4
@@ -147,14 +151,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/certificial/refs/heads/main/screenshots/certificial-2026-09-02T145029.png
+screenshot: https://apis.io/screenshots/certificial/certificial-2026-09-02T145029.png
 security:
 - kind: authentication
   name: Certificial Authentication

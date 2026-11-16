@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,22 +37,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/moss/refs/heads/main/skills/moss-mcp-integration.md
+  href: https://artifacts.apis.io/moss/skills/moss-mcp-integration.md
   title: ''
   type: AgentSkill
   url: skills/moss-mcp-integration.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/moss/refs/heads/main/mcp/moss-mcp.yml
+  href: https://artifacts.apis.io/moss/mcp/moss-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/moss-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/moss/refs/heads/main/a2a/moss-a2a.yml
+  href: https://artifacts.apis.io/moss/a2a/moss-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/moss-a2a.yml
@@ -65,7 +68,7 @@ name: Moss
 nav: Providers
 network: true
 overview: Moss is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company and A2A.
-random_paper: 10
+random_paper: 18
 score:
   band: minimal
   composite: 4.8
@@ -105,8 +108,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

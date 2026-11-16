@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,37 +37,37 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nova-scotia-power/refs/heads/main/security/nova-scotia-power-domain-security.yml
+  href: https://artifacts.apis.io/nova-scotia-power/security/nova-scotia-power-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nova-scotia-power-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nova-scotia-power/refs/heads/main/authentication/nova-scotia-power-authentication.yml
+  href: https://artifacts.apis.io/nova-scotia-power/authentication/nova-scotia-power-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nova-scotia-power-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nova-scotia-power/refs/heads/main/conventions/nova-scotia-power-conventions.yml
+  href: https://artifacts.apis.io/nova-scotia-power/conventions/nova-scotia-power-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nova-scotia-power-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nova-scotia-power/refs/heads/main/conformance/nova-scotia-power-conformance.yml
+  href: https://artifacts.apis.io/nova-scotia-power/conformance/nova-scotia-power-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nova-scotia-power-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nova-scotia-power/refs/heads/main/lifecycle/nova-scotia-power-lifecycle.yml
+  href: https://artifacts.apis.io/nova-scotia-power/lifecycle/nova-scotia-power-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nova-scotia-power-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nova-scotia-power/refs/heads/main/llms/nova-scotia-power-llms.txt
+  href: https://artifacts.apis.io/nova-scotia-power/llms/nova-scotia-power-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nova-scotia-power-llms.txt
@@ -193,12 +196,12 @@ overview: 'Nova Scotia Power is profiled on the [APIs.io](https://apis.io/) netw
 
 
   Nova Scotia Power''s developer surface includes authentication, developer portal, documentation, legal docs, support, engineering blog, product news, and 27 more developer resources.'
-random_paper: 10
+random_paper: 22
 score:
   band: emerging
   composite: 19.7
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -228,14 +231,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 18.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nova-scotia-power/refs/heads/main/screenshots/nova-scotia-power-2026-08-07T185604.png
+screenshot: https://apis.io/screenshots/nova-scotia-power/nova-scotia-power-2026-08-07T185604.png
 security:
 - kind: authentication
   name: Nova Scotia Power Authentication

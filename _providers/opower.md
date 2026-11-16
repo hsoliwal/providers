@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   - '{''url'': ''http://www.opower.com'', ''status'': 301, ''note'': ''declared website redirects to https://www.oracle.com/industries/utilities/opower-energy-efficiency/ — a different registrable domain (opower.com -> oracle.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -26,7 +31,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +42,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: RESTful API for viewing and managing Opower customer, utility-account, usage, billing, disaggregation, neighbor-comparison, tips, threshold and notification data. HTTP/REST with JSON, OAuth 2.0 client
@@ -74,57 +82,57 @@ common:
   type: ChangeLog
   url: https://docs.oracle.com/en/cloud/saas/readiness/energy-and-water-all.html
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/changelog/opower-changelog.yml
+  href: https://artifacts.apis.io/opower/changelog/opower-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/opower-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/authentication/opower-authentication.yml
+  href: https://artifacts.apis.io/opower/authentication/opower-authentication.yml
   title: ''
   type: Authentication
   url: authentication/opower-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/conventions/opower-conventions.yml
+  href: https://artifacts.apis.io/opower/conventions/opower-conventions.yml
   title: ''
   type: Conventions
   url: conventions/opower-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/errors/opower-problem-types.yml
+  href: https://artifacts.apis.io/opower/errors/opower-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/opower-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/lifecycle/opower-lifecycle.yml
+  href: https://artifacts.apis.io/opower/lifecycle/opower-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/opower-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/sandbox/opower-sandbox.yml
+  href: https://artifacts.apis.io/opower/sandbox/opower-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/opower-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/conformance/opower-conformance.yml
+  href: https://artifacts.apis.io/opower/conformance/opower-conformance.yml
   title: ''
   type: Conformance
   url: conformance/opower-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/data-model/opower-data-model.yml
+  href: https://artifacts.apis.io/opower/data-model/opower-data-model.yml
   title: ''
   type: DataModel
   url: data-model/opower-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/mcp/opower-mcp.yml
+  href: https://artifacts.apis.io/opower/mcp/opower-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/opower-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/llms/opower-llms.txt
+  href: https://artifacts.apis.io/opower/llms/opower-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/opower-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/security/opower-domain-security.yml
+  href: https://artifacts.apis.io/opower/security/opower-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/opower-domain-security.yml
@@ -140,7 +148,7 @@ overview: 'OPOWER is listed with 2 APIs on the [APIs.io](https://apis.io/) netwo
 
 
   OPOWER''s developer surface includes documentation, API reference, getting-started guide, support, changelog, authentication, sandbox, and 11 more developer resources.'
-random_paper: 8
+random_paper: 20
 score:
   band: emerging
   composite: 24.0
@@ -169,14 +177,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 13.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/opower/refs/heads/main/screenshots/opower-2026-08-07T190736.png
+screenshot: https://apis.io/screenshots/opower/opower-2026-08-07T190736.png
 security:
 - kind: authentication
   name: Opower Authentication

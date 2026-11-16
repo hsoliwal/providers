@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'REST API for the Class virtual classroom platform. Manage classes, enrollments, schedules, templates, and non-learner users; generate per-user launch URLs; and pull attendance and activity reporting. '
@@ -52,7 +55,7 @@ common:
   type: GettingStarted
   url: https://developer.class.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/class-technologies/refs/heads/main/llms/class-technologies-llms.txt
+  href: https://artifacts.apis.io/class-technologies/llms/class-technologies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/class-technologies-llms.txt
@@ -105,37 +108,37 @@ common:
   type: Compliance
   url: https://trust.class.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/class-technologies/refs/heads/main/authentication/class-technologies-authentication.yml
+  href: https://artifacts.apis.io/class-technologies/authentication/class-technologies-authentication.yml
   title: ''
   type: Authentication
   url: authentication/class-technologies-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/class-technologies/refs/heads/main/scopes/class-technologies-scopes.yml
+  href: https://artifacts.apis.io/class-technologies/scopes/class-technologies-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/class-technologies-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/class-technologies/refs/heads/main/errors/class-technologies-problem-types.yml
+  href: https://artifacts.apis.io/class-technologies/errors/class-technologies-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/class-technologies-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/class-technologies/refs/heads/main/conventions/class-technologies-conventions.yml
+  href: https://artifacts.apis.io/class-technologies/conventions/class-technologies-conventions.yml
   title: ''
   type: Conventions
   url: conventions/class-technologies-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/class-technologies/refs/heads/main/lifecycle/class-technologies-lifecycle.yml
+  href: https://artifacts.apis.io/class-technologies/lifecycle/class-technologies-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/class-technologies-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/class-technologies/refs/heads/main/mcp/class-technologies-mcp.yml
+  href: https://artifacts.apis.io/class-technologies/mcp/class-technologies-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/class-technologies-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/class-technologies/refs/heads/main/security/class-technologies-domain-security.yml
+  href: https://artifacts.apis.io/class-technologies/security/class-technologies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/class-technologies-domain-security.yml
@@ -184,14 +187,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/class-technologies/refs/heads/main/screenshots/class-technologies-2026-07-25T205514.png
+screenshot: https://apis.io/screenshots/class-technologies/class-technologies-2026-07-25T205514.png
 security:
 - kind: authentication
   name: Class Technologies Authentication

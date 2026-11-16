@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +29,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API-first REST API powering leave and accommodations case management, employee data, employer configuration, and communications. OpenAPI 3.1, OAuth2 (password and client credentials flows), HTTPS-only
@@ -86,42 +93,42 @@ common:
   type: Compliance
   url: https://absencesoft.com/security-and-trust/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/absencesoft/refs/heads/main/authentication/absencesoft-authentication.yml
+  href: https://artifacts.apis.io/absencesoft/authentication/absencesoft-authentication.yml
   title: ''
   type: Authentication
   url: authentication/absencesoft-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/absencesoft/refs/heads/main/conventions/absencesoft-conventions.yml
+  href: https://artifacts.apis.io/absencesoft/conventions/absencesoft-conventions.yml
   title: ''
   type: Conventions
   url: conventions/absencesoft-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/absencesoft/refs/heads/main/asyncapi/absencesoft-webhooks.yml
+  href: https://artifacts.apis.io/absencesoft/asyncapi/absencesoft-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/absencesoft-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/absencesoft/refs/heads/main/conformance/absencesoft-conformance.yml
+  href: https://artifacts.apis.io/absencesoft/conformance/absencesoft-conformance.yml
   title: ''
   type: Conformance
   url: conformance/absencesoft-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/absencesoft/refs/heads/main/lifecycle/absencesoft-lifecycle.yml
+  href: https://artifacts.apis.io/absencesoft/lifecycle/absencesoft-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/absencesoft-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/absencesoft/refs/heads/main/security/absencesoft-trust-center.yml
+  href: https://artifacts.apis.io/absencesoft/security/absencesoft-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/absencesoft-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/absencesoft/refs/heads/main/security/absencesoft-domain-security.yml
+  href: https://artifacts.apis.io/absencesoft/security/absencesoft-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/absencesoft-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/absencesoft/refs/heads/main/llms/absencesoft-llms.txt
+  href: https://artifacts.apis.io/absencesoft/llms/absencesoft-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/absencesoft-llms.txt
@@ -140,12 +147,12 @@ overview: 'AbsenceSoft is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   AbsenceSoft''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, and 12 more developer resources.'
-random_paper: 21
+random_paper: 13
 score:
   band: thin
   composite: 38.2
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -168,14 +175,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/absencesoft/refs/heads/main/screenshots/absencesoft-2026-07-25T181408.png
+screenshot: https://apis.io/screenshots/absencesoft/absencesoft-2026-07-25T181408.png
 security:
 - kind: authentication
   name: Absencesoft Authentication

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 27.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 57
   human_in_the_loop: 0
@@ -74,11 +81,8 @@ apis:
   description: Taxonomy term resources (categories, types, units)
   name: farmOS Taxonomy API
   slug: farmos-taxonomy-api
-artifact_total: 28
+artifact_total: 27
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: 'farmOS JSON: Assets API'
   slug: open-farmos-assets-api
@@ -119,22 +123,22 @@ common:
   type: License
   url: https://github.com/farmOS/farmOS/blob/4.x/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/farmos/refs/heads/main/agentic-access/farmos-agentic-access.yml
+  href: https://artifacts.apis.io/farmos/agentic-access/farmos-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/farmos-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/farmos/refs/heads/main/security/farmos-domain-security.yml
+  href: https://artifacts.apis.io/farmos/security/farmos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/farmos-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/farmos/refs/heads/main/authentication/farmos-authentication.yml
+  href: https://artifacts.apis.io/farmos/authentication/farmos-authentication.yml
   title: ''
   type: Authentication
   url: authentication/farmos-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/farmos/refs/heads/main/scopes/farmos-scopes.yml
+  href: https://artifacts.apis.io/farmos/scopes/farmos-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/farmos-scopes.yml
@@ -179,17 +183,17 @@ common:
   type: PythonSDK
   url: https://github.com/farmOS/farmOS.py
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/farmos/refs/heads/main/plans/farmos-plans-pricing.yml
+  href: https://artifacts.apis.io/farmos/plans/farmos-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/farmos-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/farmos/refs/heads/main/rate-limits/farmos-rate-limits.yml
+  href: https://artifacts.apis.io/farmos/rate-limits/farmos-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/farmos-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/farmos/refs/heads/main/finops/farmos-finops.yml
+  href: https://artifacts.apis.io/farmos/finops/farmos-finops.yml
   title: ''
   type: FinOps
   url: finops/farmos-finops.yml
@@ -245,7 +249,7 @@ plans:
 - name: Farmos Plans Pricing
   plan_count: 4
   slug: farmos-plans-pricing
-random_paper: 10
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Farmos Rate Limits
@@ -271,13 +275,13 @@ score:
   band: thin
   composite: 38.2
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 54.3
     catalog_earned_first_party: 0.0
     catalog_gap: 60.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.0
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 9.8
@@ -288,7 +292,7 @@ score:
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 43.2
+  previous_composite: 38.2
   provenance:
     agentic_access: derived
     contracts:
@@ -302,13 +306,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/farmos/refs/heads/main/screenshots/farmos-2026-06-20T181044.png
+screenshot: https://apis.io/screenshots/farmos/farmos-2026-06-20T181044.png
 security:
 - kind: authentication
   name: Farmos Authentication

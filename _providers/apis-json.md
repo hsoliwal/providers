@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium
-  onboarding: unknown
-  pricing: freemium
-  public: false
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Open access
+  onboarding: open
+  pricing: paid
+  public: true
   source:
-  - plans
+  - finops
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The APIs.json specification defines a machine-readable JSON or YAML format for describing API operations. Unlike OpenAPI which describes the technical interface of a single API, APIs.json describes th
@@ -42,7 +50,7 @@ apis:
 artifact_total: 41
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/finops/apis-json-finops.yml
+  href: https://artifacts.apis.io/apis-json/finops/apis-json-finops.yml
   title: ''
   type: FinOps
   url: finops/apis-json-finops.yml
@@ -51,7 +59,7 @@ common:
   type: License
   url: https://github.com/apis-json/api-json/blob/develop/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/security/apis-json-domain-security.yml
+  href: https://artifacts.apis.io/apis-json/security/apis-json-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apis-json-domain-security.yml
@@ -108,67 +116,67 @@ common:
   type: IssueTracker
   url: https://github.com/apis-json/api-json/issues
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/changelog/apis-json-changelog.yml
+  href: https://artifacts.apis.io/apis-json/changelog/apis-json-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/apis-json-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/lifecycle/apis-json-lifecycle.yml
+  href: https://artifacts.apis.io/apis-json/lifecycle/apis-json-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/apis-json-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/conformance/apis-json-conformance.yml
+  href: https://artifacts.apis.io/apis-json/conformance/apis-json-conformance.yml
   title: ''
   type: Conformance
   url: conformance/apis-json-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/conventions/apis-json-conventions.yml
+  href: https://artifacts.apis.io/apis-json/conventions/apis-json-conventions.yml
   title: ''
   type: Conventions
   url: conventions/apis-json-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/data-model/apis-json-data-model.yml
+  href: https://artifacts.apis.io/apis-json/data-model/apis-json-data-model.yml
   title: ''
   type: DataModel
   url: data-model/apis-json-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/packages/apis-json-packages.yml
+  href: https://artifacts.apis.io/apis-json/packages/apis-json-packages.yml
   title: ''
   type: Packages
   url: packages/apis-json-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/llms/apis-json-llms.txt
+  href: https://artifacts.apis.io/apis-json/llms/apis-json-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/apis-json-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/rate-limits/apis-json-rate-limits.yml
+  href: https://artifacts.apis.io/apis-json/rate-limits/apis-json-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apis-json-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/plans/apis-json-plans-pricing.yml
+  href: https://artifacts.apis.io/apis-json/plans/apis-json-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apis-json-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/examples/apis-json-complete-example.json
+  href: https://artifacts.apis.io/apis-json/examples/apis-json-complete-example.json
   title: Complete worked example
   type: Examples
   url: examples/apis-json-complete-example.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/examples/apis-json-minimal-example.json
+  href: https://artifacts.apis.io/apis-json/examples/apis-json-minimal-example.json
   title: Minimal worked example
   type: Examples
   url: examples/apis-json-minimal-example.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/json-structure/apis-json-structure-0.20-structure.json
+  href: https://artifacts.apis.io/apis-json/json-structure/apis-json-structure-0.20-structure.json
   title: ''
   type: JSONStructure
   url: json-structure/apis-json-structure-0.20-structure.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/json-ld/apis-json-context.jsonld
+  href: https://artifacts.apis.io/apis-json/json-ld/apis-json-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/apis-json-context.jsonld
@@ -203,7 +211,7 @@ finops:
 - has_sources: false
   method: generated
   name: Apis Json Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: apis-json-finops
   template: true
@@ -277,7 +285,7 @@ plans:
 - name: Apis Json Plans Pricing
   plan_count: 0
   slug: apis-json-plans-pricing
-random_paper: 14
+random_paper: 4
 rate_limits:
 - limit_count: 0
   name: Apis Json Rate Limits
@@ -309,13 +317,13 @@ score:
   band: thin
   composite: 26.7
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 61.0
     catalog_earned_first_party: 0.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 45.5
@@ -323,7 +331,7 @@ score:
     developer_ergonomics: 23.8
     discoverability: 64.3
     operational_transparency: 18.4
-  previous_composite: 28.2
+  previous_composite: 26.7
   provenance:
     conformance: first-party
   regulatory:
@@ -332,14 +340,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/apis-json/refs/heads/main/screenshots/apis-json-2026-06-20T172256.png
+screenshot: https://apis.io/screenshots/apis-json/apis-json-2026-06-20T172256.png
 security:
 - kind: domain-security
   name: Apis Json Domain Security

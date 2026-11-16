@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,17 +38,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/security/auditoria-trust-center.yml
+  href: https://artifacts.apis.io/auditoria/security/auditoria-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/auditoria-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/security/auditoria-domain-security.yml
+  href: https://artifacts.apis.io/auditoria/security/auditoria-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/auditoria-domain-security.yml
@@ -98,7 +101,7 @@ common:
   type: Security
   url: https://www.auditoria.ai/trust/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/security/auditoria-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/auditoria/security/auditoria-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/auditoria-vulnerability-disclosure.yml
@@ -111,42 +114,42 @@ common:
   type: ChangeLog
   url: https://docs.auditoria.ai/hc/en-us/categories/360005816333-Auditoria-AI-Release-Notes
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/changelog/auditoria-changelog.yml
+  href: https://artifacts.apis.io/auditoria/changelog/auditoria-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/auditoria-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/lifecycle/auditoria-lifecycle.yml
+  href: https://artifacts.apis.io/auditoria/lifecycle/auditoria-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/auditoria-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/well-known/auditoria-well-known.yml
+  href: https://artifacts.apis.io/auditoria/well-known/auditoria-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/auditoria-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/authentication/auditoria-authentication.yml
+  href: https://artifacts.apis.io/auditoria/authentication/auditoria-authentication.yml
   title: ''
   type: Authentication
   url: authentication/auditoria-authentication.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/well-known/auditoria-openid-configuration.json
+  href: https://artifacts.apis.io/auditoria/well-known/auditoria-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/auditoria-openid-configuration.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/scopes/auditoria-scopes.yml
+  href: https://artifacts.apis.io/auditoria/scopes/auditoria-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/auditoria-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/llms/auditoria-llms.txt
+  href: https://artifacts.apis.io/auditoria/llms/auditoria-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/auditoria-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/conformance/auditoria-conformance.yml
+  href: https://artifacts.apis.io/auditoria/conformance/auditoria-conformance.yml
   title: ''
   type: Conformance
   url: conformance/auditoria-conformance.yml
@@ -179,7 +182,7 @@ overview: 'Auditoria.AI is profiled on the [APIs.io](https://apis.io/) network. 
 
 
   Auditoria.AI''s developer surface includes documentation, support, engineering blog, changelog, authentication, and 20 more developer resources.'
-random_paper: 16
+random_paper: 2
 scopes:
 - name: Auditoria Scopes
   scope_count: 14
@@ -189,7 +192,7 @@ score:
   band: thin
   composite: 31.9
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -212,14 +215,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 41.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/auditoria/refs/heads/main/screenshots/auditoria-2026-08-07T161929.png
+screenshot: https://apis.io/screenshots/auditoria/auditoria-2026-08-07T161929.png
 security:
 - kind: authentication
   name: Auditoria Authentication

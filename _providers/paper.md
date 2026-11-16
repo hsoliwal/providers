@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -49,32 +53,32 @@ common:
   type: APIReference
   url: https://paper.design/docs/mcp
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paper/refs/heads/main/mcp/paper-mcp.yml
+  href: https://artifacts.apis.io/paper/mcp/paper-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/paper-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/paper/refs/heads/main/llms/paper-llms.txt
+  href: https://artifacts.apis.io/paper/llms/paper-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/paper-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/paper/refs/heads/main/packages/paper-packages.yml
+  href: https://artifacts.apis.io/paper/packages/paper-packages.yml
   title: ''
   type: Packages
   url: packages/paper-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paper/refs/heads/main/components/paper-components.yml
+  href: https://artifacts.apis.io/paper/components/paper-components.yml
   title: ''
   type: Components
   url: components/paper-components.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/paper/refs/heads/main/changelog/paper-changelog.yml
+  href: https://artifacts.apis.io/paper/changelog/paper-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/paper-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/paper/refs/heads/main/lifecycle/paper-lifecycle.yml
+  href: https://artifacts.apis.io/paper/lifecycle/paper-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/paper-lifecycle.yml
@@ -87,7 +91,7 @@ common:
   type: Roadmap
   url: https://paper.design/roadmap
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/paper/refs/heads/main/security/paper-domain-security.yml
+  href: https://artifacts.apis.io/paper/security/paper-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/paper-domain-security.yml
@@ -144,7 +148,7 @@ score:
   band: emerging
   composite: 21.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -167,14 +171,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/paper/refs/heads/main/screenshots/paper-2026-08-07T191429.png
+screenshot: https://apis.io/screenshots/paper/paper-2026-08-07T191429.png
 security:
 - kind: domain-security
   name: Paper Domain Security

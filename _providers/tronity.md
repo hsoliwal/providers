@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 4
@@ -78,9 +81,6 @@ apis:
 artifact_total: 21
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: TRONITY Platform Authentication API
   slug: open-tronity-authentication-api
 - collection_type: open
@@ -103,27 +103,27 @@ collections:
   slug: open-tronity
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tronity/refs/heads/main/capabilities/tronity-capability-edges.yml
+  href: https://artifacts.apis.io/tronity/capabilities/tronity-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tronity-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tronity/refs/heads/main/agentic-access/tronity-agentic-access.yml
+  href: https://artifacts.apis.io/tronity/agentic-access/tronity-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/tronity-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tronity/refs/heads/main/security/tronity-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tronity/security/tronity-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/tronity-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tronity/refs/heads/main/security/tronity-domain-security.yml
+  href: https://artifacts.apis.io/tronity/security/tronity-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tronity-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tronity/refs/heads/main/authentication/tronity-authentication.yml
+  href: https://artifacts.apis.io/tronity/authentication/tronity-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tronity-authentication.yml
@@ -144,17 +144,17 @@ common:
   type: Documentation
   url: https://app.tronity.tech/docs
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tronity/refs/heads/main/plans/tronity-plans-pricing.yml
+  href: https://artifacts.apis.io/tronity/plans/tronity-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tronity-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tronity/refs/heads/main/rate-limits/tronity-rate-limits.yml
+  href: https://artifacts.apis.io/tronity/rate-limits/tronity-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tronity-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tronity/refs/heads/main/finops/tronity-finops.yml
+  href: https://artifacts.apis.io/tronity/finops/tronity-finops.yml
   title: ''
   type: FinOps
   url: finops/tronity-finops.yml
@@ -174,7 +174,10 @@ modified: '2026-06-21'
 name: TRONITY
 nav: Providers
 network: true
-overview: 'TRONITY publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Charging & Battery API, Commands API, and 3 more. Tagged areas include Connected Vehicles, Electric Vehicles, Telematics, Fleet, and Vehicle Data.
+overview: 'TRONITY publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Charging & Battery API, Commands API, and 3 more. Tagged areas include Connected Vehicles, Electric Vehicles, Telematics, Fleet Management, and Vehicle Data.
+
+
+  The TRONITY catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   TRONITY''s developer surface includes authentication, documentation, and 10 more developer resources.'
@@ -187,25 +190,38 @@ rate_limits:
 - limit_count: 4
   name: Tronity Rate Limits
   slug: tronity-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: TRONITY API Rules
+  rule_count: 59
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 1
+    warn: 4
+  slug: tronity-rules
 score:
   band: emerging
-  composite: 22.8
+  composite: 25.8
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 15
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 44.8
     developer_ergonomics: 11.9
     discoverability: 66.1
-    operational_transparency: 10.5
-  previous_composite: 31.1
+    operational_transparency: 21.1
+  previous_composite: 25.8
   provenance:
     agentic_access: derived
     contracts:
@@ -219,13 +235,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/tronity/refs/heads/main/screenshots/tronity-2026-09-02T164310.png
+screenshot: https://apis.io/screenshots/tronity/tronity-2026-09-02T164310.png
 security:
 - kind: authentication
   name: Tronity Authentication
@@ -244,7 +260,7 @@ tags:
 - Connected Vehicles
 - Electric Vehicles
 - Telematics
-- Fleet
+- Fleet Management
 - Vehicle Data
 website: https://www.tronity.tech
 ---

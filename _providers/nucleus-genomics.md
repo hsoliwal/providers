@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,17 +38,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nucleus-genomics/refs/heads/main/rate-limits/nucleus-genomics-rate-limits.yml
+  href: https://artifacts.apis.io/nucleus-genomics/rate-limits/nucleus-genomics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/nucleus-genomics-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nucleus-genomics/refs/heads/main/security/nucleus-genomics-domain-security.yml
+  href: https://artifacts.apis.io/nucleus-genomics/security/nucleus-genomics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nucleus-genomics-domain-security.yml
@@ -94,42 +97,42 @@ common:
   type: Security
   url: https://app.mynucleus.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nucleus-genomics/refs/heads/main/well-known/nucleus-genomics-security.txt
+  href: https://artifacts.apis.io/nucleus-genomics/well-known/nucleus-genomics-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/nucleus-genomics-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nucleus-genomics/refs/heads/main/well-known/nucleus-genomics-well-known.yml
+  href: https://artifacts.apis.io/nucleus-genomics/well-known/nucleus-genomics-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/nucleus-genomics-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nucleus-genomics/refs/heads/main/llms/nucleus-genomics-llms.txt
+  href: https://artifacts.apis.io/nucleus-genomics/llms/nucleus-genomics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nucleus-genomics-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nucleus-genomics/refs/heads/main/conformance/nucleus-genomics-conformance.yml
+  href: https://artifacts.apis.io/nucleus-genomics/conformance/nucleus-genomics-conformance.yml
   title: ''
   type: Compliance
   url: conformance/nucleus-genomics-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nucleus-genomics/refs/heads/main/conformance/nucleus-genomics-conformance.yml
+  href: https://artifacts.apis.io/nucleus-genomics/conformance/nucleus-genomics-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nucleus-genomics-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nucleus-genomics/refs/heads/main/lifecycle/nucleus-genomics-lifecycle.yml
+  href: https://artifacts.apis.io/nucleus-genomics/lifecycle/nucleus-genomics-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nucleus-genomics-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nucleus-genomics/refs/heads/main/plans/nucleus-genomics-plans-pricing.yml
+  href: https://artifacts.apis.io/nucleus-genomics/plans/nucleus-genomics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/nucleus-genomics-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nucleus-genomics/refs/heads/main/security/nucleus-genomics-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/nucleus-genomics/security/nucleus-genomics-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/nucleus-genomics-vulnerability-disclosure.yml
@@ -167,7 +170,7 @@ plans:
 - name: Nucleus Genomics Plans Pricing
   plan_count: 3
   slug: nucleus-genomics-plans-pricing
-random_paper: 15
+random_paper: 9
 rate_limits:
 - limit_count: 0
   name: Nucleus Genomics Rate Limits
@@ -176,7 +179,7 @@ score:
   band: thin
   composite: 29.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -204,14 +207,14 @@ score:
     regime: Health
     regime_id: health
     score: 19.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nucleus-genomics/refs/heads/main/screenshots/nucleus-genomics-2026-09-02T150813.png
+screenshot: https://apis.io/screenshots/nucleus-genomics/nucleus-genomics-2026-09-02T150813.png
 security:
 - kind: domain-security
   name: Nucleus Genomics Domain Security

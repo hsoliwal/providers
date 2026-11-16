@@ -5,7 +5,10 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,16 +38,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
-artifact_total: 7
+artifact_total: 8
 common:
 - group: company
   title: ''
   type: Website
   url: https://clarisights.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/mcp/clarisights-mcp.yml
+  href: https://artifacts.apis.io/clarisights/mcp/clarisights-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/clarisights-mcp.yml
@@ -66,62 +72,62 @@ common:
   type: Compliance
   url: https://clarisights.com/legal/certifications
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/security/clarisights-trust-center.yml
+  href: https://artifacts.apis.io/clarisights/security/clarisights-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/clarisights-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/security/clarisights-domain-security.yml
+  href: https://artifacts.apis.io/clarisights/security/clarisights-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/clarisights-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/security/clarisights-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/clarisights/security/clarisights-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/clarisights-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/conformance/clarisights-conformance.yml
+  href: https://artifacts.apis.io/clarisights/conformance/clarisights-conformance.yml
   title: ''
   type: Conformance
   url: conformance/clarisights-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/llms/clarisights-llms.txt
+  href: https://artifacts.apis.io/clarisights/llms/clarisights-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/clarisights-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/clarisights/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/authentication/clarisights-authentication.yml
+  href: https://artifacts.apis.io/clarisights/authentication/clarisights-authentication.yml
   title: ''
   type: Authentication
   url: authentication/clarisights-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/conventions/clarisights-conventions.yml
+  href: https://artifacts.apis.io/clarisights/conventions/clarisights-conventions.yml
   title: ''
   type: Conventions
   url: conventions/clarisights-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/packages/clarisights-packages.yml
+  href: https://artifacts.apis.io/clarisights/packages/clarisights-packages.yml
   title: ''
   type: Packages
   url: packages/clarisights-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/components/clarisights-components.yml
+  href: https://artifacts.apis.io/clarisights/components/clarisights-components.yml
   title: ''
   type: Components
   url: components/clarisights-components.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/rate-limits/clarisights-rate-limits.yml
+  href: https://artifacts.apis.io/clarisights/rate-limits/clarisights-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/clarisights-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/plans/clarisights-plans-pricing.yml
+  href: https://artifacts.apis.io/clarisights/plans/clarisights-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/clarisights-plans-pricing.yml
@@ -161,7 +167,7 @@ plans:
 - name: Clarisights Plans Pricing
   plan_count: 0
   slug: clarisights-plans-pricing
-random_paper: 15
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Clarisights Rate Limits
@@ -170,7 +176,7 @@ score:
   band: thin
   composite: 27.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -199,14 +205,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/clarisights/refs/heads/main/screenshots/clarisights-2026-07-25T205504.png
+screenshot: https://apis.io/screenshots/clarisights/clarisights-2026-07-25T205504.png
 security:
 - kind: authentication
   name: Clarisights Authentication
@@ -224,6 +230,10 @@ security:
   name: Clarisights Trust Center
   slug: clarisights-trust-center
   summary_line: SOC 2 Type 2, ISO 27001, GDPR
+skill_count: 1
+skills:
+- name: marketing-performance-analyst
+  slug: clarisights-marketing-performance-analyst
 slug: clarisights
 tags:
 - Company

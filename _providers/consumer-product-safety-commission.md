@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.8
-  scored_at: '2026-10-17'
+  score: 17.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -51,11 +55,8 @@ apis:
   description: The Recalls API from Consumer Product Safety Commission — 1 operation(s) for recalls.
   name: Consumer Product Safety Commission Recalls API
   slug: consumer-product-safety-commission-recalls-api
-artifact_total: 14
+artifact_total: 13
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CPSC Recalls API
   slug: open-consumer-product-safety-commission-recalls-api
@@ -64,17 +65,17 @@ collections:
   slug: open-cpsc-recalls
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/plans/consumer-product-safety-commission-plans-pricing.yml
+  href: https://artifacts.apis.io/consumer-product-safety-commission/plans/consumer-product-safety-commission-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/consumer-product-safety-commission-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/rate-limits/consumer-product-safety-commission-rate-limits.yml
+  href: https://artifacts.apis.io/consumer-product-safety-commission/rate-limits/consumer-product-safety-commission-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/consumer-product-safety-commission-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/finops/consumer-product-safety-commission-finops.yml
+  href: https://artifacts.apis.io/consumer-product-safety-commission/finops/consumer-product-safety-commission-finops.yml
   title: ''
   type: FinOps
   url: finops/consumer-product-safety-commission-finops.yml
@@ -83,12 +84,12 @@ common:
   type: BlogRSS
   url: https://www.cpsc.gov/rss.xml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/agentic-access/consumer-product-safety-commission-agentic-access.yml
+  href: https://artifacts.apis.io/consumer-product-safety-commission/agentic-access/consumer-product-safety-commission-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/consumer-product-safety-commission-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/security/consumer-product-safety-commission-domain-security.yml
+  href: https://artifacts.apis.io/consumer-product-safety-commission/security/consumer-product-safety-commission-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/consumer-product-safety-commission-domain-security.yml
@@ -125,17 +126,17 @@ common:
   type: TermsOfService
   url: https://www.cpsc.gov/Newsroom/Privacy-and-Security-Statement
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/json-ld/consumer-product-safety-commission-context.jsonld
+  href: https://artifacts.apis.io/consumer-product-safety-commission/json-ld/consumer-product-safety-commission-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/consumer-product-safety-commission-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/json-schema/cpsc-recall-schema.json
+  href: https://artifacts.apis.io/consumer-product-safety-commission/json-schema/cpsc-recall-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/cpsc-recall-schema.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/rules/consumer-product-safety-commission-rules.yml
+  href: https://artifacts.apis.io/consumer-product-safety-commission/rules/consumer-product-safety-commission-rules.yml
   title: ''
   type: Spectral
   url: rules/consumer-product-safety-commission-rules.yml
@@ -145,7 +146,7 @@ finops:
 - has_sources: false
   method: generated
   name: Consumer Product Safety Commission Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: consumer-product-safety-commission-finops
   template: true
@@ -171,7 +172,7 @@ plans:
 - name: Consumer Product Safety Commission Plans Pricing
   plan_count: 3
   slug: consumer-product-safety-commission-plans-pricing
-random_paper: 1
+random_paper: 17
 rate_limits:
 - limit_count: 5
   name: Consumer Product Safety Commission Rate Limits
@@ -204,13 +205,13 @@ score:
   band: emerging
   composite: 25.5
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 50.5
     catalog_earned_first_party: 0.0
     catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.6
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 13.6
@@ -223,7 +224,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 23.9
+  previous_composite: 25.5
   provenance:
     agentic_access: derived
     contracts:
@@ -237,14 +238,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/consumer-product-safety-commission/refs/heads/main/screenshots/consumer-product-safety-commission-2026-06-20T174919.png
+screenshot: https://apis.io/screenshots/consumer-product-safety-commission/consumer-product-safety-commission-2026-06-20T174919.png
 security:
 - kind: domain-security
   name: Consumer Product Safety Commission Domain Security

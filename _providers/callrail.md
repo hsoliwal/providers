@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.3
-  scored_at: '2026-10-17'
+  score: 32.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -61,15 +64,12 @@ apis:
   description: The Calls API from CallRail — 6 operation(s) for calls, including summary and time series reporting.
   name: CallRail Calls API
   slug: callrail-calls-api
-artifact_total: 17
+artifact_total: 22
 asyncapis:
 - description: ''
   name: Callrail Webhooks
   slug: callrail-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: CallRail v3 Accounts API
   slug: open-callrail-accounts-api
@@ -81,7 +81,7 @@ collections:
   slug: open-callrail
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/security/callrail-trust-center.yml
+  href: https://artifacts.apis.io/callrail/security/callrail-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/callrail-trust-center.yml
@@ -90,12 +90,12 @@ common:
   type: Compliance
   url: https://www.callrail.com/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/conformance/callrail-conformance.yml
+  href: https://artifacts.apis.io/callrail/conformance/callrail-conformance.yml
   title: ''
   type: Conformance
   url: conformance/callrail-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/security/callrail-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/callrail/security/callrail-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/callrail-vulnerability-disclosure.yml
@@ -104,47 +104,47 @@ common:
   type: Security
   url: https://www.callrail.com/security/disclosure
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/agentic-access/callrail-agentic-access.yml
+  href: https://artifacts.apis.io/callrail/agentic-access/callrail-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/callrail-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/security/callrail-domain-security.yml
+  href: https://artifacts.apis.io/callrail/security/callrail-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/callrail-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/authentication/callrail-authentication.yml
+  href: https://artifacts.apis.io/callrail/authentication/callrail-authentication.yml
   title: ''
   type: Authentication
   url: authentication/callrail-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/conventions/callrail-conventions.yml
+  href: https://artifacts.apis.io/callrail/conventions/callrail-conventions.yml
   title: ''
   type: Conventions
   url: conventions/callrail-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/errors/callrail-problem-types.yml
+  href: https://artifacts.apis.io/callrail/errors/callrail-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/callrail-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/rate-limits/callrail-rate-limits.yml
+  href: https://artifacts.apis.io/callrail/rate-limits/callrail-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/callrail-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/plans/callrail-plans-pricing.yml
+  href: https://artifacts.apis.io/callrail/plans/callrail-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/callrail-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/data-model/callrail-data-model.yml
+  href: https://artifacts.apis.io/callrail/data-model/callrail-data-model.yml
   title: ''
   type: DataModel
   url: data-model/callrail-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/lifecycle/callrail-lifecycle.yml
+  href: https://artifacts.apis.io/callrail/lifecycle/callrail-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/callrail-lifecycle.yml
@@ -153,42 +153,42 @@ common:
   type: StatusPage
   url: https://status.callrail.com/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/changelog/callrail-changelog.yml
+  href: https://artifacts.apis.io/callrail/changelog/callrail-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/callrail-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/asyncapi/callrail-webhooks.yml
+  href: https://artifacts.apis.io/callrail/asyncapi/callrail-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/callrail-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/mcp/callrail-mcp.yml
+  href: https://artifacts.apis.io/callrail/mcp/callrail-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/callrail-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/mcp/callrail-tool-crosswalk.yml
+  href: https://artifacts.apis.io/callrail/mcp/callrail-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/callrail-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/callrail/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/llms/callrail-llms.txt
+  href: https://artifacts.apis.io/callrail/llms/callrail-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/callrail-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/packages/callrail-packages.yml
+  href: https://artifacts.apis.io/callrail/packages/callrail-packages.yml
   title: ''
   type: Packages
   url: packages/callrail-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/components/callrail-components.yml
+  href: https://artifacts.apis.io/callrail/components/callrail-components.yml
   title: ''
   type: Components
   url: components/callrail-components.yml
@@ -254,6 +254,14 @@ common:
   url: https://www.linkedin.com/company/callrail
 created: '2026-05-11'
 description: CallRail is a call tracking and conversation intelligence platform that attributes phone calls, texts, and form fills to marketing campaigns and applies AI-powered transcription, sentiment, and lead scoring to inbound conversations. The CallRail v3 API is a REST/JSON interface exposing accounts, companies, trackers, calls, texts, form submissions, and integrations. Authentication uses an account API key passed in the HTTP Authorization header against a base URL of https://api.callrail.com/v3/.
+finops:
+- has_sources: true
+  method: derived
+  name: Callrail Finops
+  primary_unit: api calls
+  service_category: ''
+  slug: callrail-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/callrail.png
 layout: provider
 mcp_servers:
@@ -267,38 +275,54 @@ network: true
 overview: 'CallRail publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Calls API, and 2 more. Tagged areas include Call Tracking, Conversation Intelligence, Marketing Attribution, Lead Tracking, and Telephony.
 
 
-  The CallRail catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The CallRail catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   CallRail''s developer surface includes authentication, changelog, documentation, API reference, getting-started guide, pricing, signup flow, and 31 more developer resources.'
 plans:
 - name: Callrail Plans Pricing
-  plan_count: 4
+  plan_count: 8
   slug: callrail-plans-pricing
-random_paper: 0
+- name: Callrail Price Estimates
+  plan_count: 0
+  slug: callrail-price-estimates
+random_paper: 20
 rate_limits:
 - limit_count: 6
   name: Callrail Rate Limits
   slug: callrail-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: CallRail API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: callrail-rules
 score:
   band: developing
-  composite: 50.7
+  composite: 53.9
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 61.0
+    artifact_dirs: 30
+    catalog_earned: 68.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 46.1
-    contract_governance: 18.2
+    access_clarity: 53.9
+    contract_governance: 31.8
     contract_quality: 55.2
     developer_ergonomics: 47.0
     discoverability: 71.7
     operational_transparency: 65.8
-  previous_composite: 50.7
+  previous_composite: 53.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -315,13 +339,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/callrail/refs/heads/main/screenshots/callrail-2026-06-20T173850.png
+screenshot: https://apis.io/screenshots/callrail/callrail-2026-06-20T173850.png
 security:
 - kind: authentication
   name: Callrail Authentication
@@ -339,6 +363,14 @@ security:
   name: Callrail Trust Center
   slug: callrail-trust-center
   summary_line: ISO 42001, SOC 2 Type II, HIPAA/HITECH, PCI, GDPR, CCPA
+skill_count: 3
+skills:
+- name: Build a CallRail call attribution report
+  slug: callrail-attribution-report
+- name: Place an outbound call through CallRail
+  slug: callrail-place-outbound-call
+- name: Triage and annotate CallRail calls
+  slug: callrail-triage-calls
 slug: callrail
 tags:
 - Call Tracking

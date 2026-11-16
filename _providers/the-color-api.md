@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -53,11 +57,8 @@ apis:
   description: Generate harmonious color palettes from a seed color using color theory.
   name: The Color API Schemes API
   slug: the-color-api-schemes-api
-artifact_total: 18
+artifact_total: 17
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: The Color Colors API
   slug: open-the-color-api-colors-api
@@ -69,27 +70,27 @@ collections:
   slug: open-the-color-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/the-color-api/refs/heads/main/plans/the-color-api-plans-pricing.yml
+  href: https://artifacts.apis.io/the-color-api/plans/the-color-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/the-color-api-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/the-color-api/refs/heads/main/rate-limits/the-color-api-rate-limits.yml
+  href: https://artifacts.apis.io/the-color-api/rate-limits/the-color-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/the-color-api-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/the-color-api/refs/heads/main/finops/the-color-api-finops.yml
+  href: https://artifacts.apis.io/the-color-api/finops/the-color-api-finops.yml
   title: ''
   type: FinOps
   url: finops/the-color-api-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/the-color-api/refs/heads/main/agentic-access/the-color-api-agentic-access.yml
+  href: https://artifacts.apis.io/the-color-api/agentic-access/the-color-api-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/the-color-api-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/the-color-api/refs/heads/main/security/the-color-api-domain-security.yml
+  href: https://artifacts.apis.io/the-color-api/security/the-color-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/the-color-api-domain-security.yml
@@ -122,7 +123,7 @@ finops:
 - has_sources: false
   method: generated
   name: The Color Api Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: the-color-api-finops
   template: true
@@ -156,7 +157,7 @@ plans:
 - name: The Color Api Plans Pricing
   plan_count: 3
   slug: the-color-api-plans-pricing
-random_paper: 14
+random_paper: 20
 rate_limits:
 - limit_count: 5
   name: The Color Api Rate Limits
@@ -189,13 +190,13 @@ score:
   band: emerging
   composite: 23.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 40.5
     catalog_earned_first_party: 0.0
     catalog_gap: 74.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.6
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 13.6
@@ -203,7 +204,7 @@ score:
     developer_ergonomics: 9.5
     discoverability: 39.3
     operational_transparency: 10.5
-  previous_composite: 21.6
+  previous_composite: 23.2
   provenance:
     agentic_access: derived
     contracts:
@@ -217,14 +218,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/the-color-api/refs/heads/main/screenshots/the-color-api-2026-06-20T195217.png
+screenshot: https://apis.io/screenshots/the-color-api/the-color-api-2026-06-20T195217.png
 security:
 - kind: domain-security
   name: The Color Api Domain Security

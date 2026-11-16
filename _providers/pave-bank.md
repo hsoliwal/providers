@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +30,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Partner API for programmable multi-asset banking: Accounts, Address, Balance, Crypto, Documents, FX, Return, RFI, Sandbox, Statement, Transactions, and Transfer resources, plus real-time signed webhoo'
@@ -66,67 +74,67 @@ common:
   type: GettingStarted
   url: https://docs.pavebank.com/docs
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/authentication/pave-bank-authentication.yml
+  href: https://artifacts.apis.io/pave-bank/authentication/pave-bank-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pave-bank-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/conventions/pave-bank-conventions.yml
+  href: https://artifacts.apis.io/pave-bank/conventions/pave-bank-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pave-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/conventions/pave-bank-conventions.yml
+  href: https://artifacts.apis.io/pave-bank/conventions/pave-bank-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/pave-bank-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/errors/pave-bank-error-codes.yml
+  href: https://artifacts.apis.io/pave-bank/errors/pave-bank-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/pave-bank-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/asyncapi/pave-bank-webhooks.yml
+  href: https://artifacts.apis.io/pave-bank/asyncapi/pave-bank-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/pave-bank-webhooks.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/packages/pave-bank-packages.yml
+  href: https://artifacts.apis.io/pave-bank/packages/pave-bank-packages.yml
   title: ''
   type: Packages
   url: packages/pave-bank-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/packages/pave-bank-packages.yml
+  href: https://artifacts.apis.io/pave-bank/packages/pave-bank-packages.yml
   title: ''
   type: SDKs
   url: packages/pave-bank-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/conformance/pave-bank-conformance.yml
+  href: https://artifacts.apis.io/pave-bank/conformance/pave-bank-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pave-bank-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/conformance/pave-bank-conformance.yml
+  href: https://artifacts.apis.io/pave-bank/conformance/pave-bank-conformance.yml
   title: ''
   type: Compliance
   url: conformance/pave-bank-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/sandbox/pave-bank-sandbox.yml
+  href: https://artifacts.apis.io/pave-bank/sandbox/pave-bank-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/pave-bank-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/lifecycle/pave-bank-lifecycle.yml
+  href: https://artifacts.apis.io/pave-bank/lifecycle/pave-bank-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pave-bank-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/llms/pave-bank-llms.txt
+  href: https://artifacts.apis.io/pave-bank/llms/pave-bank-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pave-bank-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/security/pave-bank-domain-security.yml
+  href: https://artifacts.apis.io/pave-bank/security/pave-bank-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pave-bank-domain-security.yml
@@ -157,12 +165,12 @@ overview: 'Pave Bank is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Pave Bank''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, and 16 more developer resources.'
-random_paper: 5
+random_paper: 21
 score:
   band: thin
   composite: 38.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -185,14 +193,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/pave-bank/refs/heads/main/screenshots/pave-bank-2026-08-07T191602.png
+screenshot: https://apis.io/screenshots/pave-bank/pave-bank-2026-08-07T191602.png
 security:
 - kind: authentication
   name: Pave Bank Authentication

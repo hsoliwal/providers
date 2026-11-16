@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-10-17'
+  score: 29.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -31,7 +45,7 @@ agentic_access:
   operation_count: 130
   slug: pitchbook-agentic-access
   summary_line: 130 operations
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.pitchbook.com
   baseurl_source: declared
@@ -93,69 +107,69 @@ apis:
   description: Service Providers
   name: PitchBook Service Providers API
   slug: pitchbook-service-providers-api
-artifact_total: 23
+artifact_total: 24
 common:
 - group: company
   title: ''
   type: BlogRSS
   url: https://pitchbook.com/news.rss
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/capabilities/pitchbook-capability-edges.yml
+  href: https://artifacts.apis.io/pitchbook/capabilities/pitchbook-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/pitchbook-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/agentic-access/pitchbook-agentic-access.yml
+  href: https://artifacts.apis.io/pitchbook/agentic-access/pitchbook-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pitchbook-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/rules/pitchbook-rules.yml
+  href: https://artifacts.apis.io/pitchbook/rules/pitchbook-rules.yml
   title: ''
   type: Spectral
   url: rules/pitchbook-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/json-ld/pitchbook-context.jsonld
+  href: https://artifacts.apis.io/pitchbook/json-ld/pitchbook-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/pitchbook-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/vocabulary/pitchbook-vocabulary.yml
+  href: https://artifacts.apis.io/pitchbook/vocabulary/pitchbook-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/pitchbook-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pitchbook/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/data-model/pitchbook-data-model.yml
+  href: https://artifacts.apis.io/pitchbook/data-model/pitchbook-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pitchbook-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/errors/pitchbook-problem-types.yml
+  href: https://artifacts.apis.io/pitchbook/errors/pitchbook-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pitchbook-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/conformance/pitchbook-conformance.yml
+  href: https://artifacts.apis.io/pitchbook/conformance/pitchbook-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pitchbook-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/overlays/pitchbook-openapi-overlay.yaml
+  href: https://artifacts.apis.io/pitchbook/overlays/pitchbook-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pitchbook-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/authentication/pitchbook-authentication.yml
+  href: https://artifacts.apis.io/pitchbook/authentication/pitchbook-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pitchbook-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/security/pitchbook-domain-security.yml
+  href: https://artifacts.apis.io/pitchbook/security/pitchbook-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pitchbook-domain-security.yml
@@ -230,7 +244,7 @@ overview: 'PitchBook publishes 12 API contracts indexed on the [APIs.io](https:/
 
 
   PitchBook''s developer surface includes authentication, documentation, getting-started guide, support, engineering blog, pricing, and 15 more developer resources.'
-random_paper: 17
+random_paper: 3
 rules:
 - authorship: generated
   effective_rule_count: 57
@@ -245,31 +259,31 @@ rules:
     warn: 1
   slug: pitchbook-rules
 score:
-  band: developing
-  composite: 40.9
+  band: thin
+  composite: 35.7
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -5.2
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 22.0
-    contract_quality: 64.7
-    developer_ergonomics: 42.3
+    contract_quality: 70.4
+    developer_ergonomics: 28.0
     discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 40.8
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 12
     mcp: derived
     skills: derived
@@ -278,14 +292,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pitchbook/refs/heads/main/screenshots/pitchbook-2026-10-11T112606.png
+screenshot: https://apis.io/screenshots/pitchbook/pitchbook-2026-10-11T112606.png
 security:
 - kind: authentication
   name: Pitchbook Authentication
@@ -295,6 +309,10 @@ security:
   name: Pitchbook Domain Security
   slug: pitchbook-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 1
+skills:
+- name: company-search
+  slug: pitchbook-company-search
 slug: pitchbook
 tags:
 - Company

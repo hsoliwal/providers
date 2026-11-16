@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -24,19 +27,22 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 49.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -48,34 +54,11 @@ api_count: 1
 apis:
 - baseURL: https://api.import.io
   baseurl_source: declared
-  description: Retrieve crawl run executions and their result files.
-  name: Import.io Crawlrun API
-  slug: import-io-crawlrun-api
-- baseURL: https://api.import.io
-  baseurl_source: declared
-  description: Create, configure, run, and manage web data extractors.
-  name: Import.io Extractor API
-  slug: import-io-extractor-api
-- baseURL: https://api.import.io
-  baseurl_source: declared
-  description: Manage reports built on top of extractors.
-  name: Import.io Report API
-  slug: import-io-report-api
-- baseURL: https://api.import.io
-  baseurl_source: declared
-  description: Retrieve report run executions and their result files.
-  name: Import.io ReportRun API
-  slug: import-io-reportrun-api
-- baseURL: https://api.import.io
-  baseurl_source: declared
-  description: Information about the authenticated user and their subscription.
-  name: Import.io User API
-  slug: import-io-user-api
-artifact_total: 20
+  description: The schedule.import.io API from Import.io — 2 operation(s) for schedule.import.io.
+  name: Import.io Schedule.import.io API
+  slug: import-io-schedule-import-io-api
+artifact_total: 16
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Import.io Crawlrun API
   slug: open-import-io-crawlrun-api
@@ -96,32 +79,32 @@ collections:
   slug: open-import-io
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/import-io/refs/heads/main/plans/import-io-plans-pricing.yml
+  href: https://artifacts.apis.io/import-io/plans/import-io-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/import-io-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/import-io/refs/heads/main/rate-limits/import-io-rate-limits.yml
+  href: https://artifacts.apis.io/import-io/rate-limits/import-io-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/import-io-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/import-io/refs/heads/main/finops/import-io-finops.yml
+  href: https://artifacts.apis.io/import-io/finops/import-io-finops.yml
   title: ''
   type: FinOps
   url: finops/import-io-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/import-io/refs/heads/main/agentic-access/import-io-agentic-access.yml
+  href: https://artifacts.apis.io/import-io/agentic-access/import-io-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/import-io-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/import-io/refs/heads/main/security/import-io-domain-security.yml
+  href: https://artifacts.apis.io/import-io/security/import-io-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/import-io-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/import-io/refs/heads/main/authentication/import-io-authentication.yml
+  href: https://artifacts.apis.io/import-io/authentication/import-io-authentication.yml
   title: ''
   type: Authentication
   url: authentication/import-io-authentication.yml
@@ -179,7 +162,7 @@ finops:
 - has_sources: false
   method: generated
   name: Import Io Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: import-io-finops
   template: true
@@ -193,7 +176,10 @@ modified: '2026-05-19'
 name: Import.io
 nav: Providers
 network: true
-overview: 'Import.io publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Crawlrun API, Extractor API, Report API, and 2 more. Tagged areas include Data Aggregation, Data Extraction, Data Integration, Pricing Intelligence, and Web Scraping.
+overview: 'Import.io publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Schedule.import.io API. Tagged areas include Data Aggregation, Data Extraction, Data Integration, Pricing Intelligence, and Web Scraping.
+
+
+  The Import.io catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Import.io''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 13 more developer resources.'
@@ -201,37 +187,50 @@ plans:
 - name: Import Io Plans Pricing
   plan_count: 3
   slug: import-io-plans-pricing
-random_paper: 4
+random_paper: 16
 rate_limits:
 - limit_count: 5
   name: Import Io Rate Limits
   slug: import-io-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 82
+  extends:
+  - spectral:oas
+  name: Import.io API Rules
+  rule_count: 41
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 1
+    warn: 1
+  slug: import-io-rules
 score:
   band: thin
-  composite: 29.6
+  composite: 30.6
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 43.0
+    artifact_dirs: 19
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.2
   facets:
     access_clarity: 25.0
-    contract_governance: 0.0
-    contract_quality: 48.7
+    contract_governance: 13.6
+    contract_quality: 46.0
     developer_ergonomics: 23.8
     discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 31.1
+  previous_composite: 30.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 14.3
+      total: 7
     mcp: first-party
   regulatory:
     applies: true
@@ -239,13 +238,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/import-io/refs/heads/main/screenshots/import-io-2026-06-20T183259.png
+screenshot: https://apis.io/screenshots/import-io/import-io-2026-06-20T183259.png
 security:
 - kind: authentication
   name: Import Io Authentication

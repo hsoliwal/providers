@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -25,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -90,17 +96,17 @@ common:
   type: Instagram
   url: https://www.instagram.com/life.at.exodigo/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/exodigo/refs/heads/main/llms/exodigo-llms.txt
+  href: https://artifacts.apis.io/exodigo/llms/exodigo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/exodigo-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/exodigo/refs/heads/main/well-known/exodigo-well-known.yml
+  href: https://artifacts.apis.io/exodigo/well-known/exodigo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/exodigo-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/exodigo/refs/heads/main/security/exodigo-domain-security.yml
+  href: https://artifacts.apis.io/exodigo/security/exodigo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/exodigo-domain-security.yml
@@ -113,11 +119,11 @@ modified: '2026-08-04'
 name: Exodigo
 nav: Providers
 network: true
-overview: 'Exodigo is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Subsurface Intelligence, Underground Mapping, Geophysics, and Infrastructure.
+overview: 'Exodigo is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Subsurface, Underground Mapping, Geophysics, and Infrastructure.
 
 
   Exodigo''s developer surface includes engineering blog, support, YouTube channel, and 13 more developer resources.'
-random_paper: 3
+random_paper: 7
 score:
   band: emerging
   composite: 11.0
@@ -143,14 +149,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/exodigo/refs/heads/main/screenshots/exodigo-2026-08-07T165107.png
+screenshot: https://apis.io/screenshots/exodigo/exodigo-2026-08-07T165107.png
 security:
 - kind: domain-security
   name: Exodigo Domain Security
@@ -159,7 +165,7 @@ security:
 slug: exodigo
 tags:
 - Company
-- Subsurface Intelligence
+- Subsurface
 - Underground Mapping
 - Geophysics
 - Infrastructure

@@ -393,13 +393,13 @@ def main():
 
     print("providers written: %d (reused apis.io: %d, minimal from all/: %d, skipped: %d)"
           % (reused + minimal, reused, minimal, skipped))
-    write_tombstones()
+    write_tombstones(prune_loops=not (args.only or args.limit))
 
 
 RETIRED_YML = os.path.join(ROOT, "api-search", "network", "_data", "retired.yml")
 
 
-def write_tombstones():
+def write_tombstones(prune_loops=False):
     """Replace pages for retired slugs with a redirect stub.
 
     This build does NOT prune: a provider retired out of all/* keeps its page here forever,
@@ -415,6 +415,16 @@ def write_tombstones():
 
     Idempotent, and re-run on every build, so a retirement cannot decay back into a stale
     profile page.
+
+    A row merged into ITSELF is not a retirement of the company (roadmap#1088). retired.yml holds
+    thousands of them: autotombstone_drops.py writes one when a live provider's API pages move,
+    and its target is correct on apis.io, where /providers/<slug>/ is a separate real page. Here
+    that path IS this page, so the stub refreshed to itself forever and the profile never opened.
+    Such a row writes nothing, and the page dump() wrote stands. A delisted self-row stays gone:
+    main() prunes that page and nothing here writes it back.
+
+    A loop left by an earlier build, for a slug dump() did not rewrite, is removed on a full run,
+    because a 404 is honest and a page that never opens is not.
     """
     if not os.path.isfile(RETIRED_YML):
         print("tombstones:   skipped (no retired.yml at %s)" % RETIRED_YML)
@@ -429,11 +439,30 @@ def write_tombstones():
     written = 0
     restored = 0
     orphaned = []
+    self_rows = set()
     for entry in entries:
         if not isinstance(entry, dict):
             continue
         slug, survivor = entry.get("slug"), entry.get("merged_into")
         if not slug or not survivor:
+            continue
+        # YAML TYPES THE VALUE, NOT THE FIELD, and one row is `slug: 21` -- which parses as
+        # the int 21, not "21". So self_rows ended up a set of 3,591 strings with a single int
+        # in it, and `sorted(self_rows)` below raised
+        #   TypeError: '<' not supported between instances of 'int' and 'str'
+        # That crashed write_tombstones() on EVERY build since the prune shipped (roadmap#1088,
+        # 2026-11-02) -- after the redirects were written but before the prune ran -- which is
+        # the whole reason 3,591 self-redirect loops stayed live on the site for five weeks.
+        # The crash was invisible because the phase prints its "retired slug(s) redirected"
+        # line first and the traceback went to a log nobody read.
+        #
+        # COERCE BOTH, never just one: `str(slug) == survivor` is False for that row, so
+        # coercing only the slug would reclassify it as a real retirement and write it a
+        # tombstone pointing at /providers/21/ -- its own URL. That turns the bug into a new
+        # instance of the bug.
+        slug, survivor = str(slug), str(survivor)
+        if slug == survivor:
+            self_rows.add(slug)
             continue
         # WRITTEN WHETHER OR NOT A PAGE IS THERE TO REPLACE (roadmap#216).
         #
@@ -473,6 +502,59 @@ def write_tombstones():
     # run. A nonzero count on a normal build means a same-cycle retirement was caught, which is
     # the case that used to 404 silently.
     print("tombstones:   %d retired slug(s) redirected (%d newly written)" % (written, restored))
+    # A SELF-MERGED ROW WITH NO LOCAL SOURCE IS SENT TO apis.io, NOT DELETED AND NOT LOOPED.
+    #
+    # Nearly every self-merged row is fine: the provider is live, dump() wrote it a real page,
+    # and that page stands. The exceptions are slugs with no all/<slug>/apis.yml -- this site
+    # has nothing to build a page FROM, so dump() skips them and all that is left is the
+    # previous build's stub, whose `redirect_to: /providers/<slug>/` is its own URL. Those
+    # refreshed forever (3,591 of them did, for five weeks).
+    #
+    # Deleting them 404s a provider that is demonstrably still published, and it trips the
+    # deploy gate's deleted-page check -- correctly, because a live page would be coming off
+    # the site with no registry entry to explain it. The record is not gone, though: it is on
+    # apis.io, which is the canonical catalog and where this site's own pages are derived
+    # from. So point there, absolutely and cross-host, which is the question
+    # ae-provider-tombstones-self-redirect left open: qualify the target to the apis.io host
+    # rather than emitting an apis.io-relative path onto this domain.
+    #
+    # DELISTED AND PROSPECT SLUGS STAY GONE. main() deletes their pages on purpose, and a
+    # redirect is still publishing a record about a company that asked to be removed -- so
+    # they are skipped here, never rewritten. That ordering matters: this function runs after
+    # main()'s prune, so without this guard it would resurrect every takedown as a redirect.
+    blocked = delisted_slugs() | prospect_slugs()
+    rehomed, held = [], []
+    for slug in sorted(self_rows):
+        page = os.path.join(OUT, "%s.md" % slug)
+        if os.path.isfile(page):
+            with open(page, encoding="utf-8") as fh:
+                if "redirect_to: /providers/%s/\n" % slug not in fh.read(300):
+                    continue          # dump() wrote a real page over the stub; it stands
+        # Either there is no page at all, or the only page is a stub pointing at itself.
+        if slug in blocked:
+            held.append(slug)
+            if os.path.isfile(page) and prune_loops:
+                os.remove(page)
+            continue
+        with open(page, "w", encoding="utf-8") as fh:
+            fh.write(
+                "---\n"
+                "layout: redirect\n"
+                "title: Moved to apis.io\n"
+                "redirect_to: https://apis.io/providers/%s/\n"
+                "sitemap: false\n"
+                "# Generated by write_tombstones() from api-search/network/_data/retired.yml.\n"
+                "# %s is live but has no all/%s/apis.yml for this site to build a page from,\n"
+                "# so its record is served by apis.io; do not hand-edit.\n"
+                "---\n" % (slug, slug, slug)
+            )
+        rehomed.append(slug)
+    print("tombstones:   %d self-merged row(s) kept as live pages, %d with no local source "
+          "sent to apis.io%s"
+          % (len(self_rows) - len(rehomed) - len(held), len(rehomed),
+             ", %d delisted/prospect held gone" % len(held) if held else ""))
+    if rehomed:
+        print("tombstones:   -> %s" % ", ".join(rehomed[:8]) + (" …" if len(rehomed) > 8 else ""))
     if orphaned:
         print("tombstones:   %d skipped — survivor has no page: %s"
               % (len(orphaned), ", ".join(orphaned[:5]) + (" …" if len(orphaned) > 5 else "")))

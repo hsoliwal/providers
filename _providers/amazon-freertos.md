@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.7
-  scored_at: '2026-10-17'
+  score: 30.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -124,9 +130,6 @@ collections:
   name: Amazon FreeRTOS Management API
   slug: postman-amazon-freertos
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Amazon FreeRTOS Management OTA Updates API
   slug: open-amazon-freertos-ota-updates-api
 - collection_type: open
@@ -140,17 +143,17 @@ collections:
   slug: open-amazon-freertos
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/plans/amazon-freertos-plans-pricing.yml
+  href: https://artifacts.apis.io/amazon-freertos/plans/amazon-freertos-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/amazon-freertos-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/rate-limits/amazon-freertos-rate-limits.yml
+  href: https://artifacts.apis.io/amazon-freertos/rate-limits/amazon-freertos-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/amazon-freertos-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/finops/amazon-freertos-finops.yml
+  href: https://artifacts.apis.io/amazon-freertos/finops/amazon-freertos-finops.yml
   title: ''
   type: FinOps
   url: finops/amazon-freertos-finops.yml
@@ -179,27 +182,27 @@ common:
   type: License
   url: https://github.com/aws/amazon-freertos/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/agentic-access/amazon-freertos-agentic-access.yml
+  href: https://artifacts.apis.io/amazon-freertos/agentic-access/amazon-freertos-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amazon-freertos-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/security/amazon-freertos-trust-center.yml
+  href: https://artifacts.apis.io/amazon-freertos/security/amazon-freertos-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/amazon-freertos-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/security/amazon-freertos-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-freertos/security/amazon-freertos-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-freertos-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/security/amazon-freertos-domain-security.yml
+  href: https://artifacts.apis.io/amazon-freertos/security/amazon-freertos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-freertos-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/authentication/amazon-freertos-authentication.yml
+  href: https://artifacts.apis.io/amazon-freertos/authentication/amazon-freertos-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amazon-freertos-authentication.yml
@@ -208,32 +211,32 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-freertos/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/arazzo/amazon-freertos-decommission-ota-update-workflow.yml
+  href: https://artifacts.apis.io/amazon-freertos/arazzo/amazon-freertos-decommission-ota-update-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-freertos-decommission-ota-update-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/arazzo/amazon-freertos-decommission-software-configuration-workflow.yml
+  href: https://artifacts.apis.io/amazon-freertos/arazzo/amazon-freertos-decommission-software-configuration-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-freertos-decommission-software-configuration-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/arazzo/amazon-freertos-provision-software-configuration-workflow.yml
+  href: https://artifacts.apis.io/amazon-freertos/arazzo/amazon-freertos-provision-software-configuration-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-freertos-provision-software-configuration-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/arazzo/amazon-freertos-rollout-ota-update-workflow.yml
+  href: https://artifacts.apis.io/amazon-freertos/arazzo/amazon-freertos-rollout-ota-update-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-freertos-rollout-ota-update-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/arazzo/amazon-freertos-tag-software-configuration-workflow.yml
+  href: https://artifacts.apis.io/amazon-freertos/arazzo/amazon-freertos-tag-software-configuration-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-freertos-tag-software-configuration-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/arazzo/amazon-freertos-update-software-configuration-workflow.yml
+  href: https://artifacts.apis.io/amazon-freertos/arazzo/amazon-freertos-update-software-configuration-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/amazon-freertos-update-software-configuration-workflow.yml
@@ -294,17 +297,17 @@ common:
   type: StackOverflow
   url: https://stackoverflow.com/questions/tagged/amazon-freertos
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/rules/amazon-freertos-spectral-rules.yml
+  href: https://artifacts.apis.io/amazon-freertos/rules/amazon-freertos-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/amazon-freertos-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/vocabulary/amazon-freertos-vocabulary.yaml
+  href: https://artifacts.apis.io/amazon-freertos/vocabulary/amazon-freertos-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/amazon-freertos-vocabulary.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/json-ld/amazon-freertos-context.jsonld
+  href: https://artifacts.apis.io/amazon-freertos/json-ld/amazon-freertos-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/amazon-freertos-context.jsonld
@@ -342,13 +345,13 @@ features:
 - description: Over 100 partner-qualified hardware platforms from major MCU vendors including Espressif, ST, NXP, Renesas.
   name: Qualified Hardware
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Amazon Freertos Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: annual subscription per lts version
+  service_category: ''
   slug: amazon-freertos-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-freertos.png
 json_schemas:
 - name: Device
@@ -392,7 +395,7 @@ modified: '2026-05-19'
 name: Amazon FreeRTOS
 nav: Providers
 network: true
-overview: 'Amazon FreeRTOS publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: OTA Updates API, Software Configurations API, and Tags API. Tagged areas include Embedded Systems, IoT, Microcontrollers, and RTOS.
+overview: 'Amazon FreeRTOS publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: OTA Updates API, Software Configurations API, and Tags API. Tagged areas include Amazon Web Services, Embedded Systems, IoT, Microcontrollers, and RTOS.
 
 
   The Amazon FreeRTOS catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -403,7 +406,10 @@ plans:
 - name: Amazon Freertos Plans Pricing
   plan_count: 3
   slug: amazon-freertos-plans-pricing
-random_paper: 3
+- name: Amazon Freertos Price Estimates
+  plan_count: 0
+  slug: amazon-freertos-price-estimates
+random_paper: 5
 rate_limits:
 - limit_count: 5
   name: Amazon Freertos Rate Limits
@@ -433,27 +439,32 @@ rules:
     warn: 25
   slug: amazon-freertos-spectral-rules
 score:
-  band: strong
-  composite: 65.9
+  band: exemplar
+  composite: 72.4
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 67.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 48.0
+    artifact_dirs: 22
+    catalog_earned: 84.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 31.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.8
   facets:
-    access_clarity: 60.5
+    access_clarity: 92.1
     contract_governance: 27.3
     contract_quality: 74.1
     developer_ergonomics: 65.5
-    discoverability: 57.1
+    discoverability: 66.1
     operational_transparency: 52.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 67.3
+  previous_composite: 71.6
   provenance:
     agentic_access: derived
     contracts:
@@ -467,13 +478,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/amazon-freertos/refs/heads/main/screenshots/amazon-freertos-2026-06-20T171652.png
+screenshot: https://apis.io/screenshots/amazon-freertos/amazon-freertos-2026-06-20T171652.png
 security:
 - kind: authentication
   name: Amazon Freertos Authentication
@@ -493,6 +504,7 @@ security:
   summary_line: PCI DSS, HIPAA, FedRAMP, GDPR, FIPS 140
 slug: amazon-freertos
 tags:
+- Amazon Web Services
 - Embedded Systems
 - IoT
 - Microcontrollers

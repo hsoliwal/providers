@@ -1,9 +1,12 @@
 ---
 access_model:
   confidence: medium
-  label: Free · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: free
+  pricing: freemium
   public: false
   source:
   - plans
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 43.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -73,11 +79,8 @@ apis:
   description: The Proxy API from Cloudflare AI Gateway — 2 operation(s) for proxy.
   name: Cloudflare AI Gateway Proxy API
   slug: cloudflare-ai-gateway-proxy-api
-artifact_total: 41
+artifact_total: 42
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Cloudflare AI Gateway Gateways API
   slug: open-cloudflare-ai-gateway-gateways-api
@@ -92,17 +95,17 @@ collections:
   slug: open-cloudflare-ai-gateway
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-ai-gateway/refs/heads/main/rate-limits/cloudflare-ai-gateway-rate-limits.yml
+  href: https://artifacts.apis.io/cloudflare-ai-gateway/rate-limits/cloudflare-ai-gateway-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/cloudflare-ai-gateway-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-ai-gateway/refs/heads/main/finops/cloudflare-ai-gateway-finops.yml
+  href: https://artifacts.apis.io/cloudflare-ai-gateway/finops/cloudflare-ai-gateway-finops.yml
   title: ''
   type: FinOps
   url: finops/cloudflare-ai-gateway-finops.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-ai-gateway/refs/heads/main/plans/cloudflare-ai-gateway-plans-pricing.yml
+  href: https://artifacts.apis.io/cloudflare-ai-gateway/plans/cloudflare-ai-gateway-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cloudflare-ai-gateway-plans-pricing.yml
@@ -111,22 +114,22 @@ common:
   type: Website
   url: https://www.cloudflare.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-ai-gateway/refs/heads/main/agentic-access/cloudflare-ai-gateway-agentic-access.yml
+  href: https://artifacts.apis.io/cloudflare-ai-gateway/agentic-access/cloudflare-ai-gateway-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cloudflare-ai-gateway-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-ai-gateway/refs/heads/main/security/cloudflare-ai-gateway-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cloudflare-ai-gateway/security/cloudflare-ai-gateway-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cloudflare-ai-gateway-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-ai-gateway/refs/heads/main/security/cloudflare-ai-gateway-domain-security.yml
+  href: https://artifacts.apis.io/cloudflare-ai-gateway/security/cloudflare-ai-gateway-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudflare-ai-gateway-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudflare-ai-gateway/refs/heads/main/authentication/cloudflare-ai-gateway-authentication.yml
+  href: https://artifacts.apis.io/cloudflare-ai-gateway/authentication/cloudflare-ai-gateway-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cloudflare-ai-gateway-authentication.yml
@@ -230,13 +233,13 @@ features:
 - description: Provider keys can be sourced from Cloudflare's Secrets Store rather than embedded in client code.
   name: Secrets Store Integration
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Cloudflare Ai Gateway Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: user
+  service_category: ''
   slug: cloudflare-ai-gateway-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cloudflare-ai-gateway.png
 integrations:
 - description: First-class integration with Cloudflare Workers AI inference catalog.
@@ -263,42 +266,61 @@ network: true
 overview: 'Cloudflare AI Gateway publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Gateways API, Logs API, Proxy API, and 4 more. Tagged areas include AI Gateway, LLM, Observability, Caching, and Rate Limiting.
 
 
+  The Cloudflare AI Gateway catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Cloudflare AI Gateway''s developer surface includes authentication, developer portal, documentation, getting-started guide, API reference, changelog, engineering blog, and 20 more developer resources.'
 plans:
 - name: Cloudflare Ai Gateway Plans Pricing
   plan_count: 10
   slug: cloudflare-ai-gateway-plans-pricing
-random_paper: 13
+- name: Cloudflare Ai Gateway Price Estimates
+  plan_count: 0
+  slug: cloudflare-ai-gateway-price-estimates
+random_paper: 15
 rate_limits:
 - limit_count: 2
   name: Cloudflare Ai Gateway Rate Limits
   slug: cloudflare-ai-gateway-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Cloudflare AI Gateway API Rules
+  rule_count: 46
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 1
+  slug: cloudflare-ai-gateway-rules
 score:
-  band: developing
-  composite: 51.6
+  band: strong
+  composite: 56.2
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 46.0
+    artifact_dirs: 18
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 69.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.7
+  delta: 0.0
   facets:
-    access_clarity: 55.3
-    contract_governance: 0.0
+    access_clarity: 63.2
+    contract_governance: 13.6
     contract_quality: 46.5
     developer_ergonomics: 88.1
     discoverability: 66.7
-    operational_transparency: 39.5
-  previous_composite: 52.3
+    operational_transparency: 50.0
+  previous_composite: 56.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 3
+      total: 7
     mcp: first-party
   regulatory:
     applies: true
@@ -306,13 +328,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cloudflare-ai-gateway/refs/heads/main/screenshots/cloudflare-ai-gateway-2026-06-20T174550.png
+screenshot: https://apis.io/screenshots/cloudflare-ai-gateway/cloudflare-ai-gateway-2026-06-20T174550.png
 security:
 - kind: authentication
   name: Cloudflare Ai Gateway Authentication

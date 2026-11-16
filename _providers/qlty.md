@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://qlty.sh
@@ -52,22 +59,19 @@ apis:
   description: Qlty Cloud is the hosted platform that analyzes pull requests, posts automated code review comments on newly introduced issues, enforces quality gates, aggregates coverage, and renders trends and dash
   name: Qlty Cloud API
   slug: qlty-cloud
-artifact_total: 10
+artifact_total: 9
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Qlty
   slug: open-qlty
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qlty/refs/heads/main/security/qlty-domain-security.yml
+  href: https://artifacts.apis.io/qlty/security/qlty-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/qlty-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/qlty/refs/heads/main/authentication/qlty-authentication.yml
+  href: https://artifacts.apis.io/qlty/authentication/qlty-authentication.yml
   title: ''
   type: Authentication
   url: authentication/qlty-authentication.yml
@@ -88,17 +92,17 @@ common:
   type: Documentation
   url: https://docs.qlty.sh
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/qlty/refs/heads/main/plans/qlty-plans-pricing.yml
+  href: https://artifacts.apis.io/qlty/plans/qlty-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/qlty-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/qlty/refs/heads/main/rate-limits/qlty-rate-limits.yml
+  href: https://artifacts.apis.io/qlty/rate-limits/qlty-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/qlty-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/qlty/refs/heads/main/finops/qlty-finops.yml
+  href: https://artifacts.apis.io/qlty/finops/qlty-finops.yml
   title: ''
   type: FinOps
   url: finops/qlty-finops.yml
@@ -130,44 +134,44 @@ plans:
 - name: Qlty Plans Pricing
   plan_count: 4
   slug: qlty-plans-pricing
-random_paper: 18
+random_paper: 2
 rate_limits:
 - limit_count: 6
   name: Qlty Rate Limits
   slug: qlty-rate-limits
 score:
   band: emerging
-  composite: 19.8
+  composite: 21.7
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 38.0
     catalog_earned_first_party: 0.0
     catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 27.6
+    contract_quality: 35.2
     developer_ergonomics: 23.8
     discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 28.1
+  previous_composite: 21.7
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/qlty/refs/heads/main/screenshots/qlty-2026-09-02T152514.png
+screenshot: https://apis.io/screenshots/qlty/qlty-2026-09-02T152514.png
 security:
 - kind: authentication
   name: Qlty Authentication

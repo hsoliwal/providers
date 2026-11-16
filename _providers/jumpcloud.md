@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
-    reversibility_documented: false
+    reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-10-17'
+  score: 23.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -76,9 +79,6 @@ apis:
 artifact_total: 16
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: JumpCloud API V1 Application Templates API
   slug: open-jumpcloud-application-templates-api
 - collection_type: open
@@ -95,22 +95,22 @@ collections:
   slug: open-jumpcloud
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jumpcloud/refs/heads/main/capabilities/jumpcloud-capability-edges.yml
+  href: https://artifacts.apis.io/jumpcloud/capabilities/jumpcloud-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/jumpcloud-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jumpcloud/refs/heads/main/agentic-access/jumpcloud-agentic-access.yml
+  href: https://artifacts.apis.io/jumpcloud/agentic-access/jumpcloud-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/jumpcloud-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jumpcloud/refs/heads/main/security/jumpcloud-domain-security.yml
+  href: https://artifacts.apis.io/jumpcloud/security/jumpcloud-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jumpcloud-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jumpcloud/refs/heads/main/authentication/jumpcloud-authentication.yml
+  href: https://artifacts.apis.io/jumpcloud/authentication/jumpcloud-authentication.yml
   title: ''
   type: Authentication
   url: authentication/jumpcloud-authentication.yml
@@ -161,47 +161,63 @@ network: true
 overview: 'JumpCloud publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Application Templates API, Applications API, Command Results API, and 4 more. Tagged areas include Identity, Directory Services, SSO, MFA, and Device Management.
 
 
+  The JumpCloud catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   JumpCloud''s developer surface includes authentication, documentation, support, signup flow, pricing, engineering blog, and 7 more developer resources.'
-random_paper: 11
+random_paper: 19
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: JumpCloud API Rules
+  rule_count: 61
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 4
+    warn: 16
+  slug: jumpcloud-rules
 score:
   band: thin
-  composite: 29.7
+  composite: 34.0
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 37.0
+    artifact_dirs: 14
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 23.7
-    contract_governance: 0.0
-    contract_quality: 51.2
+    contract_governance: 13.6
+    contract_quality: 50.8
     developer_ergonomics: 28.6
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 29.6
+  previous_composite: 34.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 4
+      marker_coverage: 4.3
+      total: 92
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/jumpcloud/refs/heads/main/screenshots/jumpcloud-2026-06-20T183831.png
+    score: 27.8
+screenshot: https://apis.io/screenshots/jumpcloud/jumpcloud-2026-06-20T183831.png
 security:
 - kind: authentication
   name: Jumpcloud Authentication

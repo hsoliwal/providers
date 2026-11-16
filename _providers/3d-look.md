@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
   - security
   trial: false
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: REST API to create a person, upload front and side photos, and asynchronously retrieve 80+ calculated body measurements for made-to-measure apparel, uniforms, and size recommendation.
@@ -46,7 +50,7 @@ apis:
 artifact_total: 5
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/plans/3d-look-plans-pricing.yml
+  href: https://artifacts.apis.io/3d-look/plans/3d-look-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/3d-look-plans-pricing.yml
@@ -91,52 +95,52 @@ common:
   type: GitHubOrganization
   url: https://github.com/3dlook-me
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/authentication/3d-look-authentication.yml
+  href: https://artifacts.apis.io/3d-look/authentication/3d-look-authentication.yml
   title: ''
   type: Authentication
   url: authentication/3d-look-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/packages/3d-look-packages.yml
+  href: https://artifacts.apis.io/3d-look/packages/3d-look-packages.yml
   title: ''
   type: Packages
   url: packages/3d-look-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/packages/3d-look-packages.yml
+  href: https://artifacts.apis.io/3d-look/packages/3d-look-packages.yml
   title: ''
   type: SDKs
   url: packages/3d-look-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/components/3d-look-components.yml
+  href: https://artifacts.apis.io/3d-look/components/3d-look-components.yml
   title: ''
   type: Components
   url: components/3d-look-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/errors/3d-look-error-codes.yml
+  href: https://artifacts.apis.io/3d-look/errors/3d-look-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/3d-look-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/conventions/3d-look-conventions.yml
+  href: https://artifacts.apis.io/3d-look/conventions/3d-look-conventions.yml
   title: ''
   type: Conventions
   url: conventions/3d-look-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/mcp/3d-look-mcp.yml
+  href: https://artifacts.apis.io/3d-look/mcp/3d-look-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/3d-look-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/lifecycle/3d-look-lifecycle.yml
+  href: https://artifacts.apis.io/3d-look/lifecycle/3d-look-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/3d-look-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/security/3d-look-domain-security.yml
+  href: https://artifacts.apis.io/3d-look/security/3d-look-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/3d-look-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/llms/3d-look-llms.txt
+  href: https://artifacts.apis.io/3d-look/llms/3d-look-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/3d-look-llms.txt
@@ -156,18 +160,18 @@ plans:
 - name: 3D Look Plans Pricing
   plan_count: 6
   slug: 3d-look-plans-pricing
-random_paper: 17
+random_paper: 9
 score:
   band: thin
   composite: 30.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: 0.0
   facets:
     access_clarity: 63.2
     contract_governance: 0.0
@@ -175,7 +179,7 @@ score:
     developer_ergonomics: 47.6
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 23.8
+  previous_composite: 30.2
   provenance:
     mcp: derived
   regulatory:
@@ -184,14 +188,14 @@ score:
     regime: Health
     regime_id: health
     score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/3d-look/refs/heads/main/screenshots/3d-look-2026-07-25T181146.png
+screenshot: https://apis.io/screenshots/3d-look/3d-look-2026-07-25T181146.png
 security:
 - kind: authentication
   name: 3D Look Authentication

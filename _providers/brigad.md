@@ -5,7 +5,10 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: First-party GraphQL router backing the Brigad talent (freelancer) app — talents, propositions/missions, onboarding, experiences, availabilities and billing. Endpoint is hardcoded in Brigad's own web S
@@ -79,7 +85,7 @@ common:
   type: PrivacyPolicy
   url: https://www.brigad.co/en-gb/legal/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brigad/refs/heads/main/security/brigad-domain-security.yml
+  href: https://artifacts.apis.io/brigad/security/brigad-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/brigad-domain-security.yml
@@ -88,37 +94,37 @@ common:
   type: GitHubOrganization
   url: https://github.com/Brigad
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brigad/refs/heads/main/llms/brigad-llms.txt
+  href: https://artifacts.apis.io/brigad/llms/brigad-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/brigad-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/brigad/refs/heads/main/authentication/brigad-authentication.yml
+  href: https://artifacts.apis.io/brigad/authentication/brigad-authentication.yml
   title: ''
   type: Authentication
   url: authentication/brigad-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brigad/refs/heads/main/conventions/brigad-conventions.yml
+  href: https://artifacts.apis.io/brigad/conventions/brigad-conventions.yml
   title: ''
   type: Conventions
   url: conventions/brigad-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/brigad/refs/heads/main/data-model/brigad-data-model.yml
+  href: https://artifacts.apis.io/brigad/data-model/brigad-data-model.yml
   title: ''
   type: DataModel
   url: data-model/brigad-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/brigad/refs/heads/main/mcp/brigad-mcp.yml
+  href: https://artifacts.apis.io/brigad/mcp/brigad-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/brigad-mcp.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/brigad/refs/heads/main/rate-limits/brigad-rate-limits.yml
+  href: https://artifacts.apis.io/brigad/rate-limits/brigad-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/brigad-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/brigad/refs/heads/main/plans/brigad-plans-pricing.yml
+  href: https://artifacts.apis.io/brigad/plans/brigad-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/brigad-plans-pricing.yml
@@ -139,7 +145,7 @@ plans:
 - name: Brigad Plans Pricing
   plan_count: 0
   slug: brigad-plans-pricing
-random_paper: 1
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Brigad Rate Limits
@@ -148,7 +154,7 @@ score:
   band: thin
   composite: 28.9
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -171,14 +177,14 @@ score:
     regime: Health
     regime_id: health
     score: 15.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/brigad/refs/heads/main/screenshots/brigad-2026-07-25T203819.png
+screenshot: https://apis.io/screenshots/brigad/brigad-2026-07-25T203819.png
 security:
 - kind: authentication
   name: Brigad Authentication

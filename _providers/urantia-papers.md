@@ -1,14 +1,14 @@
 ---
 access_model:
   confidence: low
-  label: Free · Open access
-  onboarding: open
-  pricing: free
-  public: true
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
   source:
   - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 44.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.urantia.dev
@@ -89,7 +92,7 @@ apis:
   slug: urantia-papers-paragraphs-api
 - baseURL: https://api.urantia.dev
   baseurl_source: declared
-  description: The Search API from Urantia Papers — 2 operation(s) for search.
+  description: The Search API from Urantia Papers — 4 operation(s) for search.
   name: Urantia Papers Search API
   slug: urantia-papers-search-api
 - baseURL: https://api.urantia.dev
@@ -102,10 +105,30 @@ apis:
   description: The Tools API from Urantia Papers — 2 operation(s) for tools.
   name: Urantia Papers Tools API
   slug: urantia-papers-tools-api
-artifact_total: 15
+- baseURL: https://api.urantia.dev
+  baseurl_source: declared
+  description: The Quotes API from Urantia Papers — 1 operation(s) for quotes.
+  name: Urantia Papers Quotes API
+  slug: urantia-papers-quotes-api
+- baseURL: https://api.urantia.dev
+  baseurl_source: declared
+  description: The Scriptures API from Urantia Papers — 9 operation(s) for scriptures.
+  name: Urantia Papers Scriptures API
+  slug: urantia-papers-scriptures-api
+- baseURL: https://api.urantia.dev
+  baseurl_source: declared
+  description: The Works API from Urantia Papers — 8 operation(s) for works.
+  name: Urantia Papers Works API
+  slug: urantia-papers-works-api
+artifact_total: 19
 common:
+- group: other
+  href: https://artifacts.apis.io/urantia-papers/capabilities/urantia-papers-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/urantia-papers-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/urantia-papers/refs/heads/main/mcp/urantia-papers-mcp.yml
+  href: https://artifacts.apis.io/urantia-papers/mcp/urantia-papers-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/urantia-papers-mcp.yml
@@ -114,12 +137,12 @@ common:
   type: MCPServer
   url: https://api.urantia.dev/mcp
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/urantia-papers/refs/heads/main/a2a/urantia-papers-a2a.yml
+  href: https://artifacts.apis.io/urantia-papers/a2a/urantia-papers-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/urantia-papers-a2a.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/urantia-papers/refs/heads/main/security/urantia-papers-domain-security.yml
+  href: https://artifacts.apis.io/urantia-papers/security/urantia-papers-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/urantia-papers-domain-security.yml
@@ -188,60 +211,76 @@ common:
   type: ContentSignal
   url: https://api.urantia.dev/robots.txt
 created: '2026-05-28'
-description: 'A read-only REST API and MCP server for the Urantia Papers: papers, sections, and paragraphs by reference, keyword and semantic search, named entities, and cross-references to public domain texts of the world''s religions. The MCP server covers the Papers and the Bible for now. The content endpoints are read-only and need no key.'
+description: 'A read-only REST API and MCP server for the Urantia Papers: papers, sections, and paragraphs by reference, keyword and semantic search, named entities, and cross-references to public domain texts of the world''s religions. The MCP server covers the Papers, the Bible and the other public domain works. The content endpoints are read-only and need no key.'
 layout: provider
 mcp_servers:
-- description: Remote MCP server at api.urantia.dev over streamable HTTP; 19 tools listed.
+- description: Remote MCP server at api.urantia.dev over streamable HTTP; 26 tools listed.
   name: Urantia Papers API
   slug: urantia-papers-api
-modified: '2026-10-05'
+modified: '2026-10-21'
 name: Urantia Papers
 nav: Providers
 network: true
-overview: 'Urantia Papers publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audio API, Bible API, Citation API, and 10 more. Tagged areas include Books, Public APIs, and A2A.
+overview: 'Urantia Papers publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audio API, Bible API, Citation API, and 13 more. Tagged areas include Books, Public APIs, and A2A.
 
 
-  Urantia Papers'' developer surface includes support, documentation, changelog, and 17 more developer resources.'
-random_paper: 0
+  The Urantia Papers catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Urantia Papers'' developer surface includes support, documentation, changelog, and 18 more developer resources.'
+random_paper: 12
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Urantia Papers API Rules
+  rule_count: 66
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 4
+  slug: urantia-papers-rules
 score:
   band: thin
-  composite: 32.2
+  composite: 27.3
   coverage:
-    artifact_dirs: 7
-    catalog_earned: 30.0
+    artifact_dirs: 12
+    catalog_earned: 34.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 85.0
+    catalog_gap: 80.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 26.1
+  delta: -6.5
   facets:
-    access_clarity: 21.1
-    contract_governance: 0.0
+    access_clarity: 10.5
+    contract_governance: 13.6
     contract_quality: 47.8
-    developer_ergonomics: 20.7
+    developer_ergonomics: 13.6
     discoverability: 80.0
-    operational_transparency: 36.8
-  previous_composite: 6.1
+    operational_transparency: 18.4
+  previous_composite: 33.8
   provenance:
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 13
+      total: 16
     mcp: first-party
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 9.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/urantia-papers/refs/heads/main/screenshots/urantia-papers-2026-06-20T200543.png
+screenshot: https://apis.io/screenshots/urantia-papers/urantia-papers-2026-06-20T200543.png
 security:
 - kind: domain-security
   name: Urantia Papers Domain Security

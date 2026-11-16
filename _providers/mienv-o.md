@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,13 +36,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: REST API for comparing carrier rates, creating shipments and shipping labels, and tracking parcels across Latin American carriers. Live, authenticated host at api.mienvio.mx/v2.
   name: Mienvío Shipping API
   slug: mienvío-shipping-api
-artifact_total: 3
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -69,17 +73,17 @@ common:
   type: TermsOfService
   url: https://mienvio.mx/terminos-y-condiciones-mienvio
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mienv-o/refs/heads/main/security/mienv-o-domain-security.yml
+  href: https://artifacts.apis.io/mienv-o/security/mienv-o-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mienv-o-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mienv-o/refs/heads/main/well-known/mienv-o-well-known.yml
+  href: https://artifacts.apis.io/mienv-o/well-known/mienv-o-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/mienv-o-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mienv-o/refs/heads/main/llms/mienv-o-llms.txt
+  href: https://artifacts.apis.io/mienv-o/llms/mienv-o-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mienv-o-llms.txt
@@ -87,10 +91,6 @@ created: '2026-07-17'
 description: Mienvío is a Mexican logistics control-tower platform that unifies multiple parcel carriers behind a single multi-carrier shipping API and dashboard for e-commerce, retail, marketplace, and fintech shippers across Latin America. It compares carrier rates, automates routing by cost, SLA, and coverage zone, generates shipping labels, and provides real-time tracking, delivery-incident management, and post-purchase customer notifications. Merchants integrate through the REST API (api.mienvio.mx/v2) or prebuilt Shopify and WooCommerce connectors, shipping nationally, internationally, and locally across Mexico, Colombia, Chile, Costa Rica, Peru, Guatemala, and El Salvador.
 image: https://cdn.prod.website-files.com/65b146ad7d71aced5d8ce108/66215bcd108d7fa4e58d0d3b_icono-256.jpg
 layout: provider
-mcp_servers:
-- description: Remote MCP server at api.mienvio.mx over HTTP.
-  name: Mienvío MCP Server
-  slug: mienv-o
 modified: '2026-07-20'
 name: Mienvío
 nav: Providers
@@ -99,7 +99,7 @@ overview: 'Mienvío is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Mienvío''s developer surface includes documentation, engineering blog, signup flow, and 7 more developer resources.'
-random_paper: 17
+random_paper: 3
 score:
   band: emerging
   composite: 12.9
@@ -134,14 +134,14 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 8.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mienv-o/refs/heads/main/screenshots/mienv-o-2026-08-07T172857.png
+screenshot: https://apis.io/screenshots/mienv-o/mienv-o-2026-08-07T172857.png
 security:
 - kind: domain-security
   name: Mienv O Domain Security

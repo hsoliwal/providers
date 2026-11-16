@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,27 +37,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 16
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/plans/american-water-works-plans-pricing.yml
+  href: https://artifacts.apis.io/american-water-works/plans/american-water-works-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/american-water-works-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/rate-limits/american-water-works-rate-limits.yml
+  href: https://artifacts.apis.io/american-water-works/rate-limits/american-water-works-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/american-water-works-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/security/american-water-works-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/american-water-works/security/american-water-works-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/american-water-works-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/security/american-water-works-domain-security.yml
+  href: https://artifacts.apis.io/american-water-works/security/american-water-works-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/american-water-works-domain-security.yml
@@ -61,22 +66,22 @@ common:
   type: Security
   url: https://www.amwater.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/well-known/american-water-works-security.txt
+  href: https://artifacts.apis.io/american-water-works/well-known/american-water-works-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/american-water-works-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/well-known/american-water-works-well-known.yml
+  href: https://artifacts.apis.io/american-water-works/well-known/american-water-works-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/american-water-works-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/packages/american-water-works-packages.yml
+  href: https://artifacts.apis.io/american-water-works/packages/american-water-works-packages.yml
   title: ''
   type: Packages
   url: packages/american-water-works-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/llms/american-water-works-llms.txt
+  href: https://artifacts.apis.io/american-water-works/llms/american-water-works-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/american-water-works-llms.txt
@@ -182,7 +187,7 @@ press:
 - date: ''
   title: Financial Release Details
   url: https://ir.amwater.com/news-and-events/financial-releases/financial-release-details/2019/American-Water-Announces-10-Year-Capital-Spending-Plan-Sets-Long-Term-Growth-Targets-and-Announces-2020-Earnings-Guidance/default.aspx
-random_paper: 11
+random_paper: 19
 rate_limits:
 - limit_count: 0
   name: American Water Works Rate Limits
@@ -191,7 +196,7 @@ score:
   band: emerging
   composite: 15.2
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -217,14 +222,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 16.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/american-water-works/refs/heads/main/screenshots/american-water-works-2026-06-20T171919.png
+screenshot: https://apis.io/screenshots/american-water-works/american-water-works-2026-06-20T171919.png
 security:
 - kind: domain-security
   name: American Water Works Domain Security

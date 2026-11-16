@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -32,12 +45,12 @@ common:
   type: BlogRSS
   url: https://www.aravax.com.au/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aravax/refs/heads/main/hosts/aravax-hosts.yml
+  href: https://artifacts.apis.io/aravax/hosts/aravax-hosts.yml
   title: ''
   type: Hosts
   url: hosts/aravax-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/aravax/refs/heads/main/vendors/aravax-vendors.yml
+  href: https://artifacts.apis.io/aravax/vendors/aravax-vendors.yml
   title: ''
   type: Vendors
   url: vendors/aravax-vendors.yml
@@ -50,7 +63,7 @@ common:
   type: Leadership
   url: https://www.aravax.com.au/about-aravax/management/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aravax/refs/heads/main/security/aravax-domain-security.yml
+  href: https://artifacts.apis.io/aravax/security/aravax-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aravax-domain-security.yml
@@ -73,24 +86,24 @@ name: Aravax
 nav: Providers
 network: true
 overview: Aravax is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Biotechnology, Immunotherapy, Food Allergy, Clinical Trials, and Australia.
-random_paper: 5
+random_paper: 19
 score:
   band: minimal
-  composite: 3.7
+  composite: 3.5
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.2
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 48.2
+    discoverability: 46.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -106,14 +119,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aravax/refs/heads/main/screenshots/aravax-2026-10-11T100124.png
+screenshot: https://apis.io/screenshots/aravax/aravax-2026-10-11T100124.png
 security:
 - kind: domain-security
   name: Aravax Domain Security

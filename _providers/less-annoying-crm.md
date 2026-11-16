@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: medium
+  label: Paid · Self-serve signup
+  onboarding: self-serve
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,37 +38,37 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/less-annoying-crm/refs/heads/main/plans/less-annoying-crm-plans-pricing.yml
+  href: https://artifacts.apis.io/less-annoying-crm/plans/less-annoying-crm-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/less-annoying-crm-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/less-annoying-crm/refs/heads/main/changelog/less-annoying-crm-changelog.yml
+  href: https://artifacts.apis.io/less-annoying-crm/changelog/less-annoying-crm-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/less-annoying-crm-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/less-annoying-crm/refs/heads/main/authentication/less-annoying-crm-authentication.yml
+  href: https://artifacts.apis.io/less-annoying-crm/authentication/less-annoying-crm-authentication.yml
   title: ''
   type: Authentication
   url: authentication/less-annoying-crm-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/less-annoying-crm/refs/heads/main/llms/less-annoying-crm-llms.txt
+  href: https://artifacts.apis.io/less-annoying-crm/llms/less-annoying-crm-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/less-annoying-crm-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/less-annoying-crm/refs/heads/main/hosts/less-annoying-crm-hosts.yml
+  href: https://artifacts.apis.io/less-annoying-crm/hosts/less-annoying-crm-hosts.yml
   title: ''
   type: Hosts
   url: hosts/less-annoying-crm-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/less-annoying-crm/refs/heads/main/vendors/less-annoying-crm-vendors.yml
+  href: https://artifacts.apis.io/less-annoying-crm/vendors/less-annoying-crm-vendors.yml
   title: ''
   type: Vendors
   url: vendors/less-annoying-crm-vendors.yml
@@ -70,7 +85,7 @@ common:
   type: Newsroom
   url: https://lessannoyingcrm.com/press
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/less-annoying-crm/refs/heads/main/security/less-annoying-crm-domain-security.yml
+  href: https://artifacts.apis.io/less-annoying-crm/security/less-annoying-crm-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/less-annoying-crm-domain-security.yml
@@ -146,26 +161,26 @@ plans:
 - name: Less Annoying Crm Plans Pricing
   plan_count: 1
   slug: less-annoying-crm-plans-pricing
-random_paper: 2
+random_paper: 14
 score:
-  band: thin
-  composite: 33.1
+  band: emerging
+  composite: 23.4
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -9.7
   facets:
-    access_clarity: 65.8
+    access_clarity: 43.4
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 40.5
-    discoverability: 57.1
-    operational_transparency: 42.1
-  previous_composite: 33.0
+    developer_ergonomics: 26.2
+    discoverability: 56.3
+    operational_transparency: 28.9
+  previous_composite: 33.1
   provenance:
     mcp: unknown
   regulatory:
@@ -173,15 +188,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 15.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/less-annoying-crm/refs/heads/main/screenshots/less-annoying-crm-2026-10-11T110406.png
+screenshot: https://apis.io/screenshots/less-annoying-crm/less-annoying-crm-2026-10-11T110406.png
 security:
 - kind: authentication
   name: Less Annoying Crm Authentication

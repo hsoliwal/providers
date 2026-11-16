@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: The Visual Studio Extensibility API enables developers to create extensions that customize and extend Visual Studio IDE functionality. Extensions can add custom tool windows, commands, code analyzers,
@@ -50,23 +54,66 @@ apis:
   slug: live-share-api
 artifact_total: 33
 common:
+- group: build
+  href: https://artifacts.apis.io/microsoft-visual-studio/cli/microsoft-visual-studio-cli.yml
+  title: ''
+  type: CLI
+  url: cli/microsoft-visual-studio-cli.yml
+- group: agent
+  href: https://artifacts.apis.io/microsoft-visual-studio/llms/microsoft-visual-studio-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/microsoft-visual-studio-llms.txt
+- group: auth
+  href: https://artifacts.apis.io/microsoft-visual-studio/well-known/microsoft-visual-studio-www-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/microsoft-visual-studio-www-security.txt
+- group: agent
+  href: https://artifacts.apis.io/microsoft-visual-studio/well-known/microsoft-visual-studio-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/microsoft-visual-studio-well-known.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-visual-studio/hosts/microsoft-visual-studio-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/microsoft-visual-studio-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-visual-studio/vendors/microsoft-visual-studio-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/microsoft-visual-studio-vendors.yml
+- group: build
+  href: https://artifacts.apis.io/microsoft-visual-studio/packages/microsoft-visual-studio-packages.yml
+  title: ''
+  type: Packages
+  url: packages/microsoft-visual-studio-packages.yml
+- group: auth
+  title: ''
+  type: Security
+  url: https://www.microsoft.com/security
+- group: other
+  title: ''
+  type: Leadership
+  url: https://news.microsoft.com/leadership
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-visual-studio/refs/heads/main/plans/microsoft-visual-studio-plans-pricing.yml
+  href: https://artifacts.apis.io/microsoft-visual-studio/plans/microsoft-visual-studio-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/microsoft-visual-studio-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-visual-studio/refs/heads/main/rate-limits/microsoft-visual-studio-rate-limits.yml
+  href: https://artifacts.apis.io/microsoft-visual-studio/rate-limits/microsoft-visual-studio-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/microsoft-visual-studio-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-visual-studio/refs/heads/main/finops/microsoft-visual-studio-finops.yml
+  href: https://artifacts.apis.io/microsoft-visual-studio/finops/microsoft-visual-studio-finops.yml
   title: ''
   type: FinOps
   url: finops/microsoft-visual-studio-finops.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-visual-studio/refs/heads/main/security/microsoft-visual-studio-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/microsoft-visual-studio/security/microsoft-visual-studio-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/microsoft-visual-studio-vulnerability-disclosure.yml
@@ -87,7 +134,7 @@ common:
   type: Blog
   url: https://devblogs.microsoft.com/visualstudio/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-visual-studio/refs/heads/main/security/microsoft-visual-studio-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-visual-studio/security/microsoft-visual-studio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-visual-studio-domain-security.yml
@@ -123,30 +170,41 @@ common:
   title: ''
   type: Support
   url: https://support.microsoft.com/
-- group: agent
+- group: operate
   title: ''
-  type: AgentSkills
-  url: https://github.com/microsoft/skills-for-copilot-studio
+  type: ChangeLog
+  url: https://code.visualstudio.com/updates
+- group: start
+  title: ''
+  type: GettingStarted
+  url: https://visualstudio.microsoft.com/vs/getting-started/
+coverage:
+  detail: Visual Studio and VS Code extensibility are in-process SDKs (NuGet/npm) documented on learn.microsoft.com and code.visualstudio.com, and the Marketplace _apis gallery endpoint has no published OpenAPI on any probed host
+  evidence:
+  - status: 200
+    url: https://visualstudio.microsoft.com/
+  reason: no-machine-readable-spec
+  state: unreadable
 created: '2024-01-01'
 description: Microsoft Visual Studio is an integrated development environment (IDE) for building applications. It provides APIs for extending the IDE functionality, publishing extensions to the marketplace, and building VS Code extensions.
 finops:
 - has_sources: false
   method: generated
   name: Microsoft Visual Studio Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: microsoft-visual-studio-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-visual-studio.png
 layout: provider
-modified: '2026-05-19'
+modified: '2026-11-04'
 name: Microsoft Visual Studio
 nav: Providers
 network: true
 overview: 'Microsoft Visual Studio is listed with 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Developer Tools, Extensions, IDE, Microsoft, and VS Code.
 
 
-  Microsoft Visual Studio''s developer surface includes pricing, engineering blog, developer portal, documentation, support, and 13 more developer resources.'
+  Microsoft Visual Studio''s developer surface includes CLI, pricing, engineering blog, developer portal, documentation, support, changelog, and 21 more developer resources.'
 plans:
 - name: Microsoft Visual Studio Plans Pricing
   plan_count: 3
@@ -158,37 +216,37 @@ rate_limits:
   slug: microsoft-visual-studio-rate-limits
 score:
   band: thin
-  composite: 27.2
+  composite: 31.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 15
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 2.4
   facets:
     access_clarity: 39.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 51.7
-    discoverability: 69.6
-    operational_transparency: 10.5
-  previous_composite: 28.7
+    developer_ergonomics: 52.4
+    discoverability: 71.4
+    operational_transparency: 36.8
+  previous_composite: 28.6
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-visual-studio/refs/heads/main/screenshots/microsoft-visual-studio-2026-06-20T185541.png
+screenshot: https://apis.io/screenshots/microsoft-visual-studio/microsoft-visual-studio-2026-06-20T185541.png
 security:
 - kind: domain-security
   name: Microsoft Visual Studio Domain Security

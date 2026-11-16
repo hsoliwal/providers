@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 53
   human_in_the_loop: 2
@@ -41,7 +45,7 @@ agentic_access:
   operation_count: 93
   slug: discourse-agentic-access
   summary_line: 93 operations · 53 acting · 2 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://meta.discourse.org
   baseurl_source: declared
@@ -126,9 +130,6 @@ apis:
 artifact_total: 41
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Discourse API Documentation Admin API
   slug: open-discourse-admin-api
 - collection_type: open
@@ -181,17 +182,17 @@ collections:
   slug: open-discourse
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/discourse/refs/heads/main/rate-limits/discourse-rate-limits.yml
+  href: https://artifacts.apis.io/discourse/rate-limits/discourse-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/discourse-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/discourse/refs/heads/main/finops/discourse-finops.yml
+  href: https://artifacts.apis.io/discourse/finops/discourse-finops.yml
   title: ''
   type: FinOps
   url: finops/discourse-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/discourse/refs/heads/main/vendor-facets/discourse-vendor-facets.yml
+  href: https://artifacts.apis.io/discourse/vendor-facets/discourse-vendor-facets.yml
   title: ''
   type: VendorFacets
   url: vendor-facets/discourse-vendor-facets.yml
@@ -200,22 +201,22 @@ common:
   type: License
   url: https://github.com/discourse/discourse_api/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/discourse/refs/heads/main/agentic-access/discourse-agentic-access.yml
+  href: https://artifacts.apis.io/discourse/agentic-access/discourse-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/discourse-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/discourse/refs/heads/main/security/discourse-trust-center.yml
+  href: https://artifacts.apis.io/discourse/security/discourse-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/discourse-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/discourse/refs/heads/main/security/discourse-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/discourse/security/discourse-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/discourse-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/discourse/refs/heads/main/security/discourse-domain-security.yml
+  href: https://artifacts.apis.io/discourse/security/discourse-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/discourse-domain-security.yml
@@ -277,7 +278,7 @@ finops:
 - has_sources: false
   method: generated
   name: Discourse Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: discourse-finops
   template: true
@@ -290,41 +291,57 @@ network: true
 overview: 'Discourse publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Backups API, Badges API, and 13 more. Tagged areas include Community, Forums, and Open Source.
 
 
+  The Discourse catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Discourse''s developer surface includes documentation, engineering blog, support, and 18 more developer resources.'
 plans:
 - name: Discourse Plans Pricing
   plan_count: 3
   slug: discourse-plans-pricing
-random_paper: 9
+random_paper: 17
 rate_limits:
 - limit_count: 5
   name: Discourse Rate Limits
   slug: discourse-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 83
+  extends:
+  - spectral:oas
+  name: Discourse API Rules
+  rule_count: 42
+  severity_counts:
+    error: 35
+    hint: 0
+    info: 1
+    warn: 6
+  slug: discourse-rules
 score:
   band: thin
-  composite: 33.1
+  composite: 37.1
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 38.0
+    artifact_dirs: 16
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.0
   facets:
     access_clarity: 36.8
-    contract_governance: 0.0
-    contract_quality: 37.7
+    contract_governance: 13.6
+    contract_quality: 41.8
     developer_ergonomics: 16.7
     discoverability: 57.1
-    operational_transparency: 28.9
-  previous_composite: 34.6
+    operational_transparency: 39.5
+  previous_composite: 36.1
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 16
   regulatory:
     applies: true
@@ -332,13 +349,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/discourse/refs/heads/main/screenshots/discourse-2026-06-20T180038.png
+screenshot: https://apis.io/screenshots/discourse/discourse-2026-06-20T180038.png
 security:
 - kind: domain-security
   name: Discourse Domain Security

@@ -1,11 +1,11 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   gated: partner
   gated_source:
   - tag:Partner Gated
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -30,7 +30,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -38,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 5
 asyncapis:
@@ -47,12 +50,12 @@ asyncapis:
   slug: psc-insurance-content-lake-asyncapi
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/security/psc-insurance-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/psc-insurance/security/psc-insurance-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/psc-insurance-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/security/psc-insurance-domain-security.yml
+  href: https://artifacts.apis.io/psc-insurance/security/psc-insurance-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/psc-insurance-domain-security.yml
@@ -101,52 +104,52 @@ common:
   type: OpenIDConnectDiscovery
   url: https://login.pscinsurance.com.au/.well-known/openid-configuration
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/well-known/psc-insurance-well-known.yml
+  href: https://artifacts.apis.io/psc-insurance/well-known/psc-insurance-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/psc-insurance-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/authentication/psc-insurance-authentication.yml
+  href: https://artifacts.apis.io/psc-insurance/authentication/psc-insurance-authentication.yml
   title: ''
   type: Authentication
   url: authentication/psc-insurance-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/scopes/psc-insurance-scopes.yml
+  href: https://artifacts.apis.io/psc-insurance/scopes/psc-insurance-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/psc-insurance-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/conformance/psc-insurance-conformance.yml
+  href: https://artifacts.apis.io/psc-insurance/conformance/psc-insurance-conformance.yml
   title: ''
   type: Conformance
   url: conformance/psc-insurance-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/conventions/psc-insurance-conventions.yml
+  href: https://artifacts.apis.io/psc-insurance/conventions/psc-insurance-conventions.yml
   title: ''
   type: Conventions
   url: conventions/psc-insurance-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/data-model/psc-insurance-data-model.yml
+  href: https://artifacts.apis.io/psc-insurance/data-model/psc-insurance-data-model.yml
   title: ''
   type: DataModel
   url: data-model/psc-insurance-data-model.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/asyncapi/psc-insurance-content-lake-asyncapi.yml
+  href: https://artifacts.apis.io/psc-insurance/asyncapi/psc-insurance-content-lake-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/psc-insurance-content-lake-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/lifecycle/psc-insurance-lifecycle.yml
+  href: https://artifacts.apis.io/psc-insurance/lifecycle/psc-insurance-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/psc-insurance-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/llms/psc-insurance-llms.txt
+  href: https://artifacts.apis.io/psc-insurance/llms/psc-insurance-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/psc-insurance-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/psc-insurance/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -206,14 +209,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 46.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/psc-insurance/refs/heads/main/screenshots/psc-insurance-2026-09-02T152303.png
+screenshot: https://apis.io/screenshots/psc-insurance/psc-insurance-2026-09-02T152303.png
 security:
 - kind: authentication
   name: Psc Insurance Authentication

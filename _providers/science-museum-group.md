@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-10-17'
+  score: 25.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -63,11 +67,8 @@ apis:
   description: Full-text and filtered search across all collection types
   name: Science Museum Group Search API
   slug: science-museum-group-search-api
-artifact_total: 22
+artifact_total: 21
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Science Museum Group Collection API
   slug: open-science-museum-group-collection
@@ -85,17 +86,17 @@ collections:
   slug: open-science-museum-group-search-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/science-museum-group/refs/heads/main/plans/science-museum-group-plans-pricing.yml
+  href: https://artifacts.apis.io/science-museum-group/plans/science-museum-group-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/science-museum-group-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/science-museum-group/refs/heads/main/rate-limits/science-museum-group-rate-limits.yml
+  href: https://artifacts.apis.io/science-museum-group/rate-limits/science-museum-group-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/science-museum-group-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/science-museum-group/refs/heads/main/finops/science-museum-group-finops.yml
+  href: https://artifacts.apis.io/science-museum-group/finops/science-museum-group-finops.yml
   title: ''
   type: FinOps
   url: finops/science-museum-group-finops.yml
@@ -112,12 +113,12 @@ common:
   type: License
   url: https://github.com/TheScienceMuseum/collectionsonline-api/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/science-museum-group/refs/heads/main/agentic-access/science-museum-group-agentic-access.yml
+  href: https://artifacts.apis.io/science-museum-group/agentic-access/science-museum-group-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/science-museum-group-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/science-museum-group/refs/heads/main/security/science-museum-group-domain-security.yml
+  href: https://artifacts.apis.io/science-museum-group/security/science-museum-group-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/science-museum-group-domain-security.yml
@@ -150,7 +151,7 @@ finops:
 - has_sources: false
   method: generated
   name: Science Museum Group Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: science-museum-group-finops
   template: true
@@ -181,7 +182,7 @@ plans:
 - name: Science Museum Group Plans Pricing
   plan_count: 3
   slug: science-museum-group-plans-pricing
-random_paper: 21
+random_paper: 5
 rate_limits:
 - limit_count: 5
   name: Science Museum Group Rate Limits
@@ -214,13 +215,13 @@ score:
   band: thin
   composite: 26.5
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 68.4
     catalog_earned_first_party: 0.0
     catalog_gap: 46.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 27.3
@@ -239,7 +240,7 @@ score:
   open_source:
     applies: true
     score: 0.0
-  previous_composite: 25.1
+  previous_composite: 26.5
   provenance:
     agentic_access: derived
     contracts:
@@ -253,14 +254,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/science-museum-group/refs/heads/main/screenshots/science-museum-group-2026-06-20T193534.png
+screenshot: https://apis.io/screenshots/science-museum-group/science-museum-group-2026-06-20T193534.png
 security:
 - kind: domain-security
   name: Science Museum Group Domain Security

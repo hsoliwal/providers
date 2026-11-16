@@ -1,13 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
-  - '{''url'': ''https://silvercar.com'', ''status'': 301, ''note'': ''declared website redirects to https://www.dealerware.com/ — a different registrable domain (silvercar.com -> dealerware.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.1
-  scored_at: '2026-10-17'
+  score: 40.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 81
   human_in_the_loop: 3
@@ -252,47 +255,47 @@ asyncapis:
   slug: silvercar-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/agentic-access/silvercar-agentic-access.yml
+  href: https://artifacts.apis.io/silvercar/agentic-access/silvercar-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/silvercar-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/rules/silvercar-rules.yml
+  href: https://artifacts.apis.io/silvercar/rules/silvercar-rules.yml
   title: ''
   type: Spectral
   url: rules/silvercar-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/json-ld/silvercar-context.jsonld
+  href: https://artifacts.apis.io/silvercar/json-ld/silvercar-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/silvercar-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/vocabulary/silvercar-vocabulary.yml
+  href: https://artifacts.apis.io/silvercar/vocabulary/silvercar-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/silvercar-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/data-model/silvercar-data-model.yml
+  href: https://artifacts.apis.io/silvercar/data-model/silvercar-data-model.yml
   title: ''
   type: DataModel
   url: data-model/silvercar-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/errors/silvercar-problem-types.yml
+  href: https://artifacts.apis.io/silvercar/errors/silvercar-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/silvercar-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/conformance/silvercar-conformance.yml
+  href: https://artifacts.apis.io/silvercar/conformance/silvercar-conformance.yml
   title: ''
   type: Conformance
   url: conformance/silvercar-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/hosts/silvercar-hosts.yml
+  href: https://artifacts.apis.io/silvercar/hosts/silvercar-hosts.yml
   title: ''
   type: Hosts
   url: hosts/silvercar-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/vendors/silvercar-vendors.yml
+  href: https://artifacts.apis.io/silvercar/vendors/silvercar-vendors.yml
   title: ''
   type: Vendors
   url: vendors/silvercar-vendors.yml
@@ -301,12 +304,12 @@ common:
   type: Newsroom
   url: https://www.dealerware.com/news/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/scopes/silvercar-scopes.yml
+  href: https://artifacts.apis.io/silvercar/scopes/silvercar-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/silvercar-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/security/silvercar-domain-security.yml
+  href: https://artifacts.apis.io/silvercar/security/silvercar-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/silvercar-domain-security.yml
@@ -331,7 +334,7 @@ common:
   type: GettingStarted
   url: https://developer.dealerware.com/docs/quickstart-guide
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/authentication/silvercar-authentication.yml
+  href: https://artifacts.apis.io/silvercar/authentication/silvercar-authentication.yml
   title: ''
   type: Authentication
   url: authentication/silvercar-authentication.yml
@@ -340,7 +343,7 @@ common:
   type: Deprecation
   url: https://developer.dealerware.com/docs/deprecation-1
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/asyncapi/silvercar-webhooks.yml
+  href: https://artifacts.apis.io/silvercar/asyncapi/silvercar-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/silvercar-webhooks.yml
@@ -357,17 +360,17 @@ common:
   type: PrivacyPolicy
   url: https://www.dealerware.com/privacy-policy/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/well-known/silvercar-well-known.yml
+  href: https://artifacts.apis.io/silvercar/well-known/silvercar-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/silvercar-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/conventions/silvercar-conventions.yml
+  href: https://artifacts.apis.io/silvercar/conventions/silvercar-conventions.yml
   title: ''
   type: Conventions
   url: conventions/silvercar-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/lifecycle/silvercar-lifecycle.yml
+  href: https://artifacts.apis.io/silvercar/lifecycle/silvercar-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/silvercar-lifecycle.yml
@@ -410,7 +413,7 @@ overview: 'silvercar publishes 40 API contracts indexed on the [APIs.io](https:/
 
 
   silvercar''s developer surface includes documentation, API reference, getting-started guide, authentication, support, and 21 more developer resources.'
-random_paper: 3
+random_paper: 11
 rules:
 - authorship: generated
   effective_rule_count: 56
@@ -431,7 +434,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 40.1
+  composite: 45.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 62.8
@@ -439,15 +442,15 @@ score:
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 10.0
+  delta: 4.9
   facets:
     access_clarity: 21.1
     contract_governance: 22.0
-    contract_quality: 64.4
-    developer_ergonomics: 33.3
-    discoverability: 67.9
+    contract_quality: 69.1
+    developer_ergonomics: 52.4
+    discoverability: 67.0
     operational_transparency: 11.8
-  previous_composite: 30.1
+  previous_composite: 40.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -463,13 +466,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/silvercar/refs/heads/main/screenshots/silvercar-2026-09-02T155508.png
+screenshot: https://apis.io/screenshots/silvercar/silvercar-2026-09-02T155508.png
 security:
 - kind: authentication
   name: Silvercar Authentication

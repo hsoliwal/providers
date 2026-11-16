@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Agent-driven commerce surface for the TO THE MARKET store, implementing the Universal Commerce Protocol over a hosted MCP endpoint. Agents can search the catalog, create carts, and run buyer-approved '
@@ -42,42 +47,42 @@ apis:
 artifact_total: 5
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/to-the-market/refs/heads/main/mcp/to-the-market-mcp.yml
+  href: https://artifacts.apis.io/to-the-market/mcp/to-the-market-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/to-the-market-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/to-the-market/refs/heads/main/well-known/to-the-market-well-known.yml
+  href: https://artifacts.apis.io/to-the-market/well-known/to-the-market-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/to-the-market-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/to-the-market/refs/heads/main/llms/to-the-market-llms.txt
+  href: https://artifacts.apis.io/to-the-market/llms/to-the-market-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/to-the-market-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/to-the-market/refs/heads/main/authentication/to-the-market-authentication.yml
+  href: https://artifacts.apis.io/to-the-market/authentication/to-the-market-authentication.yml
   title: ''
   type: Authentication
   url: authentication/to-the-market-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/to-the-market/refs/heads/main/scopes/to-the-market-scopes.yml
+  href: https://artifacts.apis.io/to-the-market/scopes/to-the-market-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/to-the-market-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/to-the-market/refs/heads/main/conventions/to-the-market-conventions.yml
+  href: https://artifacts.apis.io/to-the-market/conventions/to-the-market-conventions.yml
   title: ''
   type: Conventions
   url: conventions/to-the-market-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/to-the-market/refs/heads/main/conformance/to-the-market-conformance.yml
+  href: https://artifacts.apis.io/to-the-market/conformance/to-the-market-conformance.yml
   title: ''
   type: Conformance
   url: conformance/to-the-market-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/to-the-market/refs/heads/main/security/to-the-market-domain-security.yml
+  href: https://artifacts.apis.io/to-the-market/security/to-the-market-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/to-the-market-domain-security.yml
@@ -121,7 +126,7 @@ overview: 'TO THE MARKET is listed with 1 API on the [APIs.io](https://apis.io/)
 
 
   TO THE MARKET''s developer surface includes authentication, signup flow, support, and 11 more developer resources.'
-random_paper: 6
+random_paper: 10
 scopes:
 - name: To The Market Scopes
   scope_count: 4
@@ -155,14 +160,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/to-the-market/refs/heads/main/screenshots/to-the-market-2026-09-02T163835.png
+screenshot: https://apis.io/screenshots/to-the-market/to-the-market-2026-09-02T163835.png
 security:
 - kind: authentication
   name: To The Market Authentication

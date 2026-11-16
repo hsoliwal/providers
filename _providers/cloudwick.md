@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudwick/refs/heads/main/well-known/cloudwick-well-known.yml
+  href: https://artifacts.apis.io/cloudwick/well-known/cloudwick-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cloudwick-well-known.yml
@@ -37,32 +50,32 @@ common:
   type: Compliance
   url: https://trust.cloudwick.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudwick/refs/heads/main/security/cloudwick-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cloudwick/security/cloudwick-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/cloudwick-vulnerability-disclosure.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudwick/refs/heads/main/hosts/cloudwick-hosts.yml
+  href: https://artifacts.apis.io/cloudwick/hosts/cloudwick-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cloudwick-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudwick/refs/heads/main/vendors/cloudwick-vendors.yml
+  href: https://artifacts.apis.io/cloudwick/vendors/cloudwick-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cloudwick-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudwick/refs/heads/main/security/cloudwick-trust-center.yml
+  href: https://artifacts.apis.io/cloudwick/security/cloudwick-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/cloudwick-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudwick/refs/heads/main/security/cloudwick-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/cloudwick/security/cloudwick-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/cloudwick-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudwick/refs/heads/main/security/cloudwick-domain-security.yml
+  href: https://artifacts.apis.io/cloudwick/security/cloudwick-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudwick-domain-security.yml
@@ -108,36 +121,40 @@ overview: 'Cloudwick is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Cloudwick''s developer surface includes support and 12 more developer resources.'
-random_paper: 19
+random_paper: 5
 score:
-  band: emerging
-  composite: 12.9
+  band: minimal
+  composite: 9.2
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.7
   facets:
-    access_clarity: 26.3
+    access_clarity: 13.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 4.8
+    developer_ergonomics: 2.4
     discoverability: 44.6
     operational_transparency: 10.5
+  previous_composite: 12.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 19.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 15.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/cloudwick/cloudwick-2026-11-03T124601.png
 security:
 - kind: domain-security
   name: Cloudwick Domain Security

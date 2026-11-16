@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
+- group: other
+  href: https://artifacts.apis.io/nuance-labs/hosts/nuance-labs-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/nuance-labs-hosts.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nuance-labs/refs/heads/main/security/nuance-labs-domain-security.yml
+  href: https://artifacts.apis.io/nuance-labs/security/nuance-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nuance-labs-domain-security.yml
@@ -69,27 +78,41 @@ common:
   title: ''
   type: Twitter
   url: https://x.com/nuance_ai
+coverage:
+  checked: '2026-11-05'
+  detail: 'Nuance Labs is pre-product: www.nuancelabs.ai is a marketing site with a Get Demo call to action, app.nuancelabs.ai and api.nuancelabs.ai answer 404 at their roots, and no docs, llms.txt, spec or package was found.'
+  evidence:
+  - status: 200
+    url: https://www.nuancelabs.ai/
+  - status: 404
+    url: https://api.nuancelabs.ai/
+  - status: 404
+    url: https://app.nuancelabs.ai/
+  - status: 404
+    url: https://www.nuancelabs.ai/llms.txt
+  reason: no-developer-program
+  state: none
 created: '2026-07-17'
 description: 'Nuance Labs is an early-stage AI research company based in Seattle, Washington, building a human foundation model with emotional intelligence. It is developing a real-time, full-duplex audiovisual system that sees, hears, reasons, speaks, and expresses simultaneously, reading tone, facial expression, and hesitation to enable face-to-face AI interaction that feels human. Backed by Accel and Lightspeed Venture Partners, the company is pre-product: as of this enrichment pass it publishes only a marketing site (About, Press, Contact, Careers) with a "Get Demo" / early-access call to action, and exposes no public API, developer portal, documentation, SDKs, or other developer surface.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nuance-labs.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-11-05'
 name: Nuance Labs
 nav: Providers
 network: true
 overview: Nuance Labs is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Foundation Models, Emotional Intelligence, and Conversational AI.
-random_paper: 19
+random_paper: 17
 score:
   band: minimal
   composite: 3.8
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.3
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -104,21 +127,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 4.1
+  previous_composite: 3.8
   regulatory:
     applies: true
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nuance-labs/refs/heads/main/screenshots/nuance-labs-2026-08-07T185715.png
+screenshot: https://apis.io/screenshots/nuance-labs/nuance-labs-2026-08-07T185715.png
 security:
 - kind: domain-security
   name: Nuance Labs Domain Security

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -41,7 +45,7 @@ common:
   type: Blog
   url: https://www.singulate.com/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/singulate/refs/heads/main/security/singulate-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/singulate/security/singulate-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/singulate-vulnerability-disclosure.yml
@@ -50,17 +54,17 @@ common:
   type: Security
   url: https://www.singulate.com/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/singulate/refs/heads/main/well-known/singulate-security.txt
+  href: https://artifacts.apis.io/singulate/well-known/singulate-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/singulate-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/singulate/refs/heads/main/well-known/singulate-well-known.yml
+  href: https://artifacts.apis.io/singulate/well-known/singulate-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/singulate-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/singulate/refs/heads/main/security/singulate-domain-security.yml
+  href: https://artifacts.apis.io/singulate/security/singulate-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/singulate-domain-security.yml
@@ -80,18 +84,18 @@ overview: 'Singulate is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Singulate''s developer surface includes engineering blog and 6 more developer resources.'
-random_paper: 4
+random_paper: 12
 score:
   band: minimal
   composite: 3.7
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 17.0
     catalog_earned_first_party: 0.0
     catalog_gap: 98.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -99,21 +103,21 @@ score:
     developer_ergonomics: 2.4
     discoverability: 30.4
     operational_transparency: 5.3
-  previous_composite: 3.2
+  previous_composite: 3.7
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/singulate/refs/heads/main/screenshots/singulate-2026-09-02T155616.png
+screenshot: https://apis.io/screenshots/singulate/singulate-2026-09-02T155616.png
 security:
 - kind: domain-security
   name: Singulate Domain Security

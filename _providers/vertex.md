@@ -1,29 +1,49 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
-    auth_clarity: served
+    auth_clarity: false
     consent_identity: false
-    delegated_identity: served
+    delegated_identity: false
     dry_run_mode: false
-    dynamic_client_registration: true
+    dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 32.7
-  scored_at: '2026-10-17'
+  score: 21.1
+  scored_at: '2026-11-06'
+agentic_access:
+- acting_count: 10
+  human_in_the_loop: 1
+  name: Vertex Agentic Access
+  operation_count: 23
+  slug: vertex-agentic-access
+  summary_line: 23 operations · 10 acting · 1 human-in-the-loop
 api_count: 8
 apis:
 - baseURL: https://dash.readme.com
@@ -66,25 +86,35 @@ apis:
   description: The Vertex Ws API from Vertex — 1 operation(s) for vertex ws.
   name: Vertex Vertex Ws API
   slug: vertex-vertex-ws-api
-artifact_total: 13
+artifact_total: 14
 common:
+- group: agent
+  href: https://artifacts.apis.io/vertex/agentic-access/vertex-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/vertex-agentic-access.yml
+- group: auth
+  href: https://artifacts.apis.io/vertex/well-known/vertex-status-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/vertex-status-security.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/rules/vertex-rules.yml
+  href: https://artifacts.apis.io/vertex/rules/vertex-rules.yml
   title: ''
   type: Spectral
   url: rules/vertex-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/json-ld/vertex-context.jsonld
+  href: https://artifacts.apis.io/vertex/json-ld/vertex-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/vertex-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/vocabulary/vertex-vocabulary.yml
+  href: https://artifacts.apis.io/vertex/vocabulary/vertex-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/vertex-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/data-model/vertex-data-model.yml
+  href: https://artifacts.apis.io/vertex/data-model/vertex-data-model.yml
   title: ''
   type: DataModel
   url: data-model/vertex-data-model.yml
@@ -93,32 +123,27 @@ common:
   type: Compliance
   url: https://trust.vertexinc.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/conformance/vertex-conformance.yml
+  href: https://artifacts.apis.io/vertex/conformance/vertex-conformance.yml
   title: ''
   type: Conformance
   url: conformance/vertex-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/llms/vertex-llms.txt
+  href: https://artifacts.apis.io/vertex/llms/vertex-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/vertex-llms.txt
-- group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/well-known/vertex-status-security.txt
-  title: ''
-  type: SecurityTxt
-  url: well-known/vertex-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/well-known/vertex-well-known.yml
+  href: https://artifacts.apis.io/vertex/well-known/vertex-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/vertex-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/hosts/vertex-hosts.yml
+  href: https://artifacts.apis.io/vertex/hosts/vertex-hosts.yml
   title: ''
   type: Hosts
   url: hosts/vertex-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/vendors/vertex-vendors.yml
+  href: https://artifacts.apis.io/vertex/vendors/vertex-vendors.yml
   title: ''
   type: Vendors
   url: vendors/vertex-vendors.yml
@@ -135,12 +160,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/vertexinc
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/security/vertex-trust-center.yml
+  href: https://artifacts.apis.io/vertex/security/vertex-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/vertex-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vertex/refs/heads/main/security/vertex-domain-security.yml
+  href: https://artifacts.apis.io/vertex/security/vertex-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vertex-domain-security.yml
@@ -199,39 +224,42 @@ overview: 'Vertex is listed with 8 APIs on the [APIs.io](https://apis.io/) netwo
   The Vertex catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Vertex''s developer surface includes documentation, API reference, support, and 19 more developer resources.'
-random_paper: 10
+  Vertex''s developer surface includes documentation, API reference, support, and 20 more developer resources.'
+random_paper: 22
 rules:
 - authorship: generated
-  effective_rule_count: 52
+  effective_rule_count: 78
   extends:
   - spectral:oas
   name: Vertex API Rules
-  rule_count: 11
+  rule_count: 37
   severity_counts:
-    error: 9
+    error: 35
     hint: 0
     info: 1
     warn: 1
   slug: vertex-rules
 score:
-  band: thin
-  composite: 30.1
+  band: emerging
+  composite: 23.1
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 19
     catalog_earned: 51.2
     catalog_earned_first_party: 0.0
     catalog_gap: 63.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.3
   facets:
-    access_clarity: 36.8
+    access_clarity: 22.4
     contract_governance: 22.0
     contract_quality: 17.8
-    developer_ergonomics: 21.4
-    discoverability: 71.4
+    developer_ergonomics: 10.7
+    discoverability: 70.5
     operational_transparency: 21.1
+  previous_composite: 31.4
   provenance:
+    agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
@@ -244,12 +272,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 17.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/vertex/vertex-2026-11-03T145731.png
 security:
 - kind: domain-security
   name: Vertex Domain Security

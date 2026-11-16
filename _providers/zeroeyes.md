@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - security
@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zeroeyes/refs/heads/main/plans/zeroeyes-plans-pricing.yml
+  href: https://artifacts.apis.io/zeroeyes/plans/zeroeyes-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/zeroeyes-plans-pricing.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zeroeyes/refs/heads/main/security/zeroeyes-domain-security.yml
+  href: https://artifacts.apis.io/zeroeyes/security/zeroeyes-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zeroeyes-domain-security.yml
@@ -76,22 +79,22 @@ common:
   type: Compliance
   url: https://zeroeyes.com/certifications-designations
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zeroeyes/refs/heads/main/security/zeroeyes-trust-center.yml
+  href: https://artifacts.apis.io/zeroeyes/security/zeroeyes-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/zeroeyes-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zeroeyes/refs/heads/main/llms/zeroeyes-llms.txt
+  href: https://artifacts.apis.io/zeroeyes/llms/zeroeyes-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zeroeyes-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zeroeyes/refs/heads/main/conformance/zeroeyes-conformance.yml
+  href: https://artifacts.apis.io/zeroeyes/conformance/zeroeyes-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zeroeyes-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zeroeyes/refs/heads/main/lifecycle/zeroeyes-lifecycle.yml
+  href: https://artifacts.apis.io/zeroeyes/lifecycle/zeroeyes-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zeroeyes-lifecycle.yml
@@ -120,12 +123,12 @@ plans:
 - name: Zeroeyes Plans Pricing
   plan_count: 0
   slug: zeroeyes-plans-pricing
-random_paper: 6
+random_paper: 22
 score:
   band: emerging
   composite: 19.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -153,14 +156,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/zeroeyes/refs/heads/main/screenshots/zeroeyes-2026-09-02T171647.png
+screenshot: https://apis.io/screenshots/zeroeyes/zeroeyes-2026-09-02T171647.png
 security:
 - kind: domain-security
   name: Zeroeyes Domain Security

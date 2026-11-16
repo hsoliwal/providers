@@ -1,12 +1,15 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.3
-  scored_at: '2026-10-17'
+  score: 29.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 76
   human_in_the_loop: 0
@@ -222,11 +228,8 @@ arazzos:
 - description: Create an organizational group, create an employee, and assign a role using the Quinyx API v3.
   name: Onboard an employee in Quinyx
   slug: quinyx-onboard-employee
-artifact_total: 77
+artifact_total: 80
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Quinyx Absence Schedules API
   slug: open-quinyx-absence-schedules-api
@@ -338,7 +341,7 @@ common:
   type: BlogRSS
   url: https://www.quinyx.com/blog/rss.xml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/plans/quinyx-plans-pricing.yml
+  href: https://artifacts.apis.io/quinyx/plans/quinyx-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/quinyx-plans-pricing.yml
@@ -347,12 +350,12 @@ common:
   type: Website
   url: https://www.quinyx.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/capabilities/quinyx-capability-edges.yml
+  href: https://artifacts.apis.io/quinyx/capabilities/quinyx-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/quinyx-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/overlays/quinyx-api-v2-overlay.yaml
+  href: https://artifacts.apis.io/quinyx/overlays/quinyx-api-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/quinyx-api-v2-overlay.yaml
@@ -409,77 +412,85 @@ common:
   type: Deprecation
   url: https://developer.quinyx.com/api/v3/deprecation
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/authentication/quinyx-authentication.yml
+  href: https://artifacts.apis.io/quinyx/authentication/quinyx-authentication.yml
   title: ''
   type: Authentication
   url: authentication/quinyx-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/scopes/quinyx-scopes.yml
+  href: https://artifacts.apis.io/quinyx/scopes/quinyx-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/quinyx-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/llms/quinyx-llms.txt
+  href: https://artifacts.apis.io/quinyx/llms/quinyx-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/quinyx-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/errors/quinyx-problem-types.yml
+  href: https://artifacts.apis.io/quinyx/errors/quinyx-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/quinyx-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/lifecycle/quinyx-lifecycle.yml
+  href: https://artifacts.apis.io/quinyx/lifecycle/quinyx-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/quinyx-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/conventions/quinyx-conventions.yml
+  href: https://artifacts.apis.io/quinyx/conventions/quinyx-conventions.yml
   title: ''
   type: Conventions
   url: conventions/quinyx-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/conformance/quinyx-conformance.yml
+  href: https://artifacts.apis.io/quinyx/conformance/quinyx-conformance.yml
   title: ''
   type: Conformance
   url: conformance/quinyx-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/mcp/quinyx-mcp.yml
+  href: https://artifacts.apis.io/quinyx/mcp/quinyx-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/quinyx-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/data-model/quinyx-data-model.yml
+  href: https://artifacts.apis.io/quinyx/data-model/quinyx-data-model.yml
   title: ''
   type: DataModel
   url: data-model/quinyx-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/sandbox/quinyx-sandbox.yml
+  href: https://artifacts.apis.io/quinyx/sandbox/quinyx-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/quinyx-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/agentic-access/quinyx-agentic-access.yml
+  href: https://artifacts.apis.io/quinyx/agentic-access/quinyx-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/quinyx-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/security/quinyx-domain-security.yml
+  href: https://artifacts.apis.io/quinyx/security/quinyx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/quinyx-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/quinyx/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/arazzo/quinyx-onboard-employee.yml
+  href: https://artifacts.apis.io/quinyx/arazzo/quinyx-onboard-employee.yml
   title: ''
   type: Arazzo
   url: arazzo/quinyx-onboard-employee.yml
 created: '2026-07-17'
 description: 'Quinyx is an AI-powered workforce management (WFM) platform for frontline organizations, covering scheduling, demand forecasting, time tracking, labor law compliance, task management, and employee engagement across retail, warehousing and logistics, hospitality, facility management, and healthcare. Quinyx exposes a public developer platform with three APIs: the current REST API v3 (OAuth 2.0 client-credentials, RFC 9457 problem details, cursor pagination, regional EU/NA hosts), the earlier REST API v2, and a bearer-token User API v2, plus a legacy SOAP v1. This profile was enriched from Quinyx''s own developer portal, OpenAPI descriptions, and public documentation.'
+finops:
+- has_sources: true
+  method: derived
+  name: Quinyx Finops
+  primary_unit: ''
+  service_category: ''
+  slug: quinyx-finops
+  template: true
 image: https://developer.quinyx.com/static/logo.svg
 layout: provider
 modified: '2026-10-06'
@@ -489,12 +500,28 @@ network: true
 overview: 'Quinyx publishes 35 API contracts indexed on the [APIs.io](https://apis.io/) network, including Absence Schedules API, Absence Types API, Absences API, and 32 more. Tagged areas include Workforce Management, Scheduling, Human Resources, Time Tracking, and Forecasting.
 
 
+  The Quinyx catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Quinyx''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 25 more developer resources.'
 plans:
 - name: Quinyx Plans Pricing
   plan_count: 0
   slug: quinyx-plans-pricing
-random_paper: 4
+random_paper: 14
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: Quinyx API Rules
+  rule_count: 54
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 2
+    warn: 18
+  slug: quinyx-rules
 scopes:
 - name: Quinyx Scopes
   scope_count: 14
@@ -502,23 +529,23 @@ scopes:
   summary_line: 14 scopes · clientCredentials
 score:
   band: developing
-  composite: 50.4
+  composite: 52.1
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 40.0
+    artifact_dirs: 28
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 39.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.4
     developer_ergonomics: 66.1
     discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 50.4
+  previous_composite: 52.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -535,13 +562,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/quinyx/refs/heads/main/screenshots/quinyx-2026-08-17T081427.png
+screenshot: https://apis.io/screenshots/quinyx/quinyx-2026-08-17T081427.png
 security:
 - kind: authentication
   name: Quinyx Authentication
@@ -551,6 +578,12 @@ security:
   name: Quinyx Domain Security
   slug: quinyx-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 2
+skills:
+- name: Onboard an employee in Quinyx
+  slug: quinyx-onboard-employee
+- name: Read an employee's schedule
+  slug: quinyx-read-schedule
 slug: quinyx
 tags:
 - Workforce Management

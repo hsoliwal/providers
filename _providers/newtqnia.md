@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
@@ -30,24 +33,32 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: documented
+    mcp_tool_quality: three_quarters
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.9
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 44.8
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.newtqnia.com
   baseurl_source: declared
   description: The News API from NewTqnia | Technology News, AI and Innovation — 2 operation(s) for news.
   name: NewTqnia | Technology News, AI and Innovation News API
   slug: newtqnia-news-api
-artifact_total: 10
+artifact_total: 14
 common:
+- group: other
+  href: https://artifacts.apis.io/newtqnia/capabilities/newtqnia-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/newtqnia-capability-edges.yml
 - group: company
   title: ''
   type: BlogRSS
@@ -61,7 +72,7 @@ common:
   type: MCPServer
   url: https://newtqnia.com/mcp
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/overlays/newtqnia-daily-digest-api-overlay.yaml
+  href: https://artifacts.apis.io/newtqnia/overlays/newtqnia-daily-digest-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/newtqnia-daily-digest-api-overlay.yaml
@@ -98,77 +109,77 @@ common:
   type: PrivacyPolicy
   url: https://newtqnia.com/en/privacy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/packages/newtqnia-packages.yml
+  href: https://artifacts.apis.io/newtqnia/packages/newtqnia-packages.yml
   title: ''
   type: Packages
   url: packages/newtqnia-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/packages/newtqnia-packages.yml
+  href: https://artifacts.apis.io/newtqnia/packages/newtqnia-packages.yml
   title: ''
   type: SDKs
   url: packages/newtqnia-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/components/newtqnia-components.yml
+  href: https://artifacts.apis.io/newtqnia/components/newtqnia-components.yml
   title: ''
   type: Components
   url: components/newtqnia-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/well-known/newtqnia-well-known.yml
+  href: https://artifacts.apis.io/newtqnia/well-known/newtqnia-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/newtqnia-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/authentication/newtqnia-authentication.yml
+  href: https://artifacts.apis.io/newtqnia/authentication/newtqnia-authentication.yml
   title: ''
   type: Authentication
   url: authentication/newtqnia-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/scopes/newtqnia-scopes.yml
+  href: https://artifacts.apis.io/newtqnia/scopes/newtqnia-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/newtqnia-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/conventions/newtqnia-conventions.yml
+  href: https://artifacts.apis.io/newtqnia/conventions/newtqnia-conventions.yml
   title: ''
   type: Conventions
   url: conventions/newtqnia-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/errors/newtqnia-problem-types.yml
+  href: https://artifacts.apis.io/newtqnia/errors/newtqnia-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/newtqnia-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/rate-limits/newtqnia-rate-limits.yml
+  href: https://artifacts.apis.io/newtqnia/rate-limits/newtqnia-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/newtqnia-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/plans/newtqnia-plans-pricing.yml
+  href: https://artifacts.apis.io/newtqnia/plans/newtqnia-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/newtqnia-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/lifecycle/newtqnia-lifecycle.yml
+  href: https://artifacts.apis.io/newtqnia/lifecycle/newtqnia-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/newtqnia-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/changelog/newtqnia-changelog.yml
+  href: https://artifacts.apis.io/newtqnia/changelog/newtqnia-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/newtqnia-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/conformance/newtqnia-conformance.yml
+  href: https://artifacts.apis.io/newtqnia/conformance/newtqnia-conformance.yml
   title: ''
   type: Conformance
   url: conformance/newtqnia-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/security/newtqnia-domain-security.yml
+  href: https://artifacts.apis.io/newtqnia/security/newtqnia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/newtqnia-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/newtqnia/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -184,6 +195,14 @@ examples:
 - key_count: 12
   name: Newtqnia Gettodaysnews 200
   slug: newtqnia-getTodaysNews-200
+finops:
+- has_sources: true
+  method: derived
+  name: Newtqnia Finops
+  primary_unit: ''
+  service_category: ''
+  slug: newtqnia-finops
+  template: true
 image: https://newtqnia.com/storage/social/ce46e49c898edb9ac69deab4c3a4cf41bf569102-1200x630.jpg
 layout: provider
 mcp_servers:
@@ -197,16 +216,32 @@ network: true
 overview: 'NewTqnia | Technology News, AI and Innovation publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: News API. Tagged areas include News API, News, Technology, Artificial Intelligence, and Cybersecurity.
 
 
-  NewTqnia | Technology News, AI and Innovation''s developer surface includes getting-started guide, support, signup flow, authentication, changelog, and 22 more developer resources.'
+  The NewTqnia | Technology News, AI and Innovation catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  NewTqnia | Technology News, AI and Innovation''s developer surface includes getting-started guide, support, signup flow, authentication, changelog, and 23 more developer resources.'
 plans:
 - name: Newtqnia Plans Pricing
   plan_count: 3
   slug: newtqnia-plans-pricing
-random_paper: 13
+random_paper: 7
 rate_limits:
 - limit_count: 2
   name: Newtqnia Rate Limits
   slug: newtqnia-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 83
+  extends:
+  - spectral:oas
+  name: NewTqnia | Technology News, AI and Innovation API Rules
+  rule_count: 42
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 1
+    warn: 1
+  slug: newtqnia-rules
 scopes:
 - name: Newtqnia Scopes
   scope_count: 2
@@ -214,29 +249,29 @@ scopes:
   summary_line: 2 scopes · authorization_code
 score:
   band: strong
-  composite: 55.4
+  composite: 57.8
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 60.0
+    artifact_dirs: 30
+    catalog_earned: 61.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 55.0
+    catalog_gap: 53.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 1.2
   facets:
     access_clarity: 65.8
-    contract_governance: 18.2
-    contract_quality: 46.8
+    contract_governance: 31.8
+    contract_quality: 51.7
     developer_ergonomics: 63.7
-    discoverability: 80.0
+    discoverability: 75.0
     operational_transparency: 39.5
-  previous_composite: 54.8
+  previous_composite: 56.6
   provenance:
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
     mcp: first-party
     skills: derived
@@ -246,14 +281,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/newtqnia/refs/heads/main/screenshots/newtqnia-2026-09-02T150744.png
+screenshot: https://apis.io/screenshots/newtqnia/newtqnia-2026-09-02T150744.png
 security:
 - kind: authentication
   name: Newtqnia Authentication
@@ -263,6 +298,12 @@ security:
   name: Newtqnia Domain Security
   slug: newtqnia-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: newtqnia-daily-digest
+  slug: newtqnia-daily-digest
+- name: newtqnia-mcp-research
+  slug: newtqnia-mcp-research
 slug: newtqnia
 tags:
 - News API
@@ -274,6 +315,5 @@ tags:
 - Cloud Computing
 - Media
 - Publishing
-- Bilingual
 website: https://www.newtqnia.com/
 ---

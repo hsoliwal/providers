@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Recruiting API documented on the pricing page.
@@ -32,7 +46,7 @@ apis:
 artifact_total: 5
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/jazzhr/refs/heads/main/plans/jazzhr-plans-pricing.yml
+  href: https://artifacts.apis.io/jazzhr/plans/jazzhr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/jazzhr-plans-pricing.yml
@@ -41,27 +55,27 @@ common:
   type: Compliance
   url: https://www.jazzhr.com/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jazzhr/refs/heads/main/llms/jazzhr-llms.txt
+  href: https://artifacts.apis.io/jazzhr/llms/jazzhr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/jazzhr-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jazzhr/refs/heads/main/well-known/jazzhr-status-security.txt
+  href: https://artifacts.apis.io/jazzhr/well-known/jazzhr-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/jazzhr-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/jazzhr/refs/heads/main/well-known/jazzhr-well-known.yml
+  href: https://artifacts.apis.io/jazzhr/well-known/jazzhr-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/jazzhr-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jazzhr/refs/heads/main/hosts/jazzhr-hosts.yml
+  href: https://artifacts.apis.io/jazzhr/hosts/jazzhr-hosts.yml
   title: ''
   type: Hosts
   url: hosts/jazzhr-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/jazzhr/refs/heads/main/vendors/jazzhr-vendors.yml
+  href: https://artifacts.apis.io/jazzhr/vendors/jazzhr-vendors.yml
   title: ''
   type: Vendors
   url: vendors/jazzhr-vendors.yml
@@ -90,17 +104,17 @@ common:
   type: Documentation
   url: https://help.jazzhr.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jazzhr/refs/heads/main/security/jazzhr-trust-center.yml
+  href: https://artifacts.apis.io/jazzhr/security/jazzhr-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/jazzhr-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jazzhr/refs/heads/main/security/jazzhr-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/jazzhr/security/jazzhr-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/jazzhr-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jazzhr/refs/heads/main/security/jazzhr-domain-security.yml
+  href: https://artifacts.apis.io/jazzhr/security/jazzhr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jazzhr-domain-security.yml
@@ -133,24 +147,26 @@ plans:
 - name: Jazzhr Plans Pricing
   plan_count: 3
   slug: jazzhr-plans-pricing
-random_paper: 5
+random_paper: 17
 score:
-  band: thin
-  composite: 26.7
+  band: emerging
+  composite: 20.3
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 44.0
     catalog_earned_first_party: 12.0
     catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.4
   facets:
-    access_clarity: 68.4
+    access_clarity: 53.9
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 11.9
+    developer_ergonomics: 6.0
     discoverability: 64.3
-    operational_transparency: 26.3
+    operational_transparency: 13.2
+  previous_composite: 26.7
   provenance:
     mcp: unknown
   regulatory:
@@ -158,13 +174,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 16.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/jazzhr/jazzhr-2026-11-03T134127.png
 security:
 - kind: domain-security
   name: Jazzhr Domain Security

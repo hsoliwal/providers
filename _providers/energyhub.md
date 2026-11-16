@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Mercury Edge Connect is EnergyHub's standardized integration framework for connecting DER providers (thermostat, battery, EV, EV charger, and solar inverter manufacturers) to the Mercury/Edge DERMS pl
@@ -46,32 +49,32 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/energyhub/refs/heads/main/security/energyhub-domain-security.yml
+  href: https://artifacts.apis.io/energyhub/security/energyhub-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/energyhub-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/energyhub/refs/heads/main/authentication/energyhub-authentication.yml
+  href: https://artifacts.apis.io/energyhub/authentication/energyhub-authentication.yml
   title: ''
   type: Authentication
   url: authentication/energyhub-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/energyhub/refs/heads/main/conformance/energyhub-conformance.yml
+  href: https://artifacts.apis.io/energyhub/conformance/energyhub-conformance.yml
   title: ''
   type: Conformance
   url: conformance/energyhub-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/energyhub/refs/heads/main/lifecycle/energyhub-lifecycle.yml
+  href: https://artifacts.apis.io/energyhub/lifecycle/energyhub-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/energyhub-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/energyhub/refs/heads/main/packages/energyhub-packages.yml
+  href: https://artifacts.apis.io/energyhub/packages/energyhub-packages.yml
   title: ''
   type: Packages
   url: packages/energyhub-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/energyhub/refs/heads/main/llms/energyhub-llms.txt
+  href: https://artifacts.apis.io/energyhub/llms/energyhub-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/energyhub-llms.txt
@@ -152,12 +155,12 @@ overview: 'EnergyHub is listed with 2 APIs on the [APIs.io](https://apis.io/) ne
 
 
   EnergyHub''s developer surface includes authentication, documentation, signup flow, engineering blog, support, and 17 more developer resources.'
-random_paper: 1
+random_paper: 9
 score:
   band: emerging
   composite: 22.6
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -187,14 +190,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/energyhub/refs/heads/main/screenshots/energyhub-2026-08-07T164917.png
+screenshot: https://apis.io/screenshots/energyhub/energyhub-2026-08-07T164917.png
 security:
 - kind: authentication
   name: Energyhub Authentication

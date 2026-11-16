@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Public GraphQL subgraph that indexes useful state about the Goldfinch Protocol (senior pool, tranched pools, backers, borrowers, staked positions, membership) for use by the Goldfinch Interface and an
@@ -65,37 +69,37 @@ common:
   type: Blog
   url: https://medium.com/warbler-labs
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/warblerlabs/refs/heads/main/llms/warblerlabs-llms.txt
+  href: https://artifacts.apis.io/warblerlabs/llms/warblerlabs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/warblerlabs-llms.txt
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/warblerlabs/refs/heads/main/graphql/goldfinch-subgraph-schema.graphql
+  href: https://artifacts.apis.io/warblerlabs/graphql/goldfinch-subgraph-schema.graphql
   title: ''
   type: GraphQL
   url: graphql/goldfinch-subgraph-schema.graphql
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/warblerlabs/refs/heads/main/data-model/warblerlabs-data-model.yml
+  href: https://artifacts.apis.io/warblerlabs/data-model/warblerlabs-data-model.yml
   title: ''
   type: DataModel
   url: data-model/warblerlabs-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/warblerlabs/refs/heads/main/conventions/warblerlabs-conventions.yml
+  href: https://artifacts.apis.io/warblerlabs/conventions/warblerlabs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/warblerlabs-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/warblerlabs/refs/heads/main/conformance/warblerlabs-conformance.yml
+  href: https://artifacts.apis.io/warblerlabs/conformance/warblerlabs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/warblerlabs-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/warblerlabs/refs/heads/main/mcp/warblerlabs-mcp.yml
+  href: https://artifacts.apis.io/warblerlabs/mcp/warblerlabs-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/warblerlabs-mcp.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/warblerlabs/refs/heads/main/security/warblerlabs-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/warblerlabs/security/warblerlabs-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/warblerlabs-vulnerability-disclosure.yml
@@ -104,7 +108,7 @@ common:
   type: Security
   url: https://dev.goldfinch.finance/docs/security/bug-bounty/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/warblerlabs/refs/heads/main/security/warblerlabs-domain-security.yml
+  href: https://artifacts.apis.io/warblerlabs/security/warblerlabs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/warblerlabs-domain-security.yml
@@ -132,18 +136,18 @@ overview: 'Warblerlabs is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Warblerlabs'' developer surface includes documentation, API reference, engineering blog, and 15 more developer resources.'
-random_paper: 3
+random_paper: 17
 score:
   band: emerging
   composite: 23.0
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
@@ -151,7 +155,7 @@ score:
     developer_ergonomics: 28.6
     discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 22.9
+  previous_composite: 23.0
   provenance:
     conformance: derived
     mcp: derived
@@ -161,14 +165,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/warblerlabs/refs/heads/main/screenshots/warblerlabs-2026-09-02T170433.png
+screenshot: https://apis.io/screenshots/warblerlabs/warblerlabs-2026-09-02T170433.png
 security:
 - kind: domain-security
   name: Warblerlabs Domain Security

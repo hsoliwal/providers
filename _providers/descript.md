@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.3
-  scored_at: '2026-10-17'
+  score: 36.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -60,11 +66,8 @@ apis:
   description: Users of Descript currently have three options to export their edited content. They can export files in various formats, share a Descript link, or use our [one-click cloud export](https://help.descrip
   name: Descript Export from Descript API
   slug: descript-export-from-descript-api
-artifact_total: 32
+artifact_total: 33
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Descript API Endpoints API
   slug: open-descript-api-endpoints-api
@@ -79,7 +82,7 @@ collections:
   slug: open-descript
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/descript/refs/heads/main/finops/descript-finops.yml
+  href: https://artifacts.apis.io/descript/finops/descript-finops.yml
   title: ''
   type: FinOps
   url: finops/descript-finops.yml
@@ -88,32 +91,32 @@ common:
   type: Website
   url: https://www.descript.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/descript/refs/heads/main/capabilities/descript-capability-edges.yml
+  href: https://artifacts.apis.io/descript/capabilities/descript-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/descript-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/descript/refs/heads/main/agentic-access/descript-agentic-access.yml
+  href: https://artifacts.apis.io/descript/agentic-access/descript-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/descript-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/descript/refs/heads/main/security/descript-trust-center.yml
+  href: https://artifacts.apis.io/descript/security/descript-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/descript-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/descript/refs/heads/main/security/descript-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/descript/security/descript-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/descript-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/descript/refs/heads/main/security/descript-domain-security.yml
+  href: https://artifacts.apis.io/descript/security/descript-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/descript-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/descript/refs/heads/main/authentication/descript-authentication.yml
+  href: https://artifacts.apis.io/descript/authentication/descript-authentication.yml
   title: ''
   type: Authentication
   url: authentication/descript-authentication.yml
@@ -146,17 +149,17 @@ common:
   type: Pricing
   url: https://www.descript.com/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/descript/refs/heads/main/plans/descript-plans-pricing.yml
+  href: https://artifacts.apis.io/descript/plans/descript-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/descript-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/descript/refs/heads/main/rate-limits/descript-rate-limits.yml
+  href: https://artifacts.apis.io/descript/rate-limits/descript-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/descript-rate-limits.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/descript/refs/heads/main/finops/descript-finops.yml
+  href: https://artifacts.apis.io/descript/finops/descript-finops.yml
   title: FinOps Framework Profile
   type: Resources
   url: finops/descript-finops.yml
@@ -225,10 +228,10 @@ features:
   name: Rate-Limit Headers
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Descript Finops
-  primary_unit: ''
-  service_category: Media Editing
+  primary_unit: person / month
+  service_category: ''
   slug: descript-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/descript.png
@@ -240,55 +243,74 @@ network: true
 overview: 'Descript publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: API Endpoints API, Edit in Descript API, and Export from Descript API. Tagged areas include Artificial Intelligence, Audio Editing, Captions, Media, and Podcasts.
 
 
+  The Descript catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Descript''s developer surface includes authentication, developer portal, documentation, API reference, signup flow, pricing, CLI, and 20 more developer resources.'
 plans:
 - name: Descript Plans Pricing
   plan_count: 5
   slug: descript-plans-pricing
-random_paper: 4
+- name: Descript Price Estimates
+  plan_count: 0
+  slug: descript-price-estimates
+random_paper: 22
 rate_limits:
 - limit_count: 5
   name: Descript Rate Limits
   slug: descript-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: Descript API Rules
+  rule_count: 64
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 1
+    warn: 6
+  slug: descript-rules
 score:
-  band: developing
-  composite: 45.9
+  band: strong
+  composite: 54.4
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 43.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    artifact_dirs: 17
+    catalog_earned: 59.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.3
+  delta: 0.6
   facets:
-    access_clarity: 61.8
-    contract_governance: 0.0
-    contract_quality: 49.7
+    access_clarity: 93.4
+    contract_governance: 13.6
+    contract_quality: 52.1
     developer_ergonomics: 52.4
     discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 54.2
+  previous_composite: 53.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 3
+      marker_coverage: 42.9
+      total: 7
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 28.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/descript/refs/heads/main/screenshots/descript-2026-06-20T175933.png
+screenshot: https://apis.io/screenshots/descript/descript-2026-06-20T175933.png
 security:
 - kind: authentication
   name: Descript Authentication

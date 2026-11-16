@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,9 @@ access_model:
   source:
   - plans
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: true
 agent_readiness:
@@ -15,7 +21,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: false
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
@@ -27,15 +33,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.5
-  scored_at: '2026-10-17'
+  score: 49.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -100,7 +109,7 @@ arazzos:
 - description: List the newest messages, read the top one in full, and reply to its sender.
   name: Microsoft Outlook Triage and Reply
   slug: microsoft-outlook-triage-and-reply-workflow
-artifact_total: 104
+artifact_total: 107
 asyncapis:
 - description: 'AsyncAPI specification for Microsoft Graph change notifications (webhooks) for Outlook mail resources. Enables real-time event-driven architecture by subscribing to changes in messages, mail folders, '
   name: Microsoft Outlook Change Notifications
@@ -109,9 +118,6 @@ collections:
 - collection_type: postman
   name: Microsoft Outlook Microsoft Graph Mail API
   slug: postman-microsoft-graph-mail-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Microsoft Outlook Microsoft Graph Mail API
   slug: open-microsoft-graph-mail-api
@@ -125,18 +131,94 @@ collections:
   name: Microsoft Outlook Microsoft Graph Mail Attachments Messages API
   slug: open-microsoft-outlook-messages-api
 common:
+- group: design
+  href: https://artifacts.apis.io/microsoft-outlook/rules/microsoft-outlook-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-outlook-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-outlook/rules/microsoft-outlook-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-outlook-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-outlook/rules/microsoft-outlook-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-outlook-jsonschema-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-outlook/rules/microsoft-outlook-asyncapi-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-outlook-asyncapi-spectral-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-outlook/json-ld/microsoft-graph-mail-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/microsoft-graph-mail-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/microsoft-outlook/vocabulary/microsoft-outlook-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/microsoft-outlook-vocabulary.yml
+- group: agent
+  href: https://artifacts.apis.io/microsoft-outlook/skills/_index.yml
+  title: ''
+  type: AgentSkill
+  url: skills/_index.yml
+- group: docs
+  href: https://artifacts.apis.io/microsoft-outlook/asyncapi/microsoft-outlook-change-notifications-asyncapi.yml
+  title: ''
+  type: AsyncAPI
+  url: asyncapi/microsoft-outlook-change-notifications-asyncapi.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://www.microsoft.com/en-us/trust-center
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://learn.microsoft.com/en-us/graph/versioning-and-support#deprecation
+- group: build
+  href: https://artifacts.apis.io/microsoft-outlook/mcp/microsoft-outlook-tool-crosswalk.yml
+  title: ''
+  type: ToolCrosswalk
+  url: mcp/microsoft-outlook-tool-crosswalk.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-outlook/hosts/microsoft-outlook-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/microsoft-outlook-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/microsoft-outlook/integrations/microsoft-outlook-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/microsoft-outlook-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-outlook/vendors/microsoft-outlook-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/microsoft-outlook-vendors.yml
+- group: auth
+  title: ''
+  type: Security
+  url: https://www.microsoft.com/security
+- group: other
+  title: ''
+  type: Leadership
+  url: https://news.microsoft.com/leadership
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/plans/microsoft-outlook-plans-pricing.yml
+  href: https://artifacts.apis.io/microsoft-outlook/plans/microsoft-outlook-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/microsoft-outlook-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/rate-limits/microsoft-outlook-rate-limits.yml
+  href: https://artifacts.apis.io/microsoft-outlook/rate-limits/microsoft-outlook-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/microsoft-outlook-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/finops/microsoft-outlook-finops.yml
+  href: https://artifacts.apis.io/microsoft-outlook/finops/microsoft-outlook-finops.yml
   title: ''
   type: FinOps
   url: finops/microsoft-outlook-finops.yml
@@ -145,102 +227,102 @@ common:
   type: Website
   url: https://www.microsoft.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/agentic-access/microsoft-outlook-agentic-access.yml
+  href: https://artifacts.apis.io/microsoft-outlook/agentic-access/microsoft-outlook-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/microsoft-outlook-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/security/microsoft-outlook-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/microsoft-outlook/security/microsoft-outlook-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/microsoft-outlook-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/security/microsoft-outlook-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-outlook/security/microsoft-outlook-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-outlook-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/authentication/microsoft-outlook-authentication.yml
+  href: https://artifacts.apis.io/microsoft-outlook/authentication/microsoft-outlook-authentication.yml
   title: ''
   type: Authentication
   url: authentication/microsoft-outlook-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/scopes/microsoft-outlook-scopes.yml
+  href: https://artifacts.apis.io/microsoft-outlook/scopes/microsoft-outlook-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/microsoft-outlook-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/security/microsoft-outlook-trust-center.yml
+  href: https://artifacts.apis.io/microsoft-outlook/security/microsoft-outlook-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/microsoft-outlook-trust-center.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/packages/microsoft-outlook-packages.yml
+  href: https://artifacts.apis.io/microsoft-outlook/packages/microsoft-outlook-packages.yml
   title: ''
   type: Packages
   url: packages/microsoft-outlook-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/well-known/microsoft-outlook-well-known.yml
+  href: https://artifacts.apis.io/microsoft-outlook/well-known/microsoft-outlook-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/microsoft-outlook-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/mcp/microsoft-outlook-mcp.yml
+  href: https://artifacts.apis.io/microsoft-outlook/mcp/microsoft-outlook-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/microsoft-outlook-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/llms/microsoft-outlook-llms.txt
+  href: https://artifacts.apis.io/microsoft-outlook/llms/microsoft-outlook-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/microsoft-outlook-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/overlays/microsoft-outlook-microsoft-graph-mail-api-overlay.yaml
+  href: https://artifacts.apis.io/microsoft-outlook/overlays/microsoft-outlook-microsoft-graph-mail-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/microsoft-outlook-microsoft-graph-mail-api-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/conformance/microsoft-outlook-conformance.yml
+  href: https://artifacts.apis.io/microsoft-outlook/conformance/microsoft-outlook-conformance.yml
   title: ''
   type: Conformance
   url: conformance/microsoft-outlook-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/errors/microsoft-outlook-problem-types.yml
+  href: https://artifacts.apis.io/microsoft-outlook/errors/microsoft-outlook-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/microsoft-outlook-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/lifecycle/microsoft-outlook-lifecycle.yml
+  href: https://artifacts.apis.io/microsoft-outlook/lifecycle/microsoft-outlook-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/microsoft-outlook-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/conventions/microsoft-outlook-conventions.yml
+  href: https://artifacts.apis.io/microsoft-outlook/conventions/microsoft-outlook-conventions.yml
   title: ''
   type: Conventions
   url: conventions/microsoft-outlook-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/data-model/microsoft-outlook-data-model.yml
+  href: https://artifacts.apis.io/microsoft-outlook/data-model/microsoft-outlook-data-model.yml
   title: ''
   type: DataModel
   url: data-model/microsoft-outlook-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/changelog/microsoft-outlook-changelog.yml
+  href: https://artifacts.apis.io/microsoft-outlook/changelog/microsoft-outlook-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/microsoft-outlook-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/cli/microsoft-outlook-cli.yml
+  href: https://artifacts.apis.io/microsoft-outlook/cli/microsoft-outlook-cli.yml
   title: ''
   type: CLI
   url: cli/microsoft-outlook-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/components/microsoft-outlook-components.yml
+  href: https://artifacts.apis.io/microsoft-outlook/components/microsoft-outlook-components.yml
   title: ''
   type: Components
   url: components/microsoft-outlook-components.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/sandbox/microsoft-outlook-sandbox.yml
+  href: https://artifacts.apis.io/microsoft-outlook/sandbox/microsoft-outlook-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/microsoft-outlook-sandbox.yml
@@ -249,62 +331,62 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/microsoft-outlook/overview
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-archive-copy-message-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-archive-copy-message-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-archive-copy-message-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-build-folder-tree-and-seed-draft-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-build-folder-tree-and-seed-draft-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-build-folder-tree-and-seed-draft-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-compose-attach-send-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-compose-attach-send-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-compose-attach-send-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-draft-refine-send-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-draft-refine-send-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-draft-refine-send-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-file-message-into-new-folder-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-file-message-into-new-folder-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-file-message-into-new-folder-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-find-and-forward-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-find-and-forward-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-find-and-forward-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-inspect-and-remove-attachment-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-inspect-and-remove-attachment-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-inspect-and-remove-attachment-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-large-attachment-upload-session-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-large-attachment-upload-session-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-large-attachment-upload-session-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-reorganize-folder-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-reorganize-folder-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-reorganize-folder-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-reply-draft-with-attachment-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-reply-draft-with-attachment-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-reply-draft-with-attachment-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-review-folder-and-mark-read-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-review-folder-and-mark-read-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-review-folder-and-mark-read-workflow.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/arazzo/microsoft-outlook-triage-and-reply-workflow.yml
+  href: https://artifacts.apis.io/microsoft-outlook/arazzo/microsoft-outlook-triage-and-reply-workflow.yml
   title: ''
   type: Arazzo
   url: arazzo/microsoft-outlook-triage-and-reply-workflow.yml
@@ -563,15 +645,15 @@ network: true
 overview: 'Microsoft Outlook publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Attachments API, Mail Folders API, Messages API, and 1 more. Tagged areas include Calendar, Contacts, Email, Enterprise, and Microsoft.
 
 
-  The Microsoft Outlook catalog on APIs.io includes 1 event-driven AsyncAPI specification, 2 JSON-LD contexts, and 3 Spectral governance rulesets.
+  The Microsoft Outlook catalog on APIs.io includes 1 event-driven AsyncAPI specification, 2 JSON-LD contexts, and 4 Spectral governance rulesets.
 
 
-  Microsoft Outlook''s developer surface includes authentication, changelog, CLI, sandbox, developer portal, getting-started guide, documentation, and 48 more developer resources.'
+  Microsoft Outlook''s developer surface includes authentication, changelog, CLI, sandbox, developer portal, getting-started guide, documentation, and 64 more developer resources.'
 plans:
 - name: Microsoft Outlook Plans Pricing
   plan_count: 5
   slug: microsoft-outlook-plans-pricing
-random_paper: 4
+random_paper: 8
 rate_limits:
 - limit_count: 7
   name: Microsoft Outlook Rate Limits
@@ -601,6 +683,18 @@ rules:
     warn: 4
   slug: microsoft-outlook-jsonschema-spectral-rules
 - authorship: generated
+  effective_rule_count: 110
+  extends:
+  - spectral:oas
+  name: Microsoft Outlook API Rules
+  rule_count: 69
+  severity_counts:
+    error: 62
+    hint: 0
+    info: 2
+    warn: 5
+  slug: microsoft-outlook-rules
+- authorship: generated
   effective_rule_count: 59
   extends:
   - spectral:oas
@@ -618,24 +712,24 @@ scopes:
   slug: microsoft-outlook-scopes
   summary_line: 20 scopes · authorizationCode
 score:
-  band: strong
-  composite: 64.5
+  band: exemplar
+  composite: 70.6
   coverage:
-    artifact_dirs: 36
-    catalog_earned: 60.9
+    artifact_dirs: 41
+    catalog_earned: 65.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 54.1
+    catalog_gap: 49.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 4.7
   facets:
-    access_clarity: 50.0
-    contract_governance: 18.2
+    access_clarity: 57.9
+    contract_governance: 31.8
     contract_quality: 79.8
-    developer_ergonomics: 79.8
-    discoverability: 81.7
-    operational_transparency: 34.2
-  previous_composite: 66.0
+    developer_ergonomics: 81.5
+    discoverability: 83.3
+    operational_transparency: 52.6
+  previous_composite: 65.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -645,19 +739,20 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: first-party
+    skills: derived
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 45.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-outlook/refs/heads/main/screenshots/microsoft-outlook-2026-06-20T185517.png
+screenshot: https://apis.io/screenshots/microsoft-outlook/microsoft-outlook-2026-06-20T185517.png
 security:
 - kind: authentication
   name: Microsoft Outlook Authentication
@@ -674,7 +769,15 @@ security:
 - kind: trust-center
   name: Microsoft Outlook Trust Center
   slug: microsoft-outlook-trust-center
-  summary_line: SOC 1, SOC 2, SOC 3, ISO 27001, ISO 27017, ISO 27018, ISO 27701, ISO 42001, ISO 22301, CSA STAR Certification, CSA STAR Attestation, FedRAMP, FIPS 140-2, HIPAA / HITECH, HITRUST, PCI DSS, GDPR, SOX
+  summary_line: GDPR
+skill_count: 3
+skills:
+- name: microsoft-outlook-compose-attach-send
+  slug: microsoft-outlook-compose-attach-send
+- name: microsoft-outlook-file-into-folder
+  slug: microsoft-outlook-file-into-folder
+- name: microsoft-outlook-triage-and-reply
+  slug: microsoft-outlook-triage-and-reply
 slug: microsoft-outlook
 tags:
 - Calendar

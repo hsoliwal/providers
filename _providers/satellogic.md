@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: Unified Orders API in Aleph V2 that consolidates archive purchases and new-capture tasking into a single REST surface. Supports archive products, POI (point-of-interest) tasking, and AOI (area-of-inte
@@ -56,7 +60,7 @@ apis:
 artifact_total: 22
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/satellogic/refs/heads/main/security/satellogic-domain-security.yml
+  href: https://artifacts.apis.io/satellogic/security/satellogic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/satellogic-domain-security.yml
@@ -209,7 +213,7 @@ score:
   band: emerging
   composite: 15.3
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 6
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -230,14 +234,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 14.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/satellogic/refs/heads/main/screenshots/satellogic-2026-06-20T193438.png
+screenshot: https://apis.io/screenshots/satellogic/satellogic-2026-06-20T193438.png
 security:
 - kind: domain-security
   name: Satellogic Domain Security

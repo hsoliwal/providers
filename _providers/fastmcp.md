@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: The FastMCP Server is the Python entry point for exposing tools, resources, prompts, and apps to any Model Context Protocol client. Developers instantiate a `FastMCP` server object and register compon
@@ -81,12 +84,12 @@ common:
   type: ContributionGuide
   url: https://github.com/PrefectHQ/fastmcp/blob/main/CONTRIBUTING.md
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fastmcp/refs/heads/main/a2a/fastmcp-a2a.yml
+  href: https://artifacts.apis.io/fastmcp/a2a/fastmcp-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/fastmcp-a2a.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fastmcp/refs/heads/main/security/fastmcp-domain-security.yml
+  href: https://artifacts.apis.io/fastmcp/security/fastmcp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fastmcp-domain-security.yml
@@ -267,12 +270,12 @@ overview: 'FastMCP is listed with 6 APIs on the [APIs.io](https://apis.io/) netw
 
 
   FastMCP''s developer surface includes developer portal, getting-started guide, documentation, changelog, release notes, FAQ, and 26 more developer resources.'
-random_paper: 2
+random_paper: 6
 score:
   band: emerging
   composite: 18.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -295,14 +298,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/fastmcp/refs/heads/main/screenshots/fastmcp-2026-06-20T181055.png
+screenshot: https://apis.io/screenshots/fastmcp/fastmcp-2026-06-20T181055.png
 security:
 - kind: domain-security
   name: Fastmcp Domain Security

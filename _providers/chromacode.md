@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The customer-authenticated REST API behind ChromaCode Cloud 6.1, the browser application that decodes HDPCR run files. Observed resource surface includes analyses, assays and assay downloads, batch re
@@ -96,52 +99,52 @@ common:
   type: SecondaryMarket
   url: https://forgeglobal.com/chromacode_stock/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chromacode/refs/heads/main/well-known/chromacode-well-known.yml
+  href: https://artifacts.apis.io/chromacode/well-known/chromacode-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/chromacode-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chromacode/refs/heads/main/well-known/chromacode-openid-configuration-apps.json
+  href: https://artifacts.apis.io/chromacode/well-known/chromacode-openid-configuration-apps.json
   title: ''
   type: OpenIDConnect
   url: well-known/chromacode-openid-configuration-apps.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chromacode/refs/heads/main/authentication/chromacode-authentication.yml
+  href: https://artifacts.apis.io/chromacode/authentication/chromacode-authentication.yml
   title: ''
   type: Authentication
   url: authentication/chromacode-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chromacode/refs/heads/main/scopes/chromacode-scopes.yml
+  href: https://artifacts.apis.io/chromacode/scopes/chromacode-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/chromacode-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chromacode/refs/heads/main/conventions/chromacode-conventions.yml
+  href: https://artifacts.apis.io/chromacode/conventions/chromacode-conventions.yml
   title: ''
   type: Conventions
   url: conventions/chromacode-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chromacode/refs/heads/main/errors/chromacode-problem-types.yml
+  href: https://artifacts.apis.io/chromacode/errors/chromacode-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/chromacode-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chromacode/refs/heads/main/lifecycle/chromacode-lifecycle.yml
+  href: https://artifacts.apis.io/chromacode/lifecycle/chromacode-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/chromacode-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chromacode/refs/heads/main/conformance/chromacode-conformance.yml
+  href: https://artifacts.apis.io/chromacode/conformance/chromacode-conformance.yml
   title: ''
   type: Conformance
   url: conformance/chromacode-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chromacode/refs/heads/main/security/chromacode-domain-security.yml
+  href: https://artifacts.apis.io/chromacode/security/chromacode-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chromacode-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chromacode/refs/heads/main/llms/chromacode-llms.txt
+  href: https://artifacts.apis.io/chromacode/llms/chromacode-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/chromacode-llms.txt
@@ -158,7 +161,7 @@ overview: 'ChromaCode is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   ChromaCode''s developer surface includes support, authentication, and 21 more developer resources.'
-random_paper: 11
+random_paper: 13
 scopes:
 - name: Chromacode Scopes
   scope_count: 12
@@ -168,13 +171,13 @@ score:
   band: emerging
   composite: 24.0
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
@@ -182,7 +185,7 @@ score:
     developer_ergonomics: 16.7
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 23.9
+  previous_composite: 24.0
   provenance:
     conformance: first-party
   regulatory:
@@ -199,14 +202,14 @@ score:
     regime: Health
     regime_id: health
     score: 36.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/chromacode/refs/heads/main/screenshots/chromacode-2026-08-07T163339.png
+screenshot: https://apis.io/screenshots/chromacode/chromacode-2026-08-07T163339.png
 security:
 - kind: authentication
   name: Chromacode Authentication

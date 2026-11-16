@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 15
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/trinity-industries/refs/heads/main/security/trinity-industries-domain-security.yml
+  href: https://artifacts.apis.io/trinity-industries/security/trinity-industries-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/trinity-industries-domain-security.yml
@@ -92,7 +96,7 @@ press:
 - date: ''
   title: TrinityRail Enters Joint Venture to Transform North America's ...
   url: https://www.trin.net/investor/press-releases/news-details/2020/TrinityRail-Enters-Joint-Venture-to-Transform-North-Americas-Rail-Industry/default.aspx
-random_paper: 16
+random_paper: 10
 score:
   band: minimal
   composite: 3.4
@@ -118,14 +122,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/trinity-industries/refs/heads/main/screenshots/trinity-industries-2026-10-11T131154.png
+screenshot: https://apis.io/screenshots/trinity-industries/trinity-industries-2026-10-11T131154.png
 security:
 - kind: domain-security
   name: Trinity Industries Domain Security

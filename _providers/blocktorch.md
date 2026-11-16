@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -49,22 +52,19 @@ apis:
   description: Manage managed Hardhat fork instances.
   name: Blocktorch Hardhat API
   slug: blocktorch-hardhat-api
-artifact_total: 6
+artifact_total: 7
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Blocktorch Forking Hardhat API
   slug: open-blocktorch-hardhat-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/capabilities/blocktorch-capability-edges.yml
+  href: https://artifacts.apis.io/blocktorch/capabilities/blocktorch-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/blocktorch-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/overlays/blocktorch-hardhat-forking-overlay.yaml
+  href: https://artifacts.apis.io/blocktorch/overlays/blocktorch-hardhat-forking-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/blocktorch-hardhat-forking-overlay.yaml
@@ -101,67 +101,67 @@ common:
   type: Website
   url: https://blocktorch.xyz
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/llms/blocktorch-llms.txt
+  href: https://artifacts.apis.io/blocktorch/llms/blocktorch-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/blocktorch-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/packages/blocktorch-packages.yml
+  href: https://artifacts.apis.io/blocktorch/packages/blocktorch-packages.yml
   title: ''
   type: Packages
   url: packages/blocktorch-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/packages/blocktorch-packages.yml
+  href: https://artifacts.apis.io/blocktorch/packages/blocktorch-packages.yml
   title: ''
   type: SDKs
   url: packages/blocktorch-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/cli/blocktorch-cli.yml
+  href: https://artifacts.apis.io/blocktorch/cli/blocktorch-cli.yml
   title: ''
   type: CLI
   url: cli/blocktorch-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/mcp/blocktorch-mcp.yml
+  href: https://artifacts.apis.io/blocktorch/mcp/blocktorch-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/blocktorch-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/blocktorch/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/well-known/blocktorch-well-known.yml
+  href: https://artifacts.apis.io/blocktorch/well-known/blocktorch-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/blocktorch-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/authentication/blocktorch-authentication.yml
+  href: https://artifacts.apis.io/blocktorch/authentication/blocktorch-authentication.yml
   title: ''
   type: Authentication
   url: authentication/blocktorch-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/conventions/blocktorch-conventions.yml
+  href: https://artifacts.apis.io/blocktorch/conventions/blocktorch-conventions.yml
   title: ''
   type: Conventions
   url: conventions/blocktorch-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/conformance/blocktorch-conformance.yml
+  href: https://artifacts.apis.io/blocktorch/conformance/blocktorch-conformance.yml
   title: ''
   type: Conformance
   url: conformance/blocktorch-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/data-model/blocktorch-data-model.yml
+  href: https://artifacts.apis.io/blocktorch/data-model/blocktorch-data-model.yml
   title: ''
   type: DataModel
   url: data-model/blocktorch-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/agentic-access/blocktorch-agentic-access.yml
+  href: https://artifacts.apis.io/blocktorch/agentic-access/blocktorch-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/blocktorch-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/security/blocktorch-domain-security.yml
+  href: https://artifacts.apis.io/blocktorch/security/blocktorch-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/blocktorch-domain-security.yml
@@ -176,27 +176,43 @@ network: true
 overview: 'Blocktorch publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Hardhat API. Tagged areas include Company, Web3, Observability, Monitoring, and Blockchain.
 
 
+  The Blocktorch catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Blocktorch''s developer surface includes documentation, getting-started guide, signup flow, engineering blog, support, CLI, authentication, and 16 more developer resources.'
 random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Blocktorch API Rules
+  rule_count: 60
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 1
+    warn: 1
+  slug: blocktorch-rules
 score:
   band: thin
-  composite: 35.5
+  composite: 38.4
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.3
   facets:
     access_clarity: 6.6
-    contract_governance: 4.5
-    contract_quality: 47.1
+    contract_governance: 18.2
+    contract_quality: 52.4
     developer_ergonomics: 73.2
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 35.4
+  previous_composite: 37.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -213,13 +229,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/blocktorch/refs/heads/main/screenshots/blocktorch-2026-07-25T203347.png
+screenshot: https://apis.io/screenshots/blocktorch/blocktorch-2026-07-25T203347.png
 security:
 - kind: authentication
   name: Blocktorch Authentication
@@ -229,6 +245,10 @@ security:
   name: Blocktorch Domain Security
   slug: blocktorch-domain-security
   summary_line: no transport/DNS hardening detected
+skill_count: 1
+skills:
+- name: Manage a Blocktorch managed Hardhat fork
+  slug: blocktorch-manage-hardhat-fork
 slug: blocktorch
 tags:
 - Company

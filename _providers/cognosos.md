@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,17 +36,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cognosos/refs/heads/main/hosts/cognosos-hosts.yml
+  href: https://artifacts.apis.io/cognosos/hosts/cognosos-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cognosos-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cognosos/refs/heads/main/vendors/cognosos-vendors.yml
+  href: https://artifacts.apis.io/cognosos/vendors/cognosos-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cognosos-vendors.yml
@@ -46,7 +59,7 @@ common:
   type: Blog
   url: https://cognosos.com/blog/october-news-roundup/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cognosos/refs/heads/main/security/cognosos-domain-security.yml
+  href: https://artifacts.apis.io/cognosos/security/cognosos-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cognosos-domain-security.yml
@@ -93,36 +106,40 @@ overview: 'Cognosos is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   Cognosos'' developer surface includes engineering blog, documentation, API reference, getting-started guide, support, and 8 more developer resources.'
-random_paper: 17
+random_paper: 11
 score:
-  band: emerging
-  composite: 18.4
+  band: minimal
+  composite: 10.8
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 7
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.6
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 35.7
-    discoverability: 46.4
+    developer_ergonomics: 17.9
+    discoverability: 45.5
     operational_transparency: 0.0
+  previous_composite: 18.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 10.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 7.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/cognosos/cognosos-2026-11-03T124803.png
 security:
 - kind: domain-security
   name: Cognosos Domain Security

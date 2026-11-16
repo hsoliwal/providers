@@ -1,4 +1,19 @@
 ---
+access_model:
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +30,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-10-17'
+  score: 17.6
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
-- description: Serverless functions API documented at OpenFaaS docs.
+- baseURL: https://github.com
+  baseurl_source: spec
+  description: Serverless functions API documented at OpenFaaS docs.
   name: OpenFaaS API
-  slug: openfaas-api-2
+  slug: openfaas-api
 - baseURL: https://github.com
   baseurl_source: declared
   description: The Alexellis API from OpenFaaS — 1 operation(s) for alexellis.
@@ -70,47 +90,47 @@ common:
   type: GettingStarted
   url: https://docs.openfaas.com/contributing/get-started/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/openfaas/refs/heads/main/plans/openfaas-plans-pricing.yml
+  href: https://artifacts.apis.io/openfaas/plans/openfaas-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/openfaas-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openfaas/refs/heads/main/rules/openfaas-rules.yml
+  href: https://artifacts.apis.io/openfaas/rules/openfaas-rules.yml
   title: ''
   type: Spectral
   url: rules/openfaas-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openfaas/refs/heads/main/json-ld/openfaas-context.jsonld
+  href: https://artifacts.apis.io/openfaas/json-ld/openfaas-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/openfaas-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openfaas/refs/heads/main/vocabulary/openfaas-vocabulary.yml
+  href: https://artifacts.apis.io/openfaas/vocabulary/openfaas-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/openfaas-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openfaas/refs/heads/main/data-model/openfaas-data-model.yml
+  href: https://artifacts.apis.io/openfaas/data-model/openfaas-data-model.yml
   title: ''
   type: DataModel
   url: data-model/openfaas-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/openfaas/refs/heads/main/authentication/openfaas-authentication.yml
+  href: https://artifacts.apis.io/openfaas/authentication/openfaas-authentication.yml
   title: ''
   type: Authentication
   url: authentication/openfaas-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/openfaas/refs/heads/main/conformance/openfaas-conformance.yml
+  href: https://artifacts.apis.io/openfaas/conformance/openfaas-conformance.yml
   title: ''
   type: Conformance
   url: conformance/openfaas-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/openfaas/refs/heads/main/hosts/openfaas-hosts.yml
+  href: https://artifacts.apis.io/openfaas/hosts/openfaas-hosts.yml
   title: ''
   type: Hosts
   url: hosts/openfaas-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/openfaas/refs/heads/main/vendors/openfaas-vendors.yml
+  href: https://artifacts.apis.io/openfaas/vendors/openfaas-vendors.yml
   title: ''
   type: Vendors
   url: vendors/openfaas-vendors.yml
@@ -127,7 +147,7 @@ common:
   type: APIReference
   url: https://docs.openfaas.com/reference/yaml/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/openfaas/refs/heads/main/security/openfaas-domain-security.yml
+  href: https://artifacts.apis.io/openfaas/security/openfaas-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/openfaas-domain-security.yml
@@ -187,7 +207,7 @@ modified: '2026-10-14'
 name: OpenFaaS
 nav: Providers
 network: true
-overview: 'OpenFaaS is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Alexellis API, Async Function API, Auth API, and 4 more. Tagged areas include Company, Serverless, Open Source, Functions, and Kubernetes.
+overview: 'OpenFaaS is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Alexellis API, Async Function API, and 5 more. Tagged areas include Company, Serverless, Open Source, Functions, and Kubernetes.
 
 
   The OpenFaaS catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -198,7 +218,7 @@ plans:
 - name: Openfaas Plans Pricing
   plan_count: 3
   slug: openfaas-plans-pricing
-random_paper: 9
+random_paper: 5
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -214,21 +234,23 @@ rules:
   slug: openfaas-rules
 score:
   band: thin
-  composite: 33.7
+  composite: 28.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 19
     catalog_earned: 72.8
     catalog_earned_first_party: 12.0
     catalog_gap: 42.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.1
   facets:
-    access_clarity: 42.1
+    access_clarity: 36.8
     contract_governance: 22.0
-    contract_quality: 25.7
-    developer_ergonomics: 47.6
-    discoverability: 64.3
-    operational_transparency: 5.3
+    contract_quality: 25.8
+    developer_ergonomics: 29.8
+    discoverability: 63.4
+    operational_transparency: 2.6
+  previous_composite: 33.7
   provenance:
     conformance: derived
     contracts:
@@ -243,11 +265,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/openfaas/openfaas-2026-11-03T140639.png
 security:
 - kind: authentication
   name: Openfaas Authentication

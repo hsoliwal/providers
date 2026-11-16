@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -56,9 +60,6 @@ apis:
 artifact_total: 10
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: PicPurify Image and Video Moderation Image Analysis API
   slug: open-picpurify-image-analysis-api
 - collection_type: open
@@ -66,27 +67,27 @@ collections:
   slug: open-picpurify-video-analysis-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/picpurify/refs/heads/main/plans/picpurify-plans-pricing.yml
+  href: https://artifacts.apis.io/picpurify/plans/picpurify-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/picpurify-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/picpurify/refs/heads/main/rate-limits/picpurify-rate-limits.yml
+  href: https://artifacts.apis.io/picpurify/rate-limits/picpurify-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/picpurify-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/picpurify/refs/heads/main/finops/picpurify-finops.yml
+  href: https://artifacts.apis.io/picpurify/finops/picpurify-finops.yml
   title: ''
   type: FinOps
   url: finops/picpurify-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/picpurify/refs/heads/main/agentic-access/picpurify-agentic-access.yml
+  href: https://artifacts.apis.io/picpurify/agentic-access/picpurify-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/picpurify-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/picpurify/refs/heads/main/security/picpurify-domain-security.yml
+  href: https://artifacts.apis.io/picpurify/security/picpurify-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/picpurify-domain-security.yml
@@ -116,7 +117,7 @@ finops:
 - has_sources: false
   method: generated
   name: Picpurify Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: picpurify-finops
   template: true
@@ -129,35 +130,51 @@ network: true
 overview: 'PicPurify publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Image Analysis API and Video Analysis API. Tagged areas include Image Moderation, Content Moderation, Computer Vision, and Weapon Detection.
 
 
+  The PicPurify catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   PicPurify''s developer surface includes documentation, pricing, signup flow, and 7 more developer resources.'
 plans:
 - name: Picpurify Plans Pricing
   plan_count: 3
   slug: picpurify-plans-pricing
-random_paper: 19
+random_paper: 3
 rate_limits:
 - limit_count: 5
   name: Picpurify Rate Limits
   slug: picpurify-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 82
+  extends:
+  - spectral:oas
+  name: PicPurify API Rules
+  rule_count: 41
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 1
+    warn: 1
+  slug: picpurify-rules
 score:
   band: emerging
-  composite: 22.1
+  composite: 23.8
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 33.0
+    artifact_dirs: 12
+    catalog_earned: 37.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 82.0
+    catalog_gap: 77.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 43.5
     developer_ergonomics: 16.7
     discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 23.6
+  previous_composite: 23.8
   provenance:
     agentic_access: derived
     contracts:
@@ -171,13 +188,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/picpurify/refs/heads/main/screenshots/picpurify-2026-06-20T191702.png
+screenshot: https://apis.io/screenshots/picpurify/picpurify-2026-06-20T191702.png
 security:
 - kind: domain-security
   name: Picpurify Domain Security

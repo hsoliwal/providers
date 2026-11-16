@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Associated Bank surfaces core-banking integration through its core provider, Jack Henry, via the jXchange SOAP API platform. Documented services for this institution include Account History Search, Ac
@@ -46,12 +49,12 @@ common:
   type: ChangeLog
   url: https://newsroom.associatedbank.com/releases
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/associated-banc-corp/refs/heads/main/security/associated-banc-corp-domain-security.yml
+  href: https://artifacts.apis.io/associated-banc-corp/security/associated-banc-corp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/associated-banc-corp-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/associated-banc-corp/refs/heads/main/llms/associated-banc-corp-llms.txt
+  href: https://artifacts.apis.io/associated-banc-corp/llms/associated-banc-corp-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/associated-banc-corp-llms.txt
@@ -92,12 +95,12 @@ overview: 'Associated Bank is listed with 1 API on the [APIs.io](https://apis.io
 
 
   Associated Bank''s developer surface includes changelog, engineering blog, support, and 6 more developer resources.'
-random_paper: 6
+random_paper: 18
 score:
   band: emerging
   composite: 12.0
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -125,14 +128,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 7.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/associated-banc-corp/refs/heads/main/screenshots/associated-banc-corp-2026-07-25T201444.png
+screenshot: https://apis.io/screenshots/associated-banc-corp/associated-banc-corp-2026-07-25T201444.png
 security:
 - kind: domain-security
   name: Associated Banc Corp Domain Security

@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 6
@@ -73,11 +77,8 @@ apis:
   description: Global operations
   name: WireMock System API
   slug: wiremock-system-api
-artifact_total: 26
+artifact_total: 25
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: WireMock Admin API
   slug: open-wiremock-admin-api
@@ -101,32 +102,32 @@ collections:
   slug: open-wiremock-system-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wiremock/refs/heads/main/plans/wiremock-plans-pricing.yml
+  href: https://artifacts.apis.io/wiremock/plans/wiremock-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/wiremock-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/wiremock/refs/heads/main/rate-limits/wiremock-rate-limits.yml
+  href: https://artifacts.apis.io/wiremock/rate-limits/wiremock-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/wiremock-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/wiremock/refs/heads/main/finops/wiremock-finops.yml
+  href: https://artifacts.apis.io/wiremock/finops/wiremock-finops.yml
   title: ''
   type: FinOps
   url: finops/wiremock-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/wiremock/refs/heads/main/capabilities/wiremock-capability-edges.yml
+  href: https://artifacts.apis.io/wiremock/capabilities/wiremock-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/wiremock-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wiremock/refs/heads/main/agentic-access/wiremock-agentic-access.yml
+  href: https://artifacts.apis.io/wiremock/agentic-access/wiremock-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/wiremock-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wiremock/refs/heads/main/security/wiremock-domain-security.yml
+  href: https://artifacts.apis.io/wiremock/security/wiremock-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wiremock-domain-security.yml
@@ -215,7 +216,7 @@ finops:
 - has_sources: false
   method: generated
   name: Wiremock Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: wiremock-finops
   template: true
@@ -249,7 +250,7 @@ plans:
 - name: Wiremock Plans Pricing
   plan_count: 3
   slug: wiremock-plans-pricing
-random_paper: 7
+random_paper: 1
 rate_limits:
 - limit_count: 5
   name: Wiremock Rate Limits
@@ -282,13 +283,13 @@ score:
   band: thin
   composite: 30.5
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 21
     catalog_earned: 60.4
     catalog_earned_first_party: 0.0
     catalog_gap: 54.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 27.3
@@ -296,7 +297,7 @@ score:
     developer_ergonomics: 33.3
     discoverability: 64.3
     operational_transparency: 13.2
-  previous_composite: 32.0
+  previous_composite: 30.5
   provenance:
     agentic_access: derived
     contracts:
@@ -310,13 +311,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/wiremock/refs/heads/main/screenshots/wiremock-2026-06-20T201523.png
+screenshot: https://apis.io/screenshots/wiremock/wiremock-2026-06-20T201523.png
 security:
 - kind: domain-security
   name: Wiremock Domain Security

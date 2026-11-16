@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -74,37 +79,37 @@ common:
   type: Login
   url: https://app.seedlegals.com/login
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/seedlegals/refs/heads/main/mcp/seedlegals-mcp.yml
+  href: https://artifacts.apis.io/seedlegals/mcp/seedlegals-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/seedlegals-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/seedlegals/refs/heads/main/llms/seedlegals-llms.txt
+  href: https://artifacts.apis.io/seedlegals/llms/seedlegals-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/seedlegals-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/seedlegals/refs/heads/main/well-known/seedlegals-well-known.yml
+  href: https://artifacts.apis.io/seedlegals/well-known/seedlegals-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/seedlegals-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/seedlegals/refs/heads/main/authentication/seedlegals-authentication.yml
+  href: https://artifacts.apis.io/seedlegals/authentication/seedlegals-authentication.yml
   title: ''
   type: Authentication
   url: authentication/seedlegals-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/seedlegals/refs/heads/main/scopes/seedlegals-scopes.yml
+  href: https://artifacts.apis.io/seedlegals/scopes/seedlegals-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/seedlegals-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/seedlegals/refs/heads/main/conformance/seedlegals-conformance.yml
+  href: https://artifacts.apis.io/seedlegals/conformance/seedlegals-conformance.yml
   title: ''
   type: Conformance
   url: conformance/seedlegals-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/seedlegals/refs/heads/main/security/seedlegals-domain-security.yml
+  href: https://artifacts.apis.io/seedlegals/security/seedlegals-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/seedlegals-domain-security.yml
@@ -124,7 +129,7 @@ overview: 'SeedLegals is profiled on the [APIs.io](https://apis.io/) network. Ta
 
 
   SeedLegals'' developer surface includes pricing, engineering blog, support, signup flow, authentication, and 11 more developer resources.'
-random_paper: 15
+random_paper: 17
 scopes:
 - name: Seedlegals Scopes
   scope_count: 7
@@ -134,7 +139,7 @@ score:
   band: emerging
   composite: 22.3
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -158,14 +163,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/seedlegals/refs/heads/main/screenshots/seedlegals-2026-09-02T154736.png
+screenshot: https://apis.io/screenshots/seedlegals/seedlegals-2026-09-02T154736.png
 security:
 - kind: authentication
   name: Seedlegals Authentication

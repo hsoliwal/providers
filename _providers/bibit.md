@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -41,7 +45,7 @@ common:
   type: BlogRSS
   url: https://blog.bibit.id/blog-1?format=rss
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bibit/refs/heads/main/security/bibit-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bibit/security/bibit-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/bibit-vulnerability-disclosure.yml
@@ -50,22 +54,22 @@ common:
   type: Security
   url: https://bibit.id/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bibit/refs/heads/main/security/bibit-domain-security.yml
+  href: https://artifacts.apis.io/bibit/security/bibit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bibit-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bibit/refs/heads/main/well-known/bibit-well-known.yml
+  href: https://artifacts.apis.io/bibit/well-known/bibit-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bibit-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bibit/refs/heads/main/well-known/bibit-security.txt
+  href: https://artifacts.apis.io/bibit/well-known/bibit-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bibit-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bibit/refs/heads/main/llms/bibit-llms.txt
+  href: https://artifacts.apis.io/bibit/llms/bibit-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bibit-llms.txt
@@ -101,12 +105,12 @@ overview: 'Bibit is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 
 
   Bibit''s developer surface includes engineering blog, support, and 10 more developer resources.'
-random_paper: 16
+random_paper: 18
 score:
   band: emerging
   composite: 12.5
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -134,14 +138,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bibit/refs/heads/main/screenshots/bibit-2026-10-11T182925.png
+screenshot: https://apis.io/screenshots/bibit/bibit-2026-10-11T182925.png
 security:
 - kind: domain-security
   name: Bibit Domain Security

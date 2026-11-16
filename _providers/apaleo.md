@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,11 +11,11 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
-  band: agent-ready
-  band_gated_from: agent-native
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
-    idempotency: false
+    idempotency: verified
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 56.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 41
   slug: apaleo-agentic-access
   summary_line: 41 operations · 17 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.apaleo.com/booking/v1
   baseurl_source: declared
@@ -75,11 +81,68 @@ apis:
   description: Account- and property-level configuration.
   name: apaleo Settings API
   slug: apaleo-settings-api
-artifact_total: 22
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The Authorization API from apaleo — 6 operation(s) for authorization.
+  name: apaleo Authorization API
+  slug: apaleo-authorization-api
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The AuthorizationActions API from apaleo — 5 operation(s) for authorizationactions.
+  name: apaleo Authorization Actions API
+  slug: apaleo-authorizationactions-api
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The Block API from apaleo — 4 operation(s) for block.
+  name: apaleo Block API
+  slug: apaleo-block-api
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The BlockActions API from apaleo — 8 operation(s) for blockactions.
+  name: apaleo Block Actions API
+  slug: apaleo-blockactions-api
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The Group API from apaleo — 4 operation(s) for group.
+  name: apaleo Group API
+  slug: apaleo-group-api
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The GroupActions API from apaleo — 1 operation(s) for groupactions.
+  name: apaleo Group Actions API
+  slug: apaleo-groupactions-api
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The Offer API from apaleo — 5 operation(s) for offer.
+  name: apaleo Offer API
+  slug: apaleo-offer-api
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The PaymentAccountActions API from apaleo — 5 operation(s) for paymentaccountactions.
+  name: apaleo Payment Account Actions API
+  slug: apaleo-paymentaccountactions-api
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The Reservation API from apaleo — 6 operation(s) for reservation.
+  name: apaleo Reservation API
+  slug: apaleo-reservation-api
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The ReservationActions API from apaleo — 19 operation(s) for reservationactions.
+  name: apaleo Reservation Actions API
+  slug: apaleo-reservationactions-api
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The Types API from apaleo — 2 operation(s) for types.
+  name: apaleo Types API
+  slug: apaleo-types-api
+- baseURL: https://api.apaleo.com/booking/v1
+  baseurl_source: declared
+  description: The Payment Account API from apaleo — 8 operation(s) for payment account.
+  name: apaleo Payment Account API
+  slug: apaleo-payment-account-api
+artifact_total: 34
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: apaleo Platform Availability API
   slug: open-apaleo-availability-api
@@ -103,27 +166,27 @@ collections:
   slug: open-apaleo
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apaleo/refs/heads/main/capabilities/apaleo-capability-edges.yml
+  href: https://artifacts.apis.io/apaleo/capabilities/apaleo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/apaleo-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apaleo/refs/heads/main/agentic-access/apaleo-agentic-access.yml
+  href: https://artifacts.apis.io/apaleo/agentic-access/apaleo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/apaleo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apaleo/refs/heads/main/security/apaleo-domain-security.yml
+  href: https://artifacts.apis.io/apaleo/security/apaleo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apaleo-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apaleo/refs/heads/main/authentication/apaleo-authentication.yml
+  href: https://artifacts.apis.io/apaleo/authentication/apaleo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/apaleo-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apaleo/refs/heads/main/scopes/apaleo-scopes.yml
+  href: https://artifacts.apis.io/apaleo/scopes/apaleo-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/apaleo-scopes.yml
@@ -144,17 +207,17 @@ common:
   type: Documentation
   url: https://apaleo.dev
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apaleo/refs/heads/main/plans/apaleo-plans-pricing.yml
+  href: https://artifacts.apis.io/apaleo/plans/apaleo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apaleo-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apaleo/refs/heads/main/rate-limits/apaleo-rate-limits.yml
+  href: https://artifacts.apis.io/apaleo/rate-limits/apaleo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apaleo-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apaleo/refs/heads/main/finops/apaleo-finops.yml
+  href: https://artifacts.apis.io/apaleo/finops/apaleo-finops.yml
   title: ''
   type: FinOps
   url: finops/apaleo-finops.yml
@@ -182,7 +245,10 @@ modified: '2026-06-25'
 name: apaleo
 nav: Providers
 network: true
-overview: 'apaleo publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Availability API, Booking API, Finance API, and 3 more. Tagged areas include Hospitality, PMS, Property Management, Hotels, and API-First.
+overview: 'apaleo publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Availability API, Booking API, Finance API, and 15 more. Tagged areas include Hospitality, PMS, Property Management, Hotels, and API-First.
+
+
+  The apaleo catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   apaleo''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
@@ -190,11 +256,24 @@ plans:
 - name: Apaleo Plans Pricing
   plan_count: 3
   slug: apaleo-plans-pricing
-random_paper: 10
+random_paper: 2
 rate_limits:
 - limit_count: 2
   name: Apaleo Rate Limits
   slug: apaleo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: apaleo API Rules
+  rule_count: 63
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 4
+    warn: 9
+  slug: apaleo-rules
 scopes:
 - name: Apaleo Scopes
   scope_count: 10
@@ -202,30 +281,30 @@ scopes:
   summary_line: 10 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 27.0
+  composite: 28.6
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 42.0
+    artifact_dirs: 20
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.4
+  delta: -0.2
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
-    contract_quality: 44.4
+    contract_governance: 13.6
+    contract_quality: 44.2
     developer_ergonomics: 31.0
     discoverability: 68.3
     operational_transparency: 7.9
-  previous_composite: 34.4
+  previous_composite: 28.8
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 52.0
       derived: 0
       marker_coverage: 0.0
-      total: 6
+      total: 25
     mcp: first-party
   regulatory:
     applies: true
@@ -233,13 +312,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/apaleo/refs/heads/main/screenshots/apaleo-2026-07-25T200530.png
+screenshot: https://apis.io/screenshots/apaleo/apaleo-2026-07-25T200530.png
 security:
 - kind: authentication
   name: Apaleo Authentication

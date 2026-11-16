@@ -1,9 +1,9 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: medium
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: verified
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
-    reversibility_documented: documented
+    reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.2
-  scored_at: '2026-10-17'
+  score: 48.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 82
   human_in_the_loop: 5
@@ -60,11 +63,6 @@ apis:
   description: Endpoints to programmatically manage API tokens
   name: Lightspark API Tokens API
   slug: lightspark-api-tokens-api
-- baseURL: https://api.lightspark.com/grid/2025-10-13
-  baseurl_source: declared
-  description: The Available UMA Providers API from Lightspark — 1 operation(s) for available uma providers.
-  name: Lightspark Available UMA Providers API
-  slug: lightspark-available-uma-providers-api
 - baseURL: https://api.lightspark.com/grid/2025-10-13
   baseurl_source: declared
   description: Card management endpoints. Issue debit cards against an internal account, freeze / unfreeze, close, manage card funding sources, and list card transactions.
@@ -160,7 +158,17 @@ apis:
   description: Webhook endpoints and configuration for receiving notifications
   name: Lightspark Webhooks API
   slug: lightspark-webhooks-api
-artifact_total: 159
+- baseURL: https://api.lightspark.com/grid/2025-10-13
+  baseurl_source: declared
+  description: A support chat between the cardholder and Lightspark's care agent, driven from the partner's own app. The platform calls with its ordinary Grid credential, but the person typing is the cardholder rath
+  name: Lightspark Embedded Care API
+  slug: lightspark-embedded-care-api
+- baseURL: https://api.lightspark.com/grid/2025-10-13
+  baseurl_source: declared
+  description: Build, deliver, and evidence a Regulation E periodic statement for a customer's internal account. A statement period is a calendar month in US Central time (`America/Chicago`). A statement is issued f
+  name: Lightspark Periodic Statements API
+  slug: lightspark-periodic-statements-api
+artifact_total: 166
 asyncapis:
 - description: ''
   name: Lightspark Grid Webhooks
@@ -233,9 +241,6 @@ collections:
   name: Grid Agent Management Transactions API
   slug: postman-lightspark-transactions-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Grid Agent Management API
   slug: open-lightspark-agent-management-api
 - collection_type: open
@@ -303,62 +308,62 @@ collections:
   slug: open-lightspark-transactions-api
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/rate-limits/lightspark-rate-limits.yml
+  href: https://artifacts.apis.io/lightspark/rate-limits/lightspark-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/lightspark-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/rules/lightspark-rules.yml
+  href: https://artifacts.apis.io/lightspark/rules/lightspark-rules.yml
   title: ''
   type: Spectral
   url: rules/lightspark-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/rules/lightspark-grid-api-spectral-rules.yml
+  href: https://artifacts.apis.io/lightspark/rules/lightspark-grid-api-spectral-rules.yml
   title: ''
   type: Spectral
   url: rules/lightspark-grid-api-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/json-ld/lightspark-context.jsonld
+  href: https://artifacts.apis.io/lightspark/json-ld/lightspark-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/lightspark-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/vocabulary/lightspark-vocabulary.yml
+  href: https://artifacts.apis.io/lightspark/vocabulary/lightspark-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/lightspark-vocabulary.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/changelog/lightspark-changelog.yml
+  href: https://artifacts.apis.io/lightspark/changelog/lightspark-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/lightspark-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/errors/lightspark-problem-types.yml
+  href: https://artifacts.apis.io/lightspark/errors/lightspark-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/lightspark-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/a2a/lightspark-a2a.yml
+  href: https://artifacts.apis.io/lightspark/a2a/lightspark-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/lightspark-a2a.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/hosts/lightspark-hosts.yml
+  href: https://artifacts.apis.io/lightspark/hosts/lightspark-hosts.yml
   title: ''
   type: Hosts
   url: hosts/lightspark-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/vendors/lightspark-vendors.yml
+  href: https://artifacts.apis.io/lightspark/vendors/lightspark-vendors.yml
   title: ''
   type: Vendors
   url: vendors/lightspark-vendors.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/capabilities/lightspark-capability-edges.yml
+  href: https://artifacts.apis.io/lightspark/capabilities/lightspark-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/lightspark-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/overlays/lightspark-grid-overlay.yaml
+  href: https://artifacts.apis.io/lightspark/overlays/lightspark-grid-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/lightspark-grid-overlay.yaml
@@ -435,7 +440,7 @@ common:
   type: ChangeLog
   url: https://docs.lightspark.com/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/changelog/lightspark-changelog.yml
+  href: https://artifacts.apis.io/lightspark/changelog/lightspark-changelog.yml
   title: ''
   type: ChangeLogArtifact
   url: changelog/lightspark-changelog.yml
@@ -444,7 +449,7 @@ common:
   type: Deprecation
   url: https://docs.lightspark.com/api-reference/environments
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/lifecycle/lightspark-lifecycle.yml
+  href: https://artifacts.apis.io/lightspark/lifecycle/lightspark-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lightspark-lifecycle.yml
@@ -453,107 +458,107 @@ common:
   type: Security
   url: https://www.lightspark.com/news/lightspark/expanding-our-bug-bounty-program
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/security/lightspark-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/lightspark/security/lightspark-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/lightspark-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/security/lightspark-trust-center.yml
+  href: https://artifacts.apis.io/lightspark/security/lightspark-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/lightspark-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/security/lightspark-trust-center.yml
+  href: https://artifacts.apis.io/lightspark/security/lightspark-trust-center.yml
   title: ''
   type: Compliance
   url: security/lightspark-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/security/lightspark-domain-security.yml
+  href: https://artifacts.apis.io/lightspark/security/lightspark-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lightspark-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/conformance/lightspark-conformance.yml
+  href: https://artifacts.apis.io/lightspark/conformance/lightspark-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lightspark-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/authentication/lightspark-authentication.yml
+  href: https://artifacts.apis.io/lightspark/authentication/lightspark-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lightspark-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/agentic-access/lightspark-agentic-access.yml
+  href: https://artifacts.apis.io/lightspark/agentic-access/lightspark-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/lightspark-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/mcp/lightspark-mcp.yml
+  href: https://artifacts.apis.io/lightspark/mcp/lightspark-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/lightspark-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/lightspark/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/llms/lightspark-llms.txt
+  href: https://artifacts.apis.io/lightspark/llms/lightspark-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lightspark-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/packages/lightspark-packages.yml
+  href: https://artifacts.apis.io/lightspark/packages/lightspark-packages.yml
   title: ''
   type: Packages
   url: packages/lightspark-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/packages/lightspark-packages.yml
+  href: https://artifacts.apis.io/lightspark/packages/lightspark-packages.yml
   title: ''
   type: SDKs
   url: packages/lightspark-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/cli/lightspark-cli.yml
+  href: https://artifacts.apis.io/lightspark/cli/lightspark-cli.yml
   title: ''
   type: CLI
   url: cli/lightspark-cli.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/sandbox/lightspark-sandbox.yml
+  href: https://artifacts.apis.io/lightspark/sandbox/lightspark-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/lightspark-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/conventions/lightspark-conventions.yml
+  href: https://artifacts.apis.io/lightspark/conventions/lightspark-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lightspark-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/conventions/lightspark-conventions.yml
+  href: https://artifacts.apis.io/lightspark/conventions/lightspark-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/lightspark-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/errors/lightspark-error-codes.yml
+  href: https://artifacts.apis.io/lightspark/errors/lightspark-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/lightspark-error-codes.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/errors/lightspark-problem-types.yml
+  href: https://artifacts.apis.io/lightspark/errors/lightspark-problem-types.yml
   title: ''
   type: ProblemTypes
   url: errors/lightspark-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/data-model/lightspark-data-model.yml
+  href: https://artifacts.apis.io/lightspark/data-model/lightspark-data-model.yml
   title: ''
   type: DataModel
   url: data-model/lightspark-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/asyncapi/lightspark-grid-webhooks.yml
+  href: https://artifacts.apis.io/lightspark/asyncapi/lightspark-grid-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/lightspark-grid-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/well-known/lightspark-well-known.yml
+  href: https://artifacts.apis.io/lightspark/well-known/lightspark-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lightspark-well-known.yml
@@ -596,13 +601,13 @@ json_schemas:
   property_count: 1
   slug: lightspark-auth-credential-challenge-request
 - name: Auth Method Response
-  property_count: 0
+  property_count: 8
   slug: lightspark-auth-method-response
 - name: Authentication Session
-  property_count: 0
+  property_count: 9
   slug: lightspark-auth-session
 - name: Authentication Signed Request Challenge
-  property_count: 0
+  property_count: 4
   slug: lightspark-auth-signed-request-challenge
 - name: BeneficialOwnerCreateRequest
   property_count: 4
@@ -683,16 +688,16 @@ json_schemas:
   property_count: 1
   slug: lightspark-execute-quote-request
 - name: ExternalAccountCreateRequest
-  property_count: 0
+  property_count: 5
   slug: lightspark-external-account-create-request
 - name: ExternalAccountListResponse
   property_count: 4
   slug: lightspark-external-account-list-response
 - name: ExternalAccount
-  property_count: 0
+  property_count: 9
   slug: lightspark-external-account
 - name: Incoming Transaction
-  property_count: 0
+  property_count: 20
   slug: lightspark-incoming-transaction
 - name: Internal Account Export Request
   property_count: 1
@@ -713,7 +718,7 @@ json_schemas:
   property_count: 4
   slug: lightspark-kyc-link-response
 - name: Outgoing Transaction
-  property_count: 0
+  property_count: 29
   slug: lightspark-outgoing-transaction
 - name: PlatformConfig
   property_count: 9
@@ -731,7 +736,7 @@ json_schemas:
   property_count: 18
   slug: lightspark-quote
 - name: ReceiverExternalAccountLookupResponse
-  property_count: 0
+  property_count: 4
   slug: lightspark-receiver-external-account-lookup-response
 - name: RejectPaymentRequest
   property_count: 1
@@ -813,7 +818,7 @@ modified: '2026-07-19'
 name: Lightspark
 nav: Providers
 network: true
-overview: 'Lightspark publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Management API, Agent Operations API, API Tokens API, and 20 more. Tagged areas include Company, Payments, Cross-Border Payments, Stablecoins, and Bitcoin.
+overview: 'Lightspark publishes 24 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Management API, Agent Operations API, API Tokens API, and 21 more. Tagged areas include Company, Payments, Cross-Border Payments, Stablecoins, and Bitcoin.
 
 
   The Lightspark catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
@@ -824,7 +829,7 @@ plans:
 - name: Lightspark Plans Pricing
   plan_count: 0
   slug: lightspark-plans-pricing
-random_paper: 3
+random_paper: 1
 rate_limits:
 - limit_count: 5
   name: Lightspark Rate Limits
@@ -868,31 +873,31 @@ rules:
   slug: lightspark-rules
 score:
   band: exemplar
-  composite: 67.0
+  composite: 68.0
   coverage:
-    artifact_dirs: 35
+    artifact_dirs: 37
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.7
   facets:
     access_clarity: 36.8
     contract_governance: 35.6
-    contract_quality: 75.0
+    contract_quality: 78.9
     developer_ergonomics: 81.5
     discoverability: 75.0
     operational_transparency: 68.4
-  previous_composite: 66.4
+  previous_composite: 67.3
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 23
+      marker_coverage: 48.9
+      total: 47
     mcp: first-party
     skills: derived
   regulatory:
@@ -901,13 +906,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 32.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/lightspark/refs/heads/main/screenshots/lightspark-2026-07-25T225132.png
+screenshot: https://apis.io/screenshots/lightspark/lightspark-2026-07-25T225132.png
 security:
 - kind: authentication
   name: Lightspark Authentication
@@ -925,6 +930,22 @@ security:
   name: Lightspark Trust Center
   slug: lightspark-trust-center
   summary_line: SOC 2 Type 1
+skill_count: 7
+skills:
+- name: lightspark-agent-payments
+  slug: lightspark-agent-payments
+- name: lightspark-card-issuing
+  slug: lightspark-card-issuing
+- name: lightspark-cross-border-payout
+  slug: lightspark-cross-border-payout
+- name: lightspark-customer-onboarding-kyc
+  slug: lightspark-customer-onboarding-kyc
+- name: grid-api
+  slug: lightspark-grid-api-SKILL
+- name: lightspark-uma-payment
+  slug: lightspark-uma-payment
+- name: lightspark-webhook-verification
+  slug: lightspark-webhook-verification
 slug: lightspark
 tags:
 - Company

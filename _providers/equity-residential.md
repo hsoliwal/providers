@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,12 +37,12 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/equity-residential/refs/heads/main/security/equity-residential-domain-security.yml
+  href: https://artifacts.apis.io/equity-residential/security/equity-residential-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/equity-residential-domain-security.yml
@@ -74,17 +79,17 @@ common:
   type: TermsOfService
   url: https://www.equityapartments.com/terms
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/equity-residential/refs/heads/main/llms/equity-residential-llms.txt
+  href: https://artifacts.apis.io/equity-residential/llms/equity-residential-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/equity-residential-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/equity-residential/refs/heads/main/plans/equity-residential-plans-pricing.yml
+  href: https://artifacts.apis.io/equity-residential/plans/equity-residential-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/equity-residential-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/equity-residential/refs/heads/main/rate-limits/equity-residential-rate-limits.yml
+  href: https://artifacts.apis.io/equity-residential/rate-limits/equity-residential-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/equity-residential-rate-limits.yml
@@ -136,7 +141,7 @@ press:
 - date: ''
   title: eqr-def14a_20200625.htm
   url: https://www.sec.gov/Archives/edgar/data/906107/000156459020017733/eqr-def14a_20200625.htm
-random_paper: 20
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: Equity Residential Rate Limits
@@ -166,14 +171,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/equity-residential/refs/heads/main/screenshots/equity-residential-2026-06-20T180807.png
+screenshot: https://apis.io/screenshots/equity-residential/equity-residential-2026-06-20T180807.png
 security:
 - kind: domain-security
   name: Equity Residential Domain Security

@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Private first-party HTTP API that backs the Firefly Health member web app and iOS/Android apps. Observed at https://api-prod.firefly.health with an /api/v2/ base path referenced by the members.firefly
@@ -42,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/firefly-health/refs/heads/main/security/firefly-health-domain-security.yml
+  href: https://artifacts.apis.io/firefly-health/security/firefly-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/firefly-health-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/firefly-health/refs/heads/main/conformance/firefly-health-conformance.yml
+  href: https://artifacts.apis.io/firefly-health/conformance/firefly-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/firefly-health-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/firefly-health/refs/heads/main/lifecycle/firefly-health-lifecycle.yml
+  href: https://artifacts.apis.io/firefly-health/lifecycle/firefly-health-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/firefly-health-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/firefly-health/refs/heads/main/llms/firefly-health-llms.txt
+  href: https://artifacts.apis.io/firefly-health/llms/firefly-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/firefly-health-llms.txt
@@ -149,18 +152,18 @@ overview: 'Firefly Health is listed with 1 API on the [APIs.io](https://apis.io/
 
 
   Firefly Health''s developer surface includes signup flow, support, FAQ, engineering blog, YouTube channel, and 18 more developer resources.'
-random_paper: 20
+random_paper: 12
 score:
   band: emerging
   composite: 20.1
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
@@ -173,7 +176,7 @@ score:
     countries:
     - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 20.0
+  previous_composite: 20.1
   provenance:
     conformance: first-party
   regulatory:
@@ -182,14 +185,14 @@ score:
     regime: Health
     regime_id: health
     score: 23.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/firefly-health/refs/heads/main/screenshots/firefly-health-2026-08-07T165314.png
+screenshot: https://apis.io/screenshots/firefly-health/firefly-health-2026-08-07T165314.png
 security:
 - kind: domain-security
   name: Firefly Health Domain Security

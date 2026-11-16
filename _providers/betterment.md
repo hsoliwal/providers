@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Paid
   onboarding: unknown
   pricing: paid
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Betterment investment and cash account data is accessible to third-party developers via the Plaid open banking aggregator. Through Plaid, developers can retrieve account balances, holdings, transactio
@@ -46,12 +50,12 @@ common:
   type: BlogRSS
   url: https://www.betterment.com/resources/rss.xml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/betterment/refs/heads/main/security/betterment-trust-center.yml
+  href: https://artifacts.apis.io/betterment/security/betterment-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/betterment-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/betterment/refs/heads/main/security/betterment-domain-security.yml
+  href: https://artifacts.apis.io/betterment/security/betterment-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/betterment-domain-security.yml
@@ -100,17 +104,17 @@ common:
   type: SecurityPage
   url: https://www.betterment.com/resources/built-two-factor-authentication-betterment-accounts/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/betterment/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/betterment/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/betterment/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/betterment/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/betterment/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/betterment/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
@@ -142,7 +146,7 @@ plans:
 - name: Plans
   plan_count: 4
   slug: plans
-random_paper: 4
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -151,13 +155,13 @@ score:
   band: emerging
   composite: 18.0
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.0
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
@@ -165,21 +169,21 @@ score:
     developer_ergonomics: 11.9
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 23.6
+  previous_composite: 18.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 15.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/betterment/refs/heads/main/screenshots/betterment-2026-06-20T173216.png
+screenshot: https://apis.io/screenshots/betterment/betterment-2026-06-20T173216.png
 security:
 - kind: domain-security
   name: Betterment Domain Security

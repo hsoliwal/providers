@@ -1,14 +1,20 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
+  - rate-limits
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -26,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.8
-  scored_at: '2026-10-17'
+  score: 50.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 65
   human_in_the_loop: 0
@@ -159,60 +168,60 @@ apis:
   description: The Workspace API from Dovetail — 2 operation(s) for workspace.
   name: Dovetail Workspace API
   slug: dovetail-workspace-api
-artifact_total: 30
+artifact_total: 31
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/agentic-access/dovetail-agentic-access.yml
+  href: https://artifacts.apis.io/dovetail/agentic-access/dovetail-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dovetail-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/rules/dovetail-rules.yml
+  href: https://artifacts.apis.io/dovetail/rules/dovetail-rules.yml
   title: ''
   type: Spectral
   url: rules/dovetail-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/vocabulary/dovetail-vocabulary.yml
+  href: https://artifacts.apis.io/dovetail/vocabulary/dovetail-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/dovetail-vocabulary.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/lifecycle/dovetail-lifecycle.yml
+  href: https://artifacts.apis.io/dovetail/lifecycle/dovetail-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/dovetail-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/conformance/dovetail-conformance.yml
+  href: https://artifacts.apis.io/dovetail/conformance/dovetail-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dovetail-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/a2a/dovetail-a2a.yml
+  href: https://artifacts.apis.io/dovetail/a2a/dovetail-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/dovetail-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/well-known/dovetail-well-known.yml
+  href: https://artifacts.apis.io/dovetail/well-known/dovetail-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/dovetail-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/hosts/dovetail-hosts.yml
+  href: https://artifacts.apis.io/dovetail/hosts/dovetail-hosts.yml
   title: ''
   type: Hosts
   url: hosts/dovetail-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/integrations/dovetail-integration-edges.yml
+  href: https://artifacts.apis.io/dovetail/integrations/dovetail-integration-edges.yml
   title: ''
   type: IntegrationEdges
   url: integrations/dovetail-integration-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/vendors/dovetail-vendors.yml
+  href: https://artifacts.apis.io/dovetail/vendors/dovetail-vendors.yml
   title: ''
   type: Vendors
   url: vendors/dovetail-vendors.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/plans/dovetail-plans-pricing.yml
+  href: https://artifacts.apis.io/dovetail/plans/dovetail-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dovetail-plans-pricing.yml
@@ -241,7 +250,7 @@ common:
   type: GettingStarted
   url: https://developers.dovetail.com/docs/introduction
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/authentication/dovetail-authentication.yml
+  href: https://artifacts.apis.io/dovetail/authentication/dovetail-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dovetail-authentication.yml
@@ -282,7 +291,7 @@ common:
   type: ChangeLog
   url: https://dovetail.com/changelog/dovetail-api/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/changelog/dovetail-changelog.yml
+  href: https://artifacts.apis.io/dovetail/changelog/dovetail-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/dovetail-changelog.yml
@@ -295,47 +304,63 @@ common:
   type: TrustCenter
   url: https://trust.dovetail.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/mcp/dovetail-mcp.yml
+  href: https://artifacts.apis.io/dovetail/mcp/dovetail-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/dovetail-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/llms/dovetail-llms.txt
+  href: https://artifacts.apis.io/dovetail/llms/dovetail-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dovetail-llms.txt
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/rate-limits/dovetail-rate-limits.yml
+  href: https://artifacts.apis.io/dovetail/rate-limits/dovetail-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dovetail-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/conventions/dovetail-conventions.yml
+  href: https://artifacts.apis.io/dovetail/conventions/dovetail-conventions.yml
   title: ''
   type: Conventions
   url: conventions/dovetail-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/errors/dovetail-problem-types.yml
+  href: https://artifacts.apis.io/dovetail/errors/dovetail-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/dovetail-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/data-model/dovetail-data-model.yml
+  href: https://artifacts.apis.io/dovetail/data-model/dovetail-data-model.yml
   title: ''
   type: DataModel
   url: data-model/dovetail-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/lifecycle/dovetail-lifecycle.yml
+  href: https://artifacts.apis.io/dovetail/lifecycle/dovetail-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/dovetail-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/security/dovetail-domain-security.yml
+  href: https://artifacts.apis.io/dovetail/security/dovetail-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dovetail-domain-security.yml
+- group: build
+  title: ''
+  type: GitHubOrganization
+  url: https://github.com/dovetail
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://docs.dovetail.com/
 created: '2026-07-17'
 description: Dovetail is a customer intelligence platform that aggregates customer feedback from sales calls, support tickets, user-research sessions, surveys and other channels, then uses AI to transcribe, analyze, tag and structure it into a searchable research repository. Teams across product, design, research, customer experience, sales and marketing turn that signal into insights, docs, dashboards and automated agents. The Dovetail Public API (base https://dovetail.com/api/v1) exposes projects, folders, docs, insights, data (notes), highlights, tags, themes, channels, topics, contacts, users, custom fields, files, comments and transcripts, plus Magic Search, Search V2 and Magic Summarize, and an official hosted MCP server for AI agents. Backed by Accel and Felicis.
+finops:
+- has_sources: true
+  method: derived
+  name: Dovetail Finops
+  primary_unit: user/month
+  service_category: ''
+  slug: dovetail-finops
+  template: false
 image: https://dovetail.com/media/Social_Meta1.png
 layout: provider
 mcp_servers:
@@ -352,12 +377,12 @@ overview: 'Dovetail publishes 23 API contracts indexed on the [APIs.io](https://
   The Dovetail catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Dovetail''s developer surface includes documentation, API reference, getting-started guide, authentication, signup flow, pricing, support, and 31 more developer resources.'
+  Dovetail''s developer surface includes documentation, API reference, getting-started guide, authentication, signup flow, pricing, support, and 33 more developer resources.'
 plans:
 - name: Dovetail Plans Pricing
   plan_count: 2
   slug: dovetail-plans-pricing
-random_paper: 20
+random_paper: 16
 rate_limits:
 - limit_count: 1
   name: Dovetail Rate Limits
@@ -376,24 +401,24 @@ rules:
     warn: 3
   slug: dovetail-rules
 score:
-  band: developing
-  composite: 53.4
+  band: strong
+  composite: 56.7
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 58.8
+    artifact_dirs: 27
+    catalog_earned: 61.8
     catalog_earned_first_party: 16.0
-    catalog_gap: 56.3
+    catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 20.9
+  delta: 1.7
   facets:
-    access_clarity: 73.7
+    access_clarity: 81.6
     contract_governance: 22.0
-    contract_quality: 51.8
+    contract_quality: 57.2
     developer_ergonomics: 38.1
     discoverability: 75.0
-    operational_transparency: 52.6
-  previous_composite: 32.5
+    operational_transparency: 55.3
+  previous_composite: 55.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -409,13 +434,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/dovetail/refs/heads/main/screenshots/dovetail-2026-07-25T212327.png
+screenshot: https://apis.io/screenshots/dovetail/dovetail-2026-07-25T212327.png
 security:
 - kind: authentication
   name: Dovetail Authentication
@@ -437,5 +462,8 @@ tags:
 - Analytics
 - Artificial Intelligence
 - Product Management
+- Customer Intelligence
+- Feedback
+- Research
 website: https://dovetail.com/
 ---

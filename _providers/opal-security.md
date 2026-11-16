@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.3
-  scored_at: '2026-10-17'
+  score: 50.3
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.opal.dev/v1
@@ -148,15 +151,12 @@ apis:
   description: Operations related to users
   name: Opal Security Users API
   slug: opal-security-users-api
-artifact_total: 51
+artifact_total: 55
 asyncapis:
 - description: ''
   name: Opal Security Events Webhooks
   slug: opal-security-events-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Opal access-rules API
   slug: open-opal-security-access-rules-api
@@ -224,58 +224,63 @@ collections:
   name: Opal access-rules users API
   slug: open-opal-security-users-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/opal-security/plans/opal-security-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/opal-security-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/capabilities/opal-security-capability-edges.yml
+  href: https://artifacts.apis.io/opal-security/capabilities/opal-security-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/opal-security-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/overlays/opal-security-openapi-overlay.yaml
+  href: https://artifacts.apis.io/opal-security/overlays/opal-security-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/opal-security-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/security/opal-security-domain-security.yml
+  href: https://artifacts.apis.io/opal-security/security/opal-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/opal-security-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/authentication/opal-security-authentication.yml
+  href: https://artifacts.apis.io/opal-security/authentication/opal-security-authentication.yml
   title: ''
   type: Authentication
   url: authentication/opal-security-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/llms/opal-security-llms.txt
+  href: https://artifacts.apis.io/opal-security/llms/opal-security-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/opal-security-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/packages/opal-security-packages.yml
+  href: https://artifacts.apis.io/opal-security/packages/opal-security-packages.yml
   title: ''
   type: Packages
   url: packages/opal-security-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/packages/opal-security-packages.yml
+  href: https://artifacts.apis.io/opal-security/packages/opal-security-packages.yml
   title: ''
   type: SDKs
   url: packages/opal-security-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/mcp/opal-security-mcp.yml
+  href: https://artifacts.apis.io/opal-security/mcp/opal-security-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/opal-security-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/cli/opal-security-cli.yml
+  href: https://artifacts.apis.io/opal-security/cli/opal-security-cli.yml
   title: ''
   type: CLI
   url: cli/opal-security-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/changelog/opal-security-changelog.yml
+  href: https://artifacts.apis.io/opal-security/changelog/opal-security-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/opal-security-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/lifecycle/opal-security-lifecycle.yml
+  href: https://artifacts.apis.io/opal-security/lifecycle/opal-security-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/opal-security-lifecycle.yml
@@ -284,32 +289,32 @@ common:
   type: StatusPage
   url: https://status.opal.dev/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/conformance/opal-security-conformance.yml
+  href: https://artifacts.apis.io/opal-security/conformance/opal-security-conformance.yml
   title: ''
   type: Conformance
   url: conformance/opal-security-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/security/opal-security-trust-center.yml
+  href: https://artifacts.apis.io/opal-security/security/opal-security-trust-center.yml
   title: ''
   type: Compliance
   url: security/opal-security-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/security/opal-security-trust-center.yml
+  href: https://artifacts.apis.io/opal-security/security/opal-security-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/opal-security-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/security/opal-security-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/opal-security/security/opal-security-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/opal-security-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/security/opal-security-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/opal-security/security/opal-security-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/opal-security-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/opal-security/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -363,6 +368,14 @@ common:
   url: https://opal.dev/privacy-policy
 created: '2026-07-17'
 description: 'Opal Security (legal entity Perma Security, Inc.) is a next-generation access management and identity security platform that gives enterprises comprehensive visibility into access across their systems, orchestrates just-in-time and least-privilege access, designs intelligent access policies, and automates user access reviews (UARs). Opal exposes a RESTful API at https://api.opal.dev/v1 covering apps, resources, groups, users, bundles, access requests, access rules, owners, events, event streaming, sessions, and tokens, plus official SDKs (Python, Go), a CLI, a Terraform provider, and three hosted Model Context Protocol (MCP) servers for AI agents. Backed by Greylock. Sector: cybersecurity.'
+finops:
+- has_sources: true
+  method: derived
+  name: Opal Security Finops
+  primary_unit: ''
+  service_category: ''
+  slug: opal-security-finops
+  template: true
 image: https://framerusercontent.com/images/HHjnsz66kJwSMAe0rpzp3eREB2k.png
 layout: provider
 mcp_servers:
@@ -376,30 +389,47 @@ network: true
 overview: 'Opal Security publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Rules API, Apps API, Bundles API, and 19 more. Tagged areas include Company, Cybersecurity, Identity and Access Management, Least Privilege, and Access Reviews.
 
 
-  The Opal Security catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Opal Security catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Opal Security''s developer surface includes authentication, CLI, changelog, documentation, API reference, getting-started guide, engineering blog, and 23 more developer resources.'
-random_paper: 19
+  Opal Security''s developer surface includes authentication, CLI, changelog, documentation, API reference, getting-started guide, engineering blog, and 24 more developer resources.'
+plans:
+- name: Opal Security Plans Pricing
+  plan_count: 0
+  slug: opal-security-plans-pricing
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Opal Security API Rules
+  rule_count: 66
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 3
+    warn: 11
+  slug: opal-security-rules
 score:
   band: developing
-  composite: 51.7
+  composite: 53.4
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 29
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 26.3
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 62.9
     developer_ergonomics: 73.1
     discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 51.6
+  previous_composite: 53.4
   provenance:
     conformance: derived
     contracts:
@@ -415,13 +445,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/screenshots/opal-security-2026-08-07T190441.png
+screenshot: https://apis.io/screenshots/opal-security/opal-security-2026-08-07T190441.png
 security:
 - kind: authentication
   name: Opal Security Authentication
@@ -439,6 +469,12 @@ security:
   name: Opal Security Trust Center
   slug: opal-security-trust-center
   summary_line: trust center published
+skill_count: 2
+skills:
+- name: opal-access-request
+  slug: opal-security-access-request
+- name: sox-uar
+  slug: opal-security-sox-uar
 slug: opal-security
 tags:
 - Company

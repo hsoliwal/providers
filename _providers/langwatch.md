@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: verified
+    error_semantics: false
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.4
-  scored_at: '2026-10-17'
+  score: 28.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 84
   human_in_the_loop: 3
@@ -67,16 +73,6 @@ apis:
   slug: langwatch-api-keys-api
 - baseURL: https://app.langwatch.ai
   baseurl_source: spec
-  description: The Budgets API from LangWatch — 2 operation(s) for budgets.
-  name: LangWatch Budgets API
-  slug: langwatch-budgets-api
-- baseURL: https://app.langwatch.ai
-  baseurl_source: spec
-  description: The Cache Rules API from LangWatch — 2 operation(s) for cache rules.
-  name: LangWatch Cache Rules API
-  slug: langwatch-cache-rules-api
-- baseURL: https://app.langwatch.ai
-  baseurl_source: spec
   description: The Dashboards API from LangWatch — 3 operation(s) for dashboards.
   name: LangWatch Dashboards API
   slug: langwatch-dashboards-api
@@ -87,11 +83,6 @@ apis:
   slug: langwatch-dataset-api
 - baseURL: https://app.langwatch.ai
   baseurl_source: spec
-  description: The Evaluations V3 API from LangWatch — 2 operation(s) for evaluations v3.
-  name: LangWatch Evaluations V3 API
-  slug: langwatch-evaluations-v3-api
-- baseURL: https://app.langwatch.ai
-  baseurl_source: spec
   description: The Evaluators API from LangWatch — 3 operation(s) for evaluators.
   name: LangWatch Evaluators API
   slug: langwatch-evaluators-api
@@ -100,11 +91,6 @@ apis:
   description: The Graphs API from LangWatch — 2 operation(s) for graphs.
   name: LangWatch Graphs API
   slug: langwatch-graphs-api
-- baseURL: https://app.langwatch.ai
-  baseurl_source: spec
-  description: The LangWatch API API from LangWatch — 1 operation(s) for langwatch api.
-  name: LangWatch API
-  slug: langwatch-langwatch-api-api
 - baseURL: https://app.langwatch.ai
   baseurl_source: spec
   description: The Model Defaults API from LangWatch — 2 operation(s) for model defaults.
@@ -132,11 +118,6 @@ apis:
   slug: langwatch-prompts-api
 - baseURL: https://app.langwatch.ai
   baseurl_source: spec
-  description: The Providers API from LangWatch — 2 operation(s) for providers.
-  name: LangWatch Providers API
-  slug: langwatch-providers-api
-- baseURL: https://app.langwatch.ai
-  baseurl_source: spec
   description: The Scenario Events API from LangWatch — 1 operation(s) for scenario events.
   name: LangWatch Scenario Events API
   slug: langwatch-scenario-events-api
@@ -162,11 +143,6 @@ apis:
   slug: langwatch-suites-api
 - baseURL: https://app.langwatch.ai
   baseurl_source: spec
-  description: The Trace API from LangWatch — 3 operation(s) for trace.
-  name: LangWatch Trace API
-  slug: langwatch-trace-api
-- baseURL: https://app.langwatch.ai
-  baseurl_source: spec
   description: The Traces API from LangWatch — 3 operation(s) for traces.
   name: LangWatch Traces API
   slug: langwatch-traces-api
@@ -177,19 +153,216 @@ apis:
   slug: langwatch-triggers-api
 - baseURL: https://app.langwatch.ai
   baseurl_source: spec
-  description: The Virtual Keys API from LangWatch — 4 operation(s) for virtual keys.
-  name: LangWatch Virtual Keys API
-  slug: langwatch-virtual-keys-api
-- baseURL: https://app.langwatch.ai
-  baseurl_source: spec
   description: The Workflows API from LangWatch — 2 operation(s) for workflows.
   name: LangWatch Workflows API
   slug: langwatch-workflows-api
-artifact_total: 83
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Admin API from LangWatch — 2 operation(s) for admin.
+  name: LangWatch Admin API
+  slug: langwatch-admin-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Agent Cache API from LangWatch — 2 operation(s) for agent cache.
+  name: LangWatch Agent Cache API
+  slug: langwatch-agent-cache-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Analytics / LangWatchQL API from LangWatch — 8 operation(s) for analytics / langwatchql.
+  name: LangWatch Analytics / LangWatchQL API
+  slug: langwatch-analytics-langwatchql-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Auth API from LangWatch — 25 operation(s) for auth.
+  name: LangWatch Auth API
+  slug: langwatch-auth-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Browser telemetry API from LangWatch — 1 operation(s) for browser telemetry.
+  name: LangWatch Browser telemetry API
+  slug: langwatch-browser-telemetry-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Bug Reports API from LangWatch — 1 operation(s) for bug reports.
+  name: LangWatch Bug Reports API
+  slug: langwatch-bug-reports-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Checkup API from LangWatch — 2 operation(s) for checkup.
+  name: LangWatch Checkup API
+  slug: langwatch-checkup-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Coding Agent API from LangWatch — 3 operation(s) for coding agent.
+  name: LangWatch Coding Agent API
+  slug: langwatch-coding-agent-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Datasets API from LangWatch — 1 operation(s) for datasets.
+  name: LangWatch Datasets API
+  slug: langwatch-datasets-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Elevenlabs API from LangWatch — 1 operation(s) for elevenlabs.
+  name: LangWatch Elevenlabs API
+  slug: langwatch-elevenlabs-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Evaluations API from LangWatch — 5 operation(s) for evaluations.
+  name: LangWatch Evaluations API
+  slug: langwatch-evaluations-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Events API from LangWatch — 2 operation(s) for events.
+  name: LangWatch Events API
+  slug: langwatch-events-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Experiments API from LangWatch — 11 operation(s) for experiments.
+  name: LangWatch Experiments API
+  slug: langwatch-experiments-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Files API from LangWatch — 3 operation(s) for files.
+  name: LangWatch Files API
+  slug: langwatch-files-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Gateway API from LangWatch — 14 operation(s) for gateway.
+  name: LangWatch Gateway API
+  slug: langwatch-gateway-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Gateway Spend API from LangWatch — 4 operation(s) for gateway spend.
+  name: LangWatch Gateway Spend API
+  slug: langwatch-gateway-spend-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Governance / Ingestion Templates API from LangWatch — 5 operation(s) for governance / ingestion templates.
+  name: LangWatch Governance / Ingestion Templates API
+  slug: langwatch-governance-ingestion-templates-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Grants API from LangWatch — 2 operation(s) for grants.
+  name: LangWatch Grants API
+  slug: langwatch-grants-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Groups API from LangWatch — 6 operation(s) for groups.
+  name: LangWatch Groups API
+  slug: langwatch-groups-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Instant Evals API from LangWatch — 6 operation(s) for instant evals.
+  name: LangWatch Instant Evals API
+  slug: langwatch-instant-evals-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Internal API from LangWatch — 3 operation(s) for internal.
+  name: LangWatch Internal API
+  slug: langwatch-internal-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Invites API from LangWatch — 2 operation(s) for invites.
+  name: LangWatch Invites API
+  slug: langwatch-invites-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Langy API from LangWatch — 16 operation(s) for langy.
+  name: LangWatch Langy API
+  slug: langwatch-langy-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Me API from LangWatch — 2 operation(s) for me.
+  name: LangWatch Me API
+  slug: langwatch-me-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Members API from LangWatch — 3 operation(s) for members.
+  name: LangWatch Members API
+  slug: langwatch-members-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Ops API from LangWatch — 1 operation(s) for ops.
+  name: LangWatch Ops API
+  slug: langwatch-ops-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Organization API from LangWatch — 1 operation(s) for organization.
+  name: LangWatch Organization API
+  slug: langwatch-organization-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Organizations (Self-Hosted) API from LangWatch — 2 operation(s) for organizations (self-hosted).
+  name: LangWatch Organizations (Self-Hosted) API
+  slug: langwatch-organizations-self-hosted-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Platform Health API from LangWatch — 2 operation(s) for platform health.
+  name: LangWatch Platform Health API
+  slug: langwatch-platform-health-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Query API from LangWatch — 3 operation(s) for query.
+  name: LangWatch Query API
+  slug: langwatch-query-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Role Bindings API from LangWatch — 2 operation(s) for role bindings.
+  name: LangWatch Role Bindings API
+  slug: langwatch-role-bindings-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Roles API from LangWatch — 3 operation(s) for roles.
+  name: LangWatch Roles API
+  slug: langwatch-roles-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Run Plans API from LangWatch — 4 operation(s) for run plans.
+  name: LangWatch Run Plans API
+  slug: langwatch-run-plans-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The SCIM API from LangWatch — 8 operation(s) for scim.
+  name: LangWatch SCIM API
+  slug: langwatch-scim-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The SCIM Tokens API from LangWatch — 2 operation(s) for scim tokens.
+  name: LangWatch SCIM Tokens API
+  slug: langwatch-scim-tokens-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Slack connections API from LangWatch — 1 operation(s) for slack connections.
+  name: LangWatch Slack connections API
+  slug: langwatch-slack-connections-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Stored Objects API from LangWatch — 3 operation(s) for stored objects.
+  name: LangWatch Stored Objects API
+  slug: langwatch-stored-objects-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Teams API from LangWatch — 5 operation(s) for teams.
+  name: LangWatch Teams API
+  slug: langwatch-teams-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Test Suites API from LangWatch — 3 operation(s) for test suites.
+  name: LangWatch Test Suites API
+  slug: langwatch-test-suites-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The User Avatar API from LangWatch — 1 operation(s) for user avatar.
+  name: LangWatch User Avatar API
+  slug: langwatch-user-avatar-api
+- baseURL: https://app.langwatch.ai
+  baseurl_source: spec
+  description: The Webhooks API from LangWatch — 10 operation(s) for webhooks.
+  name: LangWatch Webhooks API
+  slug: langwatch-webhooks-api
+artifact_total: 117
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: LangWatch Agents API
   slug: open-langwatch-agents-api
@@ -283,7 +456,7 @@ common:
   type: Website
   url: https://www.langwatch.ai/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/langwatch/refs/heads/main/capabilities/langwatch-capability-edges.yml
+  href: https://artifacts.apis.io/langwatch/capabilities/langwatch-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/langwatch-capability-edges.yml
@@ -304,22 +477,22 @@ common:
   type: ContributionGuide
   url: https://github.com/langwatch/langwatch/blob/main/CONTRIBUTING.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/langwatch/refs/heads/main/agentic-access/langwatch-agentic-access.yml
+  href: https://artifacts.apis.io/langwatch/agentic-access/langwatch-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/langwatch-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/langwatch/refs/heads/main/security/langwatch-trust-center.yml
+  href: https://artifacts.apis.io/langwatch/security/langwatch-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/langwatch-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/langwatch/refs/heads/main/security/langwatch-domain-security.yml
+  href: https://artifacts.apis.io/langwatch/security/langwatch-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/langwatch-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/langwatch/refs/heads/main/authentication/langwatch-authentication.yml
+  href: https://artifacts.apis.io/langwatch/authentication/langwatch-authentication.yml
   title: ''
   type: Authentication
   url: authentication/langwatch-authentication.yml
@@ -340,7 +513,7 @@ common:
   type: Documentation
   url: https://langwatch.ai/docs/api-reference
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/langwatch/refs/heads/main/openapi/_original/langwatch-openapi.json
+  href: https://artifacts.apis.io/langwatch/openapi/_original/langwatch-openapi.json
   title: ''
   type: OpenAPI
   url: openapi/_original/langwatch-openapi.json
@@ -357,17 +530,17 @@ common:
   type: Pricing
   url: https://langwatch.ai/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/langwatch/refs/heads/main/plans/langwatch-plans-pricing.yml
+  href: https://artifacts.apis.io/langwatch/plans/langwatch-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/langwatch-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/langwatch/refs/heads/main/rate-limits/langwatch-rate-limits.yml
+  href: https://artifacts.apis.io/langwatch/rate-limits/langwatch-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/langwatch-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/langwatch/refs/heads/main/finops/langwatch-finops.yml
+  href: https://artifacts.apis.io/langwatch/finops/langwatch-finops.yml
   title: ''
   type: FinOps
   url: finops/langwatch-finops.yml
@@ -493,10 +666,10 @@ features:
 - SOC 2 / ISO 27001 reports and forward-deployed engineering available under Enterprise tier
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Langwatch Finops
-  primary_unit: ''
-  service_category: AI and Machine Learning
+  primary_unit: core-seat
+  service_category: ''
   slug: langwatch-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/langwatch.png
@@ -510,10 +683,10 @@ modified: '2026-09-16'
 name: LangWatch
 nav: Providers
 network: true
-overview: 'LangWatch publishes 28 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Analytics API, Annotations API, and 25 more. Tagged areas include Artificial Intelligence, LLM, LLM Observability, LLM Evaluation, and Agent Testing.
+overview: 'LangWatch publishes 62 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Analytics API, Annotations API, and 59 more. Tagged areas include Artificial Intelligence, LLM, LLM Observability, LLM Evaluation, and Agent Testing.
 
 
-  The LangWatch catalog on APIs.io includes 1 JSON-LD context.
+  The LangWatch catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   LangWatch''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, pricing, engineering blog, and 39 more developer resources.'
@@ -521,50 +694,63 @@ plans:
 - name: Langwatch Plans Pricing
   plan_count: 3
   slug: langwatch-plans-pricing
-random_paper: 7
+random_paper: 17
 rate_limits:
 - limit_count: 4
   name: Langwatch Rate Limits
   slug: langwatch-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: LangWatch API Rules
+  rule_count: 52
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 5
+    warn: 10
+  slug: langwatch-rules
 score:
-  band: developing
-  composite: 43.0
+  band: strong
+  composite: 58.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 55.0
+    artifact_dirs: 18
+    catalog_earned: 62.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 60.0
+    catalog_gap: 52.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.6
+  delta: 6.1
   facets:
-    access_clarity: 52.6
-    contract_governance: 0.0
-    contract_quality: 57.3
-    developer_ergonomics: 42.9
+    access_clarity: 81.6
+    contract_governance: 13.6
+    contract_quality: 59.4
+    developer_ergonomics: 45.2
     discoverability: 57.1
     operational_transparency: 21.1
-  previous_composite: 46.6
+  previous_composite: 52.5
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 28
+      marker_coverage: 68.1
+      total: 91
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 23.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
-    score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/langwatch/refs/heads/main/screenshots/langwatch-2026-06-20T184318.png
+    score: 77.8
+screenshot: https://apis.io/screenshots/langwatch/langwatch-2026-06-20T184318.png
 security:
 - kind: authentication
   name: Langwatch Authentication

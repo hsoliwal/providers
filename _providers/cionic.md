@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 8.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The collections service of the CIONIC research platform. Path-versioned REST endpoints under /c/v{version}/{org}/ covering studies, protocols and protocol versions, collections and their files, stream
@@ -106,52 +109,52 @@ common:
   type: Compliance
   url: https://www.cionic.com/legal/data-disclosure
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cionic/refs/heads/main/packages/cionic-packages.yml
+  href: https://artifacts.apis.io/cionic/packages/cionic-packages.yml
   title: ''
   type: Packages
   url: packages/cionic-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cionic/refs/heads/main/packages/cionic-packages.yml
+  href: https://artifacts.apis.io/cionic/packages/cionic-packages.yml
   title: ''
   type: SDKs
   url: packages/cionic-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cionic/refs/heads/main/cli/cionic-cli.yml
+  href: https://artifacts.apis.io/cionic/cli/cionic-cli.yml
   title: ''
   type: CLI
   url: cli/cionic-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cionic/refs/heads/main/authentication/cionic-authentication.yml
+  href: https://artifacts.apis.io/cionic/authentication/cionic-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cionic-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cionic/refs/heads/main/conventions/cionic-conventions.yml
+  href: https://artifacts.apis.io/cionic/conventions/cionic-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cionic-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cionic/refs/heads/main/errors/cionic-problem-types.yml
+  href: https://artifacts.apis.io/cionic/errors/cionic-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cionic-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cionic/refs/heads/main/lifecycle/cionic-lifecycle.yml
+  href: https://artifacts.apis.io/cionic/lifecycle/cionic-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cionic-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cionic/refs/heads/main/conformance/cionic-conformance.yml
+  href: https://artifacts.apis.io/cionic/conformance/cionic-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cionic-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cionic/refs/heads/main/security/cionic-domain-security.yml
+  href: https://artifacts.apis.io/cionic/security/cionic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cionic-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cionic/refs/heads/main/llms/cionic-llms.txt
+  href: https://artifacts.apis.io/cionic/llms/cionic-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cionic-llms.txt
@@ -167,12 +170,12 @@ overview: 'CIONIC is listed with 2 APIs on the [APIs.io](https://apis.io/) netwo
 
 
   CIONIC''s developer surface includes documentation, getting-started guide, support, engineering blog, signup flow, CLI, authentication, and 18 more developer resources.'
-random_paper: 13
+random_paper: 5
 score:
   band: thin
   composite: 29.5
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -203,14 +206,14 @@ score:
     regime: Health
     regime_id: health
     score: 20.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/cionic/refs/heads/main/screenshots/cionic-2026-09-02T145037.png
+screenshot: https://apis.io/screenshots/cionic/cionic-2026-09-02T145037.png
 security:
 - kind: authentication
   name: Cionic Authentication

@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: HTTP interface for triggering Liberate workflows. A workflow is started with a PUT request carrying a bearer token, a flow slug, and a JSON context object. Every customer receives their own unique end
@@ -45,7 +48,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/liberate/refs/heads/main/security/liberate-domain-security.yml
+  href: https://artifacts.apis.io/liberate/security/liberate-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/liberate-domain-security.yml
@@ -114,47 +117,47 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/liberate-inc/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/liberate/refs/heads/main/changelog/liberate-changelog.yml
+  href: https://artifacts.apis.io/liberate/changelog/liberate-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/liberate-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/liberate/refs/heads/main/authentication/liberate-authentication.yml
+  href: https://artifacts.apis.io/liberate/authentication/liberate-authentication.yml
   title: ''
   type: Authentication
   url: authentication/liberate-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/liberate/refs/heads/main/conventions/liberate-conventions.yml
+  href: https://artifacts.apis.io/liberate/conventions/liberate-conventions.yml
   title: ''
   type: Conventions
   url: conventions/liberate-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/liberate/refs/heads/main/conformance/liberate-conformance.yml
+  href: https://artifacts.apis.io/liberate/conformance/liberate-conformance.yml
   title: ''
   type: Conformance
   url: conformance/liberate-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/liberate/refs/heads/main/lifecycle/liberate-lifecycle.yml
+  href: https://artifacts.apis.io/liberate/lifecycle/liberate-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/liberate-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/liberate/refs/heads/main/sandbox/liberate-sandbox.yml
+  href: https://artifacts.apis.io/liberate/sandbox/liberate-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/liberate-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/liberate/refs/heads/main/data-model/liberate-data-model.yml
+  href: https://artifacts.apis.io/liberate/data-model/liberate-data-model.yml
   title: ''
   type: DataModel
   url: data-model/liberate-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/liberate/refs/heads/main/llms/liberate-llms.txt
+  href: https://artifacts.apis.io/liberate/llms/liberate-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/liberate-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/liberate/refs/heads/main/security/liberate-trust-center.yml
+  href: https://artifacts.apis.io/liberate/security/liberate-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/liberate-trust-center.yml
@@ -170,7 +173,7 @@ overview: 'Liberate is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Liberate''s developer surface includes documentation, getting-started guide, support, engineering blog, signup flow, product news, changelog, and 19 more developer resources.'
-random_paper: 4
+random_paper: 0
 score:
   band: thin
   composite: 31.7
@@ -206,14 +209,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 24.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/liberate/refs/heads/main/screenshots/liberate-2026-07-25T225016.png
+screenshot: https://apis.io/screenshots/liberate/liberate-2026-07-25T225016.png
 security:
 - kind: authentication
   name: Liberate Authentication

@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Public GraphQL subgraph indexing the Perpetual Protocol Curie (v2) perpetual futures protocol on Optimism (positions, markets, trades, liquidations, funding). Served via The Graph hosted service and S
@@ -92,62 +95,62 @@ common:
   type: SourceCode
   url: https://github.com/perpetual-protocol/sdk-curie
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/packages/perp-packages.yml
+  href: https://artifacts.apis.io/perp/packages/perp-packages.yml
   title: ''
   type: Packages
   url: packages/perp-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/packages/perp-packages.yml
+  href: https://artifacts.apis.io/perp/packages/perp-packages.yml
   title: ''
   type: SDKs
   url: packages/perp-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/security/perp-domain-security.yml
+  href: https://artifacts.apis.io/perp/security/perp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/perp-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/llms/perp-llms.txt
+  href: https://artifacts.apis.io/perp/llms/perp-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/perp-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/authentication/perp-authentication.yml
+  href: https://artifacts.apis.io/perp/authentication/perp-authentication.yml
   title: ''
   type: Authentication
   url: authentication/perp-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/conventions/perp-conventions.yml
+  href: https://artifacts.apis.io/perp/conventions/perp-conventions.yml
   title: ''
   type: Conventions
   url: conventions/perp-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/conventions/perp-conventions.yml
+  href: https://artifacts.apis.io/perp/conventions/perp-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/perp-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/errors/perp-error-codes.yml
+  href: https://artifacts.apis.io/perp/errors/perp-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/perp-error-codes.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/rate-limits/perp-rate-limits.yml
+  href: https://artifacts.apis.io/perp/rate-limits/perp-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/perp-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/asyncapi/perp-market-maker-webhooks.yml
+  href: https://artifacts.apis.io/perp/asyncapi/perp-market-maker-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/perp-market-maker-webhooks.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/sandbox/perp-sandbox.yml
+  href: https://artifacts.apis.io/perp/sandbox/perp-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/perp-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/lifecycle/perp-lifecycle.yml
+  href: https://artifacts.apis.io/perp/lifecycle/perp-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/perp-lifecycle.yml
@@ -167,7 +170,7 @@ overview: 'Perp is listed with 2 APIs on the [APIs.io](https://apis.io/) network
 
 
   Perp''s developer surface includes documentation, API reference, support, authentication, sandbox, and 17 more developer resources.'
-random_paper: 21
+random_paper: 7
 rate_limits:
 - limit_count: 4
   name: Perp Rate Limits
@@ -176,7 +179,7 @@ score:
   band: thin
   composite: 29.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -200,14 +203,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 11.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/perp/refs/heads/main/screenshots/perp-2026-09-02T151101.png
+screenshot: https://apis.io/screenshots/perp/perp-2026-09-02T151101.png
 security:
 - kind: authentication
   name: Perp Authentication

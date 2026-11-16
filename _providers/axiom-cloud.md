@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API for Axiom Cloud blockchain trading services
@@ -32,22 +45,22 @@ apis:
 artifact_total: 2
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axiom-cloud/refs/heads/main/llms/axiom-cloud-llms.txt
+  href: https://artifacts.apis.io/axiom-cloud/llms/axiom-cloud-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/axiom-cloud-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/axiom-cloud/refs/heads/main/well-known/axiom-cloud-well-known.yml
+  href: https://artifacts.apis.io/axiom-cloud/well-known/axiom-cloud-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/axiom-cloud-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axiom-cloud/refs/heads/main/hosts/axiom-cloud-hosts.yml
+  href: https://artifacts.apis.io/axiom-cloud/hosts/axiom-cloud-hosts.yml
   title: ''
   type: Hosts
   url: hosts/axiom-cloud-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/axiom-cloud/refs/heads/main/vendors/axiom-cloud-vendors.yml
+  href: https://artifacts.apis.io/axiom-cloud/vendors/axiom-cloud-vendors.yml
   title: ''
   type: Vendors
   url: vendors/axiom-cloud-vendors.yml
@@ -60,7 +73,7 @@ common:
   type: Documentation
   url: https://docs.axiom.trade/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/axiom-cloud/refs/heads/main/security/axiom-cloud-domain-security.yml
+  href: https://artifacts.apis.io/axiom-cloud/security/axiom-cloud-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/axiom-cloud-domain-security.yml
@@ -89,10 +102,10 @@ overview: 'Axiom Cloud is listed with 1 API on the [APIs.io](https://apis.io/) n
 
 
   Axiom Cloud''s developer surface includes getting-started guide, documentation, and 6 more developer resources.'
-random_paper: 0
+random_paper: 18
 score:
   band: minimal
-  composite: 7.2
+  composite: 5.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 25.0
@@ -100,12 +113,12 @@ score:
     catalog_gap: 90.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 21.4
+    developer_ergonomics: 10.7
     discoverability: 51.8
     operational_transparency: 0.0
   previous_composite: 7.2
@@ -117,14 +130,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 5.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/axiom-cloud/refs/heads/main/screenshots/axiom-cloud-2026-10-11T101235.png
+screenshot: https://apis.io/screenshots/axiom-cloud/axiom-cloud-2026-10-11T101235.png
 security:
 - kind: domain-security
   name: Axiom Cloud Domain Security

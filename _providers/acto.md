@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -60,42 +74,42 @@ common:
   type: Compliance
   url: https://trust.acto.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acto/refs/heads/main/security/acto-trust-center.yml
+  href: https://artifacts.apis.io/acto/security/acto-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/acto-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/acto/refs/heads/main/security/acto-domain-security.yml
+  href: https://artifacts.apis.io/acto/security/acto-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/acto-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acto/refs/heads/main/lifecycle/acto-lifecycle.yml
+  href: https://artifacts.apis.io/acto/lifecycle/acto-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/acto-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/acto/refs/heads/main/conformance/acto-conformance.yml
+  href: https://artifacts.apis.io/acto/conformance/acto-conformance.yml
   title: ''
   type: Conformance
   url: conformance/acto-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/acto/refs/heads/main/packages/acto-packages.yml
+  href: https://artifacts.apis.io/acto/packages/acto-packages.yml
   title: ''
   type: Packages
   url: packages/acto-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/acto/refs/heads/main/plans/acto-plans-pricing.yml
+  href: https://artifacts.apis.io/acto/plans/acto-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/acto-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/acto/refs/heads/main/rate-limits/acto-rate-limits.yml
+  href: https://artifacts.apis.io/acto/rate-limits/acto-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/acto-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/acto/refs/heads/main/llms/acto-llms.txt
+  href: https://artifacts.apis.io/acto/llms/acto-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/acto-llms.txt
@@ -138,7 +152,7 @@ plans:
 - name: Acto Plans Pricing
   plan_count: 0
   slug: acto-plans-pricing
-random_paper: 5
+random_paper: 15
 rate_limits:
 - limit_count: 0
   name: Acto Rate Limits
@@ -147,7 +161,7 @@ score:
   band: emerging
   composite: 17.8
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -182,14 +196,14 @@ score:
     regime: Health
     regime_id: health
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/acto/refs/heads/main/screenshots/acto-2026-10-11T092721.png
+screenshot: https://apis.io/screenshots/acto/acto-2026-10-11T092721.png
 security:
 - kind: domain-security
   name: Acto Domain Security

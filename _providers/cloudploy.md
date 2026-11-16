@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.4
-  scored_at: '2026-10-17'
+  score: 34.8
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - baseURL: https://api.cloudploy.com
@@ -41,55 +55,55 @@ apis:
   description: The Rollback API from CloudPloy — 1 operation(s) for rollback.
   name: CloudPloy Rollback API
   slug: cloudploy-rollback-api
-artifact_total: 10
+artifact_total: 12
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/plans/cloudploy-plans-pricing.yml
+  href: https://artifacts.apis.io/cloudploy/plans/cloudploy-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/cloudploy-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/rules/cloudploy-rules.yml
+  href: https://artifacts.apis.io/cloudploy/rules/cloudploy-rules.yml
   title: ''
   type: Spectral
   url: rules/cloudploy-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/json-ld/cloudploy-context.jsonld
+  href: https://artifacts.apis.io/cloudploy/json-ld/cloudploy-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/cloudploy-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/vocabulary/cloudploy-vocabulary.yml
+  href: https://artifacts.apis.io/cloudploy/vocabulary/cloudploy-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/cloudploy-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/data-model/cloudploy-data-model.yml
+  href: https://artifacts.apis.io/cloudploy/data-model/cloudploy-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cloudploy-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/conformance/cloudploy-conformance.yml
+  href: https://artifacts.apis.io/cloudploy/conformance/cloudploy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cloudploy-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/llms/cloudploy-llms.txt
+  href: https://artifacts.apis.io/cloudploy/llms/cloudploy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cloudploy-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/well-known/cloudploy-well-known.yml
+  href: https://artifacts.apis.io/cloudploy/well-known/cloudploy-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cloudploy-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/hosts/cloudploy-hosts.yml
+  href: https://artifacts.apis.io/cloudploy/hosts/cloudploy-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cloudploy-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/vendors/cloudploy-vendors.yml
+  href: https://artifacts.apis.io/cloudploy/vendors/cloudploy-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cloudploy-vendors.yml
@@ -102,7 +116,7 @@ common:
   type: DeveloperPortal
   url: https://cloudploy.com/for/developers
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/security/cloudploy-domain-security.yml
+  href: https://artifacts.apis.io/cloudploy/security/cloudploy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cloudploy-domain-security.yml
@@ -160,6 +174,14 @@ coverage:
   state: unreadable
 created: '2026-10-15'
 description: CloudPloy provides a platform that lets developers deploy applications to any cloud or VPS using AI agents. Through its MCP (Machine Control Plane), users can manage servers, apps, and deployments via a RESTful API, enabling automation of the full lifecycle from provisioning to scaling. The service offers a free tier with limited resources and paid plans for larger workloads, focusing on ease of use, security, and integration with existing CI/CD pipelines.
+finops:
+- has_sources: true
+  method: derived
+  name: Cloudploy Finops
+  primary_unit: seat
+  service_category: ''
+  slug: cloudploy-finops
+  template: false
 image: https://cloudploy.com/cloudploy-share-light-2026.png
 json_schemas:
 - name: PostAppsRequest
@@ -192,7 +214,10 @@ plans:
 - name: Cloudploy Plans Pricing
   plan_count: 4
   slug: cloudploy-plans-pricing
-random_paper: 19
+- name: Cloudploy Price Estimates
+  plan_count: 0
+  slug: cloudploy-price-estimates
+random_paper: 3
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -207,26 +232,28 @@ rules:
     warn: 1
   slug: cloudploy-rules
 score:
-  band: developing
-  composite: 43.6
+  band: thin
+  composite: 34.2
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 71.8
+    artifact_dirs: 22
+    catalog_earned: 74.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 43.3
+    catalog_gap: 40.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.7
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 22.0
-    contract_quality: 24.0
-    developer_ergonomics: 50.0
+    contract_quality: 23.2
+    developer_ergonomics: 25.0
     discoverability: 78.6
-    operational_transparency: 10.5
+    operational_transparency: 5.3
+  previous_composite: 44.9
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 4
       marker_coverage: 100.0
       total: 4
@@ -236,12 +263,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/cloudploy/cloudploy-2026-11-03T124546.png
 security:
 - kind: domain-security
   name: Cloudploy Domain Security

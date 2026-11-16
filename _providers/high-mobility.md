@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-10-17'
+  score: 23.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -67,9 +74,6 @@ apis:
 artifact_total: 17
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: High Mobility Vehicle Authentication API
   slug: open-high-mobility-authentication-api
 - collection_type: open
@@ -86,22 +90,22 @@ collections:
   slug: open-high-mobility
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/high-mobility/refs/heads/main/plans/high-mobility-plans-pricing.yml
+  href: https://artifacts.apis.io/high-mobility/plans/high-mobility-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/high-mobility-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/high-mobility/refs/heads/main/rate-limits/high-mobility-rate-limits.yml
+  href: https://artifacts.apis.io/high-mobility/rate-limits/high-mobility-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/high-mobility-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/high-mobility/refs/heads/main/finops/high-mobility-finops.yml
+  href: https://artifacts.apis.io/high-mobility/finops/high-mobility-finops.yml
   title: ''
   type: FinOps
   url: finops/high-mobility-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/high-mobility/refs/heads/main/capabilities/high-mobility-capability-edges.yml
+  href: https://artifacts.apis.io/high-mobility/capabilities/high-mobility-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/high-mobility-capability-edges.yml
@@ -110,22 +114,22 @@ common:
   type: IssueTracker
   url: https://github.com/highmobility/open-api-specifications/issues
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/high-mobility/refs/heads/main/agentic-access/high-mobility-agentic-access.yml
+  href: https://artifacts.apis.io/high-mobility/agentic-access/high-mobility-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/high-mobility-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/high-mobility/refs/heads/main/security/high-mobility-domain-security.yml
+  href: https://artifacts.apis.io/high-mobility/security/high-mobility-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/high-mobility-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/high-mobility/refs/heads/main/authentication/high-mobility-authentication.yml
+  href: https://artifacts.apis.io/high-mobility/authentication/high-mobility-authentication.yml
   title: ''
   type: Authentication
   url: authentication/high-mobility-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/high-mobility/refs/heads/main/scopes/high-mobility-scopes.yml
+  href: https://artifacts.apis.io/high-mobility/scopes/high-mobility-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/high-mobility-scopes.yml
@@ -167,7 +171,7 @@ finops:
 - has_sources: false
   method: generated
   name: High Mobility Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: high-mobility-finops
   template: true
@@ -180,6 +184,9 @@ network: true
 overview: 'High Mobility publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Fleet Clearance API, Vehicle Data API, and 1 more. Tagged areas include Automotive, Connected Vehicles, IoT, Vehicle Data, and Mobility.
 
 
+  The High Mobility catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   High Mobility''s developer surface includes authentication, developer portal, documentation, signup flow, engineering blog, and 12 more developer resources.'
 plans:
 - name: High Mobility Plans Pricing
@@ -190,6 +197,19 @@ rate_limits:
 - limit_count: 5
   name: High Mobility Rate Limits
   slug: high-mobility-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: High Mobility API Rules
+  rule_count: 59
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 1
+    warn: 1
+  slug: high-mobility-rules
 scopes:
 - name: High Mobility Scopes
   scope_count: 1
@@ -197,23 +217,23 @@ scopes:
   summary_line: 1 scope · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 35.2
+  composite: 36.8
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 43.0
+    artifact_dirs: 19
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 51.9
     developer_ergonomics: 45.2
     discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 36.7
+  previous_composite: 36.8
   provenance:
     agentic_access: derived
     contracts:
@@ -227,13 +247,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/high-mobility/refs/heads/main/screenshots/high-mobility-2026-06-20T182732.png
+screenshot: https://apis.io/screenshots/high-mobility/high-mobility-2026-06-20T182732.png
 security:
 - kind: authentication
   name: High Mobility Authentication

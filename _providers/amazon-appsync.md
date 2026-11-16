@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
-    openapi_examples: verified
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.5
-  scored_at: '2026-10-17'
+  score: 30.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -89,11 +92,33 @@ apis:
   description: Manage GraphQL type definitions
   name: Amazon AppSync Types API
   slug: amazon-appsync-types-api
-artifact_total: 275
+- baseURL: https://appsync.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Appsync Apicaches API from Amazon AppSync — 2 operation(s) for appsync apicaches.
+  name: Amazon AppSync Appsync Apicaches API
+  slug: amazon-appsync-apicaches-api
+- baseURL: https://appsync.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Appsync Apis API from Amazon AppSync — 2 operation(s) for appsync apis.
+  name: Amazon AppSync Appsync Apis API
+  slug: amazon-appsync-apis-api
+- baseURL: https://appsync.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Appsync Channelnamespaces API from Amazon AppSync — 2 operation(s) for appsync channelnamespaces.
+  name: Amazon AppSync Appsync Channelnamespaces API
+  slug: amazon-appsync-channelnamespaces-api
+- baseURL: https://appsync.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Appsync Operations API from Amazon AppSync — 7 operation(s) for appsync operations.
+  name: Amazon AppSync Appsync Operations API
+  slug: amazon-appsync-operations-api
+- baseURL: https://appsync.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Appsync Sourceapiassociations API from Amazon AppSync — 3 operation(s) for appsync sourceapiassociations.
+  name: Amazon AppSync Appsync Sourceapiassociations API
+  slug: amazon-appsync-sourceapiassociations-api
+artifact_total: 279
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Amazon AppSync Api Keys API
   slug: open-amazon-appsync-api-keys-api
@@ -123,7 +148,7 @@ collections:
   slug: open-amazon-appsync-types-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-appsync/refs/heads/main/capabilities/amazon-appsync-capability-edges.yml
+  href: https://artifacts.apis.io/amazon-appsync/capabilities/amazon-appsync-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/amazon-appsync-capability-edges.yml
@@ -132,27 +157,27 @@ common:
   type: Website
   url: https://aws.amazon.com/appsync/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-appsync/refs/heads/main/overlays/amazon-appsync-openapi-overlay.yaml
+  href: https://artifacts.apis.io/amazon-appsync/overlays/amazon-appsync-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/amazon-appsync-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-appsync/refs/heads/main/agentic-access/amazon-appsync-agentic-access.yml
+  href: https://artifacts.apis.io/amazon-appsync/agentic-access/amazon-appsync-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amazon-appsync-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-appsync/refs/heads/main/security/amazon-appsync-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amazon-appsync/security/amazon-appsync-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amazon-appsync-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-appsync/refs/heads/main/security/amazon-appsync-domain-security.yml
+  href: https://artifacts.apis.io/amazon-appsync/security/amazon-appsync-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amazon-appsync-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amazon-appsync/refs/heads/main/authentication/amazon-appsync-authentication.yml
+  href: https://artifacts.apis.io/amazon-appsync/authentication/amazon-appsync-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amazon-appsync-authentication.yml
@@ -884,14 +909,14 @@ modified: '2026-09-16'
 name: Amazon AppSync
 nav: Providers
 network: true
-overview: 'Amazon AppSync publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Api Keys API, Data Sources API, Domain Names API, and 6 more. Tagged areas include Amazon AppSync, GraphQL, API Management, and Serverless.
+overview: 'Amazon AppSync publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Api Keys API, Data Sources API, Domain Names API, and 11 more. Tagged areas include Amazon AppSync, GraphQL, API Management, Serverless, and Amazon Web Services.
 
 
   The Amazon AppSync catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
   Amazon AppSync''s developer surface includes authentication and 12 more developer resources.'
-random_paper: 5
+random_paper: 17
 rules:
 - authorship: generated
   effective_rule_count: 6
@@ -918,45 +943,45 @@ rules:
   slug: amazon-appsync-spectral-rules
 score:
   band: thin
-  composite: 30.4
+  composite: 33.1
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 53.0
+    artifact_dirs: 24
+    catalog_earned: 58.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 62.0
+    catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.1
   facets:
     access_clarity: 0.0
     contract_governance: 31.8
-    contract_quality: 70.7
+    contract_quality: 71.3
     developer_ergonomics: 11.9
-    discoverability: 65.0
-    operational_transparency: 0.0
-  previous_composite: 30.3
+    discoverability: 73.3
+    operational_transparency: 10.5
+  previous_composite: 32.0
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 9
+      marker_coverage: 35.7
+      total: 14
     mcp: first-party
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 20.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 22.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/amazon-appsync/refs/heads/main/screenshots/amazon-appsync-2026-07-25T195928.png
+screenshot: https://apis.io/screenshots/amazon-appsync/amazon-appsync-2026-07-25T195928.png
 security:
 - kind: authentication
   name: Amazon Appsync Authentication
@@ -976,6 +1001,7 @@ tags:
 - GraphQL
 - API Management
 - Serverless
+- Amazon Web Services
 use_cases:
 - Build mobile and web applications with a unified GraphQL data layer
 - Implement real-time features like live notifications and chat with subscriptions

@@ -1,8 +1,8 @@
 ---
 access_model:
   confidence: low
-  label: Self-serve signup
-  onboarding: self-serve
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Wonolo API V2 is a RESTful, JSON-only integration API for the Wonolo on-demand staffing platform. It performs CRUD operations against platform resources — Users (both Workers/Wonoloers and Employe
@@ -75,17 +78,17 @@ common:
   type: Login
   url: https://api.wonolo.com/users/sign_in
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wonolo/refs/heads/main/well-known/wonolo-well-known.yml
+  href: https://artifacts.apis.io/wonolo/well-known/wonolo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/wonolo-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wonolo/refs/heads/main/security/wonolo-domain-security.yml
+  href: https://artifacts.apis.io/wonolo/security/wonolo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wonolo-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wonolo/refs/heads/main/llms/wonolo-llms.txt
+  href: https://artifacts.apis.io/wonolo/llms/wonolo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/wonolo-llms.txt
@@ -115,12 +118,12 @@ overview: 'Wonolo is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Wonolo''s developer surface includes engineering blog, support, and 9 more developer resources.'
-random_paper: 10
+random_paper: 22
 score:
   band: emerging
   composite: 19.3
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -150,14 +153,14 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/wonolo/refs/heads/main/screenshots/wonolo-2026-09-02T170922.png
+screenshot: https://apis.io/screenshots/wonolo/wonolo-2026-09-02T170922.png
 security:
 - kind: authentication
   name: Wonolo Authentication

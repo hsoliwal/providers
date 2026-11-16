@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.3
-  scored_at: '2026-10-17'
+  score: 32.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 104
   human_in_the_loop: 2
@@ -44,7 +50,7 @@ agentic_access:
   operation_count: 202
   slug: fossology-agentic-access
   summary_line: 202 operations · 104 acting · 2 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: http://localhost/repo/api/v1
   baseurl_source: declared
@@ -121,11 +127,8 @@ apis:
   description: User management
   name: FOSSology User API
   slug: fossology-user-api
-artifact_total: 47
+artifact_total: 46
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: FOSSology Admin API
   slug: open-fossology-admin-api
@@ -176,22 +179,22 @@ collections:
   slug: open-fossology
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fossology/refs/heads/main/plans/fossology-plans-pricing.yml
+  href: https://artifacts.apis.io/fossology/plans/fossology-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fossology-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fossology/refs/heads/main/rate-limits/fossology-rate-limits.yml
+  href: https://artifacts.apis.io/fossology/rate-limits/fossology-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fossology-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fossology/refs/heads/main/finops/fossology-finops.yml
+  href: https://artifacts.apis.io/fossology/finops/fossology-finops.yml
   title: ''
   type: FinOps
   url: finops/fossology-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/fossology/refs/heads/main/capabilities/fossology-capability-edges.yml
+  href: https://artifacts.apis.io/fossology/capabilities/fossology-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/fossology-capability-edges.yml
@@ -212,22 +215,22 @@ common:
   type: ContributionGuide
   url: https://github.com/fossology/fossology/blob/master/CONTRIBUTING.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fossology/refs/heads/main/agentic-access/fossology-agentic-access.yml
+  href: https://artifacts.apis.io/fossology/agentic-access/fossology-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fossology-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fossology/refs/heads/main/security/fossology-domain-security.yml
+  href: https://artifacts.apis.io/fossology/security/fossology-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fossology-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fossology/refs/heads/main/authentication/fossology-authentication.yml
+  href: https://artifacts.apis.io/fossology/authentication/fossology-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fossology-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fossology/refs/heads/main/scopes/fossology-scopes.yml
+  href: https://artifacts.apis.io/fossology/scopes/fossology-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/fossology-scopes.yml
@@ -264,7 +267,7 @@ finops:
 - has_sources: false
   method: generated
   name: Fossology Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: fossology-finops
   template: true
@@ -300,7 +303,7 @@ plans:
 - name: Fossology Plans Pricing
   plan_count: 3
   slug: fossology-plans-pricing
-random_paper: 7
+random_paper: 13
 rate_limits:
 - limit_count: 5
   name: Fossology Rate Limits
@@ -335,29 +338,29 @@ scopes:
   summary_line: 2 scopes · clientCredentials
 score:
   band: thin
-  composite: 34.0
+  composite: 35.1
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 21
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.1
   facets:
     access_clarity: 7.9
     contract_governance: 23.5
-    contract_quality: 57.3
+    contract_quality: 61.9
     developer_ergonomics: 23.8
     discoverability: 57.1
     operational_transparency: 28.9
-  previous_composite: 35.5
+  previous_composite: 34.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 15
   regulatory:
     applies: true
@@ -365,13 +368,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/fossology/refs/heads/main/screenshots/fossology-2026-06-20T181450.png
+screenshot: https://apis.io/screenshots/fossology/fossology-2026-06-20T181450.png
 security:
 - kind: authentication
   name: Fossology Authentication

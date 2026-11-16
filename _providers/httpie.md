@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -53,11 +57,8 @@ apis:
   description: The Hello API from HTTPie — 1 operation(s) for hello.
   name: HTTPie Hello API
   slug: httpie-hello-api
-artifact_total: 16
+artifact_total: 15
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: HTTPie App API
   slug: open-httpie-app-api
@@ -69,32 +70,32 @@ collections:
   slug: open-httpie-httpie
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/plans/httpie-plans-pricing.yml
+  href: https://artifacts.apis.io/httpie/plans/httpie-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/httpie-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/rate-limits/httpie-rate-limits.yml
+  href: https://artifacts.apis.io/httpie/rate-limits/httpie-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/httpie-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/finops/httpie-finops.yml
+  href: https://artifacts.apis.io/httpie/finops/httpie-finops.yml
   title: ''
   type: FinOps
   url: finops/httpie-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/vendor-facets/httpie-vendor-facets.yml
+  href: https://artifacts.apis.io/httpie/vendor-facets/httpie-vendor-facets.yml
   title: ''
   type: VendorFacets
   url: vendor-facets/httpie-vendor-facets.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/agentic-access/httpie-agentic-access.yml
+  href: https://artifacts.apis.io/httpie/agentic-access/httpie-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/httpie-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/security/httpie-domain-security.yml
+  href: https://artifacts.apis.io/httpie/security/httpie-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/httpie-domain-security.yml
@@ -132,7 +133,7 @@ finops:
 - has_sources: false
   method: generated
   name: Httpie Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: httpie-finops
   template: true
@@ -168,7 +169,7 @@ plans:
 - name: Httpie Plans Pricing
   plan_count: 3
   slug: httpie-plans-pricing
-random_paper: 16
+random_paper: 6
 rate_limits:
 - limit_count: 5
   name: Httpie Rate Limits
@@ -189,13 +190,13 @@ score:
   band: thin
   composite: 30.0
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 54.7
     catalog_earned_first_party: 0.0
     catalog_gap: 60.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 21.1
     contract_governance: 9.8
@@ -203,7 +204,7 @@ score:
     developer_ergonomics: 23.8
     discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 31.5
+  previous_composite: 30.0
   provenance:
     agentic_access: derived
     contracts:
@@ -217,14 +218,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/httpie/refs/heads/main/screenshots/httpie-2026-06-20T182915.png
+screenshot: https://apis.io/screenshots/httpie/httpie-2026-06-20T182915.png
 security:
 - kind: domain-security
   name: Httpie Domain Security

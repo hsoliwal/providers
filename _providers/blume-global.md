@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,32 +36,32 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blume-global/refs/heads/main/security/blume-global-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/blume-global/security/blume-global-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/blume-global-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blume-global/refs/heads/main/well-known/blume-global-security.txt
+  href: https://artifacts.apis.io/blume-global/well-known/blume-global-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/blume-global-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blume-global/refs/heads/main/well-known/blume-global-well-known.yml
+  href: https://artifacts.apis.io/blume-global/well-known/blume-global-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/blume-global-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blume-global/refs/heads/main/hosts/blume-global-hosts.yml
+  href: https://artifacts.apis.io/blume-global/hosts/blume-global-hosts.yml
   title: ''
   type: Hosts
   url: hosts/blume-global-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blume-global/refs/heads/main/vendors/blume-global-vendors.yml
+  href: https://artifacts.apis.io/blume-global/vendors/blume-global-vendors.yml
   title: ''
   type: Vendors
   url: vendors/blume-global-vendors.yml
@@ -57,12 +70,12 @@ common:
   type: TermsOfService
   url: https://www.blumeglobal.com/terms-of-use/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blume-global/refs/heads/main/security/blume-global-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/blume-global/security/blume-global-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/blume-global-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blume-global/refs/heads/main/security/blume-global-domain-security.yml
+  href: https://artifacts.apis.io/blume-global/security/blume-global-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/blume-global-domain-security.yml
@@ -105,26 +118,26 @@ overview: 'Blume Global is profiled on the [APIs.io](https://apis.io/) network. 
 
 
   Blume Global''s developer surface includes engineering blog, documentation, support, and 10 more developer resources.'
-random_paper: 15
+random_paper: 3
 score:
-  band: emerging
-  composite: 12.8
+  band: minimal
+  composite: 9.7
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 1.0
+  delta: -3.1
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 16.7
-    discoverability: 50.0
+    developer_ergonomics: 8.3
+    discoverability: 49.1
     operational_transparency: 10.5
-  previous_composite: 11.8
+  previous_composite: 12.8
   provenance:
     mcp: unknown
   regulatory:
@@ -132,9 +145,9 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false

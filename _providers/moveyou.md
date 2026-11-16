@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Our scaled based platform meets all your business requirements in the fields of mobility and energy. Explore the powerful solutions or consult one of our experts for advice. Together, we are building '
@@ -42,17 +46,17 @@ apis:
 artifact_total: 6
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/moveyou/refs/heads/main/plans/moveyou-plans-pricing.yml
+  href: https://artifacts.apis.io/moveyou/plans/moveyou-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/moveyou-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/moveyou/refs/heads/main/rate-limits/moveyou-rate-limits.yml
+  href: https://artifacts.apis.io/moveyou/rate-limits/moveyou-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/moveyou-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/moveyou/refs/heads/main/finops/moveyou-finops.yml
+  href: https://artifacts.apis.io/moveyou/finops/moveyou-finops.yml
   title: ''
   type: FinOps
   url: finops/moveyou-finops.yml
@@ -61,12 +65,12 @@ common:
   type: Website
   url: https://www.moveyou.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/moveyou/refs/heads/main/security/moveyou-trust-center.yml
+  href: https://artifacts.apis.io/moveyou/security/moveyou-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/moveyou-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/moveyou/refs/heads/main/security/moveyou-domain-security.yml
+  href: https://artifacts.apis.io/moveyou/security/moveyou-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/moveyou-domain-security.yml
@@ -88,7 +92,7 @@ finops:
 - has_sources: false
   method: generated
   name: Moveyou Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: moveyou-finops
   template: true
@@ -106,7 +110,7 @@ plans:
 - name: Moveyou Plans Pricing
   plan_count: 3
   slug: moveyou-plans-pricing
-random_paper: 18
+random_paper: 20
 rate_limits:
 - limit_count: 5
   name: Moveyou Rate Limits
@@ -115,13 +119,13 @@ score:
   band: minimal
   composite: 9.6
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 33.0
     catalog_earned_first_party: 0.0
     catalog_gap: 82.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
@@ -129,21 +133,21 @@ score:
     developer_ergonomics: 2.4
     discoverability: 55.4
     operational_transparency: 7.9
-  previous_composite: 11.1
+  previous_composite: 9.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 9.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/moveyou/refs/heads/main/screenshots/moveyou-2026-06-20T185834.png
+screenshot: https://apis.io/screenshots/moveyou/moveyou-2026-06-20T185834.png
 security:
 - kind: domain-security
   name: Moveyou Domain Security

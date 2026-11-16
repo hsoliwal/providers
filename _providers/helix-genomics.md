@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: Partner-gated programmatic access to Helix Exome+ sequencing data - more than 100 million base pairs including SNPs, indels, and copy number variants, with panel-grade coverage of clinically important
@@ -47,7 +51,7 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/helix-genomics/refs/heads/main/security/helix-genomics-domain-security.yml
+  href: https://artifacts.apis.io/helix-genomics/security/helix-genomics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/helix-genomics-domain-security.yml
@@ -76,12 +80,12 @@ overview: 'Helix is listed with 3 APIs on the [APIs.io](https://apis.io/) networ
 
 
   Helix''s developer surface includes documentation and 3 more developer resources.'
-random_paper: 6
+random_paper: 20
 score:
   band: minimal
   composite: 6.1
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -102,14 +106,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/helix-genomics/refs/heads/main/screenshots/helix-genomics-2026-07-25T220915.png
+screenshot: https://apis.io/screenshots/helix-genomics/helix-genomics-2026-07-25T220915.png
 security:
 - kind: domain-security
   name: Helix Genomics Domain Security

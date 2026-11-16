@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.8
-  scored_at: '2026-10-17'
+  score: 29.3
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - baseURL: https://api.digitalrealty.com
@@ -44,52 +61,52 @@ apis:
 artifact_total: 13
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digital-realty/refs/heads/main/rules/digital-realty-rules.yml
+  href: https://artifacts.apis.io/digital-realty/rules/digital-realty-rules.yml
   title: ''
   type: Spectral
   url: rules/digital-realty-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digital-realty/refs/heads/main/json-ld/digital-realty-context.jsonld
+  href: https://artifacts.apis.io/digital-realty/json-ld/digital-realty-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/digital-realty-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digital-realty/refs/heads/main/vocabulary/digital-realty-vocabulary.yml
+  href: https://artifacts.apis.io/digital-realty/vocabulary/digital-realty-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/digital-realty-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digital-realty/refs/heads/main/data-model/digital-realty-data-model.yml
+  href: https://artifacts.apis.io/digital-realty/data-model/digital-realty-data-model.yml
   title: ''
   type: DataModel
   url: data-model/digital-realty-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/digital-realty/refs/heads/main/changelog/digital-realty-changelog.yml
+  href: https://artifacts.apis.io/digital-realty/changelog/digital-realty-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/digital-realty-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digital-realty/refs/heads/main/conventions/digital-realty-conventions.yml
+  href: https://artifacts.apis.io/digital-realty/conventions/digital-realty-conventions.yml
   title: ''
   type: Conventions
   url: conventions/digital-realty-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digital-realty/refs/heads/main/authentication/digital-realty-authentication.yml
+  href: https://artifacts.apis.io/digital-realty/authentication/digital-realty-authentication.yml
   title: ''
   type: Authentication
   url: authentication/digital-realty-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/digital-realty/refs/heads/main/conformance/digital-realty-conformance.yml
+  href: https://artifacts.apis.io/digital-realty/conformance/digital-realty-conformance.yml
   title: ''
   type: Conformance
   url: conformance/digital-realty-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/digital-realty/refs/heads/main/well-known/digital-realty-well-known.yml
+  href: https://artifacts.apis.io/digital-realty/well-known/digital-realty-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/digital-realty-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/digital-realty/refs/heads/main/hosts/digital-realty-hosts.yml
+  href: https://artifacts.apis.io/digital-realty/hosts/digital-realty-hosts.yml
   title: ''
   type: Hosts
   url: hosts/digital-realty-hosts.yml
@@ -130,7 +147,7 @@ common:
   type: Documentation
   url: https://developer.digitalrealty.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/digital-realty/refs/heads/main/security/digital-realty-domain-security.yml
+  href: https://artifacts.apis.io/digital-realty/security/digital-realty-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/digital-realty-domain-security.yml
@@ -177,14 +194,14 @@ modified: '2026-10-14'
 name: Digital Realty
 nav: Providers
 network: true
-overview: 'Digital Realty is listed with 3 APIs on the [APIs.io](https://apis.io/) network: Auth API, Facility Access API, and Remotehands Tickets API. Tagged areas include DataCenter, Colocation, Cloud, Infrastructure, and Sustainability.
+overview: 'Digital Realty is listed with 3 APIs on the [APIs.io](https://apis.io/) network: Auth API, Facility Access API, and Remotehands Tickets API. Tagged areas include Data Center, Colocation, Cloud, Infrastructure, and Sustainability.
 
 
   The Digital Realty catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Digital Realty''s developer surface includes changelog, authentication, signup flow, engineering blog, getting-started guide, documentation, and 15 more developer resources.'
-random_paper: 6
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -200,21 +217,23 @@ rules:
   slug: digital-realty-rules
 score:
   band: thin
-  composite: 35.1
+  composite: 27.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 63.8
     catalog_earned_first_party: 0.0
     catalog_gap: 51.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.5
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 22.0
     contract_quality: 26.3
-    developer_ergonomics: 35.7
-    discoverability: 71.4
-    operational_transparency: 31.6
+    developer_ergonomics: 23.8
+    discoverability: 69.6
+    operational_transparency: 23.7
+  previous_composite: 35.1
   provenance:
     conformance: derived
     contracts:
@@ -228,12 +247,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/digital-realty/digital-realty-2026-11-03T130715.png
 security:
 - kind: authentication
   name: Digital Realty Authentication
@@ -245,7 +266,7 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: digital-realty
 tags:
-- DataCenter
+- Data Center
 - Colocation
 - Cloud
 - Infrastructure

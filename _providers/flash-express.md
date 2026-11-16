@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The FlashExpress Open API is the merchant-facing integration surface for Flash Express parcel logistics in Thailand. All calls are HTTPS POST with an application/x-www-form-urlencoded body and a JSON '
@@ -49,7 +52,7 @@ asyncapis:
   slug: flash-express-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/security/flash-express-domain-security.yml
+  href: https://artifacts.apis.io/flash-express/security/flash-express-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/flash-express-domain-security.yml
@@ -106,67 +109,67 @@ common:
   type: PrivacyPolicy
   url: https://flashexpress.com/fle/our-service/service-agreement/privacy-policy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/packages/flash-express-packages.yml
+  href: https://artifacts.apis.io/flash-express/packages/flash-express-packages.yml
   title: ''
   type: Packages
   url: packages/flash-express-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/packages/flash-express-packages.yml
+  href: https://artifacts.apis.io/flash-express/packages/flash-express-packages.yml
   title: ''
   type: SDKs
   url: packages/flash-express-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/authentication/flash-express-authentication.yml
+  href: https://artifacts.apis.io/flash-express/authentication/flash-express-authentication.yml
   title: ''
   type: Authentication
   url: authentication/flash-express-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/conventions/flash-express-conventions.yml
+  href: https://artifacts.apis.io/flash-express/conventions/flash-express-conventions.yml
   title: ''
   type: Conventions
   url: conventions/flash-express-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/errors/flash-express-error-codes.yml
+  href: https://artifacts.apis.io/flash-express/errors/flash-express-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/flash-express-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/asyncapi/flash-express-webhooks.yml
+  href: https://artifacts.apis.io/flash-express/asyncapi/flash-express-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/flash-express-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/data-model/flash-express-data-model.yml
+  href: https://artifacts.apis.io/flash-express/data-model/flash-express-data-model.yml
   title: ''
   type: DataModel
   url: data-model/flash-express-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/sandbox/flash-express-sandbox.yml
+  href: https://artifacts.apis.io/flash-express/sandbox/flash-express-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/flash-express-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/conformance/flash-express-conformance.yml
+  href: https://artifacts.apis.io/flash-express/conformance/flash-express-conformance.yml
   title: ''
   type: Conformance
   url: conformance/flash-express-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/lifecycle/flash-express-lifecycle.yml
+  href: https://artifacts.apis.io/flash-express/lifecycle/flash-express-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/flash-express-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/plans/flash-express-plans-pricing.yml
+  href: https://artifacts.apis.io/flash-express/plans/flash-express-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/flash-express-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/rate-limits/flash-express-rate-limits.yml
+  href: https://artifacts.apis.io/flash-express/rate-limits/flash-express-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/flash-express-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/llms/flash-express-llms.txt
+  href: https://artifacts.apis.io/flash-express/llms/flash-express-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/flash-express-llms.txt
@@ -189,7 +192,7 @@ plans:
 - name: Flash Express Plans Pricing
   plan_count: 0
   slug: flash-express-plans-pricing
-random_paper: 7
+random_paper: 5
 rate_limits:
 - limit_count: 0
   name: Flash Express Rate Limits
@@ -228,14 +231,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/flash-express/refs/heads/main/screenshots/flash-express-2026-08-17T080933.png
+screenshot: https://apis.io/screenshots/flash-express/flash-express-2026-08-17T080933.png
 security:
 - kind: authentication
   name: Flash Express Authentication

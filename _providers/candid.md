@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -24,19 +27,22 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: verified
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 52.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -44,7 +50,7 @@ agentic_access:
   operation_count: 7
   slug: candid-agentic-access
   summary_line: 7 operations
-api_count: 9
+api_count: 1
 apis:
 - description: Deep nonprofit profile data. Returns comprehensive records for a given organization including financials, programs, leadership, board, grants received and awarded, operating details, affiliations, and
   name: Candid Premier API
@@ -72,16 +78,13 @@ apis:
   description: Operations for retrieving lookup values and filter metadata.
   name: Candid Lookup API
   slug: candid-lookup-api
-- baseURL: https://api.candid.org/essentials
+- baseURL: https://api.candid.org/premier
   baseurl_source: declared
-  description: Operations for searching the Candid nonprofit database.
-  name: Candid Search API
-  slug: candid-search-api
+  description: The Essentials API from Candid — 4 operation(s) for essentials.
+  name: Candid Essentials API
+  slug: candid-essentials-api
 artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Candid Essentials API
   slug: open-candid-essentials-api
@@ -92,18 +95,23 @@ collections:
   name: Candid Essentials Lookup Search API
   slug: open-candid-search-api
 common:
+- group: other
+  href: https://artifacts.apis.io/candid/capabilities/candid-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/candid-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/candid/refs/heads/main/plans/candid-plans-pricing.yml
+  href: https://artifacts.apis.io/candid/plans/candid-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/candid-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/candid/refs/heads/main/rate-limits/candid-rate-limits.yml
+  href: https://artifacts.apis.io/candid/rate-limits/candid-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/candid-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/candid/refs/heads/main/finops/candid-finops.yml
+  href: https://artifacts.apis.io/candid/finops/candid-finops.yml
   title: ''
   type: FinOps
   url: finops/candid-finops.yml
@@ -112,17 +120,17 @@ common:
   type: Blog
   url: https://candid.org/blogs/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/candid/refs/heads/main/agentic-access/candid-agentic-access.yml
+  href: https://artifacts.apis.io/candid/agentic-access/candid-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/candid-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/candid/refs/heads/main/security/candid-domain-security.yml
+  href: https://artifacts.apis.io/candid/security/candid-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/candid-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/candid/refs/heads/main/authentication/candid-authentication.yml
+  href: https://artifacts.apis.io/candid/authentication/candid-authentication.yml
   title: ''
   type: Authentication
   url: authentication/candid-authentication.yml
@@ -176,7 +184,7 @@ finops:
 - has_sources: false
   method: generated
   name: Candid Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: candid-finops
   template: true
@@ -190,44 +198,60 @@ modified: '2026-10-06'
 name: Candid
 nav: Providers
 network: true
-overview: 'Candid is listed with 9 APIs on the [APIs.io](https://apis.io/) network, including Lookup API, Search API, and 7 more. Tagged areas include Charities, Donations, Non-Profit, Philanthropy, and Foundations.
+overview: 'Candid publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Lookup API, Essentials API, and 7 more. Tagged areas include Charities, Donations, Non-Profit, Philanthropy, and Foundations.
 
 
-  Candid''s developer surface includes engineering blog, authentication, support, and 15 more developer resources.'
+  The Candid catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Candid''s developer surface includes engineering blog, authentication, support, and 16 more developer resources.'
 plans:
 - name: Candid Plans Pricing
   plan_count: 3
   slug: candid-plans-pricing
-random_paper: 17
+random_paper: 11
 rate_limits:
 - limit_count: 5
   name: Candid Rate Limits
   slug: candid-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Candid API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: candid-rules
 score:
   band: thin
-  composite: 30.7
+  composite: 34.7
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 46.0
+    artifact_dirs: 19
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 2.9
   facets:
     access_clarity: 18.4
-    contract_governance: 0.0
-    contract_quality: 50.2
-    developer_ergonomics: 28.6
-    discoverability: 80.0
+    contract_governance: 13.6
+    contract_quality: 53.9
+    developer_ergonomics: 38.1
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 31.7
+  previous_composite: 31.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 66.7
       total: 3
     mcp: first-party
   regulatory:
@@ -236,13 +260,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/candid/refs/heads/main/screenshots/candid-2026-06-20T173922.png
+screenshot: https://apis.io/screenshots/candid/candid-2026-06-20T173922.png
 security:
 - kind: authentication
   name: Candid Authentication

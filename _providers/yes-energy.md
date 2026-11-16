@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: DataSignals is Yes Energy's REST API for automated access to its North American wholesale power market data — nodal prices, transmission, generation, outages, constraints, weather, and fuels — coverin
@@ -43,37 +46,37 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yes-energy/refs/heads/main/security/yes-energy-domain-security.yml
+  href: https://artifacts.apis.io/yes-energy/security/yes-energy-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/yes-energy-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yes-energy/refs/heads/main/authentication/yes-energy-authentication.yml
+  href: https://artifacts.apis.io/yes-energy/authentication/yes-energy-authentication.yml
   title: ''
   type: Authentication
   url: authentication/yes-energy-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yes-energy/refs/heads/main/conventions/yes-energy-conventions.yml
+  href: https://artifacts.apis.io/yes-energy/conventions/yes-energy-conventions.yml
   title: ''
   type: Conventions
   url: conventions/yes-energy-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yes-energy/refs/heads/main/lifecycle/yes-energy-lifecycle.yml
+  href: https://artifacts.apis.io/yes-energy/lifecycle/yes-energy-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/yes-energy-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yes-energy/refs/heads/main/conformance/yes-energy-conformance.yml
+  href: https://artifacts.apis.io/yes-energy/conformance/yes-energy-conformance.yml
   title: ''
   type: Conformance
   url: conformance/yes-energy-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/yes-energy/refs/heads/main/packages/yes-energy-packages.yml
+  href: https://artifacts.apis.io/yes-energy/packages/yes-energy-packages.yml
   title: ''
   type: Packages
   url: packages/yes-energy-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yes-energy/refs/heads/main/llms/yes-energy-llms.txt
+  href: https://artifacts.apis.io/yes-energy/llms/yes-energy-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/yes-energy-llms.txt
@@ -158,12 +161,12 @@ overview: 'Yes Energy is listed with 1 API on the [APIs.io](https://apis.io/) ne
 
 
   Yes Energy''s developer surface includes authentication, support, documentation, signup flow, pricing, engineering blog, product news, and 17 more developer resources.'
-random_paper: 20
+random_paper: 0
 score:
   band: emerging
   composite: 20.9
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -193,14 +196,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 17.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/yes-energy/refs/heads/main/screenshots/yes-energy-2026-09-02T171246.png
+screenshot: https://apis.io/screenshots/yes-energy/yes-energy-2026-09-02T171246.png
 security:
 - kind: authentication
   name: Yes Energy Authentication

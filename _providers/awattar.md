@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
   public: true
   source:
   - plans
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.3
-  scored_at: '2026-10-17'
+  score: 29.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -48,22 +55,19 @@ apis:
   description: EPEX Spot electricity market price data
   name: aWATTar Market Data API
   slug: awattar-market-data-api
-artifact_total: 12
+artifact_total: 11
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: aWATTar Market Data API
   slug: open-awattar-market-data-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/awattar/refs/heads/main/agentic-access/awattar-agentic-access.yml
+  href: https://artifacts.apis.io/awattar/agentic-access/awattar-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/awattar-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/awattar/refs/heads/main/security/awattar-domain-security.yml
+  href: https://artifacts.apis.io/awattar/security/awattar-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/awattar-domain-security.yml
@@ -92,17 +96,17 @@ common:
   type: Pricing
   url: https://www.awattar.at/tariffs/hourly
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/awattar/refs/heads/main/plans/awattar-plans-pricing.yml
+  href: https://artifacts.apis.io/awattar/plans/awattar-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/awattar-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/awattar/refs/heads/main/rate-limits/awattar-rate-limits.yml
+  href: https://artifacts.apis.io/awattar/rate-limits/awattar-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/awattar-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/awattar/refs/heads/main/finops/awattar-finops.yml
+  href: https://artifacts.apis.io/awattar/finops/awattar-finops.yml
   title: ''
   type: FinOps
   url: finops/awattar-finops.yml
@@ -146,7 +150,7 @@ plans:
 - name: Awattar Plans Pricing
   plan_count: 1
   slug: awattar-plans-pricing
-random_paper: 8
+random_paper: 12
 rate_limits:
 - limit_count: 1
   name: Awattar Rate Limits
@@ -167,13 +171,13 @@ score:
   band: thin
   composite: 27.5
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 52.3
     catalog_earned_first_party: 0.0
     catalog_gap: 62.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.1
+  delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
@@ -190,7 +194,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 33.6
+  previous_composite: 27.5
   provenance:
     agentic_access: derived
     contracts:
@@ -204,14 +208,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 9.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/awattar/refs/heads/main/screenshots/awattar-2026-06-20T172732.png
+screenshot: https://apis.io/screenshots/awattar/awattar-2026-06-20T172732.png
 security:
 - kind: domain-security
   name: Awattar Domain Security

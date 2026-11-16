@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://www.regencyenergy.com'', ''status'': 301, ''note'': ''declared website redirects to https://www.energytransfer.com/ — a different registrable domain (regencyenergy.com -> energytransfer.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/regency-energy-partners/refs/heads/main/security/regency-energy-partners-domain-security.yml
+  href: https://artifacts.apis.io/regency-energy-partners/security/regency-energy-partners-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/regency-energy-partners-domain-security.yml
@@ -90,7 +94,7 @@ press:
 - date: ''
   title: Regency Energy to buy field services co for $185 million
   url: https://www.reuters.com/article/business/regency-energy-to-buy-field-services-co-for-185-million-idUSTRE67822L/
-random_paper: 14
+random_paper: 16
 score:
   band: minimal
   composite: 8.0
@@ -116,14 +120,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 9.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/regency-energy-partners/refs/heads/main/screenshots/regency-energy-partners-2026-10-11T125045.png
+screenshot: https://apis.io/screenshots/regency-energy-partners/regency-energy-partners-2026-10-11T125045.png
 security:
 - kind: domain-security
   name: Regency Energy Partners Domain Security

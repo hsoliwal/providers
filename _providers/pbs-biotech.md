@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,16 +39,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The agent-callable commerce surface of the PBS Biotech online store. Implemented by Shopify on the company's own shoppbsbiotech.com host and advertised by the store's own /llms.txt, /agents.md and /ro
   name: PBS Biotech Store Agent Commerce (UCP/MCP)
   slug: pbs-biotech-store-agent-commerce
-artifact_total: 7
+artifact_total: 8
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/security/pbs-biotech-domain-security.yml
+  href: https://artifacts.apis.io/pbs-biotech/security/pbs-biotech-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pbs-biotech-domain-security.yml
@@ -82,77 +85,77 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/pbs-biotech-inc.
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/llms/pbs-biotech-llms.txt
+  href: https://artifacts.apis.io/pbs-biotech/llms/pbs-biotech-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pbs-biotech-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/well-known/pbs-biotech-well-known.yml
+  href: https://artifacts.apis.io/pbs-biotech/well-known/pbs-biotech-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/pbs-biotech-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/mcp/pbs-biotech-mcp.yml
+  href: https://artifacts.apis.io/pbs-biotech/mcp/pbs-biotech-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/pbs-biotech-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pbs-biotech/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/authentication/pbs-biotech-authentication.yml
+  href: https://artifacts.apis.io/pbs-biotech/authentication/pbs-biotech-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pbs-biotech-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/scopes/pbs-biotech-scopes.yml
+  href: https://artifacts.apis.io/pbs-biotech/scopes/pbs-biotech-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/pbs-biotech-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/conventions/pbs-biotech-conventions.yml
+  href: https://artifacts.apis.io/pbs-biotech/conventions/pbs-biotech-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pbs-biotech-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/conventions/pbs-biotech-conventions.yml
+  href: https://artifacts.apis.io/pbs-biotech/conventions/pbs-biotech-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/pbs-biotech-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/errors/pbs-biotech-problem-types.yml
+  href: https://artifacts.apis.io/pbs-biotech/errors/pbs-biotech-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pbs-biotech-problem-types.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/rate-limits/pbs-biotech-rate-limits.yml
+  href: https://artifacts.apis.io/pbs-biotech/rate-limits/pbs-biotech-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pbs-biotech-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/plans/pbs-biotech-plans-pricing.yml
+  href: https://artifacts.apis.io/pbs-biotech/plans/pbs-biotech-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pbs-biotech-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/changelog/pbs-biotech-changelog.yml
+  href: https://artifacts.apis.io/pbs-biotech/changelog/pbs-biotech-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/pbs-biotech-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/lifecycle/pbs-biotech-lifecycle.yml
+  href: https://artifacts.apis.io/pbs-biotech/lifecycle/pbs-biotech-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pbs-biotech-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/conformance/pbs-biotech-conformance.yml
+  href: https://artifacts.apis.io/pbs-biotech/conformance/pbs-biotech-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pbs-biotech-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/conformance/pbs-biotech-conformance.yml
+  href: https://artifacts.apis.io/pbs-biotech/conformance/pbs-biotech-conformance.yml
   title: ''
   type: Compliance
   url: conformance/pbs-biotech-conformance.yml
@@ -177,7 +180,7 @@ plans:
 - name: Pbs Biotech Plans Pricing
   plan_count: 0
   slug: pbs-biotech-plans-pricing
-random_paper: 4
+random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Pbs Biotech Rate Limits
@@ -216,14 +219,14 @@ score:
     regime: Health
     regime_id: health
     score: 36.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/pbs-biotech/refs/heads/main/screenshots/pbs-biotech-2026-09-02T150924.png
+screenshot: https://apis.io/screenshots/pbs-biotech/pbs-biotech-2026-09-02T150924.png
 security:
 - kind: authentication
   name: Pbs Biotech Authentication
@@ -233,6 +236,10 @@ security:
   name: Pbs Biotech Domain Security
   slug: pbs-biotech-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 1
+skills:
+- name: pbs-biotech-order-consumables
+  slug: pbs-biotech-order-consumables
 slug: pbs-biotech
 tags:
 - Company

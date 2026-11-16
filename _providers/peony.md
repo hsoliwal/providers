@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -69,17 +73,17 @@ common:
   type: Compliance
   url: https://www.peony.ink/features/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peony/refs/heads/main/security/peony-trust-center.yml
+  href: https://artifacts.apis.io/peony/security/peony-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/peony-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/peony/refs/heads/main/security/peony-domain-security.yml
+  href: https://artifacts.apis.io/peony/security/peony-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/peony-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/peony/refs/heads/main/llms/peony-llms.txt
+  href: https://artifacts.apis.io/peony/llms/peony-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/peony-llms.txt
@@ -95,12 +99,12 @@ overview: 'Peony is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 
 
   Peony''s developer surface includes pricing, signup flow, documentation, engineering blog, and 7 more developer resources.'
-random_paper: 5
+random_paper: 3
 score:
   band: emerging
   composite: 20.5
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -128,14 +132,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/peony/refs/heads/main/screenshots/peony-2026-09-02T151006.png
+screenshot: https://apis.io/screenshots/peony/peony-2026-09-02T151006.png
 security:
 - kind: domain-security
   name: Peony Domain Security
@@ -154,7 +158,6 @@ tags:
 - Mergers and Acquisitions
 - Document Security
 - E-Signature
-- Data Room
 - Software-as-a-Service
 website: https://www.peony.ink
 ---

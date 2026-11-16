@@ -1,9 +1,9 @@
 ---
 access_model:
-  confidence: high
-  label: Free · Self-serve signup
-  onboarding: self-serve
-  pricing: free
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
   public: false
   source:
   - plans
@@ -12,7 +12,7 @@ access_model:
   - security
   - sandbox
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -23,22 +23,25 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 42.6
-  scored_at: '2026-10-17'
-api_count: 3
+  score: 45.5
+  scored_at: '2026-11-06'
+api_count: 4
 apis:
 - baseURL: '{scheme}://{host}/lakekeeper/v1'
   baseurl_source: declared
@@ -105,19 +108,19 @@ apis:
   description: Manage Warehouses
   name: Lakekeeper Warehouse API
   slug: lakekeeper-warehouse-api
-artifact_total: 19
+artifact_total: 25
 asyncapis:
 - description: ''
   name: Lakekeeper Events
   slug: lakekeeper-events
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/capabilities/lakekeeper-capability-edges.yml
+  href: https://artifacts.apis.io/lakekeeper/capabilities/lakekeeper-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/lakekeeper-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/security/lakekeeper-domain-security.yml
+  href: https://artifacts.apis.io/lakekeeper/security/lakekeeper-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lakekeeper-domain-security.yml
@@ -170,98 +173,106 @@ common:
   type: LLMsTxt
   url: https://docs.lakekeeper.io/llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/authentication/lakekeeper-authentication.yml
+  href: https://artifacts.apis.io/lakekeeper/authentication/lakekeeper-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lakekeeper-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/scopes/lakekeeper-scopes.yml
+  href: https://artifacts.apis.io/lakekeeper/scopes/lakekeeper-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/lakekeeper-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/conventions/lakekeeper-conventions.yml
+  href: https://artifacts.apis.io/lakekeeper/conventions/lakekeeper-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lakekeeper-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/conventions/lakekeeper-conventions.yml
+  href: https://artifacts.apis.io/lakekeeper/conventions/lakekeeper-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/lakekeeper-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/errors/lakekeeper-problem-types.yml
+  href: https://artifacts.apis.io/lakekeeper/errors/lakekeeper-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/lakekeeper-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/data-model/lakekeeper-data-model.yml
+  href: https://artifacts.apis.io/lakekeeper/data-model/lakekeeper-data-model.yml
   title: ''
   type: DataModel
   url: data-model/lakekeeper-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/lifecycle/lakekeeper-lifecycle.yml
+  href: https://artifacts.apis.io/lakekeeper/lifecycle/lakekeeper-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lakekeeper-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/conformance/lakekeeper-conformance.yml
+  href: https://artifacts.apis.io/lakekeeper/conformance/lakekeeper-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lakekeeper-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/packages/lakekeeper-packages.yml
+  href: https://artifacts.apis.io/lakekeeper/packages/lakekeeper-packages.yml
   title: ''
   type: Packages
   url: packages/lakekeeper-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/packages/lakekeeper-packages.yml
+  href: https://artifacts.apis.io/lakekeeper/packages/lakekeeper-packages.yml
   title: ''
   type: SDKs
   url: packages/lakekeeper-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/cli/lakekeeper-cli.yml
+  href: https://artifacts.apis.io/lakekeeper/cli/lakekeeper-cli.yml
   title: ''
   type: CLI
   url: cli/lakekeeper-cli.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/sandbox/lakekeeper-sandbox.yml
+  href: https://artifacts.apis.io/lakekeeper/sandbox/lakekeeper-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/lakekeeper-sandbox.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/plans/lakekeeper-plans-pricing.yml
+  href: https://artifacts.apis.io/lakekeeper/plans/lakekeeper-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/lakekeeper-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/rate-limits/lakekeeper-rate-limits.yml
+  href: https://artifacts.apis.io/lakekeeper/rate-limits/lakekeeper-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/lakekeeper-rate-limits.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/changelog/lakekeeper-changelog.yml
+  href: https://artifacts.apis.io/lakekeeper/changelog/lakekeeper-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/lakekeeper-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/lakekeeper/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/llms/lakekeeper-llms.txt
+  href: https://artifacts.apis.io/lakekeeper/llms/lakekeeper-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lakekeeper-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/overlays/lakekeeper-management-api-overlay.yaml
+  href: https://artifacts.apis.io/lakekeeper/overlays/lakekeeper-management-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/lakekeeper-management-api-overlay.yaml
 created: '2026-08-27'
 description: Lakekeeper is an open-source Apache Iceberg REST Catalog written in Rust and maintained by Vakamo. It manages Iceberg tables, views and namespaces for query engines such as Apache Spark, Trino, StarRocks, DuckDB, Athena, Flink and PyIceberg, vending short-lived, prefix-scoped storage credentials for S3, GCS, Azure ADLS and Microsoft OneLake/Fabric instead of handing long-lived keys to engines. It exposes three distinct HTTP APIs — the standard Iceberg REST Catalog API at /catalog/v1, a Lakekeeper-specific Management API at /management/v1 for bootstrapping, projects, warehouses, users, roles, tasks and fine-grained permissions, and a Data API at /lakekeeper/v1 that catalogs non-Iceberg generic tables such as Lance, Delta and Parquet. Authorization is pluggable (OpenFGA for RBAC/ ReBAC, Open Policy Agent bridge, Cedar in the commercial Lakekeeper+ distribution), authentication is OIDC/OAuth2 or Kubernetes service accounts, and change events are published as CloudEvents to Kafka
   or NATS. Lakekeeper is self-hosted software under Apache 2.0; commercial Lakekeeper+ and Lakekeeper Cloud are sold by Vakamo.
+finops:
+- has_sources: true
+  method: derived
+  name: Lakekeeper Finops
+  primary_unit: ''
+  service_category: ''
+  slug: lakekeeper-finops
+  template: true
 image: https://docs.lakekeeper.io/assets/logos/LAKEKEEPER_IMAGE_TEXT_SIDE.svg
 layout: provider
 modified: '2026-08-27'
@@ -271,19 +282,32 @@ network: true
 overview: 'Lakekeeper publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Generic Table (Data) API, Authorization API, Catalog API, and 10 more. Tagged areas include Apache Iceberg, Data Catalog, Lakehouse, Open Source, and Rust.
 
 
-  The Lakekeeper catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Lakekeeper catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Lakekeeper''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, changelog, and 25 more developer resources.'
 plans:
 - name: Lakekeeper Plans Pricing
-  plan_count: 3
+  plan_count: 2
   slug: lakekeeper-plans-pricing
-random_paper: 15
+random_paper: 17
 rate_limits:
 - limit_count: 0
   name: Lakekeeper Rate Limits
   slug: lakekeeper-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Lakekeeper API Rules
+  rule_count: 60
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 5
+    warn: 8
+  slug: lakekeeper-rules
 scopes:
 - name: Lakekeeper Scopes
   scope_count: 1
@@ -291,29 +315,29 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: strong
-  composite: 55.3
+  composite: 55.0
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 52.0
-    catalog_earned_first_party: 12.0
-    catalog_gap: 63.0
+    artifact_dirs: 31
+    catalog_earned: 52.5
+    catalog_earned_first_party: 8.0
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
-    access_clarity: 52.6
-    contract_governance: 18.2
-    contract_quality: 54.4
+    access_clarity: 42.1
+    contract_governance: 31.8
+    contract_quality: 55.1
     developer_ergonomics: 80.4
     discoverability: 78.6
     operational_transparency: 18.4
-  previous_composite: 55.3
+  previous_composite: 54.9
   provenance:
     conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 7.1
+      marker_coverage: 14.3
       total: 14
     mcp: derived
     skills: derived
@@ -323,13 +347,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/screenshots/lakekeeper-2026-09-02T150205.png
+screenshot: https://apis.io/screenshots/lakekeeper/lakekeeper-2026-09-02T150205.png
 security:
 - kind: authentication
   name: Lakekeeper Authentication
@@ -339,6 +363,16 @@ security:
   name: Lakekeeper Domain Security
   slug: lakekeeper-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 4
+skills:
+- name: lakekeeper-grant-table-access
+  slug: lakekeeper-grant-table-access
+- name: lakekeeper-provision-warehouse
+  slug: lakekeeper-provision-warehouse
+- name: lakekeeper-read-table-with-vended-credentials
+  slug: lakekeeper-read-table-with-vended-credentials
+- name: lakekeeper-recover-dropped-table
+  slug: lakekeeper-recover-dropped-table
 slug: lakekeeper
 tags:
 - Apache Iceberg

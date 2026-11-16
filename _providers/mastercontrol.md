@@ -1,16 +1,16 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - security
   trial: false
   try_now: false
 agent_readiness:
-  band: human-only
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,24 +25,59 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
-    rate_limit_signal: false
+    rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: false
-    well_known_catalog: false
+    well_known_catalog: true
   schema_version: '0.2'
-  score: 0.0
-  scored_at: '2026-10-17'
+  score: 5.4
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The MasterControl Manufacturing Excellence (Mx) RESTful API creates, modifies, retrieves and deletes manufacturing and production-record data in Mx. It is delivered through the separately licensed Mas
   name: MasterControl Mx RESTful API
   slug: mx-restful-api
-artifact_total: 3
+artifact_total: 5
 common:
+- group: operate
+  title: ''
+  type: StatusPage
+  url: https://status.mastercontrol.com/support
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mastercontrol/refs/heads/main/security/mastercontrol-domain-security.yml
+  href: https://artifacts.apis.io/mastercontrol/security/mastercontrol-trust-center.yml
+  title: ''
+  type: TrustCenter
+  url: security/mastercontrol-trust-center.yml
+- group: operate
+  href: https://artifacts.apis.io/mastercontrol/lifecycle/mastercontrol-lifecycle.yml
+  title: ''
+  type: Deprecation
+  url: lifecycle/mastercontrol-lifecycle.yml
+- group: other
+  href: https://artifacts.apis.io/mastercontrol/hosts/mastercontrol-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/mastercontrol-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/mastercontrol/vendors/mastercontrol-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/mastercontrol-vendors.yml
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://www.mastercontrol.com/news/
+- group: other
+  title: ''
+  type: Leadership
+  url: https://www.mastercontrol.com/company/team/
+- group: auth
+  href: https://artifacts.apis.io/mastercontrol/security/mastercontrol-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mastercontrol-domain-security.yml
@@ -87,32 +122,25 @@ common:
   type: Compliance
   url: https://www.mastercontrol.com/ai-trust-center/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mastercontrol/refs/heads/main/conformance/mastercontrol-conformance.yml
+  href: https://artifacts.apis.io/mastercontrol/conformance/mastercontrol-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mastercontrol-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mastercontrol/refs/heads/main/lifecycle/mastercontrol-lifecycle.yml
+  href: https://artifacts.apis.io/mastercontrol/lifecycle/mastercontrol-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mastercontrol-lifecycle.yml
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mastercontrol/refs/heads/main/llms/mastercontrol-llms.txt
-  title: ''
-  type: LLMsTxt
-  url: llms/mastercontrol-llms.txt
 coverage:
-  checked: '2026-08-04'
-  detail: MasterControl's Qx and Mx REST reference is a Swagger UI served only from inside a paying customer's own tenant (https://mx.<region>.svc.mastercontrol.com/<company>/swagger-ui/index.html) and requires a separately purchased API license, so the host root and every anonymous spec path on the live Mx service host return 404.
+  checked: '2026-10-20'
+  detail: MasterControl's Qx/Mx REST reference is a Swagger UI served per customer tenant on mx.<region>.svc.mastercontrol.com behind a separately licensed API Toolkit, and the public toolkit page carries no contract, pricing or limits.
   evidence:
   - status: 404
-    url: https://mx.us-west-2.svc.mastercontrol.com/swagger-ui/index.html
-  - status: 404
-    url: https://mx.us-west-2.svc.mastercontrol.com/v3/api-docs
-  - status: 404
-    url: https://www.mastercontrol.com/openapi.json
+    url: https://mx.us-west-2.svc.mastercontrol.com/
   - status: 200
-    url: https://currentcloud.onlinehelp.mastercontrol.com/2024.1/en_us/Content/Appendix/Access_and_Use_MasterControl_APIs.htm
+    url: https://www.mastercontrol.com/solutions/toolkit/
+  - status: 401
+    url: https://support.mastercontrol.com/api/mcp
   reason: customer-only-docs
   state: gated
 created: '2026-08-04'
@@ -126,27 +154,35 @@ network: true
 overview: 'MasterControl is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Quality Management, Manufacturing, Life Sciences, and Compliance.
 
 
-  MasterControl''s developer surface includes documentation, support, engineering blog, pricing, and 10 more developer resources.'
-random_paper: 13
+  MasterControl''s developer surface includes documentation, support, engineering blog, pricing, and 16 more developer resources.'
+plans:
+- name: Mastercontrol Plans Pricing
+  plan_count: 0
+  slug: mastercontrol-plans-pricing
+random_paper: 5
+rate_limits:
+- limit_count: 0
+  name: Mastercontrol Rate Limits
+  slug: mastercontrol-rate-limits
 score:
-  band: emerging
-  composite: 25.2
+  band: thin
+  composite: 27.5
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.2
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 66.1
-    operational_transparency: 0.0
-  previous_composite: 25.2
+    discoverability: 67.9
+    operational_transparency: 15.8
+  previous_composite: 28.7
   provenance:
     conformance: first-party
   regulatory:
@@ -161,14 +197,14 @@ score:
     regime: Health
     regime_id: health
     score: 18.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mastercontrol/refs/heads/main/screenshots/mastercontrol-2026-08-07T172117.png
+screenshot: https://apis.io/screenshots/mastercontrol/mastercontrol-2026-08-07T172117.png
 security:
 - kind: domain-security
   name: Mastercontrol Domain Security

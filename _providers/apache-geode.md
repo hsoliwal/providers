@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -66,11 +70,8 @@ apis:
   description: The Regions API from Apache Geode — 4 operation(s) for regions.
   name: Apache Geode Regions API
   slug: apache-geode-regions-api
-artifact_total: 69
+artifact_total: 68
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Apache Geode REST Administration API
   slug: open-apache-geode-administration-api
@@ -88,22 +89,22 @@ collections:
   slug: open-apache-geode-rest
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/plans/apache-geode-plans-pricing.yml
+  href: https://artifacts.apis.io/apache-geode/plans/apache-geode-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apache-geode-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/rate-limits/apache-geode-rate-limits.yml
+  href: https://artifacts.apis.io/apache-geode/rate-limits/apache-geode-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apache-geode-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/finops/apache-geode-finops.yml
+  href: https://artifacts.apis.io/apache-geode/finops/apache-geode-finops.yml
   title: ''
   type: FinOps
   url: finops/apache-geode-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/capabilities/apache-geode-capability-edges.yml
+  href: https://artifacts.apis.io/apache-geode/capabilities/apache-geode-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/apache-geode-capability-edges.yml
@@ -124,17 +125,17 @@ common:
   type: License
   url: https://github.com/apache/geode/blob/develop/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/agentic-access/apache-geode-agentic-access.yml
+  href: https://artifacts.apis.io/apache-geode/agentic-access/apache-geode-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/apache-geode-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/security/apache-geode-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/apache-geode/security/apache-geode-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/apache-geode-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/security/apache-geode-domain-security.yml
+  href: https://artifacts.apis.io/apache-geode/security/apache-geode-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apache-geode-domain-security.yml
@@ -159,12 +160,12 @@ common:
   type: Blog
   url: https://geode.apache.org/blog/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/rules/apache-geode-spectral-rules.yml
+  href: https://artifacts.apis.io/apache-geode/rules/apache-geode-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/apache-geode-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/vocabulary/apache-geode-vocabulary.yaml
+  href: https://artifacts.apis.io/apache-geode/vocabulary/apache-geode-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/apache-geode-vocabulary.yaml
@@ -226,7 +227,7 @@ finops:
 - has_sources: false
   method: generated
   name: Apache Geode Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: apache-geode-finops
   template: true
@@ -323,7 +324,7 @@ plans:
 - name: Apache Geode Plans Pricing
   plan_count: 3
   slug: apache-geode-plans-pricing
-random_paper: 5
+random_paper: 19
 rate_limits:
 - limit_count: 5
   name: Apache Geode Rate Limits
@@ -354,46 +355,46 @@ rules:
   slug: apache-geode-spectral-rules
 score:
   band: thin
-  composite: 32.3
+  composite: 33.6
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 20
     catalog_earned: 63.4
     catalog_earned_first_party: 0.0
     catalog_gap: 51.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.4
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 27.3
     contract_quality: 49.8
     developer_ergonomics: 28.6
     discoverability: 57.1
-    operational_transparency: 26.3
+    operational_transparency: 36.8
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 33.7
+  previous_composite: 33.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
       marker_coverage: 0.0
-      total: 4
+      total: 9
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 13.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/screenshots/apache-geode-2026-06-20T172059.png
+screenshot: https://apis.io/screenshots/apache-geode/apache-geode-2026-06-20T172059.png
 security:
 - kind: domain-security
   name: Apache Geode Domain Security

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -56,9 +62,6 @@ apis:
 artifact_total: 27
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Apache Struts REST Plugin resource API
   slug: open-apache-struts-resource-api
 - collection_type: open
@@ -66,17 +69,17 @@ collections:
   slug: open-apache-struts
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/plans/apache-struts-plans-pricing.yml
+  href: https://artifacts.apis.io/apache-struts/plans/apache-struts-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apache-struts-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/rate-limits/apache-struts-rate-limits.yml
+  href: https://artifacts.apis.io/apache-struts/rate-limits/apache-struts-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apache-struts-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/finops/apache-struts-finops.yml
+  href: https://artifacts.apis.io/apache-struts/finops/apache-struts-finops.yml
   title: ''
   type: FinOps
   url: finops/apache-struts-finops.yml
@@ -101,22 +104,22 @@ common:
   type: License
   url: https://github.com/apache/struts/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/agentic-access/apache-struts-agentic-access.yml
+  href: https://artifacts.apis.io/apache-struts/agentic-access/apache-struts-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/apache-struts-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/security/apache-struts-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/apache-struts/security/apache-struts-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/apache-struts-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/security/apache-struts-domain-security.yml
+  href: https://artifacts.apis.io/apache-struts/security/apache-struts-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apache-struts-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/authentication/apache-struts-authentication.yml
+  href: https://artifacts.apis.io/apache-struts/authentication/apache-struts-authentication.yml
   title: ''
   type: Authentication
   url: authentication/apache-struts-authentication.yml
@@ -177,7 +180,7 @@ finops:
 - has_sources: false
   method: generated
   name: Apache Struts Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: apache-struts-finops
   template: true
@@ -201,30 +204,46 @@ network: true
 overview: 'Apache Struts publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Resource API, and 1 more. Tagged areas include Java, MVC, Web Applications, Web Framework, and Open Source.
 
 
+  The Apache Struts catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Apache Struts'' developer surface includes authentication, documentation, developer portal, getting-started guide, release notes, support, FAQ, and 14 more developer resources.'
 plans:
 - name: Apache Struts Plans Pricing
   plan_count: 3
   slug: apache-struts-plans-pricing
-random_paper: 6
+random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Apache Struts Rate Limits
   slug: apache-struts-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 86
+  extends:
+  - spectral:oas
+  name: Apache Struts API Rules
+  rule_count: 45
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 1
+  slug: apache-struts-rules
 score:
   band: developing
-  composite: 42.3
+  composite: 43.7
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 38.0
+    artifact_dirs: 16
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.3
+  delta: 0.0
   facets:
     access_clarity: 18.4
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 42.2
     developer_ergonomics: 52.4
     discoverability: 57.1
@@ -232,27 +251,27 @@ score:
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 43.6
+  previous_composite: 43.7
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
       derived: 0
       marker_coverage: 0.0
-      total: 1
+      total: 3
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/screenshots/apache-struts-2026-06-20T172148.png
+screenshot: https://apis.io/screenshots/apache-struts/apache-struts-2026-06-20T172148.png
 security:
 - kind: authentication
   name: Apache Struts Authentication

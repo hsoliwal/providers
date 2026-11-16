@@ -111,6 +111,11 @@ const DIMENSIONS = [
   { id: 'dynamic_client_registration', label: 'Registration Without a Human' },
   // Slot 19, appended 0.13.0 (roadmap#123).
   { id: 'agentic_commerce', label: 'Agentic Commerce Surface' },
+  // Slots 20-21, appended 0.25.0 (roadmap#982, #983) -- same append-only rule as slot 15.
+  { id: 'pagination_ratio', label: 'Pagination' },
+  { id: 'operation_distinctiveness', label: 'Distinct Operations' },
+  // Slot 22, appended 0.26.0 (roadmap#994) -- same append-only rule as slot 15.
+  { id: 'mcp_tool_quality', label: 'MCP Tool Quality' },
 ];
 
 /* Grades that mean PARTIAL credit rather than full. 0.6 made seven of the
@@ -136,6 +141,16 @@ const PARTIAL_GRADES = new Set([
   'served',
   // 0.13.0 (roadmap#123) — agentic_commerce `platform` at 0.25.
   'platform',
+  // 0.25.0 (roadmap#983) -- operation_distinctiveness `mostly` at 0.5. `distinct` (1.0) and
+  // pagination's `paginated` (1.0) are deliberately absent: full credit draws a full ray.
+  // pagination's own 0.5 tier reuses `partial`, already above.
+  'mostly',
+  // 0.26.0 (roadmap#994) -- mcp_tool_quality rounds its 0-1 credit to a quarter and names it:
+  // full 1.00 / three_quarters 0.75 / half 0.50 / quarter 0.25. `full` is deliberately absent
+  // for the same reason as `bound` and `distinct` above -- full credit draws a full ray. Without
+  // the other three, rayState() falls through to `return 'full'` and a provider at a quarter
+  // credit draws the same ray as one at full.
+  'three_quarters', 'half', 'quarter',
 ]);
 
 /* off | partial | full — from a bool, a grade string, or a trit char. */
@@ -260,7 +275,7 @@ function kinGlyph(p, opts = {}) {
   // --- facet rings --------------------------------------------------------
   // stroke-dasharray on a circle gives rounded data-ends and needs no arc maths.
   FACETS.forEach((f, i) => {
-    const raw = Number(p.facets?.[f.id] ?? (f.was ? p.facets?.[f.was] : undefined) ?? 0);
+    const raw = Number(p.facets?.[f.id] ?? 0);
     const v = Math.max(0, Math.min(100, raw));
     const r = outerR - ringW / 2 - i * (ringW + gap);
     const circ = 2 * Math.PI * r;

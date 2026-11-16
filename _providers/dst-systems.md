@@ -24,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 0
 common:
@@ -77,7 +80,7 @@ press:
 - date: ''
   title: indico Founder to Speak at DST Systems' 2018 ADVANCE
   url: https://www.globenewswire.com/news-release/2018/02/05/1332837/0/en/indico-founder-to-speak-at-dst-systems-2018-advance-conference.html
-random_paper: 2
+random_paper: 16
 score:
   band: minimal
   composite: 2.1
@@ -109,14 +112,14 @@ score:
     regime: Health
     regime_id: health
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/dst-systems/refs/heads/main/screenshots/dst-systems-2026-06-20T180257.png
+screenshot: https://apis.io/screenshots/dst-systems/dst-systems-2026-06-20T180257.png
 slug: dst-systems
 tags:
 - Financial Services

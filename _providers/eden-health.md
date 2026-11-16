@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 16.5
-  scored_at: '2026-10-17'
+  score: 18.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 79
   human_in_the_loop: 0
@@ -40,7 +44,7 @@ agentic_access:
   operation_count: 173
   slug: eden-health-agentic-access
   summary_line: 173 operations · 79 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.edenhealth.com
   baseurl_source: declared
@@ -260,9 +264,6 @@ apis:
 artifact_total: 89
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Grdn grdn.handler API
   slug: open-eden-health-grdn-handler-api
 - collection_type: open
@@ -393,12 +394,12 @@ collections:
   slug: open-eden-health-grdn-routes-impl-visitor-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/eden-health/refs/heads/main/capabilities/eden-health-capability-edges.yml
+  href: https://artifacts.apis.io/eden-health/capabilities/eden-health-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/eden-health-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/eden-health/refs/heads/main/overlays/eden-health-grdn-overlay.yaml
+  href: https://artifacts.apis.io/eden-health/overlays/eden-health-grdn-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/eden-health-grdn-overlay.yaml
@@ -407,37 +408,37 @@ common:
   type: Website
   url: https://edenhealth.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eden-health/refs/heads/main/agentic-access/eden-health-agentic-access.yml
+  href: https://artifacts.apis.io/eden-health/agentic-access/eden-health-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/eden-health-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eden-health/refs/heads/main/security/eden-health-domain-security.yml
+  href: https://artifacts.apis.io/eden-health/security/eden-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/eden-health-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eden-health/refs/heads/main/conventions/eden-health-conventions.yml
+  href: https://artifacts.apis.io/eden-health/conventions/eden-health-conventions.yml
   title: ''
   type: Conventions
   url: conventions/eden-health-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eden-health/refs/heads/main/lifecycle/eden-health-lifecycle.yml
+  href: https://artifacts.apis.io/eden-health/lifecycle/eden-health-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/eden-health-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eden-health/refs/heads/main/data-model/eden-health-data-model.yml
+  href: https://artifacts.apis.io/eden-health/data-model/eden-health-data-model.yml
   title: ''
   type: DataModel
   url: data-model/eden-health-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/eden-health/refs/heads/main/conformance/eden-health-conformance.yml
+  href: https://artifacts.apis.io/eden-health/conformance/eden-health-conformance.yml
   title: ''
   type: Conformance
   url: conformance/eden-health-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eden-health/refs/heads/main/llms/eden-health-llms.txt
+  href: https://artifacts.apis.io/eden-health/llms/eden-health-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/eden-health-llms.txt
@@ -449,34 +450,50 @@ modified: '2026-07-19'
 name: Eden Health
 nav: Providers
 network: true
-overview: Eden Health publishes 43 API contracts indexed on the [APIs.io](https://apis.io/) network, including grdn.handler API, grdn.routes.impl.addons API, Grdn.routes.impl.app API, and 40 more. Tagged areas include Company, Healthcare, Primary Care, Virtual Care, and Telehealth.
-random_paper: 9
+overview: 'Eden Health publishes 43 API contracts indexed on the [APIs.io](https://apis.io/) network, including grdn.handler API, grdn.routes.impl.addons API, Grdn.routes.impl.app API, and 40 more. Tagged areas include Company, Healthcare, Primary Care, Virtual Care, and Telehealth.
+
+
+  The Eden Health catalog on APIs.io includes 1 Spectral governance ruleset.'
+random_paper: 7
+rules:
+- authorship: generated
+  effective_rule_count: 79
+  extends:
+  - spectral:oas
+  name: Eden Health API Rules
+  rule_count: 38
+  severity_counts:
+    error: 31
+    hint: 0
+    info: 2
+    warn: 5
+  slug: eden-health-rules
 score:
   band: emerging
-  composite: 15.6
+  composite: 18.1
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 37.0
+    artifact_dirs: 15
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.8
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 31.5
+    contract_governance: 18.2
+    contract_quality: 34.8
     developer_ergonomics: 0.0
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 15.6
+  previous_composite: 17.3
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 0.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 43
   regulatory:
     applies: true
@@ -484,8 +501,8 @@ score:
     regime: Health
     regime_id: health
     score: 8.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true

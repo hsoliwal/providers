@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,13 +40,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Tenant-scoped REST API for the Reltio Context Intelligence Platform: entities, relations, interactions, reference data, load/export, data integration, workflow, hierarchy, statistics, and validation. '
   name: Reltio Context Intelligence Platform REST API
   slug: reltio-context-intelligence-platform-rest-api
-artifact_total: 5
+artifact_total: 8
 common:
 - group: company
   title: ''
@@ -102,37 +109,37 @@ common:
   type: StatusPage
   url: https://status.reltio.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/mcp/reltio-mcp.yml
+  href: https://artifacts.apis.io/reltio/mcp/reltio-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/reltio-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/packages/reltio-packages.yml
+  href: https://artifacts.apis.io/reltio/packages/reltio-packages.yml
   title: ''
   type: Packages
   url: packages/reltio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/packages/reltio-packages.yml
+  href: https://artifacts.apis.io/reltio/packages/reltio-packages.yml
   title: ''
   type: SDKs
   url: packages/reltio-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/authentication/reltio-authentication.yml
+  href: https://artifacts.apis.io/reltio/authentication/reltio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/reltio-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/conventions/reltio-conventions.yml
+  href: https://artifacts.apis.io/reltio/conventions/reltio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/reltio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/lifecycle/reltio-lifecycle.yml
+  href: https://artifacts.apis.io/reltio/lifecycle/reltio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/reltio-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/changelog/reltio-changelog.yml
+  href: https://artifacts.apis.io/reltio/changelog/reltio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/reltio-changelog.yml
@@ -141,7 +148,7 @@ common:
   type: ChangeLog
   url: https://docs.reltio.com/en/whats-new/release-notes
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/conformance/reltio-conformance.yml
+  href: https://artifacts.apis.io/reltio/conformance/reltio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/reltio-conformance.yml
@@ -150,27 +157,27 @@ common:
   type: Compliance
   url: https://www.reltio.com/trust/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/security/reltio-trust-center.yml
+  href: https://artifacts.apis.io/reltio/security/reltio-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/reltio-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/security/reltio-domain-security.yml
+  href: https://artifacts.apis.io/reltio/security/reltio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/reltio-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/well-known/reltio-well-known.yml
+  href: https://artifacts.apis.io/reltio/well-known/reltio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/reltio-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/llms/reltio-llms.txt
+  href: https://artifacts.apis.io/reltio/llms/reltio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/reltio-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/reltio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -190,18 +197,18 @@ overview: 'Reltio is listed with 1 API on the [APIs.io](https://apis.io/) networ
 
 
   Reltio''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 23 more developer resources.'
-random_paper: 17
+random_paper: 7
 score:
   band: thin
   composite: 38.5
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
@@ -209,7 +216,7 @@ score:
     developer_ergonomics: 66.1
     discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 38.4
+  previous_composite: 38.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -224,14 +231,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/reltio/refs/heads/main/screenshots/reltio-2026-09-02T153324.png
+screenshot: https://apis.io/screenshots/reltio/reltio-2026-09-02T153324.png
 security:
 - kind: authentication
   name: Reltio Authentication
@@ -245,6 +252,14 @@ security:
   name: Reltio Trust Center
   slug: reltio-trust-center
   summary_line: ISO 27001, HITRUST CSF, NIST 800-53, GDPR
+skill_count: 3
+skills:
+- name: Create and enrich an entity profile
+  slug: reltio-create-and-enrich-entity
+- name: Resolve and merge duplicate entities
+  slug: reltio-resolve-and-merge-duplicates
+- name: Work a data-stewardship task queue
+  slug: reltio-steward-workflow-tasks
 slug: reltio
 tags:
 - Company

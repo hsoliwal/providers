@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: private
+  gated_source:
+  - x-api-posture
   label: Unknown
   onboarding: unknown
   pricing: unknown
@@ -25,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +39,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rapport-therapeutics/refs/heads/main/security/rapport-therapeutics-domain-security.yml
+  href: https://artifacts.apis.io/rapport-therapeutics/security/rapport-therapeutics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rapport-therapeutics-domain-security.yml
@@ -71,7 +77,7 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/rapport-therapeutics/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rapport-therapeutics/refs/heads/main/llms/rapport-therapeutics-llms.txt
+  href: https://artifacts.apis.io/rapport-therapeutics/llms/rapport-therapeutics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/rapport-therapeutics-llms.txt
@@ -113,7 +119,7 @@ score:
   band: minimal
   composite: 10.5
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -141,14 +147,14 @@ score:
     regime: Health
     regime_id: health
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rapport-therapeutics/refs/heads/main/screenshots/rapport-therapeutics-2026-09-02T152858.png
+screenshot: https://apis.io/screenshots/rapport-therapeutics/rapport-therapeutics-2026-09-02T152858.png
 security:
 - kind: domain-security
   name: Rapport Therapeutics Domain Security

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Paid · Self-serve signup
   onboarding: self-serve
   pricing: paid
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -57,9 +64,6 @@ apis:
 artifact_total: 12
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: ClearVIN Vendor Authentication API
   slug: open-clearvin-authentication-api
 - collection_type: open
@@ -70,17 +74,17 @@ collections:
   slug: open-clearvin
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/clearvin/refs/heads/main/agentic-access/clearvin-agentic-access.yml
+  href: https://artifacts.apis.io/clearvin/agentic-access/clearvin-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/clearvin-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clearvin/refs/heads/main/security/clearvin-domain-security.yml
+  href: https://artifacts.apis.io/clearvin/security/clearvin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/clearvin-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clearvin/refs/heads/main/authentication/clearvin-authentication.yml
+  href: https://artifacts.apis.io/clearvin/authentication/clearvin-authentication.yml
   title: ''
   type: Authentication
   url: authentication/clearvin-authentication.yml
@@ -97,17 +101,17 @@ common:
   type: Documentation
   url: https://www.clearvin.com/en/api-subscribers/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/clearvin/refs/heads/main/plans/clearvin-plans-pricing.yml
+  href: https://artifacts.apis.io/clearvin/plans/clearvin-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/clearvin-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/clearvin/refs/heads/main/rate-limits/clearvin-rate-limits.yml
+  href: https://artifacts.apis.io/clearvin/rate-limits/clearvin-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/clearvin-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/clearvin/refs/heads/main/finops/clearvin-finops.yml
+  href: https://artifacts.apis.io/clearvin/finops/clearvin-finops.yml
   title: ''
   type: FinOps
   url: finops/clearvin-finops.yml
@@ -130,35 +134,51 @@ network: true
 overview: 'ClearVIN publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Authentication API and Report API. Tagged areas include VIN, Vehicle History, Automotive, NMVTIS, and Vehicle Data.
 
 
+  The ClearVIN catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   ClearVIN''s developer surface includes authentication, documentation, and 7 more developer resources.'
 plans:
 - name: Clearvin Plans Pricing
   plan_count: 5
   slug: clearvin-plans-pricing
-random_paper: 16
+random_paper: 12
 rate_limits:
 - limit_count: 4
   name: Clearvin Rate Limits
   slug: clearvin-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: ClearVIN API Rules
+  rule_count: 55
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 1
+  slug: clearvin-rules
 score:
-  band: emerging
-  composite: 24.6
+  band: thin
+  composite: 26.2
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 43.0
+    artifact_dirs: 13
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.2
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 48.1
     developer_ergonomics: 22.6
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 32.8
+  previous_composite: 26.2
   provenance:
     agentic_access: derived
     contracts:
@@ -172,13 +192,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/clearvin/refs/heads/main/screenshots/clearvin-2026-07-25T205553.png
+screenshot: https://apis.io/screenshots/clearvin/clearvin-2026-07-25T205553.png
 security:
 - kind: authentication
   name: Clearvin Authentication

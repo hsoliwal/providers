@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://developer.thetalake.ai/api/v1
@@ -41,18 +46,14 @@ apis:
   description: 'The Theta Lake API (v1) provides programmatic access to the DCGA platform: ingest AI, audio, chat, document, email, and video content; manage records, comments, labels, and dispositions; run unified s'
   name: Theta Lake API
   slug: theta-lake-api
-artifact_total: 6
-collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
+artifact_total: 8
 common:
 - group: company
   title: ''
   type: BlogRSS
   url: https://thetalake.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/security/theta-lake-domain-security.yml
+  href: https://artifacts.apis.io/theta-lake/security/theta-lake-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/theta-lake-domain-security.yml
@@ -97,17 +98,17 @@ common:
   type: Compliance
   url: https://thetalake.com/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/security/theta-lake-trust-center.yml
+  href: https://artifacts.apis.io/theta-lake/security/theta-lake-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/theta-lake-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/scopes/theta-lake-scopes.yml
+  href: https://artifacts.apis.io/theta-lake/scopes/theta-lake-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/theta-lake-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/authentication/theta-lake-authentication.yml
+  href: https://artifacts.apis.io/theta-lake/authentication/theta-lake-authentication.yml
   title: ''
   type: Authentication
   url: authentication/theta-lake-authentication.yml
@@ -116,42 +117,42 @@ common:
   type: GettingStarted
   url: https://developer.thetalake.ai/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/conventions/theta-lake-conventions.yml
+  href: https://artifacts.apis.io/theta-lake/conventions/theta-lake-conventions.yml
   title: ''
   type: Conventions
   url: conventions/theta-lake-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/errors/theta-lake-problem-types.yml
+  href: https://artifacts.apis.io/theta-lake/errors/theta-lake-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/theta-lake-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/lifecycle/theta-lake-lifecycle.yml
+  href: https://artifacts.apis.io/theta-lake/lifecycle/theta-lake-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/theta-lake-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/conformance/theta-lake-conformance.yml
+  href: https://artifacts.apis.io/theta-lake/conformance/theta-lake-conformance.yml
   title: ''
   type: Conformance
   url: conformance/theta-lake-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/data-model/theta-lake-data-model.yml
+  href: https://artifacts.apis.io/theta-lake/data-model/theta-lake-data-model.yml
   title: ''
   type: DataModel
   url: data-model/theta-lake-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/mcp/theta-lake-mcp.yml
+  href: https://artifacts.apis.io/theta-lake/mcp/theta-lake-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/theta-lake-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/llms/theta-lake-llms.txt
+  href: https://artifacts.apis.io/theta-lake/llms/theta-lake-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/theta-lake-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/theta-lake/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -167,7 +168,7 @@ overview: 'Theta Lake publishes 1 API contract indexed on the [APIs.io](https://
 
 
   Theta Lake''s developer surface includes documentation, API reference, signup flow, engineering blog, support, authentication, getting-started guide, and 17 more developer resources.'
-random_paper: 2
+random_paper: 8
 scopes:
 - name: Theta Lake Scopes
   scope_count: 70
@@ -175,23 +176,23 @@ scopes:
   summary_line: 70 scopes · clientCredentials
 score:
   band: thin
-  composite: 29.4
+  composite: 30.3
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 22.7
+    contract_quality: 26.6
     developer_ergonomics: 16.1
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 29.3
+  previous_composite: 30.3
   provenance:
     conformance: first-party
     contracts:
@@ -207,14 +208,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/screenshots/theta-lake-2026-09-02T163516.png
+screenshot: https://apis.io/screenshots/theta-lake/theta-lake-2026-09-02T163516.png
 security:
 - kind: authentication
   name: Theta Lake Authentication
@@ -228,6 +229,14 @@ security:
   name: Theta Lake Trust Center
   slug: theta-lake-trust-center
   summary_line: SOC 2 Type 2, ISO/IEC 27001, ISO/IEC 42001, PCI DSS, HIPAA, CSA STAR for AI (Level 2), GDPR
+skill_count: 3
+skills:
+- name: Ingest AI interactions into Theta Lake
+  slug: theta-lake-ingest-ai-interactions
+- name: Place a legal hold and open a legal matter in Theta Lake
+  slug: theta-lake-legal-hold
+- name: Search and export Theta Lake records
+  slug: theta-lake-search-and-export
 slug: theta-lake
 tags:
 - Communications Governance

@@ -13,6 +13,7 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.4
-  scored_at: '2026-10-17'
+  score: 39.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -52,29 +56,31 @@ apis:
   slug: airdna-market-data-api
 - baseURL: https://api.airdna.co/api/enterprise/v2
   baseurl_source: declared
-  description: Revenue estimates for individual and bulk addresses.
-  name: AirDNA Rentalizer API
-  slug: airdna-rentalizer-api
-- baseURL: https://api.airdna.co/api/enterprise/v2
-  baseurl_source: declared
-  description: Summarized performance estimates for lead generation.
-  name: AirDNA Rentalizer Lead Gen API
-  slug: airdna-rentalizer-lead-gen-api
-- baseURL: https://api.airdna.co/api/enterprise/v2
-  baseurl_source: declared
   description: Pricing strategy base rates and smart rates for listings.
   name: AirDNA Smart Rates API
   slug: airdna-smart-rates-api
 - baseURL: https://api.airdna.co/api/enterprise/v2
   baseurl_source: declared
-  description: Short-term rental listing search, details, history, and comps.
-  name: AirDNA STR Listing Data API
-  slug: airdna-str-listing-data-api
-artifact_total: 19
+  description: 'This section provides data for individual Short-Term Rental listings from Airbnb, Vrbo, and Booking.com. It is ideal for searching for listings within certain parameters and also fetching metrics for '
+  name: AirDNA Listing Data API
+  slug: airdna-listing-data-api
+- baseURL: https://api.airdna.co/api/enterprise/v2
+  baseurl_source: declared
+  description: 'Rentalizer uses AirDNA''s proprietary algorithms and data to provide Performance Estimations for addresses or locations. ### What is Rentalizer? Across our Rentalizer endpoints, our performance estimat'
+  name: AirDNA Rentalizer Data API
+  slug: airdna-rentalizer-data-api
+- baseURL: https://api.airdna.co/api/enterprise/v2
+  baseurl_source: declared
+  description: Rentalizer uses AirDNA's proprietary algorithms and data to provide Performance Estimates for addresses or locations.
+  name: AirDNA Rentalizer Summary Data API
+  slug: airdna-rentalizer-summary-data-api
+- baseURL: https://api.airdna.co/api/enterprise/v2
+  baseurl_source: declared
+  description: 'Whether you''re looking to discover trending Submarkets or learn about a Submarket''s historical performance, these endpoints can support your research. ### Historical Submarket Data We provide between '
+  name: AirDNA Submarket Data API
+  slug: airdna-submarket-data-api
+artifact_total: 20
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: AirDNA Enterprise Market Data API
   slug: open-airdna-market-data-api
@@ -94,22 +100,27 @@ collections:
   name: AirDNA Enterprise API
   slug: open-airdna
 common:
+- group: other
+  href: https://artifacts.apis.io/airdna/capabilities/airdna-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/airdna-capability-edges.yml
 - group: company
   title: ''
   type: Blog
   url: https://www.airdna.co/press
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airdna/refs/heads/main/agentic-access/airdna-agentic-access.yml
+  href: https://artifacts.apis.io/airdna/agentic-access/airdna-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/airdna-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airdna/refs/heads/main/security/airdna-domain-security.yml
+  href: https://artifacts.apis.io/airdna/security/airdna-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/airdna-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airdna/refs/heads/main/authentication/airdna-authentication.yml
+  href: https://artifacts.apis.io/airdna/authentication/airdna-authentication.yml
   title: ''
   type: Authentication
   url: authentication/airdna-authentication.yml
@@ -126,17 +137,17 @@ common:
   type: Documentation
   url: https://docs.airdna.co/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/airdna/refs/heads/main/plans/airdna-plans-pricing.yml
+  href: https://artifacts.apis.io/airdna/plans/airdna-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/airdna-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/airdna/refs/heads/main/rate-limits/airdna-rate-limits.yml
+  href: https://artifacts.apis.io/airdna/rate-limits/airdna-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/airdna-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/airdna/refs/heads/main/finops/airdna-finops.yml
+  href: https://artifacts.apis.io/airdna/finops/airdna-finops.yml
   title: ''
   type: FinOps
   url: finops/airdna-finops.yml
@@ -160,45 +171,61 @@ modified: '2026-10-06'
 name: AirDNA
 nav: Providers
 network: true
-overview: 'AirDNA publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Market Data API, Rentalizer API, Rentalizer Lead Gen API, and 2 more. Tagged areas include Short-Term Rental, Vacation Rentals, Market Data, Real Estate, and Analytics.
+overview: 'AirDNA publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Market Data API, Smart Rates API, Listing Data API, and 3 more. Tagged areas include Short-Term Rental, Vacation Rentals, Market Data, Real Estate, and Analytics.
 
 
-  AirDNA''s developer surface includes engineering blog, authentication, documentation, and 7 more developer resources.'
+  The AirDNA catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  AirDNA''s developer surface includes engineering blog, authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Airdna Plans Pricing
   plan_count: 1
   slug: airdna-plans-pricing
-random_paper: 7
+random_paper: 23
 rate_limits:
 - limit_count: 2
   name: Airdna Rate Limits
   slug: airdna-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: AirDNA API Rules
+  rule_count: 60
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 2
+    warn: 8
+  slug: airdna-rules
 score:
-  band: emerging
-  composite: 25.4
+  band: thin
+  composite: 29.2
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 41.0
+    artifact_dirs: 19
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.5
+  delta: 0.8
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 47.6
+    contract_governance: 13.6
+    contract_quality: 56.2
     developer_ergonomics: 31.0
     discoverability: 68.3
     operational_transparency: 5.3
-  previous_composite: 30.9
+  previous_composite: 28.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 50.0
+      total: 12
     mcp: first-party
   regulatory:
     applies: true
@@ -206,13 +233,13 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/airdna/refs/heads/main/screenshots/airdna-2026-07-25T195414.png
+screenshot: https://apis.io/screenshots/airdna/airdna-2026-07-25T195414.png
 security:
 - kind: authentication
   name: Airdna Authentication

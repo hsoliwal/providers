@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-10-17'
+  score: 27.5
+  scored_at: '2026-11-06'
 api_count: 14
 apis:
 - description: API reference for Algorithmia integrated into DataRobot platform.
@@ -97,72 +110,72 @@ apis:
 artifact_total: 18
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/rules/algorithmia-rules.yml
+  href: https://artifacts.apis.io/algorithmia/rules/algorithmia-rules.yml
   title: ''
   type: Spectral
   url: rules/algorithmia-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/json-ld/algorithmia-context.jsonld
+  href: https://artifacts.apis.io/algorithmia/json-ld/algorithmia-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/algorithmia-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/vocabulary/algorithmia-vocabulary.yml
+  href: https://artifacts.apis.io/algorithmia/vocabulary/algorithmia-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/algorithmia-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/data-model/algorithmia-data-model.yml
+  href: https://artifacts.apis.io/algorithmia/data-model/algorithmia-data-model.yml
   title: ''
   type: DataModel
   url: data-model/algorithmia-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/cli/algorithmia-cli.yml
+  href: https://artifacts.apis.io/algorithmia/cli/algorithmia-cli.yml
   title: ''
   type: CLI
   url: cli/algorithmia-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/conformance/algorithmia-conformance.yml
+  href: https://artifacts.apis.io/algorithmia/conformance/algorithmia-conformance.yml
   title: ''
   type: Conformance
   url: conformance/algorithmia-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/llms/algorithmia-llms.txt
+  href: https://artifacts.apis.io/algorithmia/llms/algorithmia-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/algorithmia-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/well-known/algorithmia-status-security.txt
+  href: https://artifacts.apis.io/algorithmia/well-known/algorithmia-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/algorithmia-status-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/well-known/algorithmia-go-security.txt
+  href: https://artifacts.apis.io/algorithmia/well-known/algorithmia-go-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/algorithmia-go-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/well-known/algorithmia-well-known.yml
+  href: https://artifacts.apis.io/algorithmia/well-known/algorithmia-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/algorithmia-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/hosts/algorithmia-hosts.yml
+  href: https://artifacts.apis.io/algorithmia/hosts/algorithmia-hosts.yml
   title: ''
   type: Hosts
   url: hosts/algorithmia-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/vendors/algorithmia-vendors.yml
+  href: https://artifacts.apis.io/algorithmia/vendors/algorithmia-vendors.yml
   title: ''
   type: Vendors
   url: vendors/algorithmia-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/packages/algorithmia-packages.yml
+  href: https://artifacts.apis.io/algorithmia/packages/algorithmia-packages.yml
   title: ''
   type: SDKs
   url: packages/algorithmia-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/packages/algorithmia-packages.yml
+  href: https://artifacts.apis.io/algorithmia/packages/algorithmia-packages.yml
   title: ''
   type: Packages
   url: packages/algorithmia-packages.yml
@@ -211,7 +224,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/datarobot
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/algorithmia/refs/heads/main/security/algorithmia-domain-security.yml
+  href: https://artifacts.apis.io/algorithmia/security/algorithmia-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/algorithmia-domain-security.yml
@@ -251,7 +264,7 @@ overview: 'Algorithmia is listed with 14 APIs on the [APIs.io](https://apis.io/)
 
 
   Algorithmia''s developer surface includes CLI, support, engineering blog, API reference, getting-started guide, documentation, and 21 more developer resources.'
-random_paper: 3
+random_paper: 17
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -267,23 +280,23 @@ rules:
   slug: algorithmia-rules
 score:
   band: thin
-  composite: 34.2
+  composite: 30.3
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 51.2
     catalog_earned_first_party: 0.0
     catalog_gap: 63.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 33.0
+  delta: -5.2
   facets:
-    access_clarity: 28.9
+    access_clarity: 25.0
     contract_governance: 22.0
     contract_quality: 19.0
-    developer_ergonomics: 50.0
-    discoverability: 71.4
+    developer_ergonomics: 36.9
+    discoverability: 70.5
     operational_transparency: 21.1
-  previous_composite: 1.2
+  previous_composite: 35.5
   provenance:
     conformance: derived
     contracts:
@@ -297,13 +310,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 25.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/algorithmia/algorithmia-2026-11-03T120616.png
 security:
 - kind: domain-security
   name: Algorithmia Domain Security

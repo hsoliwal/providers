@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -49,7 +53,7 @@ common:
   type: PrivacyPolicy
   url: https://veluga.notion.site/26-03-26-308acc83985d8005a568f080a2524255
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/veluga/refs/heads/main/security/veluga-domain-security.yml
+  href: https://artifacts.apis.io/veluga/security/veluga-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/veluga-domain-security.yml
@@ -62,7 +66,7 @@ name: Veluga
 nav: Providers
 network: true
 overview: Veluga is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Alcohol, Beverages, Wholesale, and Marketplace.
-random_paper: 6
+random_paper: 20
 score:
   band: minimal
   composite: 8.8
@@ -95,14 +99,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 13.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/veluga/refs/heads/main/screenshots/veluga-2026-09-02T165634.png
+screenshot: https://apis.io/screenshots/veluga/veluga-2026-09-02T165634.png
 security:
 - kind: domain-security
   name: Veluga Domain Security

@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 12.9
-  scored_at: '2026-10-17'
+  score: 14.8
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Realtime Voice API provides streaming voice recognition and synthesis for web and mobile applications.
@@ -35,12 +49,12 @@ apis:
 artifact_total: 6
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/centerbeam/refs/heads/main/plans/centerbeam-plans-pricing.yml
+  href: https://artifacts.apis.io/centerbeam/plans/centerbeam-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/centerbeam-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/centerbeam/refs/heads/main/rules/centerbeam-rules.yml
+  href: https://artifacts.apis.io/centerbeam/rules/centerbeam-rules.yml
   title: ''
   type: Spectral
   url: rules/centerbeam-rules.yml
@@ -49,12 +63,12 @@ common:
   type: Compliance
   url: https://centerbeam.ai/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/centerbeam/refs/heads/main/conformance/centerbeam-conformance.yml
+  href: https://artifacts.apis.io/centerbeam/conformance/centerbeam-conformance.yml
   title: ''
   type: Conformance
   url: conformance/centerbeam-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/centerbeam/refs/heads/main/hosts/centerbeam-hosts.yml
+  href: https://artifacts.apis.io/centerbeam/hosts/centerbeam-hosts.yml
   title: ''
   type: Hosts
   url: hosts/centerbeam-hosts.yml
@@ -63,12 +77,12 @@ common:
   type: Security
   url: https://centerbeam.ai/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/centerbeam/refs/heads/main/security/centerbeam-trust-center.yml
+  href: https://artifacts.apis.io/centerbeam/security/centerbeam-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/centerbeam-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/centerbeam/refs/heads/main/security/centerbeam-domain-security.yml
+  href: https://artifacts.apis.io/centerbeam/security/centerbeam-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/centerbeam-domain-security.yml
@@ -112,7 +126,7 @@ modified: '2026-10-16'
 name: Centerbeam Voice AI SDK
 nav: Providers
 network: true
-overview: 'Centerbeam Voice AI SDK is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Sessions API, and 1 more. Tagged areas include Company, VoiceAI, SDK, Real-Time, and Multilingual.
+overview: 'Centerbeam Voice AI SDK is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Sessions API, and 1 more. Tagged areas include Company, Voice AI, SDK, Real-Time, and Multilingual.
 
 
   The Centerbeam Voice AI SDK catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -123,7 +137,7 @@ plans:
 - name: Centerbeam Plans Pricing
   plan_count: 4
   slug: centerbeam-plans-pricing
-random_paper: 12
+random_paper: 14
 rules:
 - authorship: generated
   effective_rule_count: 50
@@ -138,22 +152,24 @@ rules:
     warn: 1
   slug: centerbeam-rules
 score:
-  band: thin
-  composite: 32.1
+  band: emerging
+  composite: 24.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 48.5
     catalog_earned_first_party: 12.0
     catalog_gap: 66.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.9
   facets:
-    access_clarity: 71.1
+    access_clarity: 55.3
     contract_governance: 31.8
     contract_quality: 9.4
-    developer_ergonomics: 26.2
+    developer_ergonomics: 13.1
     discoverability: 57.1
-    operational_transparency: 10.5
+    operational_transparency: 5.3
+  previous_composite: 31.7
   provenance:
     conformance: first-party
     contracts:
@@ -170,15 +186,17 @@ score:
     - jurisdiction: US
       standard: hipaa
     jurisdictions_satisfied: 2
-    matched_via: fallback
-    regime: Horizontal (data, software, accessibility, platform)
-    regime_id: horizontal
-    score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 13.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/centerbeam/centerbeam-2026-11-03T123643.png
 security:
 - kind: domain-security
   name: Centerbeam Domain Security
@@ -191,7 +209,7 @@ security:
 slug: centerbeam
 tags:
 - Company
-- VoiceAI
+- Voice AI
 - SDK
 - Real-Time
 - Multilingual

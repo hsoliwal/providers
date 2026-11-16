@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,37 +38,37 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/place/refs/heads/main/security/place-domain-security.yml
+  href: https://artifacts.apis.io/place/security/place-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/place-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/place/refs/heads/main/well-known/place-well-known.yml
+  href: https://artifacts.apis.io/place/well-known/place-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/place-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/place/refs/heads/main/authentication/place-authentication.yml
+  href: https://artifacts.apis.io/place/authentication/place-authentication.yml
   title: ''
   type: Authentication
   url: authentication/place-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/place/refs/heads/main/scopes/place-scopes.yml
+  href: https://artifacts.apis.io/place/scopes/place-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/place-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/place/refs/heads/main/conformance/place-conformance.yml
+  href: https://artifacts.apis.io/place/conformance/place-conformance.yml
   title: ''
   type: Conformance
   url: conformance/place-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/place/refs/heads/main/llms/place-llms.txt
+  href: https://artifacts.apis.io/place/llms/place-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/place-llms.txt
@@ -161,7 +164,7 @@ overview: 'PLACE is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 
 
   PLACE''s developer surface includes authentication, engineering blog, support, signup flow, and 18 more developer resources.'
-random_paper: 11
+random_paper: 13
 scopes:
 - name: Place Scopes
   scope_count: 8
@@ -171,7 +174,7 @@ score:
   band: emerging
   composite: 18.2
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -194,14 +197,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/place/refs/heads/main/screenshots/place-2026-09-02T151347.png
+screenshot: https://apis.io/screenshots/place/place-2026-09-02T151347.png
 security:
 - kind: authentication
   name: Place Authentication

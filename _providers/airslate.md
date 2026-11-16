@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 25.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 32
   human_in_the_loop: 1
@@ -68,11 +74,6 @@ apis:
   slug: marketing-intelligence
 - baseURL: https://www.airslate.com/workflow
   baseurl_source: declared
-  description: The Document Fields API from airSlate — 3 operation(s) for document fields.
-  name: airSlate Document Fields API
-  slug: airslate-document-fields-api
-- baseURL: https://www.airslate.com/workflow
-  baseurl_source: declared
   description: The Document Groups API from airSlate — 4 operation(s) for document groups.
   name: airSlate Document Groups API
   slug: airslate-document-groups-api
@@ -83,24 +84,9 @@ apis:
   slug: airslate-documents-api
 - baseURL: https://www.airslate.com/workflow
   baseurl_source: declared
-  description: The Embedded API from airSlate — 3 operation(s) for embedded.
-  name: airSlate Embedded API
-  slug: airslate-embedded-api
-- baseURL: https://www.airslate.com/workflow
-  baseurl_source: declared
   description: The Folders API from airSlate — 2 operation(s) for folders.
   name: airSlate Folders API
   slug: airslate-folders-api
-- baseURL: https://www.airslate.com/workflow
-  baseurl_source: declared
-  description: The Invites API from airSlate — 5 operation(s) for invites.
-  name: airSlate Invites API
-  slug: airslate-invites-api
-- baseURL: https://www.airslate.com/workflow
-  baseurl_source: declared
-  description: The Smart Fields API from airSlate — 1 operation(s) for smart fields.
-  name: airSlate Smart Fields API
-  slug: airslate-smart-fields-api
 - baseURL: https://www.airslate.com/workflow
   baseurl_source: declared
   description: The Templates API from airSlate — 4 operation(s) for templates.
@@ -108,24 +94,176 @@ apis:
   slug: airslate-templates-api
 - baseURL: https://www.airslate.com/workflow
   baseurl_source: declared
-  description: The Users API from airSlate — 3 operation(s) for users.
-  name: airSlate Users API
-  slug: airslate-users-api
+  description: The Application API from airSlate — 2 operation(s) for application.
+  name: airSlate Application API
+  slug: airslate-application-api
 - baseURL: https://www.airslate.com/workflow
   baseurl_source: declared
-  description: The Webhooks API from airSlate — 2 operation(s) for webhooks.
-  name: airSlate Webhooks API
-  slug: airslate-webhooks-api
+  description: The Applications API from airSlate — 1 operation(s) for applications.
+  name: airSlate Applications API
+  slug: airslate-applications-api
 - baseURL: https://www.airslate.com/workflow
   baseurl_source: declared
-  description: The OAuth API from airSlate — 1 operation(s) for oauth.
-  name: airSlate O Auth API
-  slug: airslate-oauth-api
-artifact_total: 37
+  description: The Brands API from airSlate — 24 operation(s) for brands.
+  name: airSlate Brands API
+  slug: airslate-brands-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Crm API from airSlate — 11 operation(s) for crm.
+  name: airSlate CRM API
+  slug: airslate-crm-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Document API from airSlate — 20 operation(s) for document.
+  name: airSlate Document API
+  slug: airslate-document-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Document Generations API from airSlate — 3 operation(s) for document generations.
+  name: airSlate Document Generations API
+  slug: airslate-document-generations-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Document Group Templates API from airSlate — 11 operation(s) for document group templates.
+  name: airSlate Document Group Templates API
+  slug: airslate-document-group-templates-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Documentgroup API from airSlate — 14 operation(s) for documentgroup.
+  name: airSlate Documentgroup API
+  slug: airslate-documentgroup-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Event Subscription API from airSlate — 2 operation(s) for event subscription.
+  name: airSlate Event Subscription API
+  slug: airslate-event-subscription-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Event Subscriptions API from airSlate — 8 operation(s) for event subscriptions.
+  name: airSlate Event Subscriptions API
+  slug: airslate-event-subscriptions-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Events API from airSlate — 3 operation(s) for events.
+  name: airSlate Events API
+  slug: airslate-events-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Favorites API from airSlate — 1 operation(s) for favorites.
+  name: airSlate Favorites API
+  slug: airslate-favorites-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Faxes API from airSlate — 1 operation(s) for faxes.
+  name: airSlate Faxes API
+  slug: airslate-faxes-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Field Invite API from airSlate — 2 operation(s) for field invite.
+  name: airSlate Field Invite API
+  slug: airslate-field-invite-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Fieldinvite API from airSlate — 1 operation(s) for fieldinvite.
+  name: airSlate Fieldinvite API
+  slug: airslate-fieldinvite-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Folder API from airSlate — 2 operation(s) for folder.
+  name: airSlate Folder API
+  slug: airslate-folder-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Import API from airSlate — 1 operation(s) for import.
+  name: airSlate Import API
+  slug: airslate-import-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Invite API from airSlate — 1 operation(s) for invite.
+  name: airSlate Invite API
+  slug: airslate-invite-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Link API from airSlate — 1 operation(s) for link.
+  name: airSlate Link API
+  slug: airslate-link-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Merchant Accounts API from airSlate — 2 operation(s) for merchant accounts.
+  name: airSlate Merchant Accounts API
+  slug: airslate-merchant-accounts-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Oauth2 API from airSlate — 3 operation(s) for oauth2.
+  name: airSlate Oauth2 API
+  slug: airslate-oauth2-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Organizations API from airSlate — 31 operation(s) for organizations.
+  name: airSlate Organizations API
+  slug: airslate-organizations-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Paid Request Logs API from airSlate — 2 operation(s) for paid request logs.
+  name: airSlate Paid Request Logs API
+  slug: airslate-paid-request-logs-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Paid Request Monthly Totals API from airSlate — 1 operation(s) for paid request monthly totals.
+  name: airSlate Paid Request Monthly Totals API
+  slug: airslate-paid-request-monthly-totals-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Paid Request Totals API from airSlate — 1 operation(s) for paid request totals.
+  name: airSlate Paid Request Totals API
+  slug: airslate-paid-request-totals-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Request Logs API from airSlate — 2 operation(s) for request logs.
+  name: airSlate Request Logs API
+  slug: airslate-request-logs-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Search API from airSlate — 1 operation(s) for search.
+  name: airSlate Search API
+  slug: airslate-search-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Shared Entities API from airSlate — 1 operation(s) for shared entities.
+  name: airSlate Shared Entities API
+  slug: airslate-shared-entities-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Signing Session Settings API from airSlate — 1 operation(s) for signing session settings.
+  name: airSlate Signing Session Settings API
+  slug: airslate-signing-session-settings-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Team API from airSlate — 11 operation(s) for team.
+  name: airSlate Team API
+  slug: airslate-team-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Teams API from airSlate — 4 operation(s) for teams.
+  name: airSlate Teams API
+  slug: airslate-teams-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Template API from airSlate — 3 operation(s) for template.
+  name: airSlate Template API
+  slug: airslate-template-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The Trash API from airSlate — 1 operation(s) for trash.
+  name: airSlate Trash API
+  slug: airslate-trash-api
+- baseURL: https://www.airslate.com/workflow
+  baseurl_source: declared
+  description: The User API from airSlate — 9 operation(s) for user.
+  name: airSlate User API
+  slug: airslate-user-api
+artifact_total: 64
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: airSlate signNow REST Document Fields API
   slug: open-airslate-document-fields-api
@@ -164,37 +302,37 @@ collections:
   slug: open-airslate
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/airslate/refs/heads/main/plans/airslate-plans-pricing.yml
+  href: https://artifacts.apis.io/airslate/plans/airslate-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/airslate-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/airslate/refs/heads/main/rate-limits/airslate-rate-limits.yml
+  href: https://artifacts.apis.io/airslate/rate-limits/airslate-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/airslate-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/airslate/refs/heads/main/finops/airslate-finops.yml
+  href: https://artifacts.apis.io/airslate/finops/airslate-finops.yml
   title: ''
   type: FinOps
   url: finops/airslate-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/airslate/refs/heads/main/capabilities/airslate-capability-edges.yml
+  href: https://artifacts.apis.io/airslate/capabilities/airslate-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/airslate-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airslate/refs/heads/main/agentic-access/airslate-agentic-access.yml
+  href: https://artifacts.apis.io/airslate/agentic-access/airslate-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/airslate-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airslate/refs/heads/main/security/airslate-domain-security.yml
+  href: https://artifacts.apis.io/airslate/security/airslate-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/airslate-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airslate/refs/heads/main/authentication/airslate-authentication.yml
+  href: https://artifacts.apis.io/airslate/authentication/airslate-authentication.yml
   title: ''
   type: Authentication
   url: authentication/airslate-authentication.yml
@@ -238,7 +376,10 @@ modified: '2026-05-23'
 name: airSlate
 nav: Providers
 network: true
-overview: 'airSlate publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Document Fields API, Document Groups API, Documents API, and 15 more. Tagged areas include Document Automation, E-Signature, Workflows, PDF, and No-Code.
+overview: 'airSlate publishes 45 API contracts indexed on the [APIs.io](https://apis.io/) network, including Document Groups API, Documents API, Folders API, and 42 more. Tagged areas include Document Automation, E-Signature, Workflows, PDF, and No-Code.
+
+
+  The airSlate catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   airSlate''s developer surface includes authentication, engineering blog, documentation, GitHub presence, and 9 more developer resources.'
@@ -246,50 +387,63 @@ plans:
 - name: Airslate Plans Pricing
   plan_count: 1
   slug: airslate-plans-pricing
-random_paper: 17
+random_paper: 13
 rate_limits:
 - limit_count: 2
   name: Airslate Rate Limits
   slug: airslate-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: airSlate API Rules
+  rule_count: 49
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 4
+    warn: 8
+  slug: airslate-rules
 score:
-  band: emerging
-  composite: 23.5
+  band: thin
+  composite: 26.8
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 36.0
+    artifact_dirs: 17
+    catalog_earned: 40.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 74.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 1.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 47.6
+    contract_governance: 13.6
+    contract_quality: 54.6
     developer_ergonomics: 23.8
     discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 29.5
+  previous_composite: 25.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 11
+      marker_coverage: 76.0
+      total: 50
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/airslate/refs/heads/main/screenshots/airslate-2026-06-20T171429.png
+screenshot: https://apis.io/screenshots/airslate/airslate-2026-06-20T171429.png
 security:
 - kind: authentication
   name: Airslate Authentication

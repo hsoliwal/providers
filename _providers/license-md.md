@@ -5,14 +5,15 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/license-md/refs/heads/main/security/license-md-domain-security.yml
+  href: https://artifacts.apis.io/license-md/security/license-md-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/license-md-domain-security.yml
@@ -33,8 +34,8 @@ name: LICENSE.md
 nav: Providers
 network: true
 overview: LICENSE.md is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Compliance, Legal, Licensing, Open Source, and SPDX.
-random_paper: 3
-screenshot: https://raw.githubusercontent.com/api-evangelist/license-md/refs/heads/main/screenshots/license-md-2026-06-20T184504.png
+random_paper: 9
+screenshot: https://apis.io/screenshots/license-md/license-md-2026-06-20T184504.png
 security:
 - kind: domain-security
   name: License Md Domain Security

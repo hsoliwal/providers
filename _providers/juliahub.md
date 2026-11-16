@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Programmatic access to the JuliaHub platform — jobs, datasets, applications, projects, and package registries — via the official JuliaHub.jl Julia client and the jh CLI, authenticated with OAuth2 / Op
@@ -98,52 +103,52 @@ common:
   type: PrivacyPolicy
   url: https://juliahub.com/legal/privacy-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/authentication/juliahub-authentication.yml
+  href: https://artifacts.apis.io/juliahub/authentication/juliahub-authentication.yml
   title: ''
   type: Authentication
   url: authentication/juliahub-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/scopes/juliahub-scopes.yml
+  href: https://artifacts.apis.io/juliahub/scopes/juliahub-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/juliahub-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/well-known/juliahub-well-known.yml
+  href: https://artifacts.apis.io/juliahub/well-known/juliahub-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/juliahub-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/packages/juliahub-packages.yml
+  href: https://artifacts.apis.io/juliahub/packages/juliahub-packages.yml
   title: ''
   type: Packages
   url: packages/juliahub-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/packages/juliahub-packages.yml
+  href: https://artifacts.apis.io/juliahub/packages/juliahub-packages.yml
   title: ''
   type: SDKs
   url: packages/juliahub-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/cli/juliahub-cli.yml
+  href: https://artifacts.apis.io/juliahub/cli/juliahub-cli.yml
   title: ''
   type: CLI
   url: cli/juliahub-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/changelog/juliahub-changelog.yml
+  href: https://artifacts.apis.io/juliahub/changelog/juliahub-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/juliahub-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/conformance/juliahub-conformance.yml
+  href: https://artifacts.apis.io/juliahub/conformance/juliahub-conformance.yml
   title: ''
   type: Conformance
   url: conformance/juliahub-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/conventions/juliahub-conventions.yml
+  href: https://artifacts.apis.io/juliahub/conventions/juliahub-conventions.yml
   title: ''
   type: Conventions
   url: conventions/juliahub-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/llms/juliahub-llms.txt
+  href: https://artifacts.apis.io/juliahub/llms/juliahub-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/juliahub-llms.txt
@@ -152,12 +157,12 @@ common:
   type: Compliance
   url: https://trust.juliahub.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/security/juliahub-trust-center.yml
+  href: https://artifacts.apis.io/juliahub/security/juliahub-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/juliahub-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/security/juliahub-domain-security.yml
+  href: https://artifacts.apis.io/juliahub/security/juliahub-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/juliahub-domain-security.yml
@@ -173,7 +178,7 @@ overview: 'Juliahub is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Juliahub''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
-random_paper: 16
+random_paper: 12
 scopes:
 - name: Juliahub Scopes
   scope_count: 5
@@ -183,13 +188,13 @@ score:
   band: thin
   composite: 38.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
@@ -197,7 +202,7 @@ score:
     developer_ergonomics: 71.4
     discoverability: 64.3
     operational_transparency: 18.4
-  previous_composite: 38.2
+  previous_composite: 38.3
   provenance:
     conformance: first-party
   regulatory:
@@ -212,14 +217,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/juliahub/refs/heads/main/screenshots/juliahub-2026-07-25T223308.png
+screenshot: https://apis.io/screenshots/juliahub/juliahub-2026-07-25T223308.png
 security:
 - kind: authentication
   name: Juliahub Authentication

@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 29.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'Hyundai Developers exposes connected-car data from Bluelink-enrolled vehicles to third-party services over a REST API on prd.kr-ccapi.hyundai.com. Nineteen operations are published across five groups:'
@@ -49,12 +52,12 @@ asyncapis:
   slug: hyundai-webhooks
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/rate-limits/hyundai-rate-limits.yml
+  href: https://artifacts.apis.io/hyundai/rate-limits/hyundai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hyundai-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/finops/hyundai-finops.yml
+  href: https://artifacts.apis.io/hyundai/finops/hyundai-finops.yml
   title: ''
   type: FinOps
   url: finops/hyundai-finops.yml
@@ -95,57 +98,57 @@ common:
   type: PrivacyPolicy
   url: https://privacy.hyundai.com/overview/full-policy
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/changelog/hyundai-changelog.yml
+  href: https://artifacts.apis.io/hyundai/changelog/hyundai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/hyundai-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/lifecycle/hyundai-lifecycle.yml
+  href: https://artifacts.apis.io/hyundai/lifecycle/hyundai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hyundai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/conformance/hyundai-conformance.yml
+  href: https://artifacts.apis.io/hyundai/conformance/hyundai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hyundai-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/packages/hyundai-packages.yml
+  href: https://artifacts.apis.io/hyundai/packages/hyundai-packages.yml
   title: ''
   type: Packages
   url: packages/hyundai-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/llms/hyundai-llms.txt
+  href: https://artifacts.apis.io/hyundai/llms/hyundai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hyundai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/well-known/hyundai-well-known.yml
+  href: https://artifacts.apis.io/hyundai/well-known/hyundai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/hyundai-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/well-known/hyundai-security.txt
+  href: https://artifacts.apis.io/hyundai/well-known/hyundai-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/hyundai-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/security/hyundai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hyundai/security/hyundai-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/hyundai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/security/hyundai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/hyundai/security/hyundai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/hyundai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/security/hyundai-domain-security.yml
+  href: https://artifacts.apis.io/hyundai/security/hyundai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hyundai-domain-security.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/plans/hyundai-plans-pricing.yml
+  href: https://artifacts.apis.io/hyundai/plans/hyundai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hyundai-plans-pricing.yml
@@ -164,11 +167,11 @@ common:
 created: '2025-02-25'
 description: Hyundai Motor Company is a South Korean multinational automotive manufacturer and, through Hyundai Developers, the operator of a connected-car data platform for third-party developers. The platform exposes the Hyundai integrated account over OAuth 2.0 and serves nineteen documented REST operations covering user profile, vehicle list, connected-service contract dates, odometer, distance-to-empty, EV battery and charging state, and seven warning-light indicators, sourced from vehicles enrolled in Bluelink. Access is governed by a two-stage consent model built around the Korean Personal Information Protection Act — a per-vehicle OAuth consent plus a separate third-party data-provision consent — and a manual commercialization review before any real customer vehicle data is released. The API reference, a public sample-test tier with fixture vehicles, and the developer guide are all readable without an account; data is limited to vehicles in South Korea.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Hyundai Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: hyundai-finops
   template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hyundai.png
@@ -188,7 +191,7 @@ plans:
 - name: Hyundai Plans Pricing
   plan_count: 0
   slug: hyundai-plans-pricing
-random_paper: 6
+random_paper: 10
 rate_limits:
 - limit_count: 1
   name: Hyundai Rate Limits
@@ -203,7 +206,7 @@ score:
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 23.7
     contract_governance: 18.2
@@ -218,7 +221,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 48.4
+  previous_composite: 46.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -228,14 +231,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hyundai/refs/heads/main/screenshots/hyundai-2026-06-20T183205.png
+screenshot: https://apis.io/screenshots/hyundai/hyundai-2026-06-20T183205.png
 security:
 - kind: authentication
   name: Hyundai Authentication

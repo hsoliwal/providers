@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 20.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 1
@@ -85,11 +91,8 @@ apis:
   description: Manage user profiles.
   name: APIGen Users API
   slug: apigen-users-api
-artifact_total: 51
+artifact_total: 50
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: APIGen API
   slug: open-apigen-apigen
@@ -119,22 +122,22 @@ collections:
   slug: open-apigen-users-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apigen/refs/heads/main/plans/apigen-plans-pricing.yml
+  href: https://artifacts.apis.io/apigen/plans/apigen-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/apigen-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apigen/refs/heads/main/rate-limits/apigen-rate-limits.yml
+  href: https://artifacts.apis.io/apigen/rate-limits/apigen-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/apigen-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/apigen/refs/heads/main/finops/apigen-finops.yml
+  href: https://artifacts.apis.io/apigen/finops/apigen-finops.yml
   title: ''
   type: FinOps
   url: finops/apigen-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apigen/refs/heads/main/capabilities/apigen-capability-edges.yml
+  href: https://artifacts.apis.io/apigen/capabilities/apigen-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/apigen-capability-edges.yml
@@ -151,17 +154,17 @@ common:
   type: Releases
   url: https://github.com/ApiGen/ApiGen/releases
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apigen/refs/heads/main/agentic-access/apigen-agentic-access.yml
+  href: https://artifacts.apis.io/apigen/agentic-access/apigen-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/apigen-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apigen/refs/heads/main/security/apigen-domain-security.yml
+  href: https://artifacts.apis.io/apigen/security/apigen-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apigen-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apigen/refs/heads/main/authentication/apigen-authentication.yml
+  href: https://artifacts.apis.io/apigen/authentication/apigen-authentication.yml
   title: ''
   type: Authentication
   url: authentication/apigen-authentication.yml
@@ -211,7 +214,7 @@ finops:
 - has_sources: false
   method: generated
   name: Apigen Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: apigen-finops
   template: true
@@ -272,7 +275,7 @@ plans:
 - name: Apigen Plans Pricing
   plan_count: 3
   slug: apigen-plans-pricing
-random_paper: 12
+random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Apigen Rate Limits
@@ -305,13 +308,13 @@ score:
   band: thin
   composite: 34.1
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 67.5
     catalog_earned_first_party: 0.0
     catalog_gap: 47.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 13.6
@@ -319,7 +322,7 @@ score:
     developer_ergonomics: 19.0
     discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 35.6
+  previous_composite: 34.1
   provenance:
     agentic_access: derived
     contracts:
@@ -333,13 +336,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/apigen/refs/heads/main/screenshots/apigen-2026-06-20T172236.png
+screenshot: https://apis.io/screenshots/apigen/apigen-2026-06-20T172236.png
 security:
 - kind: authentication
   name: Apigen Authentication

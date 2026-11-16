@@ -1,12 +1,12 @@
 ---
 access_model:
-  confidence: high
-  label: Commercial · Partner-only engagement
+  confidence: low
+  label: Unknown
   onboarding: unknown
   pricing: unknown
   public: false
   source:
-  - website
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -46,12 +49,12 @@ common:
   type: License
   url: https://github.com/nestoca/joy/blob/master/LICENSE
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/security/nesto-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/nesto/security/nesto-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/nesto-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/security/nesto-domain-security.yml
+  href: https://artifacts.apis.io/nesto/security/nesto-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nesto-domain-security.yml
@@ -88,12 +91,12 @@ common:
   type: Security
   url: https://www.nesto.ca/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/well-known/nesto-security.txt
+  href: https://artifacts.apis.io/nesto/well-known/nesto-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/nesto-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/security/nesto-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/nesto/security/nesto-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/nesto-vulnerability-disclosure.yml
@@ -106,32 +109,32 @@ common:
   type: Compliance
   url: https://www.nesto.ca/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/security/nesto-domain-security.yml
+  href: https://artifacts.apis.io/nesto/security/nesto-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nesto-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/well-known/nesto-well-known.yml
+  href: https://artifacts.apis.io/nesto/well-known/nesto-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/nesto-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/conformance/nesto-conformance.yml
+  href: https://artifacts.apis.io/nesto/conformance/nesto-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nesto-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/lifecycle/nesto-lifecycle.yml
+  href: https://artifacts.apis.io/nesto/lifecycle/nesto-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nesto-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/packages/nesto-packages.yml
+  href: https://artifacts.apis.io/nesto/packages/nesto-packages.yml
   title: ''
   type: Packages
   url: packages/nesto-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/llms/nesto-llms.txt
+  href: https://artifacts.apis.io/nesto/llms/nesto-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nesto-llms.txt
@@ -144,7 +147,7 @@ common:
   type: SourceCode
   url: https://github.com/nestoca/joy
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/cli/nesto-cli.yml
+  href: https://artifacts.apis.io/nesto/cli/nesto-cli.yml
   title: ''
   type: SourceCode
   url: cli/nesto-cli.yml
@@ -201,12 +204,12 @@ overview: 'Nesto is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 
 
   Nesto''s developer surface includes engineering blog, support, FAQ, and 32 more developer resources.'
-random_paper: 3
+random_paper: 1
 score:
   band: emerging
   composite: 23.4
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -236,14 +239,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 26.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/nesto/refs/heads/main/screenshots/nesto-2026-08-07T184918.png
+screenshot: https://apis.io/screenshots/nesto/nesto-2026-08-07T184918.png
 security:
 - kind: domain-security
   name: Nesto Domain Security

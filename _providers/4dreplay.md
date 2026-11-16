@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -90,22 +93,22 @@ common:
   type: YouTube
   url: https://www.youtube.com/c/4DREPLAY
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/4dreplay/refs/heads/main/well-known/4dreplay-content-signals-robots.txt
+  href: https://artifacts.apis.io/4dreplay/well-known/4dreplay-content-signals-robots.txt
   title: ''
   type: ContentSignal
   url: well-known/4dreplay-content-signals-robots.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/4dreplay/refs/heads/main/security/4dreplay-domain-security.yml
+  href: https://artifacts.apis.io/4dreplay/security/4dreplay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/4dreplay-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/4dreplay/refs/heads/main/conformance/4dreplay-conformance.yml
+  href: https://artifacts.apis.io/4dreplay/conformance/4dreplay-conformance.yml
   title: ''
   type: Conformance
   url: conformance/4dreplay-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/4dreplay/refs/heads/main/llms/4dreplay-llms.txt
+  href: https://artifacts.apis.io/4dreplay/llms/4dreplay-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/4dreplay-llms.txt
@@ -133,7 +136,7 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
@@ -148,7 +151,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 16.0
+  previous_composite: 16.1
   provenance:
     conformance: derived
   regulatory:
@@ -157,14 +160,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 17.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/4dreplay/refs/heads/main/screenshots/4dreplay-2026-08-07T160703.png
+screenshot: https://apis.io/screenshots/4dreplay/4dreplay-2026-08-07T160703.png
 security:
 - kind: domain-security
   name: 4Dreplay Domain Security

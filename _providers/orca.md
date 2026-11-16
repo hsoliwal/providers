@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.7
-  scored_at: '2026-10-17'
+  score: 34.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -62,11 +67,8 @@ arazzos:
 - description: Search Orca Whirlpools for a token pair, then fetch full state for the top-matching pool. Read-only; runs against the open Orca Public REST API.
   name: Find an Orca pool by token pair and read its stats
   slug: orca-find-pool
-artifact_total: 12
+artifact_total: 14
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Orca Public protocol API
   slug: open-orca-protocol-api
@@ -82,12 +84,12 @@ common:
   type: BlogRSS
   url: https://blog.orca.so/rss/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/agentic-access/orca-agentic-access.yml
+  href: https://artifacts.apis.io/orca/agentic-access/orca-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/orca-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/security/orca-domain-security.yml
+  href: https://artifacts.apis.io/orca/security/orca-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/orca-domain-security.yml
@@ -120,82 +122,82 @@ common:
   type: Support
   url: https://docs.orca.so/support/faqs
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/authentication/orca-authentication.yml
+  href: https://artifacts.apis.io/orca/authentication/orca-authentication.yml
   title: ''
   type: Authentication
   url: authentication/orca-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/packages/orca-packages.yml
+  href: https://artifacts.apis.io/orca/packages/orca-packages.yml
   title: ''
   type: Packages
   url: packages/orca-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/packages/orca-packages.yml
+  href: https://artifacts.apis.io/orca/packages/orca-packages.yml
   title: ''
   type: SDKs
   url: packages/orca-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/mcp/orca-mcp.yml
+  href: https://artifacts.apis.io/orca/mcp/orca-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/orca-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/llms/orca-llms.txt
+  href: https://artifacts.apis.io/orca/llms/orca-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/orca-llms.txt
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/sandbox/orca-sandbox.yml
+  href: https://artifacts.apis.io/orca/sandbox/orca-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/orca-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/conventions/orca-conventions.yml
+  href: https://artifacts.apis.io/orca/conventions/orca-conventions.yml
   title: ''
   type: Conventions
   url: conventions/orca-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/changelog/orca-changelog.yml
+  href: https://artifacts.apis.io/orca/changelog/orca-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/orca-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/lifecycle/orca-lifecycle.yml
+  href: https://artifacts.apis.io/orca/lifecycle/orca-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/orca-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/conformance/orca-conformance.yml
+  href: https://artifacts.apis.io/orca/conformance/orca-conformance.yml
   title: ''
   type: Conformance
   url: conformance/orca-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/errors/orca-problem-types.yml
+  href: https://artifacts.apis.io/orca/errors/orca-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/orca-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/data-model/orca-data-model.yml
+  href: https://artifacts.apis.io/orca/data-model/orca-data-model.yml
   title: ''
   type: DataModel
   url: data-model/orca-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/cli/orca-cli.yml
+  href: https://artifacts.apis.io/orca/cli/orca-cli.yml
   title: ''
   type: CLI
   url: cli/orca-cli.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/overlays/orca-openapi-overlay.yaml
+  href: https://artifacts.apis.io/orca/overlays/orca-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/orca-openapi-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/orca/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/arazzo/orca-find-pool.yml
+  href: https://artifacts.apis.io/orca/arazzo/orca-find-pool.yml
   title: ''
   type: Arazzo
   url: arazzo/orca-find-pool.yml
@@ -214,27 +216,43 @@ network: true
 overview: 'Orca publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Protocol API, Tokens API, and Whirlpools API. Tagged areas include Company, Defi Dex, DeFi, Decentralized Exchange, and Solana.
 
 
+  The Orca catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Orca''s developer surface includes documentation, API reference, getting-started guide, support, authentication, sandbox, changelog, and 19 more developer resources.'
-random_paper: 3
+random_paper: 13
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Orca API Rules
+  rule_count: 53
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 2
+    warn: 8
+  slug: orca-rules
 score:
   band: thin
-  composite: 36.1
+  composite: 37.7
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 37.0
+    artifact_dirs: 26
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 58.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -0.9
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 44.5
     developer_ergonomics: 78.0
     discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 37.0
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -251,14 +269,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/screenshots/orca-2026-08-07T190854.png
+screenshot: https://apis.io/screenshots/orca/orca-2026-08-07T190854.png
 security:
 - kind: authentication
   name: Orca Authentication
@@ -268,6 +286,12 @@ security:
   name: Orca Domain Security
   slug: orca-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Find and inspect an Orca liquidity pool
+  slug: orca-find-pool
+- name: Look up an Orca-listed token
+  slug: orca-token-lookup
 slug: orca
 tags:
 - Company

@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API for PVGIS providing solar radiation and photovoltaic performance data
@@ -32,12 +45,12 @@ apis:
 artifact_total: 2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pvgis/refs/heads/main/hosts/pvgis-hosts.yml
+  href: https://artifacts.apis.io/pvgis/hosts/pvgis-hosts.yml
   title: ''
   type: Hosts
   url: hosts/pvgis-hosts.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pvgis/refs/heads/main/security/pvgis-domain-security.yml
+  href: https://artifacts.apis.io/pvgis/security/pvgis-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pvgis-domain-security.yml
@@ -61,7 +74,7 @@ name: PVGIS
 nav: Providers
 network: true
 overview: PVGIS is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Solar, Renewables, Data, and European Commission.
-random_paper: 3
+random_paper: 1
 score:
   band: minimal
   composite: 4.1
@@ -89,14 +102,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 4.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/pvgis/refs/heads/main/screenshots/pvgis-2026-10-11T112936.png
+screenshot: https://apis.io/screenshots/pvgis/pvgis-2026-10-11T112936.png
 security:
 - kind: domain-security
   name: Pvgis Domain Security

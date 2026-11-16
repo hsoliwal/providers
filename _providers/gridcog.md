@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -32,22 +45,22 @@ common:
   type: Compliance
   url: https://security.gridcog.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gridcog/refs/heads/main/well-known/gridcog-my-security.txt
+  href: https://artifacts.apis.io/gridcog/well-known/gridcog-my-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/gridcog-my-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/gridcog/refs/heads/main/well-known/gridcog-well-known.yml
+  href: https://artifacts.apis.io/gridcog/well-known/gridcog-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/gridcog-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gridcog/refs/heads/main/hosts/gridcog-hosts.yml
+  href: https://artifacts.apis.io/gridcog/hosts/gridcog-hosts.yml
   title: ''
   type: Hosts
   url: hosts/gridcog-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/gridcog/refs/heads/main/vendors/gridcog-vendors.yml
+  href: https://artifacts.apis.io/gridcog/vendors/gridcog-vendors.yml
   title: ''
   type: Vendors
   url: vendors/gridcog-vendors.yml
@@ -56,12 +69,12 @@ common:
   type: DeveloperPortal
   url: https://www.gridcog.com/industries/developers
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gridcog/refs/heads/main/security/gridcog-trust-center.yml
+  href: https://artifacts.apis.io/gridcog/security/gridcog-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/gridcog-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/gridcog/refs/heads/main/security/gridcog-domain-security.yml
+  href: https://artifacts.apis.io/gridcog/security/gridcog-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/gridcog-domain-security.yml
@@ -113,24 +126,26 @@ overview: 'Gridcog is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Gridcog''s developer surface includes pricing, engineering blog, signup flow, support, and 11 more developer resources.'
-random_paper: 9
+random_paper: 15
 score:
   band: emerging
-  composite: 20.6
+  composite: 14.2
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.8
   facets:
-    access_clarity: 60.5
+    access_clarity: 34.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 16.7
+    developer_ergonomics: 8.3
     discoverability: 48.2
-    operational_transparency: 0.0
+    operational_transparency: 10.5
+  previous_composite: 22.0
   provenance:
     mcp: derived
   regulatory:
@@ -138,13 +153,15 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 15.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 10.2
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/gridcog/gridcog-2026-11-03T133053.png
 security:
 - kind: domain-security
   name: Gridcog Domain Security

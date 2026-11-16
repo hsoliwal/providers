@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.5
-  scored_at: '2026-10-17'
+  score: 45.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 40
   human_in_the_loop: 0
@@ -81,11 +87,8 @@ apis:
   description: The Webhook Types API from Luma — 0 operation(s) for webhook types.
   name: Luma Webhook Types API
   slug: luma-webhook-types-api
-artifact_total: 224
+artifact_total: 223
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Luma Calendars API
   slug: open-luma-calendars-api
@@ -106,22 +109,22 @@ collections:
   slug: open-luma-webhooks-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/luma/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/luma/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/luma/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/luma/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/luma/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/luma/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/luma/refs/heads/main/capabilities/luma-capability-edges.yml
+  href: https://artifacts.apis.io/luma/capabilities/luma-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/luma-capability-edges.yml
@@ -130,22 +133,22 @@ common:
   type: Website
   url: https://www.luma.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/luma/refs/heads/main/agentic-access/luma-agentic-access.yml
+  href: https://artifacts.apis.io/luma/agentic-access/luma-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/luma-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/luma/refs/heads/main/security/luma-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/luma/security/luma-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/luma-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/luma/refs/heads/main/security/luma-domain-security.yml
+  href: https://artifacts.apis.io/luma/security/luma-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/luma-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/luma/refs/heads/main/authentication/luma-authentication.yml
+  href: https://artifacts.apis.io/luma/authentication/luma-authentication.yml
   title: ''
   type: Authentication
   url: authentication/luma-authentication.yml
@@ -676,7 +679,7 @@ json_schemas:
   property_count: 13
   slug: v1_events_ticket_types_create_post_200_response
 - name: V1 Events Ticket Types Create Post Request
-  property_count: 0
+  property_count: 13
   slug: v1_events_ticket_types_create_post_request
 - name: V1 Events Ticket Types Delete Post 200 Response
   property_count: 0
@@ -694,7 +697,7 @@ json_schemas:
   property_count: 13
   slug: v1_events_ticket_types_update_post_200_response
 - name: V1 Events Ticket Types Update Post Request
-  property_count: 0
+  property_count: 13
   slug: v1_events_ticket_types_update_post_request
 - name: V1 Events Update Post 200 Response
   property_count: 0
@@ -824,7 +827,7 @@ plans:
 - name: Plans
   plan_count: 3
   slug: plans
-random_paper: 13
+random_paper: 23
 rate_limits:
 - limit_count: 0
   name: Rate Limits
@@ -843,30 +846,30 @@ rules:
   slug: luma-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 31.8
+  composite: 34.6
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 46.3
     catalog_earned_first_party: 0.0
     catalog_gap: 68.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.7
+  delta: 0.7
   facets:
     access_clarity: 18.4
     contract_governance: 9.8
-    contract_quality: 52.1
+    contract_quality: 57.4
     developer_ergonomics: 31.0
     discoverability: 60.0
-    operational_transparency: 10.5
-  previous_composite: 37.5
+    operational_transparency: 21.1
+  previous_composite: 33.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 7
+      marker_coverage: 46.2
+      total: 13
     mcp: first-party
   regulatory:
     applies: true
@@ -874,13 +877,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/luma/refs/heads/main/screenshots/luma-2026-06-20T184751.png
+screenshot: https://apis.io/screenshots/luma/luma-2026-06-20T184751.png
 security:
 - kind: authentication
   name: Luma Authentication

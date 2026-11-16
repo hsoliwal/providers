@@ -1,11 +1,12 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Open access
   onboarding: open
   pricing: unknown
   public: true
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -73,17 +77,17 @@ common:
   type: Security
   url: https://www.viewabo.com/legal/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/viewabo/refs/heads/main/security/viewabo-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/viewabo/security/viewabo-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/viewabo-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/viewabo/refs/heads/main/security/viewabo-domain-security.yml
+  href: https://artifacts.apis.io/viewabo/security/viewabo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/viewabo-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/viewabo/refs/heads/main/llms/viewabo-llms.txt
+  href: https://artifacts.apis.io/viewabo/llms/viewabo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/viewabo-llms.txt
@@ -95,16 +99,16 @@ modified: '2026-07-21'
 name: Viewabo
 nav: Providers
 network: true
-overview: 'Viewabo is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Visual Support, Customer Service, Field Service, and Remote Assistance.
+overview: 'Viewabo is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Visual Support, Customer Service, Field Service Management, and Remote Assistance.
 
 
   Viewabo''s developer surface includes pricing, signup flow, support, engineering blog, and 8 more developer resources.'
-random_paper: 1
+random_paper: 5
 score:
   band: emerging
   composite: 17.9
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -125,14 +129,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/viewabo/refs/heads/main/screenshots/viewabo-2026-09-02T165959.png
+screenshot: https://apis.io/screenshots/viewabo/viewabo-2026-09-02T165959.png
 security:
 - kind: domain-security
   name: Viewabo Domain Security
@@ -147,7 +151,7 @@ tags:
 - Company
 - Visual Support
 - Customer Service
-- Field Service
+- Field Service Management
 - Remote Assistance
 - Video Support
 - Customer Experience

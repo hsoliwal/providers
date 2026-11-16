@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-10-17'
+  score: 25.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 146
   human_in_the_loop: 0
@@ -331,9 +335,6 @@ apis:
 artifact_total: 121
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Polkadot REST Account API
   slug: open-polkadot-account-api
 - collection_type: open
@@ -506,17 +507,17 @@ collections:
   slug: open-polkadot-xcm-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/polkadot/refs/heads/main/plans/subscan.yml
+  href: https://artifacts.apis.io/polkadot/plans/subscan.yml
   title: ''
   type: Plans
   url: plans/subscan.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/polkadot/refs/heads/main/rate-limits/subscan.yml
+  href: https://artifacts.apis.io/polkadot/rate-limits/subscan.yml
   title: ''
   type: RateLimits
   url: rate-limits/subscan.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/polkadot/refs/heads/main/finops/subscan.yml
+  href: https://artifacts.apis.io/polkadot/finops/subscan.yml
   title: ''
   type: FinOps
   url: finops/subscan.yml
@@ -533,12 +534,12 @@ common:
   type: License
   url: https://github.com/paritytech/substrate-api-sidecar/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/polkadot/refs/heads/main/agentic-access/polkadot-agentic-access.yml
+  href: https://artifacts.apis.io/polkadot/agentic-access/polkadot-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/polkadot-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/polkadot/refs/heads/main/security/polkadot-domain-security.yml
+  href: https://artifacts.apis.io/polkadot/security/polkadot-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/polkadot-domain-security.yml
@@ -594,7 +595,7 @@ network: true
 overview: 'Polkadot publishes 57 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Accounts API, Ahm API, and 54 more. Tagged areas include Blockchain, Polkadot, Parachain, Substrate, and Cryptocurrency.
 
 
-  The Polkadot catalog on APIs.io includes 1 JSON-LD context.
+  The Polkadot catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Polkadot''s developer surface includes engineering blog, GitHub presence, and 13 more developer resources.'
@@ -602,39 +603,52 @@ plans:
 - name: Subscan
   plan_count: 3
   slug: subscan
-random_paper: 4
+random_paper: 22
 rate_limits:
 - limit_count: 3
   name: Subscan
   slug: subscan
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: Polkadot API Rules
+  rule_count: 48
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 1
+    warn: 13
+  slug: polkadot-rules
 score:
   band: thin
-  composite: 27.4
+  composite: 26.4
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 51.0
+    artifact_dirs: 14
+    catalog_earned: 55.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 64.0
+    catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
-    contract_quality: 47.3
+    contract_governance: 13.6
+    contract_quality: 36.1
     developer_ergonomics: 14.3
     discoverability: 71.4
     operational_transparency: 44.7
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 34.9
+  previous_composite: 26.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 37.0
-      derived: 0
-      marker_coverage: 0.0
+      derived: 20
+      marker_coverage: 35.1
       total: 57
   regulatory:
     applies: true
@@ -642,13 +656,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/polkadot/refs/heads/main/screenshots/polkadot-2026-06-20T192021.png
+screenshot: https://apis.io/screenshots/polkadot/polkadot-2026-06-20T192021.png
 security:
 - kind: domain-security
   name: Polkadot Domain Security

@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://esign-staging.certinal.com
@@ -39,42 +56,42 @@ apis:
 artifact_total: 8
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/certinal/refs/heads/main/vendors/certinal-vendors.yml
+  href: https://artifacts.apis.io/certinal/vendors/certinal-vendors.yml
   title: ''
   type: Vendors
   url: vendors/certinal-vendors.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/certinal/refs/heads/main/rules/certinal-rules.yml
+  href: https://artifacts.apis.io/certinal/rules/certinal-rules.yml
   title: ''
   type: Spectral
   url: rules/certinal-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/certinal/refs/heads/main/json-ld/certinal-context.jsonld
+  href: https://artifacts.apis.io/certinal/json-ld/certinal-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/certinal-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/certinal/refs/heads/main/vocabulary/certinal-vocabulary.yml
+  href: https://artifacts.apis.io/certinal/vocabulary/certinal-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/certinal-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/certinal/refs/heads/main/data-model/certinal-data-model.yml
+  href: https://artifacts.apis.io/certinal/data-model/certinal-data-model.yml
   title: ''
   type: DataModel
   url: data-model/certinal-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/certinal/refs/heads/main/authentication/certinal-authentication.yml
+  href: https://artifacts.apis.io/certinal/authentication/certinal-authentication.yml
   title: ''
   type: Authentication
   url: authentication/certinal-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/certinal/refs/heads/main/conformance/certinal-conformance.yml
+  href: https://artifacts.apis.io/certinal/conformance/certinal-conformance.yml
   title: ''
   type: Conformance
   url: conformance/certinal-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/certinal/refs/heads/main/hosts/certinal-hosts.yml
+  href: https://artifacts.apis.io/certinal/hosts/certinal-hosts.yml
   title: ''
   type: Hosts
   url: hosts/certinal-hosts.yml
@@ -103,7 +120,7 @@ common:
   type: Blog
   url: https://www.certinal.com/blog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/certinal/refs/heads/main/security/certinal-domain-security.yml
+  href: https://artifacts.apis.io/certinal/security/certinal-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/certinal-domain-security.yml
@@ -145,7 +162,7 @@ overview: 'Certinal is listed with 2 APIs on the [APIs.io](https://apis.io/) net
 
 
   Certinal''s developer surface includes authentication, pricing, documentation, engineering blog, and 12 more developer resources.'
-random_paper: 14
+random_paper: 10
 rules:
 - authorship: generated
   effective_rule_count: 53
@@ -160,22 +177,24 @@ rules:
     warn: 0
   slug: certinal-rules
 score:
-  band: thin
-  composite: 26.2
+  band: emerging
+  composite: 21.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 57.0
     catalog_earned_first_party: 0.0
     catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.9
   facets:
-    access_clarity: 31.6
+    access_clarity: 15.8
     contract_governance: 19.7
     contract_quality: 23.5
-    developer_ergonomics: 23.8
-    discoverability: 64.3
+    developer_ergonomics: 17.9
+    discoverability: 63.4
     operational_transparency: 0.0
+  previous_composite: 26.2
   provenance:
     conformance: derived
     contracts:
@@ -189,12 +208,14 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 19.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 16.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/certinal/certinal-2026-11-03T123731.png
 security:
 - kind: authentication
   name: Certinal Authentication

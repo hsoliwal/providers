@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -29,15 +32,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: verified
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.1
-  scored_at: '2026-10-17'
+  score: 44.3
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.uchecker.net
@@ -55,7 +61,7 @@ apis:
   description: 'Программный интерфейс для ESP-провайдеров: расчёт стоимости и автоматическое создание аккаунтов с зачислением кредитов'
   name: uChecker ESP Провайдеры API
   slug: uchecker-esp-api
-artifact_total: 9
+artifact_total: 14
 asyncapis:
 - description: ''
   name: Uchecker Webhooks
@@ -66,17 +72,17 @@ common:
   type: Website
   url: https://www.uchecker.net/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/capabilities/uchecker-capability-edges.yml
+  href: https://artifacts.apis.io/uchecker/capabilities/uchecker-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/uchecker-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/security/uchecker-domain-security.yml
+  href: https://artifacts.apis.io/uchecker/security/uchecker-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/uchecker-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/authentication/uchecker-authentication.yml
+  href: https://artifacts.apis.io/uchecker/authentication/uchecker-authentication.yml
   title: ''
   type: Authentication
   url: authentication/uchecker-authentication.yml
@@ -85,72 +91,72 @@ common:
   type: MCPServer
   url: https://api.uchecker.net/mcp
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/mcp/uchecker-mcp.yml
+  href: https://artifacts.apis.io/uchecker/mcp/uchecker-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/uchecker-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/mcp/uchecker-tool-crosswalk.yml
+  href: https://artifacts.apis.io/uchecker/mcp/uchecker-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/uchecker-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/uchecker/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/llms/uchecker-llms.txt
+  href: https://artifacts.apis.io/uchecker/llms/uchecker-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/uchecker-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/conventions/uchecker-conventions.yml
+  href: https://artifacts.apis.io/uchecker/conventions/uchecker-conventions.yml
   title: ''
   type: Conventions
   url: conventions/uchecker-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/conventions/uchecker-conventions.yml
+  href: https://artifacts.apis.io/uchecker/conventions/uchecker-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/uchecker-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/errors/uchecker-problem-types.yml
+  href: https://artifacts.apis.io/uchecker/errors/uchecker-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/uchecker-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/asyncapi/uchecker-webhooks.yml
+  href: https://artifacts.apis.io/uchecker/asyncapi/uchecker-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/uchecker-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/data-model/uchecker-data-model.yml
+  href: https://artifacts.apis.io/uchecker/data-model/uchecker-data-model.yml
   title: ''
   type: DataModel
   url: data-model/uchecker-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/conformance/uchecker-conformance.yml
+  href: https://artifacts.apis.io/uchecker/conformance/uchecker-conformance.yml
   title: ''
   type: Conformance
   url: conformance/uchecker-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/lifecycle/uchecker-lifecycle.yml
+  href: https://artifacts.apis.io/uchecker/lifecycle/uchecker-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/uchecker-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/rate-limits/uchecker-rate-limits.yml
+  href: https://artifacts.apis.io/uchecker/rate-limits/uchecker-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/uchecker-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/plans/uchecker-plans-pricing.yml
+  href: https://artifacts.apis.io/uchecker/plans/uchecker-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/uchecker-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/packages/uchecker-packages.yml
+  href: https://artifacts.apis.io/uchecker/packages/uchecker-packages.yml
   title: ''
   type: Packages
   url: packages/uchecker-packages.yml
@@ -192,6 +198,14 @@ common:
   url: https://uchecker.net/privacy-policy
 created: '2026-08-16'
 description: Russian-language email-validation platform offering bulk and single email verification (SMTP mailbox existence, MX/DNS, catch-all, disposable, role-based, spam-trap/blacklist checks) plus free DNS/email tools. Access via REST API, a hosted MCP server, web dashboard, and Telegram bot.
+finops:
+- has_sources: true
+  method: derived
+  name: Uchecker Finops
+  primary_unit: addresses
+  service_category: ''
+  slug: uchecker-finops
+  template: false
 image: https://uchecker.net/images/og-image.png
 layout: provider
 mcp_servers:
@@ -205,7 +219,7 @@ network: true
 overview: 'uChecker publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Аутентификация API, Валидация Email API, and ESP Провайдеры API. Tagged areas include Email Verification, Email, SMTP, DNS, and Deliverability.
 
 
-  The uChecker catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The uChecker catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   uChecker''s developer surface includes authentication, developer console, API reference, documentation, pricing, signup flow, support, and 21 more developer resources.'
@@ -213,30 +227,43 @@ plans:
 - name: Uchecker Plans Pricing
   plan_count: 11
   slug: uchecker-plans-pricing
-random_paper: 6
+random_paper: 2
 rate_limits:
 - limit_count: 0
   name: Uchecker Rate Limits
   slug: uchecker-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: uChecker API Rules
+  rule_count: 53
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 2
+    warn: 7
+  slug: uchecker-rules
 score:
   band: developing
-  composite: 47.8
+  composite: 51.0
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 49.0
+    artifact_dirs: 27
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 63.2
-    contract_governance: 4.5
+    access_clarity: 71.1
+    contract_governance: 18.2
     contract_quality: 54.8
     developer_ergonomics: 44.6
     discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 47.7
+  previous_composite: 51.0
   provenance:
     conformance: derived
     contracts:
@@ -252,13 +279,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/uchecker/refs/heads/main/screenshots/uchecker-2026-08-17T082530.png
+screenshot: https://apis.io/screenshots/uchecker/uchecker-2026-08-17T082530.png
 security:
 - kind: authentication
   name: Uchecker Authentication
@@ -268,6 +295,14 @@ security:
   name: Uchecker Domain Security
   slug: uchecker-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Audit credit spend and job history
+  slug: uchecker-audit-credit-spend
+- name: Clean a mailing list in bulk
+  slug: uchecker-clean-a-mailing-list
+- name: Validate a single email address
+  slug: uchecker-validate-a-single-email
 slug: uchecker
 tags:
 - Email Verification

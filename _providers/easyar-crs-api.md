@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Freemium (free trial)
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'REST/HTTP API for cloud image recognition: target management endpoints (/targets/, /target/<id>, /grade/detection/, /ping) and a recognition endpoint (/search), plus a token exchange service. Uses per'
@@ -36,67 +52,67 @@ common:
   type: Website
   url: https://www.easyar.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/security/easyar-crs-api-domain-security.yml
+  href: https://artifacts.apis.io/easyar-crs-api/security/easyar-crs-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/easyar-crs-api-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/authentication/easyar-crs-api-authentication.yml
+  href: https://artifacts.apis.io/easyar-crs-api/authentication/easyar-crs-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/easyar-crs-api-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/errors/easyar-crs-api-problem-types.yml
+  href: https://artifacts.apis.io/easyar-crs-api/errors/easyar-crs-api-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/easyar-crs-api-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/conventions/easyar-crs-api-conventions.yml
+  href: https://artifacts.apis.io/easyar-crs-api/conventions/easyar-crs-api-conventions.yml
   title: ''
   type: Conventions
   url: conventions/easyar-crs-api-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/lifecycle/easyar-crs-api-lifecycle.yml
+  href: https://artifacts.apis.io/easyar-crs-api/lifecycle/easyar-crs-api-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/easyar-crs-api-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/conformance/easyar-crs-api-conformance.yml
+  href: https://artifacts.apis.io/easyar-crs-api/conformance/easyar-crs-api-conformance.yml
   title: ''
   type: Conformance
   url: conformance/easyar-crs-api-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/plans/easyar-crs-api-plans-pricing.yml
+  href: https://artifacts.apis.io/easyar-crs-api/plans/easyar-crs-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/easyar-crs-api-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/rate-limits/easyar-crs-api-rate-limits.yml
+  href: https://artifacts.apis.io/easyar-crs-api/rate-limits/easyar-crs-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/easyar-crs-api-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/packages/easyar-crs-api-packages.yml
+  href: https://artifacts.apis.io/easyar-crs-api/packages/easyar-crs-api-packages.yml
   title: ''
   type: Packages
   url: packages/easyar-crs-api-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/packages/easyar-crs-api-packages.yml
+  href: https://artifacts.apis.io/easyar-crs-api/packages/easyar-crs-api-packages.yml
   title: ''
   type: SDKs
   url: packages/easyar-crs-api-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/mcp/easyar-crs-api-mcp.yml
+  href: https://artifacts.apis.io/easyar-crs-api/mcp/easyar-crs-api-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/easyar-crs-api-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/llms/easyar-crs-api-llms.txt
+  href: https://artifacts.apis.io/easyar-crs-api/llms/easyar-crs-api-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/easyar-crs-api-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/data-model/easyar-crs-api-data-model.yml
+  href: https://artifacts.apis.io/easyar-crs-api/data-model/easyar-crs-api-data-model.yml
   title: ''
   type: DataModel
   url: data-model/easyar-crs-api-data-model.yml
@@ -148,7 +164,7 @@ plans:
 - name: Easyar Crs Api Plans Pricing
   plan_count: 3
   slug: easyar-crs-api-plans-pricing
-random_paper: 13
+random_paper: 9
 rate_limits:
 - limit_count: 2
   name: Easyar Crs Api Rate Limits
@@ -157,13 +173,13 @@ score:
   band: thin
   composite: 35.0
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 64.5
     contract_governance: 4.5
@@ -171,7 +187,7 @@ score:
     developer_ergonomics: 54.8
     discoverability: 66.1
     operational_transparency: 23.7
-  previous_composite: 34.9
+  previous_composite: 35.0
   provenance:
     conformance: derived
     mcp: derived
@@ -181,14 +197,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/easyar-crs-api/refs/heads/main/screenshots/easyar-crs-api-2026-07-25T212712.png
+screenshot: https://apis.io/screenshots/easyar-crs-api/easyar-crs-api-2026-07-25T212712.png
 security:
 - kind: authentication
   name: Easyar Crs Api Authentication

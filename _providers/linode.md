@@ -1,13 +1,19 @@
 ---
 access_model:
   confidence: high
-  label: Paid · Self-serve signup
-  onboarding: self-serve
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Open access
+  onboarding: open
   pricing: paid
-  public: false
+  public: true
   source:
   - plans
   - authentication
+  - scopes
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -27,15 +33,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-10-17'
+  score: 42.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 326
   human_in_the_loop: 21
@@ -43,7 +52,7 @@ agentic_access:
   operation_count: 655
   slug: linode-agentic-access
   summary_line: 655 operations · 326 acting · 21 human-in-the-loop
-api_count: 2
+api_count: 3
 apis:
 - description: The Linode CLI is a command-line interface that wraps the Linode API v4, allowing developers and system administrators to manage Akamai Connected Cloud resources directly from the terminal. It support
   name: Linode CLI
@@ -672,11 +681,8 @@ apis:
   description: The Rulesets API from Linode — 2 operation(s) for rulesets.
   name: Linode Rulesets API
   slug: linode-rulesets-api
-artifact_total: 285
+artifact_total: 338
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Linode API v4 Account API
   slug: open-linode-account-api
@@ -738,32 +744,57 @@ collections:
   name: Linode API v4 Account VPCs API
   slug: open-linode-vpcs-api
 common:
+- group: design
+  href: https://artifacts.apis.io/linode/rules/linode-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/linode-rules.yml
+- group: design
+  href: https://artifacts.apis.io/linode/rules/linode-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/linode-jsonschema-spectral-rules.yml
+- group: other
+  href: https://artifacts.apis.io/linode/hosts/linode-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/linode-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/linode/integrations/linode-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/linode-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/linode/vendors/linode-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/linode-vendors.yml
 - group: commercial
   title: ''
   type: Pricing
   url: https://api.linode.com/v4/linode/types
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/capabilities/linode-capability-edges.yml
+  href: https://artifacts.apis.io/linode/capabilities/linode-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/linode-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/agentic-access/linode-agentic-access.yml
+  href: https://artifacts.apis.io/linode/agentic-access/linode-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/linode-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/security/linode-domain-security.yml
+  href: https://artifacts.apis.io/linode/security/linode-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/linode-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/authentication/linode-authentication.yml
+  href: https://artifacts.apis.io/linode/authentication/linode-authentication.yml
   title: ''
   type: Authentication
   url: authentication/linode-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/scopes/linode-scopes.yml
+  href: https://artifacts.apis.io/linode/scopes/linode-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/linode-scopes.yml
@@ -772,12 +803,12 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/linode
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/json-ld/linode-context.jsonld
+  href: https://artifacts.apis.io/linode/json-ld/linode-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/linode-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/json-schema/linode-instance-schema.json
+  href: https://artifacts.apis.io/linode/json-schema/linode-instance-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/linode-instance-schema.json
@@ -834,122 +865,112 @@ common:
   type: StatusPage
   url: https://status.linode.com/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/packages/linode-packages.yml
+  href: https://artifacts.apis.io/linode/packages/linode-packages.yml
   title: ''
   type: Packages
   url: packages/linode-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/packages/linode-packages.yml
+  href: https://artifacts.apis.io/linode/packages/linode-packages.yml
   title: ''
   type: SDKs
   url: packages/linode-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/well-known/linode-well-known.yml
+  href: https://artifacts.apis.io/linode/well-known/linode-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/linode-well-known.yml
-- group: other
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/well-known/linode-api-catalog.json
-  title: ''
-  type: APICatalog
-  url: well-known/linode-api-catalog.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/mcp/linode-mcp.yml
+  href: https://artifacts.apis.io/linode/mcp/linode-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/linode-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/mcp/linode-tool-crosswalk.yml
+  href: https://artifacts.apis.io/linode/mcp/linode-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/linode-tool-crosswalk.yml
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/llms/linode-llms.txt
-  title: ''
-  type: LLMsTxt
-  url: llms/linode-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/conformance/linode-conformance.yml
+  href: https://artifacts.apis.io/linode/conformance/linode-conformance.yml
   title: ''
   type: Conformance
   url: conformance/linode-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/errors/linode-problem-types.yml
+  href: https://artifacts.apis.io/linode/errors/linode-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/linode-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/lifecycle/linode-lifecycle.yml
+  href: https://artifacts.apis.io/linode/lifecycle/linode-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/linode-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/lifecycle/linode-lifecycle.yml
+  href: https://artifacts.apis.io/linode/lifecycle/linode-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/linode-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/security/linode-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/linode/security/linode-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/linode-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/security/linode-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/linode/security/linode-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/linode-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/conventions/linode-conventions.yml
+  href: https://artifacts.apis.io/linode/conventions/linode-conventions.yml
   title: ''
   type: Conventions
   url: conventions/linode-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/changelog/linode-changelog.yml
+  href: https://artifacts.apis.io/linode/changelog/linode-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/linode-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/cli/linode-cli.yml
+  href: https://artifacts.apis.io/linode/cli/linode-cli.yml
   title: ''
   type: CLI
   url: cli/linode-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/data-model/linode-data-model.yml
+  href: https://artifacts.apis.io/linode/data-model/linode-data-model.yml
   title: ''
   type: DataModel
   url: data-model/linode-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/linode/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/plans/linode-plans-pricing.yml
+  href: https://artifacts.apis.io/linode/plans/linode-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/linode-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/rate-limits/linode-rate-limits.yml
+  href: https://artifacts.apis.io/linode/rate-limits/linode-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/linode-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/finops/linode-finops.yml
+  href: https://artifacts.apis.io/linode/finops/linode-finops.yml
   title: ''
   type: FinOps
   url: finops/linode-finops.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/vocabulary/linode-vocabulary.yml
+  href: https://artifacts.apis.io/linode/vocabulary/linode-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/linode-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/json-structure/linode-structure.json
+  href: https://artifacts.apis.io/linode/json-structure/linode-structure.json
   title: ''
   type: JSONStructure
   url: json-structure/linode-structure.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/rules/linode-jsonschema-spectral-rules.yml
+  href: https://artifacts.apis.io/linode/rules/linode-jsonschema-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/linode-jsonschema-spectral-rules.yml
@@ -974,10 +995,10 @@ features:
 - Now Akamai Cloud Computing (Linode brand retired)
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Linode Finops
-  primary_unit: ''
-  service_category: Cloud Compute
+  primary_unit: hourly
+  service_category: ''
   slug: linode-finops
   template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/linode.png
@@ -991,12 +1012,24 @@ json_schemas:
 - name: BackupResponse
   property_count: 2
   slug: linode-backupresponse
+- name: DatabaseRequest
+  property_count: 2
+  slug: linode-database-request
 - name: Database
   property_count: 13
   slug: linode-database
 - name: DatabaseRequest
   property_count: 2
   slug: linode-databaserequest
+- name: DomainRecordRequest
+  property_count: 7
+  slug: linode-domain-record-request
+- name: DomainRecord
+  property_count: 9
+  slug: linode-domain-record
+- name: DomainRequest
+  property_count: 5
+  slug: linode-domain-request
 - name: Domain
   property_count: 13
   slug: linode-domain
@@ -1012,9 +1045,15 @@ json_schemas:
 - name: Event
   property_count: 9
   slug: linode-event
+- name: FirewallRequest
+  property_count: 3
+  slug: linode-firewall-request
 - name: Firewall
   property_count: 7
   slug: linode-firewall
+- name: FirewallUpdateRequest
+  property_count: 3
+  slug: linode-firewall-update-request
 - name: FirewallRequest
   property_count: 3
   slug: linode-firewallrequest
@@ -1024,9 +1063,15 @@ json_schemas:
 - name: FirewallUpdateRequest
   property_count: 3
   slug: linode-firewallupdaterequest
+- name: ImageRequest
+  property_count: 3
+  slug: linode-image-request
 - name: Image
   property_count: 11
   slug: linode-image
+- name: ImageUpdateRequest
+  property_count: 2
+  slug: linode-image-update-request
 - name: ImageRequest
   property_count: 3
   slug: linode-imagerequest
@@ -1051,9 +1096,21 @@ json_schemas:
 - name: KubernetesVersion
   property_count: 1
   slug: linode-kubernetesversion
+- name: LinodeIPAddresses
+  property_count: 2
+  slug: linode-linode-ipaddresses
+- name: LinodeRebuildRequest
+  property_count: 7
+  slug: linode-linode-rebuild-request
+- name: LinodeRequest
+  property_count: 14
+  slug: linode-linode-request
 - name: Linode
   property_count: 17
   slug: linode-linode
+- name: LinodeUpdateRequest
+  property_count: 4
+  slug: linode-linode-update-request
 - name: LinodeIPAddresses
   property_count: 2
   slug: linode-linodeipaddresses
@@ -1066,27 +1123,60 @@ json_schemas:
 - name: LinodeUpdateRequest
   property_count: 4
   slug: linode-linodeupdaterequest
+- name: LKEClusterRequest
+  property_count: 6
+  slug: linode-lkecluster-request
 - name: LKECluster
   property_count: 9
   slug: linode-lkecluster
+- name: LKEClusterUpdateRequest
+  property_count: 4
+  slug: linode-lkecluster-update-request
 - name: LKEClusterRequest
   property_count: 6
   slug: linode-lkeclusterrequest
 - name: LKEClusterUpdateRequest
   property_count: 4
   slug: linode-lkeclusterupdaterequest
+- name: LongviewClientRequest
+  property_count: 1
+  slug: linode-longview-client-request
+- name: LongviewClient
+  property_count: 7
+  slug: linode-longview-client
 - name: LongviewClient
   property_count: 7
   slug: linode-longviewclient
 - name: LongviewClientRequest
   property_count: 1
   slug: linode-longviewclientrequest
+- name: ManagedServiceRequest
+  property_count: 8
+  slug: linode-managed-service-request
+- name: ManagedService
+  property_count: 13
+  slug: linode-managed-service
 - name: ManagedService
   property_count: 13
   slug: linode-managedservice
 - name: ManagedServiceRequest
   property_count: 8
   slug: linode-managedservicerequest
+- name: NodeBalancerRequest
+  property_count: 4
+  slug: linode-node-balancer-request
+- name: NodeBalancer
+  property_count: 11
+  slug: linode-node-balancer
+- name: NodeBalancerUpdateRequest
+  property_count: 3
+  slug: linode-node-balancer-update-request
+- name: NodePoolRequest
+  property_count: 3
+  slug: linode-node-pool-request
+- name: NodePool
+  property_count: 5
+  slug: linode-node-pool
 - name: NodeBalancer
   property_count: 11
   slug: linode-nodebalancer
@@ -1104,6 +1194,18 @@ json_schemas:
   slug: linode-nodepoolrequest
 - name: ObjectStorageBucket
   property_count: 6
+  slug: linode-object-storage-bucket
+- name: ObjectStorageEndpointList
+  property_count: 1
+  slug: linode-object-storage-endpoint-list
+- name: ObjectStorageKeyRequest
+  property_count: 2
+  slug: linode-object-storage-key-request
+- name: ObjectStorageKey
+  property_count: 6
+  slug: linode-object-storage-key
+- name: ObjectStorageBucket
+  property_count: 6
   slug: linode-objectstoragebucket
 - name: ObjectStorageEndpointList
   property_count: 1
@@ -1114,119 +1216,176 @@ json_schemas:
 - name: ObjectStorageKeyRequest
   property_count: 2
   slug: linode-objectstoragekeyrequest
+- name: PaginatedDatabaseEngineList
+  property_count: 4
+  slug: linode-paginated-database-engine-list
+- name: PaginatedDatabaseList
+  property_count: 4
+  slug: linode-paginated-database-list
+- name: PaginatedDatabaseTypeList
+  property_count: 4
+  slug: linode-paginated-database-type-list
+- name: PaginatedDomainList
+  property_count: 4
+  slug: linode-paginated-domain-list
+- name: PaginatedDomainRecordList
+  property_count: 4
+  slug: linode-paginated-domain-record-list
+- name: PaginatedImageList
+  property_count: 4
+  slug: linode-paginated-image-list
+- name: PaginatedInvoiceList
+  property_count: 4
+  slug: linode-paginated-invoice-list
+- name: PaginatedIPAddressList
+  property_count: 4
+  slug: linode-paginated-ipaddress-list
+- name: PaginatedLinodeTypeList
+  property_count: 4
+  slug: linode-paginated-linode-type-list
+- name: PaginatedLKEClusterList
+  property_count: 4
+  slug: linode-paginated-lkecluster-list
+- name: PaginatedLongviewClientList
+  property_count: 4
+  slug: linode-paginated-longview-client-list
+- name: PaginatedManagedContactList
+  property_count: 4
+  slug: linode-paginated-managed-contact-list
+- name: PaginatedManagedIssueList
+  property_count: 4
+  slug: linode-paginated-managed-issue-list
+- name: PaginatedManagedServiceList
+  property_count: 4
+  slug: linode-paginated-managed-service-list
+- name: PaginatedNodeBalancerConfigList
+  property_count: 4
+  slug: linode-paginated-node-balancer-config-list
+- name: PaginatedNodeBalancerList
+  property_count: 4
+  slug: linode-paginated-node-balancer-list
+- name: PaginatedObjectStorageBucketList
+  property_count: 4
+  slug: linode-paginated-object-storage-bucket-list
+- name: PaginatedObjectStorageKeyList
+  property_count: 4
+  slug: linode-paginated-object-storage-key-list
+- name: PaginatedVLANList
+  property_count: 4
+  slug: linode-paginated-vlanlist
 - name: PaginatedConfigList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedconfiglist
 - name: PaginatedDatabaseEngineList
-  property_count: 0
+  property_count: 1
   slug: linode-paginateddatabaseenginelist
 - name: PaginatedDatabaseList
-  property_count: 0
+  property_count: 1
   slug: linode-paginateddatabaselist
 - name: PaginatedDatabaseTypeList
-  property_count: 0
+  property_count: 1
   slug: linode-paginateddatabasetypelist
 - name: PaginatedDiskList
-  property_count: 0
+  property_count: 1
   slug: linode-paginateddisklist
 - name: PaginatedDomainList
-  property_count: 0
+  property_count: 1
   slug: linode-paginateddomainlist
 - name: PaginatedDomainRecordList
-  property_count: 0
+  property_count: 1
   slug: linode-paginateddomainrecordlist
 - name: PaginatedEventList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedeventlist
 - name: PaginatedFirewallList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedfirewalllist
 - name: PaginatedImageList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedimagelist
 - name: PaginatedInvoiceList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedinvoicelist
 - name: PaginatedIPAddressList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedipaddresslist
 - name: PaginatedKernelList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedkernellist
 - name: PaginatedLinodeList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedlinodelist
 - name: PaginatedLinodeTypeList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedlinodetypelist
 - name: PaginatedLKEClusterList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedlkeclusterlist
 - name: PaginatedLongviewClientList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedlongviewclientlist
 - name: PaginatedManagedContactList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedmanagedcontactlist
 - name: PaginatedManagedIssueList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedmanagedissuelist
 - name: PaginatedManagedServiceList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedmanagedservicelist
 - name: PaginatedNodeBalancerConfigList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatednodebalancerconfiglist
 - name: PaginatedNodeBalancerList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatednodebalancerlist
 - name: PaginatedNodePoolList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatednodepoollist
 - name: PaginatedObjectStorageBucketList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedobjectstoragebucketlist
 - name: PaginatedObjectStorageKeyList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedobjectstoragekeylist
 - name: PaginatedPaymentList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedpaymentlist
 - name: PaginatedPlacementGroupList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedplacementgrouplist
 - name: PaginatedRegionList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedregionlist
 - name: PaginatedSSHKeyList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedsshkeylist
 - name: PaginatedStackScriptList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedstackscriptlist
 - name: PaginatedSubnetList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedsubnetlist
 - name: PaginatedSupportTicketList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedsupportticketlist
 - name: PaginatedTagList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedtaglist
 - name: PaginatedTokenList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedtokenlist
 - name: PaginatedUserList
-  property_count: 0
+  property_count: 1
   slug: linode-paginateduserlist
 - name: PaginatedVLANList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedvlanlist
 - name: PaginatedVolumeList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedvolumelist
 - name: PaginatedVPCList
-  property_count: 0
+  property_count: 1
   slug: linode-paginatedvpclist
 - name: Pagination
   property_count: 3
@@ -1237,6 +1396,12 @@ json_schemas:
 - name: PaymentRequest
   property_count: 1
   slug: linode-paymentrequest
+- name: PlacementGroupRequest
+  property_count: 4
+  slug: linode-placement-group-request
+- name: PlacementGroup
+  property_count: 7
+  slug: linode-placement-group
 - name: PlacementGroup
   property_count: 7
   slug: linode-placementgroup
@@ -1285,6 +1450,9 @@ json_schemas:
 - name: TokenRequest
   property_count: 3
   slug: linode-tokenrequest
+- name: UserRequest
+  property_count: 3
+  slug: linode-user-request
 - name: User
   property_count: 5
   slug: linode-user
@@ -1330,15 +1498,15 @@ network: true
 overview: 'Linode publishes 127 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Databases API, Domains API, and 124 more. Tagged areas include Cloud Computing, Infrastructure-as-a-Service, Virtual Machines, Kubernetes, and Object Storage.
 
 
-  The Linode catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+  The Linode catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Linode''s developer surface includes pricing, authentication, documentation, API reference, getting-started guide, signup flow, developer console, and 39 more developer resources.'
+  Linode''s developer surface includes pricing, authentication, documentation, API reference, getting-started guide, signup flow, developer console, and 42 more developer resources.'
 plans:
 - name: Linode Plans Pricing
-  plan_count: 7
+  plan_count: 9
   slug: linode-plans-pricing
-random_paper: 19
+random_paper: 11
 rate_limits:
 - limit_count: 12
   name: Linode Rate Limits
@@ -1355,38 +1523,55 @@ rules:
     info: 1
     warn: 4
   slug: linode-jsonschema-spectral-rules
+- authorship: generated
+  effective_rule_count: 108
+  extends:
+  - spectral:oas
+  name: Linode API Rules
+  rule_count: 67
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 7
+    warn: 13
+  slug: linode-rules
 scopes:
 - name: Linode Scopes
   scope_count: 30
   slug: linode-scopes
   summary_line: 30 scopes · authorizationCode
 score:
-  band: strong
-  composite: 55.7
+  band: exemplar
+  composite: 66.9
   coverage:
-    artifact_dirs: 34
-    catalog_earned: 76.8
+    artifact_dirs: 39
+    catalog_earned: 93.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 38.3
+    catalog_gap: 22.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.7
+  delta: 9.1
   facets:
-    access_clarity: 55.3
-    contract_governance: 28.0
-    contract_quality: 58.1
-    developer_ergonomics: 28.0
-    discoverability: 71.7
+    access_clarity: 57.9
+    contract_governance: 31.8
+    contract_quality: 66.7
+    developer_ergonomics: 66.1
+    discoverability: 76.7
     operational_transparency: 84.2
-  previous_composite: 55.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 57.8
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 123
+      marker_coverage: 43.5
+      total: 246
     mcp: first-party
     skills: derived
   regulatory:
@@ -1395,13 +1580,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/linode/refs/heads/main/screenshots/linode-2026-06-20T184550.png
+screenshot: https://apis.io/screenshots/linode/linode-2026-06-20T184550.png
 security:
 - kind: authentication
   name: Linode Authentication
@@ -1415,6 +1600,16 @@ security:
   name: Linode Vulnerability Disclosure
   slug: linode-vulnerability-disclosure
   summary_line: Hackerone
+skill_count: 4
+skills:
+- name: linode-deploy-compute-instance
+  slug: linode-deploy-compute-instance
+- name: linode-estimate-cost-before-provisioning
+  slug: linode-estimate-cost-before-provisioning
+- name: linode-manage-dns-zone
+  slug: linode-manage-dns-zone
+- name: linode-provision-lke-cluster
+  slug: linode-provision-lke-cluster
 slug: linode
 tags:
 - Cloud Computing

@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -42,7 +49,7 @@ agentic_access:
   operation_count: 16
   slug: endor-labs-agentic-access
   summary_line: 16 operations · 5 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.endorlabs.com/v1
   baseurl_source: declared
@@ -82,9 +89,6 @@ apis:
 artifact_total: 22
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Endor Labs REST Authentication API
   slug: open-endor-labs-authentication-api
 - collection_type: open
@@ -110,22 +114,22 @@ collections:
   slug: open-endor-labs
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/endor-labs/refs/heads/main/capabilities/endor-labs-capability-edges.yml
+  href: https://artifacts.apis.io/endor-labs/capabilities/endor-labs-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/endor-labs-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/endor-labs/refs/heads/main/agentic-access/endor-labs-agentic-access.yml
+  href: https://artifacts.apis.io/endor-labs/agentic-access/endor-labs-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/endor-labs-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/endor-labs/refs/heads/main/security/endor-labs-domain-security.yml
+  href: https://artifacts.apis.io/endor-labs/security/endor-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/endor-labs-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/endor-labs/refs/heads/main/authentication/endor-labs-authentication.yml
+  href: https://artifacts.apis.io/endor-labs/authentication/endor-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/endor-labs-authentication.yml
@@ -146,17 +150,17 @@ common:
   type: Documentation
   url: https://docs.endorlabs.com/rest-api/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/endor-labs/refs/heads/main/plans/endor-labs-plans-pricing.yml
+  href: https://artifacts.apis.io/endor-labs/plans/endor-labs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/endor-labs-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/endor-labs/refs/heads/main/rate-limits/endor-labs-rate-limits.yml
+  href: https://artifacts.apis.io/endor-labs/rate-limits/endor-labs-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/endor-labs-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/endor-labs/refs/heads/main/finops/endor-labs-finops.yml
+  href: https://artifacts.apis.io/endor-labs/finops/endor-labs-finops.yml
   title: ''
   type: FinOps
   url: finops/endor-labs-finops.yml
@@ -183,55 +187,71 @@ network: true
 overview: 'Endor Labs publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Findings API, Namespaces API, and 4 more. Tagged areas include Security, Software Supply Chain, Software Composition Analysis, Reachability, and AppSec.
 
 
+  The Endor Labs catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Endor Labs'' developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Endor Labs Plans Pricing
   plan_count: 2
   slug: endor-labs-plans-pricing
-random_paper: 9
+random_paper: 15
 rate_limits:
 - limit_count: 2
   name: Endor Labs Rate Limits
   slug: endor-labs-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Endor Labs API Rules
+  rule_count: 62
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 4
+    warn: 10
+  slug: endor-labs-rules
 score:
-  band: emerging
-  composite: 24.5
+  band: thin
+  composite: 29.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 41.0
+    artifact_dirs: 17
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.0
+  delta: 0.8
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
-    contract_quality: 48.1
+    contract_governance: 13.6
+    contract_quality: 35.7
     developer_ergonomics: 25.0
     discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 30.5
+  previous_composite: 28.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 7
+      marker_coverage: 93.8
+      total: 240
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/endor-labs/refs/heads/main/screenshots/endor-labs-2026-06-20T180657.png
+    score: 61.1
+screenshot: https://apis.io/screenshots/endor-labs/endor-labs-2026-06-20T180657.png
 security:
 - kind: authentication
   name: Endor Labs Authentication

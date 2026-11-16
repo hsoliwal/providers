@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -68,37 +82,37 @@ common:
   type: X
   url: https://x.com/symplr
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/symplr/refs/heads/main/security/symplr-trust-center.yml
+  href: https://artifacts.apis.io/symplr/security/symplr-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/symplr-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/symplr/refs/heads/main/security/symplr-trust-center.yml
+  href: https://artifacts.apis.io/symplr/security/symplr-trust-center.yml
   title: ''
   type: Compliance
   url: security/symplr-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/symplr/refs/heads/main/security/symplr-domain-security.yml
+  href: https://artifacts.apis.io/symplr/security/symplr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/symplr-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/symplr/refs/heads/main/packages/symplr-packages.yml
+  href: https://artifacts.apis.io/symplr/packages/symplr-packages.yml
   title: ''
   type: Packages
   url: packages/symplr-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/symplr/refs/heads/main/plans/symplr-plans-pricing.yml
+  href: https://artifacts.apis.io/symplr/plans/symplr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/symplr-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/symplr/refs/heads/main/rate-limits/symplr-rate-limits.yml
+  href: https://artifacts.apis.io/symplr/rate-limits/symplr-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/symplr-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/symplr/refs/heads/main/llms/symplr-llms.txt
+  href: https://artifacts.apis.io/symplr/llms/symplr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/symplr-llms.txt
@@ -137,7 +151,7 @@ plans:
 - name: Symplr Plans Pricing
   plan_count: 0
   slug: symplr-plans-pricing
-random_paper: 19
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Symplr Rate Limits
@@ -167,14 +181,14 @@ score:
     regime: Health
     regime_id: health
     score: 14.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/symplr/refs/heads/main/screenshots/symplr-2026-10-11T130547.png
+screenshot: https://apis.io/screenshots/symplr/symplr-2026-10-11T130547.png
 security:
 - kind: domain-security
   name: Symplr Domain Security

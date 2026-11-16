@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: documented
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
-    rate_limit_signal: derived
+    rate_limit_signal: verified
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.6
-  scored_at: '2026-10-17'
+  score: 32.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -43,7 +49,7 @@ agentic_access:
   operation_count: 40
   slug: absentify-agentic-access
   summary_line: 40 operations · 23 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.absentify.com/api/v1
   baseurl_source: declared
@@ -80,7 +86,27 @@ apis:
   description: The Workspace API from Absentify — 1 operation(s) for workspace.
   name: Absentify Workspace API
   slug: absentify-workspace-api
-artifact_total: 76
+- baseURL: https://api.absentify.com/api/v1
+  baseurl_source: declared
+  description: The Allowance Management API from Absentify — 20 operation(s) for allowance management.
+  name: Absentify Allowance Management API
+  slug: absentify-allowance-management-api
+- baseURL: https://api.absentify.com/api/v1
+  baseurl_source: declared
+  description: The Exports API from Absentify — 2 operation(s) for exports.
+  name: Absentify Exports API
+  slug: absentify-exports-api
+- baseURL: https://api.absentify.com/api/v1
+  baseurl_source: declared
+  description: The Out of office API from Absentify — 2 operation(s) for out of office.
+  name: Absentify Out of office API
+  slug: absentify-out-of-office-api
+- baseURL: https://api.absentify.com/api/v1
+  baseurl_source: declared
+  description: The Overtime API from Absentify — 5 operation(s) for overtime.
+  name: Absentify Overtime API
+  slug: absentify-overtime-api
+artifact_total: 79
 collections:
 - collection_type: postman
   name: Absentify Absences API
@@ -103,9 +129,6 @@ collections:
 - collection_type: postman
   name: Absentify Absences Workspace API
   slug: postman-absentify-workspace-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Absentify Absences API
   slug: open-absentify-absences-api
@@ -132,22 +155,22 @@ collections:
   slug: open-absentify
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/plans/absentify-plans-pricing.yml
+  href: https://artifacts.apis.io/absentify/plans/absentify-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/absentify-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/rate-limits/absentify-rate-limits.yml
+  href: https://artifacts.apis.io/absentify/rate-limits/absentify-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/absentify-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/finops/absentify-finops.yml
+  href: https://artifacts.apis.io/absentify/finops/absentify-finops.yml
   title: ''
   type: FinOps
   url: finops/absentify-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/capabilities/absentify-capability-edges.yml
+  href: https://artifacts.apis.io/absentify/capabilities/absentify-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/absentify-capability-edges.yml
@@ -160,27 +183,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/absentify/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/agentic-access/absentify-agentic-access.yml
+  href: https://artifacts.apis.io/absentify/agentic-access/absentify-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/absentify-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/security/absentify-trust-center.yml
+  href: https://artifacts.apis.io/absentify/security/absentify-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/absentify-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/security/absentify-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/absentify/security/absentify-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/absentify-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/security/absentify-domain-security.yml
+  href: https://artifacts.apis.io/absentify/security/absentify-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/absentify-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/authentication/absentify-authentication.yml
+  href: https://artifacts.apis.io/absentify/authentication/absentify-authentication.yml
   title: ''
   type: Authentication
   url: authentication/absentify-authentication.yml
@@ -225,12 +248,12 @@ common:
   type: Tools
   url: https://absentify.com/docs/en/mcp-server
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/rules/absentify-spectral-rules.yml
+  href: https://artifacts.apis.io/absentify/rules/absentify-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/absentify-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/vocabulary/absentify-vocabulary.yaml
+  href: https://artifacts.apis.io/absentify/vocabulary/absentify-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/absentify-vocabulary.yaml
@@ -278,11 +301,11 @@ features:
 - description: Query absences broken down by individual day for reporting and payroll integration.
   name: Absence Per Day Reporting
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Absentify Finops
   primary_unit: ''
-  service_category: API
+  service_category: ''
   slug: absentify-finops
   template: true
 image: /assets/icons/absentify.png
@@ -351,7 +374,7 @@ modified: '2026-05-19'
 name: Absentify
 nav: Providers
 network: true
-overview: 'Absentify publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Absences API, Departments API, Leave types API, and 4 more. Tagged areas include Absence Management, Human Resources, Leave Management, and Microsoft Teams.
+overview: 'Absentify publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Absences API, Departments API, Leave types API, and 8 more. Tagged areas include Absence Management, Human Resources, Leave Management, and Microsoft Teams.
 
 
   The Absentify catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -360,9 +383,9 @@ overview: 'Absentify publishes 7 API contracts indexed on the [APIs.io](https://
   Absentify''s developer surface includes authentication, developer portal, documentation, pricing, engineering blog, tooling, and 17 more developer resources.'
 plans:
 - name: Absentify Plans Pricing
-  plan_count: 3
+  plan_count: 4
   slug: absentify-plans-pricing
-random_paper: 19
+random_paper: 5
 rate_limits:
 - limit_count: 5
   name: Absentify Rate Limits
@@ -392,44 +415,44 @@ rules:
     warn: 19
   slug: absentify-spectral-rules
 score:
-  band: developing
-  composite: 49.0
+  band: strong
+  composite: 56.0
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 67.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 48.0
+    artifact_dirs: 22
+    catalog_earned: 76.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 39.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: -1.0
   facets:
-    access_clarity: 47.4
+    access_clarity: 71.1
     contract_governance: 27.3
-    contract_quality: 73.6
+    contract_quality: 69.5
     developer_ergonomics: 34.5
     discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 50.5
+  previous_composite: 57.0
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 7
+      total: 19
   regulatory:
     applies: true
     matched_via: weak_tags
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
-    score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/absentify/refs/heads/main/screenshots/absentify-2026-06-20T163354.png
+    score: 33.3
+screenshot: https://apis.io/screenshots/absentify/absentify-2026-06-20T163354.png
 security:
 - kind: authentication
   name: Absentify Authentication

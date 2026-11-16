@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: mostly
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 48.0
-  scored_at: '2026-10-17'
+  score: 48.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 1
@@ -230,15 +233,12 @@ apis:
   description: The Zones (GO9) API from Lytx — 1 operation(s) for zones (go9).
   name: Lytx Zones (GO9) API
   slug: lytx-zones-go9-api
-artifact_total: 80
+artifact_total: 84
 asyncapis:
 - description: ''
   name: Lytx Webhooks
   slug: lytx-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Lytx..Management.Api Consent API
   slug: open-lytx-consent-api
@@ -356,22 +356,22 @@ common:
   type: Blog
   url: https://www.lytx.com/blogs
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/capabilities/lytx-capability-edges.yml
+  href: https://artifacts.apis.io/lytx/capabilities/lytx-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/lytx-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/overlays/lytx-consent--overlay.yaml
+  href: https://artifacts.apis.io/lytx/overlays/lytx-consent--overlay.yaml
   title: ''
   type: Overlay
   url: overlays/lytx-consent--overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/agentic-access/lytx-agentic-access.yml
+  href: https://artifacts.apis.io/lytx/agentic-access/lytx-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/lytx-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/security/lytx-domain-security.yml
+  href: https://artifacts.apis.io/lytx/security/lytx-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lytx-domain-security.yml
@@ -396,37 +396,37 @@ common:
   type: Authentication
   url: https://developer.lytx.com/docs/authentication
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/llms/lytx-llms.txt
+  href: https://artifacts.apis.io/lytx/llms/lytx-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lytx-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/mcp/lytx-mcp.yml
+  href: https://artifacts.apis.io/lytx/mcp/lytx-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/lytx-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/well-known/lytx-well-known.yml
+  href: https://artifacts.apis.io/lytx/well-known/lytx-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lytx-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/asyncapi/lytx-webhooks.yml
+  href: https://artifacts.apis.io/lytx/asyncapi/lytx-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/lytx-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/errors/lytx-error-codes.yml
+  href: https://artifacts.apis.io/lytx/errors/lytx-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/lytx-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/conventions/lytx-conventions.yml
+  href: https://artifacts.apis.io/lytx/conventions/lytx-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lytx-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/lifecycle/lytx-lifecycle.yml
+  href: https://artifacts.apis.io/lytx/lifecycle/lytx-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lytx-lifecycle.yml
@@ -435,22 +435,22 @@ common:
   type: StatusPage
   url: https://status.lytx.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/conformance/lytx-conformance.yml
+  href: https://artifacts.apis.io/lytx/conformance/lytx-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lytx-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/data-model/lytx-data-model.yml
+  href: https://artifacts.apis.io/lytx/data-model/lytx-data-model.yml
   title: ''
   type: DataModel
   url: data-model/lytx-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/lytx/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/authentication/lytx-authentication.yml
+  href: https://artifacts.apis.io/lytx/authentication/lytx-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lytx-authentication.yml
@@ -485,30 +485,43 @@ network: true
 overview: 'Lytx publishes 37 API contracts indexed on the [APIs.io](https://apis.io/) network, including Consent API, Devices (DriveCam) API, Devices (GO9) API, and 34 more. Tagged areas include Company, Fleet Management, Video Telematics, Vehicle Safety, and GPS Tracking.
 
 
-  The Lytx catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Lytx catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Lytx''s developer surface includes engineering blog, documentation, getting-started guide, authentication, API reference, support, and 20 more developer resources.'
-random_paper: 3
+random_paper: 9
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: Lytx API Rules
+  rule_count: 56
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 6
+    warn: 17
+  slug: lytx-rules
 score:
   band: developing
-  composite: 40.8
+  composite: 42.4
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 40.0
+    artifact_dirs: 23
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 58.8
     developer_ergonomics: 61.3
     discoverability: 80.0
     operational_transparency: 23.7
-  previous_composite: 40.2
+  previous_composite: 42.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -525,13 +538,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/lytx/refs/heads/main/screenshots/lytx-2026-07-25T225802.png
+screenshot: https://apis.io/screenshots/lytx/lytx-2026-07-25T225802.png
 security:
 - kind: authentication
   name: Lytx Authentication
@@ -541,6 +554,16 @@ security:
   name: Lytx Domain Security
   slug: lytx-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: List and analyze fleet safety events
+  slug: lytx-list-safety-events
+- name: Manage fleet vehicles
+  slug: lytx-manage-vehicles
+- name: Pull HOS logs and DVIR inspections
+  slug: lytx-pull-hos-dvir-compliance
+- name: Search events and retrieve video media
+  slug: lytx-retrieve-event-video
 slug: lytx
 tags:
 - Company

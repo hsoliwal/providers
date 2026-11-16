@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.6
-  scored_at: '2026-10-17'
+  score: 33.8
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.bokio.se/v1
@@ -116,7 +123,7 @@ apis:
   description: Operations for managing file uploads
   name: Bokio Uploads API
   slug: bokio-uploads-api
-artifact_total: 54
+artifact_total: 59
 collections:
 - collection_type: postman
   name: Company authorization API
@@ -167,9 +174,6 @@ collections:
   name: Company authorization uploads API
   slug: postman-bokio-uploads-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Company authorization API
   slug: open-bokio-authorization-api
 - collection_type: open
@@ -218,13 +222,18 @@ collections:
   name: Company authorization uploads API
   slug: open-bokio-uploads-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/bokio/plans/bokio-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/bokio-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/capabilities/bokio-capability-edges.yml
+  href: https://artifacts.apis.io/bokio/capabilities/bokio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/bokio-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/overlays/bokio-company-api-overlay.yaml
+  href: https://artifacts.apis.io/bokio/overlays/bokio-company-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/bokio-company-api-overlay.yaml
@@ -281,12 +290,12 @@ common:
   type: PrivacyPolicy
   url: https://www.bokio.se/villkor-och-gdpr/integritetspolicy/
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/changelog/bokio-changelog.yml
+  href: https://artifacts.apis.io/bokio/changelog/bokio-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/bokio-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/lifecycle/bokio-lifecycle.yml
+  href: https://artifacts.apis.io/bokio/lifecycle/bokio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/bokio-lifecycle.yml
@@ -295,17 +304,17 @@ common:
   type: Deprecation
   url: https://docs.bokio.se/reference/versioning
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/authentication/bokio-authentication.yml
+  href: https://artifacts.apis.io/bokio/authentication/bokio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bokio-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/scopes/bokio-scopes.yml
+  href: https://artifacts.apis.io/bokio/scopes/bokio-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/bokio-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/conventions/bokio-conventions.yml
+  href: https://artifacts.apis.io/bokio/conventions/bokio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/bokio-conventions.yml
@@ -314,52 +323,52 @@ common:
   type: RateLimits
   url: https://docs.bokio.se/reference/rate-limits
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/errors/bokio-problem-types.yml
+  href: https://artifacts.apis.io/bokio/errors/bokio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bokio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/conformance/bokio-conformance.yml
+  href: https://artifacts.apis.io/bokio/conformance/bokio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bokio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/data-model/bokio-data-model.yml
+  href: https://artifacts.apis.io/bokio/data-model/bokio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bokio-data-model.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/sandbox/bokio-sandbox.yml
+  href: https://artifacts.apis.io/bokio/sandbox/bokio-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/bokio-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/mcp/bokio-mcp.yml
+  href: https://artifacts.apis.io/bokio/mcp/bokio-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/bokio-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/bokio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/llms/bokio-llms.txt
+  href: https://artifacts.apis.io/bokio/llms/bokio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bokio-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/well-known/bokio-well-known.yml
+  href: https://artifacts.apis.io/bokio/well-known/bokio-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bokio-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/well-known/bokio-security.txt
+  href: https://artifacts.apis.io/bokio/well-known/bokio-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bokio-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/security/bokio-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bokio/security/bokio-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/bokio-vulnerability-disclosure.yml
@@ -368,12 +377,12 @@ common:
   type: Security
   url: https://www.visma.com/trust-centre/security/products-and-services/bug-bounty-and-responsible-disclosure/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/security/bokio-trust-center.yml
+  href: https://artifacts.apis.io/bokio/security/bokio-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/bokio-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/security/bokio-domain-security.yml
+  href: https://artifacts.apis.io/bokio/security/bokio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bokio-domain-security.yml
@@ -383,6 +392,14 @@ common:
   url: https://bokio.se/
 created: '2026-07-17'
 description: Bokio is a Swedish cloud accounting and bookkeeping platform (a Visma company) for small businesses, sole traders and their accountants, combining automated bookkeeping, invoicing, a business bank account and financial reporting. Its public REST API is split into a Company API (journal entries, invoices, credit notes, customers, items, suppliers and supplier invoices, uploads, bank payments, chart of accounts, fiscal years and SIE export) and a General API that handles OAuth 2.0 token issuance and connection management for public multi-tenant integrations. Authentication is OAuth 2.0 (authorization code and client credentials) with 24 fine-grained resource:action scopes; the API uses URI-path versioning (v1), page-number pagination, per-token rate limits and a documented deprecation, brownout and sunset lifecycle.
+finops:
+- has_sources: true
+  method: derived
+  name: Bokio Finops
+  primary_unit: företag
+  service_category: ''
+  slug: bokio-finops
+  template: false
 image: https://www.bokio.se/media/38801/open-graph.png?width=1200
 layout: provider
 modified: '2026-07-18'
@@ -392,31 +409,51 @@ network: true
 overview: 'Bokio publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authorization API, Bank Payments API, Chart Of Accounts API, and 13 more. Tagged areas include Company, Fintech, Accounting, Bookkeeping, and Invoicing.
 
 
-  Bokio''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 29 more developer resources.'
+  The Bokio catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Bokio''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 30 more developer resources.'
+plans:
+- name: Bokio Plans Pricing
+  plan_count: 4
+  slug: bokio-plans-pricing
 random_paper: 4
+rules:
+- authorship: generated
+  effective_rule_count: 112
+  extends:
+  - spectral:oas
+  name: Bokio API Rules
+  rule_count: 71
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 5
+    warn: 16
+  slug: bokio-rules
 scopes:
 - name: Bokio Scopes
   scope_count: 24
   slug: bokio-scopes
   summary_line: 24 scopes · clientCredentials/authorizationCode
 score:
-  band: developing
-  composite: 45.7
+  band: strong
+  composite: 58.6
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 30
+    catalog_earned: 56.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.4
   facets:
-    access_clarity: 47.4
-    contract_governance: 4.5
+    access_clarity: 86.8
+    contract_governance: 18.2
     contract_quality: 52.4
-    developer_ergonomics: 43.5
+    developer_ergonomics: 57.7
     discoverability: 73.2
-    operational_transparency: 32.9
+    operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -425,7 +462,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 45.7
+  previous_composite: 55.2
   provenance:
     conformance: derived
     contracts:
@@ -441,13 +478,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 39.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bokio/refs/heads/main/screenshots/bokio-2026-07-25T203526.png
+screenshot: https://apis.io/screenshots/bokio/bokio-2026-07-25T203526.png
 security:
 - kind: authentication
   name: Bokio Authentication
@@ -465,6 +502,14 @@ security:
   name: Bokio Trust Center
   slug: bokio-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: Connect a Bokio company via OAuth (public integration)
+  slug: bokio-connect-public-integration
+- name: Create and publish a Bokio invoice
+  slug: bokio-create-and-send-invoice
+- name: Record and reconcile a Bokio journal entry
+  slug: bokio-record-journal-entry
 slug: bokio
 tags:
 - Company
@@ -475,6 +520,7 @@ tags:
 - Payments
 - Sweden
 - Small Business
+- OAuth
 - Authentication
 website: https://bokio.se/
 ---

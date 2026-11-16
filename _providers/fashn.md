@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 30.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -53,9 +59,6 @@ apis:
 artifact_total: 10
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: FASHN AI Predictions API
   slug: open-fashn-predictions-api
 - collection_type: open
@@ -63,32 +66,32 @@ collections:
   slug: open-fashn
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fashn/refs/heads/main/plans/fashn-plans-pricing.yml
+  href: https://artifacts.apis.io/fashn/plans/fashn-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fashn-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fashn/refs/heads/main/rate-limits/fashn-rate-limits.yml
+  href: https://artifacts.apis.io/fashn/rate-limits/fashn-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fashn-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fashn/refs/heads/main/finops/fashn-finops.yml
+  href: https://artifacts.apis.io/fashn/finops/fashn-finops.yml
   title: ''
   type: FinOps
   url: finops/fashn-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fashn/refs/heads/main/agentic-access/fashn-agentic-access.yml
+  href: https://artifacts.apis.io/fashn/agentic-access/fashn-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fashn-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fashn/refs/heads/main/security/fashn-domain-security.yml
+  href: https://artifacts.apis.io/fashn/security/fashn-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fashn-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fashn/refs/heads/main/authentication/fashn-authentication.yml
+  href: https://artifacts.apis.io/fashn/authentication/fashn-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fashn-authentication.yml
@@ -130,7 +133,7 @@ finops:
 - has_sources: false
   method: generated
   name: Fashn Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: fashn-finops
   template: true
@@ -143,6 +146,9 @@ network: true
 overview: 'FASHN AI publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Predictions API. Tagged areas include Artificial Intelligence, Clothing, Fashion, and Virtual Try-On.
 
 
+  The FASHN AI catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   FASHN AI''s developer surface includes authentication, documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Fashn Plans Pricing
@@ -153,45 +159,58 @@ rate_limits:
 - limit_count: 5
   name: Fashn Rate Limits
   slug: fashn-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: FASHN AI API Rules
+  rule_count: 62
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 1
+  slug: fashn-rules
 score:
   band: thin
-  composite: 28.0
+  composite: 31.3
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 38.0
+    artifact_dirs: 17
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.6
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
-    contract_quality: 51.4
+    contract_governance: 13.6
+    contract_quality: 57.8
     developer_ergonomics: 35.7
     discoverability: 64.3
     operational_transparency: 10.5
-  previous_composite: 29.5
+  previous_composite: 30.7
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 1
+      marker_coverage: 33.3
+      total: 3
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/fashn/refs/heads/main/screenshots/fashn-2026-06-20T181047.png
+screenshot: https://apis.io/screenshots/fashn/fashn-2026-06-20T181047.png
 security:
 - kind: authentication
   name: Fashn Authentication

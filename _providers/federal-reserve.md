@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.5
-  scored_at: '2026-10-17'
+  score: 50.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -89,9 +95,6 @@ apis:
 artifact_total: 25
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Federal Reserve FRED Category API
   slug: open-federal-reserve-category-api
 - collection_type: open
@@ -119,33 +122,76 @@ collections:
   name: Federal Reserve FRED Category Tags API
   slug: open-federal-reserve-tags-api
 common:
+- group: design
+  href: https://artifacts.apis.io/federal-reserve/rules/federal-reserve-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/federal-reserve-rules.yml
+- group: design
+  href: https://artifacts.apis.io/federal-reserve/vocabulary/federal-reserve-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/federal-reserve-vocabulary.yml
+- group: design
+  href: https://artifacts.apis.io/federal-reserve/conformance/federal-reserve-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/federal-reserve-conformance.yml
+- group: agent
+  href: https://artifacts.apis.io/federal-reserve/mcp/federal-reserve-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/federal-reserve-mcp.yml
+- group: agent
+  href: https://artifacts.apis.io/federal-reserve/well-known/federal-reserve-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/federal-reserve-well-known.yml
+- group: other
+  href: https://artifacts.apis.io/federal-reserve/hosts/federal-reserve-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/federal-reserve-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/federal-reserve/vendors/federal-reserve-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/federal-reserve-vendors.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/plans/federal-reserve-plans-pricing.yml
+  title: ''
+  type: PrivacyPolicy
+  url: https://www.federalreserve.gov/privacy.htm
+- group: operate
+  title: ''
+  type: ChangeLog
+  url: https://www.federalreserve.gov/releases/cp/
+- group: commercial
+  href: https://artifacts.apis.io/federal-reserve/plans/federal-reserve-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/federal-reserve-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/rate-limits/federal-reserve-rate-limits.yml
+  href: https://artifacts.apis.io/federal-reserve/rate-limits/federal-reserve-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/federal-reserve-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/finops/federal-reserve-finops.yml
+  href: https://artifacts.apis.io/federal-reserve/finops/federal-reserve-finops.yml
   title: ''
   type: FinOps
   url: finops/federal-reserve-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/agentic-access/federal-reserve-agentic-access.yml
+  href: https://artifacts.apis.io/federal-reserve/agentic-access/federal-reserve-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/federal-reserve-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/security/federal-reserve-domain-security.yml
+  href: https://artifacts.apis.io/federal-reserve/security/federal-reserve-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/federal-reserve-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/authentication/federal-reserve-authentication.yml
+  href: https://artifacts.apis.io/federal-reserve/authentication/federal-reserve-authentication.yml
   title: ''
   type: Authentication
   url: authentication/federal-reserve-authentication.yml
@@ -171,7 +217,7 @@ finops:
 - has_sources: false
   method: generated
   name: Federal Reserve Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: federal-reserve-finops
   template: true
@@ -188,34 +234,50 @@ network: true
 overview: 'Federal Reserve publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Category API, Related Tags API, Release API, and 5 more. Tagged areas include Economics, Federal Government, and Finance.
 
 
-  Federal Reserve''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
+  The Federal Reserve catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Federal Reserve''s developer surface includes changelog, authentication, documentation, engineering blog, and 15 more developer resources.'
 plans:
 - name: Federal Reserve Plans Pricing
   plan_count: 3
   slug: federal-reserve-plans-pricing
-random_paper: 14
+random_paper: 20
 rate_limits:
 - limit_count: 5
   name: Federal Reserve Rate Limits
   slug: federal-reserve-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: Federal Reserve API Rules
+  rule_count: 48
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 1
+    warn: 1
+  slug: federal-reserve-rules
 score:
-  band: emerging
-  composite: 23.7
+  band: thin
+  composite: 31.8
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 38.0
+    artifact_dirs: 22
+    catalog_earned: 43.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 71.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 6.5
   facets:
-    access_clarity: 7.9
-    contract_governance: 0.0
+    access_clarity: 18.4
+    contract_governance: 22.0
     contract_quality: 42.2
     developer_ergonomics: 23.8
     discoverability: 60.0
-    operational_transparency: 7.9
+    operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
@@ -224,6 +286,7 @@ score:
   previous_composite: 25.3
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
       callable: 100.0
       derived: 0
@@ -235,15 +298,15 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/federal-reserve/refs/heads/main/screenshots/federal-reserve-2026-06-20T181129.png
+screenshot: https://apis.io/screenshots/federal-reserve/federal-reserve-2026-06-20T181129.png
 security:
 - kind: authentication
   name: Federal Reserve Authentication

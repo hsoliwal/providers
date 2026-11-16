@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.4
-  scored_at: '2026-10-17'
+  score: 34.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -85,11 +91,8 @@ arazzos:
 - description: BankID auth, email verification, terms acceptance, and KYC to reach a trade-ready customer.
   name: Safello — onboard a customer with BankID
   slug: safello-onboard-customer
-artifact_total: 22
+artifact_total: 26
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Safello account API
   slug: open-safello-account-api
@@ -113,12 +116,12 @@ collections:
   slug: open-safello-wallet-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/capabilities/safello-capability-edges.yml
+  href: https://artifacts.apis.io/safello/capabilities/safello-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/safello-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/overlays/safello-institutional-overlay.yaml
+  href: https://artifacts.apis.io/safello/overlays/safello-institutional-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/safello-institutional-overlay.yaml
@@ -167,77 +170,77 @@ common:
   type: PrivacyPolicy
   url: https://safello.com/legal/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/authentication/safello-authentication.yml
+  href: https://artifacts.apis.io/safello/authentication/safello-authentication.yml
   title: ''
   type: Authentication
   url: authentication/safello-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/scopes/safello-scopes.yml
+  href: https://artifacts.apis.io/safello/scopes/safello-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/safello-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/conventions/safello-conventions.yml
+  href: https://artifacts.apis.io/safello/conventions/safello-conventions.yml
   title: ''
   type: Conventions
   url: conventions/safello-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/errors/safello-error-codes.yml
+  href: https://artifacts.apis.io/safello/errors/safello-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/safello-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/errors/safello-problem-types.yml
+  href: https://artifacts.apis.io/safello/errors/safello-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/safello-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/data-model/safello-data-model.yml
+  href: https://artifacts.apis.io/safello/data-model/safello-data-model.yml
   title: ''
   type: DataModel
   url: data-model/safello-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/lifecycle/safello-lifecycle.yml
+  href: https://artifacts.apis.io/safello/lifecycle/safello-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/safello-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/sandbox/safello-sandbox.yml
+  href: https://artifacts.apis.io/safello/sandbox/safello-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/safello-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/conformance/safello-conformance.yml
+  href: https://artifacts.apis.io/safello/conformance/safello-conformance.yml
   title: ''
   type: Conformance
   url: conformance/safello-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/well-known/safello-well-known.yml
+  href: https://artifacts.apis.io/safello/well-known/safello-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/safello-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/mcp/safello-mcp.yml
+  href: https://artifacts.apis.io/safello/mcp/safello-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/safello-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/llms/safello-llms.txt
+  href: https://artifacts.apis.io/safello/llms/safello-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/safello-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/agentic-access/safello-agentic-access.yml
+  href: https://artifacts.apis.io/safello/agentic-access/safello-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/safello-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/security/safello-domain-security.yml
+  href: https://artifacts.apis.io/safello/security/safello-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/safello-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/security/safello-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/safello/security/safello-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/safello-vulnerability-disclosure.yml
@@ -246,17 +249,17 @@ common:
   type: Security
   url: https://safello.com/security-bug-bounty
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/safello/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/arazzo/safello-onboard-customer.yml
+  href: https://artifacts.apis.io/safello/arazzo/safello-onboard-customer.yml
   title: ''
   type: Arazzo
   url: arazzo/safello-onboard-customer.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/arazzo/safello-buy-crypto.yml
+  href: https://artifacts.apis.io/safello/arazzo/safello-buy-crypto.yml
   title: ''
   type: Arazzo
   url: arazzo/safello-buy-crypto.yml
@@ -271,8 +274,24 @@ network: true
 overview: 'Safello publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Auth API, Compliance API, and 4 more. Tagged areas include Company, Fintech, Cryptocurrency, Bitcoin, and Brokerage.
 
 
+  The Safello catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Safello''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 25 more developer resources.'
-random_paper: 16
+random_paper: 22
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Safello API Rules
+  rule_count: 58
+  severity_counts:
+    error: 43
+    hint: 0
+    info: 1
+    warn: 14
+  slug: safello-rules
 scopes:
 - name: Safello Scopes
   scope_count: 8
@@ -280,18 +299,18 @@ scopes:
   summary_line: 8 scopes · urn:safello:params:oauth:grant-type:bankid/clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 50.1
+  composite: 51.7
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 52.3
     developer_ergonomics: 63.7
     discoverability: 73.2
@@ -304,7 +323,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 50.0
+  previous_composite: 51.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -321,13 +340,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 36.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/safello/refs/heads/main/screenshots/safello-2026-08-17T081705.png
+screenshot: https://apis.io/screenshots/safello/safello-2026-08-17T081705.png
 security:
 - kind: authentication
   name: Safello Authentication
@@ -341,6 +360,16 @@ security:
   name: Safello Vulnerability Disclosure
   slug: safello-vulnerability-disclosure
   summary_line: contact published
+skill_count: 4
+skills:
+- name: Place a Safello buy order
+  slug: safello-buy-crypto
+- name: Read Safello market data
+  slug: safello-market-data
+- name: Onboard a Safello customer with BankID
+  slug: safello-onboard-customer-bankid
+- name: Place a Safello sell order
+  slug: safello-sell-crypto
 slug: safello
 tags:
 - Company

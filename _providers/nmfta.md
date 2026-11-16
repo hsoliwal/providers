@@ -1,4 +1,13 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source: []
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +24,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-10-17'
+  score: 18.4
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: Standards for Carrier APIs
@@ -53,7 +65,7 @@ apis:
 - description: Webhook management and testing
   name: NMFTA Webhooks API
   slug: nmfta-webhooks-api
-artifact_total: 25
+artifact_total: 26
 collections:
 - collection_type: open
   name: Electronic Bill Of Lading API
@@ -83,7 +95,7 @@ common:
   type: Website
   url: https://www.nmfta.org/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nmfta/refs/heads/main/capabilities/nmfta-capability-edges.yml
+  href: https://artifacts.apis.io/nmfta/capabilities/nmfta-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/nmfta-capability-edges.yml
@@ -136,37 +148,37 @@ common:
   type: Contact
   url: mailto:dsdc@nmfta.org
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nmfta/refs/heads/main/governance/nmfta-governance.yml
+  href: https://artifacts.apis.io/nmfta/governance/nmfta-governance.yml
   title: ''
   type: Governance
   url: governance/nmfta-governance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nmfta/refs/heads/main/taxonomy/nmfta-taxonomy.yml
+  href: https://artifacts.apis.io/nmfta/taxonomy/nmfta-taxonomy.yml
   title: ''
   type: Taxonomy
   url: taxonomy/nmfta-taxonomy.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nmfta/refs/heads/main/companies/nmfta-companies.yml
+  href: https://artifacts.apis.io/nmfta/companies/nmfta-companies.yml
   title: ''
   type: Companies
   url: companies/nmfta-companies.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nmfta/refs/heads/main/adoption/nmfta-adoption.yml
+  href: https://artifacts.apis.io/nmfta/adoption/nmfta-adoption.yml
   title: ''
   type: Adoption
   url: adoption/nmfta-adoption.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nmfta/refs/heads/main/leads/nmfta-new-company-leads.yml
+  href: https://artifacts.apis.io/nmfta/leads/nmfta-new-company-leads.yml
   title: ''
   type: Leads
   url: leads/nmfta-new-company-leads.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nmfta/refs/heads/main/repositories/nmfta-repositories.yml
+  href: https://artifacts.apis.io/nmfta/repositories/nmfta-repositories.yml
   title: ''
   type: Repositories
   url: repositories/nmfta-repositories.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nmfta/refs/heads/main/contributors/nmfta-contributors.yml
+  href: https://artifacts.apis.io/nmfta/contributors/nmfta-contributors.yml
   title: ''
   type: Contributors
   url: contributors/nmfta-contributors.yml
@@ -193,27 +205,43 @@ network: true
 overview: 'NMFTA publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Carrier API Standards API, Document Management API, Events API, and 6 more. Tagged areas include API Standards, DSDC, Digital FTL Council, Digital LTL Council, and Freight.
 
 
+  The NMFTA catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   NMFTA''s developer surface includes engineering blog, developer portal, product news, and 19 more developer resources.'
 random_paper: 6
+rules:
+- authorship: generated
+  effective_rule_count: 89
+  extends:
+  - spectral:oas
+  name: NMFTA API Rules
+  rule_count: 48
+  severity_counts:
+    error: 38
+    hint: 0
+    info: 6
+    warn: 4
+  slug: nmfta-rules
 score:
   band: emerging
-  composite: 18.9
+  composite: 21.0
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 35.0
+    artifact_dirs: 16
+    catalog_earned: 39.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.5
+  delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 0.0
-    contract_quality: 43.8
+    contract_governance: 13.6
+    contract_quality: 45.5
     developer_ergonomics: 21.4
     discoverability: 63.4
     operational_transparency: 2.6
-  previous_composite: 18.4
+  previous_composite: 21.0
   provenance:
     contracts:
       callable: 0.0
@@ -226,13 +254,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 0.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/nmfta/refs/heads/main/screenshots/nmfta-2026-08-07T185355.png
+screenshot: https://apis.io/screenshots/nmfta/nmfta-2026-08-07T185355.png
 slug: nmfta
 tags:
 - API Standards

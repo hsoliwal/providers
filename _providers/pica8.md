@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.1
-  scored_at: '2026-10-17'
+  score: 31.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Standards-based on-device programmability in the PICOS network operating system. RESTCONF (RFC 8040) exposes OPTIONS/HEAD/GET/POST/PATCH/PUT/DELETE over YANG-modelled configuration and state at /restc
@@ -96,10 +99,10 @@ apis:
   description: JWT token minting.
   name: Pica8 Token API
   slug: pica8-token-api
-artifact_total: 16
+artifact_total: 20
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/security/pica8-domain-security.yml
+  href: https://artifacts.apis.io/pica8/security/pica8-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pica8-domain-security.yml
@@ -160,82 +163,82 @@ common:
   type: Contact
   url: https://www.pica8.com/contact/
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/openapi/_original/pica8-ampcon-openapi.yml
+  href: https://artifacts.apis.io/pica8/openapi/_original/pica8-ampcon-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/pica8-ampcon-openapi.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/overlays/pica8-ampcon-overlay.yaml
+  href: https://artifacts.apis.io/pica8/overlays/pica8-ampcon-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pica8-ampcon-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/authentication/pica8-authentication.yml
+  href: https://artifacts.apis.io/pica8/authentication/pica8-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pica8-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/conventions/pica8-conventions.yml
+  href: https://artifacts.apis.io/pica8/conventions/pica8-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pica8-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/errors/pica8-problem-types.yml
+  href: https://artifacts.apis.io/pica8/errors/pica8-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pica8-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/data-model/pica8-data-model.yml
+  href: https://artifacts.apis.io/pica8/data-model/pica8-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pica8-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/lifecycle/pica8-lifecycle.yml
+  href: https://artifacts.apis.io/pica8/lifecycle/pica8-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pica8-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/changelog/pica8-changelog.yml
+  href: https://artifacts.apis.io/pica8/changelog/pica8-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/pica8-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/conformance/pica8-conformance.yml
+  href: https://artifacts.apis.io/pica8/conformance/pica8-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pica8-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/packages/pica8-packages.yml
+  href: https://artifacts.apis.io/pica8/packages/pica8-packages.yml
   title: ''
   type: Packages
   url: packages/pica8-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/mcp/pica8-mcp.yml
+  href: https://artifacts.apis.io/pica8/mcp/pica8-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/pica8-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/llms/pica8-llms.txt
+  href: https://artifacts.apis.io/pica8/llms/pica8-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pica8-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/plans/pica8-plans-pricing.yml
+  href: https://artifacts.apis.io/pica8/plans/pica8-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pica8-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/rate-limits/pica8-rate-limits.yml
+  href: https://artifacts.apis.io/pica8/rate-limits/pica8-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pica8-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/cli/pica8-cli.yml
+  href: https://artifacts.apis.io/pica8/cli/pica8-cli.yml
   title: ''
   type: CLI
   url: cli/pica8-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pica8/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -251,35 +254,51 @@ network: true
 overview: 'Pica8 publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Backup API, Configuration API, Configuration File API, and 9 more. Tagged areas include Networking, Open Networking, Software Defined Networking, Network Automation, and Network Operating System.
 
 
+  The Pica8 catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Pica8''s developer surface includes documentation, API reference, support, engineering blog, authentication, changelog, CLI, and 24 more developer resources.'
 plans:
 - name: Pica8 Plans Pricing
   plan_count: 0
   slug: pica8-plans-pricing
-random_paper: 7
+random_paper: 13
 rate_limits:
 - limit_count: 0
   name: Pica8 Rate Limits
   slug: pica8-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 105
+  extends:
+  - spectral:oas
+  name: Pica8 API Rules
+  rule_count: 64
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 1
+    warn: 3
+  slug: pica8-rules
 score:
   band: thin
-  composite: 34.9
+  composite: 36.5
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 13.3
     developer_ergonomics: 54.2
     discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 34.8
+  previous_composite: 36.5
   provenance:
     conformance: first-party
     contracts:
@@ -295,13 +314,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/pica8/refs/heads/main/screenshots/pica8-2026-09-02T151220.png
+screenshot: https://apis.io/screenshots/pica8/pica8-2026-09-02T151220.png
 security:
 - kind: authentication
   name: Pica8 Authentication
@@ -311,6 +330,14 @@ security:
   name: Pica8 Domain Security
   slug: pica8-domain-security
   summary_line: TLSv1.2 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: pica8-change-and-rollback-config
+  slug: pica8-change-and-rollback-config
+- name: pica8-fleet-audit
+  slug: pica8-fleet-audit
+- name: pica8-onboard-switch
+  slug: pica8-onboard-switch
 slug: pica8
 tags:
 - Networking

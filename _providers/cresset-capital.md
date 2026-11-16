@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,22 +36,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cresset-capital/refs/heads/main/llms/cresset-capital-llms.txt
+  href: https://artifacts.apis.io/cresset-capital/llms/cresset-capital-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cresset-capital-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cresset-capital/refs/heads/main/hosts/cresset-capital-hosts.yml
+  href: https://artifacts.apis.io/cresset-capital/hosts/cresset-capital-hosts.yml
   title: ''
   type: Hosts
   url: hosts/cresset-capital-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cresset-capital/refs/heads/main/vendors/cresset-capital-vendors.yml
+  href: https://artifacts.apis.io/cresset-capital/vendors/cresset-capital-vendors.yml
   title: ''
   type: Vendors
   url: vendors/cresset-capital-vendors.yml
@@ -63,7 +76,7 @@ common:
   type: Leadership
   url: https://cressetcapital.com/about/team/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cresset-capital/refs/heads/main/security/cresset-capital-domain-security.yml
+  href: https://artifacts.apis.io/cresset-capital/security/cresset-capital-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cresset-capital-domain-security.yml
@@ -87,37 +100,41 @@ modified: '2026-10-11'
 name: Cresset Capital
 nav: Providers
 network: true
-overview: Cresset Capital is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, FamilyOffice, WealthManagement, PrivateBanking, and TrustServices.
-random_paper: 0
+overview: Cresset Capital is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Family Office, Wealth Management, Private Banking, and Trust Services.
+random_paper: 4
 score:
-  band: emerging
-  composite: 12.2
+  band: minimal
+  composite: 7.0
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.9
   facets:
-    access_clarity: 28.9
+    access_clarity: 14.5
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 58.9
+    discoverability: 57.1
     operational_transparency: 0.0
+  previous_composite: 10.9
   regulatory:
     applies: true
-    matched_via: fallback
-    regime: Horizontal (data, software, accessibility, platform)
-    regime_id: horizontal
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    matched_via: tags
+    regime: Banking & Open Finance
+    regime_id: banking_open_finance
+    score: 9.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/cresset-capital/cresset-capital-2026-11-03T125603.png
 security:
 - kind: domain-security
   name: Cresset Capital Domain Security
@@ -126,9 +143,9 @@ security:
 slug: cresset-capital
 tags:
 - Company
-- FamilyOffice
-- WealthManagement
-- PrivateBanking
-- TrustServices
+- Family Office
+- Wealth Management
+- Private Banking
+- Trust Services
 website: https://cressetcapital.com
 ---

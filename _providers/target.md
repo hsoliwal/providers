@@ -1,21 +1,23 @@
 ---
 access_model:
   confidence: high
-  label: Enterprise · Self-serve signup
-  onboarding: self-serve
+  label: Enterprise
+  onboarding: unknown
   pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: derived
+    agentic_access: false
     agentic_commerce: false
     auth_clarity: served
     consent_identity: false
@@ -26,124 +28,45 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
-    rate_limit_signal: derived
+    rate_limit_signal: false
     reversibility_documented: na
-    spec_presence: true
+    spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.3
-  scored_at: '2026-10-17'
-agentic_access:
-- acting_count: 0
-  human_in_the_loop: 0
-  name: Target Agentic Access
-  operation_count: 9
-  slug: target-agentic-access
-  summary_line: 9 operations
-api_count: 8
+  score: 17.5
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
-- description: Redsky is Target's internal aggregation API platform that converts GraphQL queries into client-managed REST APIs. It serves product data, pricing, promotions, and fulfillment information for Target.co
+- description: Redsky is Target's internal aggregation API platform, described by Target's engineering team on tech.target.com, that turns GraphQL queries into client-managed REST APIs serving product, price, promot
   name: Target Redsky API
   slug: target-redsky-api
-- description: Target's partner API program enables technology vendors, affiliates, and supply chain partners to integrate with Target's retail operations including product catalog, inventory management, order fulfi
+- description: Target runs a partner-gated developer program at developer.target.com, open to Target team members and third parties with an existing Target relationship. Target publishes no public API reference, mac
   name: Target Partner API
   slug: target-partner-api
-- baseURL: https://api.target.com
-  baseurl_source: declared
-  description: Store and online inventory availability
-  name: target Inventory API
-  slug: target-inventory-api
-- baseURL: https://api.target.com
-  baseurl_source: declared
-  description: Order management for partners
-  name: target Orders API
-  slug: target-orders-api
-- baseURL: https://api.target.com
-  baseurl_source: declared
-  description: Product catalog and detail operations
-  name: target Products API
-  slug: target-products-api
-- baseURL: https://api.target.com
-  baseurl_source: declared
-  description: Product search and discovery
-  name: target Search API
-  slug: target-search-api
-- baseURL: https://api.target.com
-  baseurl_source: declared
-  description: API health and status
-  name: target Status API
-  slug: target-status-api
-- baseURL: https://api.target.com
-  baseurl_source: declared
-  description: Store locator and store information
-  name: target Stores API
-  slug: target-stores-api
-artifact_total: 35
-collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
-  name: Target Inventory API
-  slug: open-target-inventory-api
-- collection_type: open
-  name: Target Inventory Orders API
-  slug: open-target-orders-api
-- collection_type: open
-  name: Target Inventory Products API
-  slug: open-target-products-api
-- collection_type: open
-  name: Target Inventory Search API
-  slug: open-target-search-api
-- collection_type: open
-  name: Target Inventory Status API
-  slug: open-target-status-api
-- collection_type: open
-  name: Target Inventory Stores API
-  slug: open-target-stores-api
-- collection_type: open
-  name: Target API
-  slug: open-target-target-api
+artifact_total: 8
 common:
-- group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/plans/target-plans-pricing.yml
-  title: ''
-  type: Plans
-  url: plans/target-plans-pricing.yml
-- group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/rate-limits/target-rate-limits.yml
-  title: ''
-  type: RateLimits
-  url: rate-limits/target-rate-limits.yml
-- group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/finops/target-finops.yml
-  title: ''
-  type: FinOps
-  url: finops/target-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/capabilities/target-capability-edges.yml
+  href: https://artifacts.apis.io/target/capabilities/target-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/target-capability-edges.yml
-- group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/agentic-access/target-agentic-access.yml
-  title: ''
-  type: AgenticAccess
-  url: agentic-access/target-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/security/target-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/target/security/target-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/target-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/security/target-domain-security.yml
+  href: https://artifacts.apis.io/target/security/target-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/target-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/authentication/target-authentication.yml
+  href: https://artifacts.apis.io/target/authentication/target-authentication.yml
   title: ''
   type: Authentication
   url: authentication/target-authentication.yml
@@ -171,72 +94,47 @@ common:
   title: ''
   type: Open Source
   url: https://tech.target.com/open-source
-- group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/json-schema/target-product-schema.json
-  title: ''
-  type: JSONSchema
-  url: json-schema/target-product-schema.json
-- group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/json-schema/target-store-schema.json
-  title: ''
-  type: JSONSchema
-  url: json-schema/target-store-schema.json
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/json-structure/target-product-structure.json
-  title: ''
-  type: JSONStructure
-  url: json-structure/target-product-structure.json
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/json-ld/target-context.jsonld
-  title: ''
-  type: JSONLD
-  url: json-ld/target-context.jsonld
-- group: design
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/vocabulary/target-vocabulary.yml
-  title: ''
-  type: Vocabulary
-  url: vocabulary/target-vocabulary.yml
 - group: agent
   title: ''
   type: LLMsTxt
   url: https://www.target.com/llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/llms/target-llms.txt
+  href: https://artifacts.apis.io/target/llms/target-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/target-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/well-known/target-well-known.yml
+  href: https://artifacts.apis.io/target/well-known/target-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/target-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/security/target-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/target/security/target-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/target-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/scopes/target-scopes.yml
+  href: https://artifacts.apis.io/target/scopes/target-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/target-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/conformance/target-conformance.yml
+  href: https://artifacts.apis.io/target/conformance/target-conformance.yml
   title: ''
   type: Conformance
   url: conformance/target-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/lifecycle/target-lifecycle.yml
+  href: https://artifacts.apis.io/target/lifecycle/target-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/target-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/conventions/target-conventions.yml
+  href: https://artifacts.apis.io/target/conventions/target-conventions.yml
   title: ''
   type: Conventions
   url: conventions/target-conventions.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/packages/target-packages.yml
+  href: https://artifacts.apis.io/target/packages/target-packages.yml
   title: ''
   type: Packages
   url: packages/target-packages.yml
@@ -252,62 +150,26 @@ common:
   title: ''
   type: HelpCenter
   url: https://help.target.com/
+coverage:
+  detail: Target's developer program at developer.target.com is partner-gated. Target publishes no public API reference or machine-readable specification. Scaffold OpenAPIs written by an API Evangelist sweep (no Target source; every path 404 on api.target.com) and everything derived from them were quarantined to _scaffold/ on 2026-10-21.
+  reason: no-machine-readable-spec
+  state: unreadable
 created: '2024-01-01'
 description: Target Corporation is one of the largest retailers in the United States, offering a wide assortment of general merchandise and food through more than 1,900 stores and digital channels. Target's technology platform powers partner integrations, internal services, and open-source tooling across their retail operations.
-examples:
-- key_count: 2
-  name: Target Get Product Example
-  slug: target-get-product-example
-- key_count: 2
-  name: Target Get Product Fulfillment Example
-  slug: target-get-product-fulfillment-example
-- key_count: 2
-  name: Target List Stores Example
-  slug: target-list-stores-example
-- key_count: 2
-  name: Target Search Products Example
-  slug: target-search-products-example
-finops:
-- has_sources: true
-  method: generated
-  name: Target Finops
-  primary_unit: ''
-  service_category: Retail
-  slug: target-finops
-  template: false
 graphqls:
 - description: Redsky is Target's internal aggregation API platform that converts GraphQL queries into client-managed REST APIs. It serves product data, pricing, promotions, and fulfillment information for Target.co
   name: target GraphQL API
   slug: target-graphql
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/target.png
-json_schemas:
-- name: Target Product
-  property_count: 10
-  slug: target-product
-- name: Target Store
-  property_count: 8
-  slug: target-store
-json_structures:
-- name: Target Product Structure
-  property_count: 0
-  slug: target-product-structure
-jsonld:
-- class_count: 32
-  name: Target Context
-  property_count: 0
-  slug: target-context
 layout: provider
-modified: '2026-08-27'
+modified: '2026-10-21'
 name: Target
 nav: Providers
 network: true
-overview: 'Target is listed with 8 APIs on the [APIs.io](https://apis.io/) network, including Inventory API, Orders API, Products API, and 5 more. Tagged areas include Fortune 100, E-Commerce, Retail, Product, and Inventory.
+overview: 'Target is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 100, E-Commerce, Retail, Product, and Inventory.
 
 
-  The Target catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
-
-
-  Target''s developer surface includes authentication, engineering blog, and 29 more developer resources.'
+  Target''s developer surface includes authentication, engineering blog, and 20 more developer resources.'
 plans:
 - name: Target Plans Pricing
   plan_count: 1
@@ -328,67 +190,33 @@ press:
 - date: ''
   title: Target's Using Artificial Intelligence to Make Your Shopping ...
   url: https://corporate.target.com/news-features/article/2023/12/artificial-intelligence
-random_paper: 9
-rate_limits:
-- limit_count: 1
-  name: Target Rate Limits
-  slug: target-rate-limits
-rules:
-- authorship: generated
-  effective_rule_count: 5
-  extends: []
-  name: Target — jsonschema rules
-  rule_count: 5
-  severity_counts:
-    error: 0
-    hint: 0
-    info: 1
-    warn: 4
-  slug: target-jsonschema-spectral-rules
-- authorship: generated
-  effective_rule_count: 62
-  extends:
-  - spectral:oas
-  name: Target API Rules
-  rule_count: 21
-  severity_counts:
-    error: 4
-    hint: 0
-    info: 1
-    warn: 16
-  slug: target-spectral-rules
+random_paper: 23
 scopes:
 - name: Target Scopes
   scope_count: 4
   slug: target-scopes
   summary_line: 4 scopes
 score:
-  band: thin
-  composite: 32.9
+  band: emerging
+  composite: 24.5
   coverage:
-    artifact_dirs: 30
-    catalog_earned: 61.0
+    artifact_dirs: 32
+    catalog_earned: 34.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 54.0
+    catalog_gap: 81.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: -3.4
   facets:
     access_clarity: 26.3
-    contract_governance: 45.5
-    contract_quality: 19.9
-    developer_ergonomics: 14.3
-    discoverability: 78.6
-    operational_transparency: 21.1
-  previous_composite: 34.4
+    contract_governance: 18.2
+    contract_quality: 0.0
+    developer_ergonomics: 23.8
+    discoverability: 64.3
+    operational_transparency: 15.8
+  previous_composite: 27.9
   provenance:
-    agentic_access: derived
     conformance: first-party
-    contracts:
-      callable: 100.0
-      derived: 7
-      marker_coverage: 100.0
-      total: 7
     mcp: derived
   regulatory:
     applies: true
@@ -396,14 +224,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/target/refs/heads/main/screenshots/target-2026-08-17T082249.png
+screenshot: https://apis.io/screenshots/target/target-2026-08-17T082249.png
 security:
 - kind: authentication
   name: Target Authentication

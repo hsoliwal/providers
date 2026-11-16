@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api.justyo.co
@@ -48,11 +51,8 @@ apis:
   description: Send Yo notifications to subscribers.
   name: justyo Yo API
   slug: justyo-yo-api
-artifact_total: 8
+artifact_total: 9
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Yo Account API
   slug: open-justyo-account-api
@@ -61,12 +61,12 @@ collections:
   slug: open-justyo-yo-api
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/rate-limits/justyo-rate-limits.yml
+  href: https://artifacts.apis.io/justyo/rate-limits/justyo-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/justyo-rate-limits.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/overlays/justyo-yo-overlay.yaml
+  href: https://artifacts.apis.io/justyo/overlays/justyo-yo-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/justyo-yo-overlay.yaml
@@ -91,52 +91,52 @@ common:
   type: SignUp
   url: https://dashboard.justyo.co/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/packages/justyo-packages.yml
+  href: https://artifacts.apis.io/justyo/packages/justyo-packages.yml
   title: ''
   type: Packages
   url: packages/justyo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/packages/justyo-packages.yml
+  href: https://artifacts.apis.io/justyo/packages/justyo-packages.yml
   title: ''
   type: SDKs
   url: packages/justyo-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/mcp/justyo-mcp.yml
+  href: https://artifacts.apis.io/justyo/mcp/justyo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/justyo-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/llms/justyo-llms.txt
+  href: https://artifacts.apis.io/justyo/llms/justyo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/justyo-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/well-known/justyo-well-known.yml
+  href: https://artifacts.apis.io/justyo/well-known/justyo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/justyo-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/authentication/justyo-authentication.yml
+  href: https://artifacts.apis.io/justyo/authentication/justyo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/justyo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/conventions/justyo-conventions.yml
+  href: https://artifacts.apis.io/justyo/conventions/justyo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/justyo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/lifecycle/justyo-lifecycle.yml
+  href: https://artifacts.apis.io/justyo/lifecycle/justyo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/justyo-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/security/justyo-domain-security.yml
+  href: https://artifacts.apis.io/justyo/security/justyo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/justyo-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/justyo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/justyo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -151,20 +151,36 @@ network: true
 overview: 'justyo publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Account API and Yo API. Tagged areas include Company, Notification, Push Notifications, Messaging, and Mobile.
 
 
+  The justyo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   justyo''s developer surface includes documentation, signup flow, authentication, and 14 more developer resources.'
-random_paper: 4
+random_paper: 14
 rate_limits:
 - limit_count: 1
   name: Justyo Rate Limits
   slug: justyo-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: justyo API Rules
+  rule_count: 58
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 1
+  slug: justyo-rules
 score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 45.0
+    artifact_dirs: 19
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -191,8 +207,8 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
@@ -206,6 +222,10 @@ security:
   name: Justyo Domain Security
   slug: justyo-domain-security
   summary_line: no transport/DNS hardening detected
+skill_count: 1
+skills:
+- name: Send a Yo notification
+  slug: justyo-send-yo
 slug: justyo
 tags:
 - Company

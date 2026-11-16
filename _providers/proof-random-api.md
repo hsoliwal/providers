@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://proof-random-api.pn-26f.workers.dev
@@ -34,32 +47,32 @@ apis:
 artifact_total: 3
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proof-random-api/refs/heads/main/rules/proof-random-api-rules.yml
+  href: https://artifacts.apis.io/proof-random-api/rules/proof-random-api-rules.yml
   title: ''
   type: Spectral
   url: rules/proof-random-api-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proof-random-api/refs/heads/main/errors/proof-random-api-problem-types.yml
+  href: https://artifacts.apis.io/proof-random-api/errors/proof-random-api-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/proof-random-api-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/proof-random-api/refs/heads/main/conformance/proof-random-api-conformance.yml
+  href: https://artifacts.apis.io/proof-random-api/conformance/proof-random-api-conformance.yml
   title: ''
   type: Conformance
   url: conformance/proof-random-api-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/proof-random-api/refs/heads/main/hosts/proof-random-api-hosts.yml
+  href: https://artifacts.apis.io/proof-random-api/hosts/proof-random-api-hosts.yml
   title: ''
   type: Hosts
   url: hosts/proof-random-api-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/proof-random-api/refs/heads/main/vendors/proof-random-api-vendors.yml
+  href: https://artifacts.apis.io/proof-random-api/vendors/proof-random-api-vendors.yml
   title: ''
   type: Vendors
   url: vendors/proof-random-api-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/proof-random-api/refs/heads/main/security/proof-random-api-domain-security.yml
+  href: https://artifacts.apis.io/proof-random-api/security/proof-random-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/proof-random-api-domain-security.yml
@@ -83,7 +96,7 @@ modified: '2026-09-27'
 name: Proof Random API (Kepler Ops)
 nav: Providers
 network: true
-overview: 'Proof Random API (Kepler Ops) publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Random API. Tagged areas include Company, Randomness, Public APIs, Drand, and Free Service.
+overview: 'Proof Random API (Kepler Ops) publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Random API. Tagged areas include Company, Randomness, Public APIs, and Drand.
 
 
   The Proof Random API (Kepler Ops) catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -106,21 +119,21 @@ rules:
   slug: proof-random-api-rules
 score:
   band: emerging
-  composite: 18.0
+  composite: 16.4
   coverage:
     artifact_dirs: 11
-    catalog_earned: 31.5
+    catalog_earned: 26.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 68.5
+    catalog_gap: 73.5
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
     contract_quality: 41.0
-    developer_ergonomics: 7.1
-    discoverability: 48.2
+    developer_ergonomics: 3.6
+    discoverability: 39.3
     operational_transparency: 0.0
   previous_composite: 18.0
   provenance:
@@ -137,14 +150,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/proof-random-api/refs/heads/main/screenshots/proof-random-api-2026-10-11T112842.png
+screenshot: https://apis.io/screenshots/proof-random-api/proof-random-api-2026-10-11T112842.png
 security:
 - kind: domain-security
   name: Proof Random Api Domain Security
@@ -156,6 +169,5 @@ tags:
 - Randomness
 - Public APIs
 - Drand
-- Free Service
 website: https://proof-random-api.pn-26f.workers.dev/
 ---

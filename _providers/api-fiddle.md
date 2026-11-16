@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -70,11 +76,8 @@ apis:
   description: Organize projects into workspaces.
   name: API-Fiddle Workspaces API
   slug: api-fiddle-workspaces-api
-artifact_total: 34
+artifact_total: 33
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: API-Fiddle API Fiddle API
   slug: open-api-fiddle-api-fiddle
@@ -95,37 +98,37 @@ collections:
   slug: open-api-fiddle-workspaces-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/api-fiddle/refs/heads/main/plans/api-fiddle-plans-pricing.yml
+  href: https://artifacts.apis.io/api-fiddle/plans/api-fiddle-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/api-fiddle-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/api-fiddle/refs/heads/main/rate-limits/api-fiddle-rate-limits.yml
+  href: https://artifacts.apis.io/api-fiddle/rate-limits/api-fiddle-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/api-fiddle-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/api-fiddle/refs/heads/main/finops/api-fiddle-finops.yml
+  href: https://artifacts.apis.io/api-fiddle/finops/api-fiddle-finops.yml
   title: ''
   type: FinOps
   url: finops/api-fiddle-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/api-fiddle/refs/heads/main/capabilities/api-fiddle-capability-edges.yml
+  href: https://artifacts.apis.io/api-fiddle/capabilities/api-fiddle-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/api-fiddle-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/api-fiddle/refs/heads/main/agentic-access/api-fiddle-agentic-access.yml
+  href: https://artifacts.apis.io/api-fiddle/agentic-access/api-fiddle-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/api-fiddle-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/api-fiddle/refs/heads/main/security/api-fiddle-domain-security.yml
+  href: https://artifacts.apis.io/api-fiddle/security/api-fiddle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/api-fiddle-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/api-fiddle/refs/heads/main/authentication/api-fiddle-authentication.yml
+  href: https://artifacts.apis.io/api-fiddle/authentication/api-fiddle-authentication.yml
   title: ''
   type: Authentication
   url: authentication/api-fiddle-authentication.yml
@@ -164,7 +167,7 @@ finops:
 - has_sources: false
   method: generated
   name: Api Fiddle Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: api-fiddle-finops
   template: true
@@ -205,7 +208,7 @@ plans:
 - name: Api Fiddle Plans Pricing
   plan_count: 3
   slug: api-fiddle-plans-pricing
-random_paper: 7
+random_paper: 15
 rate_limits:
 - limit_count: 5
   name: Api Fiddle Rate Limits
@@ -226,13 +229,13 @@ score:
   band: thin
   composite: 29.3
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 58.3
     catalog_earned_first_party: 0.0
     catalog_gap: 56.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 9.8
@@ -240,7 +243,7 @@ score:
     developer_ergonomics: 14.3
     discoverability: 64.3
     operational_transparency: 13.2
-  previous_composite: 30.8
+  previous_composite: 29.3
   provenance:
     agentic_access: derived
     contracts:
@@ -254,13 +257,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/api-fiddle/refs/heads/main/screenshots/api-fiddle-2026-06-20T172209.png
+screenshot: https://apis.io/screenshots/api-fiddle/api-fiddle-2026-06-20T172209.png
 security:
 - kind: authentication
   name: Api Fiddle Authentication

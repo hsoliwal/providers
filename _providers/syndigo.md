@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 17.3
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.uat.syndigo.com
@@ -39,52 +53,52 @@ apis:
 artifact_total: 9
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/rules/syndigo-rules.yml
+  href: https://artifacts.apis.io/syndigo/rules/syndigo-rules.yml
   title: ''
   type: Spectral
   url: rules/syndigo-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/json-ld/syndigo-context.jsonld
+  href: https://artifacts.apis.io/syndigo/json-ld/syndigo-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/syndigo-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/vocabulary/syndigo-vocabulary.yml
+  href: https://artifacts.apis.io/syndigo/vocabulary/syndigo-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/syndigo-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/data-model/syndigo-data-model.yml
+  href: https://artifacts.apis.io/syndigo/data-model/syndigo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/syndigo-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/security/syndigo-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/syndigo/security/syndigo-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/syndigo-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/authentication/syndigo-authentication.yml
+  href: https://artifacts.apis.io/syndigo/authentication/syndigo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/syndigo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/conformance/syndigo-conformance.yml
+  href: https://artifacts.apis.io/syndigo/conformance/syndigo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/syndigo-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/llms/syndigo-llms.txt
+  href: https://artifacts.apis.io/syndigo/llms/syndigo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/syndigo-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/hosts/syndigo-hosts.yml
+  href: https://artifacts.apis.io/syndigo/hosts/syndigo-hosts.yml
   title: ''
   type: Hosts
   url: hosts/syndigo-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/vendors/syndigo-vendors.yml
+  href: https://artifacts.apis.io/syndigo/vendors/syndigo-vendors.yml
   title: ''
   type: Vendors
   url: vendors/syndigo-vendors.yml
@@ -125,12 +139,12 @@ common:
   type: Documentation
   url: https://developer.syndigo.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/security/syndigo-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/syndigo/security/syndigo-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/syndigo-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/syndigo/refs/heads/main/security/syndigo-domain-security.yml
+  href: https://artifacts.apis.io/syndigo/security/syndigo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/syndigo-domain-security.yml
@@ -171,14 +185,14 @@ modified: '2026-10-12'
 name: Syndigo
 nav: Providers
 network: true
-overview: 'Syndigo is listed with 2 APIs on the [APIs.io](https://apis.io/) network: Auth API and Natural API. Tagged areas include Company, Data, Master Data Management, ProductInformationManagement, and Syndication.
+overview: 'Syndigo is listed with 2 APIs on the [APIs.io](https://apis.io/) network: Auth API and Natural API. Tagged areas include Company, Data, Master Data Management, Product Information Management, and Syndication.
 
 
   The Syndigo catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Syndigo''s developer surface includes authentication, support, engineering blog, API reference, getting-started guide, documentation, and 17 more developer resources.'
-random_paper: 17
+random_paper: 21
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -194,21 +208,23 @@ rules:
   slug: syndigo-rules
 score:
   band: thin
-  composite: 34.2
+  composite: 28.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 17
     catalog_earned: 56.8
     catalog_earned_first_party: 0.0
     catalog_gap: 58.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -6.0
   facets:
-    access_clarity: 21.1
+    access_clarity: 15.8
     contract_governance: 22.0
     contract_quality: 21.9
-    developer_ergonomics: 57.1
-    discoverability: 75.0
+    developer_ergonomics: 34.5
+    discoverability: 74.1
     operational_transparency: 10.5
+  previous_composite: 34.2
   provenance:
     conformance: derived
     contracts:
@@ -222,12 +238,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 28.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/syndigo/syndigo-2026-11-03T144244.png
 security:
 - kind: authentication
   name: Syndigo Authentication
@@ -246,7 +264,7 @@ tags:
 - Company
 - Data
 - Master Data Management
-- ProductInformationManagement
+- Product Information Management
 - Syndication
 website: https://syndigo.com/
 ---

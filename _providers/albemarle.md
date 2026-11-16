@@ -5,7 +5,9 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -32,27 +37,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 21
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/albemarle/refs/heads/main/plans/albemarle-plans-pricing.yml
+  href: https://artifacts.apis.io/albemarle/plans/albemarle-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/albemarle-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/albemarle/refs/heads/main/rate-limits/albemarle-rate-limits.yml
+  href: https://artifacts.apis.io/albemarle/rate-limits/albemarle-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/albemarle-rate-limits.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/albemarle/refs/heads/main/security/albemarle-domain-security.yml
+  href: https://artifacts.apis.io/albemarle/security/albemarle-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/albemarle-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/albemarle/refs/heads/main/llms/albemarle-llms.txt
+  href: https://artifacts.apis.io/albemarle/llms/albemarle-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/albemarle-llms.txt
@@ -154,7 +159,7 @@ press:
 - date: ''
   title: Innovation
   url: https://www.albemarle.com/us/en/who-we-are/innovation
-random_paper: 9
+random_paper: 21
 rate_limits:
 - limit_count: 0
   name: Albemarle Rate Limits
@@ -163,7 +168,7 @@ score:
   band: minimal
   composite: 10.0
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -184,14 +189,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 11.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/albemarle/refs/heads/main/screenshots/albemarle-2026-06-20T171503.png
+screenshot: https://apis.io/screenshots/albemarle/albemarle-2026-06-20T171503.png
 security:
 - kind: domain-security
   name: Albemarle Domain Security

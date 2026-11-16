@@ -7,6 +7,8 @@ access_model:
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-10-17'
+  score: 32.5
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 65
   human_in_the_loop: 2
@@ -166,27 +171,27 @@ apis:
 artifact_total: 40
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/agentic-access/oyster-hr-agentic-access.yml
+  href: https://artifacts.apis.io/oyster-hr/agentic-access/oyster-hr-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/oyster-hr-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/rules/oyster-hr-rules.yml
+  href: https://artifacts.apis.io/oyster-hr/rules/oyster-hr-rules.yml
   title: ''
   type: Spectral
   url: rules/oyster-hr-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/json-ld/oyster-hr-context.jsonld
+  href: https://artifacts.apis.io/oyster-hr/json-ld/oyster-hr-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/oyster-hr-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/vocabulary/oyster-hr-vocabulary.yml
+  href: https://artifacts.apis.io/oyster-hr/vocabulary/oyster-hr-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/oyster-hr-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/data-model/oyster-hr-data-model.yml
+  href: https://artifacts.apis.io/oyster-hr/data-model/oyster-hr-data-model.yml
   title: ''
   type: DataModel
   url: data-model/oyster-hr-data-model.yml
@@ -195,27 +200,27 @@ common:
   type: Compliance
   url: https://trust.oysterhr.com/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/errors/oyster-hr-problem-types.yml
+  href: https://artifacts.apis.io/oyster-hr/errors/oyster-hr-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/oyster-hr-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/conformance/oyster-hr-conformance.yml
+  href: https://artifacts.apis.io/oyster-hr/conformance/oyster-hr-conformance.yml
   title: ''
   type: Conformance
   url: conformance/oyster-hr-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/llms/oyster-hr-llms.txt
+  href: https://artifacts.apis.io/oyster-hr/llms/oyster-hr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/oyster-hr-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/hosts/oyster-hr-hosts.yml
+  href: https://artifacts.apis.io/oyster-hr/hosts/oyster-hr-hosts.yml
   title: ''
   type: Hosts
   url: hosts/oyster-hr-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/vendors/oyster-hr-vendors.yml
+  href: https://artifacts.apis.io/oyster-hr/vendors/oyster-hr-vendors.yml
   title: ''
   type: Vendors
   url: vendors/oyster-hr-vendors.yml
@@ -240,17 +245,17 @@ common:
   type: PrivacyPolicy
   url: https://www.oysterhr.com/trust/privacy-notice
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/authentication/oyster-hr-authentication.yml
+  href: https://artifacts.apis.io/oyster-hr/authentication/oyster-hr-authentication.yml
   title: ''
   type: Authentication
   url: authentication/oyster-hr-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/security/oyster-hr-trust-center.yml
+  href: https://artifacts.apis.io/oyster-hr/security/oyster-hr-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/oyster-hr-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/security/oyster-hr-domain-security.yml
+  href: https://artifacts.apis.io/oyster-hr/security/oyster-hr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/oyster-hr-domain-security.yml
@@ -287,30 +292,30 @@ common:
   type: X
   url: https://x.com/oyster_hr
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/plans/oyster-hr-plans-pricing.yml
+  href: https://artifacts.apis.io/oyster-hr/plans/oyster-hr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/oyster-hr-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/rate-limits/oyster-hr-rate-limits.yml
+  href: https://artifacts.apis.io/oyster-hr/rate-limits/oyster-hr-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/oyster-hr-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/finops/oyster-hr-finops.yml
+  href: https://artifacts.apis.io/oyster-hr/finops/oyster-hr-finops.yml
   title: ''
   type: FinOps
   url: finops/oyster-hr-finops.yml
 created: '2026-06-13'
 description: Global employment platform with a REST API for hiring international employees, managing contracts, processing global payroll, and ensuring local compliance in 180+ countries. The API enables integration with HRIS and payroll systems, time-off management, expense management, invoicing, benefits, offboarding, and provides embeddable web components for partners and resellers.
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Oyster Hr Finops
-  primary_unit: ''
+  primary_unit: employee
   service_category: ''
   slug: oyster-hr-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/oyster-hr.png
 json_schemas:
 - name: contractChange
@@ -353,9 +358,9 @@ overview: 'Oyster HR publishes 24 API contracts indexed on the [APIs.io](https:/
   Oyster HR''s developer surface includes support, signup flow, authentication, documentation, engineering blog, pricing, and 24 more developer resources.'
 plans:
 - name: Oyster Hr Plans Pricing
-  plan_count: 5
+  plan_count: 3
   slug: oyster-hr-plans-pricing
-random_paper: 17
+random_paper: 5
 rate_limits:
 - limit_count: 2
   name: Oyster Hr Rate Limits
@@ -375,23 +380,23 @@ rules:
   slug: oyster-hr-rules
 score:
   band: developing
-  composite: 51.0
+  composite: 52.3
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 70.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 44.3
+    artifact_dirs: 25
+    catalog_earned: 82.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 32.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 22.0
+  delta: -5.0
   facets:
-    access_clarity: 68.4
+    access_clarity: 78.9
     contract_governance: 22.0
-    contract_quality: 65.4
-    developer_ergonomics: 23.8
+    contract_quality: 70.8
+    developer_ergonomics: 21.4
     discoverability: 78.6
-    operational_transparency: 36.8
-  previous_composite: 29.0
+    operational_transparency: 31.6
+  previous_composite: 57.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -406,14 +411,14 @@ score:
     matched_via: tags
     regime: Employment & Payroll
     regime_id: employment_payroll
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/oyster-hr/refs/heads/main/screenshots/oyster-hr-2026-06-20T191300.png
+screenshot: https://apis.io/screenshots/oyster-hr/oyster-hr-2026-06-20T191300.png
 security:
 - kind: authentication
   name: Oyster Hr Authentication

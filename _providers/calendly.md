@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -23,19 +27,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: derived
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.2
-  scored_at: '2026-10-17'
+  score: 48.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 1
@@ -55,24 +62,9 @@ apis:
   slug: embed-api
 - baseURL: https://api.calendly.com
   baseurl_source: declared
-  description: Endpoints for retrieving activity log entries for an organization.
-  name: Calendly Activity Log API
-  slug: calendly-activity-log-api
-- baseURL: https://api.calendly.com
-  baseurl_source: declared
   description: Endpoints for viewing available times for event types and managing user availability schedules.
   name: Calendly Availability API
   slug: calendly-availability-api
-- baseURL: https://api.calendly.com
-  baseurl_source: declared
-  description: Endpoints for handling data compliance requests such as deletion and retrieval of invitee data.
-  name: Calendly Data Compliance API
-  slug: calendly-data-compliance-api
-- baseURL: https://api.calendly.com
-  baseurl_source: declared
-  description: Endpoints for listing, retrieving, and managing event types that define the kinds of meetings users can schedule.
-  name: Calendly Event Types API
-  slug: calendly-event-types-api
 - baseURL: https://api.calendly.com
   baseurl_source: declared
   description: Endpoints for listing and retrieving organization groups.
@@ -80,24 +72,9 @@ apis:
   slug: calendly-groups-api
 - baseURL: https://api.calendly.com
   baseurl_source: declared
-  description: Endpoints for listing, retrieving, and creating invitees on scheduled events.
-  name: Calendly Invitees API
-  slug: calendly-invitees-api
-- baseURL: https://api.calendly.com
-  baseurl_source: declared
   description: Endpoints for managing organization memberships, invitations, and organization-level settings.
   name: Calendly Organizations API
   slug: calendly-organizations-api
-- baseURL: https://api.calendly.com
-  baseurl_source: declared
-  description: Endpoints for listing and retrieving routing forms and their submissions.
-  name: Calendly Routing Forms API
-  slug: calendly-routing-forms-api
-- baseURL: https://api.calendly.com
-  baseurl_source: declared
-  description: Endpoints for listing, retrieving, and canceling scheduled events (booked meetings).
-  name: Calendly Scheduled Events API
-  slug: calendly-scheduled-events-api
 - baseURL: https://api.calendly.com
   baseurl_source: declared
   description: Endpoints for creating and managing shareable scheduling links.
@@ -110,18 +87,65 @@ apis:
   slug: calendly-users-api
 - baseURL: https://api.calendly.com
   baseurl_source: declared
-  description: Endpoints for creating, listing, retrieving, and deleting webhook subscriptions that receive real-time event notifications.
-  name: Calendly Webhook Subscriptions API
-  slug: calendly-webhook-subscriptions-api
-artifact_total: 43
+  description: The activityLog API from Calendly — 1 operation(s) for activitylog.
+  name: Calendly Activity Log API
+  slug: calendly-activitylog-api
+- baseURL: https://api.calendly.com
+  baseurl_source: declared
+  description: The contacts API from Calendly — 4 operation(s) for contacts.
+  name: Calendly Contacts API
+  slug: calendly-contacts-api
+- baseURL: https://api.calendly.com
+  baseurl_source: declared
+  description: The dataCompliance API from Calendly — 2 operation(s) for datacompliance.
+  name: Calendly Data Compliance API
+  slug: calendly-datacompliance-api
+- baseURL: https://api.calendly.com
+  baseurl_source: declared
+  description: The eventTypes API from Calendly — 5 operation(s) for eventtypes.
+  name: Calendly Event Types API
+  slug: calendly-eventtypes-api
+- baseURL: https://api.calendly.com
+  baseurl_source: declared
+  description: The Locations API from Calendly — 1 operation(s) for locations.
+  name: Calendly Locations API
+  slug: calendly-locations-api
+- baseURL: https://api.calendly.com
+  baseurl_source: declared
+  description: The notetaker API from Calendly — 3 operation(s) for notetaker.
+  name: Calendly Notetaker API
+  slug: calendly-notetaker-api
+- baseURL: https://api.calendly.com
+  baseurl_source: declared
+  description: The outgoingCommunications API from Calendly — 1 operation(s) for outgoingcommunications.
+  name: Calendly Outgoing Communications API
+  slug: calendly-outgoingcommunications-api
+- baseURL: https://api.calendly.com
+  baseurl_source: declared
+  description: The routingForms API from Calendly — 4 operation(s) for routingforms.
+  name: Calendly Routing Forms API
+  slug: calendly-routingforms-api
+- baseURL: https://api.calendly.com
+  baseurl_source: declared
+  description: The scheduledEvents API from Calendly — 8 operation(s) for scheduledevents.
+  name: Calendly Scheduled Events API
+  slug: calendly-scheduledevents-api
+- baseURL: https://api.calendly.com
+  baseurl_source: declared
+  description: The Webhooks API from Calendly — 3 operation(s) for webhooks.
+  name: Calendly Webhooks API
+  slug: calendly-webhooks-api
+- baseURL: https://api.calendly.com
+  baseurl_source: declared
+  description: The Scheduling Links API from Calendly — 1 operation(s) for scheduling links.
+  name: Calendly Scheduling Links API
+  slug: calendly-scheduling-links-api
+artifact_total: 46
 asyncapis:
 - description: 'The Calendly Webhook API enables developers to receive real-time notifications when scheduling events occur in Calendly. By creating webhook subscriptions, applications can automatically receive data '
   name: Calendly Webhook Events
   slug: calendly-webhook-api-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Calendly Scheduling Activity Log API
   slug: open-calendly-activity-log-api
@@ -162,43 +186,47 @@ collections:
   name: Calendly Scheduling Activity Log Webhook Subscriptions API
   slug: open-calendly-webhook-subscriptions-api
 common:
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/calendly/overview
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/plans/calendly-plans-pricing.yml
+  href: https://artifacts.apis.io/calendly/plans/calendly-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/calendly-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/rate-limits/calendly-rate-limits.yml
+  href: https://artifacts.apis.io/calendly/rate-limits/calendly-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/calendly-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/finops/calendly-finops.yml
+  href: https://artifacts.apis.io/calendly/finops/calendly-finops.yml
   title: ''
   type: FinOps
   url: finops/calendly-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/capabilities/calendly-capability-edges.yml
+  href: https://artifacts.apis.io/calendly/capabilities/calendly-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/calendly-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/agentic-access/calendly-agentic-access.yml
+  href: https://artifacts.apis.io/calendly/agentic-access/calendly-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/calendly-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/security/calendly-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/calendly/security/calendly-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/calendly-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/security/calendly-domain-security.yml
+  href: https://artifacts.apis.io/calendly/security/calendly-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/calendly-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/authentication/calendly-authentication.yml
+  href: https://artifacts.apis.io/calendly/authentication/calendly-authentication.yml
   title: ''
   type: Authentication
   url: authentication/calendly-authentication.yml
@@ -239,22 +267,22 @@ common:
   type: Login
   url: https://calendly.com/login
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/json-ld/calendly-context.jsonld
+  href: https://artifacts.apis.io/calendly/json-ld/calendly-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/calendly-context.jsonld
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/json-schema/calendly-event-type-schema.json
+  href: https://artifacts.apis.io/calendly/json-schema/calendly-event-type-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/calendly-event-type-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/json-schema/calendly-scheduled-event-schema.json
+  href: https://artifacts.apis.io/calendly/json-schema/calendly-scheduled-event-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/calendly-scheduled-event-schema.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/json-schema/calendly-invitee-schema.json
+  href: https://artifacts.apis.io/calendly/json-schema/calendly-invitee-schema.json
   title: ''
   type: JSONSchema
   url: json-schema/calendly-invitee-schema.json
@@ -268,7 +296,7 @@ finops:
 - has_sources: true
   method: generated
   name: Calendly Finops
-  primary_unit: ''
+  primary_unit: seat
   service_category: Productivity / Scheduling SaaS
   slug: calendly-finops
   template: false
@@ -297,18 +325,18 @@ modified: '2026-05-19'
 name: Calendly
 nav: Providers
 network: true
-overview: 'Calendly publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Webhook API, Activity Log API, Availability API, and 11 more. Tagged areas include Appointments, Automation, Booking, Calendar, and Meetings.
+overview: 'Calendly publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Webhook API, Availability API, Groups API, and 15 more. Tagged areas include Appointments, Automation, Booking, Calendar, and Meetings.
 
 
   The Calendly catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Calendly''s developer surface includes authentication, developer portal, documentation, engineering blog, and 18 more developer resources.'
+  Calendly''s developer surface includes authentication, developer portal, documentation, engineering blog, and 19 more developer resources.'
 plans:
 - name: Calendly Plans Pricing
   plan_count: 4
   slug: calendly-plans-pricing
-random_paper: 8
+random_paper: 4
 rate_limits:
 - limit_count: 2
   name: Calendly Rate Limits
@@ -338,31 +366,31 @@ rules:
     warn: 5
   slug: calendly-jsonschema-spectral-rules
 score:
-  band: thin
-  composite: 39.2
+  band: developing
+  composite: 45.0
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 51.5
+    artifact_dirs: 22
+    catalog_earned: 54.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.5
+    catalog_gap: 60.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 2.6
   facets:
-    access_clarity: 35.5
+    access_clarity: 43.4
     contract_governance: 13.6
-    contract_quality: 62.5
-    developer_ergonomics: 23.8
+    contract_quality: 65.4
+    developer_ergonomics: 34.5
     discoverability: 75.0
-    operational_transparency: 7.9
-  previous_composite: 40.7
+    operational_transparency: 18.4
+  previous_composite: 42.4
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 12
+      marker_coverage: 55.2
+      total: 29
     mcp: first-party
   regulatory:
     applies: true
@@ -370,13 +398,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/screenshots/calendly-2026-06-20T173843.png
+screenshot: https://apis.io/screenshots/calendly/calendly-2026-06-20T173843.png
 security:
 - kind: authentication
   name: Calendly Authentication

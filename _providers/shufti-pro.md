@@ -1,14 +1,19 @@
 ---
 access_model:
   confidence: medium
-  label: Freemium
-  onboarding: unknown
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
   pricing: freemium
   public: false
   source:
   - plans
+  - authentication
+  - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 43.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -69,9 +77,6 @@ apis:
 artifact_total: 18
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Shufti Pro Verification Status API
   slug: open-shufti-pro-status-api
 - collection_type: open
@@ -82,7 +87,7 @@ collections:
   slug: open-shuftipro
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shufti-pro/refs/heads/main/security/shufti-pro-domain-security.yml
+  href: https://artifacts.apis.io/shufti-pro/security/shufti-pro-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shufti-pro-domain-security.yml
@@ -119,27 +124,27 @@ common:
   type: X
   url: https://x.com/shufti_pro
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/shufti-pro/refs/heads/main/plans/shufti-pro-plans-pricing.yml
+  href: https://artifacts.apis.io/shufti-pro/plans/shufti-pro-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/shufti-pro-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/shufti-pro/refs/heads/main/rate-limits/shufti-pro-rate-limits.yml
+  href: https://artifacts.apis.io/shufti-pro/rate-limits/shufti-pro-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/shufti-pro-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/shufti-pro/refs/heads/main/finops/shufti-pro-finops.yml
+  href: https://artifacts.apis.io/shufti-pro/finops/shufti-pro-finops.yml
   title: ''
   type: FinOps
   url: finops/shufti-pro-finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shufti-pro/refs/heads/main/agentic-access/shufti-pro-agentic-access.yml
+  href: https://artifacts.apis.io/shufti-pro/agentic-access/shufti-pro-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/shufti-pro-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shufti-pro/refs/heads/main/authentication/shufti-pro-authentication.yml
+  href: https://artifacts.apis.io/shufti-pro/authentication/shufti-pro-authentication.yml
   title: ''
   type: Authentication
   url: authentication/shufti-pro-authentication.yml
@@ -175,7 +180,7 @@ network: true
 overview: 'Shufti Pro publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Status API, Verification API, and 4 more. Tagged areas include Identity Verification, KYC, AML, KYB, and Face Biometrics.
 
 
-  The Shufti Pro catalog on APIs.io includes 1 JSON-LD context.
+  The Shufti Pro catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Shufti Pro''s developer surface includes documentation, engineering blog, pricing, authentication, and 11 more developer resources.'
@@ -183,30 +188,43 @@ plans:
 - name: Shufti Pro Plans Pricing
   plan_count: 3
   slug: shufti-pro-plans-pricing
-random_paper: 7
+random_paper: 9
 rate_limits:
 - limit_count: 4
   name: Shufti Pro Rate Limits
   slug: shufti-pro-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Shufti Pro API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: shufti-pro-rules
 score:
   band: thin
-  composite: 32.0
+  composite: 33.7
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 54.0
+    artifact_dirs: 20
+    catalog_earned: 58.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.0
+    catalog_gap: 56.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -8.8
+  delta: 0.0
   facets:
     access_clarity: 18.4
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 57.4
     developer_ergonomics: 23.8
     discoverability: 68.3
     operational_transparency: 26.3
-  previous_composite: 40.8
+  previous_composite: 33.7
   provenance:
     agentic_access: derived
     contracts:
@@ -221,13 +239,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 16.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/shufti-pro/refs/heads/main/screenshots/shufti-pro-2026-06-20T193953.png
+screenshot: https://apis.io/screenshots/shufti-pro/shufti-pro-2026-06-20T193953.png
 security:
 - kind: authentication
   name: Shufti Pro Authentication

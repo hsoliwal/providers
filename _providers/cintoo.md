@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.2
-  scored_at: '2026-10-17'
+  score: 33.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 62
   human_in_the_loop: 0
@@ -41,7 +49,7 @@ agentic_access:
   operation_count: 100
   slug: cintoo-agentic-access
   summary_line: 100 operations · 62 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://aec.cintoo.com/api/2/
   baseurl_source: declared
@@ -148,11 +156,8 @@ apis:
   description: The Workzone API from Cintoo — 3 operation(s) for workzone.
   name: Cintoo Workzone API
   slug: cintoo-workzone-api
-artifact_total: 47
+artifact_total: 51
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Cintoo Open Account API
   slug: open-cintoo-account-api
@@ -222,12 +227,12 @@ common:
   type: BlogRSS
   url: https://cintoo.com/en/blog/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/capabilities/cintoo-capability-edges.yml
+  href: https://artifacts.apis.io/cintoo/capabilities/cintoo-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/cintoo-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/overlays/cintoo-openapi-overlay.yaml
+  href: https://artifacts.apis.io/cintoo/overlays/cintoo-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/cintoo-openapi-overlay.yaml
@@ -260,72 +265,72 @@ common:
   type: Website
   url: https://cintoo.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/authentication/cintoo-authentication.yml
+  href: https://artifacts.apis.io/cintoo/authentication/cintoo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cintoo-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/scopes/cintoo-scopes.yml
+  href: https://artifacts.apis.io/cintoo/scopes/cintoo-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cintoo-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/conventions/cintoo-conventions.yml
+  href: https://artifacts.apis.io/cintoo/conventions/cintoo-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cintoo-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/errors/cintoo-problem-types.yml
+  href: https://artifacts.apis.io/cintoo/errors/cintoo-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cintoo-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/lifecycle/cintoo-lifecycle.yml
+  href: https://artifacts.apis.io/cintoo/lifecycle/cintoo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cintoo-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/data-model/cintoo-data-model.yml
+  href: https://artifacts.apis.io/cintoo/data-model/cintoo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cintoo-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/conformance/cintoo-conformance.yml
+  href: https://artifacts.apis.io/cintoo/conformance/cintoo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cintoo-conformance.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/sandbox/cintoo-sandbox.yml
+  href: https://artifacts.apis.io/cintoo/sandbox/cintoo-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/cintoo-sandbox.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/cli/cintoo-cli.yml
+  href: https://artifacts.apis.io/cintoo/cli/cintoo-cli.yml
   title: ''
   type: CLI
   url: cli/cintoo-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/mcp/cintoo-mcp.yml
+  href: https://artifacts.apis.io/cintoo/mcp/cintoo-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/cintoo-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/agentic-access/cintoo-agentic-access.yml
+  href: https://artifacts.apis.io/cintoo/agentic-access/cintoo-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/cintoo-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/security/cintoo-domain-security.yml
+  href: https://artifacts.apis.io/cintoo/security/cintoo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cintoo-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/llms/cintoo-llms.txt
+  href: https://artifacts.apis.io/cintoo/llms/cintoo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cintoo-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/cintoo/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -340,8 +345,24 @@ network: true
 overview: 'Cintoo publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Annotation API, Autodesk API, and 18 more. Tagged areas include Company, Infrastructure Saas, Reality Capture, Digital Twin, and Point Cloud.
 
 
+  The Cintoo catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Cintoo''s developer surface includes documentation, support, engineering blog, authentication, sandbox, CLI, and 18 more developer resources.'
-random_paper: 14
+random_paper: 4
+rules:
+- authorship: generated
+  effective_rule_count: 108
+  extends:
+  - spectral:oas
+  name: Cintoo API Rules
+  rule_count: 67
+  severity_counts:
+    error: 55
+    hint: 0
+    info: 2
+    warn: 10
+  slug: cintoo-rules
 scopes:
 - name: Cintoo Scopes
   scope_count: 0
@@ -349,30 +370,30 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 41.3
+  composite: 44.3
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.4
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 49.6
+    contract_governance: 18.2
+    contract_quality: 55.1
     developer_ergonomics: 73.2
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 41.2
+  previous_composite: 42.9
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 21
     mcp: derived
     skills: derived
@@ -382,13 +403,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/cintoo/refs/heads/main/screenshots/cintoo-2026-07-25T205406.png
+screenshot: https://apis.io/screenshots/cintoo/cintoo-2026-07-25T205406.png
 security:
 - kind: authentication
   name: Cintoo Authentication
@@ -398,6 +419,16 @@ security:
   name: Cintoo Domain Security
   slug: cintoo-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 4
+skills:
+- name: Annotate and tag a Cintoo project
+  slug: cintoo-annotate-and-tag
+- name: Authenticate and list Cintoo projects
+  slug: cintoo-authenticate-and-list-projects
+- name: Manage Cintoo project members and roles
+  slug: cintoo-manage-project-members
+- name: Upload scan files to a Cintoo work zone
+  slug: cintoo-upload-scan-files
 slug: cintoo
 tags:
 - Company

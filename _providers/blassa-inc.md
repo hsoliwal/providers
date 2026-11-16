@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 asyncapis:
@@ -43,7 +46,7 @@ asyncapis:
   slug: blassa-inc-webhooks
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blassa-inc/refs/heads/main/security/blassa-inc-domain-security.yml
+  href: https://artifacts.apis.io/blassa-inc/security/blassa-inc-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/blassa-inc-domain-security.yml
@@ -80,22 +83,22 @@ common:
   type: PrivacyPolicy
   url: https://blassa.io/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blassa-inc/refs/heads/main/authentication/blassa-inc-authentication.yml
+  href: https://artifacts.apis.io/blassa-inc/authentication/blassa-inc-authentication.yml
   title: ''
   type: Authentication
   url: authentication/blassa-inc-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blassa-inc/refs/heads/main/asyncapi/blassa-inc-webhooks.yml
+  href: https://artifacts.apis.io/blassa-inc/asyncapi/blassa-inc-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/blassa-inc-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blassa-inc/refs/heads/main/well-known/blassa-inc-well-known.yml
+  href: https://artifacts.apis.io/blassa-inc/well-known/blassa-inc-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/blassa-inc-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blassa-inc/refs/heads/main/llms/blassa-inc-llms.txt
+  href: https://artifacts.apis.io/blassa-inc/llms/blassa-inc-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/blassa-inc-llms.txt
@@ -114,23 +117,23 @@ overview: 'Blassa is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Blassa''s developer surface includes documentation, API reference, signup flow, pricing, engineering blog, authentication, and 7 more developer resources.'
-random_paper: 21
+random_paper: 5
 score:
   band: emerging
-  composite: 26.1
+  composite: 23.5
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -2.6
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 39.0
-    developer_ergonomics: 27.4
+    developer_ergonomics: 14.3
     discoverability: 55.4
     operational_transparency: 7.9
   jurisdiction:
@@ -140,21 +143,21 @@ score:
     - africa
     - mena
     - middle-east
-  previous_composite: 26.0
+  previous_composite: 26.1
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/blassa-inc/refs/heads/main/screenshots/blassa-inc-2026-07-25T203300.png
+screenshot: https://apis.io/screenshots/blassa-inc/blassa-inc-2026-07-25T203300.png
 security:
 - kind: authentication
   name: Blassa Inc Authentication

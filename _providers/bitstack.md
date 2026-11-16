@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -35,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/bitstack/refs/heads/main/rate-limits/bitstack-rate-limits.yml
+  href: https://artifacts.apis.io/bitstack/rate-limits/bitstack-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/bitstack-rate-limits.yml
@@ -53,7 +56,7 @@ common:
   type: Pricing
   url: https://www.bitstack-app.com/en/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bitstack/refs/heads/main/plans/bitstack-plans-pricing.yml
+  href: https://artifacts.apis.io/bitstack/plans/bitstack-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bitstack-plans-pricing.yml
@@ -82,17 +85,17 @@ common:
   type: Compliance
   url: https://www.bitstack-app.com/en/regulatory-documents-hub
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bitstack/refs/heads/main/conformance/bitstack-conformance.yml
+  href: https://artifacts.apis.io/bitstack/conformance/bitstack-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bitstack-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bitstack/refs/heads/main/security/bitstack-domain-security.yml
+  href: https://artifacts.apis.io/bitstack/security/bitstack-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bitstack-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bitstack/refs/heads/main/llms/bitstack-llms.txt
+  href: https://artifacts.apis.io/bitstack/llms/bitstack-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bitstack-llms.txt
@@ -129,7 +132,7 @@ plans:
 - name: Bitstack Plans Pricing
   plan_count: 7
   slug: bitstack-plans-pricing
-random_paper: 17
+random_paper: 13
 rate_limits:
 - limit_count: 0
   name: Bitstack Rate Limits
@@ -138,7 +141,7 @@ score:
   band: emerging
   composite: 24.0
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -173,14 +176,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 21.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bitstack/refs/heads/main/screenshots/bitstack-2026-09-02T144929.png
+screenshot: https://apis.io/screenshots/bitstack/bitstack-2026-09-02T144929.png
 security:
 - kind: domain-security
   name: Bitstack Domain Security

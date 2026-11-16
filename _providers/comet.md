@@ -1,15 +1,20 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
+  - rate-limits
   - security
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.0
-  scored_at: '2026-10-17'
+  score: 33.1
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://www.comet.com/opik/api/v1
@@ -247,11 +255,14 @@ apis:
   description: Workspace related resources
   name: Comet Workspaces API
   slug: comet-workspaces-api
-artifact_total: 92
+- description: 'The Comet REST API exposes read endpoints (workspace, project, experiment data), write endpoints (data submission), and Model Production Monitoring (MPM) endpoints. Authentication uses an API key via '
+  name: Comet REST API
+  slug: comet-rest-api
+- description: Opik is Comet's open-source GenAI observability product. It provides spans-based tracing, evaluations, prompt management, and dataset features over an HTTP API and Python SDK. Self-hostable.
+  name: Opik (GenAI Observability)
+  slug: opik
+artifact_total: 97
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Opik REST Agent Configs API
   slug: open-comet-agent-configs-api
@@ -380,12 +391,12 @@ collections:
   slug: open-comet-workspaces-api
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/rate-limits/comet-rate-limits.yml
+  href: https://artifacts.apis.io/comet/rate-limits/comet-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/comet-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/plans/comet-plans-pricing.yml
+  href: https://artifacts.apis.io/comet/plans/comet-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/comet-plans-pricing.yml
@@ -394,17 +405,17 @@ common:
   type: Website
   url: https://www.comet.com/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/capabilities/comet-capability-edges.yml
+  href: https://artifacts.apis.io/comet/capabilities/comet-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/comet-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/overlays/comet-opik-overlay.yaml
+  href: https://artifacts.apis.io/comet/overlays/comet-opik-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/comet-opik-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/security/comet-trust-center.yml
+  href: https://artifacts.apis.io/comet/security/comet-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/comet-trust-center.yml
@@ -413,7 +424,7 @@ common:
   type: Compliance
   url: https://trust.comet.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/security/comet-domain-security.yml
+  href: https://artifacts.apis.io/comet/security/comet-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/comet-domain-security.yml
@@ -466,42 +477,58 @@ common:
   type: StatusPage
   url: https://status.comet.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/llms/comet-llms.txt
+  href: https://artifacts.apis.io/comet/llms/comet-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/comet-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/packages/comet-packages.yml
+  href: https://artifacts.apis.io/comet/packages/comet-packages.yml
   title: ''
   type: Packages
   url: packages/comet-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/packages/comet-packages.yml
+  href: https://artifacts.apis.io/comet/packages/comet-packages.yml
   title: ''
   type: SDKs
   url: packages/comet-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/cli/comet-cli.yml
+  href: https://artifacts.apis.io/comet/cli/comet-cli.yml
   title: ''
   type: CLI
   url: cli/comet-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/mcp/comet-mcp.yml
+  href: https://artifacts.apis.io/comet/mcp/comet-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/comet-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/comet/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/changelog/comet-changelog.yml
+  href: https://artifacts.apis.io/comet/changelog/comet-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/comet-changelog.yml
+- group: start
+  title: ''
+  type: Portal
+  url: https://www.comet.com/docs/
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.comet.com/site/blog/feed/
 created: '2026-07-17'
 description: 'Comet is an enterprise AI/ML developer platform used by over 150,000 developers and organizations including Netflix, Uber, and Autodesk. Its flagship open-source product, Opik, is an LLM observability, evaluation, and optimization suite for building, testing, and monitoring generative AI applications, RAG systems, and agentic workflows — with tracing, automated LLM-as-a-judge and heuristic evaluations, prompt management and optimization, and production dashboards. Comet also provides classic MLOps tooling for experiment management, model registry, artifacts, and production monitoring. Opik exposes a full REST API, Python and TypeScript SDKs, a CLI, and an official Model Context Protocol (MCP) server, and runs on Comet Cloud, self-hosted (Docker/Kubernetes), or enterprise deployments. Sector: ai-enterprise-software.'
+finops:
+- has_sources: true
+  method: derived
+  name: Comet Finops
+  primary_unit: user
+  service_category: ''
+  slug: comet-finops
+  template: false
 image: https://cdn.comet.com/img/facebook-1200x630.png
 layout: provider
 mcp_servers:
@@ -512,10 +539,13 @@ modified: '2026-07-18'
 name: Comet
 nav: Providers
 network: true
-overview: 'Comet publishes 42 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Configs API, Agent Insights API, Agent Insights Jobs API, and 39 more. Tagged areas include Company, Ai Enterprise Software, LLM Observability, LLMOps, and MLOps.
+overview: 'Comet publishes 44 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Configs API, Agent Insights API, Agent Insights Jobs API, and 41 more. Tagged areas include Company, Ai Enterprise Software, LLM Observability, LLMOps, and MLOps.
 
 
-  Comet''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
+  The Comet catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Comet''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 22 more developer resources.'
 plans:
 - name: Comet Plans Pricing
   plan_count: 7
@@ -528,25 +558,38 @@ rate_limits:
 - limit_count: 15
   name: Comet Rate Limits
   slug: comet-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  name: Comet API Rules
+  rule_count: 57
+  severity_counts:
+    error: 37
+    hint: 0
+    info: 4
+    warn: 16
+  slug: comet-rules
 score:
   band: strong
-  composite: 62.8
+  composite: 65.3
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 61.0
+    artifact_dirs: 29
+    catalog_earned: 68.5
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 46.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -0.7
   facets:
-    access_clarity: 78.9
-    contract_governance: 4.5
+    access_clarity: 86.8
+    contract_governance: 18.2
     contract_quality: 44.0
     developer_ergonomics: 73.2
     discoverability: 75.0
     operational_transparency: 65.8
-  previous_composite: 62.7
+  previous_composite: 66.0
   provenance:
     conformance: derived
     contracts:
@@ -558,17 +601,17 @@ score:
     skills: derived
   regulatory:
     applies: true
-    matched_via: fallback
-    regime: Horizontal (data, software, accessibility, platform)
-    regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 27.3
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 33.3
-screenshot: https://raw.githubusercontent.com/api-evangelist/comet/refs/heads/main/screenshots/comet-2026-07-25T210115.png
+screenshot: https://apis.io/screenshots/comet/comet-2026-07-25T210115.png
 security:
 - kind: authentication
   name: Comet Authentication
@@ -582,6 +625,12 @@ security:
   name: Comet Trust Center
   slug: comet-trust-center
   summary_line: SOC 2, ISO 27001
+skill_count: 2
+skills:
+- name: Log and score LLM traces in Opik
+  slug: comet-log-and-evaluate-traces
+- name: Run a dataset-backed evaluation experiment in Opik
+  slug: comet-run-dataset-experiment
 slug: comet
 tags:
 - Company
@@ -595,5 +644,7 @@ tags:
 - Prompt Management
 - Agents
 - Open Source
+- Machine Learning
+- Generative AI
 website: https://www.comet.com/
 ---

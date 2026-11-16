@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/aents/refs/heads/main/security/aents-domain-security.yml
+  href: https://artifacts.apis.io/aents/security/aents-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/aents-domain-security.yml
@@ -89,17 +104,17 @@ common:
   type: GitHubOrganization
   url: https://github.com/AENTS
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/aents/refs/heads/main/plans/aents-plans-pricing.yml
+  href: https://artifacts.apis.io/aents/plans/aents-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/aents-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/aents/refs/heads/main/rate-limits/aents-rate-limits.yml
+  href: https://artifacts.apis.io/aents/rate-limits/aents-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/aents-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/aents/refs/heads/main/llms/aents-llms.txt
+  href: https://artifacts.apis.io/aents/llms/aents-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/aents-llms.txt
@@ -147,7 +162,7 @@ score:
   band: emerging
   composite: 13.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -175,14 +190,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 11.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/aents/refs/heads/main/screenshots/aents-2026-10-11T092915.png
+screenshot: https://apis.io/screenshots/aents/aents-2026-10-11T092915.png
 security:
 - kind: domain-security
   name: Aents Domain Security

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,15 +25,18 @@ agent_readiness:
     event_surface_described: unknown
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.3
-  scored_at: '2026-10-17'
+  score: 30.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -67,11 +71,8 @@ apis:
   description: Valid value enumerations used by the search engine.
   name: YGOPRODeck Reference Data API
   slug: yu-gi-oh-reference-data-api
-artifact_total: 62
+artifact_total: 61
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: YGOPRODeck Yu-Gi-Oh! Card Database Archetypes API
   slug: open-yu-gi-oh-archetypes-api
@@ -96,12 +97,12 @@ common:
   type: Blog
   url: https://ygoprodeck.com/category/format-article/news
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/yu-gi-oh/refs/heads/main/agentic-access/yu-gi-oh-agentic-access.yml
+  href: https://artifacts.apis.io/yu-gi-oh/agentic-access/yu-gi-oh-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/yu-gi-oh-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/yu-gi-oh/refs/heads/main/security/yu-gi-oh-domain-security.yml
+  href: https://artifacts.apis.io/yu-gi-oh/security/yu-gi-oh-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/yu-gi-oh-domain-security.yml
@@ -154,17 +155,17 @@ common:
   type: Tools
   url: https://github.com/ludoplex/yugioh-mcp-server
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yu-gi-oh/refs/heads/main/vocabulary/yu-gi-oh-vocabulary.yml
+  href: https://artifacts.apis.io/yu-gi-oh/vocabulary/yu-gi-oh-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/yu-gi-oh-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yu-gi-oh/refs/heads/main/json-ld/yu-gi-oh-ygoprodeck-context.jsonld
+  href: https://artifacts.apis.io/yu-gi-oh/json-ld/yu-gi-oh-ygoprodeck-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/yu-gi-oh-ygoprodeck-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/yu-gi-oh/refs/heads/main/rules/yu-gi-oh-rules.yml
+  href: https://artifacts.apis.io/yu-gi-oh/rules/yu-gi-oh-rules.yml
   title: ''
   type: SpectralRules
   url: rules/yu-gi-oh-rules.yml
@@ -326,7 +327,7 @@ overview: 'YGOPRODeck is listed with 5 APIs on the [APIs.io](https://apis.io/) n
 
 
   YGOPRODeck''s developer surface includes engineering blog, documentation, pricing, tooling, and 14 more developer resources.'
-random_paper: 3
+random_paper: 7
 rules:
 - authorship: generated
   effective_rule_count: 5
@@ -355,7 +356,7 @@ score:
   band: thin
   composite: 28.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 60.0
     catalog_earned_first_party: 0.0
     catalog_gap: 55.0
@@ -383,14 +384,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/yu-gi-oh/refs/heads/main/screenshots/yu-gi-oh-2026-06-20T201751.png
+screenshot: https://apis.io/screenshots/yu-gi-oh/yu-gi-oh-2026-06-20T201751.png
 security:
 - kind: domain-security
   name: Yu Gi Oh Domain Security

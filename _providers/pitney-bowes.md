@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.5
-  scored_at: '2026-10-17'
+  score: 24.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -87,9 +91,6 @@ apis:
 artifact_total: 25
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Pitney Bowes Shipping Address API
   slug: open-pitney-bowes-address-api
 - collection_type: open
@@ -118,17 +119,17 @@ collections:
   slug: open-pitney-bowes
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pitney-bowes/refs/heads/main/plans/pitney-bowes-plans-pricing.yml
+  href: https://artifacts.apis.io/pitney-bowes/plans/pitney-bowes-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pitney-bowes-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pitney-bowes/refs/heads/main/rate-limits/pitney-bowes-rate-limits.yml
+  href: https://artifacts.apis.io/pitney-bowes/rate-limits/pitney-bowes-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pitney-bowes-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pitney-bowes/refs/heads/main/finops/pitney-bowes-finops.yml
+  href: https://artifacts.apis.io/pitney-bowes/finops/pitney-bowes-finops.yml
   title: ''
   type: FinOps
   url: finops/pitney-bowes-finops.yml
@@ -137,27 +138,27 @@ common:
   type: Website
   url: https://pitneybowes.com
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pitney-bowes/refs/heads/main/capabilities/pitney-bowes-capability-edges.yml
+  href: https://artifacts.apis.io/pitney-bowes/capabilities/pitney-bowes-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/pitney-bowes-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pitney-bowes/refs/heads/main/agentic-access/pitney-bowes-agentic-access.yml
+  href: https://artifacts.apis.io/pitney-bowes/agentic-access/pitney-bowes-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/pitney-bowes-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pitney-bowes/refs/heads/main/security/pitney-bowes-domain-security.yml
+  href: https://artifacts.apis.io/pitney-bowes/security/pitney-bowes-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pitney-bowes-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pitney-bowes/refs/heads/main/authentication/pitney-bowes-authentication.yml
+  href: https://artifacts.apis.io/pitney-bowes/authentication/pitney-bowes-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pitney-bowes-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pitney-bowes/refs/heads/main/scopes/pitney-bowes-scopes.yml
+  href: https://artifacts.apis.io/pitney-bowes/scopes/pitney-bowes-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/pitney-bowes-scopes.yml
@@ -192,6 +193,9 @@ network: true
 overview: 'Pitney Bowes publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Address API, Manifests API, Pickups API, and 5 more. Tagged areas include Mailing, Shipping, and Fortune 1000.
 
 
+  The Pitney Bowes catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Pitney Bowes'' developer surface includes authentication, engineering blog, and 10 more developer resources.'
 plans:
 - name: Pitney Bowes Plans Pricing
@@ -213,11 +217,24 @@ press:
 - date: ''
   title: Pitney Bowes to Deploy Ambi Robotics AI-Powered ...
   url: https://www.ambirobotics.com/media/pitney-bowes-deploys-ambisort/
-random_paper: 0
+random_paper: 6
 rate_limits:
 - limit_count: 1
   name: Pitney Bowes Rate Limits
   slug: pitney-bowes-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Pitney Bowes API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: pitney-bowes-rules
 scopes:
 - name: Pitney Bowes Scopes
   scope_count: 0
@@ -225,23 +242,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: emerging
-  composite: 23.5
+  composite: 25.1
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 36.0
+    artifact_dirs: 20
+    catalog_earned: 40.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 74.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 42.6
     developer_ergonomics: 23.8
     discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 25.0
+  previous_composite: 25.1
   provenance:
     agentic_access: derived
     contracts:
@@ -255,13 +272,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pitney-bowes/refs/heads/main/screenshots/pitney-bowes-2026-06-20T191739.png
+screenshot: https://apis.io/screenshots/pitney-bowes/pitney-bowes-2026-06-20T191739.png
 security:
 - kind: authentication
   name: Pitney Bowes Authentication

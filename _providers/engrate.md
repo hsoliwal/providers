@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -9,21 +20,24 @@ agent_readiness:
     auth_clarity: served
     consent_identity: false
     delegated_identity: served
-    dry_run_mode: false
-    dynamic_client_registration: true
+    dry_run_mode: true
+    dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: true
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
-    protected_resource_metadata: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
+    protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 61.3
-  scored_at: '2026-10-17'
+  score: 55.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -123,90 +137,114 @@ apis:
   description: The Time Series API from Engrate — 3 operation(s) for time series.
   name: Engrate Time Series API
   slug: engrate-time-series-api
-artifact_total: 35
+artifact_total: 41
+asyncapis:
+- description: ''
+  name: Engrate Webhooks
+  slug: engrate-webhooks
 common:
+- group: design
+  href: https://artifacts.apis.io/engrate/asyncapi/engrate-webhooks.yml
+  title: ''
+  type: Webhooks
+  url: asyncapi/engrate-webhooks.yml
+- group: design
+  href: https://artifacts.apis.io/engrate/conventions/engrate-conventions.yml
+  title: ''
+  type: Idempotency
+  url: conventions/engrate-conventions.yml
+- group: design
+  href: https://artifacts.apis.io/engrate/conventions/engrate-conventions.yml
+  title: ''
+  type: Conventions
+  url: conventions/engrate-conventions.yml
+- group: auth
+  href: https://artifacts.apis.io/engrate/scopes/engrate-scopes.yml
+  title: ''
+  type: OAuthScopes
+  url: scopes/engrate-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/agentic-access/engrate-agentic-access.yml
+  href: https://artifacts.apis.io/engrate/agentic-access/engrate-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/engrate-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/rules/engrate-rules.yml
+  href: https://artifacts.apis.io/engrate/rules/engrate-rules.yml
   title: ''
   type: Spectral
   url: rules/engrate-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/json-ld/engrate-context.jsonld
+  href: https://artifacts.apis.io/engrate/json-ld/engrate-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/engrate-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/vocabulary/engrate-vocabulary.yml
+  href: https://artifacts.apis.io/engrate/vocabulary/engrate-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/engrate-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/engrate/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/data-model/engrate-data-model.yml
+  href: https://artifacts.apis.io/engrate/data-model/engrate-data-model.yml
   title: ''
   type: DataModel
   url: data-model/engrate-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/changelog/engrate-changelog.yml
+  href: https://artifacts.apis.io/engrate/changelog/engrate-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/engrate-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/authentication/engrate-authentication.yml
+  href: https://artifacts.apis.io/engrate/authentication/engrate-authentication.yml
   title: ''
   type: Authentication
   url: authentication/engrate-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/errors/engrate-problem-types.yml
+  href: https://artifacts.apis.io/engrate/errors/engrate-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/engrate-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/conformance/engrate-conformance.yml
+  href: https://artifacts.apis.io/engrate/conformance/engrate-conformance.yml
   title: ''
   type: Conformance
   url: conformance/engrate-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/llms/engrate-llms.txt
+  href: https://artifacts.apis.io/engrate/llms/engrate-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/engrate-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/a2a/engrate-a2a.yml
+  href: https://artifacts.apis.io/engrate/a2a/engrate-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/engrate-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/well-known/engrate-well-known.yml
+  href: https://artifacts.apis.io/engrate/well-known/engrate-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/engrate-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/hosts/engrate-hosts.yml
+  href: https://artifacts.apis.io/engrate/hosts/engrate-hosts.yml
   title: ''
   type: Hosts
   url: hosts/engrate-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/vendors/engrate-vendors.yml
+  href: https://artifacts.apis.io/engrate/vendors/engrate-vendors.yml
   title: ''
   type: Vendors
   url: vendors/engrate-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/packages/engrate-packages.yml
+  href: https://artifacts.apis.io/engrate/packages/engrate-packages.yml
   title: ''
   type: SDKs
   url: packages/engrate-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/packages/engrate-packages.yml
+  href: https://artifacts.apis.io/engrate/packages/engrate-packages.yml
   title: ''
   type: Packages
   url: packages/engrate-packages.yml
@@ -219,7 +257,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/engrate
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/engrate/refs/heads/main/security/engrate-domain-security.yml
+  href: https://artifacts.apis.io/engrate/security/engrate-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/engrate-domain-security.yml
@@ -304,41 +342,48 @@ network: true
 overview: 'Engrate publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audit Logs API, Benachrichtigung API, Betrieb API, and 15 more. Tagged areas include Company, Energy, Platform, Integration, and Markets.
 
 
-  The Engrate catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+  The Engrate catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Engrate''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, and 22 more developer resources.'
-random_paper: 16
+  Engrate''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, and 26 more developer resources.'
+random_paper: 22
 rules:
 - authorship: generated
-  effective_rule_count: 54
+  effective_rule_count: 103
   extends:
   - spectral:oas
   name: Engrate API Rules
-  rule_count: 13
+  rule_count: 62
   severity_counts:
-    error: 9
+    error: 43
     hint: 0
-    info: 2
-    warn: 2
+    info: 4
+    warn: 15
   slug: engrate-rules
+scopes:
+- name: Engrate Scopes
+  scope_count: 5
+  slug: engrate-scopes
+  summary_line: 5 scopes · clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 45.3
+  composite: 42.5
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 29
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -2.8
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
-    contract_quality: 65.0
-    developer_ergonomics: 58.9
+    contract_quality: 72.2
+    developer_ergonomics: 39.9
     discoverability: 73.2
-    operational_transparency: 21.1
+    operational_transparency: 18.4
+  previous_composite: 45.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -354,12 +399,14 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 20.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 31.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/engrate/engrate-2026-11-03T131528.png
 security:
 - kind: authentication
   name: Engrate Authentication
@@ -369,6 +416,16 @@ security:
   name: Engrate Domain Security
   slug: engrate-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: engrate-calculate-tariff-cost
+  slug: engrate-calculate-tariff-cost
+- name: engrate-create-and-validate-clearing-period
+  slug: engrate-create-and-validate-clearing-period
+- name: engrate-engr-ate-create-schedule-workflow
+  slug: engrate-engr-ate-create-schedule-workflow
+- name: engrate-engrave-create-and-retrieve-profile
+  slug: engrate-engrave-create-and-retrieve-profile
 slug: engrate
 tags:
 - Company

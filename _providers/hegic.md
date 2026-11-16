@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.6
-  scored_at: '2026-10-17'
+  score: 27.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -92,9 +98,6 @@ apis:
 artifact_total: 25
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Arbiscan Token API - HEGIC Token Accounts API
   slug: open-hegic-accounts-api
 - collection_type: open
@@ -117,32 +120,32 @@ collections:
   slug: open-hegic-tvl-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hegic/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/hegic/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hegic/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/hegic/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hegic/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/hegic/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hegic/refs/heads/main/agentic-access/hegic-agentic-access.yml
+  href: https://artifacts.apis.io/hegic/agentic-access/hegic-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hegic-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hegic/refs/heads/main/security/hegic-domain-security.yml
+  href: https://artifacts.apis.io/hegic/security/hegic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hegic-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hegic/refs/heads/main/authentication/hegic-authentication.yml
+  href: https://artifacts.apis.io/hegic/authentication/hegic-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hegic-authentication.yml
@@ -205,35 +208,51 @@ network: true
 overview: 'Hegic publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Contracts API, Fees API, and 7 more. Tagged areas include DeFi, Options Trading, Onchain, Arbitrum, and Ethereum.
 
 
+  The Hegic catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Hegic''s developer surface includes authentication, engineering blog, status page, and 12 more developer resources.'
 plans:
 - name: Plans
   plan_count: 4
   slug: plans
-random_paper: 6
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Rate Limits
   slug: rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Hegic API Rules
+  rule_count: 66
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 3
+    warn: 3
+  slug: hegic-rules
 score:
   band: thin
-  composite: 30.6
+  composite: 32.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 40.0
+    artifact_dirs: 17
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.0
   facets:
     access_clarity: 18.4
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 47.5
     developer_ergonomics: 40.5
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 36.2
+  previous_composite: 32.2
   provenance:
     agentic_access: derived
     contracts:
@@ -247,14 +266,14 @@ score:
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 20.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/hegic/refs/heads/main/screenshots/hegic-2026-06-20T182611.png
+screenshot: https://apis.io/screenshots/hegic/hegic-2026-06-20T182611.png
 security:
 - kind: authentication
   name: Hegic Authentication

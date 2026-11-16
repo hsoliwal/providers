@@ -1,13 +1,14 @@
 ---
 access_model:
-  confidence: high
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: medium
+  label: Enterprise
+  onboarding: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -121,9 +125,6 @@ apis:
 artifact_total: 36
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Airship REST Channels API
   slug: open-airship-channels-api
 - collection_type: open
@@ -158,32 +159,32 @@ collections:
   slug: open-airship
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/capabilities/airship-capability-edges.yml
+  href: https://artifacts.apis.io/airship/capabilities/airship-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/airship-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/agentic-access/airship-agentic-access.yml
+  href: https://artifacts.apis.io/airship/agentic-access/airship-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/airship-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/security/airship-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/airship/security/airship-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/airship-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/security/airship-domain-security.yml
+  href: https://artifacts.apis.io/airship/security/airship-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/airship-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/authentication/airship-authentication.yml
+  href: https://artifacts.apis.io/airship/authentication/airship-authentication.yml
   title: ''
   type: Authentication
   url: authentication/airship-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/scopes/airship-scopes.yml
+  href: https://artifacts.apis.io/airship/scopes/airship-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/airship-scopes.yml
@@ -200,17 +201,17 @@ common:
   type: Website
   url: https://www.airship.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/plans/airship-plans-pricing.yml
+  href: https://artifacts.apis.io/airship/plans/airship-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/airship-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/rate-limits/airship-rate-limits.yml
+  href: https://artifacts.apis.io/airship/rate-limits/airship-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/airship-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/finops/airship-finops.yml
+  href: https://artifacts.apis.io/airship/finops/airship-finops.yml
   title: ''
   type: FinOps
   url: finops/airship-finops.yml
@@ -233,40 +234,56 @@ network: true
 overview: 'Airship publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Push API, Segments API, Reports API, and 13 more. Tagged areas include Notification, Push, Email, Mobile, and CDP.
 
 
+  The Airship catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Airship''s developer surface includes authentication, engineering blog, and 10 more developer resources.'
 plans:
 - name: Airship Plans Pricing
   plan_count: 1
   slug: airship-plans-pricing
-random_paper: 4
+random_paper: 8
 rate_limits:
 - limit_count: 1
   name: Airship Rate Limits
   slug: airship-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Airship API Rules
+  rule_count: 49
+  severity_counts:
+    error: 47
+    hint: 0
+    info: 1
+    warn: 1
+  slug: airship-rules
 scopes:
 - name: Airship Scopes
   scope_count: 11
   slug: airship-scopes
   summary_line: 11 scopes · clientCredentials
 score:
-  band: emerging
-  composite: 24.9
+  band: thin
+  composite: 27.9
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 36.0
+    artifact_dirs: 18
+    catalog_earned: 40.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 74.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.6
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 46.3
     developer_ergonomics: 23.8
     discoverability: 57.1
-    operational_transparency: 5.3
-  previous_composite: 26.5
+    operational_transparency: 15.8
+  previous_composite: 27.9
   provenance:
     agentic_access: derived
     contracts:
@@ -280,13 +297,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 27.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/screenshots/airship-2026-06-20T171434.png
+screenshot: https://apis.io/screenshots/airship/airship-2026-06-20T171434.png
 security:
 - kind: authentication
   name: Airship Authentication

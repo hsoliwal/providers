@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,20 +26,25 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-10-17'
+  score: 32.0
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
-- description: Programmatic access to product catalogs, order data, stock levels, and shipping labels.
+- baseURL: https://api.veeqo.com
+  baseurl_source: spec
+  description: Programmatic access to product catalogs, order data, stock levels, and shipping labels.
   name: Veeqo API
-  slug: veeqo-api-2
+  slug: veeqo-api
 - baseURL: https://api.veeqo.com
   baseurl_source: declared
   description: The Current User API from Veeqo — 1 operation(s) for current user.
@@ -44,70 +60,70 @@ apis:
   description: The Orders API from Veeqo — 1 operation(s) for orders.
   name: Veeqo Orders API
   slug: veeqo-orders-api
-artifact_total: 11
+artifact_total: 13
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/plans/veeqo-plans-pricing.yml
+  href: https://artifacts.apis.io/veeqo/plans/veeqo-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/veeqo-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/rules/veeqo-rules.yml
+  href: https://artifacts.apis.io/veeqo/rules/veeqo-rules.yml
   title: ''
   type: Spectral
   url: rules/veeqo-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/json-ld/veeqo-context.jsonld
+  href: https://artifacts.apis.io/veeqo/json-ld/veeqo-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/veeqo-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/vocabulary/veeqo-vocabulary.yml
+  href: https://artifacts.apis.io/veeqo/vocabulary/veeqo-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/veeqo-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/data-model/veeqo-data-model.yml
+  href: https://artifacts.apis.io/veeqo/data-model/veeqo-data-model.yml
   title: ''
   type: DataModel
   url: data-model/veeqo-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/conformance/veeqo-conformance.yml
+  href: https://artifacts.apis.io/veeqo/conformance/veeqo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/veeqo-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/llms/veeqo-llms.txt
+  href: https://artifacts.apis.io/veeqo/llms/veeqo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/veeqo-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/well-known/veeqo-help-security.txt
+  href: https://artifacts.apis.io/veeqo/well-known/veeqo-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/veeqo-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/well-known/veeqo-well-known.yml
+  href: https://artifacts.apis.io/veeqo/well-known/veeqo-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/veeqo-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/hosts/veeqo-hosts.yml
+  href: https://artifacts.apis.io/veeqo/hosts/veeqo-hosts.yml
   title: ''
   type: Hosts
   url: hosts/veeqo-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/vendors/veeqo-vendors.yml
+  href: https://artifacts.apis.io/veeqo/vendors/veeqo-vendors.yml
   title: ''
   type: Vendors
   url: vendors/veeqo-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/packages/veeqo-packages.yml
+  href: https://artifacts.apis.io/veeqo/packages/veeqo-packages.yml
   title: ''
   type: SDKs
   url: packages/veeqo-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/packages/veeqo-packages.yml
+  href: https://artifacts.apis.io/veeqo/packages/veeqo-packages.yml
   title: ''
   type: Packages
   url: packages/veeqo-packages.yml
@@ -156,7 +172,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/veeqo
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/veeqo/refs/heads/main/security/veeqo-domain-security.yml
+  href: https://artifacts.apis.io/veeqo/security/veeqo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/veeqo-domain-security.yml
@@ -174,6 +190,14 @@ coverage:
   state: unreadable
 created: '2026-10-13'
 description: Veeqo provides a cloud‑based platform that helps online retailers manage inventory, orders, shipping, and reporting across multiple sales channels. The solution integrates with major e‑commerce marketplaces, shopping carts, and shipping carriers, offering real‑time synchronization, automated fulfillment workflows, and analytics to streamline operations and improve customer experience. Veeqo’s API enables developers to programmatically access product catalogs, order data, stock levels, and shipping labels, supporting custom integrations and extensions for businesses seeking to scale their multi‑channel commerce operations.
+finops:
+- has_sources: true
+  method: derived
+  name: Veeqo Finops
+  primary_unit: ''
+  service_category: ''
+  slug: veeqo-finops
+  template: true
 image: https://www.veeqo.com/images/image-meta-og.png?w=1200&h=630
 json_schemas:
 - name: GetCurrentUserResponse
@@ -195,7 +219,7 @@ modified: '2026-10-13'
 name: Veeqo
 nav: Providers
 network: true
-overview: 'Veeqo is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Current User API, OAuth API, Orders API, and 1 more. Tagged areas include Company, E-Commerce, Inventory, order-fulfillment, and multi-channel.
+overview: 'Veeqo is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Current User API, OAuth API, and 2 more. Tagged areas include Company, E-Commerce, Inventory, Order Fulfillment, and Multi-Channel.
 
 
   The Veeqo catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -206,6 +230,9 @@ plans:
 - name: Veeqo Plans Pricing
   plan_count: 3
   slug: veeqo-plans-pricing
+- name: Veeqo Price Estimates
+  plan_count: 0
+  slug: veeqo-price-estimates
 random_paper: 16
 rules:
 - authorship: generated
@@ -221,22 +248,24 @@ rules:
     warn: 0
   slug: veeqo-rules
 score:
-  band: developing
-  composite: 42.0
+  band: thin
+  composite: 32.0
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 21
     catalog_earned: 66.0
     catalog_earned_first_party: 12.0
     catalog_gap: 49.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.0
   facets:
-    access_clarity: 76.3
+    access_clarity: 53.9
     contract_governance: 19.7
     contract_quality: 21.7
-    developer_ergonomics: 35.7
+    developer_ergonomics: 21.4
     discoverability: 69.6
-    operational_transparency: 31.6
+    operational_transparency: 15.8
+  previous_composite: 42.0
   provenance:
     conformance: derived
     contracts:
@@ -250,12 +279,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/veeqo/veeqo-2026-11-03T145639.png
 security:
 - kind: domain-security
   name: Veeqo Domain Security
@@ -266,8 +297,8 @@ tags:
 - Company
 - E-Commerce
 - Inventory
-- order-fulfillment
-- multi-channel
+- Order Fulfillment
+- Multi-Channel
 - Software-as-a-Service
 website: https://www.veeqo.com
 ---

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 19.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 1
@@ -119,9 +125,6 @@ apis:
 artifact_total: 33
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Kakao Login REST OAuth API
   slug: open-kakao-oauth-api
 - collection_type: open
@@ -138,37 +141,37 @@ collections:
   slug: open-kakao
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kakao/refs/heads/main/plans/kakao-plans-pricing.yml
+  href: https://artifacts.apis.io/kakao/plans/kakao-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/kakao-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/kakao/refs/heads/main/rate-limits/kakao-rate-limits.yml
+  href: https://artifacts.apis.io/kakao/rate-limits/kakao-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/kakao-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/kakao/refs/heads/main/finops/kakao-finops.yml
+  href: https://artifacts.apis.io/kakao/finops/kakao-finops.yml
   title: ''
   type: FinOps
   url: finops/kakao-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/kakao/refs/heads/main/capabilities/kakao-capability-edges.yml
+  href: https://artifacts.apis.io/kakao/capabilities/kakao-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/kakao-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kakao/refs/heads/main/agentic-access/kakao-agentic-access.yml
+  href: https://artifacts.apis.io/kakao/agentic-access/kakao-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/kakao-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kakao/refs/heads/main/security/kakao-domain-security.yml
+  href: https://artifacts.apis.io/kakao/security/kakao-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kakao-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kakao/refs/heads/main/authentication/kakao-authentication.yml
+  href: https://artifacts.apis.io/kakao/authentication/kakao-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kakao-authentication.yml
@@ -255,30 +258,46 @@ network: true
 overview: 'Kakao publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including OIDC API, Service Terms API, User API, and 18 more. Tagged areas include Messaging, Maps, Navigation, Payments, and Search.
 
 
+  The Kakao catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Kakao''s developer surface includes authentication, documentation, GitHub presence, engineering blog, and 19 more developer resources.'
 plans:
 - name: Kakao Plans Pricing
   plan_count: 1
   slug: kakao-plans-pricing
-random_paper: 13
+random_paper: 15
 rate_limits:
 - limit_count: 2
   name: Kakao Rate Limits
   slug: kakao-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Kakao API Rules
+  rule_count: 61
+  severity_counts:
+    error: 57
+    hint: 0
+    info: 3
+    warn: 1
+  slug: kakao-rules
 score:
-  band: emerging
-  composite: 25.6
+  band: thin
+  composite: 27.2
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 41.0
+    artifact_dirs: 16
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.1
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 47.8
     developer_ergonomics: 33.3
     discoverability: 67.0
@@ -290,7 +309,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 31.7
+  previous_composite: 27.2
   provenance:
     agentic_access: derived
     contracts:
@@ -304,13 +323,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 10.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/kakao/refs/heads/main/screenshots/kakao-2026-06-20T183903.png
+screenshot: https://apis.io/screenshots/kakao/kakao-2026-06-20T183903.png
 security:
 - kind: authentication
   name: Kakao Authentication
@@ -329,8 +348,9 @@ tags:
 - Search
 - South Korea
 - Identity
-- Authentication
+- OAuth
 - KakaoTalk
 - LLM
+- Authentication
 website: https://www.kakaocorp.com/
 ---

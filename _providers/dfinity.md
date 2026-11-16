@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The public HTTP interface (agent/gateway API) for reading state from and submitting calls to Internet Computer canisters, consumed by the @dfinity agent libraries, the Rust ic-agent, and the icp/dfx C
@@ -77,37 +81,37 @@ common:
   type: Support
   url: https://forum.dfinity.org
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dfinity/refs/heads/main/llms/dfinity-llms.txt
+  href: https://artifacts.apis.io/dfinity/llms/dfinity-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dfinity-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dfinity/refs/heads/main/packages/dfinity-packages.yml
+  href: https://artifacts.apis.io/dfinity/packages/dfinity-packages.yml
   title: ''
   type: Packages
   url: packages/dfinity-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dfinity/refs/heads/main/packages/dfinity-packages.yml
+  href: https://artifacts.apis.io/dfinity/packages/dfinity-packages.yml
   title: ''
   type: SDKs
   url: packages/dfinity-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dfinity/refs/heads/main/cli/dfinity-cli.yml
+  href: https://artifacts.apis.io/dfinity/cli/dfinity-cli.yml
   title: ''
   type: CLI
   url: cli/dfinity-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dfinity/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/dfinity/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dfinity/refs/heads/main/security/dfinity-domain-security.yml
+  href: https://artifacts.apis.io/dfinity/security/dfinity-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dfinity-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dfinity/refs/heads/main/security/dfinity-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/dfinity/security/dfinity-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/dfinity-vulnerability-disclosure.yml
@@ -131,18 +135,18 @@ overview: 'DFINITY is listed with 1 API on the [APIs.io](https://apis.io/) netwo
 
 
   DFINITY''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, CLI, and 11 more developer resources.'
-random_paper: 11
+random_paper: 15
 score:
   band: emerging
   composite: 21.4
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
@@ -155,7 +159,7 @@ score:
     countries:
     - switzerland
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 21.3
+  previous_composite: 21.4
   provenance:
     mcp: first-party
     skills: first-party
@@ -165,14 +169,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/dfinity/refs/heads/main/screenshots/dfinity-2026-07-25T211842.png
+screenshot: https://apis.io/screenshots/dfinity/dfinity-2026-07-25T211842.png
 security:
 - kind: domain-security
   name: Dfinity Domain Security

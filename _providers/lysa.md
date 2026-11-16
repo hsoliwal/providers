@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API for Lysa platform (no machine-readable spec discovered)
@@ -32,47 +45,47 @@ apis:
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lysa/refs/heads/main/security/lysa-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/lysa/security/lysa-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/lysa-vulnerability-disclosure.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lysa/refs/heads/main/llms/lysa-llms.txt
+  href: https://artifacts.apis.io/lysa/llms/lysa-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lysa-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lysa/refs/heads/main/well-known/lysa-security.txt
+  href: https://artifacts.apis.io/lysa/well-known/lysa-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/lysa-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lysa/refs/heads/main/well-known/lysa-lysa-security.txt
+  href: https://artifacts.apis.io/lysa/well-known/lysa-lysa-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/lysa-lysa-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lysa/refs/heads/main/well-known/lysa-well-known.yml
+  href: https://artifacts.apis.io/lysa/well-known/lysa-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lysa-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lysa/refs/heads/main/hosts/lysa-hosts.yml
+  href: https://artifacts.apis.io/lysa/hosts/lysa-hosts.yml
   title: ''
   type: Hosts
   url: hosts/lysa-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lysa/refs/heads/main/vendors/lysa-vendors.yml
+  href: https://artifacts.apis.io/lysa/vendors/lysa-vendors.yml
   title: ''
   type: Vendors
   url: vendors/lysa-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lysa/refs/heads/main/security/lysa-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/lysa/security/lysa-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/lysa-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lysa/refs/heads/main/security/lysa-domain-security.yml
+  href: https://artifacts.apis.io/lysa/security/lysa-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lysa-domain-security.yml
@@ -126,28 +139,38 @@ modified: '2026-10-15'
 name: Lysa
 nav: Providers
 network: true
-overview: 'Lysa is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fintech, Investment, savings, Automation, and Sweden.
+overview: 'Lysa is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fintech, Investment, Savings, Automation, and Sweden.
 
 
   Lysa''s developer surface includes documentation, signup flow, engineering blog, and 12 more developer resources.'
-random_paper: 1
+random_paper: 9
 score:
   band: emerging
-  composite: 17.7
+  composite: 12.5
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 10
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.2
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 11.9
+    developer_ergonomics: 6.0
     discoverability: 64.3
     operational_transparency: 10.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - sweden
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - europe
+    - nordics
+  previous_composite: 17.7
   provenance:
     mcp: derived
   regulatory:
@@ -155,13 +178,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 15.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/lysa/lysa-2026-11-03T135147.png
 security:
 - kind: domain-security
   name: Lysa Domain Security
@@ -175,7 +200,7 @@ slug: lysa
 tags:
 - Fintech
 - Investment
-- savings
+- Savings
 - Automation
 - Sweden
 - Company

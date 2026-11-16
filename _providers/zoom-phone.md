@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -29,15 +29,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 53.6
-  scored_at: '2026-10-17'
+  score: 54.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 242
   human_in_the_loop: 8
@@ -1286,7 +1289,7 @@ apis:
     question: How do I take a calling plan off a Zoom Room?
   phrasing_ops: 10
   slug: zoom-phone-zoom-rooms-api
-artifact_total: 64
+artifact_total: 70
 asyncapis:
 - description: ''
   name: Zoom Phone Webhooks
@@ -1303,42 +1306,42 @@ collections:
   slug: open-zoom-phone-webhooks
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/plans/zoom-phone-plans-pricing.yml
+  href: https://artifacts.apis.io/zoom-phone/plans/zoom-phone-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/zoom-phone-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/capabilities/zoom-phone-capability-edges.yml
+  href: https://artifacts.apis.io/zoom-phone/capabilities/zoom-phone-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/zoom-phone-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/agentic-access/zoom-phone-agentic-access.yml
+  href: https://artifacts.apis.io/zoom-phone/agentic-access/zoom-phone-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/zoom-phone-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/security/zoom-phone-trust-center.yml
+  href: https://artifacts.apis.io/zoom-phone/security/zoom-phone-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/zoom-phone-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/security/zoom-phone-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/zoom-phone/security/zoom-phone-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/zoom-phone-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/security/zoom-phone-domain-security.yml
+  href: https://artifacts.apis.io/zoom-phone/security/zoom-phone-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zoom-phone-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/authentication/zoom-phone-authentication.yml
+  href: https://artifacts.apis.io/zoom-phone/authentication/zoom-phone-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zoom-phone-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/scopes/zoom-phone-scopes.yml
+  href: https://artifacts.apis.io/zoom-phone/scopes/zoom-phone-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/zoom-phone-scopes.yml
@@ -1451,113 +1454,121 @@ common:
   type: Compliance
   url: https://www.zoom.com/en/trust/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/packages/zoom-phone-packages.yml
+  href: https://artifacts.apis.io/zoom-phone/packages/zoom-phone-packages.yml
   title: ''
   type: SDKs
   url: packages/zoom-phone-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/mcp/zoom-phone-mcp.yml
+  href: https://artifacts.apis.io/zoom-phone/mcp/zoom-phone-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/zoom-phone-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/packages/zoom-phone-packages.yml
+  href: https://artifacts.apis.io/zoom-phone/packages/zoom-phone-packages.yml
   title: ''
   type: Packages
   url: packages/zoom-phone-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/well-known/zoom-phone-well-known.yml
+  href: https://artifacts.apis.io/zoom-phone/well-known/zoom-phone-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/zoom-phone-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/well-known/zoom-phone-security.txt
+  href: https://artifacts.apis.io/zoom-phone/well-known/zoom-phone-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/zoom-phone-security.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/well-known/zoom-phone-api-catalog.json
+  href: https://artifacts.apis.io/zoom-phone/well-known/zoom-phone-api-catalog.json
   title: ''
   type: APICatalog
   url: well-known/zoom-phone-api-catalog.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/mcp/zoom-phone-tool-crosswalk.yml
+  href: https://artifacts.apis.io/zoom-phone/mcp/zoom-phone-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/zoom-phone-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/llms/zoom-phone-llms.txt
+  href: https://artifacts.apis.io/zoom-phone/llms/zoom-phone-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zoom-phone-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/overlays/zoom-phone-api-overlay.yaml
+  href: https://artifacts.apis.io/zoom-phone/overlays/zoom-phone-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zoom-phone-api-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/overlays/zoom-phone-number-management-overlay.yaml
+  href: https://artifacts.apis.io/zoom-phone/overlays/zoom-phone-number-management-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zoom-phone-number-management-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/overlays/zoom-phone-webhooks-overlay.yaml
+  href: https://artifacts.apis.io/zoom-phone/overlays/zoom-phone-webhooks-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/zoom-phone-webhooks-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/conformance/zoom-phone-conformance.yml
+  href: https://artifacts.apis.io/zoom-phone/conformance/zoom-phone-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zoom-phone-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/errors/zoom-phone-problem-types.yml
+  href: https://artifacts.apis.io/zoom-phone/errors/zoom-phone-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/zoom-phone-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/lifecycle/zoom-phone-lifecycle.yml
+  href: https://artifacts.apis.io/zoom-phone/lifecycle/zoom-phone-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zoom-phone-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/changelog/zoom-phone-changelog.yml
+  href: https://artifacts.apis.io/zoom-phone/changelog/zoom-phone-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/zoom-phone-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/conventions/zoom-phone-conventions.yml
+  href: https://artifacts.apis.io/zoom-phone/conventions/zoom-phone-conventions.yml
   title: ''
   type: Conventions
   url: conventions/zoom-phone-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/rate-limits/zoom-phone-rate-limits.yml
+  href: https://artifacts.apis.io/zoom-phone/rate-limits/zoom-phone-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/zoom-phone-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/components/zoom-phone-components.yml
+  href: https://artifacts.apis.io/zoom-phone/components/zoom-phone-components.yml
   title: ''
   type: Components
   url: components/zoom-phone-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/data-model/zoom-phone-data-model.yml
+  href: https://artifacts.apis.io/zoom-phone/data-model/zoom-phone-data-model.yml
   title: ''
   type: DataModel
   url: data-model/zoom-phone-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/asyncapi/zoom-phone-webhooks.yml
+  href: https://artifacts.apis.io/zoom-phone/asyncapi/zoom-phone-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/zoom-phone-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/zoom-phone/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-25'
 description: 'Zoom Phone is the cloud PBX / UCaaS voice product of Zoom Communications, headquartered in San Jose, California, and sold worldwide from its United States home market. It replaces on-premise telephony with a cloud calling service — extensions, auto receptionists, IVR, call queues, shared line groups, voicemail, call recording, fax, emergency (E911) addressing, and SMS/MMS — delivered either on Zoom-provided PSTN service, on a customer''s own carrier through BYOC and Cloud Peering (Provider Exchange), or resold through carrier partners. In the telecom value chain Zoom Phone sits above the network as a UCaaS application layer that buys wholesale connectivity and number inventory from carriers rather than operating a mobile network, and its API posture reflects the software half of that split rather than the carrier half: the Zoom Phone API is fully self-serve, published as downloadable OpenAPI 3.0 with 391 documented operations across 46 resource groups, a 71-event webhook catalog,
   a separate Number Management API covering number allocation, BYOC numbers, ported number orders, SIP trunks and 10DLC SMS campaigns, OAuth 2.0 with fine-grained phone:* scopes, a public Postman workspace, and an official Node/TypeScript SDK. It is not a mobile network operator, is not a GSMA Open Gateway signatory, and exposes no CAMARA network APIs — no CAMARA reference was found anywhere in its developer surface.'
+finops:
+- has_sources: true
+  method: derived
+  name: Zoom Phone Finops
+  primary_unit: ''
+  service_category: ''
+  slug: zoom-phone-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
 mcp_servers:
@@ -1571,7 +1582,7 @@ network: true
 overview: 'Zoom Phone publishes 51 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Alerts API, Audio Library API, and 48 more. Tagged areas include Telecommunications, United States, UCaaS, Cloud PBX, and Voice.
 
 
-  The Zoom Phone catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Zoom Phone catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Zoom Phone''s developer surface includes authentication, documentation, pricing, SDKs, engineering blog, API reference, getting-started guide, and 49 more developer resources.'
@@ -1579,11 +1590,24 @@ plans:
 - name: Zoom Phone Plans Pricing
   plan_count: 0
   slug: zoom-phone-plans-pricing
-random_paper: 2
+random_paper: 4
 rate_limits:
 - limit_count: 8
   name: Zoom Phone Rate Limits
   slug: zoom-phone-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Zoom Phone API Rules
+  rule_count: 59
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 10
+  slug: zoom-phone-rules
 scopes:
 - name: Zoom Phone Scopes
   scope_count: 435
@@ -1591,18 +1615,18 @@ scopes:
   summary_line: 435 scopes · authorizationCode
 score:
   band: exemplar
-  composite: 67.9
+  composite: 69.5
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 49.0
+    artifact_dirs: 30
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 60.5
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 62.9
     developer_ergonomics: 73.8
     discoverability: 75.0
@@ -1614,7 +1638,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 67.9
+  previous_composite: 69.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -1631,13 +1655,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 49.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/zoom-phone/refs/heads/main/screenshots/zoom-phone-2026-08-17T080441.png
+screenshot: https://apis.io/screenshots/zoom-phone/zoom-phone-2026-08-17T080441.png
 security:
 - kind: authentication
   name: Zoom Phone Authentication
@@ -1655,6 +1679,16 @@ security:
   name: Zoom Phone Trust Center
   slug: zoom-phone-trust-center
   summary_line: SOC 2, ISO 27001, ISO 27017, ISO 27018, PCI DSS, FedRAMP, CSA STAR
+skill_count: 4
+skills:
+- name: zoom-phone-call-history-migration
+  slug: zoom-phone-call-history-migration
+- name: phone
+  slug: zoom-phone-official-phone-skill
+- name: zoom-webhooks
+  slug: zoom-phone-official-webhooks-skill
+- name: zoom-phone-provision-phone-user
+  slug: zoom-phone-provision-phone-user
 slug: zoom-phone
 tags:
 - Telecommunications

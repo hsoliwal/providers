@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: medium
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: An OAuth-protected Model Context Protocol endpoint served from the vi.co host and advertised through RFC 9728 protected resource metadata. It is the WordPress MCP adapter running on the Vi Labs corpor
@@ -32,12 +49,12 @@ apis:
 artifact_total: 8
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/security/vi-labs-trust-center.yml
+  href: https://artifacts.apis.io/vi-labs/security/vi-labs-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/vi-labs-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/security/vi-labs-domain-security.yml
+  href: https://artifacts.apis.io/vi-labs/security/vi-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vi-labs-domain-security.yml
@@ -86,62 +103,62 @@ common:
   type: Careers
   url: https://vi.co/careers/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/security/vi-labs-trust-center.yml
+  href: https://artifacts.apis.io/vi-labs/security/vi-labs-trust-center.yml
   title: ''
   type: Compliance
   url: security/vi-labs-trust-center.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/mcp/vi-labs-mcp.yml
+  href: https://artifacts.apis.io/vi-labs/mcp/vi-labs-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/vi-labs-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/well-known/vi-labs-well-known.yml
+  href: https://artifacts.apis.io/vi-labs/well-known/vi-labs-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/vi-labs-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/authentication/vi-labs-authentication.yml
+  href: https://artifacts.apis.io/vi-labs/authentication/vi-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/vi-labs-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/scopes/vi-labs-scopes.yml
+  href: https://artifacts.apis.io/vi-labs/scopes/vi-labs-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/vi-labs-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/conformance/vi-labs-conformance.yml
+  href: https://artifacts.apis.io/vi-labs/conformance/vi-labs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/vi-labs-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/conventions/vi-labs-conventions.yml
+  href: https://artifacts.apis.io/vi-labs/conventions/vi-labs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/vi-labs-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/rate-limits/vi-labs-rate-limits.yml
+  href: https://artifacts.apis.io/vi-labs/rate-limits/vi-labs-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/vi-labs-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/plans/vi-labs-plans-pricing.yml
+  href: https://artifacts.apis.io/vi-labs/plans/vi-labs-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/vi-labs-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/lifecycle/vi-labs-lifecycle.yml
+  href: https://artifacts.apis.io/vi-labs/lifecycle/vi-labs-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/vi-labs-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/packages/vi-labs-packages.yml
+  href: https://artifacts.apis.io/vi-labs/packages/vi-labs-packages.yml
   title: ''
   type: Packages
   url: packages/vi-labs-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/llms/vi-labs-llms.txt
+  href: https://artifacts.apis.io/vi-labs/llms/vi-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/vi-labs-llms.txt
@@ -166,7 +183,7 @@ plans:
 - name: Vi Labs Plans Pricing
   plan_count: 0
   slug: vi-labs-plans-pricing
-random_paper: 4
+random_paper: 14
 rate_limits:
 - limit_count: 0
   name: Vi Labs Rate Limits
@@ -180,7 +197,7 @@ score:
   band: emerging
   composite: 23.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -211,14 +228,14 @@ score:
     regime: Health
     regime_id: health
     score: 34.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/vi-labs/refs/heads/main/screenshots/vi-labs-2026-10-11T132925.png
+screenshot: https://apis.io/screenshots/vi-labs/vi-labs-2026-10-11T132925.png
 security:
 - kind: authentication
   name: Vi Labs Authentication

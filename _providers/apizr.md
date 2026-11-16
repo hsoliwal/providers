@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-10-17'
+  score: 15.1
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
 - description: API for APIZR integration platform, documented at the developer portal.
@@ -67,52 +81,52 @@ apis:
 artifact_total: 15
 common:
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apizr/refs/heads/main/rules/apizr-rules.yml
+  href: https://artifacts.apis.io/apizr/rules/apizr-rules.yml
   title: ''
   type: Spectral
   url: rules/apizr-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apizr/refs/heads/main/json-ld/apizr-context.jsonld
+  href: https://artifacts.apis.io/apizr/json-ld/apizr-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/apizr-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apizr/refs/heads/main/vocabulary/apizr-vocabulary.yml
+  href: https://artifacts.apis.io/apizr/vocabulary/apizr-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/apizr-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apizr/refs/heads/main/data-model/apizr-data-model.yml
+  href: https://artifacts.apis.io/apizr/data-model/apizr-data-model.yml
   title: ''
   type: DataModel
   url: data-model/apizr-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/apizr/refs/heads/main/changelog/apizr-changelog.yml
+  href: https://artifacts.apis.io/apizr/changelog/apizr-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/apizr-changelog.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apizr/refs/heads/main/authentication/apizr-authentication.yml
+  href: https://artifacts.apis.io/apizr/authentication/apizr-authentication.yml
   title: ''
   type: Authentication
   url: authentication/apizr-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/apizr/refs/heads/main/conformance/apizr-conformance.yml
+  href: https://artifacts.apis.io/apizr/conformance/apizr-conformance.yml
   title: ''
   type: Conformance
   url: conformance/apizr-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/apizr/refs/heads/main/llms/apizr-llms.txt
+  href: https://artifacts.apis.io/apizr/llms/apizr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/apizr-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apizr/refs/heads/main/hosts/apizr-hosts.yml
+  href: https://artifacts.apis.io/apizr/hosts/apizr-hosts.yml
   title: ''
   type: Hosts
   url: hosts/apizr-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/apizr/refs/heads/main/vendors/apizr-vendors.yml
+  href: https://artifacts.apis.io/apizr/vendors/apizr-vendors.yml
   title: ''
   type: Vendors
   url: vendors/apizr-vendors.yml
@@ -125,7 +139,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/Apizr
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/apizr/refs/heads/main/security/apizr-domain-security.yml
+  href: https://artifacts.apis.io/apizr/security/apizr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/apizr-domain-security.yml
@@ -193,7 +207,7 @@ overview: 'APIZR is listed with 8 APIs on the [APIs.io](https://apis.io/) networ
 
 
   APIZR''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, engineering blog, and 12 more developer resources.'
-random_paper: 0
+random_paper: 22
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -208,26 +222,33 @@ rules:
     warn: 1
   slug: apizr-rules
 score:
-  band: thin
-  composite: 27.5
+  band: emerging
+  composite: 22.9
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 18
     catalog_earned: 54.8
     catalog_earned_first_party: 0.0
     catalog_gap: 60.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -4.4
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
-    contract_quality: 21.4
-    developer_ergonomics: 52.4
+    contract_quality: 20.6
+    developer_ergonomics: 32.1
     discoverability: 69.6
-    operational_transparency: 21.1
+    operational_transparency: 18.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 27.3
   provenance:
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 11
       marker_coverage: 100.0
       total: 11
@@ -238,11 +259,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/apizr/apizr-2026-11-03T121018.png
 security:
 - kind: authentication
   name: Apizr Authentication

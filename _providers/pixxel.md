@@ -20,22 +20,25 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.8
-  scored_at: '2026-10-17'
-api_count: 2
+  score: 28.3
+  scored_at: '2026-11-06'
+api_count: 1
 apis:
 - baseURL: https://api.pixxel.space
   baseurl_source: declared
@@ -132,11 +135,8 @@ apis:
   description: The Workflows API from Pixxel — 3 operation(s) for workflows.
   name: Pixxel Workflows API
   slug: pixxel-workflows-api
-artifact_total: 41
+artifact_total: 44
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: stargate AOI API
   slug: open-pixxel-aoi-api
@@ -236,67 +236,67 @@ common:
   type: PrivacyPolicy
   url: https://pixxel.space/privacy-policy
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/openapi/_original/pixxel-openapi-original.json
+  href: https://artifacts.apis.io/pixxel/openapi/_original/pixxel-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/pixxel-openapi-original.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/authentication/pixxel-authentication.yml
+  href: https://artifacts.apis.io/pixxel/authentication/pixxel-authentication.yml
   title: ''
   type: Authentication
   url: authentication/pixxel-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/security/pixxel-domain-security.yml
+  href: https://artifacts.apis.io/pixxel/security/pixxel-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pixxel-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/llms/pixxel-llms.txt
+  href: https://artifacts.apis.io/pixxel/llms/pixxel-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/pixxel-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/well-known/pixxel-well-known.yml
+  href: https://artifacts.apis.io/pixxel/well-known/pixxel-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/pixxel-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/mcp/pixxel-mcp.yml
+  href: https://artifacts.apis.io/pixxel/mcp/pixxel-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/pixxel-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/overlays/pixxel-openapi-overlay.yaml
+  href: https://artifacts.apis.io/pixxel/overlays/pixxel-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/pixxel-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/conformance/pixxel-conformance.yml
+  href: https://artifacts.apis.io/pixxel/conformance/pixxel-conformance.yml
   title: ''
   type: Conformance
   url: conformance/pixxel-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/errors/pixxel-problem-types.yml
+  href: https://artifacts.apis.io/pixxel/errors/pixxel-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/pixxel-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/lifecycle/pixxel-lifecycle.yml
+  href: https://artifacts.apis.io/pixxel/lifecycle/pixxel-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/pixxel-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/conventions/pixxel-conventions.yml
+  href: https://artifacts.apis.io/pixxel/conventions/pixxel-conventions.yml
   title: ''
   type: Conventions
   url: conventions/pixxel-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/data-model/pixxel-data-model.yml
+  href: https://artifacts.apis.io/pixxel/data-model/pixxel-data-model.yml
   title: ''
   type: DataModel
   url: data-model/pixxel-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/pixxel/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -311,33 +311,49 @@ network: true
 overview: 'Pixxel publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including AOI API, Archives API, Assets API, and 16 more. Tagged areas include Company, Satellite Imagery, Earth Observation, Hyperspectral, and Geospatial.
 
 
+  The Pixxel catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Pixxel''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 16 more developer resources.'
-random_paper: 6
+random_paper: 18
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Pixxel API Rules
+  rule_count: 61
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 3
+    warn: 14
+  slug: pixxel-rules
 score:
-  band: thin
-  composite: 36.8
+  band: developing
+  composite: 39.8
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 37.0
+    artifact_dirs: 20
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.4
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
-    contract_quality: 51.2
+    contract_governance: 18.2
+    contract_quality: 56.6
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 36.7
+  previous_composite: 38.4
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 19
     mcp: derived
     skills: derived
@@ -347,13 +363,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/pixxel/refs/heads/main/screenshots/pixxel-2026-08-17T121353.png
+screenshot: https://apis.io/screenshots/pixxel/pixxel-2026-08-17T121353.png
 security:
 - kind: authentication
   name: Pixxel Authentication
@@ -363,6 +379,14 @@ security:
   name: Pixxel Domain Security
   slug: pixxel-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Run Pixxel analytics — indices, visualizations, and insights
+  slug: pixxel-analytics-and-insights
+- name: Search the Pixxel STAC archive and download assets
+  slug: pixxel-archive-search-and-download
+- name: Task and order Pixxel satellite imagery
+  slug: pixxel-task-and-order-imagery
 slug: pixxel
 tags:
 - Company

@@ -24,7 +24,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 1.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 11
 common:
@@ -77,72 +80,72 @@ common:
   type: Schema.org Vocabulary (JSON-LD)
   url: https://schema.org/version/latest/schemaorg-current-https.jsonld
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/llms/customer-database-llms.txt
+  href: https://artifacts.apis.io/customer-database/llms/customer-database-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/customer-database-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/vocabulary/customer-database-vocabulary.yml
+  href: https://artifacts.apis.io/customer-database/vocabulary/customer-database-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/customer-database-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/data-model/customer-database-data-model.yml
+  href: https://artifacts.apis.io/customer-database/data-model/customer-database-data-model.yml
   title: ''
   type: DataModel
   url: data-model/customer-database-data-model.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/json-schema/customer-record.json
+  href: https://artifacts.apis.io/customer-database/json-schema/customer-record.json
   title: ''
   type: JSONSchema
   url: json-schema/customer-record.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/json-schema/customer-contact-point.json
+  href: https://artifacts.apis.io/customer-database/json-schema/customer-contact-point.json
   title: ''
   type: JSONSchema
   url: json-schema/customer-contact-point.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/json-schema/customer-postal-address.json
+  href: https://artifacts.apis.io/customer-database/json-schema/customer-postal-address.json
   title: ''
   type: JSONSchema
   url: json-schema/customer-postal-address.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/json-schema/customer-consent-record.json
+  href: https://artifacts.apis.io/customer-database/json-schema/customer-consent-record.json
   title: ''
   type: JSONSchema
   url: json-schema/customer-consent-record.json
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/json-schema/customer-identity-link.json
+  href: https://artifacts.apis.io/customer-database/json-schema/customer-identity-link.json
   title: ''
   type: JSONSchema
   url: json-schema/customer-identity-link.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/json-structure/customer-database-structure.json
+  href: https://artifacts.apis.io/customer-database/json-structure/customer-database-structure.json
   title: ''
   type: JSONStructure
   url: json-structure/customer-database-structure.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/json-ld/customer-database-context.jsonld
+  href: https://artifacts.apis.io/customer-database/json-ld/customer-database-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/customer-database-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/rules/customer-database-jsonschema-spectral-rules.yml
+  href: https://artifacts.apis.io/customer-database/rules/customer-database-jsonschema-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/customer-database-jsonschema-spectral-rules.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/examples/customer-record-example.json
+  href: https://artifacts.apis.io/customer-database/examples/customer-record-example.json
   title: ''
   type: Examples
   url: examples/customer-record-example.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/examples/customer-consent-record-example.json
+  href: https://artifacts.apis.io/customer-database/examples/customer-consent-record-example.json
   title: ''
   type: Examples
   url: examples/customer-consent-record-example.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/examples/customer-identity-link-example.json
+  href: https://artifacts.apis.io/customer-database/examples/customer-identity-link-example.json
   title: ''
   type: Examples
   url: examples/customer-identity-link-example.json
@@ -208,7 +211,7 @@ overview: 'Customer Database is profiled on the [APIs.io](https://apis.io/) netw
 
 
   Customer Database''s developer surface includes code examples and 23 more developer resources.'
-random_paper: 10
+random_paper: 20
 rules:
 - authorship: generated
   effective_rule_count: 15
@@ -231,7 +234,7 @@ score:
     catalog_gap: 73.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -2.3
+  delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 11.4
@@ -245,21 +248,21 @@ score:
     reasons:
     - owner: catalog
       reason: no_resolvable_host
-  previous_composite: 13.0
+  previous_composite: 10.7
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 4.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/customer-database/refs/heads/main/screenshots/customer-database-2026-06-20T175347.png
+screenshot: https://apis.io/screenshots/customer-database/customer-database-2026-06-20T175347.png
 slug: customer-database
 tags:
 - Account

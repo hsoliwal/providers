@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 1.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Savvas Learning Company (formerly Pearson K12 Learning) is the successor brand to Scott Foresman and over 100 other Pearson K-12 imprints. Savvas provides digital learning platforms, curriculum conten
@@ -42,17 +46,17 @@ apis:
 artifact_total: 10
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/scott-foresman/refs/heads/main/plans/scott-foresman-plans-pricing.yml
+  href: https://artifacts.apis.io/scott-foresman/plans/scott-foresman-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/scott-foresman-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/scott-foresman/refs/heads/main/rate-limits/scott-foresman-rate-limits.yml
+  href: https://artifacts.apis.io/scott-foresman/rate-limits/scott-foresman-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/scott-foresman-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/scott-foresman/refs/heads/main/finops/scott-foresman-finops.yml
+  href: https://artifacts.apis.io/scott-foresman/finops/scott-foresman-finops.yml
   title: ''
   type: FinOps
   url: finops/scott-foresman-finops.yml
@@ -61,7 +65,7 @@ common:
   type: Blog
   url: https://www.savvas.com/company/learn-about-savvas/newsroom
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/scott-foresman/refs/heads/main/security/scott-foresman-domain-security.yml
+  href: https://artifacts.apis.io/scott-foresman/security/scott-foresman-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/scott-foresman-domain-security.yml
@@ -79,7 +83,7 @@ finops:
 - has_sources: false
   method: generated
   name: Scott Foresman Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: scott-foresman-finops
   template: true
@@ -113,7 +117,7 @@ plans:
 - name: Scott Foresman Plans Pricing
   plan_count: 3
   slug: scott-foresman-plans-pricing
-random_paper: 9
+random_paper: 21
 rate_limits:
 - limit_count: 5
   name: Scott Foresman Rate Limits
@@ -134,13 +138,13 @@ score:
   band: emerging
   composite: 16.8
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 54.7
     catalog_earned_first_party: 0.0
     catalog_gap: 60.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.1
+  delta: 0.0
   facets:
     access_clarity: 7.9
     contract_governance: 9.8
@@ -148,21 +152,21 @@ score:
     developer_ergonomics: 11.9
     discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 17.9
+  previous_composite: 16.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/scott-foresman/refs/heads/main/screenshots/scott-foresman-2026-06-20T193546.png
+screenshot: https://apis.io/screenshots/scott-foresman/scott-foresman-2026-06-20T193546.png
 security:
 - kind: domain-security
   name: Scott Foresman Domain Security

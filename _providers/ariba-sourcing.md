@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.6
-  scored_at: '2026-10-17'
+  score: 33.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -59,7 +66,7 @@ apis:
   description: Approval group membership retrieval
   name: Ariba Sourcing Groups API
   slug: ariba-sourcing-groups-api
-artifact_total: 71
+artifact_total: 70
 collections:
 - collection_type: postman
   name: Ariba Sourcing - External Approval Approval Tasks API
@@ -71,9 +78,6 @@ collections:
   name: Ariba Sourcing - External Approval Approval Tasks Groups API
   slug: postman-ariba-sourcing-groups-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Ariba Sourcing - External Approval Approval Tasks API
   slug: open-ariba-sourcing-approval-tasks-api
 - collection_type: open
@@ -84,17 +88,17 @@ collections:
   slug: open-ariba-sourcing-groups-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ariba-sourcing/refs/heads/main/plans/ariba-sourcing-plans-pricing.yml
+  href: https://artifacts.apis.io/ariba-sourcing/plans/ariba-sourcing-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ariba-sourcing-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ariba-sourcing/refs/heads/main/rate-limits/ariba-sourcing-rate-limits.yml
+  href: https://artifacts.apis.io/ariba-sourcing/rate-limits/ariba-sourcing-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ariba-sourcing-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ariba-sourcing/refs/heads/main/finops/ariba-sourcing-finops.yml
+  href: https://artifacts.apis.io/ariba-sourcing/finops/ariba-sourcing-finops.yml
   title: ''
   type: FinOps
   url: finops/ariba-sourcing-finops.yml
@@ -103,27 +107,27 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/ariba-sourcing/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ariba-sourcing/refs/heads/main/agentic-access/ariba-sourcing-agentic-access.yml
+  href: https://artifacts.apis.io/ariba-sourcing/agentic-access/ariba-sourcing-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ariba-sourcing-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ariba-sourcing/refs/heads/main/security/ariba-sourcing-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/ariba-sourcing/security/ariba-sourcing-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/ariba-sourcing-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ariba-sourcing/refs/heads/main/security/ariba-sourcing-domain-security.yml
+  href: https://artifacts.apis.io/ariba-sourcing/security/ariba-sourcing-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ariba-sourcing-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ariba-sourcing/refs/heads/main/authentication/ariba-sourcing-authentication.yml
+  href: https://artifacts.apis.io/ariba-sourcing/authentication/ariba-sourcing-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ariba-sourcing-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ariba-sourcing/refs/heads/main/scopes/ariba-sourcing-scopes.yml
+  href: https://artifacts.apis.io/ariba-sourcing/scopes/ariba-sourcing-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/ariba-sourcing-scopes.yml
@@ -160,12 +164,12 @@ common:
   type: CodeExamples
   url: https://github.com/SAP-samples/ariba-extensibility-samples
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ariba-sourcing/refs/heads/main/rules/ariba-sourcing-spectral-rules.yml
+  href: https://artifacts.apis.io/ariba-sourcing/rules/ariba-sourcing-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/ariba-sourcing-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ariba-sourcing/refs/heads/main/vocabulary/ariba-sourcing-vocabulary.yaml
+  href: https://artifacts.apis.io/ariba-sourcing/vocabulary/ariba-sourcing-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/ariba-sourcing-vocabulary.yaml
@@ -229,7 +233,7 @@ finops:
 - has_sources: false
   method: generated
   name: Ariba Sourcing Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: ariba-sourcing-finops
   template: true
@@ -338,7 +342,7 @@ plans:
 - name: Ariba Sourcing Plans Pricing
   plan_count: 3
   slug: ariba-sourcing-plans-pricing
-random_paper: 0
+random_paper: 14
 rate_limits:
 - limit_count: 5
   name: Ariba Sourcing Rate Limits
@@ -374,23 +378,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 33.6
+  composite: 34.9
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 75.0
     catalog_earned_first_party: 0.0
     catalog_gap: 40.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 27.3
     contract_quality: 30.8
     developer_ergonomics: 22.6
     discoverability: 78.6
-    operational_transparency: 10.5
-  previous_composite: 35.1
+    operational_transparency: 21.1
+  previous_composite: 34.9
   provenance:
     agentic_access: derived
     contracts:
@@ -404,13 +408,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 40.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/ariba-sourcing/refs/heads/main/screenshots/ariba-sourcing-2026-06-20T172427.png
+screenshot: https://apis.io/screenshots/ariba-sourcing/ariba-sourcing-2026-06-20T172427.png
 security:
 - kind: authentication
   name: Ariba Sourcing Authentication

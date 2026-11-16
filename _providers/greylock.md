@@ -1,7 +1,7 @@
 ---
 access_model:
   confidence: low
-  generated: '2026-07-22'
+  generated: '2026-11-06'
   label: Unknown
   method: derived
   onboarding: unknown
@@ -20,7 +20,7 @@ modified: '2026-10-06'
 name: Greylock Partners
 nav: Providers
 network: true
-random_paper: 6
+random_paper: 0
 slug: greylock
 tags:
 - Venture Capital

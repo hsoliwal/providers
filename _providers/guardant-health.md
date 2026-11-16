@@ -1,13 +1,17 @@
 ---
 access_model:
-  confidence: high
-  label: Self-serve signup
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
+  label: Enterprise · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.8
-  scored_at: '2026-10-17'
+  score: 22.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -73,9 +80,6 @@ apis:
 artifact_total: 19
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Guardant Health EMR Integration API (Illustrative Model) Orders API
   slug: open-guardant-health-orders-api
 - collection_type: open
@@ -90,32 +94,32 @@ common:
   type: BlogRSS
   url: https://www.guardanthealth.com/feed/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/capabilities/guardant-health-capability-edges.yml
+  href: https://artifacts.apis.io/guardant-health/capabilities/guardant-health-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/guardant-health-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/agentic-access/guardant-health-agentic-access.yml
+  href: https://artifacts.apis.io/guardant-health/agentic-access/guardant-health-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/guardant-health-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/security/guardant-health-trust-center.yml
+  href: https://artifacts.apis.io/guardant-health/security/guardant-health-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/guardant-health-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/security/guardant-health-domain-security.yml
+  href: https://artifacts.apis.io/guardant-health/security/guardant-health-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/guardant-health-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/authentication/guardant-health-authentication.yml
+  href: https://artifacts.apis.io/guardant-health/authentication/guardant-health-authentication.yml
   title: ''
   type: Authentication
   url: authentication/guardant-health-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/scopes/guardant-health-scopes.yml
+  href: https://artifacts.apis.io/guardant-health/scopes/guardant-health-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/guardant-health-scopes.yml
@@ -132,17 +136,17 @@ common:
   type: Documentation
   url: https://guardanthealth.com/precision-oncology/for-institutional-partners/emr-integration-services/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/plans/guardant-health-plans-pricing.yml
+  href: https://artifacts.apis.io/guardant-health/plans/guardant-health-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/guardant-health-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/rate-limits/guardant-health-rate-limits.yml
+  href: https://artifacts.apis.io/guardant-health/rate-limits/guardant-health-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/guardant-health-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/finops/guardant-health-finops.yml
+  href: https://artifacts.apis.io/guardant-health/finops/guardant-health-finops.yml
   title: ''
   type: FinOps
   url: finops/guardant-health-finops.yml
@@ -169,46 +173,62 @@ network: true
 overview: 'Guardant Health publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Orders API and Results API. Tagged areas include Healthcare, Precision Oncology, Liquid Biopsy, Genomics, and EMR Integration.
 
 
+  The Guardant Health catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Guardant Health''s developer surface includes authentication, documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Guardant Health Plans Pricing
   plan_count: 3
   slug: guardant-health-plans-pricing
-random_paper: 11
+random_paper: 17
 rate_limits:
 - limit_count: 2
   name: Guardant Health Rate Limits
   slug: guardant-health-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Guardant Health API Rules
+  rule_count: 58
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 1
+  slug: guardant-health-rules
 scopes:
 - name: Guardant Health Scopes
   scope_count: 0
   slug: guardant-health-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: thin
-  composite: 26.6
+  band: emerging
+  composite: 20.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 37.0
+    artifact_dirs: 18
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.4
+  delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
-    contract_quality: 42.2
+    contract_governance: 13.6
+    contract_quality: 11.7
     developer_ergonomics: 25.0
     discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 34.0
+  previous_composite: 20.6
   provenance:
     agentic_access: derived
     contracts:
       callable: 0.0
-      derived: 0
-      marker_coverage: 0.0
+      derived: 2
+      marker_coverage: 100.0
       total: 2
   regulatory:
     applies: true
@@ -216,13 +236,13 @@ score:
     regime: Health
     regime_id: health
     score: 26.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/guardant-health/refs/heads/main/screenshots/guardant-health-2026-06-20T182424.png
+screenshot: https://apis.io/screenshots/guardant-health/guardant-health-2026-06-20T182424.png
 security:
 - kind: authentication
   name: Guardant Health Authentication

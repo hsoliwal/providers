@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-10-17'
+  score: 23.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 5
@@ -54,11 +57,8 @@ arazzos:
 - description: Create a buyer, confirm qualification, then create a financed subscription and read its status.
   name: Capchase Qualify a Buyer and Create a Financed Subscription
   slug: capchase-buyer-to-subscription
-artifact_total: 7
+artifact_total: 9
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Capchase Pay API
   slug: open-capchase-pay-api
@@ -68,12 +68,12 @@ common:
   type: BlogRSS
   url: https://www.capchase.com/blog/rss.xml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/capchase/refs/heads/main/mcp/capchase-mcp.yml
+  href: https://artifacts.apis.io/capchase/mcp/capchase-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/capchase-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/capchase/refs/heads/main/overlays/capchase-pay-overlay.yaml
+  href: https://artifacts.apis.io/capchase/overlays/capchase-pay-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/capchase-pay-overlay.yaml
@@ -98,7 +98,7 @@ common:
   type: GettingStarted
   url: https://capchase.readme.io/docs/get-started
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/capchase/refs/heads/main/authentication/capchase-authentication.yml
+  href: https://artifacts.apis.io/capchase/authentication/capchase-authentication.yml
   title: ''
   type: Authentication
   url: authentication/capchase-authentication.yml
@@ -131,37 +131,37 @@ common:
   type: Compliance
   url: https://www.capchase.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/capchase/refs/heads/main/llms/capchase-llms.txt
+  href: https://artifacts.apis.io/capchase/llms/capchase-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/capchase-llms.txt
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/capchase/refs/heads/main/sandbox/capchase-sandbox.yml
+  href: https://artifacts.apis.io/capchase/sandbox/capchase-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/capchase-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/capchase/refs/heads/main/conventions/capchase-conventions.yml
+  href: https://artifacts.apis.io/capchase/conventions/capchase-conventions.yml
   title: ''
   type: Conventions
   url: conventions/capchase-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/capchase/refs/heads/main/lifecycle/capchase-lifecycle.yml
+  href: https://artifacts.apis.io/capchase/lifecycle/capchase-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/capchase-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/capchase/refs/heads/main/conformance/capchase-conformance.yml
+  href: https://artifacts.apis.io/capchase/conformance/capchase-conformance.yml
   title: ''
   type: Conformance
   url: conformance/capchase-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/capchase/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/capchase/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/capchase/refs/heads/main/security/capchase-domain-security.yml
+  href: https://artifacts.apis.io/capchase/security/capchase-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/capchase-domain-security.yml
@@ -176,27 +176,43 @@ network: true
 overview: 'Capchase publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Pay API. Tagged areas include Company, Fintech, Payments, Embedded Finance, and Financing.
 
 
+  The Capchase catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Capchase''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, signup flow, sandbox, and 16 more developer resources.'
-random_paper: 10
+random_paper: 8
+rules:
+- authorship: generated
+  effective_rule_count: 92
+  extends:
+  - spectral:oas
+  name: Capchase API Rules
+  rule_count: 51
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 1
+    warn: 1
+  slug: capchase-rules
 score:
   band: developing
-  composite: 40.8
+  composite: 44.7
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
+    artifact_dirs: 24
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.2
   facets:
     access_clarity: 28.9
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 47.1
-    developer_ergonomics: 47.0
+    developer_ergonomics: 55.4
     discoverability: 73.2
-    operational_transparency: 6.6
-  previous_composite: 40.8
+    operational_transparency: 10.5
+  previous_composite: 42.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -217,13 +233,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 26.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/capchase/refs/heads/main/screenshots/capchase-2026-07-25T204424.png
+screenshot: https://apis.io/screenshots/capchase/capchase-2026-07-25T204424.png
 security:
 - kind: authentication
   name: Capchase Authentication
@@ -233,6 +249,12 @@ security:
   name: Capchase Domain Security
   slug: capchase-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Qualify a buyer and create a financed subscription
+  slug: capchase-qualify-buyer-and-finance
+- name: Reconcile subscriptions and pull instalment receipts
+  slug: capchase-reconcile-subscriptions
 slug: capchase
 tags:
 - Company

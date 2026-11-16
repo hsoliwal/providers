@@ -1,4 +1,21 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +33,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: verified
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.3
-  scored_at: '2026-10-17'
+  score: 55.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -80,7 +100,7 @@ apis:
   description: The tasks API from MrScraper — 4 operation(s) for tasks.
   name: MrScraper Tasks API
   slug: mrscraper-tasks-api
-artifact_total: 29
+artifact_total: 35
 asyncapis:
 - description: ''
   name: Mrscraper Webhooks
@@ -91,62 +111,62 @@ common:
   type: DeveloperPortal
   url: https://api.app.mrscraper.com</code
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/agentic-access/mrscraper-agentic-access.yml
+  href: https://artifacts.apis.io/mrscraper/agentic-access/mrscraper-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/mrscraper-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/rate-limits/mrscraper-rate-limits.yml
+  href: https://artifacts.apis.io/mrscraper/rate-limits/mrscraper-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/mrscraper-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/plans/mrscraper-plans-pricing.yml
+  href: https://artifacts.apis.io/mrscraper/plans/mrscraper-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/mrscraper-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/rules/mrscraper-rules.yml
+  href: https://artifacts.apis.io/mrscraper/rules/mrscraper-rules.yml
   title: ''
   type: Spectral
   url: rules/mrscraper-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/json-ld/mrscraper-context.jsonld
+  href: https://artifacts.apis.io/mrscraper/json-ld/mrscraper-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/mrscraper-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/vocabulary/mrscraper-vocabulary.yml
+  href: https://artifacts.apis.io/mrscraper/vocabulary/mrscraper-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/mrscraper-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/mrscraper/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/asyncapi/mrscraper-webhooks.yml
+  href: https://artifacts.apis.io/mrscraper/asyncapi/mrscraper-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/mrscraper-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/data-model/mrscraper-data-model.yml
+  href: https://artifacts.apis.io/mrscraper/data-model/mrscraper-data-model.yml
   title: ''
   type: DataModel
   url: data-model/mrscraper-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/cli/mrscraper-cli.yml
+  href: https://artifacts.apis.io/mrscraper/cli/mrscraper-cli.yml
   title: ''
   type: CLI
   url: cli/mrscraper-cli.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/changelog/mrscraper-changelog.yml
+  href: https://artifacts.apis.io/mrscraper/changelog/mrscraper-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/mrscraper-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/conventions/mrscraper-conventions.yml
+  href: https://artifacts.apis.io/mrscraper/conventions/mrscraper-conventions.yml
   title: ''
   type: Conventions
   url: conventions/mrscraper-conventions.yml
@@ -155,67 +175,67 @@ common:
   type: Compliance
   url: https://mrscraper.com/trust
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/scopes/mrscraper-scopes.yml
+  href: https://artifacts.apis.io/mrscraper/scopes/mrscraper-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/mrscraper-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/lifecycle/mrscraper-lifecycle.yml
+  href: https://artifacts.apis.io/mrscraper/lifecycle/mrscraper-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mrscraper-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/errors/mrscraper-problem-types.yml
+  href: https://artifacts.apis.io/mrscraper/errors/mrscraper-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/mrscraper-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/conformance/mrscraper-conformance.yml
+  href: https://artifacts.apis.io/mrscraper/conformance/mrscraper-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mrscraper-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/overlays/mrscraper-scraper-service-gateway-overlay.yaml
+  href: https://artifacts.apis.io/mrscraper/overlays/mrscraper-scraper-service-gateway-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/mrscraper-scraper-service-gateway-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/llms/mrscraper-llms.txt
+  href: https://artifacts.apis.io/mrscraper/llms/mrscraper-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mrscraper-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/mcp/mrscraper-tool-crosswalk.yml
+  href: https://artifacts.apis.io/mrscraper/mcp/mrscraper-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/mrscraper-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/mcp/mrscraper-mcp.yml
+  href: https://artifacts.apis.io/mrscraper/mcp/mrscraper-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/mrscraper-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/well-known/mrscraper-well-known.yml
+  href: https://artifacts.apis.io/mrscraper/well-known/mrscraper-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/mrscraper-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/hosts/mrscraper-hosts.yml
+  href: https://artifacts.apis.io/mrscraper/hosts/mrscraper-hosts.yml
   title: ''
   type: Hosts
   url: hosts/mrscraper-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/vendors/mrscraper-vendors.yml
+  href: https://artifacts.apis.io/mrscraper/vendors/mrscraper-vendors.yml
   title: ''
   type: Vendors
   url: vendors/mrscraper-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/packages/mrscraper-packages.yml
+  href: https://artifacts.apis.io/mrscraper/packages/mrscraper-packages.yml
   title: ''
   type: SDKs
   url: packages/mrscraper-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/packages/mrscraper-packages.yml
+  href: https://artifacts.apis.io/mrscraper/packages/mrscraper-packages.yml
   title: ''
   type: Packages
   url: packages/mrscraper-packages.yml
@@ -224,17 +244,17 @@ common:
   type: StatusPage
   url: https://status.mrscraper.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/authentication/mrscraper-authentication.yml
+  href: https://artifacts.apis.io/mrscraper/authentication/mrscraper-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mrscraper-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/security/mrscraper-trust-center.yml
+  href: https://artifacts.apis.io/mrscraper/security/mrscraper-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/mrscraper-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/security/mrscraper-domain-security.yml
+  href: https://artifacts.apis.io/mrscraper/security/mrscraper-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mrscraper-domain-security.yml
@@ -288,6 +308,14 @@ common:
   url: https://app.mrscraper.com
 created: '2026-10-07'
 description: 'MrScraper is an AI-powered web scraping platform: a Scraper API (Web Renderer fetch, Scrape JSON/Markdown, screenshots, listing pages and sitemaps on api.mrscraper.com), a Platform API for creating, rerunning and managing scrapers and results (api.app.mrscraper.com/api/v1), Google SERP, residential proxies, a hosted OAuth 2.1 MCP server (mcp.mrscraper.com/mcp), a CLI with agent skills, Node, Python, LangChain and n8n SDKs, and webhooks.'
+finops:
+- has_sources: true
+  method: derived
+  name: Mrscraper Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: mrscraper-finops
+  template: false
 image: https://mrscraper.com/og.png
 json_schemas:
 - name: auth.SubscriptionAccount
@@ -339,7 +367,10 @@ plans:
 - name: Mrscraper Plans Pricing
   plan_count: 4
   slug: mrscraper-plans-pricing
-random_paper: 7
+- name: Mrscraper Price Estimates
+  plan_count: 0
+  slug: mrscraper-price-estimates
+random_paper: 15
 rate_limits:
 - limit_count: 3
   name: Mrscraper Rate Limits
@@ -363,24 +394,24 @@ scopes:
   slug: mrscraper-scopes
   summary_line: 4 scopes
 score:
-  band: exemplar
-  composite: 71.3
+  band: strong
+  composite: 58.5
   coverage:
-    artifact_dirs: 31
-    catalog_earned: 86.8
+    artifact_dirs: 34
+    catalog_earned: 89.8
     catalog_earned_first_party: 24.0
-    catalog_gap: 28.3
+    catalog_gap: 25.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.4
+  delta: -14.4
   facets:
-    access_clarity: 92.1
+    access_clarity: 73.7
     contract_governance: 35.6
     contract_quality: 50.2
-    developer_ergonomics: 78.6
+    developer_ergonomics: 50.0
     discoverability: 75.0
-    operational_transparency: 76.3
-  previous_composite: 70.9
+    operational_transparency: 57.9
+  previous_composite: 72.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -396,14 +427,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 32.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/mrscraper/refs/heads/main/screenshots/mrscraper-2026-10-11T111318.png
+screenshot: https://apis.io/screenshots/mrscraper/mrscraper-2026-10-11T111318.png
 security:
 - kind: authentication
   name: Mrscraper Authentication
@@ -417,6 +448,16 @@ security:
   name: Mrscraper Trust Center
   slug: mrscraper-trust-center
   summary_line: SOC 2, ISO 27001
+skill_count: 4
+skills:
+- name: mrscraper-fetch
+  slug: mrscraper-fetch
+- name: mrscraper-scrape
+  slug: mrscraper-scrape
+- name: mrscraper-serp
+  slug: mrscraper-serp
+- name: mrscraper
+  slug: mrscraper
 slug: mrscraper
 tags:
 - Company

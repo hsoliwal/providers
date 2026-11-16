@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/exo/refs/heads/main/security/exo-domain-security.yml
+  href: https://artifacts.apis.io/exo/security/exo-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/exo-domain-security.yml
@@ -101,42 +104,42 @@ common:
   type: Careers
   url: https://www.exo.inc/careers
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/exo/refs/heads/main/authentication/exo-authentication.yml
+  href: https://artifacts.apis.io/exo/authentication/exo-authentication.yml
   title: ''
   type: Authentication
   url: authentication/exo-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exo/refs/heads/main/conformance/exo-conformance.yml
+  href: https://artifacts.apis.io/exo/conformance/exo-conformance.yml
   title: ''
   type: Conformance
   url: conformance/exo-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/exo/refs/heads/main/lifecycle/exo-lifecycle.yml
+  href: https://artifacts.apis.io/exo/lifecycle/exo-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/exo-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/exo/refs/heads/main/changelog/exo-changelog.yml
+  href: https://artifacts.apis.io/exo/changelog/exo-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/exo-changelog.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/exo/refs/heads/main/plans/exo-plans.yml
+  href: https://artifacts.apis.io/exo/plans/exo-plans.yml
   title: ''
   type: Plans
   url: plans/exo-plans.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/exo/refs/heads/main/llms/exo-llms.txt
+  href: https://artifacts.apis.io/exo/llms/exo-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/exo-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/exo/refs/heads/main/events/exo-iris-activity-events.yml
+  href: https://artifacts.apis.io/exo/events/exo-iris-activity-events.yml
   title: ''
   type: EventCatalog
   url: events/exo-iris-activity-events.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/exo/refs/heads/main/security/exo-trust-center.yml
+  href: https://artifacts.apis.io/exo/security/exo-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/exo-trust-center.yml
@@ -156,12 +159,12 @@ plans:
 - name: Exo Plans
   plan_count: 11
   slug: exo-plans
-random_paper: 2
+random_paper: 20
 score:
   band: thin
   composite: 36.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -184,14 +187,14 @@ score:
     regime: Health
     regime_id: health
     score: 22.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/exo/refs/heads/main/screenshots/exo-2026-08-07T165307.png
+screenshot: https://apis.io/screenshots/exo/exo-2026-08-07T165307.png
 security:
 - kind: authentication
   name: Exo Authentication

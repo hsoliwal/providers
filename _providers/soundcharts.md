@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: true
   try_now: true
 agent_readiness:
@@ -26,7 +30,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
@@ -34,7 +41,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -92,9 +99,6 @@ apis:
 artifact_total: 27
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Soundcharts Album API
   slug: open-soundcharts-album-api
 - collection_type: open
@@ -130,22 +134,22 @@ common:
   type: Blog
   url: https://soundcharts.com/en/blog
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/soundcharts/refs/heads/main/capabilities/soundcharts-capability-edges.yml
+  href: https://artifacts.apis.io/soundcharts/capabilities/soundcharts-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/soundcharts-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/soundcharts/refs/heads/main/agentic-access/soundcharts-agentic-access.yml
+  href: https://artifacts.apis.io/soundcharts/agentic-access/soundcharts-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/soundcharts-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/soundcharts/refs/heads/main/security/soundcharts-domain-security.yml
+  href: https://artifacts.apis.io/soundcharts/security/soundcharts-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/soundcharts-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/soundcharts/refs/heads/main/authentication/soundcharts-authentication.yml
+  href: https://artifacts.apis.io/soundcharts/authentication/soundcharts-authentication.yml
   title: ''
   type: Authentication
   url: authentication/soundcharts-authentication.yml
@@ -166,17 +170,17 @@ common:
   type: Documentation
   url: https://developers.soundcharts.com/api/v2/doc
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/soundcharts/refs/heads/main/plans/soundcharts-plans-pricing.yml
+  href: https://artifacts.apis.io/soundcharts/plans/soundcharts-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/soundcharts-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/soundcharts/refs/heads/main/rate-limits/soundcharts-rate-limits.yml
+  href: https://artifacts.apis.io/soundcharts/rate-limits/soundcharts-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/soundcharts-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/soundcharts/refs/heads/main/finops/soundcharts-finops.yml
+  href: https://artifacts.apis.io/soundcharts/finops/soundcharts-finops.yml
   title: ''
   type: FinOps
   url: finops/soundcharts-finops.yml
@@ -203,35 +207,51 @@ network: true
 overview: 'Soundcharts publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Album API, Artist API, Chart API, and 6 more. Tagged areas include Music, Analytics, Market Intelligence, Metadata, and Streaming.
 
 
+  The Soundcharts catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Soundcharts'' developer surface includes engineering blog, authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Soundcharts Plans Pricing
   plan_count: 4
   slug: soundcharts-plans-pricing
-random_paper: 10
+random_paper: 22
 rate_limits:
 - limit_count: 3
   name: Soundcharts Rate Limits
   slug: soundcharts-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Soundcharts API Rules
+  rule_count: 62
+  severity_counts:
+    error: 58
+    hint: 0
+    info: 1
+    warn: 3
+  slug: soundcharts-rules
 score:
   band: thin
-  composite: 28.1
+  composite: 29.7
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 43.0
+    artifact_dirs: 18
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.8
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 49.5
     developer_ergonomics: 32.1
     discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 35.9
+  previous_composite: 29.7
   provenance:
     agentic_access: derived
     contracts:
@@ -246,14 +266,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/soundcharts/refs/heads/main/screenshots/soundcharts-2026-09-02T160241.png
+screenshot: https://apis.io/screenshots/soundcharts/soundcharts-2026-09-02T160241.png
 security:
 - kind: authentication
   name: Soundcharts Authentication

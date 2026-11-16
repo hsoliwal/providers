@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -45,12 +49,12 @@ common:
   type: BlogRSS
   url: https://honehq.com/feed/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hone/refs/heads/main/security/hone-trust-center.yml
+  href: https://artifacts.apis.io/hone/security/hone-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/hone-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hone/refs/heads/main/security/hone-domain-security.yml
+  href: https://artifacts.apis.io/hone/security/hone-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hone-domain-security.yml
@@ -83,7 +87,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/honehq
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hone/refs/heads/main/llms/hone-llms.txt
+  href: https://artifacts.apis.io/hone/llms/hone-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hone-llms.txt
@@ -127,18 +131,18 @@ overview: 'Hone is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 
 
   Hone''s developer surface includes engineering blog, documentation, support, pricing, signup flow, and 14 more developer resources.'
-random_paper: 8
+random_paper: 18
 score:
   band: emerging
   composite: 23.9
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 60.5
     contract_governance: 0.0
@@ -153,21 +157,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 23.8
+  previous_composite: 23.9
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/hone/refs/heads/main/screenshots/hone-2026-07-25T221353.png
+screenshot: https://apis.io/screenshots/hone/hone-2026-07-25T221353.png
 security:
 - kind: domain-security
   name: Hone Domain Security

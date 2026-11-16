@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-10-17'
+  score: 16.9
+  scored_at: '2026-11-06'
 api_count: 4
 apis:
 - description: Copy.ai API provides endpoints for AI‑generated content creation and related services.
@@ -44,44 +58,44 @@ apis:
   description: The Workflow API from Copy.ai — 3 operation(s) for workflow.
   name: Copy.ai Workflow API
   slug: copyai-workflow-api
-artifact_total: 16
+artifact_total: 18
 asyncapis:
 - description: ''
   name: Copyai Webhooks
   slug: copyai-webhooks
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/plans/copyai-plans-pricing.yml
+  href: https://artifacts.apis.io/copyai/plans/copyai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/copyai-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/rules/copyai-rules.yml
+  href: https://artifacts.apis.io/copyai/rules/copyai-rules.yml
   title: ''
   type: Spectral
   url: rules/copyai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/json-ld/copyai-context.jsonld
+  href: https://artifacts.apis.io/copyai/json-ld/copyai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/copyai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/vocabulary/copyai-vocabulary.yml
+  href: https://artifacts.apis.io/copyai/vocabulary/copyai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/copyai-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/asyncapi/copyai-webhooks.yml
+  href: https://artifacts.apis.io/copyai/asyncapi/copyai-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/copyai-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/data-model/copyai-data-model.yml
+  href: https://artifacts.apis.io/copyai/data-model/copyai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/copyai-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/changelog/copyai-changelog.yml
+  href: https://artifacts.apis.io/copyai/changelog/copyai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/copyai-changelog.yml
@@ -90,32 +104,32 @@ common:
   type: Compliance
   url: https://www.copy.ai/security
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/conformance/copyai-conformance.yml
+  href: https://artifacts.apis.io/copyai/conformance/copyai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/copyai-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/llms/copyai-llms.txt
+  href: https://artifacts.apis.io/copyai/llms/copyai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/copyai-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/well-known/copyai-status-security.txt
+  href: https://artifacts.apis.io/copyai/well-known/copyai-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/copyai-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/well-known/copyai-well-known.yml
+  href: https://artifacts.apis.io/copyai/well-known/copyai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/copyai-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/hosts/copyai-hosts.yml
+  href: https://artifacts.apis.io/copyai/hosts/copyai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/copyai-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/vendors/copyai-vendors.yml
+  href: https://artifacts.apis.io/copyai/vendors/copyai-vendors.yml
   title: ''
   type: Vendors
   url: vendors/copyai-vendors.yml
@@ -152,12 +166,12 @@ common:
   type: GettingStarted
   url: https://support.fullcast.com/docs/educational-resources
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/security/copyai-trust-center.yml
+  href: https://artifacts.apis.io/copyai/security/copyai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/copyai-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/security/copyai-domain-security.yml
+  href: https://artifacts.apis.io/copyai/security/copyai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/copyai-domain-security.yml
@@ -200,6 +214,14 @@ coverage:
   state: unreadable
 created: '2026-10-10'
 description: Copy.ai provides AI‑powered content generation, workflow automation, and marketing tools for businesses. Its platform offers copy generation, AI‑image captioning, workflow templates, and integrations that help teams create sales, marketing, and operational content at scale. The service includes a suite of AI agents, customizable brand voice, and data‑driven insights, positioning it as a comprehensive solution for modern GTM teams.
+finops:
+- has_sources: true
+  method: derived
+  name: Copyai Finops
+  primary_unit: seat
+  service_category: ''
+  slug: copyai-finops
+  template: false
 image: https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/67111b6951504ebf1467be96_6708d064807b31c351b41284_share-og-image%20(1)-min.png
 json_schemas:
 - name: GetWorkflowWorkflowidRunRunidResponse
@@ -241,7 +263,10 @@ plans:
 - name: Copyai Plans Pricing
   plan_count: 5
   slug: copyai-plans-pricing
-random_paper: 7
+- name: Copyai Price Estimates
+  plan_count: 0
+  slug: copyai-price-estimates
+random_paper: 21
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -257,21 +282,23 @@ rules:
   slug: copyai-rules
 score:
   band: developing
-  composite: 51.8
+  composite: 40.8
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 72.8
+    artifact_dirs: 22
+    catalog_earned: 75.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 42.3
+    catalog_gap: 39.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -12.6
   facets:
-    access_clarity: 92.1
+    access_clarity: 73.7
     contract_governance: 35.6
     contract_quality: 32.0
-    developer_ergonomics: 35.7
-    discoverability: 71.4
-    operational_transparency: 50.0
+    developer_ergonomics: 17.9
+    discoverability: 70.5
+    operational_transparency: 28.9
+  previous_composite: 53.4
   provenance:
     conformance: first-party
     contracts:
@@ -285,12 +312,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 21.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 15.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/copyai/copyai-2026-11-03T125310.png
 security:
 - kind: domain-security
   name: Copyai Domain Security

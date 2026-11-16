@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
   public: true
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +31,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +42,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 48.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
 - description: The Sui full-node JSON-RPC API (OpenRPC 1.2.6) for reading objects, coins, balances, events, checkpoints, dynamic fields, and system state, and for dry-running/executing transaction blocks. 56 methods
@@ -46,12 +54,35 @@ apis:
 - description: The Sui full-node gRPC API (Protobuf, sui.rpc.v2) exposing LedgerService, StateService, TransactionExecutionService, MovePackageService, SignatureVerificationService, and SubscriptionService for high-
   name: Sui gRPC API
   slug: sui-grpc-api
-artifact_total: 8
+artifact_total: 9
 asyncapis:
 - description: ''
   name: Mysten Labs Subscriptions
   slug: mysten-labs-subscriptions
 common:
+- group: other
+  href: https://artifacts.apis.io/mysten-labs/hosts/mysten-labs-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/mysten-labs-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/mysten-labs/integrations/mysten-labs-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/mysten-labs-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/mysten-labs/vendors/mysten-labs-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/mysten-labs-vendors.yml
+- group: commercial
+  title: ''
+  type: PrivacyPolicy
+  url: https://www.mystenlabs.com/privacy-policy
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://www.mystenlabs.com/news
 - group: company
   title: ''
   type: Blog
@@ -89,102 +120,97 @@ common:
   type: StatusPage
   url: https://status.sui.io
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/llms/mysten-labs-llms.txt
+  href: https://artifacts.apis.io/mysten-labs/llms/mysten-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/mysten-labs-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/well-known/mysten-labs-well-known.yml
+  href: https://artifacts.apis.io/mysten-labs/well-known/mysten-labs-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/mysten-labs-well-known.yml
-- group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/well-known/mysten-labs-api-catalog.json
-  title: ''
-  type: APICatalog
-  url: well-known/mysten-labs-api-catalog.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/packages/mysten-labs-packages.yml
+  href: https://artifacts.apis.io/mysten-labs/packages/mysten-labs-packages.yml
   title: ''
   type: Packages
   url: packages/mysten-labs-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/packages/mysten-labs-packages.yml
+  href: https://artifacts.apis.io/mysten-labs/packages/mysten-labs-packages.yml
   title: ''
   type: SDKs
   url: packages/mysten-labs-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/mcp/mysten-labs-mcp.yml
+  href: https://artifacts.apis.io/mysten-labs/mcp/mysten-labs-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/mysten-labs-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/mysten-labs/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/grpc/sui/rpc/v2/ledger_service.proto
+  href: https://artifacts.apis.io/mysten-labs/grpc/sui/rpc/v2/ledger_service.proto
   title: ''
   type: Protobuf
   url: grpc/sui/rpc/v2/ledger_service.proto
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/conformance/mysten-labs-conformance.yml
+  href: https://artifacts.apis.io/mysten-labs/conformance/mysten-labs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/mysten-labs-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/authentication/mysten-labs-authentication.yml
+  href: https://artifacts.apis.io/mysten-labs/authentication/mysten-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/mysten-labs-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/lifecycle/mysten-labs-lifecycle.yml
+  href: https://artifacts.apis.io/mysten-labs/lifecycle/mysten-labs-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/mysten-labs-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/lifecycle/mysten-labs-lifecycle.yml
+  href: https://artifacts.apis.io/mysten-labs/lifecycle/mysten-labs-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/mysten-labs-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/changelog/mysten-labs-changelog.yml
+  href: https://artifacts.apis.io/mysten-labs/changelog/mysten-labs-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/mysten-labs-changelog.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/cli/mysten-labs-cli.yml
+  href: https://artifacts.apis.io/mysten-labs/cli/mysten-labs-cli.yml
   title: ''
   type: CLI
   url: cli/mysten-labs-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/conventions/mysten-labs-conventions.yml
+  href: https://artifacts.apis.io/mysten-labs/conventions/mysten-labs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/mysten-labs-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/errors/mysten-labs-error-codes.yml
+  href: https://artifacts.apis.io/mysten-labs/errors/mysten-labs-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/mysten-labs-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/data-model/mysten-labs-data-model.yml
+  href: https://artifacts.apis.io/mysten-labs/data-model/mysten-labs-data-model.yml
   title: ''
   type: DataModel
   url: data-model/mysten-labs-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/asyncapi/mysten-labs-subscriptions.yml
+  href: https://artifacts.apis.io/mysten-labs/asyncapi/mysten-labs-subscriptions.yml
   title: ''
   type: Webhooks
   url: asyncapi/mysten-labs-subscriptions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/security/mysten-labs-domain-security.yml
+  href: https://artifacts.apis.io/mysten-labs/security/mysten-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/mysten-labs-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/security/mysten-labs-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/mysten-labs/security/mysten-labs-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/mysten-labs-vulnerability-disclosure.yml
@@ -193,12 +219,12 @@ common:
   type: Security
   url: https://github.com/MystenLabs/sui/blob/main/SECURITY.md
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/sandbox/mysten-labs-sandbox.yml
+  href: https://artifacts.apis.io/mysten-labs/sandbox/mysten-labs-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/mysten-labs-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/components/mysten-labs-components.yml
+  href: https://artifacts.apis.io/mysten-labs/components/mysten-labs-components.yml
   title: ''
   type: Components
   url: components/mysten-labs-components.yml
@@ -220,27 +246,27 @@ overview: 'Mysten Labs is listed with 3 APIs on the [APIs.io](https://apis.io/) 
   The Mysten Labs catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Mysten Labs'' developer surface includes engineering blog, documentation, API reference, getting-started guide, authentication, changelog, CLI, and 25 more developer resources.'
-random_paper: 13
+  Mysten Labs'' developer surface includes engineering blog, documentation, API reference, getting-started guide, authentication, changelog, CLI, and 29 more developer resources.'
+random_paper: 7
 score:
   band: developing
-  composite: 43.0
+  composite: 45.9
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 27
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 2.9
   facets:
-    access_clarity: 0.0
+    access_clarity: 10.5
     contract_governance: 4.5
     contract_quality: 39.0
     developer_ergonomics: 78.6
-    discoverability: 80.0
+    discoverability: 81.7
     operational_transparency: 60.5
-  previous_composite: 42.9
+  previous_composite: 43.0
   provenance:
     conformance: derived
     mcp: first-party
@@ -250,15 +276,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 22.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 26.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/mysten-labs/refs/heads/main/screenshots/mysten-labs-2026-08-07T184544.png
+screenshot: https://apis.io/screenshots/mysten-labs/mysten-labs-2026-08-07T184544.png
 security:
 - kind: authentication
   name: Mysten Labs Authentication
@@ -272,6 +298,10 @@ security:
   name: Mysten Labs Vulnerability Disclosure
   slug: mysten-labs-vulnerability-disclosure
   summary_line: contact published
+skill_count: 1
+skills:
+- name: accessing-data
+  slug: mysten-labs-accessing-data
 slug: mysten-labs
 tags:
 - Company

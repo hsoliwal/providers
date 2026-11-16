@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 4
 common:
@@ -98,42 +102,42 @@ common:
   type: Compliance
   url: https://www.labster.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/labster/refs/heads/main/security/labster-trust-center.yml
+  href: https://artifacts.apis.io/labster/security/labster-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/labster-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/labster/refs/heads/main/security/labster-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/labster/security/labster-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/labster-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/labster/refs/heads/main/security/labster-domain-security.yml
+  href: https://artifacts.apis.io/labster/security/labster-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/labster-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/labster/refs/heads/main/authentication/labster-authentication.yml
+  href: https://artifacts.apis.io/labster/authentication/labster-authentication.yml
   title: ''
   type: Authentication
   url: authentication/labster-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/labster/refs/heads/main/conformance/labster-conformance.yml
+  href: https://artifacts.apis.io/labster/conformance/labster-conformance.yml
   title: ''
   type: Conformance
   url: conformance/labster-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/labster/refs/heads/main/packages/labster-packages.yml
+  href: https://artifacts.apis.io/labster/packages/labster-packages.yml
   title: ''
   type: Packages
   url: packages/labster-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/labster/refs/heads/main/lifecycle/labster-lifecycle.yml
+  href: https://artifacts.apis.io/labster/lifecycle/labster-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/labster-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/labster/refs/heads/main/llms/labster-llms.txt
+  href: https://artifacts.apis.io/labster/llms/labster-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/labster-llms.txt
@@ -150,12 +154,12 @@ overview: 'Labster is profiled on the [APIs.io](https://apis.io/) network. Tagge
 
 
   Labster''s developer surface includes documentation, support, engineering blog, pricing, signup flow, authentication, and 17 more developer resources.'
-random_paper: 1
+random_paper: 5
 score:
   band: thin
   composite: 29.8
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -178,14 +182,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 35.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/labster/refs/heads/main/screenshots/labster-2026-07-25T224423.png
+screenshot: https://apis.io/screenshots/labster/labster-2026-07-25T224423.png
 security:
 - kind: authentication
   name: Labster Authentication

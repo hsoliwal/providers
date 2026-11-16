@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 1.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/jack-in-the-box/refs/heads/main/security/jack-in-the-box-domain-security.yml
+  href: https://artifacts.apis.io/jack-in-the-box/security/jack-in-the-box-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/jack-in-the-box-domain-security.yml
@@ -94,17 +98,17 @@ common:
   type: SECFilings
   url: https://investors.jackinthebox.com/financials/sec-filings
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jack-in-the-box/refs/heads/main/json-ld/jack-in-the-box-context.jsonld
+  href: https://artifacts.apis.io/jack-in-the-box/json-ld/jack-in-the-box-context.jsonld
   title: ''
   type: JSONLDContext
   url: json-ld/jack-in-the-box-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/jack-in-the-box/refs/heads/main/vocabulary/jack-in-the-box-vocabulary.yml
+  href: https://artifacts.apis.io/jack-in-the-box/vocabulary/jack-in-the-box-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/jack-in-the-box-vocabulary.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/jack-in-the-box/refs/heads/main/examples/jack-in-the-box-restaurant-menu-item-example.json
+  href: https://artifacts.apis.io/jack-in-the-box/examples/jack-in-the-box-restaurant-menu-item-example.json
   title: Menu Item Example
   type: Examples
   url: examples/jack-in-the-box-restaurant-menu-item-example.json
@@ -132,12 +136,12 @@ overview: 'Jack in the Box is profiled on the [APIs.io](https://apis.io/) networ
 
 
   Jack in the Box''s developer surface includes YouTube channel, code examples, and 15 more developer resources.'
-random_paper: 1
+random_paper: 17
 score:
   band: emerging
   composite: 11.5
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 42.5
     catalog_earned_first_party: 0.0
     catalog_gap: 72.5
@@ -165,14 +169,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 10.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/jack-in-the-box/refs/heads/main/screenshots/jack-in-the-box-2026-06-20T183649.png
+screenshot: https://apis.io/screenshots/jack-in-the-box/jack-in-the-box-2026-06-20T183649.png
 security:
 - kind: domain-security
   name: Jack In The Box Domain Security

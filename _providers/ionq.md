@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: partial
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.0
-  scored_at: '2026-10-17'
+  score: 29.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -63,22 +69,12 @@ apis:
   description: The Jobs API from IonQ — 11 operation(s) for jobs.
   name: IonQ Jobs API
   slug: ionq-jobs-api
-- baseURL: https://api.ionq.co/v0.4
+- baseURL: https://api.ionq.co/v0.3
   baseurl_source: declared
-  description: The Sessions API from IonQ — 4 operation(s) for sessions.
-  name: IonQ Sessions API
-  slug: ionq-sessions-api
-- baseURL: https://api.ionq.co/v0.4
-  baseurl_source: declared
-  description: The usage API from IonQ — 1 operation(s) for usage.
-  name: IonQ Usage API
-  slug: ionq-usage-api
-- baseURL: https://api.ionq.co/v0.4
-  baseurl_source: declared
-  description: The whoami API from IonQ — 1 operation(s) for whoami.
-  name: IonQ Whoami API
-  slug: ionq-whoami-api
-artifact_total: 55
+  description: A **calibration** is a snapshot of the IonQ platform's performance at a moment in time. While our computers are continuously calibrated moment to moment, we periodically take measurements of gate fide
+  name: IonQ Calibrations API
+  slug: ionq-calibrations-api
+artifact_total: 52
 collections:
 - collection_type: postman
   name: IonQ Cloud Platform backends API
@@ -98,9 +94,6 @@ collections:
 - collection_type: postman
   name: IonQ Cloud Platform backends whoami API
   slug: postman-ionq-whoami-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: IonQ Cloud Platform backends API
   slug: open-ionq-backends-api
@@ -132,17 +125,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/ionq/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ionq/refs/heads/main/agentic-access/ionq-agentic-access.yml
+  href: https://artifacts.apis.io/ionq/agentic-access/ionq-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/ionq-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionq/refs/heads/main/security/ionq-domain-security.yml
+  href: https://artifacts.apis.io/ionq/security/ionq-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ionq-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ionq/refs/heads/main/authentication/ionq-authentication.yml
+  href: https://artifacts.apis.io/ionq/authentication/ionq-authentication.yml
   title: ''
   type: Authentication
   url: authentication/ionq-authentication.yml
@@ -395,17 +388,17 @@ common:
   type: YouTube
   url: https://www.youtube.com/@ionq_inc
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ionq/refs/heads/main/plans/ionq-plans-pricing.yml
+  href: https://artifacts.apis.io/ionq/plans/ionq-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ionq-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/ionq/refs/heads/main/rate-limits/ionq-rate-limits.yml
+  href: https://artifacts.apis.io/ionq/rate-limits/ionq-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/ionq-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ionq/refs/heads/main/finops/ionq-finops.yml
+  href: https://artifacts.apis.io/ionq/finops/ionq-finops.yml
   title: ''
   type: FinOps
   url: finops/ionq-finops.yml
@@ -471,7 +464,7 @@ modified: '2026-05-24'
 name: IonQ
 nav: Providers
 network: true
-overview: 'IonQ publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Backends API, Characterizations API, Jobs API, and 4 more. Tagged areas include Quantum Computing, Trapped Ion, QPU, ARIA, and Forte.
+overview: 'IonQ publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Backends API, Characterizations API, Jobs API, and 2 more. Tagged areas include Quantum Computing, Trapped Ion, QPU, ARIA, and Forte.
 
 
   The IonQ catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -482,7 +475,7 @@ plans:
 - name: Ionq Plans Pricing
   plan_count: 4
   slug: ionq-plans-pricing
-random_paper: 21
+random_paper: 7
 rate_limits:
 - limit_count: 0
   name: Ionq Rate Limits
@@ -513,19 +506,19 @@ rules:
   slug: ionq-rules
 score:
   band: developing
-  composite: 51.1
+  composite: 52.4
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 61.5
     catalog_earned_first_party: 0.0
     catalog_gap: 53.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.6
+  delta: 0.5
   facets:
     access_clarity: 42.1
     contract_governance: 13.6
-    contract_quality: 61.5
+    contract_quality: 66.5
     developer_ergonomics: 67.9
     discoverability: 66.1
     operational_transparency: 36.8
@@ -536,27 +529,27 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 56.7
+  previous_composite: 51.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 6
+      marker_coverage: 36.4
+      total: 11
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/ionq/refs/heads/main/screenshots/ionq-2026-06-20T183533.png
+screenshot: https://apis.io/screenshots/ionq/ionq-2026-06-20T183533.png
 security:
 - kind: authentication
   name: Ionq Authentication

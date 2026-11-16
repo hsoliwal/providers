@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Kodem platform API. The service is reachable at https://api.kodemsecurity.com and is fully authenticated — every path returns HTTP 401 with a JSON {"detail":"Unauthorized"} envelope until a creden
@@ -83,37 +86,37 @@ common:
   type: StatusPage
   url: https://status.kodemsecurity.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kodem/refs/heads/main/conformance/kodem-conformance.yml
+  href: https://artifacts.apis.io/kodem/conformance/kodem-conformance.yml
   title: ''
   type: Compliance
   url: conformance/kodem-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kodem/refs/heads/main/llms/kodem-llms.txt
+  href: https://artifacts.apis.io/kodem/llms/kodem-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/kodem-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/kodem/refs/heads/main/well-known/kodem-well-known.yml
+  href: https://artifacts.apis.io/kodem/well-known/kodem-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/kodem-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kodem/refs/heads/main/authentication/kodem-authentication.yml
+  href: https://artifacts.apis.io/kodem/authentication/kodem-authentication.yml
   title: ''
   type: Authentication
   url: authentication/kodem-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kodem/refs/heads/main/conformance/kodem-conformance.yml
+  href: https://artifacts.apis.io/kodem/conformance/kodem-conformance.yml
   title: ''
   type: Conformance
   url: conformance/kodem-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/kodem/refs/heads/main/lifecycle/kodem-lifecycle.yml
+  href: https://artifacts.apis.io/kodem/lifecycle/kodem-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/kodem-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/kodem/refs/heads/main/security/kodem-domain-security.yml
+  href: https://artifacts.apis.io/kodem/security/kodem-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/kodem-domain-security.yml
@@ -134,13 +137,13 @@ score:
   band: emerging
   composite: 21.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
@@ -148,7 +151,7 @@ score:
     developer_ergonomics: 19.0
     discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 21.6
+  previous_composite: 21.7
   provenance:
     conformance: first-party
   regulatory:
@@ -157,14 +160,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 25.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/kodem/refs/heads/main/screenshots/kodem-2026-07-25T224243.png
+screenshot: https://apis.io/screenshots/kodem/kodem-2026-07-25T224243.png
 security:
 - kind: authentication
   name: Kodem Authentication

@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,7 +27,10 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
@@ -34,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://ps.pndsn.com
@@ -56,7 +60,7 @@ common:
   type: Website
   url: https://www.pubnub.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/pubnub/refs/heads/main/security/pubnub-domain-security.yml
+  href: https://artifacts.apis.io/pubnub/security/pubnub-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/pubnub-domain-security.yml
@@ -89,17 +93,17 @@ common:
   type: StatusPage
   url: https://status.pubnub.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pubnub/refs/heads/main/plans/pubnub-plans-pricing.yml
+  href: https://artifacts.apis.io/pubnub/plans/pubnub-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/pubnub-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/pubnub/refs/heads/main/rate-limits/pubnub-rate-limits.yml
+  href: https://artifacts.apis.io/pubnub/rate-limits/pubnub-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/pubnub-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/pubnub/refs/heads/main/finops/pubnub-finops.yml
+  href: https://artifacts.apis.io/pubnub/finops/pubnub-finops.yml
   title: ''
   type: FinOps
   url: finops/pubnub-finops.yml
@@ -138,7 +142,7 @@ plans:
 - name: Pubnub Plans Pricing
   plan_count: 6
   slug: pubnub-plans-pricing
-random_paper: 14
+random_paper: 4
 rate_limits:
 - limit_count: 3
   name: Pubnub Rate Limits
@@ -160,13 +164,13 @@ score:
   band: thin
   composite: 31.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 47.5
     catalog_earned_first_party: 0.0
     catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 18.4
     contract_governance: 13.6
@@ -174,7 +178,7 @@ score:
     developer_ergonomics: 27.9
     discoverability: 68.3
     operational_transparency: 28.9
-  previous_composite: 32.6
+  previous_composite: 31.1
   provenance:
     mcp: first-party
   regulatory:
@@ -183,14 +187,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/pubnub/refs/heads/main/screenshots/pubnub-2026-06-20T192250.png
+screenshot: https://apis.io/screenshots/pubnub/pubnub-2026-06-20T192250.png
 security:
 - kind: domain-security
   name: Pubnub Domain Security

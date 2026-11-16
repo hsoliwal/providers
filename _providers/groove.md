@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.8
-  scored_at: '2026-10-17'
+  score: 40.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -100,15 +103,12 @@ apis:
   description: The Webhooks API from Groove — 2 operation(s) for webhooks.
   name: Groove Webhooks API
   slug: groove-webhooks-api
-artifact_total: 30
+artifact_total: 29
 asyncapis:
 - description: AsyncAPI 2.6 description of Groove's webhook surface as documented for the legacy Groove REST API v1. Groove enables customers to register webhook subscriptions through `POST https://api.groovehq.com/
   name: Groove Webhooks
   slug: groove-webhooks-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Groove REST API v1 Agents API
   slug: open-groove-agents-api
@@ -141,22 +141,22 @@ collections:
   slug: open-groove
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/groove/refs/heads/main/capabilities/groove-capability-edges.yml
+  href: https://artifacts.apis.io/groove/capabilities/groove-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/groove-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/groove/refs/heads/main/agentic-access/groove-agentic-access.yml
+  href: https://artifacts.apis.io/groove/agentic-access/groove-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/groove-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/groove/refs/heads/main/security/groove-domain-security.yml
+  href: https://artifacts.apis.io/groove/security/groove-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/groove-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/groove/refs/heads/main/authentication/groove-authentication.yml
+  href: https://artifacts.apis.io/groove/authentication/groove-authentication.yml
   title: ''
   type: Authentication
   url: authentication/groove-authentication.yml
@@ -215,7 +215,7 @@ overview: 'Groove publishes 12 API contracts indexed on the [APIs.io](https://ap
 
 
   Groove''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, GitHub presence, and 6 more developer resources.'
-random_paper: 20
+random_paper: 10
 rules:
 - authorship: generated
   effective_rule_count: 35
@@ -233,13 +233,13 @@ score:
   band: thin
   composite: 32.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 40.8
     catalog_earned_first_party: 0.0
     catalog_gap: 74.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 23.7
     contract_governance: 11.4
@@ -247,7 +247,7 @@ score:
     developer_ergonomics: 33.3
     discoverability: 68.3
     operational_transparency: 5.3
-  previous_composite: 32.1
+  previous_composite: 32.2
   provenance:
     agentic_access: derived
     contracts:
@@ -262,13 +262,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/groove/refs/heads/main/screenshots/groove-2026-06-20T182412.png
+screenshot: https://apis.io/screenshots/groove/groove-2026-06-20T182412.png
 security:
 - kind: authentication
   name: Groove Authentication

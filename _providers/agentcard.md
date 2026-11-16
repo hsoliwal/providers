@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -23,17 +25,20 @@ agent_readiness:
     dynamic_client_registration: true
     error_semantics: verified
     event_surface_described: true
-    idempotency: documented
+    idempotency: verified
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 68.3
-  scored_at: '2026-10-17'
+  score: 72.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -60,14 +65,14 @@ apis:
   slug: agentcard-identity-verification-api
 - baseURL: https://api.agentcard.sh
   baseurl_source: declared
-  description: Fund a connected user's wallet from your own UI — request a payment link, relay the phone verification code, and poll until the funds land.
-  name: Agentcard Wallet funding API
-  slug: agentcard-wallet-funding-api
+  description: The Member cards API from Agentcard — 4 operation(s) for member cards.
+  name: Agentcard Member cards API
+  slug: agentcard-member-cards-api
 - baseURL: https://api.agentcard.sh
   baseurl_source: declared
-  description: Move money out of a connected user's wallet — to a saved bank account or a crypto address on Base. Transfers are processed manually by the Agentcard team, usually within 1-3 business days.
-  name: Agentcard Withdrawals API
-  slug: agentcard-withdrawals-api
+  description: The Purchase API from Agentcard — 4 operation(s) for purchase.
+  name: Agentcard Purchase API
+  slug: agentcard-purchase-api
 arazzos:
 - description: Connect an end user, record consent, and run identity verification (KYC) end to end.
   name: Agentcard — connect a user and verify identity
@@ -75,7 +80,7 @@ arazzos:
 - description: Verify a user's phone, create an Apple/Google Pay funding session, and poll it to completion.
   name: Agentcard — verify phone and fund wallet
   slug: agentcard-fund-wallet.arazzo
-artifact_total: 19
+artifact_total: 23
 asyncapis:
 - description: Event notifications Agentcard delivers to destinations you register in the dashboard. Every delivery is a POST with a signed envelope { id, type, created, livemode, data }. Verify the AgentCard-Signat
   name: Agentcard Webhooks
@@ -84,9 +89,6 @@ asyncapis:
   name: Agentcard Webhooks
   slug: agentcard-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Agentcard Authentication API
   slug: open-agentcard-authentication-api
@@ -104,12 +106,21 @@ collections:
   slug: open-agentcard-withdrawals-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/overlays/agentcard-v2-overlay.yaml
+  href: https://artifacts.apis.io/agentcard/capabilities/agentcard-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/agentcard-capability-edges.yml
+- group: build
+  title: ''
+  type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/agentcard/overview
+- group: other
+  href: https://artifacts.apis.io/agentcard/overlays/agentcard-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/agentcard-v2-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/a2a/agentcard-a2a.yml
+  href: https://artifacts.apis.io/agentcard/a2a/agentcard-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/agentcard-a2a.yml
@@ -174,112 +185,112 @@ common:
   type: StatusPage
   url: https://agentcard.checkly-status-page.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/authentication/agentcard-authentication.yml
+  href: https://artifacts.apis.io/agentcard/authentication/agentcard-authentication.yml
   title: ''
   type: Authentication
   url: authentication/agentcard-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/agentic-access/agentcard-agentic-access.yml
+  href: https://artifacts.apis.io/agentcard/agentic-access/agentcard-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/agentcard-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/security/agentcard-domain-security.yml
+  href: https://artifacts.apis.io/agentcard/security/agentcard-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/agentcard-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/packages/agentcard-packages.yml
+  href: https://artifacts.apis.io/agentcard/packages/agentcard-packages.yml
   title: ''
   type: Packages
   url: packages/agentcard-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/packages/agentcard-packages.yml
+  href: https://artifacts.apis.io/agentcard/packages/agentcard-packages.yml
   title: ''
   type: SDKs
   url: packages/agentcard-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/cli/agentcard-cli.yml
+  href: https://artifacts.apis.io/agentcard/cli/agentcard-cli.yml
   title: ''
   type: CLI
   url: cli/agentcard-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/mcp/agentcard-mcp.yml
+  href: https://artifacts.apis.io/agentcard/mcp/agentcard-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/agentcard-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/llms/agentcard-llms.txt
+  href: https://artifacts.apis.io/agentcard/llms/agentcard-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/agentcard-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/well-known/agentcard-well-known.yml
+  href: https://artifacts.apis.io/agentcard/well-known/agentcard-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/agentcard-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/well-known/agentcard-api-catalog.json
+  href: https://artifacts.apis.io/agentcard/well-known/agentcard-api-catalog.json
   title: ''
   type: APICatalog
   url: well-known/agentcard-api-catalog.json
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/errors/agentcard-problem-types.yml
+  href: https://artifacts.apis.io/agentcard/errors/agentcard-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/agentcard-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/conventions/agentcard-conventions.yml
+  href: https://artifacts.apis.io/agentcard/conventions/agentcard-conventions.yml
   title: ''
   type: Conventions
   url: conventions/agentcard-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/conventions/agentcard-conventions.yml
+  href: https://artifacts.apis.io/agentcard/conventions/agentcard-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/agentcard-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/lifecycle/agentcard-lifecycle.yml
+  href: https://artifacts.apis.io/agentcard/lifecycle/agentcard-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/agentcard-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/sandbox/agentcard-sandbox.yml
+  href: https://artifacts.apis.io/agentcard/sandbox/agentcard-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/agentcard-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/conformance/agentcard-conformance.yml
+  href: https://artifacts.apis.io/agentcard/conformance/agentcard-conformance.yml
   title: ''
   type: Conformance
   url: conformance/agentcard-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/data-model/agentcard-data-model.yml
+  href: https://artifacts.apis.io/agentcard/data-model/agentcard-data-model.yml
   title: ''
   type: DataModel
   url: data-model/agentcard-data-model.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/asyncapi/agentcard-webhooks-asyncapi.yml
+  href: https://artifacts.apis.io/agentcard/asyncapi/agentcard-webhooks-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/agentcard-webhooks-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/asyncapi/agentcard-webhooks.yml
+  href: https://artifacts.apis.io/agentcard/asyncapi/agentcard-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/agentcard-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/agentcard/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/arazzo/agentcard-connect-and-verify.arazzo.yml
+  href: https://artifacts.apis.io/agentcard/arazzo/agentcard-connect-and-verify.arazzo.yml
   title: ''
   type: Arazzo
   url: arazzo/agentcard-connect-and-verify.arazzo.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/arazzo/agentcard-fund-wallet.arazzo.yml
+  href: https://artifacts.apis.io/agentcard/arazzo/agentcard-fund-wallet.arazzo.yml
   title: ''
   type: Arazzo
   url: arazzo/agentcard-fund-wallet.arazzo.yml
@@ -298,38 +309,51 @@ network: true
 overview: 'Agentcard publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Connect API, Identity verification API, and 2 more. Tagged areas include Company, Payments, Virtual Cards, Card Issuing, and AI Agents.
 
 
-  The Agentcard catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
+  The Agentcard catalog on APIs.io includes 2 event-driven AsyncAPI specifications and 1 Spectral governance ruleset.
 
 
-  Agentcard''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, engineering blog, pricing, and 32 more developer resources.'
-random_paper: 13
+  Agentcard''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, engineering blog, pricing, and 34 more developer resources.'
+random_paper: 1
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Agentcard API Rules
+  rule_count: 58
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 2
+    warn: 5
+  slug: agentcard-rules
 score:
-  band: developing
-  composite: 53.0
+  band: strong
+  composite: 55.2
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 37.0
+    artifact_dirs: 29
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 44.7
-    contract_governance: 4.5
-    contract_quality: 59.2
+    contract_governance: 18.2
+    contract_quality: 61.4
     developer_ergonomics: 90.5
     discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 53.0
+  previous_composite: 54.6
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 5
+      marker_coverage: 45.5
+      total: 11
     mcp: first-party
     skills: first-party
   regulatory:
@@ -338,13 +362,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 22.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/agentcard/refs/heads/main/screenshots/agentcard-2026-07-25T181800.png
+screenshot: https://apis.io/screenshots/agentcard/agentcard-2026-07-25T181800.png
 security:
 - kind: authentication
   name: Agentcard Authentication
@@ -354,6 +378,16 @@ security:
   name: Agentcard Domain Security
   slug: agentcard-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 4
+skills:
+- name: Connect and consent a user
+  slug: agentcard-connect-user
+- name: Fund a user's wallet
+  slug: agentcard-fund-wallet
+- name: agent-card
+  slug: agentcard-published-skill
+- name: Verify a user's identity (KYC)
+  slug: agentcard-verify-identity
 slug: agentcard
 tags:
 - Company

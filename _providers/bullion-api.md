@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Freemium
+  onboarding: unknown
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.7
-  scored_at: '2026-10-17'
+  score: 38.0
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - baseURL: https://api.bullionapi.dev
@@ -61,75 +75,75 @@ apis:
   description: The Silver API from Bullion API — 1 operation(s) for silver.
   name: Bullion API Silver API
   slug: bullion-api-silver-api
-artifact_total: 18
+artifact_total: 20
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/plans/bullion-api-plans-pricing.yml
+  href: https://artifacts.apis.io/bullion-api/plans/bullion-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/bullion-api-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/rules/bullion-api-rules.yml
+  href: https://artifacts.apis.io/bullion-api/rules/bullion-api-rules.yml
   title: ''
   type: Spectral
   url: rules/bullion-api-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/json-ld/bullion-api-context.jsonld
+  href: https://artifacts.apis.io/bullion-api/json-ld/bullion-api-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/bullion-api-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/vocabulary/bullion-api-vocabulary.yml
+  href: https://artifacts.apis.io/bullion-api/vocabulary/bullion-api-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/bullion-api-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/data-model/bullion-api-data-model.yml
+  href: https://artifacts.apis.io/bullion-api/data-model/bullion-api-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bullion-api-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/security/bullion-api-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bullion-api/security/bullion-api-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/bullion-api-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/conformance/bullion-api-conformance.yml
+  href: https://artifacts.apis.io/bullion-api/conformance/bullion-api-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bullion-api-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/llms/bullion-api-llms.txt
+  href: https://artifacts.apis.io/bullion-api/llms/bullion-api-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bullion-api-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/well-known/bullion-api-status-security.txt
+  href: https://artifacts.apis.io/bullion-api/well-known/bullion-api-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bullion-api-status-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/well-known/bullion-api-security.txt
+  href: https://artifacts.apis.io/bullion-api/well-known/bullion-api-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bullion-api-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/well-known/bullion-api-api-security.txt
+  href: https://artifacts.apis.io/bullion-api/well-known/bullion-api-api-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/bullion-api-api-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/well-known/bullion-api-well-known.yml
+  href: https://artifacts.apis.io/bullion-api/well-known/bullion-api-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bullion-api-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/hosts/bullion-api-hosts.yml
+  href: https://artifacts.apis.io/bullion-api/hosts/bullion-api-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bullion-api-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/vendors/bullion-api-vendors.yml
+  href: https://artifacts.apis.io/bullion-api/vendors/bullion-api-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bullion-api-vendors.yml
@@ -162,12 +176,12 @@ common:
   type: DeveloperPortal
   url: https://api.bullionapi.dev`
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/security/bullion-api-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/bullion-api/security/bullion-api-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/bullion-api-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bullion-api/refs/heads/main/security/bullion-api-domain-security.yml
+  href: https://artifacts.apis.io/bullion-api/security/bullion-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bullion-api-domain-security.yml
@@ -196,6 +210,14 @@ coverage:
   state: gated
 created: '2026-10-14'
 description: Bullion API provides real-time gold spot prices and historical data for developers. It offers cached price observations in over 150 currencies, a simple REST endpoint, and a free tier with 30 monthly requests. The service targets apps needing indicative valuations, charts, and market data without requiring credit cards.
+finops:
+- has_sources: true
+  method: derived
+  name: Bullion Api Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: bullion-api-finops
+  template: false
 image: https://bullionapi.dev/opengraph-image
 json_schemas:
 - name: GetV1CentralBankGoldDeResponse
@@ -237,7 +259,10 @@ plans:
 - name: Bullion Api Plans Pricing
   plan_count: 3
   slug: bullion-api-plans-pricing
-random_paper: 16
+- name: Bullion Api Price Estimates
+  plan_count: 0
+  slug: bullion-api-price-estimates
+random_paper: 12
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -252,22 +277,24 @@ rules:
     warn: 1
   slug: bullion-api-rules
 score:
-  band: developing
-  composite: 44.4
+  band: thin
+  composite: 37.5
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 77.8
+    artifact_dirs: 19
+    catalog_earned: 80.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 37.3
+    catalog_gap: 34.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.4
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 35.6
     contract_quality: 26.0
-    developer_ergonomics: 23.8
+    developer_ergonomics: 11.9
     discoverability: 78.6
-    operational_transparency: 26.3
+    operational_transparency: 18.4
+  previous_composite: 45.9
   provenance:
     conformance: first-party
     contracts:
@@ -287,13 +314,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 26.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/bullion-api/bullion-api-2026-11-03T122754.png
 security:
 - kind: domain-security
   name: Bullion Api Domain Security

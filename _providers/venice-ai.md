@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -15,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.9
-  scored_at: '2026-10-17'
+  score: 43.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -31,7 +46,7 @@ agentic_access:
   operation_count: 55
   slug: venice-ai-agentic-access
   summary_line: 55 operations · 33 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://api.venice.ai/api/v1
   baseurl_source: declared
@@ -123,110 +138,115 @@ apis:
   description: Given a list of messages comprising a conversation, the model will return a response. Supports multimodal inputs including text, images, audio (input_audio), and video (video_url) for compatible model
   name: Venice.ai Chat Completions API
   slug: venice-ai-chat-completions-api
-artifact_total: 31
+artifact_total: 33
 common:
+- group: other
+  href: https://artifacts.apis.io/venice-ai/capabilities/venice-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/venice-ai-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/agentic-access/venice-ai-agentic-access.yml
+  href: https://artifacts.apis.io/venice-ai/agentic-access/venice-ai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/venice-ai-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/rate-limits/venice-ai-rate-limits.yml
+  href: https://artifacts.apis.io/venice-ai/rate-limits/venice-ai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/venice-ai-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/rules/venice-ai-rules.yml
+  href: https://artifacts.apis.io/venice-ai/rules/venice-ai-rules.yml
   title: ''
   type: Spectral
   url: rules/venice-ai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/json-ld/venice-ai-context.jsonld
+  href: https://artifacts.apis.io/venice-ai/json-ld/venice-ai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/venice-ai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/vocabulary/venice-ai-vocabulary.yml
+  href: https://artifacts.apis.io/venice-ai/vocabulary/venice-ai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/venice-ai-vocabulary.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/venice-ai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/data-model/venice-ai-data-model.yml
+  href: https://artifacts.apis.io/venice-ai/data-model/venice-ai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/venice-ai-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/conventions/venice-ai-conventions.yml
+  href: https://artifacts.apis.io/venice-ai/conventions/venice-ai-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/venice-ai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/conventions/venice-ai-conventions.yml
+  href: https://artifacts.apis.io/venice-ai/conventions/venice-ai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/venice-ai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/errors/venice-ai-error-codes.yml
+  href: https://artifacts.apis.io/venice-ai/errors/venice-ai-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/venice-ai-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/errors/venice-ai-problem-types.yml
+  href: https://artifacts.apis.io/venice-ai/errors/venice-ai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/venice-ai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/conformance/venice-ai-conformance.yml
+  href: https://artifacts.apis.io/venice-ai/conformance/venice-ai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/venice-ai-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/llms/venice-ai-llms.txt
+  href: https://artifacts.apis.io/venice-ai/llms/venice-ai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/venice-ai-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/a2a/venice-ai-a2a.yml
+  href: https://artifacts.apis.io/venice-ai/a2a/venice-ai-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/venice-ai-a2a.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/mcp/venice-ai-tool-crosswalk.yml
+  href: https://artifacts.apis.io/venice-ai/mcp/venice-ai-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/venice-ai-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/mcp/venice-ai-mcp.yml
+  href: https://artifacts.apis.io/venice-ai/mcp/venice-ai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/venice-ai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/well-known/venice-ai-well-known.yml
+  href: https://artifacts.apis.io/venice-ai/well-known/venice-ai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/venice-ai-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/hosts/venice-ai-hosts.yml
+  href: https://artifacts.apis.io/venice-ai/hosts/venice-ai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/venice-ai-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/vendors/venice-ai-vendors.yml
+  href: https://artifacts.apis.io/venice-ai/vendors/venice-ai-vendors.yml
   title: ''
   type: Vendors
   url: vendors/venice-ai-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/packages/venice-ai-packages.yml
+  href: https://artifacts.apis.io/venice-ai/packages/venice-ai-packages.yml
   title: ''
   type: SDKs
   url: packages/venice-ai-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/packages/venice-ai-packages.yml
+  href: https://artifacts.apis.io/venice-ai/packages/venice-ai-packages.yml
   title: ''
   type: Packages
   url: packages/venice-ai-packages.yml
@@ -239,12 +259,12 @@ common:
   type: DeveloperPortal
   url: https://api.venice.ai`
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/authentication/venice-ai-authentication.yml
+  href: https://artifacts.apis.io/venice-ai/authentication/venice-ai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/venice-ai-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/venice-ai/refs/heads/main/security/venice-ai-domain-security.yml
+  href: https://artifacts.apis.io/venice-ai/security/venice-ai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/venice-ai-domain-security.yml
@@ -350,8 +370,8 @@ overview: 'Venice.ai publishes 18 API contracts indexed on the [APIs.io](https:/
   The Venice.ai catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Venice.ai''s developer surface includes authentication, API reference, engineering blog, changelog, documentation, getting-started guide, signup flow, and 33 more developer resources.'
-random_paper: 1
+  Venice.ai''s developer surface includes authentication, API reference, engineering blog, changelog, documentation, getting-started guide, signup flow, and 34 more developer resources.'
+random_paper: 17
 rate_limits:
 - limit_count: 12
   name: Venice Ai Rate Limits
@@ -370,29 +390,31 @@ rules:
     warn: 4
   slug: venice-ai-rules
 score:
-  band: strong
-  composite: 56.3
+  band: developing
+  composite: 46.2
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 27
     catalog_earned: 74.8
     catalog_earned_first_party: 12.0
     catalog_gap: 40.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.1
   facets:
-    access_clarity: 44.7
+    access_clarity: 22.4
     contract_governance: 22.0
-    contract_quality: 65.0
-    developer_ergonomics: 66.1
-    discoverability: 73.3
-    operational_transparency: 60.5
+    contract_quality: 70.6
+    developer_ergonomics: 43.5
+    discoverability: 72.5
+    operational_transparency: 46.1
+  previous_composite: 56.3
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 18
     mcp: first-party
     skills: derived
@@ -401,12 +423,14 @@ score:
     matched_via: residual_tags
     regime: AI & Biometrics
     regime_id: ai_biometrics
-    score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 19.1
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/venice-ai/venice-ai-2026-11-03T145650.png
 security:
 - kind: authentication
   name: Venice Ai Authentication
@@ -416,6 +440,12 @@ security:
   name: Venice Ai Domain Security
   slug: venice-ai-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: venice-ai-chat-completion
+  slug: venice-ai-chat-completion
+- name: venice-ai-generate-video
+  slug: venice-ai-generate-video
 slug: venice-ai
 tags:
 - Company

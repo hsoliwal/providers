@@ -1,14 +1,20 @@
 ---
 access_model:
-  confidence: medium
-  label: Freemium
-  onboarding: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
   pricing: freemium
   public: false
   source:
   - plans
+  - authentication
+  - security
+  - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -25,15 +31,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.7
-  scored_at: '2026-10-17'
+  score: 32.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -76,15 +85,12 @@ apis:
   description: The Users API from Hey API — 6 operation(s) for users.
   name: Hey API Users API
   slug: hey-api-users-api
-artifact_total: 21
+artifact_total: 24
 asyncapis:
 - description: ''
   name: Hey Api Platform Webhooks
   slug: hey-api-platform-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Hey Get API
   slug: open-hey-api-get-api
@@ -105,27 +111,27 @@ collections:
   slug: open-hey-api-users-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/plans/hey-api-plans-pricing.yml
+  href: https://artifacts.apis.io/hey-api/plans/hey-api-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/hey-api-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/rate-limits/hey-api-rate-limits.yml
+  href: https://artifacts.apis.io/hey-api/rate-limits/hey-api-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/hey-api-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/finops/hey-api-finops.yml
+  href: https://artifacts.apis.io/hey-api/finops/hey-api-finops.yml
   title: ''
   type: FinOps
   url: finops/hey-api-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/vendor-facets/hey-api-vendor-facets.yml
+  href: https://artifacts.apis.io/hey-api/vendor-facets/hey-api-vendor-facets.yml
   title: ''
   type: VendorFacets
   url: vendor-facets/hey-api-vendor-facets.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/overlays/hey-api-platform-overlay.yaml
+  href: https://artifacts.apis.io/hey-api/overlays/hey-api-platform-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/hey-api-platform-overlay.yaml
@@ -146,7 +152,7 @@ common:
   type: License
   url: https://github.com/hey-api/hey-api/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/agentic-access/hey-api-agentic-access.yml
+  href: https://artifacts.apis.io/hey-api/agentic-access/hey-api-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/hey-api-agentic-access.yml
@@ -187,7 +193,7 @@ common:
   type: LinkedIn
   url: https://www.linkedin.com/company/heyapi
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/changelog/hey-api-changelog.yml
+  href: https://artifacts.apis.io/hey-api/changelog/hey-api-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/hey-api-changelog.yml
@@ -196,77 +202,77 @@ common:
   type: Deprecation
   url: https://heyapi.dev/docs/openapi/typescript/migrating
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/lifecycle/hey-api-lifecycle.yml
+  href: https://artifacts.apis.io/hey-api/lifecycle/hey-api-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/hey-api-lifecycle.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/packages/hey-api-packages.yml
+  href: https://artifacts.apis.io/hey-api/packages/hey-api-packages.yml
   title: ''
   type: Packages
   url: packages/hey-api-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/packages/hey-api-packages.yml
+  href: https://artifacts.apis.io/hey-api/packages/hey-api-packages.yml
   title: ''
   type: SDKs
   url: packages/hey-api-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/cli/hey-api-cli.yml
+  href: https://artifacts.apis.io/hey-api/cli/hey-api-cli.yml
   title: ''
   type: CLI
   url: cli/hey-api-cli.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/sandbox/hey-api-sandbox.yml
+  href: https://artifacts.apis.io/hey-api/sandbox/hey-api-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/hey-api-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/authentication/hey-api-authentication.yml
+  href: https://artifacts.apis.io/hey-api/authentication/hey-api-authentication.yml
   title: ''
   type: Authentication
   url: authentication/hey-api-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/conventions/hey-api-conventions.yml
+  href: https://artifacts.apis.io/hey-api/conventions/hey-api-conventions.yml
   title: ''
   type: Conventions
   url: conventions/hey-api-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/errors/hey-api-problem-types.yml
+  href: https://artifacts.apis.io/hey-api/errors/hey-api-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/hey-api-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/data-model/hey-api-data-model.yml
+  href: https://artifacts.apis.io/hey-api/data-model/hey-api-data-model.yml
   title: ''
   type: DataModel
   url: data-model/hey-api-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/asyncapi/hey-api-platform-webhooks.yml
+  href: https://artifacts.apis.io/hey-api/asyncapi/hey-api-platform-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/hey-api-platform-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/conformance/hey-api-conformance.yml
+  href: https://artifacts.apis.io/hey-api/conformance/hey-api-conformance.yml
   title: ''
   type: Conformance
   url: conformance/hey-api-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/security/hey-api-domain-security.yml
+  href: https://artifacts.apis.io/hey-api/security/hey-api-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/hey-api-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/llms/hey-api-llms.txt
+  href: https://artifacts.apis.io/hey-api/llms/hey-api-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/hey-api-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/well-known/hey-api-robots.txt
+  href: https://artifacts.apis.io/hey-api/well-known/hey-api-robots.txt
   title: ''
   type: ContentSignal
   url: well-known/hey-api-robots.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/hey-api/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -276,7 +282,7 @@ finops:
 - has_sources: false
   method: generated
   name: Hey Api Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: hey-api-finops
   template: true
@@ -289,7 +295,7 @@ network: true
 overview: 'Hey API publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Get API, Hey API, Internal API, and 4 more. Tagged areas include Code Generation, Developer Tools, OpenAPI, SDK, and TypeScript.
 
 
-  The Hey API catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Hey API catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Hey API''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, changelog, CLI, and 29 more developer resources.'
@@ -297,25 +303,38 @@ plans:
 - name: Hey Api Plans Pricing
   plan_count: 3
   slug: hey-api-plans-pricing
-random_paper: 3
+random_paper: 13
 rate_limits:
 - limit_count: 5
   name: Hey Api Rate Limits
   slug: hey-api-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Hey API API Rules
+  rule_count: 49
+  severity_counts:
+    error: 40
+    hint: 0
+    info: 3
+    warn: 6
+  slug: hey-api-rules
 score:
   band: developing
-  composite: 41.5
+  composite: 43.0
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 38.0
+    artifact_dirs: 30
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.3
+  delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 50.2
     developer_ergonomics: 78.0
     discoverability: 64.3
@@ -323,7 +342,7 @@ score:
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 42.8
+  previous_composite: 43.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -339,13 +358,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/hey-api/refs/heads/main/screenshots/hey-api-2026-06-20T182713.png
+screenshot: https://apis.io/screenshots/hey-api/hey-api-2026-06-20T182713.png
 security:
 - kind: authentication
   name: Hey Api Authentication
@@ -355,6 +374,14 @@ security:
   name: Hey Api Domain Security
   slug: hey-api-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Generate a typed client from a Hey API registry specification
+  slug: hey-api-generate-client-from-registry
+- name: Provision a Hey API organization, project, keys and webhooks
+  slug: hey-api-manage-project-keys-and-webhooks
+- name: Publish an OpenAPI specification to the Hey API registry from CI
+  slug: hey-api-publish-spec-from-ci
 slug: hey-api
 tags:
 - Code Generation

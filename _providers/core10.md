@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -91,22 +94,22 @@ common:
   type: Product
   url: https://getaccrue.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/core10/refs/heads/main/security/core10-domain-security.yml
+  href: https://artifacts.apis.io/core10/security/core10-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/core10-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/core10/refs/heads/main/llms/core10-llms.txt
+  href: https://artifacts.apis.io/core10/llms/core10-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/core10-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/core10/refs/heads/main/plans/core10-plans-pricing.yml
+  href: https://artifacts.apis.io/core10/plans/core10-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/core10-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/core10/refs/heads/main/rate-limits/core10-rate-limits.yml
+  href: https://artifacts.apis.io/core10/rate-limits/core10-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/core10-rate-limits.yml
@@ -147,7 +150,7 @@ plans:
 - name: Core10 Plans Pricing
   plan_count: 0
   slug: core10-plans-pricing
-random_paper: 16
+random_paper: 18
 rate_limits:
 - limit_count: 0
   name: Core10 Rate Limits
@@ -156,7 +159,7 @@ score:
   band: minimal
   composite: 8.1
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -184,14 +187,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 11.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/core10/refs/heads/main/screenshots/core10-2026-09-02T145143.png
+screenshot: https://apis.io/screenshots/core10/core10-2026-09-02T145143.png
 security:
 - kind: domain-security
   name: Core10 Domain Security

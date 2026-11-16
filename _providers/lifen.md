@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - rate-limits
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.4
-  scored_at: '2026-10-17'
+  score: 40.7
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - baseURL: https://api.lifen.fr/fhir/v3
@@ -72,7 +79,7 @@ apis:
   description: The Token API from Lifen — 1 operation(s) for token.
   name: Lifen Token API
   slug: lifen-token-api
-artifact_total: 27
+artifact_total: 30
 asyncapis:
 - description: ''
   name: Lifen Platform Webhooks
@@ -100,9 +107,6 @@ collections:
   name: lifen-authentication-api CommunicationRequest Token API
   slug: postman-lifen-token-api
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: lifen-authentication-api CommunicationRequest API
   slug: open-lifen-communicationrequest-api
 - collection_type: open
@@ -125,7 +129,7 @@ collections:
   slug: open-lifen-token-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/capabilities/lifen-capability-edges.yml
+  href: https://artifacts.apis.io/lifen/capabilities/lifen-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/lifen-capability-edges.yml
@@ -134,7 +138,7 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/lifen/overview
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/security/lifen-domain-security.yml
+  href: https://artifacts.apis.io/lifen/security/lifen-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/lifen-domain-security.yml
@@ -207,82 +211,82 @@ common:
   type: Compliance
   url: https://www.lifen.fr/nos-expertises/securite-des-donnees-de-sante
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/llms/lifen-llms.txt
+  href: https://artifacts.apis.io/lifen/llms/lifen-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/lifen-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/well-known/lifen-well-known.yml
+  href: https://artifacts.apis.io/lifen/well-known/lifen-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/lifen-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/authentication/lifen-authentication.yml
+  href: https://artifacts.apis.io/lifen/authentication/lifen-authentication.yml
   title: ''
   type: Authentication
   url: authentication/lifen-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/scopes/lifen-scopes.yml
+  href: https://artifacts.apis.io/lifen/scopes/lifen-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/lifen-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/conventions/lifen-conventions.yml
+  href: https://artifacts.apis.io/lifen/conventions/lifen-conventions.yml
   title: ''
   type: Conventions
   url: conventions/lifen-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/errors/lifen-problem-types.yml
+  href: https://artifacts.apis.io/lifen/errors/lifen-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/lifen-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/lifecycle/lifen-lifecycle.yml
+  href: https://artifacts.apis.io/lifen/lifecycle/lifen-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/lifen-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/changelog/lifen-changelog.yml
+  href: https://artifacts.apis.io/lifen/changelog/lifen-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/lifen-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/conformance/lifen-conformance.yml
+  href: https://artifacts.apis.io/lifen/conformance/lifen-conformance.yml
   title: ''
   type: Conformance
   url: conformance/lifen-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/asyncapi/lifen-platform-webhooks.yml
+  href: https://artifacts.apis.io/lifen/asyncapi/lifen-platform-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/lifen-platform-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/lifen/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/mcp/lifen-mcp.yml
+  href: https://artifacts.apis.io/lifen/mcp/lifen-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/lifen-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/overlays/lifen-fhir-api-overlay.yaml
+  href: https://artifacts.apis.io/lifen/overlays/lifen-fhir-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/lifen-fhir-api-overlay.yaml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/sandbox/lifen-sandbox.yml
+  href: https://artifacts.apis.io/lifen/sandbox/lifen-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/lifen-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/data-model/lifen-data-model.yml
+  href: https://artifacts.apis.io/lifen/data-model/lifen-data-model.yml
   title: ''
   type: DataModel
   url: data-model/lifen-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/rate-limits/lifen-rate-limits.yml
+  href: https://artifacts.apis.io/lifen/rate-limits/lifen-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/lifen-rate-limits.yml
@@ -298,36 +302,49 @@ network: true
 overview: 'Lifen publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including CommunicationRequest API, Coverage API, Encounter API, and 4 more. Tagged areas include Company, Healthcare, FHIR, Interoperability, and Health Data.
 
 
-  The Lifen catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Lifen catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Lifen''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 29 more developer resources.'
-random_paper: 20
+random_paper: 22
 rate_limits:
 - limit_count: 6
   name: Lifen Rate Limits
   slug: lifen-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Lifen API Rules
+  rule_count: 46
+  severity_counts:
+    error: 41
+    hint: 0
+    info: 1
+    warn: 4
+  slug: lifen-rules
 scopes:
 - name: Lifen Scopes
   scope_count: 0
   slug: lifen-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: developing
-  composite: 52.7
+  band: strong
+  composite: 57.0
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 49.0
+    artifact_dirs: 28
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.6
   facets:
     access_clarity: 42.1
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 55.3
-    developer_ergonomics: 49.4
+    developer_ergonomics: 62.5
     discoverability: 73.2
     operational_transparency: 57.9
   jurisdiction:
@@ -338,7 +355,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 52.7
+  previous_composite: 54.4
   provenance:
     conformance: first-party
     contracts:
@@ -358,13 +375,13 @@ score:
     regime: Health
     regime_id: health
     score: 40.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/lifen/refs/heads/main/screenshots/lifen-2026-07-25T225040.png
+screenshot: https://apis.io/screenshots/lifen/lifen-2026-07-25T225040.png
 security:
 - kind: authentication
   name: Lifen Authentication
@@ -374,6 +391,14 @@ security:
   name: Lifen Domain Security
   slug: lifen-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Find a patient and their hospital stay in Lifen
+  slug: lifen-find-patient-and-encounter
+- name: Send a medical document into a hospital EHR with Lifen
+  slug: lifen-send-document-to-ehr
+- name: Send a medical document to a healthcare professional over MSSanté
+  slug: lifen-send-document-to-mssante
 slug: lifen
 tags:
 - Company

@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 10
 common:
+- group: other
+  href: https://artifacts.apis.io/bhp/hosts/bhp-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/bhp-hosts.yml
+- group: other
+  href: https://artifacts.apis.io/bhp/vendors/bhp-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/bhp-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bhp/refs/heads/main/security/bhp-domain-security.yml
+  href: https://artifacts.apis.io/bhp/security/bhp-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bhp-domain-security.yml
@@ -100,17 +114,17 @@ features:
   name: Investor and Market Communications
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bhp.png
 layout: provider
-modified: '2026-05-16'
+modified: '2026-10-20'
 name: BHP
 nav: Providers
 network: true
 overview: BHP is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Mining, Resources, Commodities, Iron Ore, and Copper.
-random_paper: 6
+random_paper: 2
 score:
   band: emerging
   composite: 11.1
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -132,20 +146,22 @@ score:
     regions:
     - anz
   previous_composite: 11.1
+  provenance:
+    mcp: derived
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bhp/refs/heads/main/screenshots/bhp-2026-06-20T173224.png
+screenshot: https://apis.io/screenshots/bhp/bhp-2026-06-20T173224.png
 security:
 - kind: domain-security
   name: Bhp Domain Security

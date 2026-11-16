@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,41 +37,43 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.2
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
-- description: Chronoloq API provides AI risk assessment and security scoring endpoints as documented.
+- baseURL: https://api.chronoloq.com
+  baseurl_source: spec
+  description: Chronoloq API provides AI risk assessment and security scoring endpoints as documented.
   name: Chronoloq API
-  slug: chronoloq-api-2
+  slug: chronoloq-api
 - baseURL: https://api.chronoloq.com
   baseurl_source: declared
   description: The Scans API from Chronoloq — 1 operation(s) for scans.
   name: Chronoloq Scans API
   slug: chronoloq-scans-api
-artifact_total: 9
+artifact_total: 11
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/plans/chronoloq-plans-pricing.yml
+  href: https://artifacts.apis.io/chronoloq/plans/chronoloq-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/chronoloq-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/rules/chronoloq-rules.yml
+  href: https://artifacts.apis.io/chronoloq/rules/chronoloq-rules.yml
   title: ''
   type: Spectral
   url: rules/chronoloq-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/json-ld/chronoloq-context.jsonld
+  href: https://artifacts.apis.io/chronoloq/json-ld/chronoloq-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/chronoloq-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/vocabulary/chronoloq-vocabulary.yml
+  href: https://artifacts.apis.io/chronoloq/vocabulary/chronoloq-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/chronoloq-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/data-model/chronoloq-data-model.yml
+  href: https://artifacts.apis.io/chronoloq/data-model/chronoloq-data-model.yml
   title: ''
   type: DataModel
   url: data-model/chronoloq-data-model.yml
@@ -66,27 +82,27 @@ common:
   type: Compliance
   url: https://chronoloq.com/trust
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/conformance/chronoloq-conformance.yml
+  href: https://artifacts.apis.io/chronoloq/conformance/chronoloq-conformance.yml
   title: ''
   type: Conformance
   url: conformance/chronoloq-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/llms/chronoloq-llms.txt
+  href: https://artifacts.apis.io/chronoloq/llms/chronoloq-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/chronoloq-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/a2a/chronoloq-a2a.yml
+  href: https://artifacts.apis.io/chronoloq/a2a/chronoloq-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/chronoloq-a2a.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/hosts/chronoloq-hosts.yml
+  href: https://artifacts.apis.io/chronoloq/hosts/chronoloq-hosts.yml
   title: ''
   type: Hosts
   url: hosts/chronoloq-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/vendors/chronoloq-vendors.yml
+  href: https://artifacts.apis.io/chronoloq/vendors/chronoloq-vendors.yml
   title: ''
   type: Vendors
   url: vendors/chronoloq-vendors.yml
@@ -95,17 +111,17 @@ common:
   type: Security
   url: https://chronoloq.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/security/chronoloq-trust-center.yml
+  href: https://artifacts.apis.io/chronoloq/security/chronoloq-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/chronoloq-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/security/chronoloq-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/chronoloq/security/chronoloq-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/chronoloq-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/chronoloq/refs/heads/main/security/chronoloq-domain-security.yml
+  href: https://artifacts.apis.io/chronoloq/security/chronoloq-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/chronoloq-domain-security.yml
@@ -159,6 +175,14 @@ coverage:
   state: unreadable
 created: '2026-10-16'
 description: Chronoloq provides AI risk assessment and security scoring for enterprises, offering a free AI security audit, detailed risk reports, and compliance guidance across finance, healthcare, education, and e‑commerce sectors. Their platform helps organizations understand and mitigate AI‑related security risks with actionable insights and a proprietary Chronoloq Score.
+finops:
+- has_sources: true
+  method: derived
+  name: Chronoloq Finops
+  primary_unit: ''
+  service_category: ''
+  slug: chronoloq-finops
+  template: true
 image: https://chronoloq.com/og-banner.png
 json_schemas:
 - name: PostV1ScansRequest
@@ -174,7 +198,7 @@ modified: '2026-10-16'
 name: Chronoloq
 nav: Providers
 network: true
-overview: 'Chronoloq is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Scans API, and 1 more. Tagged areas include Company, Artificial Intelligence, Security, RiskAssessment, and Enterprise.
+overview: 'Chronoloq is listed with 2 APIs on the [APIs.io](https://apis.io/) network, including Scans API, and 1 more. Tagged areas include Company, Artificial Intelligence, Security, Risk Assessment, and Enterprise.
 
 
   The Chronoloq catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -185,7 +209,10 @@ plans:
 - name: Chronoloq Plans Pricing
   plan_count: 1
   slug: chronoloq-plans-pricing
-random_paper: 13
+- name: Chronoloq Price Estimates
+  plan_count: 0
+  slug: chronoloq-price-estimates
+random_paper: 21
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -200,22 +227,24 @@ rules:
     warn: 1
   slug: chronoloq-rules
 score:
-  band: developing
-  composite: 39.8
+  band: thin
+  composite: 29.4
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 20
     catalog_earned: 56.2
     catalog_earned_first_party: 8.0
     catalog_gap: 58.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.4
   facets:
-    access_clarity: 81.6
+    access_clarity: 55.3
     contract_governance: 22.0
     contract_quality: 19.0
-    developer_ergonomics: 35.7
+    developer_ergonomics: 17.9
     discoverability: 64.3
-    operational_transparency: 10.5
+    operational_transparency: 5.3
+  previous_composite: 39.8
   provenance:
     conformance: derived
     contracts:
@@ -229,12 +258,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/chronoloq/chronoloq-2026-11-03T124118.png
 security:
 - kind: domain-security
   name: Chronoloq Domain Security
@@ -253,7 +284,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Security
-- RiskAssessment
+- Risk Assessment
 - Enterprise
 website: https://chronoloq.com/
 ---

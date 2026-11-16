@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: high
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium (free trial) · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-10-17'
+  score: 25.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://sonarly.com/api/v1/public
@@ -54,15 +60,12 @@ apis:
   description: Device-code style setup-session API to onboard a tenant.
   name: Sonarly Setup API
   slug: sonarly-setup-api
-artifact_total: 12
+artifact_total: 15
 asyncapis:
 - description: Sonarly delivers signed outbound webhooks on bug and incident lifecycle events. Register a receiver via POST /api/setup/webhook-endpoint (the URL is SSRF-checked; a whsec_ signing secret is returned o
   name: Sonarly Webhooks
   slug: sonarly-events-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Sonarly Bugs API
   slug: open-sonarly-bugs-api
@@ -94,67 +97,67 @@ common:
   type: APIReference
   url: https://sonarly.com/docs/public-api
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/llms/sonarly-llms.txt
+  href: https://artifacts.apis.io/sonarly/llms/sonarly-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/sonarly-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/authentication/sonarly-authentication.yml
+  href: https://artifacts.apis.io/sonarly/authentication/sonarly-authentication.yml
   title: ''
   type: Authentication
   url: authentication/sonarly-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/conventions/sonarly-conventions.yml
+  href: https://artifacts.apis.io/sonarly/conventions/sonarly-conventions.yml
   title: ''
   type: Conventions
   url: conventions/sonarly-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/rate-limits/sonarly-rate-limits.yml
+  href: https://artifacts.apis.io/sonarly/rate-limits/sonarly-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/sonarly-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/errors/sonarly-problem-types.yml
+  href: https://artifacts.apis.io/sonarly/errors/sonarly-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/sonarly-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/data-model/sonarly-data-model.yml
+  href: https://artifacts.apis.io/sonarly/data-model/sonarly-data-model.yml
   title: ''
   type: DataModel
   url: data-model/sonarly-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/lifecycle/sonarly-lifecycle.yml
+  href: https://artifacts.apis.io/sonarly/lifecycle/sonarly-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/sonarly-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/conformance/sonarly-conformance.yml
+  href: https://artifacts.apis.io/sonarly/conformance/sonarly-conformance.yml
   title: ''
   type: Conformance
   url: conformance/sonarly-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/mcp/sonarly-mcp.yml
+  href: https://artifacts.apis.io/sonarly/mcp/sonarly-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/sonarly-mcp.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/asyncapi/sonarly-events-asyncapi.yml
+  href: https://artifacts.apis.io/sonarly/asyncapi/sonarly-events-asyncapi.yml
   title: ''
   type: AsyncAPI
   url: asyncapi/sonarly-events-asyncapi.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/asyncapi/sonarly-events-asyncapi.yml
+  href: https://artifacts.apis.io/sonarly/asyncapi/sonarly-events-asyncapi.yml
   title: ''
   type: Webhooks
   url: asyncapi/sonarly-events-asyncapi.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/sonarly/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/security/sonarly-domain-security.yml
+  href: https://artifacts.apis.io/sonarly/security/sonarly-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/sonarly-domain-security.yml
@@ -163,7 +166,7 @@ common:
   type: Pricing
   url: https://sonarly.com/pricing
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/plans/sonarly-plans.yml
+  href: https://artifacts.apis.io/sonarly/plans/sonarly-plans.yml
   title: ''
   type: Plans
   url: plans/sonarly-plans.yml
@@ -186,7 +189,7 @@ network: true
 overview: 'Sonarly publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Bugs API, Incidents API, and Setup API. Tagged areas include Company, Reliability, Observability, Monitoring, and Bug Detection.
 
 
-  The Sonarly catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Sonarly catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Sonarly''s developer surface includes engineering blog, documentation, API reference, authentication, pricing, signup flow, and 16 more developer resources.'
@@ -194,30 +197,43 @@ plans:
 - name: Sonarly Plans
   plan_count: 4
   slug: sonarly-plans
-random_paper: 6
+random_paper: 8
 rate_limits:
 - limit_count: 1
   name: Sonarly Rate Limits
   slug: sonarly-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 93
+  extends:
+  - spectral:oas
+  name: Sonarly API Rules
+  rule_count: 52
+  severity_counts:
+    error: 50
+    hint: 0
+    info: 1
+    warn: 1
+  slug: sonarly-rules
 score:
   band: thin
-  composite: 26.4
+  composite: 28.0
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 57.0
+    artifact_dirs: 21
+    catalog_earned: 61.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 53.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 31.6
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 21.3
     developer_ergonomics: 16.1
     discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 25.8
+  previous_composite: 28.0
   provenance:
     conformance: derived
     contracts:
@@ -233,13 +249,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/sonarly/refs/heads/main/screenshots/sonarly-2026-08-17T081959.png
+screenshot: https://apis.io/screenshots/sonarly/sonarly-2026-08-17T081959.png
 security:
 - kind: authentication
   name: Sonarly Authentication
@@ -249,6 +265,14 @@ security:
   name: Sonarly Domain Security
   slug: sonarly-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Register and verify Sonarly webhooks
+  slug: sonarly-consume-webhooks
+- name: Onboard a Sonarly tenant from a coding agent
+  slug: sonarly-onboard-tenant
+- name: Pull Sonarly bugs and incidents into a dashboard
+  slug: sonarly-pull-bugs
 slug: sonarly
 tags:
 - Company

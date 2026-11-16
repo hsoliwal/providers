@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -28,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-10-17'
+  score: 42.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -44,7 +50,7 @@ agentic_access:
   operation_count: 8
   slug: fillout-agentic-access
   summary_line: 8 operations · 4 acting
-api_count: 2
+api_count: 1
 apis:
 - description: REST API for retrieving forms and submissions. Bearer API key auth. Endpoints under /v1/api/ — /forms, /forms/{formId}, /forms/{formId}/ submissions, etc. Self-hosted Fillout and the EU agent return t
   name: Fillout REST API
@@ -62,9 +68,6 @@ apis:
 artifact_total: 14
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Fillout REST Forms API
   slug: open-fillout-forms-api
 - collection_type: open
@@ -75,17 +78,17 @@ collections:
   slug: open-fillout
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/fillout/refs/heads/main/agentic-access/fillout-agentic-access.yml
+  href: https://artifacts.apis.io/fillout/agentic-access/fillout-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/fillout-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fillout/refs/heads/main/security/fillout-domain-security.yml
+  href: https://artifacts.apis.io/fillout/security/fillout-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/fillout-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/fillout/refs/heads/main/authentication/fillout-authentication.yml
+  href: https://artifacts.apis.io/fillout/authentication/fillout-authentication.yml
   title: ''
   type: Authentication
   url: authentication/fillout-authentication.yml
@@ -114,17 +117,17 @@ common:
   type: HelpCenter
   url: https://www.fillout.com/help
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fillout/refs/heads/main/plans/fillout-plans-pricing.yml
+  href: https://artifacts.apis.io/fillout/plans/fillout-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/fillout-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/fillout/refs/heads/main/rate-limits/fillout-rate-limits.yml
+  href: https://artifacts.apis.io/fillout/rate-limits/fillout-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/fillout-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/fillout/refs/heads/main/finops/fillout-finops.yml
+  href: https://artifacts.apis.io/fillout/finops/fillout-finops.yml
   title: ''
   type: FinOps
   url: finops/fillout-finops.yml
@@ -138,7 +141,7 @@ finops:
 - has_sources: true
   method: generated
   name: Fillout Finops
-  primary_unit: ''
+  primary_unit: plan-month
   service_category: Forms / Workflow
   slug: fillout-finops
   template: false
@@ -155,41 +158,57 @@ network: true
 overview: 'Fillout publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Forms API, Webhook API, and 1 more. Tagged areas include Forms, Surveys, No-Code, Airtable, and Notion.
 
 
+  The Fillout catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Fillout''s developer surface includes authentication, documentation, pricing, engineering blog, and 9 more developer resources.'
 plans:
 - name: Fillout Plans Pricing
   plan_count: 5
   slug: fillout-plans-pricing
-random_paper: 19
+random_paper: 23
 rate_limits:
 - limit_count: 5
   name: Fillout Rate Limits
   slug: fillout-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 94
+  extends:
+  - spectral:oas
+  name: Fillout API Rules
+  rule_count: 53
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 1
+    warn: 1
+  slug: fillout-rules
 score:
   band: thin
-  composite: 29.7
+  composite: 34.2
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 43.0
+    artifact_dirs: 18
+    catalog_earned: 50.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 1.3
   facets:
-    access_clarity: 18.4
-    contract_governance: 0.0
-    contract_quality: 47.4
+    access_clarity: 26.3
+    contract_governance: 13.6
+    contract_quality: 52.7
     developer_ergonomics: 35.7
     discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 31.2
+  previous_composite: 32.9
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
     mcp: first-party
   regulatory:
@@ -198,13 +217,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/fillout/refs/heads/main/screenshots/fillout-2026-06-20T181207.png
+screenshot: https://apis.io/screenshots/fillout/fillout-2026-06-20T181207.png
 security:
 - kind: authentication
   name: Fillout Authentication

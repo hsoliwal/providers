@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - rate-limits
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.8
-  scored_at: '2026-10-17'
+  score: 37.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 108
   human_in_the_loop: 0
@@ -248,11 +254,8 @@ apis:
   description: Voter records store the ballot history of a single signup.
   name: NationBuilder Voters API
   slug: nationbuilder-voters-api
-artifact_total: 89
+artifact_total: 94
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: NationBuilder V2 Async Processes API
   slug: open-nationbuilder-async-processes-api
@@ -378,17 +381,17 @@ collections:
   slug: open-nationbuilder-voters-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/plans/nationbuilder-plans-pricing.yml
+  href: https://artifacts.apis.io/nationbuilder/plans/nationbuilder-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/nationbuilder-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/capabilities/nationbuilder-capability-edges.yml
+  href: https://artifacts.apis.io/nationbuilder/capabilities/nationbuilder-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/nationbuilder-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/agentic-access/nationbuilder-agentic-access.yml
+  href: https://artifacts.apis.io/nationbuilder/agentic-access/nationbuilder-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/nationbuilder-agentic-access.yml
@@ -445,82 +448,90 @@ common:
   type: ChangeLog
   url: https://support.nationbuilder.com/en/articles/2869824-where-can-i-find-out-what-s-new-or-been-updated-fixed-in-nationbuilder
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/changelog/nationbuilder-changelog.yml
+  href: https://artifacts.apis.io/nationbuilder/changelog/nationbuilder-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/nationbuilder-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/mcp/nationbuilder-mcp.yml
+  href: https://artifacts.apis.io/nationbuilder/mcp/nationbuilder-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/nationbuilder-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/nationbuilder/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/overlays/nationbuilder-v2-overlay.yaml
+  href: https://artifacts.apis.io/nationbuilder/overlays/nationbuilder-v2-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/nationbuilder-v2-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/authentication/nationbuilder-authentication.yml
+  href: https://artifacts.apis.io/nationbuilder/authentication/nationbuilder-authentication.yml
   title: ''
   type: Authentication
   url: authentication/nationbuilder-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/conventions/nationbuilder-conventions.yml
+  href: https://artifacts.apis.io/nationbuilder/conventions/nationbuilder-conventions.yml
   title: ''
   type: Conventions
   url: conventions/nationbuilder-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/lifecycle/nationbuilder-lifecycle.yml
+  href: https://artifacts.apis.io/nationbuilder/lifecycle/nationbuilder-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/nationbuilder-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/lifecycle/nationbuilder-lifecycle.yml
+  href: https://artifacts.apis.io/nationbuilder/lifecycle/nationbuilder-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/nationbuilder-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/errors/nationbuilder-problem-types.yml
+  href: https://artifacts.apis.io/nationbuilder/errors/nationbuilder-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/nationbuilder-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/conformance/nationbuilder-conformance.yml
+  href: https://artifacts.apis.io/nationbuilder/conformance/nationbuilder-conformance.yml
   title: ''
   type: Conformance
   url: conformance/nationbuilder-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/packages/nationbuilder-packages.yml
+  href: https://artifacts.apis.io/nationbuilder/packages/nationbuilder-packages.yml
   title: ''
   type: Packages
   url: packages/nationbuilder-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/data-model/nationbuilder-data-model.yml
+  href: https://artifacts.apis.io/nationbuilder/data-model/nationbuilder-data-model.yml
   title: ''
   type: DataModel
   url: data-model/nationbuilder-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/rate-limits/nationbuilder-rate-limits.yml
+  href: https://artifacts.apis.io/nationbuilder/rate-limits/nationbuilder-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/nationbuilder-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/llms/nationbuilder-llms.txt
+  href: https://artifacts.apis.io/nationbuilder/llms/nationbuilder-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/nationbuilder-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/security/nationbuilder-domain-security.yml
+  href: https://artifacts.apis.io/nationbuilder/security/nationbuilder-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/nationbuilder-domain-security.yml
 created: '2026-07-17'
 description: 'NationBuilder is a community-engagement and organizing platform for political campaigns, advocacy groups, nonprofits, and membership organizations, pairing a supporter CRM with a website/page builder, email and text messaging, event and petition tools, and integrated fundraising. Its developer surface is a REST API offered in two flavors: the current v2 API, which follows the JSON:API specification and authenticates with OAuth 2.0 (authorization-code with optional PKCE and refresh tokens), and a legacy v1 API that uses per-nation API tokens. The API exposes people/signups, donations, events, petitions, memberships, lists, tags, and related resources so integrators can sync supporter data and automate outreach. NationBuilder is multi-tenant: each nation is reached at its own {nation-slug}.nationbuilder.com host.'
+finops:
+- has_sources: true
+  method: derived
+  name: Nationbuilder Finops
+  primary_unit: add-on
+  service_category: ''
+  slug: nationbuilder-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nationbuilder.png
 layout: provider
 modified: '2026-07-20'
@@ -528,6 +539,9 @@ name: NationBuilder
 nav: Providers
 network: true
 overview: 'NationBuilder publishes 41 API contracts indexed on the [APIs.io](https://apis.io/) network, including Async Processes API, Automation Enrollments API, Automations API, and 38 more. Tagged areas include Community Organizing, CRM, Political, Non-Profit, and Fundraising.
+
+
+  The NationBuilder catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   NationBuilder''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, changelog, and 24 more developer resources.'
@@ -538,30 +552,48 @@ plans:
 - name: Nationbuilder Price Estimates
   plan_count: 0
   slug: nationbuilder-price-estimates
-random_paper: 6
+random_paper: 0
 rate_limits:
 - limit_count: 1
   name: Nationbuilder Rate Limits
   slug: nationbuilder-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 97
+  extends:
+  - spectral:oas
+  name: NationBuilder API Rules
+  rule_count: 56
+  severity_counts:
+    error: 48
+    hint: 0
+    info: 1
+    warn: 7
+  slug: nationbuilder-rules
 score:
   band: strong
-  composite: 61.8
+  composite: 65.0
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 57.0
+    artifact_dirs: 29
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 76.3
-    contract_governance: 18.2
+    access_clarity: 84.2
+    contract_governance: 31.8
     contract_quality: 54.3
     developer_ergonomics: 58.9
     discoverability: 73.2
     operational_transparency: 63.2
-  previous_composite: 61.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 65.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -578,13 +610,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/nationbuilder/refs/heads/main/screenshots/nationbuilder-2026-08-17T124218.png
+screenshot: https://apis.io/screenshots/nationbuilder/nationbuilder-2026-08-17T124218.png
 security:
 - kind: authentication
   name: Nationbuilder Authentication
@@ -594,6 +626,16 @@ security:
   name: Nationbuilder Domain Security
   slug: nationbuilder-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 4
+skills:
+- name: Create an event and manage RSVPs
+  slug: nationbuilder-manage-event
+- name: Record a donation for a supporter
+  slug: nationbuilder-record-donation
+- name: Run a petition and collect signatures
+  slug: nationbuilder-run-petition
+- name: Sync a supporter into a NationBuilder nation
+  slug: nationbuilder-sync-supporter
 slug: nationbuilder
 tags:
 - Community Organizing

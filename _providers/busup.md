@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.7
-  scored_at: '2026-10-17'
+  score: 20.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 3
@@ -161,37 +174,37 @@ apis:
 artifact_total: 28
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/busup/refs/heads/main/agentic-access/busup-agentic-access.yml
+  href: https://artifacts.apis.io/busup/agentic-access/busup-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/busup-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/busup/refs/heads/main/rules/busup-rules.yml
+  href: https://artifacts.apis.io/busup/rules/busup-rules.yml
   title: ''
   type: Spectral
   url: rules/busup-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/busup/refs/heads/main/errors/busup-problem-types.yml
+  href: https://artifacts.apis.io/busup/errors/busup-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/busup-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/busup/refs/heads/main/conformance/busup-conformance.yml
+  href: https://artifacts.apis.io/busup/conformance/busup-conformance.yml
   title: ''
   type: Conformance
   url: conformance/busup-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/busup/refs/heads/main/llms/busup-llms.txt
+  href: https://artifacts.apis.io/busup/llms/busup-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/busup-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/busup/refs/heads/main/hosts/busup-hosts.yml
+  href: https://artifacts.apis.io/busup/hosts/busup-hosts.yml
   title: ''
   type: Hosts
   url: hosts/busup-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/busup/refs/heads/main/vendors/busup-vendors.yml
+  href: https://artifacts.apis.io/busup/vendors/busup-vendors.yml
   title: ''
   type: Vendors
   url: vendors/busup-vendors.yml
@@ -208,7 +221,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/busup
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/busup/refs/heads/main/security/busup-domain-security.yml
+  href: https://artifacts.apis.io/busup/security/busup-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/busup-domain-security.yml
@@ -223,14 +236,14 @@ modified: '2026-10-06'
 name: BusUp
 nav: Providers
 network: true
-overview: 'BusUp publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing information API, Check In API, Commuting Companies API, and 22 more. Tagged areas include Company, Procurement, Spend-Management, Software-as-a-Service, and Automation.
+overview: 'BusUp publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing information API, Check In API, Commuting Companies API, and 22 more. Tagged areas include Company, Procurement, Spend Management, Software-as-a-Service, and Automation.
 
 
   The BusUp catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   BusUp''s developer surface includes engineering blog and 11 more developer resources.'
-random_paper: 9
+random_paper: 7
 rules:
 - authorship: generated
   effective_rule_count: 52
@@ -246,26 +259,28 @@ rules:
   slug: busup-rules
 score:
   band: emerging
-  composite: 22.7
+  composite: 20.0
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 14
     catalog_earned: 39.5
     catalog_earned_first_party: 0.0
     catalog_gap: 75.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -1.9
   facets:
-    access_clarity: 10.5
+    access_clarity: 5.3
     contract_governance: 18.2
-    contract_quality: 44.2
-    developer_ergonomics: 2.4
+    contract_quality: 41.1
+    developer_ergonomics: 1.2
     discoverability: 69.6
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  previous_composite: 21.9
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 25
@@ -275,12 +290,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 12.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/busup/busup-2026-11-03T122818.png
 security:
 - kind: domain-security
   name: Busup Domain Security
@@ -290,7 +307,7 @@ slug: busup
 tags:
 - Company
 - Procurement
-- Spend-Management
+- Spend Management
 - Software-as-a-Service
 - Automation
 website: https://www.busup.com/

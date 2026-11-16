@@ -7,10 +7,12 @@ access_model:
   public: false
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
+    mcp_tool_quality: three_quarters
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.9
-  scored_at: '2026-10-17'
+  score: 29.8
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: High-performance proto3 gRPC API (with gRPC-Web for browsers) for the Thru blockchain. QueryService exposes 24 read operations over accounts, blocks, transactions, events, state proofs, and node statu
@@ -42,10 +47,10 @@ apis:
 - description: Official hosted Model Context Protocol server on the Thru block explorer. Exposes eight read-only tools (get_block, get_transaction, get_account, list_account_transactions, list_recent_blocks, list_re
   name: Thru Explorer MCP Server
   slug: thru-explorer-mcp-server
-artifact_total: 5
+artifact_total: 7
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/security/unto-labs-domain-security.yml
+  href: https://artifacts.apis.io/unto-labs/security/unto-labs-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unto-labs-domain-security.yml
@@ -90,77 +95,77 @@ common:
   type: StatusPage
   url: https://status.thru.org
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/changelog/unto-labs-changelog.yml
+  href: https://artifacts.apis.io/unto-labs/changelog/unto-labs-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/unto-labs-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/llms/unto-labs-llms.txt
+  href: https://artifacts.apis.io/unto-labs/llms/unto-labs-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/unto-labs-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/mcp/unto-labs-mcp.yml
+  href: https://artifacts.apis.io/unto-labs/mcp/unto-labs-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/unto-labs-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/packages/unto-labs-packages.yml
+  href: https://artifacts.apis.io/unto-labs/packages/unto-labs-packages.yml
   title: ''
   type: Packages
   url: packages/unto-labs-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/packages/unto-labs-packages.yml
+  href: https://artifacts.apis.io/unto-labs/packages/unto-labs-packages.yml
   title: ''
   type: SDKs
   url: packages/unto-labs-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/cli/unto-labs-cli.yml
+  href: https://artifacts.apis.io/unto-labs/cli/unto-labs-cli.yml
   title: ''
   type: CLI
   url: cli/unto-labs-cli.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/errors/unto-labs-error-codes.yml
+  href: https://artifacts.apis.io/unto-labs/errors/unto-labs-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/unto-labs-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/conventions/unto-labs-conventions.yml
+  href: https://artifacts.apis.io/unto-labs/conventions/unto-labs-conventions.yml
   title: ''
   type: Conventions
   url: conventions/unto-labs-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/lifecycle/unto-labs-lifecycle.yml
+  href: https://artifacts.apis.io/unto-labs/lifecycle/unto-labs-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/unto-labs-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/authentication/unto-labs-authentication.yml
+  href: https://artifacts.apis.io/unto-labs/authentication/unto-labs-authentication.yml
   title: ''
   type: Authentication
   url: authentication/unto-labs-authentication.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/sandbox/unto-labs-sandbox.yml
+  href: https://artifacts.apis.io/unto-labs/sandbox/unto-labs-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/unto-labs-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/conformance/unto-labs-conformance.yml
+  href: https://artifacts.apis.io/unto-labs/conformance/unto-labs-conformance.yml
   title: ''
   type: Conformance
   url: conformance/unto-labs-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/components/unto-labs-components.yml
+  href: https://artifacts.apis.io/unto-labs/components/unto-labs-components.yml
   title: ''
   type: Components
   url: components/unto-labs-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/data-model/unto-labs-data-model.yml
+  href: https://artifacts.apis.io/unto-labs/data-model/unto-labs-data-model.yml
   title: ''
   type: DataModel
   url: data-model/unto-labs-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/unto-labs/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -180,12 +185,12 @@ overview: 'Unto Labs is listed with 2 APIs on the [APIs.io](https://apis.io/) ne
 
 
   Unto Labs'' developer surface includes documentation, getting-started guide, support, changelog, CLI, authentication, sandbox, and 19 more developer resources.'
-random_paper: 15
+random_paper: 5
 score:
   band: thin
   composite: 31.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -210,14 +215,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/unto-labs/refs/heads/main/screenshots/unto-labs-2026-09-02T165002.png
+screenshot: https://apis.io/screenshots/unto-labs/unto-labs-2026-09-02T165002.png
 security:
 - kind: authentication
   name: Unto Labs Authentication
@@ -227,6 +232,12 @@ security:
   name: Unto Labs Domain Security
   slug: unto-labs-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 2
+skills:
+- name: Set up the Thru CLI, create an account, and fund it from the faucet
+  slug: unto-labs-fund-and-create-account
+- name: Inspect Thru chain state with the Explorer MCP
+  slug: unto-labs-inspect-chain-state
 slug: unto-labs
 tags:
 - Company

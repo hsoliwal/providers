@@ -25,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,22 +36,22 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/assured-allies/refs/heads/main/security/assured-allies-domain-security.yml
+  href: https://artifacts.apis.io/assured-allies/security/assured-allies-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/assured-allies-domain-security.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/assured-allies/refs/heads/main/conformance/assured-allies-conformance.yml
+  href: https://artifacts.apis.io/assured-allies/conformance/assured-allies-conformance.yml
   title: ''
   type: Conformance
   url: conformance/assured-allies-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/assured-allies/refs/heads/main/llms/assured-allies-llms.txt
+  href: https://artifacts.apis.io/assured-allies/llms/assured-allies-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/assured-allies-llms.txt
@@ -118,7 +121,7 @@ name: Assured Allies
 nav: Providers
 network: true
 overview: Assured Allies is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Insurtech, Long-Term Care, and Health.
-random_paper: 8
+random_paper: 22
 score:
   band: emerging
   composite: 16.8
@@ -157,14 +160,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 21.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/assured-allies/refs/heads/main/screenshots/assured-allies-2026-08-07T161807.png
+screenshot: https://apis.io/screenshots/assured-allies/assured-allies-2026-08-07T161807.png
 security:
 - kind: domain-security
   name: Assured Allies Domain Security

@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.5
-  scored_at: '2026-10-17'
+  score: 22.2
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -101,52 +118,52 @@ apis:
 artifact_total: 24
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unity-catalog/refs/heads/main/agentic-access/unity-catalog-agentic-access.yml
+  href: https://artifacts.apis.io/unity-catalog/agentic-access/unity-catalog-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/unity-catalog-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unity-catalog/refs/heads/main/rules/unity-catalog-rules.yml
+  href: https://artifacts.apis.io/unity-catalog/rules/unity-catalog-rules.yml
   title: ''
   type: Spectral
   url: rules/unity-catalog-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unity-catalog/refs/heads/main/json-ld/unity-catalog-context.jsonld
+  href: https://artifacts.apis.io/unity-catalog/json-ld/unity-catalog-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/unity-catalog-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unity-catalog/refs/heads/main/vocabulary/unity-catalog-vocabulary.yml
+  href: https://artifacts.apis.io/unity-catalog/vocabulary/unity-catalog-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/unity-catalog-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unity-catalog/refs/heads/main/data-model/unity-catalog-data-model.yml
+  href: https://artifacts.apis.io/unity-catalog/data-model/unity-catalog-data-model.yml
   title: ''
   type: DataModel
   url: data-model/unity-catalog-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unity-catalog/refs/heads/main/authentication/unity-catalog-authentication.yml
+  href: https://artifacts.apis.io/unity-catalog/authentication/unity-catalog-authentication.yml
   title: ''
   type: Authentication
   url: authentication/unity-catalog-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unity-catalog/refs/heads/main/errors/unity-catalog-problem-types.yml
+  href: https://artifacts.apis.io/unity-catalog/errors/unity-catalog-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/unity-catalog-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/unity-catalog/refs/heads/main/conformance/unity-catalog-conformance.yml
+  href: https://artifacts.apis.io/unity-catalog/conformance/unity-catalog-conformance.yml
   title: ''
   type: Conformance
   url: conformance/unity-catalog-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/unity-catalog/refs/heads/main/hosts/unity-catalog-hosts.yml
+  href: https://artifacts.apis.io/unity-catalog/hosts/unity-catalog-hosts.yml
   title: ''
   type: Hosts
   url: hosts/unity-catalog-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/unity-catalog/refs/heads/main/vendors/unity-catalog-vendors.yml
+  href: https://artifacts.apis.io/unity-catalog/vendors/unity-catalog-vendors.yml
   title: ''
   type: Vendors
   url: vendors/unity-catalog-vendors.yml
@@ -155,7 +172,7 @@ common:
   type: GettingStarted
   url: https://docs.unitycatalog.io/quickstart/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unity-catalog/refs/heads/main/security/unity-catalog-domain-security.yml
+  href: https://artifacts.apis.io/unity-catalog/security/unity-catalog-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unity-catalog-domain-security.yml
@@ -226,7 +243,7 @@ overview: 'Unity Catalog publishes 13 API contracts indexed on the [APIs.io](htt
 
 
   Unity Catalog''s developer surface includes authentication, getting-started guide, documentation, API reference, engineering blog, and 14 more developer resources.'
-random_paper: 3
+random_paper: 1
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -242,21 +259,23 @@ rules:
   slug: unity-catalog-rules
 score:
   band: thin
-  composite: 31.0
+  composite: 27.6
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 21
     catalog_earned: 62.8
     catalog_earned_first_party: 0.0
     catalog_gap: 52.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.4
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
     contract_quality: 54.3
-    developer_ergonomics: 42.9
+    developer_ergonomics: 27.4
     discoverability: 66.1
-    operational_transparency: 5.3
+    operational_transparency: 2.6
+  previous_composite: 31.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -272,11 +291,13 @@ score:
     regime: AI & Biometrics
     regime_id: ai_biometrics
     score: 15.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/unity-catalog/unity-catalog-2026-11-03T145431.png
 security:
 - kind: authentication
   name: Unity Catalog Authentication

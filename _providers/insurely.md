@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Create end users, capture consent, run data collections (including PSD2 banking data), and retrieve structured wealth data. Dual auth (backend API key + per-user JWT), date-based versioning, and colle
@@ -88,47 +91,47 @@ common:
   type: StatusPage
   url: https://status.insurely.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/authentication/insurely-authentication.yml
+  href: https://artifacts.apis.io/insurely/authentication/insurely-authentication.yml
   title: ''
   type: Authentication
   url: authentication/insurely-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/conventions/insurely-conventions.yml
+  href: https://artifacts.apis.io/insurely/conventions/insurely-conventions.yml
   title: ''
   type: Conventions
   url: conventions/insurely-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/asyncapi/insurely-collection-webhooks.yml
+  href: https://artifacts.apis.io/insurely/asyncapi/insurely-collection-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/insurely-collection-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/errors/insurely-collection-states.yml
+  href: https://artifacts.apis.io/insurely/errors/insurely-collection-states.yml
   title: ''
   type: ErrorCatalog
   url: errors/insurely-collection-states.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/lifecycle/insurely-lifecycle.yml
+  href: https://artifacts.apis.io/insurely/lifecycle/insurely-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/insurely-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/sandbox/insurely-sandbox.yml
+  href: https://artifacts.apis.io/insurely/sandbox/insurely-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/insurely-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/mcp/insurely-mcp.yml
+  href: https://artifacts.apis.io/insurely/mcp/insurely-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/insurely-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/llms/insurely-llms.txt
+  href: https://artifacts.apis.io/insurely/llms/insurely-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/insurely-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/conformance/insurely-conformance.yml
+  href: https://artifacts.apis.io/insurely/conformance/insurely-conformance.yml
   title: ''
   type: Conformance
   url: conformance/insurely-conformance.yml
@@ -137,12 +140,12 @@ common:
   type: Compliance
   url: https://trust.insurely.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/security/insurely-trust-center.yml
+  href: https://artifacts.apis.io/insurely/security/insurely-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/insurely-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/security/insurely-domain-security.yml
+  href: https://artifacts.apis.io/insurely/security/insurely-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/insurely-domain-security.yml
@@ -165,23 +168,23 @@ overview: 'Insurely is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Insurely''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, authentication, and 16 more developer resources.'
-random_paper: 11
+random_paper: 3
 score:
   band: thin
-  composite: 33.9
+  composite: 36.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.4
   facets:
     access_clarity: 15.8
     contract_governance: 18.2
     contract_quality: 39.0
-    developer_ergonomics: 42.9
+    developer_ergonomics: 54.8
     discoverability: 73.2
     operational_transparency: 26.3
   jurisdiction:
@@ -205,14 +208,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 17.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/insurely/refs/heads/main/screenshots/insurely-2026-07-25T222626.png
+screenshot: https://apis.io/screenshots/insurely/insurely-2026-07-25T222626.png
 security:
 - kind: authentication
   name: Insurely Authentication

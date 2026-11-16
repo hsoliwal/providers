@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-10-17'
+  score: 30.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -98,9 +104,6 @@ apis:
 artifact_total: 27
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Duda Partner Accounts API
   slug: open-duda-accounts-api
 - collection_type: open
@@ -144,17 +147,17 @@ common:
   type: License
   url: https://github.com/DudaDev/partner-api/blob/main/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/duda/refs/heads/main/agentic-access/duda-agentic-access.yml
+  href: https://artifacts.apis.io/duda/agentic-access/duda-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/duda-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/duda/refs/heads/main/security/duda-domain-security.yml
+  href: https://artifacts.apis.io/duda/security/duda-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/duda-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/duda/refs/heads/main/authentication/duda-authentication.yml
+  href: https://artifacts.apis.io/duda/authentication/duda-authentication.yml
   title: ''
   type: Authentication
   url: authentication/duda-authentication.yml
@@ -221,38 +224,54 @@ network: true
 overview: 'Duda publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Authentication API, Blog API, and 7 more. Tagged areas include Website Builder, Agencies, White Label, Software-as-a-Service, and E-Commerce.
 
 
+  The Duda catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Duda''s developer surface includes authentication, documentation, engineering blog, pricing, and 13 more developer resources.'
 plans:
 - name: Duda Plans Pricing
   plan_count: 5
   slug: duda-plans-pricing
-random_paper: 18
+random_paper: 6
 rate_limits:
 - limit_count: 2
   name: Duda Rate Limits
   slug: duda-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Duda API Rules
+  rule_count: 66
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 3
+    warn: 4
+  slug: duda-rules
 score:
   band: thin
-  composite: 34.5
+  composite: 36.8
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 42.0
+    artifact_dirs: 17
+    catalog_earned: 46.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 73.0
+    catalog_gap: 68.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -6.6
+  delta: 0.8
   facets:
     access_clarity: 18.4
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 51.2
-    developer_ergonomics: 26.2
+    developer_ergonomics: 31.0
     discoverability: 66.1
     operational_transparency: 42.1
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 41.1
+  previous_composite: 36.0
   provenance:
     agentic_access: derived
     contracts:
@@ -266,13 +285,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/duda/refs/heads/main/screenshots/duda-2026-06-20T180313.png
+screenshot: https://apis.io/screenshots/duda/duda-2026-06-20T180313.png
 security:
 - kind: authentication
   name: Duda Authentication

@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://valorwater.com'', ''status'': 301, ''note'': ''declared website redirects to https://www.xylem.com:443/en-us/brand/xylem-vue/ — a different registrable domain (valorwater.com -> xylem.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,17 +37,17 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/valor-water-analytics/refs/heads/main/security/valor-water-analytics-domain-security.yml
+  href: https://artifacts.apis.io/valor-water-analytics/security/valor-water-analytics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/valor-water-analytics-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/valor-water-analytics/refs/heads/main/llms/valor-water-analytics-llms.txt
+  href: https://artifacts.apis.io/valor-water-analytics/llms/valor-water-analytics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/valor-water-analytics-llms.txt
@@ -60,12 +64,12 @@ name: Valor Water Analytics
 nav: Providers
 network: true
 overview: Valor Water Analytics is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Water, Analytics, Utilities, and Data.
-random_paper: 19
+random_paper: 17
 score:
   band: minimal
   composite: 4.3
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -93,14 +97,14 @@ score:
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 4.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/valor-water-analytics/refs/heads/main/screenshots/valor-water-analytics-2026-09-02T165332.png
+screenshot: https://apis.io/screenshots/valor-water-analytics/valor-water-analytics-2026-09-02T165332.png
 security:
 - kind: domain-security
   name: Valor Water Analytics Domain Security

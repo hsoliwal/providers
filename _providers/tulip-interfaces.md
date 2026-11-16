@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Tulip REST API gives programmatic access to the Tulip manufacturing operations platform, organized into namespaces covering apps, tables, table records, connectors, stations, and automations. Each
@@ -41,12 +45,12 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tulip-interfaces/refs/heads/main/security/tulip-interfaces-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tulip-interfaces/security/tulip-interfaces-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/tulip-interfaces-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tulip-interfaces/refs/heads/main/security/tulip-interfaces-domain-security.yml
+  href: https://artifacts.apis.io/tulip-interfaces/security/tulip-interfaces-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tulip-interfaces-domain-security.yml
@@ -106,12 +110,12 @@ overview: 'Tulip Interfaces is listed with 1 API on the [APIs.io](https://apis.i
 
 
   Tulip Interfaces'' developer surface includes documentation, developer portal, engineering blog, YouTube channel, pricing, and 6 more developer resources.'
-random_paper: 13
+random_paper: 7
 score:
   band: emerging
-  composite: 16.2
+  composite: 17.6
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 45.0
     catalog_earned_first_party: 0.0
     catalog_gap: 70.0
@@ -124,22 +128,22 @@ score:
     contract_quality: 10.7
     developer_ergonomics: 21.4
     discoverability: 66.1
-    operational_transparency: 2.6
-  previous_composite: 16.2
+    operational_transparency: 13.2
+  previous_composite: 17.6
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/tulip-interfaces/refs/heads/main/screenshots/tulip-interfaces-2026-06-20T195824.png
+screenshot: https://apis.io/screenshots/tulip-interfaces/tulip-interfaces-2026-06-20T195824.png
 security:
 - kind: domain-security
   name: Tulip Interfaces Domain Security

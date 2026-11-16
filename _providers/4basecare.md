@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/4basecare/refs/heads/main/security/4basecare-domain-security.yml
+  href: https://artifacts.apis.io/4basecare/security/4basecare-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/4basecare-domain-security.yml
@@ -81,22 +95,22 @@ common:
   type: x-EquityZen
   url: https://equityzen.com/company/4basecare
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/4basecare/refs/heads/main/packages/4basecare-packages.yml
+  href: https://artifacts.apis.io/4basecare/packages/4basecare-packages.yml
   title: ''
   type: Packages
   url: packages/4basecare-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/4basecare/refs/heads/main/plans/4basecare-plans-pricing.yml
+  href: https://artifacts.apis.io/4basecare/plans/4basecare-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/4basecare-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/4basecare/refs/heads/main/rate-limits/4basecare-rate-limits.yml
+  href: https://artifacts.apis.io/4basecare/rate-limits/4basecare-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/4basecare-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/4basecare/refs/heads/main/conformance/4basecare-conformance.yml
+  href: https://artifacts.apis.io/4basecare/conformance/4basecare-conformance.yml
   title: ''
   type: Conformance
   url: conformance/4basecare-conformance.yml
@@ -105,7 +119,7 @@ common:
   type: Compliance
   url: https://www.4basecare.com/indian-subcontinent
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/4basecare/refs/heads/main/llms/4basecare-llms.txt
+  href: https://artifacts.apis.io/4basecare/llms/4basecare-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/4basecare-llms.txt
@@ -146,7 +160,7 @@ plans:
 - name: 4Basecare Plans Pricing
   plan_count: 0
   slug: 4basecare-plans-pricing
-random_paper: 16
+random_paper: 10
 rate_limits:
 - limit_count: 0
   name: 4Basecare Rate Limits
@@ -155,13 +169,13 @@ score:
   band: emerging
   composite: 15.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
@@ -176,7 +190,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 15.3
+  previous_composite: 15.4
   provenance:
     conformance: first-party
   regulatory:
@@ -189,14 +203,14 @@ score:
     regime: Health
     regime_id: health
     score: 17.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/4basecare/refs/heads/main/screenshots/4basecare-2026-10-11T092103.png
+screenshot: https://apis.io/screenshots/4basecare/4basecare-2026-10-11T092103.png
 security:
 - kind: domain-security
   name: 4Basecare Domain Security

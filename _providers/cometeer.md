@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,15 +27,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.9
-  scored_at: '2026-10-17'
+  score: 34.6
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Cometeer's Universal Commerce Protocol shopping service, exposed over MCP (JSON-RPC 2.0 via HTTP POST) at /api/ucp/mcp and advertised from /.well-known/ucp. Thirteen tools cover catalog search and loo
@@ -56,7 +59,7 @@ apis:
   description: Storefront search
   name: Cometeer Search API
   slug: cometeer-search-api
-artifact_total: 9
+artifact_total: 12
 collections:
 - collection_type: open
   name: Cometeer Storefront (read-only agent surface)
@@ -67,7 +70,7 @@ common:
   type: BlogRSS
   url: https://cometeer.com/blogs/tasting-notes.atom
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/security/cometeer-domain-security.yml
+  href: https://artifacts.apis.io/cometeer/security/cometeer-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/cometeer-domain-security.yml
@@ -80,7 +83,7 @@ common:
   type: Documentation
   url: https://cometeer.com/agents.md
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/llms/cometeer-llms.txt
+  href: https://artifacts.apis.io/cometeer/llms/cometeer-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/cometeer-llms.txt
@@ -109,47 +112,47 @@ common:
   type: PrivacyPolicy
   url: https://cometeer.com/policies/privacy-policy
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/well-known/cometeer-well-known.yml
+  href: https://artifacts.apis.io/cometeer/well-known/cometeer-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/cometeer-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/authentication/cometeer-authentication.yml
+  href: https://artifacts.apis.io/cometeer/authentication/cometeer-authentication.yml
   title: ''
   type: Authentication
   url: authentication/cometeer-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/scopes/cometeer-scopes.yml
+  href: https://artifacts.apis.io/cometeer/scopes/cometeer-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/cometeer-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/conformance/cometeer-conformance.yml
+  href: https://artifacts.apis.io/cometeer/conformance/cometeer-conformance.yml
   title: ''
   type: Conformance
   url: conformance/cometeer-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/lifecycle/cometeer-lifecycle.yml
+  href: https://artifacts.apis.io/cometeer/lifecycle/cometeer-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/cometeer-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/conventions/cometeer-conventions.yml
+  href: https://artifacts.apis.io/cometeer/conventions/cometeer-conventions.yml
   title: ''
   type: Conventions
   url: conventions/cometeer-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/errors/cometeer-problem-types.yml
+  href: https://artifacts.apis.io/cometeer/errors/cometeer-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/cometeer-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/data-model/cometeer-data-model.yml
+  href: https://artifacts.apis.io/cometeer/data-model/cometeer-data-model.yml
   title: ''
   type: DataModel
   url: data-model/cometeer-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/cometeer/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -168,8 +171,24 @@ network: true
 overview: 'Cometeer publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Collections API, Products API, Search API, and 1 more. Tagged areas include Company, Coffee, Food and Beverage, E-Commerce, and Direct to Consumer.
 
 
+  The Cometeer catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Cometeer''s developer surface includes documentation, support, engineering blog, pricing, signup flow, authentication, and 14 more developer resources.'
-random_paper: 16
+random_paper: 12
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Cometeer API Rules
+  rule_count: 55
+  severity_counts:
+    error: 52
+    hint: 0
+    info: 2
+    warn: 1
+  slug: cometeer-rules
 scopes:
 - name: Cometeer Scopes
   scope_count: 4
@@ -177,23 +196,23 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.0
+  composite: 31.7
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 32.0
+    artifact_dirs: 21
+    catalog_earned: 36.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 78.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 13.1
     developer_ergonomics: 30.4
     discoverability: 66.7
     operational_transparency: 0.0
-  previous_composite: 30.0
+  previous_composite: 31.7
   provenance:
     conformance: first-party
     contracts:
@@ -209,14 +228,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/cometeer/refs/heads/main/screenshots/cometeer-2026-08-07T163704.png
+screenshot: https://apis.io/screenshots/cometeer/cometeer-2026-08-07T163704.png
 security:
 - kind: authentication
   name: Cometeer Authentication
@@ -226,6 +245,12 @@ security:
   name: Cometeer Domain Security
   slug: cometeer-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 2
+skills:
+- name: Buy Cometeer coffee as an agent (UCP)
+  slug: cometeer-agentic-purchase
+- name: Browse the Cometeer coffee catalog
+  slug: cometeer-browse-catalog
 slug: cometeer
 tags:
 - Company

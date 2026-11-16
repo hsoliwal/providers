@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -63,9 +66,6 @@ apis:
 artifact_total: 14
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Johnson & Johnson LifeScan Devices API
   slug: open-johnson-and-johnson-devices-api
 - collection_type: open
@@ -79,17 +79,17 @@ collections:
   slug: open-johnson-and-johnson-patients-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/johnson-and-johnson/refs/heads/main/plans/johnson-and-johnson-plans-pricing.yml
+  href: https://artifacts.apis.io/johnson-and-johnson/plans/johnson-and-johnson-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/johnson-and-johnson-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/johnson-and-johnson/refs/heads/main/rate-limits/johnson-and-johnson-rate-limits.yml
+  href: https://artifacts.apis.io/johnson-and-johnson/rate-limits/johnson-and-johnson-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/johnson-and-johnson-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/johnson-and-johnson/refs/heads/main/finops/johnson-and-johnson-finops.yml
+  href: https://artifacts.apis.io/johnson-and-johnson/finops/johnson-and-johnson-finops.yml
   title: ''
   type: FinOps
   url: finops/johnson-and-johnson-finops.yml
@@ -102,17 +102,17 @@ common:
   type: BlogRSS
   url: https://www.jnj.com/latest-news.rss
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/johnson-and-johnson/refs/heads/main/agentic-access/johnson-and-johnson-agentic-access.yml
+  href: https://artifacts.apis.io/johnson-and-johnson/agentic-access/johnson-and-johnson-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/johnson-and-johnson-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/johnson-and-johnson/refs/heads/main/security/johnson-and-johnson-domain-security.yml
+  href: https://artifacts.apis.io/johnson-and-johnson/security/johnson-and-johnson-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/johnson-and-johnson-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/johnson-and-johnson/refs/heads/main/authentication/johnson-and-johnson-authentication.yml
+  href: https://artifacts.apis.io/johnson-and-johnson/authentication/johnson-and-johnson-authentication.yml
   title: ''
   type: Authentication
   url: authentication/johnson-and-johnson-authentication.yml
@@ -143,6 +143,9 @@ network: true
 overview: 'Johnson & Johnson publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Devices API, Glucose Readings API, and Patients API. Tagged areas include Healthcare, Medical Devices, Diabetes, Blood Glucose, and Pharmaceuticals.
 
 
+  The Johnson & Johnson catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Johnson & Johnson''s developer surface includes engineering blog, authentication, developer portal, and 7 more developer resources.'
 plans:
 - name: Johnson And Johnson Plans Pricing
@@ -164,30 +167,43 @@ press:
 - date: ''
   title: JNJ Innovation - News & Events
   url: https://jnjinnovation.com/news
-random_paper: 17
+random_paper: 11
 rate_limits:
 - limit_count: 1
   name: Johnson And Johnson Rate Limits
   slug: johnson-and-johnson-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 77
+  extends:
+  - spectral:oas
+  name: Johnson & Johnson API Rules
+  rule_count: 36
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 1
+    warn: 1
+  slug: johnson-and-johnson-rules
 score:
-  band: emerging
-  composite: 25.0
+  band: thin
+  composite: 26.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 41.0
+    artifact_dirs: 17
+    catalog_earned: 45.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 69.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.1
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 41.6
     developer_ergonomics: 33.3
     discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 26.1
+  previous_composite: 26.6
   provenance:
     agentic_access: derived
     contracts:
@@ -201,14 +217,14 @@ score:
     regime: Health
     regime_id: health
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/johnson-and-johnson/refs/heads/main/screenshots/johnson-and-johnson-2026-06-20T183753.png
+screenshot: https://apis.io/screenshots/johnson-and-johnson/johnson-and-johnson-2026-06-20T183753.png
 security:
 - kind: authentication
   name: Johnson And Johnson Authentication

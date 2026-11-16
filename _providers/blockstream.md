@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
   public: true
   source:
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.1
-  scored_at: '2026-10-17'
+  score: 18.8
+  scored_at: '2026-11-06'
 api_count: 7
 apis:
 - baseURL: https://blockstream.info/api
@@ -71,11 +79,8 @@ apis:
   description: The Transactions API from Blockstream — 10 operation(s) for transactions.
   name: Blockstream Transactions API
   slug: blockstream-transactions-api
-artifact_total: 17
+artifact_total: 18
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Blockstream Esplora HTTP Addresses API
   slug: open-blockstream-addresses-api
@@ -115,77 +120,77 @@ common:
   type: Blog
   url: https://blockstream.com/blog/
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/overlays/blockstream-esplora-overlay.yaml
+  href: https://artifacts.apis.io/blockstream/overlays/blockstream-esplora-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/blockstream-esplora-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/authentication/blockstream-authentication.yml
+  href: https://artifacts.apis.io/blockstream/authentication/blockstream-authentication.yml
   title: ''
   type: Authentication
   url: authentication/blockstream-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/conventions/blockstream-conventions.yml
+  href: https://artifacts.apis.io/blockstream/conventions/blockstream-conventions.yml
   title: ''
   type: Conventions
   url: conventions/blockstream-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/errors/blockstream-problem-types.yml
+  href: https://artifacts.apis.io/blockstream/errors/blockstream-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/blockstream-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/data-model/blockstream-data-model.yml
+  href: https://artifacts.apis.io/blockstream/data-model/blockstream-data-model.yml
   title: ''
   type: DataModel
   url: data-model/blockstream-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/lifecycle/blockstream-lifecycle.yml
+  href: https://artifacts.apis.io/blockstream/lifecycle/blockstream-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/blockstream-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/conformance/blockstream-conformance.yml
+  href: https://artifacts.apis.io/blockstream/conformance/blockstream-conformance.yml
   title: ''
   type: Conformance
   url: conformance/blockstream-conformance.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/packages/blockstream-packages.yml
+  href: https://artifacts.apis.io/blockstream/packages/blockstream-packages.yml
   title: ''
   type: Packages
   url: packages/blockstream-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/packages/blockstream-packages.yml
+  href: https://artifacts.apis.io/blockstream/packages/blockstream-packages.yml
   title: ''
   type: SDKs
   url: packages/blockstream-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/mcp/blockstream-mcp.yml
+  href: https://artifacts.apis.io/blockstream/mcp/blockstream-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/blockstream-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/llms/blockstream-llms.txt
+  href: https://artifacts.apis.io/blockstream/llms/blockstream-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/blockstream-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/well-known/blockstream-well-known.yml
+  href: https://artifacts.apis.io/blockstream/well-known/blockstream-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/blockstream-well-known.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/sandbox/blockstream-sandbox.yml
+  href: https://artifacts.apis.io/blockstream/sandbox/blockstream-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/blockstream-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/blockstream/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/security/blockstream-domain-security.yml
+  href: https://artifacts.apis.io/blockstream/security/blockstream-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/blockstream-domain-security.yml
@@ -200,27 +205,43 @@ network: true
 overview: 'Blockstream is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Addresses API, Assets API, Blocks API, and 4 more. Tagged areas include Company, Bitcoin, Blockchain, Cryptocurrency, and Block Explorer.
 
 
+  The Blockstream catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Blockstream''s developer surface includes documentation, engineering blog, authentication, sandbox, and 15 more developer resources.'
-random_paper: 9
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 90
+  extends:
+  - spectral:oas
+  name: Blockstream API Rules
+  rule_count: 49
+  severity_counts:
+    error: 46
+    hint: 0
+    info: 1
+    warn: 2
+  slug: blockstream-rules
 score:
   band: emerging
-  composite: 20.5
+  composite: 22.2
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 40.0
+    artifact_dirs: 23
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 11.5
     developer_ergonomics: 47.0
     discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 20.5
+  previous_composite: 22.2
   provenance:
     conformance: derived
     contracts:
@@ -236,13 +257,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/blockstream/refs/heads/main/screenshots/blockstream-2026-07-25T203345.png
+screenshot: https://apis.io/screenshots/blockstream/blockstream-2026-07-25T203345.png
 security:
 - kind: authentication
   name: Blockstream Authentication
@@ -252,6 +273,10 @@ security:
   name: Blockstream Domain Security
   slug: blockstream-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC
+skill_count: 1
+skills:
+- name: Check a Bitcoin address balance and history
+  slug: blockstream-check-address
 slug: blockstream
 tags:
 - Company

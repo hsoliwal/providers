@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: platform
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Run deployed WordApps programmatically. Each published WordApp exposes a run endpoint (POST /api/released-app/{app_id}/run) that accepts a JSON body of named inputs (text, image, audio) plus a semanti
@@ -43,42 +46,42 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wordware/refs/heads/main/security/wordware-domain-security.yml
+  href: https://artifacts.apis.io/wordware/security/wordware-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/wordware-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/wordware/refs/heads/main/packages/wordware-packages.yml
+  href: https://artifacts.apis.io/wordware/packages/wordware-packages.yml
   title: ''
   type: Packages
   url: packages/wordware-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wordware/refs/heads/main/mcp/wordware-mcp.yml
+  href: https://artifacts.apis.io/wordware/mcp/wordware-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/wordware-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/wordware/refs/heads/main/llms/wordware-llms.txt
+  href: https://artifacts.apis.io/wordware/llms/wordware-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/wordware-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/wordware/refs/heads/main/authentication/wordware-authentication.yml
+  href: https://artifacts.apis.io/wordware/authentication/wordware-authentication.yml
   title: ''
   type: Authentication
   url: authentication/wordware-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wordware/refs/heads/main/lifecycle/wordware-lifecycle.yml
+  href: https://artifacts.apis.io/wordware/lifecycle/wordware-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/wordware-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wordware/refs/heads/main/conventions/wordware-conventions.yml
+  href: https://artifacts.apis.io/wordware/conventions/wordware-conventions.yml
   title: ''
   type: Conventions
   url: conventions/wordware-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/wordware/refs/heads/main/conformance/wordware-conformance.yml
+  href: https://artifacts.apis.io/wordware/conformance/wordware-conformance.yml
   title: ''
   type: Conformance
   url: conformance/wordware-conformance.yml
@@ -134,12 +137,12 @@ overview: 'Wordware is listed with 1 API on the [APIs.io](https://apis.io/) netw
 
 
   Wordware''s developer surface includes authentication, documentation, API reference, getting-started guide, support, and 12 more developer resources.'
-random_paper: 17
+random_paper: 11
 score:
   band: emerging
   composite: 23.7
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -163,14 +166,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 22.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/wordware/refs/heads/main/screenshots/wordware-2026-09-02T170931.png
+screenshot: https://apis.io/screenshots/wordware/wordware-2026-09-02T170931.png
 security:
 - kind: authentication
   name: Wordware Authentication

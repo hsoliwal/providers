@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: GraphQL API providing access to product, subscription, and account data.
@@ -32,27 +46,27 @@ apis:
 artifact_total: 3
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/catch-co-mystery-tackle-box/refs/heads/main/plans/catch-co-mystery-tackle-box-plans-pricing.yml
+  href: https://artifacts.apis.io/catch-co-mystery-tackle-box/plans/catch-co-mystery-tackle-box-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/catch-co-mystery-tackle-box-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/catch-co-mystery-tackle-box/refs/heads/main/llms/catch-co-mystery-tackle-box-llms.txt
+  href: https://artifacts.apis.io/catch-co-mystery-tackle-box/llms/catch-co-mystery-tackle-box-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/catch-co-mystery-tackle-box-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/catch-co-mystery-tackle-box/refs/heads/main/well-known/catch-co-mystery-tackle-box-well-known.yml
+  href: https://artifacts.apis.io/catch-co-mystery-tackle-box/well-known/catch-co-mystery-tackle-box-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/catch-co-mystery-tackle-box-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/catch-co-mystery-tackle-box/refs/heads/main/hosts/catch-co-mystery-tackle-box-hosts.yml
+  href: https://artifacts.apis.io/catch-co-mystery-tackle-box/hosts/catch-co-mystery-tackle-box-hosts.yml
   title: ''
   type: Hosts
   url: hosts/catch-co-mystery-tackle-box-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/catch-co-mystery-tackle-box/refs/heads/main/vendors/catch-co-mystery-tackle-box-vendors.yml
+  href: https://artifacts.apis.io/catch-co-mystery-tackle-box/vendors/catch-co-mystery-tackle-box-vendors.yml
   title: ''
   type: Vendors
   url: vendors/catch-co-mystery-tackle-box-vendors.yml
@@ -69,7 +83,7 @@ common:
   type: Login
   url: https://mysterytacklebox.com/account/login
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/catch-co-mystery-tackle-box/refs/heads/main/security/catch-co-mystery-tackle-box-domain-security.yml
+  href: https://artifacts.apis.io/catch-co-mystery-tackle-box/security/catch-co-mystery-tackle-box-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/catch-co-mystery-tackle-box-domain-security.yml
@@ -120,21 +134,23 @@ plans:
 random_paper: 19
 score:
   band: emerging
-  composite: 18.4
+  composite: 15.3
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.1
   facets:
-    access_clarity: 55.3
+    access_clarity: 43.4
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 7.1
+    developer_ergonomics: 3.6
     discoverability: 73.2
     operational_transparency: 0.0
+  previous_composite: 18.4
   provenance:
     mcp: unknown
   regulatory:
@@ -143,12 +159,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/catch-co-mystery-tackle-box/catch-co-mystery-tackle-box-2026-11-03T123514.png
 security:
 - kind: domain-security
   name: Catch Co Mystery Tackle Box Domain Security

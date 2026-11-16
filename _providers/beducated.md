@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: API for Beducated platform offering course data and user management.
@@ -32,17 +45,17 @@ apis:
 artifact_total: 2
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/beducated/refs/heads/main/vendors/beducated-vendors.yml
+  href: https://artifacts.apis.io/beducated/vendors/beducated-vendors.yml
   title: ''
   type: Vendors
   url: vendors/beducated-vendors.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/beducated/refs/heads/main/conformance/beducated-conformance.yml
+  href: https://artifacts.apis.io/beducated/conformance/beducated-conformance.yml
   title: ''
   type: Conformance
   url: conformance/beducated-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/beducated/refs/heads/main/hosts/beducated-hosts.yml
+  href: https://artifacts.apis.io/beducated/hosts/beducated-hosts.yml
   title: ''
   type: Hosts
   url: hosts/beducated-hosts.yml
@@ -59,7 +72,7 @@ common:
   type: Login
   url: https://my.beducated.com/login/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/beducated/refs/heads/main/security/beducated-domain-security.yml
+  href: https://artifacts.apis.io/beducated/security/beducated-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/beducated-domain-security.yml
@@ -107,24 +120,24 @@ overview: 'Beducated is listed with 1 API on the [APIs.io](https://apis.io/) net
 
 
   Beducated''s developer surface includes support, documentation, getting-started guide, and 10 more developer resources.'
-random_paper: 5
+random_paper: 17
 score:
   band: emerging
-  composite: 20.2
+  composite: 13.5
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.7
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 26.2
-    discoverability: 58.9
+    developer_ergonomics: 13.1
+    discoverability: 58.0
     operational_transparency: 0.0
   previous_composite: 20.2
   provenance:
@@ -135,15 +148,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 14.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/beducated/refs/heads/main/screenshots/beducated-2026-10-11T101725.png
+screenshot: https://apis.io/screenshots/beducated/beducated-2026-10-11T101725.png
 security:
 - kind: domain-security
   name: Beducated Domain Security

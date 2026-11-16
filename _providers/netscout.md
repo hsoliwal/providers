@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Freemium
   onboarding: unknown
   pricing: freemium
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.6
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
 - description: RESTful interface for the nGeniusONE platform, enabling network performance monitoring, analytics, and service assurance automation.
@@ -63,17 +67,17 @@ apis:
 artifact_total: 14
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/netscout/refs/heads/main/plans/netscout-plans-pricing.yml
+  href: https://artifacts.apis.io/netscout/plans/netscout-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/netscout-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/netscout/refs/heads/main/rate-limits/netscout-rate-limits.yml
+  href: https://artifacts.apis.io/netscout/rate-limits/netscout-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/netscout-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/netscout/refs/heads/main/finops/netscout-finops.yml
+  href: https://artifacts.apis.io/netscout/finops/netscout-finops.yml
   title: ''
   type: FinOps
   url: finops/netscout-finops.yml
@@ -82,17 +86,17 @@ common:
   type: IssueTracker
   url: https://github.com/arbor/aedansible/issues
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/netscout/refs/heads/main/security/netscout-trust-center.yml
+  href: https://artifacts.apis.io/netscout/security/netscout-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/netscout-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/netscout/refs/heads/main/security/netscout-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/netscout/security/netscout-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/netscout-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/netscout/refs/heads/main/security/netscout-domain-security.yml
+  href: https://artifacts.apis.io/netscout/security/netscout-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/netscout-domain-security.yml
@@ -158,7 +162,7 @@ finops:
 - has_sources: false
   method: generated
   name: Netscout Finops
-  primary_unit: ''
+  primary_unit: request
   service_category: API
   slug: netscout-finops
   template: true
@@ -176,7 +180,7 @@ plans:
 - name: Netscout Plans Pricing
   plan_count: 3
   slug: netscout-plans-pricing
-random_paper: 5
+random_paper: 21
 rate_limits:
 - limit_count: 5
   name: Netscout Rate Limits
@@ -185,13 +189,13 @@ score:
   band: thin
   composite: 29.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
     access_clarity: 50.0
     contract_governance: 0.0
@@ -199,21 +203,21 @@ score:
     developer_ergonomics: 45.2
     discoverability: 62.5
     operational_transparency: 21.1
-  previous_composite: 30.9
+  previous_composite: 29.4
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/netscout/refs/heads/main/screenshots/netscout-2026-06-20T190205.png
+screenshot: https://apis.io/screenshots/netscout/netscout-2026-06-20T190205.png
 security:
 - kind: domain-security
   name: Netscout Domain Security

@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://precisionlender.com/'', ''status'': 301, ''note'': ''declared website redirects to https://www.q2.com/products/relationship-pricing-and-profitability — a different registrable domain (precisionlender.com -> q2.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
@@ -58,12 +62,12 @@ common:
   type: Login
   url: https://application.precisionlender.com/DirectoryLogin/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/precisionlender/refs/heads/main/well-known/precisionlender-security.txt
+  href: https://artifacts.apis.io/precisionlender/well-known/precisionlender-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/precisionlender-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/precisionlender/refs/heads/main/well-known/precisionlender-well-known.yml
+  href: https://artifacts.apis.io/precisionlender/well-known/precisionlender-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/precisionlender-well-known.yml
@@ -72,12 +76,12 @@ common:
   type: Security
   url: https://www.q2.com/security-vulnerabilities-reporting
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/precisionlender/refs/heads/main/security/precisionlender-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/precisionlender/security/precisionlender-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/precisionlender-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/precisionlender/refs/heads/main/security/precisionlender-domain-security.yml
+  href: https://artifacts.apis.io/precisionlender/security/precisionlender-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/precisionlender-domain-security.yml
@@ -93,7 +97,7 @@ overview: 'PrecisionLender is profiled on the [APIs.io](https://apis.io/) networ
 
 
   PrecisionLender''s developer surface includes documentation, support, and 8 more developer resources.'
-random_paper: 0
+random_paper: 22
 score:
   band: minimal
   composite: 10.6
@@ -119,14 +123,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 9.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/precisionlender/refs/heads/main/screenshots/precisionlender-2026-09-02T151910.png
+screenshot: https://apis.io/screenshots/precisionlender/precisionlender-2026-09-02T151910.png
 security:
 - kind: domain-security
   name: Precisionlender Domain Security

@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid (free trial)
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: true
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,32 +37,32 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/distillsync/refs/heads/main/plans/distillsync-plans-pricing.yml
+  href: https://artifacts.apis.io/distillsync/plans/distillsync-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/distillsync-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/distillsync/refs/heads/main/llms/distillsync-llms.txt
+  href: https://artifacts.apis.io/distillsync/llms/distillsync-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/distillsync-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/distillsync/refs/heads/main/well-known/distillsync-well-known.yml
+  href: https://artifacts.apis.io/distillsync/well-known/distillsync-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/distillsync-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/distillsync/refs/heads/main/hosts/distillsync-hosts.yml
+  href: https://artifacts.apis.io/distillsync/hosts/distillsync-hosts.yml
   title: ''
   type: Hosts
   url: hosts/distillsync-hosts.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/distillsync/refs/heads/main/security/distillsync-domain-security.yml
+  href: https://artifacts.apis.io/distillsync/security/distillsync-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/distillsync-domain-security.yml
@@ -111,24 +125,26 @@ plans:
 - name: Distillsync Plans Pricing
   plan_count: 1
   slug: distillsync-plans-pricing
-random_paper: 14
+random_paper: 2
 score:
   band: emerging
-  composite: 23.3
+  composite: 16.3
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 11
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -7.0
   facets:
-    access_clarity: 55.3
+    access_clarity: 38.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 33.3
+    developer_ergonomics: 16.7
     discoverability: 55.4
     operational_transparency: 0.0
+  previous_composite: 23.3
   provenance:
     mcp: derived
   regulatory:
@@ -136,13 +152,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 13.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/distillsync/distillsync-2026-11-03T130803.png
 security:
 - kind: domain-security
   name: Distillsync Domain Security

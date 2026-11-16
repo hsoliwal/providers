@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -11,24 +22,24 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 18.3
-  scored_at: '2026-10-17'
-api_count: 3
+  score: 28.2
+  scored_at: '2026-11-06'
+api_count: 10
 apis:
-- description: Audiostack API providing audio generation and management endpoints.
-  name: Audiostack API
-  slug: audiostack-api-2
 - baseURL: https://v2.api.audio
   baseurl_source: declared
   description: The Content API from AudioStack — 2 operation(s) for content.
@@ -39,34 +50,74 @@ apis:
   description: The Creator API from AudioStack — 2 operation(s) for creator.
   name: AudioStack Creator API
   slug: audiostack-creator-api
-artifact_total: 11
+- baseURL: https://v2.api.audio
+  baseurl_source: declared
+  description: The Analytics API from AudioStack — 1 operation(s) for analytics.
+  name: AudioStack Analytics API
+  slug: audiostack-analytics-api
+- baseURL: https://v2.api.audio
+  baseurl_source: declared
+  description: The Assets - Sound Effects API from AudioStack — 1 operation(s) for assets - sound effects.
+  name: AudioStack Assets - Sound Effects API
+  slug: audiostack-assets-sound-effects-api
+- baseURL: https://v2.api.audio
+  baseurl_source: declared
+  description: The Assets - Sound Templates API from AudioStack — 1 operation(s) for assets - sound templates.
+  name: AudioStack Assets - Sound Templates API
+  slug: audiostack-assets-sound-templates-api
+- baseURL: https://v2.api.audio
+  baseurl_source: declared
+  description: The Assets - Voices API from AudioStack — 1 operation(s) for assets - voices.
+  name: AudioStack Assets - Voices API
+  slug: audiostack-assets-voices-api
+- baseURL: https://v2.api.audio
+  baseurl_source: declared
+  description: The Audioform API from AudioStack — 4 operation(s) for audioform.
+  name: AudioStack Audioform API
+  slug: audiostack-audioform-api
+- baseURL: https://v2.api.audio
+  baseurl_source: declared
+  description: The Brief API from AudioStack — 1 operation(s) for brief.
+  name: AudioStack Brief API
+  slug: audiostack-brief-api
+- baseURL: https://v2.api.audio
+  baseurl_source: declared
+  description: The Health API from AudioStack — 2 operation(s) for health.
+  name: AudioStack Health API
+  slug: audiostack-health-api
+- baseURL: https://v2.api.audio
+  baseurl_source: declared
+  description: The Story API from AudioStack — 1 operation(s) for story.
+  name: AudioStack Story API
+  slug: audiostack-story-api
+artifact_total: 18
 common:
 - group: start
   title: ''
   type: GettingStarted
   url: https://help.audiostack.ai/en/articles/14323269-instantcreative-sales-quick-start
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/rules/audiostack-rules.yml
+  href: https://artifacts.apis.io/audiostack/rules/audiostack-rules.yml
   title: ''
   type: Spectral
   url: rules/audiostack-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/json-ld/audiostack-context.jsonld
+  href: https://artifacts.apis.io/audiostack/json-ld/audiostack-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/audiostack-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/vocabulary/audiostack-vocabulary.yml
+  href: https://artifacts.apis.io/audiostack/vocabulary/audiostack-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/audiostack-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/data-model/audiostack-data-model.yml
+  href: https://artifacts.apis.io/audiostack/data-model/audiostack-data-model.yml
   title: ''
   type: DataModel
   url: data-model/audiostack-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/changelog/audiostack-changelog.yml
+  href: https://artifacts.apis.io/audiostack/changelog/audiostack-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/audiostack-changelog.yml
@@ -75,47 +126,47 @@ common:
   type: Compliance
   url: https://audiostack.ai/trust-security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/authentication/audiostack-authentication.yml
+  href: https://artifacts.apis.io/audiostack/authentication/audiostack-authentication.yml
   title: ''
   type: Authentication
   url: authentication/audiostack-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/conformance/audiostack-conformance.yml
+  href: https://artifacts.apis.io/audiostack/conformance/audiostack-conformance.yml
   title: ''
   type: Conformance
   url: conformance/audiostack-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/llms/audiostack-llms.txt
+  href: https://artifacts.apis.io/audiostack/llms/audiostack-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/audiostack-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/well-known/audiostack-help-security.txt
+  href: https://artifacts.apis.io/audiostack/well-known/audiostack-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/audiostack-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/well-known/audiostack-well-known.yml
+  href: https://artifacts.apis.io/audiostack/well-known/audiostack-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/audiostack-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/hosts/audiostack-hosts.yml
+  href: https://artifacts.apis.io/audiostack/hosts/audiostack-hosts.yml
   title: ''
   type: Hosts
   url: hosts/audiostack-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/vendors/audiostack-vendors.yml
+  href: https://artifacts.apis.io/audiostack/vendors/audiostack-vendors.yml
   title: ''
   type: Vendors
   url: vendors/audiostack-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/packages/audiostack-packages.yml
+  href: https://artifacts.apis.io/audiostack/packages/audiostack-packages.yml
   title: ''
   type: SDKs
   url: packages/audiostack-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/packages/audiostack-packages.yml
+  href: https://artifacts.apis.io/audiostack/packages/audiostack-packages.yml
   title: ''
   type: Packages
   url: packages/audiostack-packages.yml
@@ -128,12 +179,12 @@ common:
   type: ChangeLog
   url: https://docs.audiostack.ai/changelog
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/security/audiostack-trust-center.yml
+  href: https://artifacts.apis.io/audiostack/security/audiostack-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/audiostack-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/audiostack/refs/heads/main/security/audiostack-domain-security.yml
+  href: https://artifacts.apis.io/audiostack/security/audiostack-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/audiostack-domain-security.yml
@@ -202,7 +253,7 @@ modified: '2026-10-13'
 name: AudioStack
 nav: Providers
 network: true
-overview: 'AudioStack is listed with 3 APIs on the [APIs.io](https://apis.io/) network, including Content API, Creator API, and 1 more. Tagged areas include Company, Artificial Intelligence, Audio, Advertising, and Platform.
+overview: 'AudioStack is listed with 10 APIs on the [APIs.io](https://apis.io/) network, including Content API, Creator API, Analytics API, and 7 more. Tagged areas include Company, Artificial Intelligence, Audio, Advertising, and Platform.
 
 
   The AudioStack catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -225,28 +276,30 @@ rules:
   slug: audiostack-rules
 score:
   band: developing
-  composite: 42.7
+  composite: 40.8
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 20
     catalog_earned: 57.8
     catalog_earned_first_party: 0.0
     catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -10.3
   facets:
-    access_clarity: 36.8
+    access_clarity: 22.4
     contract_governance: 35.6
-    contract_quality: 21.9
-    developer_ergonomics: 64.3
+    contract_quality: 50.2
+    developer_ergonomics: 41.7
     discoverability: 75.0
-    operational_transparency: 31.6
+    operational_transparency: 26.3
+  previous_composite: 51.1
   provenance:
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 3
-      marker_coverage: 100.0
-      total: 3
+      marker_coverage: 27.3
+      total: 11
     mcp: derived
   regulatory:
     applies: true
@@ -257,12 +310,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 21.4
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/audiostack/audiostack-2026-11-03T121317.png
 security:
 - kind: authentication
   name: Audiostack Authentication

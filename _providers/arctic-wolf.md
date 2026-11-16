@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.9
-  scored_at: '2026-10-17'
+  score: 23.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -59,11 +62,8 @@ apis:
   description: The Ticket API from Arctic Wolf — 3 operation(s) for ticket.
   name: Arctic Wolf Ticket API
   slug: arctic-wolf-ticket-api
-artifact_total: 12
+artifact_total: 13
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Ticket Attachment API
   slug: open-arctic-wolf-attachment-api
@@ -83,72 +83,72 @@ common:
   type: Website
   url: https://www.arcticwolf.com/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/agentic-access/arctic-wolf-agentic-access.yml
+  href: https://artifacts.apis.io/arctic-wolf/agentic-access/arctic-wolf-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/arctic-wolf-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/security/arctic-wolf-trust-center.yml
+  href: https://artifacts.apis.io/arctic-wolf/security/arctic-wolf-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/arctic-wolf-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/security/arctic-wolf-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/arctic-wolf/security/arctic-wolf-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/arctic-wolf-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/security/arctic-wolf-domain-security.yml
+  href: https://artifacts.apis.io/arctic-wolf/security/arctic-wolf-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/arctic-wolf-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/authentication/arctic-wolf-authentication.yml
+  href: https://artifacts.apis.io/arctic-wolf/authentication/arctic-wolf-authentication.yml
   title: ''
   type: Authentication
   url: authentication/arctic-wolf-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/well-known/arctic-wolf-well-known.yml
+  href: https://artifacts.apis.io/arctic-wolf/well-known/arctic-wolf-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/arctic-wolf-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/errors/arctic-wolf-problem-types.yml
+  href: https://artifacts.apis.io/arctic-wolf/errors/arctic-wolf-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/arctic-wolf-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/conventions/arctic-wolf-conventions.yml
+  href: https://artifacts.apis.io/arctic-wolf/conventions/arctic-wolf-conventions.yml
   title: ''
   type: Conventions
   url: conventions/arctic-wolf-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/data-model/arctic-wolf-data-model.yml
+  href: https://artifacts.apis.io/arctic-wolf/data-model/arctic-wolf-data-model.yml
   title: ''
   type: DataModel
   url: data-model/arctic-wolf-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/conformance/arctic-wolf-conformance.yml
+  href: https://artifacts.apis.io/arctic-wolf/conformance/arctic-wolf-conformance.yml
   title: ''
   type: Conformance
   url: conformance/arctic-wolf-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/lifecycle/arctic-wolf-lifecycle.yml
+  href: https://artifacts.apis.io/arctic-wolf/lifecycle/arctic-wolf-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/arctic-wolf-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/mcp/arctic-wolf-mcp.yml
+  href: https://artifacts.apis.io/arctic-wolf/mcp/arctic-wolf-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/arctic-wolf-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/overlays/arctic-wolf-ticket-api-overlay.yaml
+  href: https://artifacts.apis.io/arctic-wolf/overlays/arctic-wolf-ticket-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/arctic-wolf-ticket-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/arctic-wolf/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -213,12 +213,12 @@ common:
   type: Security
   url: https://arcticwolf.com/vulnerability-disclosure
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/well-known/arctic-wolf-security.txt
+  href: https://artifacts.apis.io/arctic-wolf/well-known/arctic-wolf-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/arctic-wolf-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/llms/arctic-wolf-llms.txt
+  href: https://artifacts.apis.io/arctic-wolf/llms/arctic-wolf-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/arctic-wolf-llms.txt
@@ -233,27 +233,43 @@ network: true
 overview: 'Arctic Wolf publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Attachment API, Comment API, and Ticket API. Tagged areas include Company, Security, Cybersecurity, Managed Detection and Response, and Security Operations.
 
 
+  The Arctic Wolf catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Arctic Wolf''s developer surface includes authentication, documentation, API reference, getting-started guide, developer portal, support, engineering blog, and 26 more developer resources.'
-random_paper: 15
+random_paper: 11
+rules:
+- authorship: generated
+  effective_rule_count: 87
+  extends:
+  - spectral:oas
+  name: Arctic Wolf API Rules
+  rule_count: 46
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 1
+  slug: arctic-wolf-rules
 score:
   band: developing
-  composite: 42.7
+  composite: 44.3
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
+    artifact_dirs: 22
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 36.8
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 50.2
     developer_ergonomics: 47.0
     discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 42.6
+  previous_composite: 44.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -270,13 +286,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 31.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/arctic-wolf/refs/heads/main/screenshots/arctic-wolf-2026-07-25T201101.png
+screenshot: https://apis.io/screenshots/arctic-wolf/arctic-wolf-2026-07-25T201101.png
 security:
 - kind: authentication
   name: Arctic Wolf Authentication
@@ -294,6 +310,10 @@ security:
   name: Arctic Wolf Trust Center
   slug: arctic-wolf-trust-center
   summary_line: SOC 2, ISO 27001, ISO 27017, ISO 27018, PCI DSS, HIPAA, FedRAMP, GDPR, CSA STAR
+skill_count: 1
+skills:
+- name: Triage Arctic Wolf security tickets
+  slug: arctic-wolf-triage-tickets
 slug: arctic-wolf
 tags:
 - Company

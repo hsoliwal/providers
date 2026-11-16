@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: low
+  generated: '2026-11-06'
+  label: Unknown
+  method: derived
+  onboarding: unknown
+  pricing: unknown
+  probe_state: none
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 api_count: 0
 artifact_total: 0
 coverage:
@@ -24,7 +37,7 @@ modified: '2026-09-07'
 name: Adara Ventures
 nav: Providers
 network: true
-random_paper: 5
+random_paper: 1
 slug: adaraventurepartners
 tags:
 - Company

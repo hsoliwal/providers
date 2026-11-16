@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.4
-  scored_at: '2026-10-17'
+  score: 22.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -31,7 +44,7 @@ agentic_access:
   operation_count: 6
   slug: bhanzu-agentic-access
   summary_line: 6 operations · 1 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://bhanzu.com
   baseurl_source: spec
@@ -45,68 +58,73 @@ apis:
   slug: bhanzu-content-api
 artifact_total: 11
 common:
+- group: other
+  href: https://artifacts.apis.io/bhanzu/capabilities/bhanzu-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/bhanzu-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/agentic-access/bhanzu-agentic-access.yml
+  href: https://artifacts.apis.io/bhanzu/agentic-access/bhanzu-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/bhanzu-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/rules/bhanzu-rules.yml
+  href: https://artifacts.apis.io/bhanzu/rules/bhanzu-rules.yml
   title: ''
   type: Spectral
   url: rules/bhanzu-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/json-ld/bhanzu-context.jsonld
+  href: https://artifacts.apis.io/bhanzu/json-ld/bhanzu-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/bhanzu-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/vocabulary/bhanzu-vocabulary.yml
+  href: https://artifacts.apis.io/bhanzu/vocabulary/bhanzu-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/bhanzu-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/data-model/bhanzu-data-model.yml
+  href: https://artifacts.apis.io/bhanzu/data-model/bhanzu-data-model.yml
   title: ''
   type: DataModel
   url: data-model/bhanzu-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/errors/bhanzu-problem-types.yml
+  href: https://artifacts.apis.io/bhanzu/errors/bhanzu-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/bhanzu-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/conformance/bhanzu-conformance.yml
+  href: https://artifacts.apis.io/bhanzu/conformance/bhanzu-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bhanzu-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/llms/bhanzu-llms.txt
+  href: https://artifacts.apis.io/bhanzu/llms/bhanzu-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bhanzu-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/mcp/bhanzu-tool-crosswalk.yml
+  href: https://artifacts.apis.io/bhanzu/mcp/bhanzu-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/bhanzu-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/mcp/bhanzu-mcp.yml
+  href: https://artifacts.apis.io/bhanzu/mcp/bhanzu-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/bhanzu-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/well-known/bhanzu-well-known.yml
+  href: https://artifacts.apis.io/bhanzu/well-known/bhanzu-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bhanzu-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/hosts/bhanzu-hosts.yml
+  href: https://artifacts.apis.io/bhanzu/hosts/bhanzu-hosts.yml
   title: ''
   type: Hosts
   url: hosts/bhanzu-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/vendors/bhanzu-vendors.yml
+  href: https://artifacts.apis.io/bhanzu/vendors/bhanzu-vendors.yml
   title: ''
   type: Vendors
   url: vendors/bhanzu-vendors.yml
@@ -115,7 +133,7 @@ common:
   type: Documentation
   url: https://dev.bhanzu.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/security/bhanzu-domain-security.yml
+  href: https://artifacts.apis.io/bhanzu/security/bhanzu-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bhanzu-domain-security.yml
@@ -140,7 +158,7 @@ description: Bhanzu provides online math education platforms offering personaliz
 image: https://bhanzu.com/og-images/book-demo-og.webp
 json_schemas:
 - name: ArticleFull
-  property_count: 0
+  property_count: 14
   slug: bhanzu-article-full
 - name: ArticleSummary
   property_count: 13
@@ -171,8 +189,8 @@ overview: 'Bhanzu publishes 2 API contracts indexed on the [APIs.io](https://api
   The Bhanzu catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Bhanzu''s developer surface includes documentation, engineering blog, and 17 more developer resources.'
-random_paper: 10
+  Bhanzu''s developer surface includes documentation, engineering blog, and 18 more developer resources.'
+random_paper: 0
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -188,20 +206,20 @@ rules:
   slug: bhanzu-rules
 score:
   band: thin
-  composite: 29.0
+  composite: 26.4
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 54.8
     catalog_earned_first_party: 0.0
     catalog_gap: 60.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.6
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 22.0
-    contract_quality: 55.9
-    developer_ergonomics: 11.9
+    contract_quality: 60.8
+    developer_ergonomics: 6.0
     discoverability: 66.7
     operational_transparency: 0.0
   previous_composite: 29.0
@@ -211,7 +229,7 @@ score:
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 2
     mcp: first-party
   regulatory:
@@ -219,14 +237,14 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 17.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 13.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/bhanzu/refs/heads/main/screenshots/bhanzu-2026-10-11T102101.png
+screenshot: https://apis.io/screenshots/bhanzu/bhanzu-2026-10-11T102101.png
 security:
 - kind: domain-security
   name: Bhanzu Domain Security

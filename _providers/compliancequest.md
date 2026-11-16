@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,27 +36,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/compliancequest/refs/heads/main/llms/compliancequest-llms.txt
+  href: https://artifacts.apis.io/compliancequest/llms/compliancequest-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/compliancequest-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/compliancequest/refs/heads/main/well-known/compliancequest-well-known.yml
+  href: https://artifacts.apis.io/compliancequest/well-known/compliancequest-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/compliancequest-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/compliancequest/refs/heads/main/hosts/compliancequest-hosts.yml
+  href: https://artifacts.apis.io/compliancequest/hosts/compliancequest-hosts.yml
   title: ''
   type: Hosts
   url: hosts/compliancequest-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/compliancequest/refs/heads/main/vendors/compliancequest-vendors.yml
+  href: https://artifacts.apis.io/compliancequest/vendors/compliancequest-vendors.yml
   title: ''
   type: Vendors
   url: vendors/compliancequest-vendors.yml
@@ -68,7 +81,7 @@ common:
   type: Documentation
   url: https://help.compliancequest.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/compliancequest/refs/heads/main/security/compliancequest-domain-security.yml
+  href: https://artifacts.apis.io/compliancequest/security/compliancequest-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/compliancequest-domain-security.yml
@@ -88,24 +101,26 @@ overview: 'ComplianceQuest is profiled on the [APIs.io](https://apis.io/) networ
 
 
   ComplianceQuest''s developer surface includes pricing, engineering blog, documentation, and 8 more developer resources.'
-random_paper: 7
+random_paper: 5
 score:
-  band: emerging
-  composite: 12.4
+  band: minimal
+  composite: 8.7
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -3.7
   facets:
-    access_clarity: 21.1
+    access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 11.9
-    discoverability: 57.1
+    developer_ergonomics: 6.0
+    discoverability: 56.3
     operational_transparency: 0.0
+  previous_composite: 12.4
   provenance:
     mcp: unknown
   regulatory:
@@ -113,13 +128,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 15.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 13.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://apis.io/screenshots/compliancequest/compliancequest-2026-11-03T125013.png
 security:
 - kind: domain-security
   name: Compliancequest Domain Security

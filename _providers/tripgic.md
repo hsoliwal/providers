@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 8
 apis:
 - baseURL: https://YOUR_BASE_URL
@@ -66,35 +80,35 @@ apis:
   description: The Visa API from Tripgic — 1 operation(s) for visa.
   name: Tripgic Visa API
   slug: tripgic-visa-api
-artifact_total: 15
+artifact_total: 16
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/plans/tripgic-plans-pricing.yml
+  href: https://artifacts.apis.io/tripgic/plans/tripgic-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tripgic-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/rules/tripgic-rules.yml
+  href: https://artifacts.apis.io/tripgic/rules/tripgic-rules.yml
   title: ''
   type: Spectral
   url: rules/tripgic-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/json-ld/tripgic-context.jsonld
+  href: https://artifacts.apis.io/tripgic/json-ld/tripgic-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/tripgic-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/vocabulary/tripgic-vocabulary.yml
+  href: https://artifacts.apis.io/tripgic/vocabulary/tripgic-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/tripgic-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/data-model/tripgic-data-model.yml
+  href: https://artifacts.apis.io/tripgic/data-model/tripgic-data-model.yml
   title: ''
   type: DataModel
   url: data-model/tripgic-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/changelog/tripgic-changelog.yml
+  href: https://artifacts.apis.io/tripgic/changelog/tripgic-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/tripgic-changelog.yml
@@ -103,27 +117,27 @@ common:
   type: Compliance
   url: https://www.tripgic.com/security.html
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/security/tripgic-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tripgic/security/tripgic-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/tripgic-vulnerability-disclosure.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/conformance/tripgic-conformance.yml
+  href: https://artifacts.apis.io/tripgic/conformance/tripgic-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tripgic-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/llms/tripgic-llms.txt
+  href: https://artifacts.apis.io/tripgic/llms/tripgic-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/tripgic-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/hosts/tripgic-hosts.yml
+  href: https://artifacts.apis.io/tripgic/hosts/tripgic-hosts.yml
   title: ''
   type: Hosts
   url: hosts/tripgic-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/vendors/tripgic-vendors.yml
+  href: https://artifacts.apis.io/tripgic/vendors/tripgic-vendors.yml
   title: ''
   type: Vendors
   url: vendors/tripgic-vendors.yml
@@ -136,17 +150,17 @@ common:
   type: DeveloperPortal
   url: https://developer.tripgic.com/doc/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/security/tripgic-trust-center.yml
+  href: https://artifacts.apis.io/tripgic/security/tripgic-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/tripgic-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/security/tripgic-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tripgic/security/tripgic-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/tripgic-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tripgic/refs/heads/main/security/tripgic-domain-security.yml
+  href: https://artifacts.apis.io/tripgic/security/tripgic-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tripgic-domain-security.yml
@@ -184,6 +198,14 @@ coverage:
   state: unreadable
 created: '2026-10-15'
 description: Tripgic provides a unified travel API platform aggregating flights, hotels, tours, transfers, car rentals, and more. Their API offers access to GDS and NDC flight data, over 2 million hotel properties, activity tickets, and ancillary services, enabling developers to build comprehensive travel booking solutions. The company emphasizes extensive coverage, flexible integration, and support for various travel partners.
+finops:
+- has_sources: true
+  method: derived
+  name: Tripgic Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: tripgic-finops
+  template: false
 image: https://www.tripgic.com/assets/og-image.png
 json_schemas:
 - name: PostFlightFlightidResponse
@@ -210,7 +232,7 @@ plans:
 - name: Tripgic Plans Pricing
   plan_count: 4
   slug: tripgic-plans-pricing
-random_paper: 6
+random_paper: 10
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -225,22 +247,24 @@ rules:
     warn: 1
   slug: tripgic-rules
 score:
-  band: developing
-  composite: 40.7
+  band: thin
+  composite: 34.3
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 63.2
+    artifact_dirs: 19
+    catalog_earned: 66.2
     catalog_earned_first_party: 12.0
-    catalog_gap: 51.9
+    catalog_gap: 48.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -8.0
   facets:
-    access_clarity: 78.9
+    access_clarity: 67.1
     contract_governance: 22.0
     contract_quality: 17.0
-    developer_ergonomics: 31.0
+    developer_ergonomics: 15.5
     discoverability: 69.6
     operational_transparency: 26.3
+  previous_composite: 42.3
   provenance:
     conformance: derived
     contracts:
@@ -254,12 +278,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/tripgic/tripgic-2026-10-20T151226.png
 security:
 - kind: domain-security
   name: Tripgic Domain Security

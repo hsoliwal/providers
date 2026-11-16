@@ -1,16 +1,22 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Enterprise · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
+  - plans
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,15 +31,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.2
-  scored_at: '2026-10-17'
+  score: 31.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -73,11 +82,8 @@ apis:
   description: The Valuations API from Luminary — 1 operation(s) for valuations.
   name: Luminary Valuations API
   slug: luminary-valuations-api
-artifact_total: 18
+artifact_total: 23
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Luminary Documents API
   slug: open-luminary-documents-api
@@ -97,8 +103,13 @@ collections:
   name: Luminary Documents Valuations API
   slug: open-luminary-valuations-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/luminary/plans/luminary-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/luminary-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/overlays/luminary-openapi-overlay.yaml
+  href: https://artifacts.apis.io/luminary/overlays/luminary-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/luminary-openapi-overlay.yaml
@@ -139,87 +150,95 @@ common:
   type: Compliance
   url: https://withluminary.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/security/luminary-trust-center.yml
+  href: https://artifacts.apis.io/luminary/security/luminary-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/luminary-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/security/luminary-domain-security.yml
+  href: https://artifacts.apis.io/luminary/security/luminary-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/luminary-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/authentication/luminary-authentication.yml
+  href: https://artifacts.apis.io/luminary/authentication/luminary-authentication.yml
   title: ''
   type: Authentication
   url: authentication/luminary-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/scopes/luminary-scopes.yml
+  href: https://artifacts.apis.io/luminary/scopes/luminary-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/luminary-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/well-known/luminary-well-known.yml
+  href: https://artifacts.apis.io/luminary/well-known/luminary-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/luminary-well-known.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/packages/luminary-packages.yml
+  href: https://artifacts.apis.io/luminary/packages/luminary-packages.yml
   title: ''
   type: Packages
   url: packages/luminary-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/packages/luminary-packages.yml
+  href: https://artifacts.apis.io/luminary/packages/luminary-packages.yml
   title: ''
   type: SDKs
   url: packages/luminary-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/mcp/luminary-mcp.yml
+  href: https://artifacts.apis.io/luminary/mcp/luminary-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/luminary-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/llms/luminary-llms.txt
+  href: https://artifacts.apis.io/luminary/llms/luminary-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/luminary-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/conformance/luminary-conformance.yml
+  href: https://artifacts.apis.io/luminary/conformance/luminary-conformance.yml
   title: ''
   type: Conformance
   url: conformance/luminary-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/errors/luminary-problem-types.yml
+  href: https://artifacts.apis.io/luminary/errors/luminary-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/luminary-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/lifecycle/luminary-lifecycle.yml
+  href: https://artifacts.apis.io/luminary/lifecycle/luminary-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/luminary-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/conventions/luminary-conventions.yml
+  href: https://artifacts.apis.io/luminary/conventions/luminary-conventions.yml
   title: ''
   type: Conventions
   url: conventions/luminary-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/data-model/luminary-data-model.yml
+  href: https://artifacts.apis.io/luminary/data-model/luminary-data-model.yml
   title: ''
   type: DataModel
   url: data-model/luminary-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/agentic-access/luminary-agentic-access.yml
+  href: https://artifacts.apis.io/luminary/agentic-access/luminary-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/luminary-agentic-access.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/luminary/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: Luminary is AI-powered estate planning software for wealth advisors, family offices, attorneys, and professional services firms. It turns static estate planning documents into organized, digital records — with AI document digitization and summarization, dynamic estate flowcharts and waterfalls, scenario modeling, and role-based collaboration. Its public REST API (v1) exposes households, individuals, entities, documents, AI document summaries, and entity valuations so estate data can sync with CRMs, client portals, and planning tools. First-party TypeScript and Go SDKs are published on GitHub. OAuth2-secured (authorizationCode + clientCredentials) and SOC 2 Type II audited. Backed by 8vc.
+finops:
+- has_sources: true
+  method: derived
+  name: Luminary Finops
+  primary_unit: ''
+  service_category: ''
+  slug: luminary-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/luminary.png
 layout: provider
 modified: '2026-07-20'
@@ -229,8 +248,28 @@ network: true
 overview: 'Luminary publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Documents API, Entities API, Households API, and 3 more. Tagged areas include Company, Estate Planning, Wealth Management, Financial Services, and Legal Tech.
 
 
-  Luminary''s developer surface includes engineering blog, pricing, support, authentication, and 22 more developer resources.'
-random_paper: 1
+  The Luminary catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Luminary''s developer surface includes engineering blog, pricing, support, authentication, and 23 more developer resources.'
+plans:
+- name: Luminary Plans Pricing
+  plan_count: 1
+  slug: luminary-plans-pricing
+random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 101
+  extends:
+  - spectral:oas
+  name: Luminary API Rules
+  rule_count: 60
+  severity_counts:
+    error: 54
+    hint: 0
+    info: 2
+    warn: 4
+  slug: luminary-rules
 scopes:
 - name: Luminary Scopes
   scope_count: 4
@@ -238,23 +277,23 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 42.6
+  composite: 48.5
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 27
+    catalog_earned: 49.5
+    catalog_earned_first_party: 8.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 53.9
-    contract_governance: 4.5
+    access_clarity: 75.0
+    contract_governance: 18.2
     contract_quality: 49.3
     developer_ergonomics: 28.0
     discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 42.5
+  previous_composite: 48.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -271,13 +310,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 39.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/luminary/refs/heads/main/screenshots/luminary-2026-07-25T225714.png
+screenshot: https://apis.io/screenshots/luminary/luminary-2026-07-25T225714.png
 security:
 - kind: authentication
   name: Luminary Authentication
@@ -291,6 +330,14 @@ security:
   name: Luminary Trust Center
   slug: luminary-trust-center
   summary_line: SOC 2
+skill_count: 3
+skills:
+- name: Ingest a document and retrieve its AI summary
+  slug: luminary-document-summaries
+- name: Value an estate entity
+  slug: luminary-entity-valuation
+- name: Onboard an estate-planning household
+  slug: luminary-onboard-household
 slug: luminary
 tags:
 - Company
@@ -300,6 +347,7 @@ tags:
 - Legal Tech
 - Document AI
 - Family Office
+- OAuth
 - Authentication
 website: https://withluminary.com
 ---

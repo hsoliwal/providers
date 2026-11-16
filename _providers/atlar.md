@@ -1,12 +1,15 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
-  pricing: unknown
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - security
+  - sandbox
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +28,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: documented
     mcp_server: verified
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 51.7
-  scored_at: '2026-10-17'
+  score: 52.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 44
   human_in_the_loop: 0
@@ -143,54 +149,64 @@ apis:
   description: Webhook configuration.
   name: Atlar Webhooks API
   slug: atlar-webhooks-api
-artifact_total: 34
+artifact_total: 36
 asyncapis:
 - description: ''
   name: Atlar Webhooks
   slug: atlar-webhooks
 common:
+- group: other
+  href: https://artifacts.apis.io/atlar/capabilities/atlar-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/atlar-capability-edges.yml
+- group: commercial
+  href: https://artifacts.apis.io/atlar/plans/atlar-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/atlar-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/agentic-access/atlar-agentic-access.yml
+  href: https://artifacts.apis.io/atlar/agentic-access/atlar-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/atlar-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/rules/atlar-rules.yml
+  href: https://artifacts.apis.io/atlar/rules/atlar-rules.yml
   title: ''
   type: Spectral
   url: rules/atlar-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/json-ld/atlar-context.jsonld
+  href: https://artifacts.apis.io/atlar/json-ld/atlar-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/atlar-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/vocabulary/atlar-vocabulary.yml
+  href: https://artifacts.apis.io/atlar/vocabulary/atlar-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/atlar-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/errors/atlar-problem-types.yml
+  href: https://artifacts.apis.io/atlar/errors/atlar-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/atlar-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/hosts/atlar-hosts.yml
+  href: https://artifacts.apis.io/atlar/hosts/atlar-hosts.yml
   title: ''
   type: Hosts
   url: hosts/atlar-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/vendors/atlar-vendors.yml
+  href: https://artifacts.apis.io/atlar/vendors/atlar-vendors.yml
   title: ''
   type: Vendors
   url: vendors/atlar-vendors.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/security/atlar-trust-center.yml
+  href: https://artifacts.apis.io/atlar/security/atlar-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/atlar-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/security/atlar-domain-security.yml
+  href: https://artifacts.apis.io/atlar/security/atlar-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/atlar-domain-security.yml
@@ -255,77 +271,85 @@ common:
   type: Compliance
   url: https://www.atlar.com/security
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/authentication/atlar-authentication.yml
+  href: https://artifacts.apis.io/atlar/authentication/atlar-authentication.yml
   title: ''
   type: Authentication
   url: authentication/atlar-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/well-known/atlar-oauth-authorization-server.json
+  href: https://artifacts.apis.io/atlar/well-known/atlar-oauth-authorization-server.json
   title: ''
   type: OAuthAuthorizationServer
   url: well-known/atlar-oauth-authorization-server.json
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/well-known/atlar-well-known.yml
+  href: https://artifacts.apis.io/atlar/well-known/atlar-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/atlar-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/mcp/atlar-mcp.yml
+  href: https://artifacts.apis.io/atlar/mcp/atlar-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/atlar-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/llms/atlar-llms.txt
+  href: https://artifacts.apis.io/atlar/llms/atlar-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/atlar-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/conventions/atlar-conventions.yml
+  href: https://artifacts.apis.io/atlar/conventions/atlar-conventions.yml
   title: ''
   type: Conventions
   url: conventions/atlar-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/conventions/atlar-conventions.yml
+  href: https://artifacts.apis.io/atlar/conventions/atlar-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/atlar-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/errors/atlar-error-codes.yml
+  href: https://artifacts.apis.io/atlar/errors/atlar-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/atlar-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/asyncapi/atlar-webhooks.yml
+  href: https://artifacts.apis.io/atlar/asyncapi/atlar-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/atlar-webhooks.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/lifecycle/atlar-lifecycle.yml
+  href: https://artifacts.apis.io/atlar/lifecycle/atlar-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/atlar-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/changelog/atlar-changelog.yml
+  href: https://artifacts.apis.io/atlar/changelog/atlar-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/atlar-changelog.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/sandbox/atlar-sandbox.yml
+  href: https://artifacts.apis.io/atlar/sandbox/atlar-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/atlar-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/conformance/atlar-conformance.yml
+  href: https://artifacts.apis.io/atlar/conformance/atlar-conformance.yml
   title: ''
   type: Conformance
   url: conformance/atlar-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/data-model/atlar-data-model.yml
+  href: https://artifacts.apis.io/atlar/data-model/atlar-data-model.yml
   title: ''
   type: DataModel
   url: data-model/atlar-data-model.yml
 created: '2026-07-17'
 description: Atlar is a treasury and payment operations platform that centralizes cash management, payments, forecasting, bank reconciliation, and debt and investment management for finance teams. It connects to banks and ERPs (NetSuite, SAP, Dynamics 365, Workday) across 100+ countries and exposes a resource-oriented JSON REST API grouped into product namespaces — financial-data (accounts, balances, transactions), payments (credit transfers, direct debits, counterparties, mandates), connectivity, IAM, analytics/forecasting and accounting. The platform is AI-native, offering a hosted MCP server, signed webhooks, OAuth 2.0 client-credentials auth, idempotency keys, cursor pagination and ETag optimistic concurrency. Atlar is SOC 2 and ISO 27001 certified. It is headquartered in Stockholm and backed by Index Ventures and General Catalyst.
+finops:
+- has_sources: true
+  method: derived
+  name: Atlar Finops
+  primary_unit: ''
+  service_category: ''
+  slug: atlar-finops
+  template: true
 image: https://cdn.prod.website-files.com/656f3c6489ea21aff4dfcf78/692571712cc755c88534f173_atlar-treasury-meta-comp.png
 json_schemas:
 - name: AuditLogEntry
@@ -366,7 +390,11 @@ overview: 'Atlar publishes 20 API contracts indexed on the [APIs.io](https://api
   The Atlar catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Atlar''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, pricing, and 31 more developer resources.'
+  Atlar''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, pricing, and 33 more developer resources.'
+plans:
+- name: Atlar Plans Pricing
+  plan_count: 4
+  slug: atlar-plans-pricing
 random_paper: 4
 rules:
 - authorship: generated
@@ -382,23 +410,23 @@ rules:
     warn: 4
   slug: atlar-rules
 score:
-  band: strong
-  composite: 57.0
+  band: exemplar
+  composite: 69.3
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 62.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 52.3
+    artifact_dirs: 30
+    catalog_earned: 74.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 40.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 13.0
+  delta: 5.7
   facets:
-    access_clarity: 47.4
+    access_clarity: 78.9
     contract_governance: 35.6
-    contract_quality: 74.2
-    developer_ergonomics: 45.2
+    contract_quality: 80.8
+    developer_ergonomics: 64.3
     discoverability: 75.0
-    operational_transparency: 43.4
+    operational_transparency: 47.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -407,7 +435,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 44.0
+  previous_composite: 63.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -423,13 +451,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 23.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: rising
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/atlar/refs/heads/main/screenshots/atlar-2026-07-25T201542.png
+screenshot: https://apis.io/screenshots/atlar/atlar-2026-07-25T201542.png
 security:
 - kind: authentication
   name: Atlar Authentication

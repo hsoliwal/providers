@@ -1,17 +1,19 @@
 ---
 access_model:
   confidence: high
-  label: Freemium · Self-serve signup
-  onboarding: self-serve
-  pricing: freemium
+  label: Paid
+  onboarding: unknown
+  pricing: paid
   public: false
   source:
   - plans
   - authentication
+  - rate-limits
+  - security
   trial: false
-  try_now: true
+  try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -22,19 +24,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
-    mcp_server: false
+    mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: derived
+    operation_distinctiveness: distinct
+    pagination_ratio: na
+    protected_resource_metadata: verified
+    rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 29.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -93,7 +98,7 @@ apis:
   description: Operations for triggering, monitoring, and retrieving pipeline run executions including run state, result, and parameters.
   name: Azure Pipelines Runs API
   slug: microsoft-azure-pipelines-runs-api
-artifact_total: 36
+artifact_total: 48
 collections:
 - collection_type: postman
   name: Azure Pipelines Build REST Artifacts API
@@ -119,9 +124,6 @@ collections:
 - collection_type: postman
   name: Azure Pipelines Build REST Artifacts Runs API
   slug: postman-microsoft-azure-pipelines-runs-api
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Azure Pipelines Build REST API
   slug: open-azure-pipelines-build-api
@@ -153,30 +155,124 @@ collections:
   name: Azure Pipelines Build REST Artifacts Runs API
   slug: open-microsoft-azure-pipelines-runs-api
 common:
+- group: auth
+  title: ''
+  type: Security
+  url: https://www.microsoft.com/security
+- group: design
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/rules/microsoft-azure-pipelines-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/microsoft-azure-pipelines-rules.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/json-ld/microsoft-azure-pipelines-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/microsoft-azure-pipelines-context.jsonld
+- group: design
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/vocabulary/microsoft-azure-pipelines-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/microsoft-azure-pipelines-vocabulary.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/data-model/microsoft-azure-pipelines-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/microsoft-azure-pipelines-data-model.yml
+- group: build
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/cli/microsoft-azure-pipelines-cli.yml
+  title: ''
+  type: CLI
+  url: cli/microsoft-azure-pipelines-cli.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/conventions/microsoft-azure-pipelines-conventions.yml
+  title: ''
+  type: Conventions
+  url: conventions/microsoft-azure-pipelines-conventions.yml
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://learn.microsoft.com/en-us/azure/devops/integrate/concepts/rest-api-versioning
+- group: design
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/lifecycle/microsoft-azure-pipelines-lifecycle.yml
+  title: ''
+  type: Lifecycle
+  url: lifecycle/microsoft-azure-pipelines-lifecycle.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/errors/microsoft-azure-pipelines-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/microsoft-azure-pipelines-problem-types.yml
+- group: design
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/conformance/microsoft-azure-pipelines-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/microsoft-azure-pipelines-conformance.yml
+- group: agent
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/llms/microsoft-azure-pipelines-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/microsoft-azure-pipelines-llms.txt
+- group: build
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/mcp/microsoft-azure-pipelines-tool-crosswalk.yml
+  title: ''
+  type: ToolCrosswalk
+  url: mcp/microsoft-azure-pipelines-tool-crosswalk.yml
+- group: agent
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/mcp/microsoft-azure-pipelines-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/microsoft-azure-pipelines-mcp.yml
+- group: agent
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/well-known/microsoft-azure-pipelines-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/microsoft-azure-pipelines-well-known.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/hosts/microsoft-azure-pipelines-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/microsoft-azure-pipelines-hosts.yml
+- group: build
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/integrations/microsoft-azure-pipelines-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/microsoft-azure-pipelines-integration-edges.yml
+- group: other
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/vendors/microsoft-azure-pipelines-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/microsoft-azure-pipelines-vendors.yml
+- group: build
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/packages/microsoft-azure-pipelines-packages.yml
+  title: ''
+  type: SDKs
+  url: packages/microsoft-azure-pipelines-packages.yml
+- group: build
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/packages/microsoft-azure-pipelines-packages.yml
+  title: ''
+  type: Packages
+  url: packages/microsoft-azure-pipelines-packages.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-pipelines/refs/heads/main/plans/microsoft-azure-pipelines-plans-pricing.yml
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/plans/microsoft-azure-pipelines-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/microsoft-azure-pipelines-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-pipelines/refs/heads/main/rate-limits/microsoft-azure-pipelines-rate-limits.yml
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/rate-limits/microsoft-azure-pipelines-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/microsoft-azure-pipelines-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-pipelines/refs/heads/main/finops/microsoft-azure-pipelines-finops.yml
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/finops/microsoft-azure-pipelines-finops.yml
   title: ''
   type: FinOps
   url: finops/microsoft-azure-pipelines-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-pipelines/refs/heads/main/capabilities/microsoft-azure-pipelines-capability-edges.yml
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/capabilities/microsoft-azure-pipelines-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/microsoft-azure-pipelines-capability-edges.yml
-- group: auth
-  title: ''
-  type: SecurityPolicy
-  url: https://github.com/MicrosoftDocs/azure-devops-docs/blob/main/SECURITY.md
 - group: build
   title: ''
   type: CodeOfConduct
@@ -190,17 +286,17 @@ common:
   type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/azure-pipelines/overview
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-pipelines/refs/heads/main/agentic-access/microsoft-azure-pipelines-agentic-access.yml
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/agentic-access/microsoft-azure-pipelines-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/microsoft-azure-pipelines-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-pipelines/refs/heads/main/security/microsoft-azure-pipelines-domain-security.yml
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/security/microsoft-azure-pipelines-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/microsoft-azure-pipelines-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-pipelines/refs/heads/main/authentication/microsoft-azure-pipelines-authentication.yml
+  href: https://artifacts.apis.io/microsoft-azure-pipelines/authentication/microsoft-azure-pipelines-authentication.yml
   title: ''
   type: Authentication
   url: authentication/microsoft-azure-pipelines-authentication.yml
@@ -268,10 +364,6 @@ common:
   title: ''
   type: GitHubOrganization
   url: https://github.com/MicrosoftDocs
-- group: build
-  title: ''
-  type: GitHubRepository
-  url: https://github.com/MicrosoftDocs/azure-devops-docs
 - group: operate
   title: ''
   type: StackOverflow
@@ -292,14 +384,51 @@ created: '2024'
 description: Azure Pipelines is a cloud service that you can use to automatically build and test your code project and make it available to other users. It works with just about any language or project type.
 finops:
 - has_sources: true
-  method: generated
+  method: derived
   name: Microsoft Azure Pipelines Finops
-  primary_unit: ''
-  service_category: Developer Tools / CI-CD
+  primary_unit: parallel job
+  service_category: ''
   slug: microsoft-azure-pipelines-finops
   template: false
 image: https://azure.microsoft.com/svghandler/devops/?width=600&height=315
+json_schemas:
+- name: BuildArtifact
+  property_count: 3
+  slug: microsoft-azure-pipelines-build-artifact
+- name: BuildDefinitionReference
+  property_count: 10
+  slug: microsoft-azure-pipelines-build-definition-reference
+- name: Build
+  property_count: 28
+  slug: microsoft-azure-pipelines-build
+- name: CreatePipelineParameters
+  property_count: 3
+  slug: microsoft-azure-pipelines-create-pipeline-parameters
+- name: Log
+  property_count: 6
+  slug: microsoft-azure-pipelines-log
+- name: PipelineArtifact
+  property_count: 3
+  slug: microsoft-azure-pipelines-pipeline-artifact
+- name: Pipeline
+  property_count: 7
+  slug: microsoft-azure-pipelines-pipeline
+- name: RunPipelineParameters
+  property_count: 4
+  slug: microsoft-azure-pipelines-run-pipeline-parameters
+- name: Run
+  property_count: 12
+  slug: microsoft-azure-pipelines-run
+jsonld:
+- class_count: 15
+  name: Microsoft Azure Pipelines Context
+  property_count: 63
+  slug: microsoft-azure-pipelines-context
 layout: provider
+mcp_servers:
+- description: Microsoft ships the Azure DevOps MCP Server, generally available as a hosted remote server at https://mcp.dev.azure.com/{organization} and as the local stdio npm package @azure-devops/mcp. Its pipelin
+  name: Azure DevOps MCP Server (Pipelines toolset)
+  slug: azure-devops-mcp-server-pipelines-toolset
 modified: '2026-09-16'
 name: Azure Pipelines
 nav: Providers
@@ -307,55 +436,76 @@ network: true
 overview: 'Azure Pipelines publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Artifacts API, Build Artifacts API, Build Definitions API, and 8 more. Tagged areas include Automation, Builds, CI/CD, Deployment, and DevOps.
 
 
-  Azure Pipelines'' developer surface includes authentication, getting-started guide, developer portal, pricing, engineering blog, documentation, signup flow, and 25 more developer resources.'
+  The Azure Pipelines catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+
+
+  Azure Pipelines'' developer surface includes CLI, authentication, getting-started guide, developer portal, pricing, engineering blog, documentation, and 43 more developer resources.'
 plans:
 - name: Microsoft Azure Pipelines Plans Pricing
-  plan_count: 6
+  plan_count: 7
   slug: microsoft-azure-pipelines-plans-pricing
-random_paper: 18
+- name: Microsoft Azure Pipelines Price Estimates
+  plan_count: 0
+  slug: microsoft-azure-pipelines-price-estimates
+random_paper: 0
 rate_limits:
-- limit_count: 5
+- limit_count: 1
   name: Microsoft Azure Pipelines Rate Limits
   slug: microsoft-azure-pipelines-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 114
+  extends:
+  - spectral:oas
+  name: Azure Pipelines API Rules
+  rule_count: 73
+  severity_counts:
+    error: 66
+    hint: 0
+    info: 1
+    warn: 6
+  slug: microsoft-azure-pipelines-rules
 score:
-  band: developing
-  composite: 48.4
+  band: strong
+  composite: 65.6
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 38.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    artifact_dirs: 32
+    catalog_earned: 80.8
+    catalog_earned_first_party: 20.0
+    catalog_gap: 34.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 9.3
   facets:
-    access_clarity: 52.6
-    contract_governance: 0.0
-    contract_quality: 51.9
-    developer_ergonomics: 58.3
-    discoverability: 64.3
-    operational_transparency: 52.6
-  previous_composite: 49.9
+    access_clarity: 84.2
+    contract_governance: 22.0
+    contract_quality: 65.5
+    developer_ergonomics: 65.5
+    discoverability: 63.3
+    operational_transparency: 73.7
+  previous_composite: 56.3
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 8
+    mcp: first-party
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 19.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: flat
+    score: 24.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-pipelines/refs/heads/main/screenshots/microsoft-azure-pipelines-2026-06-20T185430.png
+screenshot: https://apis.io/screenshots/microsoft-azure-pipelines/microsoft-azure-pipelines-2026-06-20T185430.png
 security:
 - kind: authentication
   name: Microsoft Azure Pipelines Authentication

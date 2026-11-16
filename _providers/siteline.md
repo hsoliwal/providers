@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -65,22 +69,22 @@ common:
   type: StatusPage
   url: https://status.siteline.com
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/siteline/refs/heads/main/llms/siteline-llms.txt
+  href: https://artifacts.apis.io/siteline/llms/siteline-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/siteline-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/siteline/refs/heads/main/well-known/siteline-well-known.yml
+  href: https://artifacts.apis.io/siteline/well-known/siteline-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/siteline-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/siteline/refs/heads/main/lifecycle/siteline-lifecycle.yml
+  href: https://artifacts.apis.io/siteline/lifecycle/siteline-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/siteline-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/siteline/refs/heads/main/security/siteline-domain-security.yml
+  href: https://artifacts.apis.io/siteline/security/siteline-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/siteline-domain-security.yml
@@ -96,12 +100,12 @@ overview: 'Siteline is profiled on the [APIs.io](https://apis.io/) network. Tagg
 
 
   Siteline''s developer surface includes engineering blog, pricing, signup flow, and 8 more developer resources.'
-random_paper: 3
+random_paper: 21
 score:
   band: emerging
   composite: 12.3
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -122,14 +126,14 @@ score:
     regime: Payments
     regime_id: payments
     score: 12.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/siteline/refs/heads/main/screenshots/siteline-2026-09-02T155656.png
+screenshot: https://apis.io/screenshots/siteline/siteline-2026-09-02T155656.png
 security:
 - kind: domain-security
   name: Siteline Domain Security

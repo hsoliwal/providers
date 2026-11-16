@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Open access
   onboarding: open
   pricing: free
   public: true
   source:
   - plans
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.1
-  scored_at: '2026-10-17'
+  score: 22.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -66,9 +73,6 @@ apis:
 artifact_total: 19
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Service Alerts API
   slug: open-metro-transit-alerts-api
 - collection_type: open
@@ -94,17 +98,17 @@ collections:
   slug: open-metro-transit-tripplanner
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/metro-transit/refs/heads/main/plans/metro-transit-plans-pricing.yml
+  href: https://artifacts.apis.io/metro-transit/plans/metro-transit-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/metro-transit-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/metro-transit/refs/heads/main/rate-limits/metro-transit-rate-limits.yml
+  href: https://artifacts.apis.io/metro-transit/rate-limits/metro-transit-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/metro-transit-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/metro-transit/refs/heads/main/finops/metro-transit-finops.yml
+  href: https://artifacts.apis.io/metro-transit/finops/metro-transit-finops.yml
   title: ''
   type: FinOps
   url: finops/metro-transit-finops.yml
@@ -113,17 +117,17 @@ common:
   type: Blog
   url: https://www.metrotransit.org/news/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/metro-transit/refs/heads/main/agentic-access/metro-transit-agentic-access.yml
+  href: https://artifacts.apis.io/metro-transit/agentic-access/metro-transit-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/metro-transit-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/metro-transit/refs/heads/main/security/metro-transit-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/metro-transit/security/metro-transit-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/metro-transit-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/metro-transit/refs/heads/main/security/metro-transit-domain-security.yml
+  href: https://artifacts.apis.io/metro-transit/security/metro-transit-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/metro-transit-domain-security.yml
@@ -166,35 +170,51 @@ network: true
 overview: 'Metro Transit publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alerts API, NexTrip API, Planner API, and 1 more. Tagged areas include Minneapolis, Minnesota, Public Transportation, Real-Time, and Transit.
 
 
+  The Metro Transit catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Metro Transit''s developer surface includes engineering blog, developer portal, documentation, and 9 more developer resources.'
 plans:
 - name: Metro Transit Plans Pricing
   plan_count: 1
   slug: metro-transit-plans-pricing
-random_paper: 5
+random_paper: 1
 rate_limits:
 - limit_count: 3
   name: Metro Transit Rate Limits
   slug: metro-transit-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 79
+  extends:
+  - spectral:oas
+  name: Metro Transit API Rules
+  rule_count: 38
+  severity_counts:
+    error: 33
+    hint: 0
+    info: 1
+    warn: 4
+  slug: metro-transit-rules
 score:
   band: emerging
-  composite: 21.8
+  composite: 24.8
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 45.0
+    artifact_dirs: 15
+    catalog_earned: 49.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.0
+  delta: 0.0
   facets:
     access_clarity: 5.3
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 36.7
     developer_ergonomics: 21.4
     discoverability: 71.4
-    operational_transparency: 10.5
-  previous_composite: 22.8
+    operational_transparency: 21.1
+  previous_composite: 24.8
   provenance:
     agentic_access: derived
     contracts:
@@ -208,13 +228,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/metro-transit/refs/heads/main/screenshots/metro-transit-2026-06-20T185302.png
+screenshot: https://apis.io/screenshots/metro-transit/metro-transit-2026-06-20T185302.png
 security:
 - kind: domain-security
   name: Metro Transit Domain Security

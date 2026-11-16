@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Open access
   onboarding: open
   pricing: unknown
@@ -26,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 5
 apis:
 - description: Create and manage shipments and receive status-based data updates, including risk summaries, driver details and next-delivery insights. Marketed as part of Overhaul's tiered API subscription. No publi
@@ -95,32 +101,32 @@ common:
   type: GitHubOrganization
   url: https://github.com/Over-haul
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/overhaul/refs/heads/main/lifecycle/overhaul-lifecycle.yml
+  href: https://artifacts.apis.io/overhaul/lifecycle/overhaul-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/overhaul-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/overhaul/refs/heads/main/changelog/overhaul-changelog.yml
+  href: https://artifacts.apis.io/overhaul/changelog/overhaul-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/overhaul-changelog.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/overhaul/refs/heads/main/llms/overhaul-llms.txt
+  href: https://artifacts.apis.io/overhaul/llms/overhaul-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/overhaul-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/overhaul/refs/heads/main/conformance/overhaul-conformance.yml
+  href: https://artifacts.apis.io/overhaul/conformance/overhaul-conformance.yml
   title: ''
   type: Conformance
   url: conformance/overhaul-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/overhaul/refs/heads/main/security/overhaul-domain-security.yml
+  href: https://artifacts.apis.io/overhaul/security/overhaul-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/overhaul-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/overhaul/refs/heads/main/packages/overhaul-packages.yml
+  href: https://artifacts.apis.io/overhaul/packages/overhaul-packages.yml
   title: ''
   type: Packages
   url: packages/overhaul-packages.yml
@@ -137,18 +143,18 @@ overview: 'Overhaul is listed with 5 APIs on the [APIs.io](https://apis.io/) net
 
 
   Overhaul''s developer surface includes engineering blog, support, changelog, and 13 more developer resources.'
-random_paper: 12
+random_paper: 6
 score:
   band: emerging
   composite: 22.0
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
@@ -156,7 +162,7 @@ score:
     developer_ergonomics: 7.1
     discoverability: 78.6
     operational_transparency: 34.2
-  previous_composite: 21.9
+  previous_composite: 22.0
   provenance:
     conformance: first-party
   regulatory:
@@ -165,14 +171,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/overhaul/refs/heads/main/screenshots/overhaul-2026-08-07T191132.png
+screenshot: https://apis.io/screenshots/overhaul/overhaul-2026-08-07T191132.png
 security:
 - kind: authentication
   name: Overhaul Authentication

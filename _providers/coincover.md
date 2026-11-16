@@ -1,30 +1,50 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
-    auth_clarity: served
+    auth_clarity: bearer
     consent_identity: false
-    delegated_identity: served
+    delegated_identity: false
     dry_run_mode: false
-    dynamic_client_registration: true
+    dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
-    protected_resource_metadata: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
+    protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 42.8
-  scored_at: '2026-10-17'
+  score: 29.9
+  scored_at: '2026-11-06'
+agentic_access:
+- acting_count: 17
+  human_in_the_loop: 0
+  name: Coincover Agentic Access
+  operation_count: 21
+  slug: coincover-agentic-access
+  summary_line: 21 operations · 17 acting
 api_count: 3
 apis:
 - description: API for orchestrating identity verification and key management workflows
@@ -68,60 +88,75 @@ apis:
   description: Start, check, and simulate biometric identity verification.
   name: Coincover Verification API
   slug: coincover-verification-api
-artifact_total: 34
+artifact_total: 36
 common:
+- group: agent
+  href: https://artifacts.apis.io/coincover/agentic-access/coincover-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/coincover-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/rules/coincover-rules.yml
+  href: https://artifacts.apis.io/coincover/errors/coincover-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/coincover-problem-types.yml
+- group: auth
+  href: https://artifacts.apis.io/coincover/authentication/coincover-authentication.yml
+  title: ''
+  type: Authentication
+  url: authentication/coincover-authentication.yml
+- group: design
+  href: https://artifacts.apis.io/coincover/rules/coincover-rules.yml
   title: ''
   type: Spectral
   url: rules/coincover-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/json-ld/coincover-context.jsonld
+  href: https://artifacts.apis.io/coincover/json-ld/coincover-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/coincover-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/vocabulary/coincover-vocabulary.yml
+  href: https://artifacts.apis.io/coincover/vocabulary/coincover-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/coincover-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/data-model/coincover-data-model.yml
+  href: https://artifacts.apis.io/coincover/data-model/coincover-data-model.yml
   title: ''
   type: DataModel
   url: data-model/coincover-data-model.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/changelog/coincover-changelog.yml
+  href: https://artifacts.apis.io/coincover/changelog/coincover-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/coincover-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/conformance/coincover-conformance.yml
+  href: https://artifacts.apis.io/coincover/conformance/coincover-conformance.yml
   title: ''
   type: Conformance
   url: conformance/coincover-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/llms/coincover-llms.txt
+  href: https://artifacts.apis.io/coincover/llms/coincover-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/coincover-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/a2a/coincover-a2a.yml
+  href: https://artifacts.apis.io/coincover/a2a/coincover-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/coincover-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/well-known/coincover-well-known.yml
+  href: https://artifacts.apis.io/coincover/well-known/coincover-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/coincover-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/hosts/coincover-hosts.yml
+  href: https://artifacts.apis.io/coincover/hosts/coincover-hosts.yml
   title: ''
   type: Hosts
   url: hosts/coincover-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/vendors/coincover-vendors.yml
+  href: https://artifacts.apis.io/coincover/vendors/coincover-vendors.yml
   title: ''
   type: Vendors
   url: vendors/coincover-vendors.yml
@@ -146,7 +181,7 @@ common:
   type: GitHubOrganization
   url: https://github.com/coincover
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coincover/refs/heads/main/security/coincover-domain-security.yml
+  href: https://artifacts.apis.io/coincover/security/coincover-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coincover-domain-security.yml
@@ -273,39 +308,42 @@ overview: 'Coincover publishes 9 API contracts indexed on the [APIs.io](https://
   The Coincover catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Coincover''s developer surface includes changelog, API reference, documentation, engineering blog, support, and 18 more developer resources.'
-random_paper: 0
+  Coincover''s developer surface includes authentication, changelog, API reference, documentation, engineering blog, support, and 20 more developer resources.'
+random_paper: 8
 rules:
 - authorship: generated
-  effective_rule_count: 53
+  effective_rule_count: 93
   extends:
   - spectral:oas
   name: Coincover API Rules
-  rule_count: 12
+  rule_count: 52
   severity_counts:
-    error: 10
+    error: 43
     hint: 0
-    info: 1
-    warn: 1
+    info: 4
+    warn: 5
   slug: coincover-rules
 score:
   band: thin
-  composite: 33.8
+  composite: 28.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 23
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.2
   facets:
-    access_clarity: 28.9
+    access_clarity: 14.5
     contract_governance: 22.0
     contract_quality: 26.1
-    developer_ergonomics: 33.3
-    discoverability: 80.4
-    operational_transparency: 21.1
+    developer_ergonomics: 28.6
+    discoverability: 79.5
+    operational_transparency: 18.4
+  previous_composite: 33.8
   provenance:
+    agentic_access: derived
     conformance: derived
     contracts:
       callable: 100.0
@@ -318,13 +356,19 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/coincover/coincover-2026-11-03T124813.png
 security:
+- kind: authentication
+  name: Coincover Authentication
+  slug: coincover-authentication
+  summary_line: apiKey/http · 2 schemes
 - kind: domain-security
   name: Coincover Domain Security
   slug: coincover-domain-security

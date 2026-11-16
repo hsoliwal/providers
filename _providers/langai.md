@@ -30,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: documented
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-10-17'
+  score: 32.1
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -58,11 +61,8 @@ apis:
   description: Create and inspect classification projects and their tags.
   name: Lang.ai Projects API
   slug: langai-projects-api
-artifact_total: 12
+artifact_total: 15
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Lang.ai Documents API
   slug: open-langai-documents-api
@@ -71,7 +71,7 @@ collections:
   slug: open-langai-projects-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/agentic-access/langai-agentic-access.yml
+  href: https://artifacts.apis.io/langai/agentic-access/langai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/langai-agentic-access.yml
@@ -136,77 +136,77 @@ common:
   type: Compliance
   url: https://capacity.com/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/authentication/langai-authentication.yml
+  href: https://artifacts.apis.io/langai/authentication/langai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/langai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/conventions/langai-conventions.yml
+  href: https://artifacts.apis.io/langai/conventions/langai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/langai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/conventions/langai-conventions.yml
+  href: https://artifacts.apis.io/langai/conventions/langai-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/langai-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/errors/langai-problem-types.yml
+  href: https://artifacts.apis.io/langai/errors/langai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/langai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/lifecycle/langai-lifecycle.yml
+  href: https://artifacts.apis.io/langai/lifecycle/langai-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/langai-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/conformance/langai-conformance.yml
+  href: https://artifacts.apis.io/langai/conformance/langai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/langai-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/data-model/langai-data-model.yml
+  href: https://artifacts.apis.io/langai/data-model/langai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/langai-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/mcp/langai-mcp.yml
+  href: https://artifacts.apis.io/langai/mcp/langai-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/langai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/llms/langai-llms.txt
+  href: https://artifacts.apis.io/langai/llms/langai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/langai-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/langai/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/overlays/langai-api-overlay.yaml
+  href: https://artifacts.apis.io/langai/overlays/langai-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/langai-api-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/security/langai-domain-security.yml
+  href: https://artifacts.apis.io/langai/security/langai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/langai-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/security/langai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/langai/security/langai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/langai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/security/langai-trust-center.yml
+  href: https://artifacts.apis.io/langai/security/langai-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/langai-trust-center.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/changelog/langai-changelog.yml
+  href: https://artifacts.apis.io/langai/changelog/langai-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/langai-changelog.yml
@@ -219,27 +219,35 @@ common:
   type: Roadmap
   url: https://roadmap.lang.ai/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/plans/langai-plans-pricing.yml
+  href: https://artifacts.apis.io/langai/plans/langai-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/langai-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/rate-limits/langai-rate-limits.yml
+  href: https://artifacts.apis.io/langai/rate-limits/langai-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/langai-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/examples/langai-request-examples.yml
+  href: https://artifacts.apis.io/langai/examples/langai-request-examples.yml
   title: ''
   type: Examples
   url: examples/langai-request-examples.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/packages/langai-packages.yml
+  href: https://artifacts.apis.io/langai/packages/langai-packages.yml
   title: ''
   type: Packages
   url: packages/langai-packages.yml
 created: '2026-07-17'
 description: 'Lang.ai is a conversation-intelligence platform that turns unstructured customer interactions — support tickets, chatbot messages, emails and calls — into structured intents, features and tags. Its unsupervised algorithm ingests a dataset of customer text, automatically extracts the intents and features it finds, and lets teams group those into tags that form a custom classifier for any language, industry or business case. A small REST API then applies that classifier in real time: create a project from a CSV dataset, list projects and their tags, analyze a document to get back its matched tags and intents, and save documents with arbitrary metadata for dashboard reporting. Lang.ai was founded in Spain, backed by 500 Global, and is now part of Capacity, whose AI support-automation platform absorbed Lang.ai''s conversation intelligence.'
+finops:
+- has_sources: true
+  method: derived
+  name: Langai Finops
+  primary_unit: ''
+  service_category: ''
+  slug: langai-finops
+  template: true
 image: https://docs.lang.ai/images/logo-lang.svg
 layout: provider
 modified: '2026-08-14'
@@ -249,35 +257,51 @@ network: true
 overview: 'Lang.ai is listed with 2 APIs on the [APIs.io](https://apis.io/) network: Documents API and Projects API. Tagged areas include Company, Artificial Intelligence, Machine Learning, Natural Language Processing, and Conversation Intelligence.
 
 
+  The Lang.ai catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Lang.ai''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 30 more developer resources.'
 plans:
 - name: Langai Plans Pricing
   plan_count: 3
   slug: langai-plans-pricing
-random_paper: 4
+random_paper: 20
 rate_limits:
 - limit_count: 0
   name: Langai Rate Limits
   slug: langai-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: Lang.ai API Rules
+  rule_count: 62
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 1
+    warn: 2
+  slug: langai-rules
 score:
   band: developing
-  composite: 48.5
+  composite: 51.5
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 49.0
+    artifact_dirs: 29
+    catalog_earned: 53.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 61.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 92.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 18.2
     developer_ergonomics: 53.0
     discoverability: 73.2
-    operational_transparency: 39.5
-  previous_composite: 48.4
+    operational_transparency: 50.0
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -300,13 +324,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/langai/refs/heads/main/screenshots/langai-2026-07-25T224513.png
+screenshot: https://apis.io/screenshots/langai/langai-2026-07-25T224513.png
 security:
 - kind: authentication
   name: Langai Authentication
@@ -324,6 +348,12 @@ security:
   name: Langai Trust Center
   slug: langai-trust-center
   summary_line: SOC 2 Type II, HIPAA, GDPR
+skill_count: 2
+skills:
+- name: Build a Lang.ai classifier from a dataset
+  slug: langai-build-classifier
+- name: Classify and store customer interactions
+  slug: langai-classify-and-store
 slug: langai
 tags:
 - Company

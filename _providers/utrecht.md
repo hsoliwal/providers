@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Free · Self-serve signup
   onboarding: self-serve
   pricing: free
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: mostly
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.6
-  scored_at: '2026-10-17'
+  score: 20.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 96
   human_in_the_loop: 4
@@ -157,11 +163,8 @@ apis:
 - description: 'Utrecht University''s current research information system and public research portal, running on Elsevier Pure. Two machine doors were probed on 2026-08-30: the Pure Web Service REST API at /ws/api, wh'
   name: Utrecht University Research Portal (Elsevier Pure tenancy)
   slug: pure-research-portal
-artifact_total: 61
+artifact_total: 60
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Yoda core admin API
   slug: open-utrecht-admin-api
@@ -228,7 +231,7 @@ common:
   type: Blog
   url: https://www.uu.nl/en/organisation/news
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/utrecht/refs/heads/main/capabilities/utrecht-capability-edges.yml
+  href: https://artifacts.apis.io/utrecht/capabilities/utrecht-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/utrecht-capability-edges.yml
@@ -249,22 +252,22 @@ common:
   type: License
   url: https://github.com/UtrechtUniversity/yoda-ruleset/blob/development/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/utrecht/refs/heads/main/agentic-access/utrecht-agentic-access.yml
+  href: https://artifacts.apis.io/utrecht/agentic-access/utrecht-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/utrecht-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/utrecht/refs/heads/main/security/utrecht-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/utrecht/security/utrecht-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/utrecht-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/utrecht/refs/heads/main/security/utrecht-domain-security.yml
+  href: https://artifacts.apis.io/utrecht/security/utrecht-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/utrecht-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/utrecht/refs/heads/main/authentication/utrecht-authentication.yml
+  href: https://artifacts.apis.io/utrecht/authentication/utrecht-authentication.yml
   title: ''
   type: Authentication
   url: authentication/utrecht-authentication.yml
@@ -285,22 +288,22 @@ common:
   type: Repository
   url: https://dspace.library.uu.nl/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/utrecht/refs/heads/main/plans/utrecht-plans-pricing.yml
+  href: https://artifacts.apis.io/utrecht/plans/utrecht-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/utrecht-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/utrecht/refs/heads/main/rate-limits/utrecht-rate-limits.yml
+  href: https://artifacts.apis.io/utrecht/rate-limits/utrecht-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/utrecht-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/utrecht/refs/heads/main/finops/utrecht-finops.yml
+  href: https://artifacts.apis.io/utrecht/finops/utrecht-finops.yml
   title: ''
   type: FinOps
   url: finops/utrecht-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/utrecht/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/utrecht/review.yml
   title: ''
   type: Review
   url: review.yml
@@ -341,7 +344,7 @@ common:
   type: Support
   url: https://www.uu.nl/en/contact
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/utrecht/refs/heads/main/conformance/utrecht-domain-standards.yml
+  href: https://artifacts.apis.io/utrecht/conformance/utrecht-domain-standards.yml
   title: ''
   type: Conformance
   url: conformance/utrecht-domain-standards.yml
@@ -403,7 +406,7 @@ plans:
 - name: Utrecht Plans Pricing
   plan_count: 2
   slug: utrecht-plans-pricing
-random_paper: 19
+random_paper: 23
 rate_limits:
 - limit_count: 1
   name: Utrecht Rate Limits
@@ -435,13 +438,13 @@ score:
   band: developing
   composite: 39.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 57.7
     catalog_earned_first_party: 0.0
     catalog_gap: 57.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -5.1
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
@@ -460,7 +463,7 @@ score:
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 44.8
+  previous_composite: 39.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -475,13 +478,13 @@ score:
     regime: Education & Research
     regime_id: education
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/utrecht/refs/heads/main/screenshots/utrecht-2026-06-20T200730.png
+screenshot: https://apis.io/screenshots/utrecht/utrecht-2026-06-20T200730.png
 security:
 - kind: authentication
   name: Utrecht Authentication

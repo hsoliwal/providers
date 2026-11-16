@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://www.clearcareonline.com'', ''status'': 301, ''note'': ''declared website redirects to https://wellsky.com/personal-care-software/ — a different registrable domain (clearcareonline.com -> wellsky.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/clearcare/refs/heads/main/security/clearcare-domain-security.yml
+  href: https://artifacts.apis.io/clearcare/security/clearcare-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/clearcare-domain-security.yml
@@ -58,13 +62,13 @@ modified: '2026-07-18'
 name: ClearCare
 nav: Providers
 network: true
-overview: ClearCare is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Home Care, Home Health, Healthcare, and Agency Management.
-random_paper: 6
+overview: ClearCare is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Home Care, Healthcare, Agency Management, and Caregiving.
+random_paper: 18
 score:
   band: minimal
   composite: 3.7
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -90,14 +94,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/clearcare/refs/heads/main/screenshots/clearcare-2026-07-25T205539.png
+screenshot: https://apis.io/screenshots/clearcare/clearcare-2026-07-25T205539.png
 security:
 - kind: domain-security
   name: Clearcare Domain Security
@@ -107,7 +111,6 @@ slug: clearcare
 tags:
 - Company
 - Home Care
-- Home Health
 - Healthcare
 - Agency Management
 - Caregiving

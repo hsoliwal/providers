@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
+  confidence: high
+  label: Paid
   onboarding: unknown
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
+  - rate-limits
   - security
   trial: false
   try_now: false
@@ -26,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: verified
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.8
-  scored_at: '2026-10-17'
+  score: 32.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 111
   human_in_the_loop: 4
@@ -269,11 +274,8 @@ apis:
   description: The Users API from DNSFilter — 4 operation(s) for users.
   name: DNSFilter Users API
   slug: dnsfilter-users-api
-artifact_total: 96
+artifact_total: 100
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: DNSFilter Agent Local User Bulk Deletes API
   slug: open-dnsfilter-agent-local-user-bulk-deletes-api
@@ -416,72 +418,72 @@ common:
   type: BlogRSS
   url: https://www.dnsfilter.com/blog/rss.xml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/rate-limits/dnsfilter-rate-limits.yml
+  href: https://artifacts.apis.io/dnsfilter/rate-limits/dnsfilter-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/dnsfilter-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/plans/dnsfilter-plans-pricing.yml
+  href: https://artifacts.apis.io/dnsfilter/plans/dnsfilter-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/dnsfilter-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/capabilities/dnsfilter-capability-edges.yml
+  href: https://artifacts.apis.io/dnsfilter/capabilities/dnsfilter-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/dnsfilter-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/agentic-access/dnsfilter-agentic-access.yml
+  href: https://artifacts.apis.io/dnsfilter/agentic-access/dnsfilter-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/dnsfilter-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/authentication/dnsfilter-authentication.yml
+  href: https://artifacts.apis.io/dnsfilter/authentication/dnsfilter-authentication.yml
   title: ''
   type: Authentication
   url: authentication/dnsfilter-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/security/dnsfilter-domain-security.yml
+  href: https://artifacts.apis.io/dnsfilter/security/dnsfilter-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/dnsfilter-domain-security.yml
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/openapi/_original/dnsfilter-openapi-original.json
+  href: https://artifacts.apis.io/dnsfilter/openapi/_original/dnsfilter-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/dnsfilter-openapi-original.json
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/packages/dnsfilter-packages.yml
+  href: https://artifacts.apis.io/dnsfilter/packages/dnsfilter-packages.yml
   title: ''
   type: Packages
   url: packages/dnsfilter-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/mcp/dnsfilter-mcp.yml
+  href: https://artifacts.apis.io/dnsfilter/mcp/dnsfilter-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/dnsfilter-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/llms/dnsfilter-llms.txt
+  href: https://artifacts.apis.io/dnsfilter/llms/dnsfilter-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/dnsfilter-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/overlays/dnsfilter-openapi-overlay.yaml
+  href: https://artifacts.apis.io/dnsfilter/overlays/dnsfilter-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/dnsfilter-openapi-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/conformance/dnsfilter-conformance.yml
+  href: https://artifacts.apis.io/dnsfilter/conformance/dnsfilter-conformance.yml
   title: ''
   type: Conformance
   url: conformance/dnsfilter-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/errors/dnsfilter-problem-types.yml
+  href: https://artifacts.apis.io/dnsfilter/errors/dnsfilter-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/dnsfilter-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/lifecycle/dnsfilter-lifecycle.yml
+  href: https://artifacts.apis.io/dnsfilter/lifecycle/dnsfilter-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/dnsfilter-lifecycle.yml
@@ -490,17 +492,17 @@ common:
   type: StatusPage
   url: https://status.dnsfilter.com
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/conventions/dnsfilter-conventions.yml
+  href: https://artifacts.apis.io/dnsfilter/conventions/dnsfilter-conventions.yml
   title: ''
   type: Conventions
   url: conventions/dnsfilter-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/data-model/dnsfilter-data-model.yml
+  href: https://artifacts.apis.io/dnsfilter/data-model/dnsfilter-data-model.yml
   title: ''
   type: DataModel
   url: data-model/dnsfilter-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/dnsfilter/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -558,6 +560,14 @@ common:
   url: https://dnsfilter.com/
 created: '2026-07-17'
 description: DNSFilter is an AI-powered DNS security and content-filtering platform that protects organizations from cyber threats and unwanted content at the DNS layer. Its machine-learning engine blocks malicious domains — phishing, malware, ransomware, and botnet command-and-control — often before they appear in third-party threat feeds, and enforces content policies across 40+ categories with application-level (AppAware) controls, roaming clients for off-network devices, and user-behavior analytics (CyberSight). DNSFilter serves SMBs, enterprises, MSPs, schools, healthcare, and government over a dual Anycast network with DNSSEC validation. The DNSFilter management REST API (api.dnsfilter.com) programmatically manages organizations, networks/sites, filtering policies, block pages, applications, categories, API keys, and traffic/threat reporting — authenticated with an API key in the Authorization header.
+finops:
+- has_sources: true
+  method: derived
+  name: Dnsfilter Finops
+  primary_unit: license (annual)
+  service_category: ''
+  slug: dnsfilter-finops
+  template: false
 image: https://www.dnsfilter.com/hubfs/dnsfilterfeaturedimages1.webp
 layout: provider
 modified: '2026-10-06'
@@ -565,6 +575,9 @@ name: DNSFilter
 nav: Providers
 network: true
 overview: 'DNSFilter publishes 45 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Local User Bulk Deletes API, Agent Local Users API, Agent Local Users CSV Export API, and 42 more. Tagged areas include Company, DNS, Security, Content Filtering, and Threat Protection.
+
+
+  The DNSFilter catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   DNSFilter''s developer surface includes engineering blog, authentication, documentation, API reference, support, pricing, signup flow, and 26 more developer resources.'
@@ -575,30 +588,43 @@ plans:
 - name: Dnsfilter Price Estimates
   plan_count: 0
   slug: dnsfilter-price-estimates
-random_paper: 3
+random_paper: 11
 rate_limits:
 - limit_count: 1
   name: Dnsfilter Rate Limits
   slug: dnsfilter-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 103
+  extends:
+  - spectral:oas
+  name: DNSFilter API Rules
+  rule_count: 62
+  severity_counts:
+    error: 44
+    hint: 0
+    info: 1
+    warn: 17
+  slug: dnsfilter-rules
 score:
-  band: developing
-  composite: 51.2
+  band: strong
+  composite: 54.4
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 57.0
+    artifact_dirs: 27
+    catalog_earned: 64.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
-    access_clarity: 76.3
-    contract_governance: 4.5
+    access_clarity: 84.2
+    contract_governance: 18.2
     contract_quality: 50.8
     developer_ergonomics: 30.4
     discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 51.1
+  previous_composite: 54.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -615,13 +641,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/dnsfilter/refs/heads/main/screenshots/dnsfilter-2026-07-25T212151.png
+screenshot: https://apis.io/screenshots/dnsfilter/dnsfilter-2026-07-25T212151.png
 security:
 - kind: authentication
   name: Dnsfilter Authentication
@@ -631,6 +657,14 @@ security:
   name: Dnsfilter Domain Security
   slug: dnsfilter-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+skill_count: 3
+skills:
+- name: Create a filtering policy and assign it to a network
+  slug: dnsfilter-create-policy-and-assign-network
+- name: Manage DNSFilter API keys
+  slug: dnsfilter-manage-api-keys
+- name: Pull DNSFilter traffic and threat reports
+  slug: dnsfilter-pull-traffic-and-threat-reports
 slug: dnsfilter
 tags:
 - Company

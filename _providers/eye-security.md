@@ -5,7 +5,8 @@ access_model:
   onboarding: unknown
   pricing: unknown
   public: false
-  source: []
+  source:
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -24,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -32,12 +36,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eye-security/refs/heads/main/security/eye-security-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/eye-security/security/eye-security-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/eye-security-vulnerability-disclosure.yml
@@ -46,7 +50,7 @@ common:
   type: Security
   url: https://www.eye.security/responsible-disclosure-policy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/eye-security/refs/heads/main/security/eye-security-domain-security.yml
+  href: https://artifacts.apis.io/eye-security/security/eye-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/eye-security-domain-security.yml
@@ -83,7 +87,7 @@ common:
   type: SecurityTxt
   url: https://www.eye.security/.well-known/security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/eye-security/refs/heads/main/well-known/eye-security-well-known.yml
+  href: https://artifacts.apis.io/eye-security/well-known/eye-security-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/eye-security-well-known.yml
@@ -99,7 +103,7 @@ overview: 'Eye Security is profiled on the [APIs.io](https://apis.io/) network. 
 
 
   Eye Security''s developer surface includes developer portal, pricing, engineering blog, support, and 8 more developer resources.'
-random_paper: 2
+random_paper: 8
 score:
   band: minimal
   composite: 6.9
@@ -130,14 +134,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 10.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/eye-security/refs/heads/main/screenshots/eye-security-2026-07-25T214209.png
+screenshot: https://apis.io/screenshots/eye-security/eye-security-2026-07-25T214209.png
 security:
 - kind: domain-security
   name: Eye Security Domain Security

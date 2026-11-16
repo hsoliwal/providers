@@ -13,7 +13,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.2
-  scored_at: '2026-10-17'
+  score: 39.6
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://app.silnahealth.com/api
@@ -249,11 +252,8 @@ apis:
   description: The V2BenefitsCheckResource API from Silna — 1 operation(s) for v2benefitscheckresource.
   name: Silna V2BenefitsCheckResource API
   slug: silna-v2benefitscheckresource-api
-artifact_total: 89
+artifact_total: 91
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Silna Public OldV1PriorAuthorizationResource API
   slug: open-silna-oldv1priorauthorizationresource-api
@@ -382,87 +382,87 @@ collections:
   slug: open-silna-v2benefitscheckresource-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/capabilities/silna-capability-edges.yml
+  href: https://artifacts.apis.io/silna/capabilities/silna-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/silna-capability-edges.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/security/silna-domain-security.yml
+  href: https://artifacts.apis.io/silna/security/silna-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/silna-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/authentication/silna-authentication.yml
+  href: https://artifacts.apis.io/silna/authentication/silna-authentication.yml
   title: ''
   type: Authentication
   url: authentication/silna-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/errors/silna-problem-types.yml
+  href: https://artifacts.apis.io/silna/errors/silna-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/silna-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/conventions/silna-conventions.yml
+  href: https://artifacts.apis.io/silna/conventions/silna-conventions.yml
   title: ''
   type: Conventions
   url: conventions/silna-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/conventions/silna-conventions.yml
+  href: https://artifacts.apis.io/silna/conventions/silna-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/silna-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/rate-limits/silna-rate-limits.yml
+  href: https://artifacts.apis.io/silna/rate-limits/silna-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/silna-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/lifecycle/silna-lifecycle.yml
+  href: https://artifacts.apis.io/silna/lifecycle/silna-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/silna-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/conformance/silna-conformance.yml
+  href: https://artifacts.apis.io/silna/conformance/silna-conformance.yml
   title: ''
   type: Conformance
   url: conformance/silna-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/conformance/silna-conformance.yml
+  href: https://artifacts.apis.io/silna/conformance/silna-conformance.yml
   title: ''
   type: Compliance
   url: conformance/silna-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/security/silna-trust-center.yml
+  href: https://artifacts.apis.io/silna/security/silna-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/silna-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/data-model/silna-data-model.yml
+  href: https://artifacts.apis.io/silna/data-model/silna-data-model.yml
   title: ''
   type: DataModel
   url: data-model/silna-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/mcp/silna-mcp.yml
+  href: https://artifacts.apis.io/silna/mcp/silna-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/silna-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/well-known/silna-well-known.yml
+  href: https://artifacts.apis.io/silna/well-known/silna-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/silna-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/overlays/silna-openapi-overlay.yaml
+  href: https://artifacts.apis.io/silna/overlays/silna-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/silna-openapi-overlay.yaml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/sandbox/silna-sandbox.yml
+  href: https://artifacts.apis.io/silna/sandbox/silna-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/silna-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/silna/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -537,31 +537,47 @@ network: true
 overview: 'Silna publishes 42 API contracts indexed on the [APIs.io](https://apis.io/) network, including OldV1PriorAuthorizationResource API, V1BenefitsCheckReportResource API, V1BenefitsCheckResource API, and 39 more. Tagged areas include Company, Automation, Healthcare, Prior Authorization, and Benefits Check.
 
 
+  The Silna catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Silna''s developer surface includes authentication, sandbox, developer portal, documentation, API reference, getting-started guide, signup flow, and 25 more developer resources.'
 random_paper: 7
 rate_limits:
 - limit_count: 2
   name: Silna Rate Limits
   slug: silna-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 91
+  extends:
+  - spectral:oas
+  name: Silna API Rules
+  rule_count: 50
+  severity_counts:
+    error: 42
+    hint: 0
+    info: 1
+    warn: 7
+  slug: silna-rules
 score:
   band: developing
-  composite: 52.2
+  composite: 53.9
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 45.0
+    artifact_dirs: 24
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 50.0
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.6
     developer_ergonomics: 66.1
     discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 52.2
+  previous_composite: 53.9
   provenance:
     conformance: derived
     contracts:
@@ -581,13 +597,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 30.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 22.2
-screenshot: https://raw.githubusercontent.com/api-evangelist/silna/refs/heads/main/screenshots/silna-2026-08-17T081856.png
+screenshot: https://apis.io/screenshots/silna/silna-2026-08-17T081856.png
 security:
 - kind: authentication
   name: Silna Authentication
@@ -601,6 +617,12 @@ security:
   name: Silna Trust Center
   slug: silna-trust-center
   summary_line: SOC 2 Type II, HIPAA
+skill_count: 2
+skills:
+- name: silna-run-benefits-check
+  slug: silna-run-benefits-check
+- name: silna-submit-prior-authorization
+  slug: silna-submit-prior-authorization
 slug: silna
 tags:
 - Company

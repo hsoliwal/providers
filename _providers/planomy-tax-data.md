@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Open access
   onboarding: open
   pricing: freemium
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.2
-  scored_at: '2026-10-17'
+  score: 31.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -50,11 +56,8 @@ apis:
   description: Dated, source-attributed US tax and retirement figures.
   name: Planomy Tax Data Tax Data API
   slug: planomy-tax-data-tax-data-api
-artifact_total: 11
+artifact_total: 13
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Planomy JSON Tax Data API
   slug: open-planomy-tax-data-tax-data-api
@@ -64,17 +67,17 @@ common:
   type: BlogRSS
   url: https://planomy.net/feed.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/overlays/planomy-tax-data-overlay.yaml
+  href: https://artifacts.apis.io/planomy-tax-data/overlays/planomy-tax-data-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/planomy-tax-data-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/agentic-access/planomy-tax-data-agentic-access.yml
+  href: https://artifacts.apis.io/planomy-tax-data/agentic-access/planomy-tax-data-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/planomy-tax-data-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/security/planomy-tax-data-domain-security.yml
+  href: https://artifacts.apis.io/planomy-tax-data/security/planomy-tax-data-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/planomy-tax-data-domain-security.yml
@@ -103,57 +106,57 @@ common:
   type: PrivacyPolicy
   url: https://planomy.net/legal/privacy
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/authentication/planomy-tax-data-authentication.yml
+  href: https://artifacts.apis.io/planomy-tax-data/authentication/planomy-tax-data-authentication.yml
   title: ''
   type: Authentication
   url: authentication/planomy-tax-data-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/conventions/planomy-tax-data-conventions.yml
+  href: https://artifacts.apis.io/planomy-tax-data/conventions/planomy-tax-data-conventions.yml
   title: ''
   type: Conventions
   url: conventions/planomy-tax-data-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/errors/planomy-tax-data-problem-types.yml
+  href: https://artifacts.apis.io/planomy-tax-data/errors/planomy-tax-data-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/planomy-tax-data-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/lifecycle/planomy-tax-data-lifecycle.yml
+  href: https://artifacts.apis.io/planomy-tax-data/lifecycle/planomy-tax-data-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/planomy-tax-data-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/conformance/planomy-tax-data-conformance.yml
+  href: https://artifacts.apis.io/planomy-tax-data/conformance/planomy-tax-data-conformance.yml
   title: ''
   type: Conformance
   url: conformance/planomy-tax-data-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/data-model/planomy-tax-data-data-model.yml
+  href: https://artifacts.apis.io/planomy-tax-data/data-model/planomy-tax-data-data-model.yml
   title: ''
   type: DataModel
   url: data-model/planomy-tax-data-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/vocabulary/planomy-tax-data-vocabulary.yml
+  href: https://artifacts.apis.io/planomy-tax-data/vocabulary/planomy-tax-data-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/planomy-tax-data-vocabulary.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/plans/planomy-tax-data-plans-pricing.yml
+  href: https://artifacts.apis.io/planomy-tax-data/plans/planomy-tax-data-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/planomy-tax-data-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/components/planomy-tax-data-components.yml
+  href: https://artifacts.apis.io/planomy-tax-data/components/planomy-tax-data-components.yml
   title: ''
   type: Components
   url: components/planomy-tax-data-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/mcp/planomy-tax-data-mcp.yml
+  href: https://artifacts.apis.io/planomy-tax-data/mcp/planomy-tax-data-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/planomy-tax-data-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/planomy-tax-data/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -182,31 +185,47 @@ network: true
 overview: 'Planomy Tax Data publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Tax Data API. Tagged areas include Tax, Finance, Open Data, Retirement, and Government.
 
 
+  The Planomy Tax Data catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Planomy Tax Data''s developer surface includes support, pricing, signup flow, authentication, and 17 more developer resources.'
 plans:
 - name: Planomy Tax Data Plans Pricing
   plan_count: 5
   slug: planomy-tax-data-plans-pricing
 random_paper: 17
+rules:
+- authorship: generated
+  effective_rule_count: 99
+  extends:
+  - spectral:oas
+  name: Planomy Tax Data API Rules
+  rule_count: 58
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 1
+  slug: planomy-tax-data-rules
 score:
   band: thin
-  composite: 36.1
+  composite: 37.7
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 47.8
+    artifact_dirs: 27
+    catalog_earned: 52.3
     catalog_earned_first_party: 12.0
-    catalog_gap: 67.3
+    catalog_gap: 62.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.1
+  delta: 0.0
   facets:
     access_clarity: 76.3
-    contract_governance: 8.3
+    contract_governance: 22.0
     contract_quality: 18.7
     developer_ergonomics: 35.1
     discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 37.2
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -223,14 +242,14 @@ score:
     regime: Government & Public Sector
     regime_id: government
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/planomy-tax-data/refs/heads/main/screenshots/planomy-tax-data-2026-09-02T151417.png
+screenshot: https://apis.io/screenshots/planomy-tax-data/planomy-tax-data-2026-09-02T151417.png
 security:
 - kind: authentication
   name: Planomy Tax Data Authentication
@@ -240,6 +259,12 @@ security:
   name: Planomy Tax Data Domain Security
   slug: planomy-tax-data-domain-security
   summary_line: TLSv1.3 · HSTS
+skill_count: 2
+skills:
+- name: Cite a tax figure back to its federal source
+  slug: planomy-tax-data-cite-a-tax-figure
+- name: Fetch the current US tax and retirement figures
+  slug: planomy-tax-data-fetch-current-figures
 slug: planomy-tax-data
 tags:
 - Tax

@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-10-17'
+  score: 20.9
+  scored_at: '2026-11-06'
 api_count: 23
 apis:
 - baseURL: https://www.scienceexchange.com/api/providers/v1
@@ -152,11 +155,8 @@ apis:
   description: RFQs resource.
   name: Science Exchange Rfqs API
   slug: science-exchange-rfqs-api
-artifact_total: 50
+artifact_total: 52
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Science Exchange Providers addresses API
   slug: open-science-exchange-addresses-api
@@ -232,12 +232,12 @@ common:
   type: BlogRSS
   url: https://www.scienceexchange.com/blog/rss.xml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/overlays/science-exchange-providers-overlay.yaml
+  href: https://artifacts.apis.io/science-exchange/overlays/science-exchange-providers-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/science-exchange-providers-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/security/science-exchange-trust-center.yml
+  href: https://artifacts.apis.io/science-exchange/security/science-exchange-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/science-exchange-trust-center.yml
@@ -290,67 +290,67 @@ common:
   type: Trust
   url: https://www.scienceexchange.com/trust
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/packages/science-exchange-packages.yml
+  href: https://artifacts.apis.io/science-exchange/packages/science-exchange-packages.yml
   title: ''
   type: Packages
   url: packages/science-exchange-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/packages/science-exchange-packages.yml
+  href: https://artifacts.apis.io/science-exchange/packages/science-exchange-packages.yml
   title: ''
   type: SDKs
   url: packages/science-exchange-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/authentication/science-exchange-authentication.yml
+  href: https://artifacts.apis.io/science-exchange/authentication/science-exchange-authentication.yml
   title: ''
   type: Authentication
   url: authentication/science-exchange-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/conventions/science-exchange-conventions.yml
+  href: https://artifacts.apis.io/science-exchange/conventions/science-exchange-conventions.yml
   title: ''
   type: Conventions
   url: conventions/science-exchange-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/errors/science-exchange-problem-types.yml
+  href: https://artifacts.apis.io/science-exchange/errors/science-exchange-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/science-exchange-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/data-model/science-exchange-data-model.yml
+  href: https://artifacts.apis.io/science-exchange/data-model/science-exchange-data-model.yml
   title: ''
   type: DataModel
   url: data-model/science-exchange-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/mcp/science-exchange-mcp.yml
+  href: https://artifacts.apis.io/science-exchange/mcp/science-exchange-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/science-exchange-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/llms/science-exchange-llms.txt
+  href: https://artifacts.apis.io/science-exchange/llms/science-exchange-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/science-exchange-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/well-known/science-exchange-well-known.yml
+  href: https://artifacts.apis.io/science-exchange/well-known/science-exchange-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/science-exchange-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/conformance/science-exchange-conformance.yml
+  href: https://artifacts.apis.io/science-exchange/conformance/science-exchange-conformance.yml
   title: ''
   type: Conformance
   url: conformance/science-exchange-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/lifecycle/science-exchange-lifecycle.yml
+  href: https://artifacts.apis.io/science-exchange/lifecycle/science-exchange-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/science-exchange-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/security/science-exchange-domain-security.yml
+  href: https://artifacts.apis.io/science-exchange/security/science-exchange-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/science-exchange-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/science-exchange/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -365,22 +365,38 @@ network: true
 overview: 'Science Exchange is listed with 23 APIs on the [APIs.io](https://apis.io/) network, including Addresses API, Attachments API, Currency Codes API, and 20 more. Tagged areas include Company, Life Sciences, Research and Development, Scientific Services, and Procurement.
 
 
+  The Science Exchange catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Science Exchange''s developer surface includes documentation, API reference, engineering blog, signup flow, authentication, and 23 more developer resources.'
-random_paper: 4
+random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 102
+  extends:
+  - spectral:oas
+  name: Science Exchange API Rules
+  rule_count: 61
+  severity_counts:
+    error: 59
+    hint: 0
+    info: 1
+    warn: 1
+  slug: science-exchange-rules
 score:
   band: thin
-  composite: 33.4
+  composite: 35.0
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 40.0
+    artifact_dirs: 22
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 50.0
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 13.8
     developer_ergonomics: 36.3
     discoverability: 78.6
@@ -392,7 +408,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 33.3
+  previous_composite: 35.0
   provenance:
     conformance: first-party
     contracts:
@@ -414,14 +430,14 @@ score:
     regime: Health
     regime_id: health
     score: 27.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/science-exchange/refs/heads/main/screenshots/science-exchange-2026-08-17T081734.png
+screenshot: https://apis.io/screenshots/science-exchange/science-exchange-2026-08-17T081734.png
 security:
 - kind: authentication
   name: Science Exchange Authentication
@@ -435,6 +451,12 @@ security:
   name: Science Exchange Trust Center
   slug: science-exchange-trust-center
   summary_line: SOC 2, HIPAA, GDPR
+skill_count: 2
+skills:
+- name: Audit a provider's facilities, services, and ratings
+  slug: science-exchange-manage-facility-catalog
+- name: Review incoming RFQs and their quotes
+  slug: science-exchange-review-rfqs-and-quotes
 slug: science-exchange
 tags:
 - Company

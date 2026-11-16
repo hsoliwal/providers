@@ -1,4 +1,16 @@
 ---
+access_model:
+  confidence: low
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/varsity-tutors/refs/heads/main/security/varsity-tutors-domain-security.yml
+  href: https://artifacts.apis.io/varsity-tutors/security/varsity-tutors-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/varsity-tutors-domain-security.yml
@@ -57,27 +72,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/varsitytutors
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/varsity-tutors/refs/heads/main/llms/varsity-tutors-llms.txt
+  href: https://artifacts.apis.io/varsity-tutors/llms/varsity-tutors-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/varsity-tutors-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/varsity-tutors/refs/heads/main/conformance/varsity-tutors-conformance.yml
+  href: https://artifacts.apis.io/varsity-tutors/conformance/varsity-tutors-conformance.yml
   title: ''
   type: Conformance
   url: conformance/varsity-tutors-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/varsity-tutors/refs/heads/main/lifecycle/varsity-tutors-lifecycle.yml
+  href: https://artifacts.apis.io/varsity-tutors/lifecycle/varsity-tutors-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/varsity-tutors-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/varsity-tutors/refs/heads/main/plans/varsity-tutors-plans-pricing.yml
+  href: https://artifacts.apis.io/varsity-tutors/plans/varsity-tutors-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/varsity-tutors-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/varsity-tutors/refs/heads/main/rate-limits/varsity-tutors-rate-limits.yml
+  href: https://artifacts.apis.io/varsity-tutors/rate-limits/varsity-tutors-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/varsity-tutors-rate-limits.yml
@@ -115,7 +130,7 @@ plans:
 - name: Varsity Tutors Plans Pricing
   plan_count: 0
   slug: varsity-tutors-plans-pricing
-random_paper: 2
+random_paper: 8
 rate_limits:
 - limit_count: 0
   name: Varsity Tutors Rate Limits
@@ -124,7 +139,7 @@ score:
   band: emerging
   composite: 15.2
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -155,14 +170,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 17.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/varsity-tutors/refs/heads/main/screenshots/varsity-tutors-2026-10-11T131628.png
+screenshot: https://apis.io/screenshots/varsity-tutors/varsity-tutors-2026-10-11T131628.png
 security:
 - kind: domain-security
   name: Varsity Tutors Domain Security

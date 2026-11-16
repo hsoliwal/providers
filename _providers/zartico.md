@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: medium
+  label: Requires approval
+  onboarding: approval
+  pricing: unknown
+  public: false
+  source:
+  - plans
+  - authentication
+  - scopes
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: Zartico operates a public, anonymously readable GeoServer instance at geoserver.zartico.com serving OGC Web Services over its destination geospatial estate. The WMS 1.3.0 capabilities document adverti
@@ -71,72 +88,72 @@ common:
   type: Careers
   url: https://www.zartico.com/careers
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/well-known/zartico-well-known.yml
+  href: https://artifacts.apis.io/zartico/well-known/zartico-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/zartico-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/conformance/zartico-conformance.yml
+  href: https://artifacts.apis.io/zartico/conformance/zartico-conformance.yml
   title: ''
   type: Conformance
   url: conformance/zartico-conformance.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/authentication/zartico-authentication.yml
+  href: https://artifacts.apis.io/zartico/authentication/zartico-authentication.yml
   title: ''
   type: Authentication
   url: authentication/zartico-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/scopes/zartico-scopes.yml
+  href: https://artifacts.apis.io/zartico/scopes/zartico-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/zartico-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/security/zartico-domain-security.yml
+  href: https://artifacts.apis.io/zartico/security/zartico-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/zartico-domain-security.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/packages/zartico-packages.yml
+  href: https://artifacts.apis.io/zartico/packages/zartico-packages.yml
   title: ''
   type: Packages
   url: packages/zartico-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/components/zartico-components.yml
+  href: https://artifacts.apis.io/zartico/components/zartico-components.yml
   title: ''
   type: Components
   url: components/zartico-components.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/llms/zartico-llms.txt
+  href: https://artifacts.apis.io/zartico/llms/zartico-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/zartico-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/mcp/zartico-mcp.yml
+  href: https://artifacts.apis.io/zartico/mcp/zartico-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/zartico-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/conventions/zartico-conventions.yml
+  href: https://artifacts.apis.io/zartico/conventions/zartico-conventions.yml
   title: ''
   type: Conventions
   url: conventions/zartico-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/lifecycle/zartico-lifecycle.yml
+  href: https://artifacts.apis.io/zartico/lifecycle/zartico-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/zartico-lifecycle.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/plans/zartico-plans-pricing.yml
+  href: https://artifacts.apis.io/zartico/plans/zartico-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/zartico-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/rate-limits/zartico-rate-limits.yml
+  href: https://artifacts.apis.io/zartico/rate-limits/zartico-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/zartico-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/errors/zartico-problem-types.yml
+  href: https://artifacts.apis.io/zartico/errors/zartico-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/zartico-problem-types.yml
@@ -161,7 +178,7 @@ plans:
 - name: Zartico Plans Pricing
   plan_count: 0
   slug: zartico-plans-pricing
-random_paper: 16
+random_paper: 20
 rate_limits:
 - limit_count: 0
   name: Zartico Rate Limits
@@ -175,13 +192,13 @@ score:
   band: emerging
   composite: 20.0
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 23.7
     contract_governance: 18.2
@@ -189,7 +206,7 @@ score:
     developer_ergonomics: 19.0
     discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 19.9
+  previous_composite: 20.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -199,14 +216,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 30.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/zartico/refs/heads/main/screenshots/zartico-2026-10-11T195101.png
+screenshot: https://apis.io/screenshots/zartico/zartico-2026-10-11T195101.png
 security:
 - kind: authentication
   name: Zartico Authentication

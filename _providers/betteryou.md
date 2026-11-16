@@ -1,4 +1,14 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: human-only
   dimensions:
@@ -15,7 +25,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
@@ -23,27 +36,27 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/betteryou/refs/heads/main/llms/betteryou-llms.txt
+  href: https://artifacts.apis.io/betteryou/llms/betteryou-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/betteryou-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/betteryou/refs/heads/main/well-known/betteryou-well-known.yml
+  href: https://artifacts.apis.io/betteryou/well-known/betteryou-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/betteryou-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/betteryou/refs/heads/main/hosts/betteryou-hosts.yml
+  href: https://artifacts.apis.io/betteryou/hosts/betteryou-hosts.yml
   title: ''
   type: Hosts
   url: hosts/betteryou-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/betteryou/refs/heads/main/vendors/betteryou-vendors.yml
+  href: https://artifacts.apis.io/betteryou/vendors/betteryou-vendors.yml
   title: ''
   type: Vendors
   url: vendors/betteryou-vendors.yml
@@ -64,7 +77,7 @@ common:
   type: Newsroom
   url: https://betteryou.com/blogs/news
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/betteryou/refs/heads/main/security/betteryou-domain-security.yml
+  href: https://artifacts.apis.io/betteryou/security/betteryou-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/betteryou-domain-security.yml
@@ -92,26 +105,26 @@ overview: 'BetterYou is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   BetterYou''s developer surface includes signup flow and 9 more developer resources.'
-random_paper: 5
+random_paper: 11
 score:
-  band: emerging
-  composite: 12.4
+  band: minimal
+  composite: 8.4
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -4.0
   facets:
-    access_clarity: 34.2
+    access_clarity: 17.1
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.1
+    discoverability: 56.3
     operational_transparency: 0.0
-  previous_composite: 12.3
+  previous_composite: 12.4
   provenance:
     mcp: derived
   regulatory:
@@ -119,15 +132,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 10.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 7.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/betteryou/refs/heads/main/screenshots/betteryou-2026-10-11T102030.png
+screenshot: https://apis.io/screenshots/betteryou/betteryou-2026-10-11T102030.png
 security:
 - kind: domain-security
   name: Betteryou Domain Security

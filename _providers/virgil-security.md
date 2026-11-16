@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: JWT-authenticated Virgil Cloud services — Cards (public key + identity management), Keyknox (private-key storage), Pythia (password PRF) and PFS (perfect-forward-secrecy messaging). Consumed through t
@@ -91,47 +94,47 @@ common:
   type: PrivacyPolicy
   url: https://virgilsecurity.com/privacy-policy/
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/packages/virgil-security-packages.yml
+  href: https://artifacts.apis.io/virgil-security/packages/virgil-security-packages.yml
   title: ''
   type: Packages
   url: packages/virgil-security-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/packages/virgil-security-packages.yml
+  href: https://artifacts.apis.io/virgil-security/packages/virgil-security-packages.yml
   title: ''
   type: SDKs
   url: packages/virgil-security-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/cli/virgil-security-cli.yml
+  href: https://artifacts.apis.io/virgil-security/cli/virgil-security-cli.yml
   title: ''
   type: CLI
   url: cli/virgil-security-cli.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/authentication/virgil-security-authentication.yml
+  href: https://artifacts.apis.io/virgil-security/authentication/virgil-security-authentication.yml
   title: ''
   type: Authentication
   url: authentication/virgil-security-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/conventions/virgil-security-conventions.yml
+  href: https://artifacts.apis.io/virgil-security/conventions/virgil-security-conventions.yml
   title: ''
   type: Conventions
   url: conventions/virgil-security-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/conformance/virgil-security-conformance.yml
+  href: https://artifacts.apis.io/virgil-security/conformance/virgil-security-conformance.yml
   title: ''
   type: Conformance
   url: conformance/virgil-security-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/lifecycle/virgil-security-lifecycle.yml
+  href: https://artifacts.apis.io/virgil-security/lifecycle/virgil-security-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/virgil-security-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/llms/virgil-security-llms.txt
+  href: https://artifacts.apis.io/virgil-security/llms/virgil-security-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/virgil-security-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/security/virgil-security-domain-security.yml
+  href: https://artifacts.apis.io/virgil-security/security/virgil-security-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/virgil-security-domain-security.yml
@@ -156,7 +159,7 @@ score:
   band: thin
   composite: 31.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -179,14 +182,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/screenshots/virgil-security-2026-09-02T165954.png
+screenshot: https://apis.io/screenshots/virgil-security/virgil-security-2026-09-02T165954.png
 security:
 - kind: authentication
   name: Virgil Security Authentication

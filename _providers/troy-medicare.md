@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -28,7 +28,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -36,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The OpenID Connect authorization server behind Troy Medicare's secure provider portal, which contracted providers use for member eligibility verification, claim status and payment history. Its discove
@@ -48,7 +51,7 @@ apis:
 artifact_total: 7
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/troy-medicare/refs/heads/main/security/troy-medicare-domain-security.yml
+  href: https://artifacts.apis.io/troy-medicare/security/troy-medicare-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/troy-medicare-domain-security.yml
@@ -89,37 +92,37 @@ common:
   type: Compliance
   url: https://troymedicare.com/compliance
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/troy-medicare/refs/heads/main/well-known/troy-medicare-well-known.yml
+  href: https://artifacts.apis.io/troy-medicare/well-known/troy-medicare-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/troy-medicare-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/troy-medicare/refs/heads/main/authentication/troy-medicare-authentication.yml
+  href: https://artifacts.apis.io/troy-medicare/authentication/troy-medicare-authentication.yml
   title: ''
   type: Authentication
   url: authentication/troy-medicare-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/troy-medicare/refs/heads/main/scopes/troy-medicare-scopes.yml
+  href: https://artifacts.apis.io/troy-medicare/scopes/troy-medicare-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/troy-medicare-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/troy-medicare/refs/heads/main/conformance/troy-medicare-conformance.yml
+  href: https://artifacts.apis.io/troy-medicare/conformance/troy-medicare-conformance.yml
   title: ''
   type: Conformance
   url: conformance/troy-medicare-conformance.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/troy-medicare/refs/heads/main/plans/troy-medicare-plans-pricing.yml
+  href: https://artifacts.apis.io/troy-medicare/plans/troy-medicare-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/troy-medicare-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/troy-medicare/refs/heads/main/rate-limits/troy-medicare-rate-limits.yml
+  href: https://artifacts.apis.io/troy-medicare/rate-limits/troy-medicare-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/troy-medicare-rate-limits.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/troy-medicare/refs/heads/main/llms/troy-medicare-llms.txt
+  href: https://artifacts.apis.io/troy-medicare/llms/troy-medicare-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/troy-medicare-llms.txt
@@ -153,7 +156,7 @@ score:
   band: thin
   composite: 27.5
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -176,14 +179,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 41.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/troy-medicare/refs/heads/main/screenshots/troy-medicare-2026-09-02T164317.png
+screenshot: https://apis.io/screenshots/troy-medicare/troy-medicare-2026-09-02T164317.png
 security:
 - kind: authentication
   name: Troy Medicare Authentication

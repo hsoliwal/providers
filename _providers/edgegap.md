@@ -1,6 +1,9 @@
 ---
 access_model:
-  confidence: high
+  confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -8,6 +11,7 @@ access_model:
   source:
   - plans
   - authentication
+  - security
   trial: false
   try_now: true
 agent_readiness:
@@ -22,19 +26,22 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 24.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 3
@@ -44,11 +51,6 @@ agentic_access:
   summary_line: 34 operations · 19 acting · 3 human-in-the-loop
 api_count: 1
 apis:
-- baseURL: https://api.edgegap.com
-  baseurl_source: declared
-  description: Manage container image versions for an application.
-  name: Edgegap App Versions API
-  slug: edgegap-app-versions-api
 - baseURL: https://api.edgegap.com
   baseurl_source: declared
   description: Manage applications registered on Edgegap.
@@ -66,11 +68,6 @@ apis:
   slug: edgegap-fleets-api
 - baseURL: https://api.edgegap.com
   baseurl_source: declared
-  description: Create and poll matchmaking tickets.
-  name: Edgegap Matchmaking API
-  slug: edgegap-matchmaking-api
-- baseURL: https://api.edgegap.com
-  baseurl_source: declared
   description: Monitoring and telemetry for deployments.
   name: Edgegap Metrics API
   slug: edgegap-metrics-api
@@ -84,11 +81,38 @@ apis:
   description: Add and remove players or groups on a running deployment.
   name: Edgegap Sessions API
   slug: edgegap-sessions-api
-artifact_total: 24
+- baseURL: https://api.edgegap.com
+  baseurl_source: declared
+  description: Container Registry API
+  name: Edgegap Container Registry API
+  slug: edgegap-container-registry-api
+- baseURL: https://api.edgegap.com
+  baseurl_source: declared
+  description: Deployment Tags API - Deployment Tags related operations.
+  name: Edgegap Deployment Tags API
+  slug: edgegap-deployment-tags-api
+- baseURL: https://api.edgegap.com
+  baseurl_source: declared
+  description: Endpoint Storage Control API - Please refer to <a href='https://docs.edgegap.com/docs/deployment/endpoint-storage' target='_blank'>this documentation</a> to get started with storage.
+  name: Edgegap Endpoint Storage API
+  slug: edgegap-endpoint-storage-api
+- baseURL: https://api.edgegap.com
+  baseurl_source: declared
+  description: IP API - IP addresses related operations.
+  name: Edgegap IP Lookup API
+  slug: edgegap-ip-lookup-api
+- baseURL: https://api.edgegap.com
+  baseurl_source: declared
+  description: Locations API - Please refer to <a href='https://docs.edgegap.com/docs/deployment/locations/beacons' target='_blank'>this documentation</a> to get started with locations beacons.
+  name: Edgegap Locations API
+  slug: edgegap-locations-api
+- baseURL: https://api.edgegap.com
+  baseurl_source: declared
+  description: API to report one of your game server
+  name: Edgegap Report Deployment API
+  slug: edgegap-report-deployment-api
+artifact_total: 28
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Edgegap Arbitrium App Versions API
   slug: open-edgegap-app-versions-api
@@ -122,17 +146,17 @@ common:
   type: Blog
   url: https://edgegap.com/blog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/edgegap/refs/heads/main/agentic-access/edgegap-agentic-access.yml
+  href: https://artifacts.apis.io/edgegap/agentic-access/edgegap-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/edgegap-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/edgegap/refs/heads/main/security/edgegap-domain-security.yml
+  href: https://artifacts.apis.io/edgegap/security/edgegap-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/edgegap-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/edgegap/refs/heads/main/authentication/edgegap-authentication.yml
+  href: https://artifacts.apis.io/edgegap/authentication/edgegap-authentication.yml
   title: ''
   type: Authentication
   url: authentication/edgegap-authentication.yml
@@ -153,17 +177,17 @@ common:
   type: Documentation
   url: https://docs.edgegap.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/edgegap/refs/heads/main/plans/edgegap-plans-pricing.yml
+  href: https://artifacts.apis.io/edgegap/plans/edgegap-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/edgegap-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/edgegap/refs/heads/main/rate-limits/edgegap-rate-limits.yml
+  href: https://artifacts.apis.io/edgegap/rate-limits/edgegap-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/edgegap-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/edgegap/refs/heads/main/finops/edgegap-finops.yml
+  href: https://artifacts.apis.io/edgegap/finops/edgegap-finops.yml
   title: ''
   type: FinOps
   url: finops/edgegap-finops.yml
@@ -183,7 +207,10 @@ modified: '2026-10-06'
 name: Edgegap
 nav: Providers
 network: true
-overview: 'Edgegap publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including App Versions API, Applications API, Deployments API, and 5 more. Tagged areas include Game Servers, Edge Computing, Matchmaking, Hosting, and Container Orchestration.
+overview: 'Edgegap publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applications API, Deployments API, Fleets API, and 9 more. Tagged areas include Game Servers, Edge Computing, Matchmaking, Hosting, and Container Orchestration.
+
+
+  The Edgegap catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Edgegap''s developer surface includes engineering blog, authentication, documentation, and 8 more developer resources.'
@@ -191,50 +218,63 @@ plans:
 - name: Edgegap Plans Pricing
   plan_count: 3
   slug: edgegap-plans-pricing
-random_paper: 13
+random_paper: 21
 rate_limits:
 - limit_count: 4
   name: Edgegap Rate Limits
   slug: edgegap-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 107
+  extends:
+  - spectral:oas
+  name: Edgegap API Rules
+  rule_count: 66
+  severity_counts:
+    error: 51
+    hint: 0
+    info: 1
+    warn: 14
+  slug: edgegap-rules
 score:
-  band: emerging
-  composite: 24.5
+  band: thin
+  composite: 28.6
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 43.0
+    artifact_dirs: 15
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.8
+  delta: 0.8
   facets:
     access_clarity: 7.9
-    contract_governance: 0.0
-    contract_quality: 45.7
+    contract_governance: 13.6
+    contract_quality: 55.5
     developer_ergonomics: 23.8
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 32.3
+  previous_composite: 27.8
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 8
+      marker_coverage: 57.1
+      total: 21
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 11.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/edgegap/refs/heads/main/screenshots/edgegap-2026-07-25T212833.png
+screenshot: https://apis.io/screenshots/edgegap/edgegap-2026-07-25T212833.png
 security:
 - kind: authentication
   name: Edgegap Authentication

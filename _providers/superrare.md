@@ -1,16 +1,17 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
   label: Free
   onboarding: unknown
   pricing: free
   public: false
   source:
   - plans
+  - security
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-10-17'
+  score: 29.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -88,9 +92,6 @@ apis:
 artifact_total: 23
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: SuperRare Marketplace Collections API
   slug: open-superrare-collections-api
 - collection_type: open
@@ -110,17 +111,17 @@ collections:
   slug: open-superrare-users-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/superrare/refs/heads/main/plans/plans.yml
+  href: https://artifacts.apis.io/superrare/plans/plans.yml
   title: ''
   type: Plans
   url: plans/plans.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/superrare/refs/heads/main/rate-limits/rate-limits.yml
+  href: https://artifacts.apis.io/superrare/rate-limits/rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/superrare/refs/heads/main/finops/finops.yml
+  href: https://artifacts.apis.io/superrare/finops/finops.yml
   title: ''
   type: FinOps
   url: finops/finops.yml
@@ -137,12 +138,12 @@ common:
   type: License
   url: https://github.com/superrare/pixura-contracts/blob/master/LICENSE
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/superrare/refs/heads/main/agentic-access/superrare-agentic-access.yml
+  href: https://artifacts.apis.io/superrare/agentic-access/superrare-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/superrare-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/superrare/refs/heads/main/security/superrare-domain-security.yml
+  href: https://artifacts.apis.io/superrare/security/superrare-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/superrare-domain-security.yml
@@ -222,7 +223,7 @@ network: true
 overview: 'SuperRare publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Collections API, Media API, Merkle Roots API, and 7 more. Tagged areas include NFT, Digital Art, Marketplace, Ethereum, and Blockchain.
 
 
-  The SuperRare catalog on APIs.io includes 1 JSON-LD context.
+  The SuperRare catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   SuperRare''s developer surface includes developer portal, documentation, engineering blog, and 18 more developer resources.'
@@ -230,25 +231,38 @@ plans:
 - name: Plans
   plan_count: 2
   slug: plans
-random_paper: 17
+random_paper: 1
 rate_limits:
 - limit_count: 0
   name: Rate Limits
   slug: rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 106
+  extends:
+  - spectral:oas
+  name: SuperRare API Rules
+  rule_count: 65
+  severity_counts:
+    error: 60
+    hint: 0
+    info: 2
+    warn: 3
+  slug: superrare-rules
 score:
   band: thin
-  composite: 32.0
+  composite: 33.5
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 44.0
+    artifact_dirs: 15
+    catalog_earned: 48.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    catalog_gap: 66.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -3.8
+  delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
+    contract_governance: 13.6
     contract_quality: 51.5
     developer_ergonomics: 42.9
     discoverability: 66.1
@@ -256,7 +270,7 @@ score:
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 35.8
+  previous_composite: 33.5
   provenance:
     agentic_access: derived
     contracts:
@@ -270,13 +284,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 14.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/superrare/refs/heads/main/screenshots/superrare-2026-06-20T194728.png
+screenshot: https://apis.io/screenshots/superrare/superrare-2026-06-20T194728.png
 security:
 - kind: domain-security
   name: Superrare Domain Security

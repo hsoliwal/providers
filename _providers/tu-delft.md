@@ -25,15 +25,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: documented
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.4
-  scored_at: '2026-10-17'
+  score: 18.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: TU Delft's SimpleSAMLphp identity provider — the machine-readable half of NetID. It publishes a signed SAML 2.0 EntityDescriptor with an IDPSSODescriptor and is registered in SURFconext, the Dutch nat
@@ -65,7 +68,7 @@ apis:
 artifact_total: 17
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/capabilities/tu-delft-capability-edges.yml
+  href: https://artifacts.apis.io/tu-delft/capabilities/tu-delft-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/tu-delft-capability-edges.yml
@@ -178,65 +181,69 @@ common:
   type: SecurityTxt
   url: https://www.tudelft.nl/.well-known/security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/security/tu-delft-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/tu-delft/security/tu-delft-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/tu-delft-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/security/tu-delft-domain-security.yml
+  href: https://artifacts.apis.io/tu-delft/security/tu-delft-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/tu-delft-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/authentication/tu-delft-authentication.yml
+  href: https://artifacts.apis.io/tu-delft/authentication/tu-delft-authentication.yml
   title: ''
   type: Authentication
   url: authentication/tu-delft-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/scopes/tu-delft-scopes.yml
+  href: https://artifacts.apis.io/tu-delft/scopes/tu-delft-scopes.yml
   title: ''
   type: Scopes
   url: scopes/tu-delft-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/conformance/tu-delft-conformance.yml
+  href: https://artifacts.apis.io/tu-delft/conformance/tu-delft-conformance.yml
   title: ''
   type: Conformance
   url: conformance/tu-delft-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/lifecycle/tu-delft-lifecycle.yml
+  href: https://artifacts.apis.io/tu-delft/lifecycle/tu-delft-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/tu-delft-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/vocabulary/tu-delft-vocabulary.yml
+  href: https://artifacts.apis.io/tu-delft/vocabulary/tu-delft-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/tu-delft-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/json-ld/tu-delft-context.jsonld
+  href: https://artifacts.apis.io/tu-delft/json-ld/tu-delft-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/tu-delft-context.jsonld
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/plans/tu-delft-plans-pricing.yml
+  href: https://artifacts.apis.io/tu-delft/plans/tu-delft-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/tu-delft-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/rate-limits/tu-delft-rate-limits.yml
+  href: https://artifacts.apis.io/tu-delft/rate-limits/tu-delft-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/tu-delft-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/finops/tu-delft-finops.yml
+  href: https://artifacts.apis.io/tu-delft/finops/tu-delft-finops.yml
   title: ''
   type: FinOps
   url: finops/tu-delft-finops.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/review.yml
+  href: https://artifacts.apis.io/tu-delft/review.yml
   title: ''
   type: Review
   url: review.yml
+- group: build
+  title: ''
+  type: GitHubOrganization
+  url: https://github.com/tudelft
 created: '2026-06-03'
 description: 'Delft University of Technology (TU Delft) is the oldest and largest public technical university in the Netherlands and a member of the 4TU.Federation. Its programmable footprint is narrow, and this profile states that plainly rather than padding it. TU Delft operates exactly one public, unauthenticated API: the 4TU.ResearchData repository at data.4tu.nl, which runs on djehuty, open-source repository software written by 4TU.ResearchData and Nikhef. The /v2 surface is deliberately shape-compatible with the Figshare v2 API because that was a requirement of the 2023 migration OFF Figshare — the contract is not Figshare''s, and the service runs inside TU Delft''s own RIPE netblock (DUNET, 131.180.0.0/16). The other genuinely institution-operated machine-readable surface is a SAML 2.0 identity provider at login.tudelft.nl, published into the SURFconext national federation and onward to eduGAIN. Beyond those two, the picture is retirement and tenancy. The general-purpose institutional
   API platform at api.tudelft.nl — campus, buildings, courses, schedules, study results, organisation — no longer answers on port 80 or 443, and its documentation host apidoc.tudelft.nl has no DNS record at all. The research information portal at pure.tudelft.nl / research.tudelft.nl is an Elsevier Pure tenancy whose own API documentation canonicalises to api.elsevierpure.com: TU Delft''s data, Elsevier''s contract. The library discovery layer is an OCLC WorldCat tenancy. No working OAI-PMH endpoint exists on any TU Delft-operated host despite third-party registry entries claiming otherwise. TU Delft publishes no OpenAPI, no llms.txt, no scope vocabulary and no API changelog.'
@@ -273,7 +280,7 @@ overview: 'Delft University of Technology publishes 6 API contracts indexed on t
   The Delft University of Technology catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Delft University of Technology''s developer surface includes documentation, API reference, engineering blog, support, authentication, and 35 more developer resources.'
+  Delft University of Technology''s developer surface includes documentation, API reference, engineering blog, support, authentication, and 36 more developer resources.'
 plans:
 - name: Tu Delft Plans Pricing
   plan_count: 2
@@ -305,13 +312,13 @@ score:
   band: developing
   composite: 47.6
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 59.4
     catalog_earned_first_party: 0.0
     catalog_gap: 55.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -9.7
+  delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 33.3
@@ -327,7 +334,7 @@ score:
     regions:
     - benelux
     - europe
-  previous_composite: 57.3
+  previous_composite: 47.6
   provenance:
     conformance: first-party
     contracts:
@@ -341,14 +348,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 48.0
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/tu-delft/refs/heads/main/screenshots/tu-delft-2026-10-11T194130.png
+screenshot: https://apis.io/screenshots/tu-delft/tu-delft-2026-10-11T194130.png
 security:
 - kind: authentication
   name: Tu Delft Authentication
@@ -376,5 +383,7 @@ tags:
 - 4TU.Federation
 - Netherlands
 - Europe
+- Research
+- Engineering
 website: https://www.tudelft.nl/
 ---

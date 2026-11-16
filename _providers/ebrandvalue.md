@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -34,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 2
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/ebrandvalue/refs/heads/main/security/ebrandvalue-domain-security.yml
+  href: https://artifacts.apis.io/ebrandvalue/security/ebrandvalue-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/ebrandvalue-domain-security.yml
@@ -80,17 +83,17 @@ common:
   type: BlogRSS
   url: https://www.ebrandvalue.com/latest/feed/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/ebrandvalue/refs/heads/main/plans/ebrandvalue-plans-pricing.yml
+  href: https://artifacts.apis.io/ebrandvalue/plans/ebrandvalue-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/ebrandvalue-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/ebrandvalue/refs/heads/main/conformance/ebrandvalue-conformance.yml
+  href: https://artifacts.apis.io/ebrandvalue/conformance/ebrandvalue-conformance.yml
   title: ''
   type: Conformance
   url: conformance/ebrandvalue-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/ebrandvalue/refs/heads/main/llms/ebrandvalue-llms.txt
+  href: https://artifacts.apis.io/ebrandvalue/llms/ebrandvalue-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/ebrandvalue-llms.txt
@@ -136,12 +139,12 @@ plans:
 - name: Ebrandvalue Plans Pricing
   plan_count: 3
   slug: ebrandvalue-plans-pricing
-random_paper: 17
+random_paper: 9
 score:
   band: emerging
   composite: 23.9
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
@@ -164,14 +167,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 18.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/ebrandvalue/refs/heads/main/screenshots/ebrandvalue-2026-07-25T212728.png
+screenshot: https://apis.io/screenshots/ebrandvalue/ebrandvalue-2026-07-25T212728.png
 security:
 - kind: domain-security
   name: Ebrandvalue Domain Security

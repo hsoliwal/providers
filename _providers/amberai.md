@@ -1,4 +1,18 @@
 ---
+access_model:
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
+  label: Self-serve signup
+  onboarding: self-serve
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-native
   dimensions:
@@ -15,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
-    protected_resource_metadata: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: paginated
+    protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 58.2
-  scored_at: '2026-10-17'
+  score: 56.9
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -500,88 +517,96 @@ apis:
   slug: amberai-units-of-measure-api
 artifact_total: 106
 common:
+- group: start
+  title: ''
+  type: GettingStarted
+  url: https://amber.ai/academy/getting-started
+- group: operate
+  title: ''
+  type: ChangeLog
+  url: https://amber.ai/whats-new
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/capabilities/amberai-capability-edges.yml
+  href: https://artifacts.apis.io/amberai/capabilities/amberai-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/amberai-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/agentic-access/amberai-agentic-access.yml
+  href: https://artifacts.apis.io/amberai/agentic-access/amberai-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/amberai-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/rules/amberai-rules.yml
+  href: https://artifacts.apis.io/amberai/rules/amberai-rules.yml
   title: ''
   type: Spectral
   url: rules/amberai-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/json-ld/amberai-context.jsonld
+  href: https://artifacts.apis.io/amberai/json-ld/amberai-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/amberai-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/vocabulary/amberai-vocabulary.yml
+  href: https://artifacts.apis.io/amberai/vocabulary/amberai-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/amberai-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/data-model/amberai-data-model.yml
+  href: https://artifacts.apis.io/amberai/data-model/amberai-data-model.yml
   title: ''
   type: DataModel
   url: data-model/amberai-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/conventions/amberai-conventions.yml
+  href: https://artifacts.apis.io/amberai/conventions/amberai-conventions.yml
   title: ''
   type: Conventions
   url: conventions/amberai-conventions.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/authentication/amberai-authentication.yml
+  href: https://artifacts.apis.io/amberai/authentication/amberai-authentication.yml
   title: ''
   type: Authentication
   url: authentication/amberai-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/errors/amberai-problem-types.yml
+  href: https://artifacts.apis.io/amberai/errors/amberai-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/amberai-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/conformance/amberai-conformance.yml
+  href: https://artifacts.apis.io/amberai/conformance/amberai-conformance.yml
   title: ''
   type: Conformance
   url: conformance/amberai-conformance.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/overlays/amberai-openapi-overlay.yml
+  href: https://artifacts.apis.io/amberai/overlays/amberai-openapi-overlay.yml
   title: ''
   type: Overlay
   url: overlays/amberai-openapi-overlay.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/llms/amberai-llms.txt
+  href: https://artifacts.apis.io/amberai/llms/amberai-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/amberai-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/a2a/amberai-a2a.yml
+  href: https://artifacts.apis.io/amberai/a2a/amberai-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/amberai-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/mcp/amberai-mcp.yml
+  href: https://artifacts.apis.io/amberai/mcp/amberai-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/amberai-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/well-known/amberai-well-known.yml
+  href: https://artifacts.apis.io/amberai/well-known/amberai-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/amberai-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/hosts/amberai-hosts.yml
+  href: https://artifacts.apis.io/amberai/hosts/amberai-hosts.yml
   title: ''
   type: Hosts
   url: hosts/amberai-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/vendors/amberai-vendors.yml
+  href: https://artifacts.apis.io/amberai/vendors/amberai-vendors.yml
   title: ''
   type: Vendors
   url: vendors/amberai-vendors.yml
@@ -610,12 +635,12 @@ common:
   type: APIReference
   url: https://docs.amber.ai/api-reference/brand/verify-access-and-get-the-authorized-brand
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/security/amberai-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/amberai/security/amberai-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/amberai-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/amberai/refs/heads/main/security/amberai-domain-security.yml
+  href: https://artifacts.apis.io/amberai/security/amberai-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/amberai-domain-security.yml
@@ -669,46 +694,46 @@ modified: '2026-09-24'
 name: Amberai
 nav: Providers
 network: true
-overview: 'Amberai publishes 93 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bom Components API, Bom Sections API, Bom Skus API, and 90 more. Tagged areas include Company, Artificial Intelligence, OperatingSystem, Automation, and Supply Chain.
+overview: 'Amberai publishes 93 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bom Components API, Bom Sections API, Bom Skus API, and 90 more. Tagged areas include Company, Artificial Intelligence, Operating System, Automation, and Supply Chain.
 
 
   The Amberai catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Amberai''s developer surface includes authentication, engineering blog, documentation, API reference, and 22 more developer resources.'
-random_paper: 17
+  Amberai''s developer surface includes getting-started guide, changelog, authentication, engineering blog, documentation, API reference, and 22 more developer resources.'
+random_paper: 1
 rules:
 - authorship: generated
-  effective_rule_count: 57
+  effective_rule_count: 98
   extends:
   - spectral:oas
   name: Amberai API Rules
-  rule_count: 16
+  rule_count: 57
   severity_counts:
-    error: 15
+    error: 53
     hint: 0
     info: 1
-    warn: 0
+    warn: 3
   slug: amberai-rules
 score:
   band: thin
-  composite: 38.0
+  composite: 37.5
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 60.0
+    artifact_dirs: 25
+    catalog_earned: 60.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 37.7
+  delta: -0.5
   facets:
-    access_clarity: 21.1
-    contract_governance: 19.7
+    access_clarity: 10.5
+    contract_governance: 22.0
     contract_quality: 59.0
-    developer_ergonomics: 31.0
+    developer_ergonomics: 33.3
     discoverability: 71.7
-    operational_transparency: 10.5
-  previous_composite: 0.3
+    operational_transparency: 21.1
+  previous_composite: 38.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -723,14 +748,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 28.2
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+    score: 24.5
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://apis.io/screenshots/amberai/amberai-2026-11-03T120805.png
 security:
 - kind: authentication
   name: Amberai Authentication
@@ -748,7 +774,7 @@ slug: amberai
 tags:
 - Company
 - Artificial Intelligence
-- OperatingSystem
+- Operating System
 - Automation
 - Supply Chain
 website: https://amber.ai

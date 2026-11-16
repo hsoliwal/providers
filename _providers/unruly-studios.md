@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: 'The Gamelocker backend (gamelocker.unruly-studios.com) is a self-hosted GitLab instance that stores each learner''s coding "profiles" and game files as GitLab projects and repository files. It exposes '
@@ -82,32 +87,32 @@ common:
   type: StatusPage
   url: https://status.unrulysplats.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unruly-studios/refs/heads/main/authentication/unruly-studios-authentication.yml
+  href: https://artifacts.apis.io/unruly-studios/authentication/unruly-studios-authentication.yml
   title: ''
   type: Authentication
   url: authentication/unruly-studios-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unruly-studios/refs/heads/main/scopes/unruly-studios-scopes.yml
+  href: https://artifacts.apis.io/unruly-studios/scopes/unruly-studios-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/unruly-studios-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unruly-studios/refs/heads/main/well-known/unruly-studios-well-known.yml
+  href: https://artifacts.apis.io/unruly-studios/well-known/unruly-studios-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/unruly-studios-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unruly-studios/refs/heads/main/mcp/unruly-studios-mcp.yml
+  href: https://artifacts.apis.io/unruly-studios/mcp/unruly-studios-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/unruly-studios-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/unruly-studios/refs/heads/main/llms/unruly-studios-llms.txt
+  href: https://artifacts.apis.io/unruly-studios/llms/unruly-studios-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/unruly-studios-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/unruly-studios/refs/heads/main/security/unruly-studios-domain-security.yml
+  href: https://artifacts.apis.io/unruly-studios/security/unruly-studios-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/unruly-studios-domain-security.yml
@@ -123,7 +128,7 @@ overview: 'Unruly Studios is listed with 1 API on the [APIs.io](https://apis.io/
 
 
   Unruly Studios'' developer surface includes signup flow, pricing, engineering blog, support, authentication, and 11 more developer resources.'
-random_paper: 15
+random_paper: 23
 scopes:
 - name: Unruly Studios Scopes
   scope_count: 9
@@ -156,14 +161,14 @@ score:
     regime: Education & Research
     regime_id: education
     score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/unruly-studios/refs/heads/main/screenshots/unruly-studios-2026-09-02T164953.png
+screenshot: https://apis.io/screenshots/unruly-studios/unruly-studios-2026-09-02T164953.png
 security:
 - kind: authentication
   name: Unruly Studios Authentication

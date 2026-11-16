@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -26,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: verified
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: verified
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-10-17'
+  score: 36.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -187,50 +193,50 @@ apis:
   description: The Transactions API from Coutts — 2 operation(s) for transactions.
   name: Coutts Transactions API
   slug: coutts-transactions-api
-artifact_total: 34
+artifact_total: 38
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/capabilities/coutts-capability-edges.yml
+  href: https://artifacts.apis.io/coutts/capabilities/coutts-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/coutts-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/overlays/coutts-account-info-overlay.yaml
+  href: https://artifacts.apis.io/coutts/overlays/coutts-account-info-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/coutts-account-info-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/overlays/coutts-payment-initiation-overlay.yaml
+  href: https://artifacts.apis.io/coutts/overlays/coutts-payment-initiation-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/coutts-payment-initiation-overlay.yaml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/overlays/coutts-confirmation-funds-overlay.yaml
+  href: https://artifacts.apis.io/coutts/overlays/coutts-confirmation-funds-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/coutts-confirmation-funds-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/security/coutts-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/coutts/security/coutts-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/coutts-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/security/coutts-domain-security.yml
+  href: https://artifacts.apis.io/coutts/security/coutts-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/coutts-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/agentic-access/coutts-agentic-access.yml
+  href: https://artifacts.apis.io/coutts/agentic-access/coutts-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/coutts-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/scopes/coutts-scopes.yml
+  href: https://artifacts.apis.io/coutts/scopes/coutts-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/coutts-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/authentication/coutts-authentication.yml
+  href: https://artifacts.apis.io/coutts/authentication/coutts-authentication.yml
   title: ''
   type: Authentication
   url: authentication/coutts-authentication.yml
@@ -279,12 +285,12 @@ common:
   type: PrivacyPolicy
   url: https://www.coutts.com/privacy-and-cookie-policy.html
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/well-known/coutts-well-known.yml
+  href: https://artifacts.apis.io/coutts/well-known/coutts-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/coutts-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/well-known/coutts-security.txt
+  href: https://artifacts.apis.io/coutts/well-known/coutts-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/coutts-security.txt
@@ -293,52 +299,52 @@ common:
   type: Security
   url: https://www.coutts.com/.well-known/security.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/errors/coutts-problem-types.yml
+  href: https://artifacts.apis.io/coutts/errors/coutts-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/coutts-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/conventions/coutts-conventions.yml
+  href: https://artifacts.apis.io/coutts/conventions/coutts-conventions.yml
   title: ''
   type: Conventions
   url: conventions/coutts-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/conventions/coutts-conventions.yml
+  href: https://artifacts.apis.io/coutts/conventions/coutts-conventions.yml
   title: ''
   type: Idempotency
   url: conventions/coutts-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/lifecycle/coutts-lifecycle.yml
+  href: https://artifacts.apis.io/coutts/lifecycle/coutts-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/coutts-lifecycle.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/lifecycle/coutts-lifecycle.yml
+  href: https://artifacts.apis.io/coutts/lifecycle/coutts-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/coutts-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/conformance/coutts-conformance.yml
+  href: https://artifacts.apis.io/coutts/conformance/coutts-conformance.yml
   title: ''
   type: Conformance
   url: conformance/coutts-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/data-model/coutts-data-model.yml
+  href: https://artifacts.apis.io/coutts/data-model/coutts-data-model.yml
   title: ''
   type: DataModel
   url: data-model/coutts-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/mcp/coutts-mcp.yml
+  href: https://artifacts.apis.io/coutts/mcp/coutts-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/coutts-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/llms/coutts-llms.txt
+  href: https://artifacts.apis.io/coutts/llms/coutts-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/coutts-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/coutts/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -358,8 +364,24 @@ network: true
 overview: 'Coutts publishes 29 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 26 more. Tagged areas include Financial Services, Banking, Private Bank, Wealth Management, and Open Banking.
 
 
+  The Coutts catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Coutts'' developer surface includes authentication, documentation, sandbox, engineering blog, support, getting-started guide, and 28 more developer resources.'
-random_paper: 14
+random_paper: 2
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Coutts API Rules
+  rule_count: 59
+  severity_counts:
+    error: 53
+    hint: 0
+    info: 1
+    warn: 5
+  slug: coutts-rules
 scopes:
 - name: Coutts Scopes
   scope_count: 3
@@ -367,18 +389,18 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 35.1
+  composite: 36.8
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 40.0
+    artifact_dirs: 22
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 49.0
     developer_ergonomics: 28.0
     discoverability: 78.6
@@ -391,7 +413,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 35.1
+  previous_composite: 36.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -408,13 +430,13 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 42.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/coutts/refs/heads/main/screenshots/coutts-2026-07-25T210525.png
+screenshot: https://apis.io/screenshots/coutts/coutts-2026-07-25T210525.png
 security:
 - kind: authentication
   name: Coutts Authentication
@@ -428,6 +450,14 @@ security:
   name: Coutts Vulnerability Disclosure
   slug: coutts-vulnerability-disclosure
   summary_line: Bugcrowd · security.txt · contact published
+skill_count: 3
+skills:
+- name: Confirm available funds (CBPII)
+  slug: coutts-confirm-funds
+- name: Initiate a domestic payment (PIS)
+  slug: coutts-initiate-domestic-payment
+- name: Retrieve account and transaction information (AIS)
+  slug: coutts-retrieve-account-information
 slug: coutts
 tags:
 - Financial Services

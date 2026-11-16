@@ -1,17 +1,21 @@
 ---
 access_model:
-  confidence: low
-  label: Unknown
-  onboarding: unknown
-  pricing: unknown
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
   public: false
   source:
+  - plans
   - authentication
   - scopes
   - security
   - sandbox
   trial: false
-  try_now: false
+  try_now: true
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -28,15 +32,18 @@ agent_readiness:
     event_surface_described: derived
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.4
-  scored_at: '2026-10-17'
+  score: 26.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -70,15 +77,12 @@ apis:
   description: The Refunds API from Razorpay — 2 operation(s) for refunds.
   name: Razorpay Refunds API
   slug: razorpay-refunds-api
-artifact_total: 19
+artifact_total: 21
 asyncapis:
 - description: AsyncAPI description of Razorpay's webhook surface. Razorpay POSTs JSON event payloads to a merchant-configured webhook URL whenever a subscribed event occurs (payments, orders, refunds, subscriptions
   name: Razorpay Webhooks
   slug: razorpay-webhooks-asyncapi
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Razorpay Core REST Orders API
   slug: open-razorpay-orders-api
@@ -92,73 +96,78 @@ collections:
   name: Razorpay Core REST API
   slug: open-razorpay
 common:
+- group: commercial
+  href: https://artifacts.apis.io/razorpay/plans/razorpay-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/razorpay-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/capabilities/razorpay-capability-edges.yml
+  href: https://artifacts.apis.io/razorpay/capabilities/razorpay-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/razorpay-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/a2a/razorpay-a2a.yml
+  href: https://artifacts.apis.io/razorpay/a2a/razorpay-a2a.yml
   title: ''
   type: AgentCard
   url: a2a/razorpay-a2a.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/agentic-access/razorpay-agentic-access.yml
+  href: https://artifacts.apis.io/razorpay/agentic-access/razorpay-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/razorpay-agentic-access.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/sandbox/razorpay-sandbox.yml
+  href: https://artifacts.apis.io/razorpay/sandbox/razorpay-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/razorpay-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/conventions/razorpay-conventions.yml
+  href: https://artifacts.apis.io/razorpay/conventions/razorpay-conventions.yml
   title: ''
   type: Conventions
   url: conventions/razorpay-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/changelog/razorpay-changelog.yml
+  href: https://artifacts.apis.io/razorpay/changelog/razorpay-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/razorpay-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/components/razorpay-components.yml
+  href: https://artifacts.apis.io/razorpay/components/razorpay-components.yml
   title: ''
   type: Components
   url: components/razorpay-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/data-model/razorpay-data-model.yml
+  href: https://artifacts.apis.io/razorpay/data-model/razorpay-data-model.yml
   title: ''
   type: DataModel
   url: data-model/razorpay-data-model.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/errors/razorpay-decline-codes.yml
+  href: https://artifacts.apis.io/razorpay/errors/razorpay-decline-codes.yml
   title: ''
   type: DeclineCodes
   url: errors/razorpay-decline-codes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/security/razorpay-trust-center.yml
+  href: https://artifacts.apis.io/razorpay/security/razorpay-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/razorpay-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/scopes/razorpay-scopes.yml
+  href: https://artifacts.apis.io/razorpay/scopes/razorpay-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/razorpay-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/security/razorpay-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/razorpay/security/razorpay-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/razorpay-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/security/razorpay-domain-security.yml
+  href: https://artifacts.apis.io/razorpay/security/razorpay-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/razorpay-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/authentication/razorpay-authentication.yml
+  href: https://artifacts.apis.io/razorpay/authentication/razorpay-authentication.yml
   title: ''
   type: Authentication
   url: authentication/razorpay-authentication.yml
@@ -208,6 +217,14 @@ common:
   url: https://razorpay.com/blog/
 created: '2026-05-11'
 description: Razorpay is India's leading full-stack payments and business banking platform, enabling merchants to accept, process, and disburse payments across cards, UPI, netbanking, wallets, EMI, and BNPL through a single integration. Its developer platform exposes a fully RESTful API at https://api.razorpay.com/v1 (with select v2 resources) returning JSON, secured by HTTP Basic authentication using a key_id and key_secret pair. Beyond core payment processing, Razorpay offers payment links, hosted pages, subscriptions, smart routing, refunds, settlements, payouts via RazorpayX, and KYC-driven onboarding.
+finops:
+- has_sources: true
+  method: derived
+  name: Razorpay Finops
+  primary_unit: transaction
+  service_category: ''
+  slug: razorpay-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
 modified: '2026-05-30'
@@ -220,8 +237,15 @@ overview: 'Razorpay publishes 6 API contracts indexed on the [APIs.io](https://a
   The Razorpay catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Razorpay''s developer surface includes sandbox, changelog, authentication, documentation, API reference, pricing, signup flow, and 18 more developer resources.'
-random_paper: 8
+  Razorpay''s developer surface includes sandbox, changelog, authentication, documentation, API reference, pricing, signup flow, and 19 more developer resources.'
+plans:
+- name: Razorpay Plans Pricing
+  plan_count: 9
+  slug: razorpay-plans-pricing
+- name: Razorpay Price Estimates
+  plan_count: 0
+  slug: razorpay-price-estimates
+random_paper: 0
 rules:
 - authorship: generated
   effective_rule_count: 34
@@ -242,22 +266,22 @@ scopes:
   summary_line: 5 scopes
 score:
   band: developing
-  composite: 43.1
+  composite: 52.4
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 35.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 79.3
+    artifact_dirs: 24
+    catalog_earned: 50.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 64.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 31.6
+    access_clarity: 71.1
     contract_governance: 11.4
     contract_quality: 54.5
     developer_ergonomics: 47.6
     discoverability: 57.1
-    operational_transparency: 44.7
+    operational_transparency: 55.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -265,7 +289,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 43.1
+  previous_composite: 52.4
   provenance:
     agentic_access: derived
     contracts:
@@ -279,13 +303,13 @@ score:
     regime: Payments
     regime_id: payments
     score: 29.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/screenshots/razorpay-2026-06-20T192629.png
+screenshot: https://apis.io/screenshots/razorpay/razorpay-2026-06-20T192629.png
 security:
 - kind: authentication
   name: Razorpay Authentication

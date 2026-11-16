@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -94,27 +98,27 @@ common:
   type: Security
   url: https://www.rollstack.com/security
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/rollstack/refs/heads/main/well-known/rollstack-well-known.yml
+  href: https://artifacts.apis.io/rollstack/well-known/rollstack-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/rollstack-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rollstack/refs/heads/main/security/rollstack-domain-security.yml
+  href: https://artifacts.apis.io/rollstack/security/rollstack-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/rollstack-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rollstack/refs/heads/main/security/rollstack-trust-center.yml
+  href: https://artifacts.apis.io/rollstack/security/rollstack-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/rollstack-trust-center.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/rollstack/refs/heads/main/lifecycle/rollstack-lifecycle.yml
+  href: https://artifacts.apis.io/rollstack/lifecycle/rollstack-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/rollstack-lifecycle.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/rollstack/refs/heads/main/authentication/rollstack-authentication.yml
+  href: https://artifacts.apis.io/rollstack/authentication/rollstack-authentication.yml
   title: ''
   type: Authentication
   url: authentication/rollstack-authentication.yml
@@ -130,12 +134,12 @@ overview: 'Rollstack is profiled on the [APIs.io](https://apis.io/) network. Tag
 
 
   Rollstack''s developer surface includes signup flow, documentation, pricing, engineering blog, support, changelog, authentication, and 12 more developer resources.'
-random_paper: 7
+random_paper: 15
 score:
   band: emerging
   composite: 24.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -156,14 +160,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/rollstack/refs/heads/main/screenshots/rollstack-2026-09-02T154102.png
+screenshot: https://apis.io/screenshots/rollstack/rollstack-2026-09-02T154102.png
 security:
 - kind: authentication
   name: Rollstack Authentication

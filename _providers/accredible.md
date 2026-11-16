@@ -21,21 +21,24 @@ agent_readiness:
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
-    dry_run_mode: false
+    dry_run_mode: true
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: false
-    openapi_examples: false
+    mcp_tool_quality: na
+    openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.9
-  scored_at: '2026-10-17'
+  score: 27.4
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 29
   human_in_the_loop: 0
@@ -77,11 +80,6 @@ apis:
   slug: accredible-groups-api
 - baseURL: https://api.accredible.com/v1
   baseurl_source: declared
-  description: Issuer account details and API token management.
-  name: Accredible Issuer API
-  slug: accredible-issuer-api
-- baseURL: https://api.accredible.com/v1
-  baseurl_source: declared
   description: Peer, teacher, or manager endorsements attached to a credential.
   name: Accredible References API
   slug: accredible-references-api
@@ -95,11 +93,33 @@ apis:
   description: Administrators and roles within the issuer account.
   name: Accredible Team Members API
   slug: accredible-team-members-api
-artifact_total: 29
+- baseURL: https://api.accredible.com/v1
+  baseurl_source: declared
+  description: 'Attributes provide a way to add information to certificates/emails. A full guide on Attributes can be found here: https://help.accredible.com/a-quick-guide-to-attributes'
+  name: Accredible Attributes API
+  slug: accredible-attributes-api
+- baseURL: https://api.accredible.com/v1
+  baseurl_source: declared
+  description: A Collection is a curated set of groups. To create one, you'll need to provide a collection name, a description, and indicate whether it should be public or private. Once created, you can assign group
+  name: Accredible Collections API
+  slug: accredible-collections-api
+- baseURL: https://api.accredible.com/v1
+  baseurl_source: declared
+  description: The following endpoints require the `data_exports` feature to be switched on, which is based on your pricing plan.
+  name: Accredible Data Exports API
+  slug: accredible-data-exports-api
+- baseURL: https://api.accredible.com/v1
+  baseurl_source: declared
+  description: The Issuers API from Accredible — 1 operation(s) for issuers.
+  name: Accredible Issuers API
+  slug: accredible-issuers-api
+- baseURL: https://api.accredible.com/v1
+  baseurl_source: declared
+  description: A Skills Framework is a structured taxonomy of skills. Accredible maintains external frameworks such as O*NET, ESCO and NACE, and your organization can upload its own custom frameworks. Tagging a Grou
+  name: Accredible Skills Frameworks API
+  slug: accredible-skills-frameworks-api
+artifact_total: 33
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Accredible Analytics API
   slug: open-accredible-analytics-api
@@ -139,22 +159,22 @@ common:
   type: Blog
   url: https://www.accredible.com/blog
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/accredible/refs/heads/main/agentic-access/accredible-agentic-access.yml
+  href: https://artifacts.apis.io/accredible/agentic-access/accredible-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/accredible-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accredible/refs/heads/main/security/accredible-trust-center.yml
+  href: https://artifacts.apis.io/accredible/security/accredible-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/accredible-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accredible/refs/heads/main/security/accredible-domain-security.yml
+  href: https://artifacts.apis.io/accredible/security/accredible-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/accredible-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/accredible/refs/heads/main/authentication/accredible-authentication.yml
+  href: https://artifacts.apis.io/accredible/authentication/accredible-authentication.yml
   title: ''
   type: Authentication
   url: authentication/accredible-authentication.yml
@@ -175,17 +195,17 @@ common:
   type: Documentation
   url: https://docs.api.accredible.com/
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/accredible/refs/heads/main/plans/accredible-plans-pricing.yml
+  href: https://artifacts.apis.io/accredible/plans/accredible-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/accredible-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/accredible/refs/heads/main/rate-limits/accredible-rate-limits.yml
+  href: https://artifacts.apis.io/accredible/rate-limits/accredible-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/accredible-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/accredible/refs/heads/main/finops/accredible-finops.yml
+  href: https://artifacts.apis.io/accredible/finops/accredible-finops.yml
   title: ''
   type: FinOps
   url: finops/accredible-finops.yml
@@ -205,7 +225,10 @@ modified: '2026-10-06'
 name: Accredible
 nav: Providers
 network: true
-overview: 'Accredible publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analytics API, Credentials API, Departments API, and 7 more. Tagged areas include Digital Credentials, Certificates, Badges, Open Badges, and Credentialing.
+overview: 'Accredible publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analytics API, Credentials API, Departments API, and 11 more. Tagged areas include Digital Credentials, Certificates, Badges, Open Badges, and Credentialing.
+
+
+  The Accredible catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Accredible''s developer surface includes engineering blog, authentication, documentation, and 9 more developer resources.'
@@ -213,50 +236,63 @@ plans:
 - name: Accredible Plans Pricing
   plan_count: 4
   slug: accredible-plans-pricing
-random_paper: 10
+random_paper: 14
 rate_limits:
 - limit_count: 3
   name: Accredible Rate Limits
   slug: accredible-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 96
+  extends:
+  - spectral:oas
+  name: Accredible API Rules
+  rule_count: 55
+  severity_counts:
+    error: 45
+    hint: 0
+    info: 3
+    warn: 7
+  slug: accredible-rules
 score:
   band: thin
-  composite: 27.0
+  composite: 28.0
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 43.0
+    artifact_dirs: 16
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -7.8
+  delta: 0.7
   facets:
     access_clarity: 15.8
-    contract_governance: 0.0
-    contract_quality: 53.0
+    contract_governance: 13.6
+    contract_quality: 50.5
     developer_ergonomics: 15.5
     discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 34.8
+  previous_composite: 27.3
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
-      total: 10
+      marker_coverage: 56.0
+      total: 25
   regulatory:
     applies: true
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 16.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: falling
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/accredible/refs/heads/main/screenshots/accredible-2026-07-25T181445.png
+screenshot: https://apis.io/screenshots/accredible/accredible-2026-07-25T181445.png
 security:
 - kind: authentication
   name: Accredible Authentication

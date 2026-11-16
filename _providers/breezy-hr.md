@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: high
+  label: Paid
+  onboarding: unknown
+  pricing: paid
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +28,25 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 25.2
-  scored_at: '2026-10-17'
+  score: 26.8
+  scored_at: '2026-11-06'
 api_count: 3
 apis:
-- description: Breezy HR provides a hiring software API documented at the Guides page.
+- baseURL: https://api.breezy.hr
+  baseurl_source: spec
+  description: Breezy HR provides a hiring software API documented at the Guides page.
   name: Breezy HR API
-  slug: breezy-hr-api-2
+  slug: breezy-hr-api
 - baseURL: https://api.breezy.hr
   baseurl_source: declared
   description: The Breezy HR API API from Breezy HR — 1 operation(s) for breezy hr api.
@@ -39,34 +57,34 @@ apis:
   description: The Sign In API from Breezy HR — 1 operation(s) for sign in.
   name: Breezy HR Sign In API
   slug: breezy-hr-sign-in-api
-artifact_total: 10
+artifact_total: 12
 asyncapis:
 - description: ''
   name: Breezy Hr Webhooks
   slug: breezy-hr-webhooks
 common:
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/rate-limits/breezy-hr-rate-limits.yml
+  href: https://artifacts.apis.io/breezy-hr/rate-limits/breezy-hr-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/breezy-hr-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/plans/breezy-hr-plans-pricing.yml
+  href: https://artifacts.apis.io/breezy-hr/plans/breezy-hr-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/breezy-hr-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/rules/breezy-hr-rules.yml
+  href: https://artifacts.apis.io/breezy-hr/rules/breezy-hr-rules.yml
   title: ''
   type: Spectral
   url: rules/breezy-hr-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/asyncapi/breezy-hr-webhooks.yml
+  href: https://artifacts.apis.io/breezy-hr/asyncapi/breezy-hr-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/breezy-hr-webhooks.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/changelog/breezy-hr-changelog.yml
+  href: https://artifacts.apis.io/breezy-hr/changelog/breezy-hr-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/breezy-hr-changelog.yml
@@ -75,37 +93,37 @@ common:
   type: Compliance
   url: https://ltgplc.com/trust-center/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/authentication/breezy-hr-authentication.yml
+  href: https://artifacts.apis.io/breezy-hr/authentication/breezy-hr-authentication.yml
   title: ''
   type: Authentication
   url: authentication/breezy-hr-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/conformance/breezy-hr-conformance.yml
+  href: https://artifacts.apis.io/breezy-hr/conformance/breezy-hr-conformance.yml
   title: ''
   type: Conformance
   url: conformance/breezy-hr-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/llms/breezy-hr-llms.txt
+  href: https://artifacts.apis.io/breezy-hr/llms/breezy-hr-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/breezy-hr-llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/well-known/breezy-hr-help-security.txt
+  href: https://artifacts.apis.io/breezy-hr/well-known/breezy-hr-help-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/breezy-hr-help-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/well-known/breezy-hr-well-known.yml
+  href: https://artifacts.apis.io/breezy-hr/well-known/breezy-hr-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/breezy-hr-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/hosts/breezy-hr-hosts.yml
+  href: https://artifacts.apis.io/breezy-hr/hosts/breezy-hr-hosts.yml
   title: ''
   type: Hosts
   url: hosts/breezy-hr-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/vendors/breezy-hr-vendors.yml
+  href: https://artifacts.apis.io/breezy-hr/vendors/breezy-hr-vendors.yml
   title: ''
   type: Vendors
   url: vendors/breezy-hr-vendors.yml
@@ -146,12 +164,12 @@ common:
   type: Documentation
   url: https://developer.breezy.hr/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/security/breezy-hr-trust-center.yml
+  href: https://artifacts.apis.io/breezy-hr/security/breezy-hr-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/breezy-hr-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/breezy-hr/refs/heads/main/security/breezy-hr-domain-security.yml
+  href: https://artifacts.apis.io/breezy-hr/security/breezy-hr-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/breezy-hr-domain-security.yml
@@ -169,6 +187,14 @@ coverage:
   state: unreadable
 created: '2026-10-14'
 description: Breezy HR provides modern hiring software and an applicant tracking system designed to streamline recruitment. Their platform offers tools for job advertising, candidate management, automated workflows, interview scheduling, offer management, and HRIS integrations. Breezy HR aims to help companies attract, qualify, and hire talent efficiently, with analytics and reporting features to improve hiring outcomes.
+finops:
+- has_sources: true
+  method: derived
+  name: Breezy Hr Finops
+  primary_unit: seat
+  service_category: ''
+  slug: breezy-hr-finops
+  template: false
 image: https://cdn.prod.website-files.com/6127d83f257132e4fe0bddc6/679d163729b14e48b0984a3b_breezyhr-home.webp
 layout: provider
 modified: '2026-10-14'
@@ -186,7 +212,10 @@ plans:
 - name: Breezy Hr Plans Pricing
   plan_count: 3
   slug: breezy-hr-plans-pricing
-random_paper: 18
+- name: Breezy Hr Price Estimates
+  plan_count: 0
+  slug: breezy-hr-price-estimates
+random_paper: 8
 rate_limits:
 - limit_count: 1
   name: Breezy Hr Rate Limits
@@ -206,21 +235,23 @@ rules:
   slug: breezy-hr-rules
 score:
   band: developing
-  composite: 49.1
+  composite: 42.9
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 59.5
+    artifact_dirs: 20
+    catalog_earned: 62.5
     catalog_earned_first_party: 20.0
-    catalog_gap: 55.5
+    catalog_gap: 52.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.2
   facets:
-    access_clarity: 92.1
+    access_clarity: 73.7
     contract_governance: 31.8
     contract_quality: 19.8
-    developer_ergonomics: 40.5
-    discoverability: 71.4
-    operational_transparency: 44.7
+    developer_ergonomics: 26.2
+    discoverability: 70.5
+    operational_transparency: 55.3
+  previous_composite: 52.1
   provenance:
     conformance: first-party
     contracts:
@@ -238,12 +269,14 @@ score:
     matched_via: weak_tags
     regime: Employment & Payroll
     regime_id: employment_payroll
-    score: 29.4
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 23.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/breezy-hr/breezy-hr-2026-11-03T122545.png
 security:
 - kind: authentication
   name: Breezy Hr Authentication

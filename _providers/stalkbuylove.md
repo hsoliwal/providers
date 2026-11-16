@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://stalkbuylove.com'', ''status'': 301, ''note'': ''declared website redirects to https://www.styched.in/ — a different registrable domain (stalkbuylove.com -> styched.in), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +37,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/stalkbuylove/refs/heads/main/security/stalkbuylove-domain-security.yml
+  href: https://artifacts.apis.io/stalkbuylove/security/stalkbuylove-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/stalkbuylove-domain-security.yml
@@ -55,7 +59,7 @@ name: StalkBuyLove
 nav: Providers
 network: true
 overview: StalkBuyLove is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fashion, E-Commerce, Retail, and Apparel.
-random_paper: 19
+random_paper: 21
 score:
   band: minimal
   composite: 3.4
@@ -88,14 +92,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/stalkbuylove/refs/heads/main/screenshots/stalkbuylove-2026-09-02T160725.png
+screenshot: https://apis.io/screenshots/stalkbuylove/stalkbuylove-2026-09-02T160725.png
 security:
 - kind: domain-security
   name: Stalkbuylove Domain Security

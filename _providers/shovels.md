@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Freemium · Self-serve signup
   onboarding: self-serve
   pricing: freemium
@@ -12,7 +15,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: na
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.4
-  scored_at: '2026-10-17'
+  score: 30.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -78,9 +84,6 @@ apis:
 artifact_total: 29
 collections:
 - collection_type: open
-  name: API Collection
-  slug: open-.refine-report
-- collection_type: open
   name: Shovels Addresses API
   slug: open-shovels-addresses-api
 - collection_type: open
@@ -102,18 +105,23 @@ collections:
   name: Shovels API
   slug: open-shovels
 common:
+- group: other
+  href: https://artifacts.apis.io/shovels/capabilities/shovels-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/shovels-capability-edges.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/shovels/refs/heads/main/plans/shovels-plans-pricing.yml
+  href: https://artifacts.apis.io/shovels/plans/shovels-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/shovels-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/shovels/refs/heads/main/rate-limits/shovels-rate-limits.yml
+  href: https://artifacts.apis.io/shovels/rate-limits/shovels-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/shovels-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/shovels/refs/heads/main/finops/shovels-finops.yml
+  href: https://artifacts.apis.io/shovels/finops/shovels-finops.yml
   title: ''
   type: FinOps
   url: finops/shovels-finops.yml
@@ -122,22 +130,22 @@ common:
   type: Website
   url: https://www.shovels.ai/
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/shovels/refs/heads/main/agentic-access/shovels-agentic-access.yml
+  href: https://artifacts.apis.io/shovels/agentic-access/shovels-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/shovels-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shovels/refs/heads/main/security/shovels-trust-center.yml
+  href: https://artifacts.apis.io/shovels/security/shovels-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/shovels-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shovels/refs/heads/main/security/shovels-domain-security.yml
+  href: https://artifacts.apis.io/shovels/security/shovels-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/shovels-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/shovels/refs/heads/main/authentication/shovels-authentication.yml
+  href: https://artifacts.apis.io/shovels/authentication/shovels-authentication.yml
   title: ''
   type: Authentication
   url: authentication/shovels-authentication.yml
@@ -163,13 +171,13 @@ examples:
   name: Shovels Search Permits Example
   slug: shovels-search-permits-example
 finops:
-- has_sources: false
-  method: generated
+- has_sources: true
+  method: derived
   name: Shovels Finops
-  primary_unit: ''
-  service_category: API
+  primary_unit: subscription
+  service_category: ''
   slug: shovels-finops
-  template: true
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/shovels.png
 json_schemas:
 - name: Shovels Contractor
@@ -198,12 +206,15 @@ overview: 'Shovels publishes 6 API contracts indexed on the [APIs.io](https://ap
   The Shovels catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Shovels'' developer surface includes authentication, engineering blog, and 9 more developer resources.'
+  Shovels'' developer surface includes authentication, engineering blog, and 10 more developer resources.'
 plans:
 - name: Shovels Plans Pricing
-  plan_count: 3
+  plan_count: 4
   slug: shovels-plans-pricing
-random_paper: 2
+- name: Shovels Price Estimates
+  plan_count: 0
+  slug: shovels-price-estimates
+random_paper: 4
 rate_limits:
 - limit_count: 5
   name: Shovels Rate Limits
@@ -234,23 +245,23 @@ rules:
   slug: shovels-rules
 score:
   band: developing
-  composite: 41.8
+  composite: 48.2
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 72.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 43.0
+    artifact_dirs: 22
+    catalog_earned: 84.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 31.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 60.5
     contract_governance: 27.3
     contract_quality: 63.9
     developer_ergonomics: 35.7
     discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 43.3
+  previous_composite: 48.2
   provenance:
     agentic_access: derived
     contracts:
@@ -264,14 +275,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 21.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
-screenshot: https://raw.githubusercontent.com/api-evangelist/shovels/refs/heads/main/screenshots/shovels-2026-06-20T193844.png
+screenshot: https://apis.io/screenshots/shovels/shovels-2026-06-20T193844.png
 security:
 - kind: authentication
   name: Shovels Authentication

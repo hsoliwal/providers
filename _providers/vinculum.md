@@ -26,16 +26,19 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.0
-  scored_at: '2026-10-17'
-api_count: 4
+  score: 21.5
+  scored_at: '2026-11-06'
+api_count: 2
 apis:
 - baseURL: https://erp.vineretail.com/RestWS/api/eretail
   baseurl_source: declared
@@ -122,11 +125,8 @@ apis:
   description: API to retrieve or manipulate Vendor related information.
   name: Vinculum Vendors API
   slug: vinculum-vendors-api
-artifact_total: 38
+artifact_total: 40
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Vinculum Advance Shipping Notice API
   slug: open-vinculum-advance-shipping-notice-api
@@ -180,12 +180,12 @@ collections:
   slug: open-vinculum-vendors-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/capabilities/vinculum-capability-edges.yml
+  href: https://artifacts.apis.io/vinculum/capabilities/vinculum-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/vinculum-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/overlays/vinculum-eretail-overlay.yaml
+  href: https://artifacts.apis.io/vinculum/overlays/vinculum-eretail-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/vinculum-eretail-overlay.yaml
@@ -210,62 +210,62 @@ common:
   type: Support
   url: https://www.vinculumgroup.com/contact-us/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/authentication/vinculum-authentication.yml
+  href: https://artifacts.apis.io/vinculum/authentication/vinculum-authentication.yml
   title: ''
   type: Authentication
   url: authentication/vinculum-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/conventions/vinculum-conventions.yml
+  href: https://artifacts.apis.io/vinculum/conventions/vinculum-conventions.yml
   title: ''
   type: Conventions
   url: conventions/vinculum-conventions.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/rate-limits/vinculum-rate-limits.yml
+  href: https://artifacts.apis.io/vinculum/rate-limits/vinculum-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/vinculum-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/errors/vinculum-error-codes.yml
+  href: https://artifacts.apis.io/vinculum/errors/vinculum-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/vinculum-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/data-model/vinculum-data-model.yml
+  href: https://artifacts.apis.io/vinculum/data-model/vinculum-data-model.yml
   title: ''
   type: DataModel
   url: data-model/vinculum-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/mcp/vinculum-mcp.yml
+  href: https://artifacts.apis.io/vinculum/mcp/vinculum-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/vinculum-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/llms/vinculum-llms.txt
+  href: https://artifacts.apis.io/vinculum/llms/vinculum-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/vinculum-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/conformance/vinculum-conformance.yml
+  href: https://artifacts.apis.io/vinculum/conformance/vinculum-conformance.yml
   title: ''
   type: Conformance
   url: conformance/vinculum-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/lifecycle/vinculum-lifecycle.yml
+  href: https://artifacts.apis.io/vinculum/lifecycle/vinculum-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/vinculum-lifecycle.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/well-known/vinculum-well-known.yml
+  href: https://artifacts.apis.io/vinculum/well-known/vinculum-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/vinculum-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/security/vinculum-domain-security.yml
+  href: https://artifacts.apis.io/vinculum/security/vinculum-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/vinculum-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/vinculum/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -280,37 +280,53 @@ network: true
 overview: 'Vinculum publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Advance Shipping Notice API, Authentication Process API, Common API, and 14 more. Tagged areas include Company, E-Commerce, Omnichannel, Order Management, and Warehouse Management.
 
 
+  The Vinculum catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Vinculum''s developer surface includes documentation, engineering blog, support, authentication, and 15 more developer resources.'
-random_paper: 3
+random_paper: 19
 rate_limits:
 - limit_count: 3
   name: Vinculum Rate Limits
   slug: vinculum-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 83
+  extends:
+  - spectral:oas
+  name: Vinculum API Rules
+  rule_count: 42
+  severity_counts:
+    error: 34
+    hint: 0
+    info: 1
+    warn: 7
+  slug: vinculum-rules
 score:
   band: thin
-  composite: 31.3
+  composite: 33.4
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 43.0
+    artifact_dirs: 23
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 1.0
   facets:
     access_clarity: 10.5
-    contract_governance: 4.5
-    contract_quality: 37.4
+    contract_governance: 18.2
+    contract_quality: 41.5
     developer_ergonomics: 37.5
-    discoverability: 78.6
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 30.7
+  previous_composite: 32.4
   provenance:
     conformance: derived
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 17
     mcp: derived
     skills: derived
@@ -320,13 +336,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 20.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/vinculum/refs/heads/main/screenshots/vinculum-2026-09-02T165926.png
+screenshot: https://apis.io/screenshots/vinculum/vinculum-2026-09-02T165926.png
 security:
 - kind: authentication
   name: Vinculum Authentication
@@ -336,6 +352,12 @@ security:
   name: Vinculum Domain Security
   slug: vinculum-domain-security
   summary_line: TLSv1.3 · DNSSEC · DMARC
+skill_count: 2
+skills:
+- name: Create and track an order in Vin eRetail
+  slug: vinculum-create-and-track-order
+- name: Sync catalog and inventory in Vin eRetail
+  slug: vinculum-sync-catalog-and-inventory
 slug: vinculum
 tags:
 - Company

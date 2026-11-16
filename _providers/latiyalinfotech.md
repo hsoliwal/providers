@@ -29,7 +29,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -37,7 +40,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: Read-only real-time cricket data API. 51 operations on the apiv5 tier (30 on apiv3), all reads, served from https://apicricketchampion.in/apiv{3|4|5}/ with an opaque API token as the final path segmen
@@ -53,12 +56,12 @@ collections:
   slug: postman-latiyalinfotech-cricket-live-line-v4-v5
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/latiyalinfotech/refs/heads/main/plans/latiyalinfotech-plans-pricing.yml
+  href: https://artifacts.apis.io/latiyalinfotech/plans/latiyalinfotech-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/latiyalinfotech-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/latiyalinfotech/refs/heads/main/rate-limits/latiyalinfotech-rate-limits.yml
+  href: https://artifacts.apis.io/latiyalinfotech/rate-limits/latiyalinfotech-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/latiyalinfotech-rate-limits.yml
@@ -67,12 +70,12 @@ common:
   type: Website
   url: https://www.latiyalinfotech.com/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/latiyalinfotech/refs/heads/main/security/latiyalinfotech-domain-security.yml
+  href: https://artifacts.apis.io/latiyalinfotech/security/latiyalinfotech-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/latiyalinfotech-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/latiyalinfotech/refs/heads/main/llms/latiyalinfotech-llms.txt
+  href: https://artifacts.apis.io/latiyalinfotech/llms/latiyalinfotech-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/latiyalinfotech-llms.txt
@@ -125,13 +128,13 @@ score:
   band: thin
   composite: 34.1
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 63.2
     contract_governance: 4.5
@@ -146,7 +149,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 34.0
+  previous_composite: 34.1
   provenance:
     conformance: derived
     mcp: derived
@@ -156,14 +159,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/latiyalinfotech/refs/heads/main/screenshots/latiyalinfotech-2026-09-02T150217.png
+screenshot: https://apis.io/screenshots/latiyalinfotech/latiyalinfotech-2026-09-02T150217.png
 security:
 - kind: authentication
   name: Latiyalinfotech Authentication

@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 2
 apis:
 - description: The Employee Navigator OpenID Connect / OAuth 2.0 authorization server that fronts every Employee Navigator API service. Its discovery document is served anonymously and advertises authorization code,
@@ -75,42 +78,42 @@ common:
   type: Compliance
   url: https://www.employeenavigator.com/security/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/employeenavigator/refs/heads/main/security/employeenavigator-trust-center.yml
+  href: https://artifacts.apis.io/employeenavigator/security/employeenavigator-trust-center.yml
   title: ''
   type: TrustCenter
   url: security/employeenavigator-trust-center.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/employeenavigator/refs/heads/main/security/employeenavigator-domain-security.yml
+  href: https://artifacts.apis.io/employeenavigator/security/employeenavigator-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/employeenavigator-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/employeenavigator/refs/heads/main/authentication/employeenavigator-authentication.yml
+  href: https://artifacts.apis.io/employeenavigator/authentication/employeenavigator-authentication.yml
   title: ''
   type: Authentication
   url: authentication/employeenavigator-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/employeenavigator/refs/heads/main/scopes/employeenavigator-scopes.yml
+  href: https://artifacts.apis.io/employeenavigator/scopes/employeenavigator-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/employeenavigator-scopes.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/employeenavigator/refs/heads/main/well-known/employeenavigator-well-known.yml
+  href: https://artifacts.apis.io/employeenavigator/well-known/employeenavigator-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/employeenavigator-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/employeenavigator/refs/heads/main/conformance/employeenavigator-conformance.yml
+  href: https://artifacts.apis.io/employeenavigator/conformance/employeenavigator-conformance.yml
   title: ''
   type: Conformance
   url: conformance/employeenavigator-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/employeenavigator/refs/heads/main/conventions/employeenavigator-conventions.yml
+  href: https://artifacts.apis.io/employeenavigator/conventions/employeenavigator-conventions.yml
   title: ''
   type: Conventions
   url: conventions/employeenavigator-conventions.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/employeenavigator/refs/heads/main/llms/employeenavigator-llms.txt
+  href: https://artifacts.apis.io/employeenavigator/llms/employeenavigator-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/employeenavigator-llms.txt
@@ -127,7 +130,7 @@ overview: 'Employee Navigator is listed with 2 APIs on the [APIs.io](https://api
 
 
   Employee Navigator''s developer surface includes engineering blog, pricing, support, authentication, and 11 more developer resources.'
-random_paper: 9
+random_paper: 11
 scopes:
 - name: Employeenavigator Scopes
   scope_count: 66
@@ -137,7 +140,7 @@ score:
   band: emerging
   composite: 25.1
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -170,14 +173,14 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 37.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/employeenavigator/refs/heads/main/screenshots/employeenavigator-2026-08-07T164835.png
+screenshot: https://apis.io/screenshots/employeenavigator/employeenavigator-2026-08-07T164835.png
 security:
 - kind: authentication
   name: Employeenavigator Authentication

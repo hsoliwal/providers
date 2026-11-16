@@ -1,8 +1,8 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
@@ -27,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -35,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: BankUnited's first-party developer portal ("API Experience Hub"), a Salesforce Experience Cloud site backed by MuleSoft Anypoint Exchange. Provides self-service developer registration, OAuth applicati
@@ -44,32 +47,32 @@ apis:
 artifact_total: 4
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankunited/refs/heads/main/security/bankunited-domain-security.yml
+  href: https://artifacts.apis.io/bankunited/security/bankunited-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/bankunited-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bankunited/refs/heads/main/well-known/bankunited-well-known.yml
+  href: https://artifacts.apis.io/bankunited/well-known/bankunited-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/bankunited-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankunited/refs/heads/main/authentication/bankunited-authentication.yml
+  href: https://artifacts.apis.io/bankunited/authentication/bankunited-authentication.yml
   title: ''
   type: Authentication
   url: authentication/bankunited-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/bankunited/refs/heads/main/scopes/bankunited-scopes.yml
+  href: https://artifacts.apis.io/bankunited/scopes/bankunited-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/bankunited-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/bankunited/refs/heads/main/conformance/bankunited-conformance.yml
+  href: https://artifacts.apis.io/bankunited/conformance/bankunited-conformance.yml
   title: ''
   type: Conformance
   url: conformance/bankunited-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/bankunited/refs/heads/main/llms/bankunited-llms.txt
+  href: https://artifacts.apis.io/bankunited/llms/bankunited-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/bankunited-llms.txt
@@ -170,14 +173,14 @@ score:
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 37.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/bankunited/refs/heads/main/screenshots/bankunited-2026-07-25T202350.png
+screenshot: https://apis.io/screenshots/bankunited/bankunited-2026-07-25T202350.png
 security:
 - kind: authentication
   name: Bankunited Authentication

@@ -6,6 +6,7 @@ access_model:
   pricing: unknown
   public: false
   source:
+  - security
   - '{''url'': ''https://upthere.com'', ''status'': 302, ''note'': ''declared website redirects to https://support-en.wd.com:443/app/error/error_id/1/session/L2F2LzEvdGltZS8xNzg4NDU0MjE2L2dlbi8xNzg4NDU0MjE2L3NpZC9mVXJZbThDTDlObEpRS0VlT2pQQ1hnZnE5ZHFIb2NkSDVlTENkJTdFJTdFOWxkYnVUdWk2c1pSNWZtWUcwNUwxNjdNQ0hOZlA0a0RNMF94aXUwcVhQUHBPM0toV3Jrdzd1U0xxR3ZTbV93WmVEX3hIRjhiVDBrMnVxaFVRJTIxJTIx — a different registrable domain (upthere.com -> wd.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
   trial: false
   try_now: false
@@ -25,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 1
 common:
@@ -42,17 +46,17 @@ common:
   type: Website
   url: https://upthere.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/upthere/refs/heads/main/security/upthere-domain-security.yml
+  href: https://artifacts.apis.io/upthere/security/upthere-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/upthere-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/upthere/refs/heads/main/well-known/upthere-well-known.yml
+  href: https://artifacts.apis.io/upthere/well-known/upthere-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/upthere-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/upthere/refs/heads/main/llms/upthere-llms.txt
+  href: https://artifacts.apis.io/upthere/llms/upthere-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/upthere-llms.txt
@@ -65,7 +69,7 @@ name: Upthere
 nav: Providers
 network: true
 overview: Upthere is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Cloud Storage, File Sharing, and Photos.
-random_paper: 17
+random_paper: 21
 score:
   band: minimal
   composite: 0.0
@@ -92,14 +96,14 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 5.9
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/upthere/refs/heads/main/screenshots/upthere-2026-09-02T165134.png
+screenshot: https://apis.io/screenshots/upthere/upthere-2026-09-02T165134.png
 security:
 - kind: domain-security
   name: Upthere Domain Security

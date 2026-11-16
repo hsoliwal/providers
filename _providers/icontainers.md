@@ -28,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.5
-  scored_at: '2026-10-17'
+  score: 30.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -44,7 +47,7 @@ agentic_access:
   operation_count: 15
   slug: icontainers-agentic-access
   summary_line: 15 operations · 7 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://brutus.icontainers.com
   baseurl_source: declared
@@ -71,25 +74,25 @@ apis:
   description: Rates
   name: iContainers Rates API
   slug: icontainers-rates-api
-artifact_total: 10
+artifact_total: 16
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/capabilities/icontainers-capability-edges.yml
+  href: https://artifacts.apis.io/icontainers/capabilities/icontainers-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/icontainers-capability-edges.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/agentic-access/icontainers-agentic-access.yml
+  href: https://artifacts.apis.io/icontainers/agentic-access/icontainers-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/icontainers-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/security/icontainers-domain-security.yml
+  href: https://artifacts.apis.io/icontainers/security/icontainers-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/icontainers-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/authentication/icontainers-authentication.yml
+  href: https://artifacts.apis.io/icontainers/authentication/icontainers-authentication.yml
   title: ''
   type: Authentication
   url: authentication/icontainers-authentication.yml
@@ -138,67 +141,75 @@ common:
   type: PrivacyPolicy
   url: https://www.icontainers.com/us/privacy-policy/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/conventions/icontainers-conventions.yml
+  href: https://artifacts.apis.io/icontainers/conventions/icontainers-conventions.yml
   title: ''
   type: Conventions
   url: conventions/icontainers-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/errors/icontainers-problem-types.yml
+  href: https://artifacts.apis.io/icontainers/errors/icontainers-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/icontainers-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/data-model/icontainers-data-model.yml
+  href: https://artifacts.apis.io/icontainers/data-model/icontainers-data-model.yml
   title: ''
   type: DataModel
   url: data-model/icontainers-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/lifecycle/icontainers-lifecycle.yml
+  href: https://artifacts.apis.io/icontainers/lifecycle/icontainers-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/icontainers-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/conformance/icontainers-conformance.yml
+  href: https://artifacts.apis.io/icontainers/conformance/icontainers-conformance.yml
   title: ''
   type: Conformance
   url: conformance/icontainers-conformance.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/rate-limits/icontainers-rate-limits.yml
+  href: https://artifacts.apis.io/icontainers/rate-limits/icontainers-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/icontainers-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/plans/icontainers-plans-pricing.yml
+  href: https://artifacts.apis.io/icontainers/plans/icontainers-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/icontainers-plans-pricing.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/packages/icontainers-packages.yml
+  href: https://artifacts.apis.io/icontainers/packages/icontainers-packages.yml
   title: ''
   type: Packages
   url: packages/icontainers-packages.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/sandbox/icontainers-sandbox.yml
+  href: https://artifacts.apis.io/icontainers/sandbox/icontainers-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/icontainers-sandbox.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/icontainers/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/llms/icontainers-llms.txt
+  href: https://artifacts.apis.io/icontainers/llms/icontainers-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/icontainers-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/overlays/icontainers-brutus-overlay.yaml
+  href: https://artifacts.apis.io/icontainers/overlays/icontainers-brutus-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/icontainers-brutus-overlay.yaml
 created: '2026-08-17'
 description: iContainers is a digital freight forwarder founded in 2007 in Barcelona and now part of Agility Logistics, following its 2019/2022 merger with Shipa Freight. The platform lets SMEs, importers/exporters, moving companies, freight agents and individuals search, compare, book, insure, document and track international ocean freight (FCL and LCL), air freight, air express and customs clearance across 250,000+ trade routes to 300+ destinations. Developer access is published as the "Brutus API" — an OpenAPI 3.0.0 contract rendered on developer.icontainers.com covering FCL/LCL/air/LTL quoting, rate price calculation, place/port search, booking a rate, booking track-and-trace, and booking document upload/download — secured with JWT bearer tokens. iContainers also sells a white-label freight forwarding portal, and its operational layer is supplied by the third-party platform VelocityOS.ai.
+finops:
+- has_sources: true
+  method: derived
+  name: Icontainers Finops
+  primary_unit: ''
+  service_category: ''
+  slug: icontainers-finops
+  template: true
 image: https://icontainers-public.s3.us-east-1.amazonaws.com/images/iContainers+Logo.svg
 layout: provider
 modified: '2026-08-17'
@@ -208,35 +219,51 @@ network: true
 overview: 'iContainers publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bookings API, Documents API, Places API, and 2 more. Tagged areas include Company, Marketplace, Logistics, Freight, and Shipping.
 
 
+  The iContainers catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   iContainers'' developer surface includes authentication, documentation, API reference, support, engineering blog, signup flow, sandbox, and 20 more developer resources.'
 plans:
 - name: Icontainers Plans Pricing
   plan_count: 0
   slug: icontainers-plans-pricing
-random_paper: 17
+random_paper: 7
 rate_limits:
 - limit_count: 1
   name: Icontainers Rate Limits
   slug: icontainers-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 108
+  extends:
+  - spectral:oas
+  name: iContainers API Rules
+  rule_count: 67
+  severity_counts:
+    error: 63
+    hint: 0
+    info: 3
+    warn: 1
+  slug: icontainers-rules
 score:
   band: developing
-  composite: 41.1
+  composite: 42.7
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 45.0
+    artifact_dirs: 26
+    catalog_earned: 49.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 0.0
   facets:
     access_clarity: 34.2
-    contract_governance: 4.5
+    contract_governance: 18.2
     contract_quality: 48.3
     developer_ergonomics: 54.2
     discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 41.0
+  previous_composite: 42.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -253,13 +280,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/icontainers/refs/heads/main/screenshots/icontainers-2026-09-02T145831.png
+screenshot: https://apis.io/screenshots/icontainers/icontainers-2026-09-02T145831.png
 security:
 - kind: authentication
   name: Icontainers Authentication
@@ -269,6 +296,16 @@ security:
   name: Icontainers Domain Security
   slug: icontainers-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 4
+skills:
+- name: Book a rate and track the shipment
+  slug: icontainers-book-and-track-shipment
+- name: Exchange booking documents
+  slug: icontainers-exchange-booking-documents
+- name: Quote air and LTL freight with iContainers
+  slug: icontainers-quote-air-freight
+- name: Quote ocean freight with iContainers
+  slug: icontainers-quote-ocean-freight
 slug: icontainers
 tags:
 - Company

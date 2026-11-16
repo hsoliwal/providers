@@ -1,12 +1,14 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,7 +27,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
@@ -33,12 +38,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/security/traive-domain-security.yml
+  href: https://artifacts.apis.io/traive/security/traive-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/traive-domain-security.yml
@@ -83,32 +88,32 @@ common:
   type: GitHubOrganization
   url: https://github.com/Traive-Finance
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/well-known/traive-well-known.yml
+  href: https://artifacts.apis.io/traive/well-known/traive-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/traive-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/well-known/traive-openid-configuration.json
+  href: https://artifacts.apis.io/traive/well-known/traive-openid-configuration.json
   title: ''
   type: OpenIDConnect
   url: well-known/traive-openid-configuration.json
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/scopes/traive-scopes.yml
+  href: https://artifacts.apis.io/traive/scopes/traive-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/traive-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/authentication/traive-authentication.yml
+  href: https://artifacts.apis.io/traive/authentication/traive-authentication.yml
   title: ''
   type: Authentication
   url: authentication/traive-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/conformance/traive-conformance.yml
+  href: https://artifacts.apis.io/traive/conformance/traive-conformance.yml
   title: ''
   type: Conformance
   url: conformance/traive-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/llms/traive-llms.txt
+  href: https://artifacts.apis.io/traive/llms/traive-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/traive-llms.txt
@@ -124,7 +129,7 @@ overview: 'Traive is profiled on the [APIs.io](https://apis.io/) network. Tagged
 
 
   Traive''s developer surface includes engineering blog, authentication, and 15 more developer resources.'
-random_paper: 13
+random_paper: 3
 scopes:
 - name: Traive Scopes
   scope_count: 50
@@ -132,15 +137,15 @@ scopes:
   summary_line: 50 scopes · authorizationCode/clientCredentials/deviceCode/ciba
 score:
   band: emerging
-  composite: 19.4
+  composite: 19.0
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: -0.4
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
@@ -155,7 +160,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 19.3
+  previous_composite: 19.4
   provenance:
     conformance: first-party
   regulatory:
@@ -163,15 +168,15 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 34.3
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 31.8
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/traive/refs/heads/main/screenshots/traive-2026-09-02T164117.png
+screenshot: https://apis.io/screenshots/traive/traive-2026-09-02T164117.png
 security:
 - kind: authentication
   name: Traive Authentication
@@ -191,5 +196,7 @@ tags:
 - Lending
 - AgTech
 - Brazil
+- Artificial Intelligence
+- Data
 website: https://traive.com.br/
 ---

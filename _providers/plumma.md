@@ -1,4 +1,21 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,7 +32,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -23,7 +43,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 34.4
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -31,52 +51,52 @@ agentic_access:
   operation_count: 1
   slug: plumma-agentic-access
   summary_line: 1 operation · 1 acting
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://connect.plumma.it/services
   baseurl_source: declared
   description: The flagship aggregation endpoint.
   name: Plumma CONNECT API
   slug: plumma-connect-api
-artifact_total: 10
+artifact_total: 16
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/overlays/plumma-connect-api-overlay.yaml
+  href: https://artifacts.apis.io/plumma/overlays/plumma-connect-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/plumma-connect-api-overlay.yaml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/conventions/plumma-conventions.yml
+  href: https://artifacts.apis.io/plumma/conventions/plumma-conventions.yml
   title: ''
   type: Conventions
   url: conventions/plumma-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/vocabulary/plumma-commands-vocabulary.yml
+  href: https://artifacts.apis.io/plumma/vocabulary/plumma-commands-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/plumma-commands-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/data-model/plumma-data-model.yml
+  href: https://artifacts.apis.io/plumma/data-model/plumma-data-model.yml
   title: ''
   type: DataModel
   url: data-model/plumma-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/errors/plumma-problem-types.yml
+  href: https://artifacts.apis.io/plumma/errors/plumma-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/plumma-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/errors/plumma-status-codes.yml
+  href: https://artifacts.apis.io/plumma/errors/plumma-status-codes.yml
   title: ''
   type: ErrorCodes
   url: errors/plumma-status-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/lifecycle/plumma-lifecycle.yml
+  href: https://artifacts.apis.io/plumma/lifecycle/plumma-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/plumma-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/conformance/plumma-conformance.yml
+  href: https://artifacts.apis.io/plumma/conformance/plumma-conformance.yml
   title: ''
   type: Conformance
   url: conformance/plumma-conformance.yml
@@ -85,37 +105,37 @@ common:
   type: Compliance
   url: https://connect.plumma.it/plumma-connect-docs/#security
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/sandbox/plumma-sandbox.yml
+  href: https://artifacts.apis.io/plumma/sandbox/plumma-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/plumma-sandbox.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/plans/plumma-plans-pricing.yml
+  href: https://artifacts.apis.io/plumma/plans/plumma-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/plumma-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/rate-limits/plumma-rate-limits.yml
+  href: https://artifacts.apis.io/plumma/rate-limits/plumma-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/plumma-rate-limits.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/packages/plumma-packages.yml
+  href: https://artifacts.apis.io/plumma/packages/plumma-packages.yml
   title: ''
   type: Packages
   url: packages/plumma-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/plumma/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/mcp/plumma-mcp.yml
+  href: https://artifacts.apis.io/plumma/mcp/plumma-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/plumma-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/llms/plumma-llms.txt
+  href: https://artifacts.apis.io/plumma/llms/plumma-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/plumma-llms.txt
@@ -128,17 +148,17 @@ common:
   type: TermsOfService
   url: https://connect.plumma.it/plumma-connect-docs/#terms-and-conditions
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/agentic-access/plumma-agentic-access.yml
+  href: https://artifacts.apis.io/plumma/agentic-access/plumma-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/plumma-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/authentication/plumma-authentication.yml
+  href: https://artifacts.apis.io/plumma/authentication/plumma-authentication.yml
   title: ''
   type: Authentication
   url: authentication/plumma-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/security/plumma-domain-security.yml
+  href: https://artifacts.apis.io/plumma/security/plumma-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/plumma-domain-security.yml
@@ -206,6 +226,14 @@ examples:
 - key_count: 6
   name: Plumma Connect Api Examples
   slug: plumma-connect-api-examples
+finops:
+- has_sources: true
+  method: derived
+  name: Plumma Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: plumma-finops
+  template: false
 image: https://connect.plumma.it/wp-content/uploads/2026/03/PLUMMA-logo-bianco-inline-90x304-1.png
 json_schemas:
 - name: PlmRequest
@@ -219,31 +247,50 @@ network: true
 overview: 'Plumma publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: CONNECT API. Tagged areas include Telecommunications, Network APIs, Italy, Europe, and GSMA Open Gateway.
 
 
+  The Plumma catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Plumma''s developer surface includes sandbox, signup flow, authentication, documentation, API reference, support, engineering blog, and 28 more developer resources.'
 plans:
 - name: Plumma Plans Pricing
   plan_count: 2
   slug: plumma-plans-pricing
-random_paper: 14
+- name: Plumma Price Estimates
+  plan_count: 0
+  slug: plumma-price-estimates
+random_paper: 4
 rate_limits:
 - limit_count: 3
   name: Plumma Rate Limits
   slug: plumma-rate-limits
+rules:
+- authorship: generated
+  effective_rule_count: 100
+  extends:
+  - spectral:oas
+  name: Plumma API Rules
+  rule_count: 59
+  severity_counts:
+    error: 56
+    hint: 0
+    info: 1
+    warn: 2
+  slug: plumma-rules
 score:
-  band: developing
-  composite: 53.4
+  band: strong
+  composite: 59.5
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 63.7
+    artifact_dirs: 28
+    catalog_earned: 71.2
     catalog_earned_first_party: 20.0
-    catalog_gap: 51.4
+    catalog_gap: 43.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.9
   facets:
-    access_clarity: 50.0
-    contract_governance: 22.0
-    contract_quality: 62.1
+    access_clarity: 64.5
+    contract_governance: 35.6
+    contract_quality: 68.3
     developer_ergonomics: 54.2
     discoverability: 66.1
     operational_transparency: 47.4
@@ -255,14 +302,14 @@ score:
     regions:
     - europe
     - italy-southern-europe
-  previous_composite: 53.4
+  previous_composite: 56.6
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 1
     mcp: derived
     skills: derived
@@ -272,13 +319,13 @@ score:
     regime: Telecommunications
     regime_id: telecommunications
     score: 35.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/plumma/refs/heads/main/screenshots/plumma-2026-10-11T112634.png
+screenshot: https://apis.io/screenshots/plumma/plumma-2026-10-11T112634.png
 security:
 - kind: authentication
   name: Plumma Authentication
@@ -296,6 +343,14 @@ security:
   name: Plumma Trust Center
   slug: plumma-trust-center
   summary_line: trust center published
+skill_count: 3
+skills:
+- name: plumma-kyc-match
+  slug: plumma-kyc-match
+- name: plumma-multi-command-partial-reply
+  slug: plumma-multi-command-partial-reply
+- name: plumma-sim-swap-fraud-check
+  slug: plumma-sim-swap-fraud-check
 slug: plumma
 tags:
 - Telecommunications

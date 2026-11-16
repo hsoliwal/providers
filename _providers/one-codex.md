@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.6
-  scored_at: '2026-10-17'
+  score: 31.7
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 64
   human_in_the_loop: 3
@@ -42,7 +45,7 @@ agentic_access:
   operation_count: 170
   slug: one-codex-agentic-access
   summary_line: 170 operations · 64 acting · 3 human-in-the-loop
-api_count: 2
+api_count: 1
 apis:
 - baseURL: https://app.onecodex.com/api/v1/
   baseurl_source: declared
@@ -169,15 +172,12 @@ apis:
   description: The Workflows API from One Codex — 9 operation(s) for workflows.
   name: One Codex Workflows API
   slug: one-codex-workflows-api
-artifact_total: 56
+artifact_total: 61
 asyncapis:
 - description: ''
   name: One Codex Webhooks
   slug: one-codex-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: One Codex API (v1) Account API
   slug: open-one-codex-account-api
@@ -254,6 +254,11 @@ collections:
   name: One Codex API (v1) Account Workflows API
   slug: open-one-codex-workflows-api
 common:
+- group: commercial
+  href: https://artifacts.apis.io/one-codex/plans/one-codex-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/one-codex-plans-pricing.yml
 - group: company
   title: ''
   type: Blog
@@ -315,32 +320,32 @@ common:
   type: Compliance
   url: https://www.onecodex.com/security
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/openapi/_original/one-codex-openapi-original.json
+  href: https://artifacts.apis.io/one-codex/openapi/_original/one-codex-openapi-original.json
   title: ''
   type: OpenAPI
   url: openapi/_original/one-codex-openapi-original.json
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/overlays/one-codex-openapi-overlay.yaml
+  href: https://artifacts.apis.io/one-codex/overlays/one-codex-openapi-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/one-codex-openapi-overlay.yaml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/authentication/one-codex-authentication.yml
+  href: https://artifacts.apis.io/one-codex/authentication/one-codex-authentication.yml
   title: ''
   type: Authentication
   url: authentication/one-codex-authentication.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/agentic-access/one-codex-agentic-access.yml
+  href: https://artifacts.apis.io/one-codex/agentic-access/one-codex-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/one-codex-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/security/one-codex-domain-security.yml
+  href: https://artifacts.apis.io/one-codex/security/one-codex-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/one-codex-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/security/one-codex-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/one-codex/security/one-codex-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/one-codex-vulnerability-disclosure.yml
@@ -349,72 +354,80 @@ common:
   type: Security
   url: https://www.onecodex.com/security
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/packages/one-codex-packages.yml
+  href: https://artifacts.apis.io/one-codex/packages/one-codex-packages.yml
   title: ''
   type: Packages
   url: packages/one-codex-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/packages/one-codex-packages.yml
+  href: https://artifacts.apis.io/one-codex/packages/one-codex-packages.yml
   title: ''
   type: SDKs
   url: packages/one-codex-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/cli/one-codex-cli.yml
+  href: https://artifacts.apis.io/one-codex/cli/one-codex-cli.yml
   title: ''
   type: CLI
   url: cli/one-codex-cli.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/mcp/one-codex-mcp.yml
+  href: https://artifacts.apis.io/one-codex/mcp/one-codex-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/one-codex-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/llms/one-codex-llms.txt
+  href: https://artifacts.apis.io/one-codex/llms/one-codex-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/one-codex-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/well-known/one-codex-well-known.yml
+  href: https://artifacts.apis.io/one-codex/well-known/one-codex-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/one-codex-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/conventions/one-codex-conventions.yml
+  href: https://artifacts.apis.io/one-codex/conventions/one-codex-conventions.yml
   title: ''
   type: Conventions
   url: conventions/one-codex-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/errors/one-codex-problem-types.yml
+  href: https://artifacts.apis.io/one-codex/errors/one-codex-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/one-codex-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/lifecycle/one-codex-lifecycle.yml
+  href: https://artifacts.apis.io/one-codex/lifecycle/one-codex-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/one-codex-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/conformance/one-codex-conformance.yml
+  href: https://artifacts.apis.io/one-codex/conformance/one-codex-conformance.yml
   title: ''
   type: Conformance
   url: conformance/one-codex-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/data-model/one-codex-data-model.yml
+  href: https://artifacts.apis.io/one-codex/data-model/one-codex-data-model.yml
   title: ''
   type: DataModel
   url: data-model/one-codex-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/asyncapi/one-codex-webhooks.yml
+  href: https://artifacts.apis.io/one-codex/asyncapi/one-codex-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/one-codex-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/one-codex/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: One Codex is a microbial genomics data platform for fast, reproducible microbiome sequencing and analysis. Its cloud platform pairs the "world's largest microbial reference database" with automated shotgun and amplicon pipelines, sample management, and collaboration for academic institutions, biotech companies, and clinical laboratories. Beyond the web application, One Codex exposes a RESTful JSON API (self-described with JSON Schema) covering samples, analyses, classifications, panels, alignments, MLST, functional profiles, jobs/workflows, projects, metadata, tags, documents, sequencing batches, events, and webhooks — plus an official `onecodex` Python client and CLI. The company also offers a Genome Library and end-to-end microbiome sequencing services. One Codex is a portfolio company of DCVC.
+finops:
+- has_sources: true
+  method: derived
+  name: One Codex Finops
+  primary_unit: ''
+  service_category: ''
+  slug: one-codex-finops
+  template: true
 image: https://www.onecodex.com/wp-content/uploads/2019/03/one-codex-logo.png
 layout: provider
 modified: '2026-10-06'
@@ -424,37 +437,54 @@ network: true
 overview: 'One Codex publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Alignments API, Analyses API, and 22 more. Tagged areas include Company, Genomics, Microbiome, Bioinformatics, and Metagenomics.
 
 
-  The One Codex catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The One Codex catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  One Codex''s developer surface includes engineering blog, documentation, API reference, getting-started guide, signup flow, pricing, authentication, and 28 more developer resources.'
-random_paper: 18
+  One Codex''s developer surface includes engineering blog, documentation, API reference, getting-started guide, signup flow, pricing, authentication, and 29 more developer resources.'
+plans:
+- name: One Codex Plans Pricing
+  plan_count: 0
+  slug: one-codex-plans-pricing
+random_paper: 10
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: One Codex API Rules
+  rule_count: 54
+  severity_counts:
+    error: 49
+    hint: 0
+    info: 2
+    warn: 3
+  slug: one-codex-rules
 score:
   band: strong
-  composite: 55.9
+  composite: 58.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 27
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.1
+  delta: 1.2
   facets:
     access_clarity: 52.6
-    contract_governance: 18.2
-    contract_quality: 51.6
+    contract_governance: 31.8
+    contract_quality: 56.4
     developer_ergonomics: 68.5
     discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 55.8
+  previous_composite: 57.5
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
       callable: 100.0
       derived: 0
-      marker_coverage: 0.0
+      marker_coverage: 100.0
       total: 25
     mcp: derived
     skills: derived
@@ -468,13 +498,13 @@ score:
     regime: Health
     regime_id: health
     score: 28.1
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 27.8
-screenshot: https://raw.githubusercontent.com/api-evangelist/one-codex/refs/heads/main/screenshots/one-codex-2026-08-07T190241.png
+screenshot: https://apis.io/screenshots/one-codex/one-codex-2026-08-07T190241.png
 security:
 - kind: authentication
   name: One Codex Authentication
@@ -488,6 +518,14 @@ security:
   name: One Codex Vulnerability Disclosure
   slug: one-codex-vulnerability-disclosure
   summary_line: Hackerone · contact published
+skill_count: 3
+skills:
+- name: Organize samples into a project and share it
+  slug: one-codex-organize-project
+- name: Run a versioned job/workflow on a sample and collect analysis output
+  slug: one-codex-run-job-on-sample
+- name: Upload a sample and get its taxonomic classification
+  slug: one-codex-upload-and-classify
 slug: one-codex
 tags:
 - Company

@@ -1,4 +1,20 @@
 ---
+access_model:
+  confidence: high
+  gated: none
+  gated_source:
+  - onboarding
+  label: Freemium · Self-serve signup
+  onboarding: self-serve
+  pricing: freemium
+  public: false
+  source:
+  - plans
+  - authentication
+  - rate-limits
+  - security
+  trial: false
+  try_now: true
 agent_readiness:
   band: agent-ready
   band_gated_from: agent-native
@@ -16,15 +32,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 51.3
-  scored_at: '2026-10-17'
+  score: 50.5
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - description: The Casafari API provides methods for manipulating alerts feeds, accounts, and consulting a reference of available locations, features and conditions.
@@ -85,85 +104,90 @@ apis:
   description: The user-management---authentication API from Casafari API and MCP Platform — 2 operation(s) for user-management---authentication.
   name: Casafari API and MCP Platform User Management Authentication API
   slug: casafari-user-management-authentication-api
-artifact_total: 25
+artifact_total: 26
 common:
+- group: other
+  href: https://artifacts.apis.io/casafari/capabilities/casafari-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/casafari-capability-edges.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/rate-limits/casafari-rate-limits.yml
+  href: https://artifacts.apis.io/casafari/rate-limits/casafari-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/casafari-rate-limits.yml
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/plans/casafari-plans-pricing.yml
+  href: https://artifacts.apis.io/casafari/plans/casafari-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/casafari-plans-pricing.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/rules/casafari-rules.yml
+  href: https://artifacts.apis.io/casafari/rules/casafari-rules.yml
   title: ''
   type: Spectral
   url: rules/casafari-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/json-ld/casafari-context.jsonld
+  href: https://artifacts.apis.io/casafari/json-ld/casafari-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/casafari-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/vocabulary/casafari-vocabulary.yml
+  href: https://artifacts.apis.io/casafari/vocabulary/casafari-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/casafari-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/data-model/casafari-data-model.yml
+  href: https://artifacts.apis.io/casafari/data-model/casafari-data-model.yml
   title: ''
   type: DataModel
   url: data-model/casafari-data-model.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/authentication/casafari-authentication.yml
+  href: https://artifacts.apis.io/casafari/authentication/casafari-authentication.yml
   title: ''
   type: Authentication
   url: authentication/casafari-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/errors/casafari-problem-types.yml
+  href: https://artifacts.apis.io/casafari/errors/casafari-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/casafari-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/conformance/casafari-conformance.yml
+  href: https://artifacts.apis.io/casafari/conformance/casafari-conformance.yml
   title: ''
   type: Conformance
   url: conformance/casafari-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/llms/casafari-llms.txt
+  href: https://artifacts.apis.io/casafari/llms/casafari-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/casafari-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/mcp/casafari-mcp.yml
+  href: https://artifacts.apis.io/casafari/mcp/casafari-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/casafari-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/well-known/casafari-well-known.yml
+  href: https://artifacts.apis.io/casafari/well-known/casafari-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/casafari-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/hosts/casafari-hosts.yml
+  href: https://artifacts.apis.io/casafari/hosts/casafari-hosts.yml
   title: ''
   type: Hosts
   url: hosts/casafari-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/vendors/casafari-vendors.yml
+  href: https://artifacts.apis.io/casafari/vendors/casafari-vendors.yml
   title: ''
   type: Vendors
   url: vendors/casafari-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/packages/casafari-packages.yml
+  href: https://artifacts.apis.io/casafari/packages/casafari-packages.yml
   title: ''
   type: SDKs
   url: packages/casafari-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/packages/casafari-packages.yml
+  href: https://artifacts.apis.io/casafari/packages/casafari-packages.yml
   title: ''
   type: Packages
   url: packages/casafari-packages.yml
@@ -200,7 +224,7 @@ common:
   type: APIReference
   url: https://developers.casafari.com/llms.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/casafari/refs/heads/main/security/casafari-domain-security.yml
+  href: https://artifacts.apis.io/casafari/security/casafari-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/casafari-domain-security.yml
@@ -214,6 +238,14 @@ common:
   url: https://developers.casafari.com
 created: '2026-10-15'
 description: Casafari provides the pioneering, cleanest, and largest real‑estate database in Europe, powered by AI. It enables and accelerates property deals by offering comprehensive property data, analytics, and AI‑driven insights across the continent. The platform includes an MCP for AI agents to query property information, valuations, trends, and recent sales, supporting developers with robust APIs and documentation.
+finops:
+- has_sources: true
+  method: derived
+  name: Casafari Finops
+  primary_unit: subscription
+  service_category: ''
+  slug: casafari-finops
+  template: false
 image: https://www.casafari.com/wp-content/uploads/2022/07/laptop-and-report.png
 json_schemas:
 - name: ApiPropertiesSearchResponseV1
@@ -254,12 +286,12 @@ overview: 'Casafari API and MCP Platform publishes 12 API contracts indexed on t
   The Casafari API and MCP Platform catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Casafari API and MCP Platform''s developer surface includes authentication, sandbox, pricing, getting-started guide, API reference, documentation, and 21 more developer resources.'
+  Casafari API and MCP Platform''s developer surface includes authentication, sandbox, pricing, getting-started guide, API reference, documentation, and 22 more developer resources.'
 plans:
 - name: Casafari Plans Pricing
   plan_count: 3
   slug: casafari-plans-pricing
-random_paper: 12
+random_paper: 10
 rate_limits:
 - limit_count: 7
   name: Casafari Rate Limits
@@ -278,22 +310,24 @@ rules:
     warn: 3
   slug: casafari-rules
 score:
-  band: strong
-  composite: 59.5
+  band: developing
+  composite: 51.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 86.8
+    artifact_dirs: 23
+    catalog_earned: 89.8
     catalog_earned_first_party: 24.0
-    catalog_gap: 28.3
+    catalog_gap: 25.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.6
   facets:
-    access_clarity: 76.3
+    access_clarity: 61.8
     contract_governance: 22.0
     contract_quality: 65.6
-    developer_ergonomics: 64.3
+    developer_ergonomics: 41.7
     discoverability: 75.0
     operational_transparency: 31.6
+  previous_composite: 61.1
   provenance:
     conformance: derived
     contracts:
@@ -307,12 +341,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 20.6
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/casafari/casafari-2026-11-03T123432.png
 security:
 - kind: authentication
   name: Casafari Authentication

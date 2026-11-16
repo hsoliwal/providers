@@ -26,7 +26,10 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: false
@@ -34,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-10-17'
+  scored_at: '2026-11-06'
 api_count: 0
 artifact_total: 3
 common:
@@ -43,27 +46,27 @@ common:
   type: GitHubOrganization
   url: https://github.com/syntheticgenomics
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/synthetic-genomics/refs/heads/main/packages/synthetic-genomics-packages.yml
+  href: https://artifacts.apis.io/synthetic-genomics/packages/synthetic-genomics-packages.yml
   title: ''
   type: Packages
   url: packages/synthetic-genomics-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/synthetic-genomics/refs/heads/main/security/synthetic-genomics-domain-security.yml
+  href: https://artifacts.apis.io/synthetic-genomics/security/synthetic-genomics-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/synthetic-genomics-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/synthetic-genomics/refs/heads/main/llms/synthetic-genomics-llms.txt
+  href: https://artifacts.apis.io/synthetic-genomics/llms/synthetic-genomics-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/synthetic-genomics-llms.txt
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/synthetic-genomics/refs/heads/main/plans/synthetic-genomics-plans-pricing.yml
+  href: https://artifacts.apis.io/synthetic-genomics/plans/synthetic-genomics-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/synthetic-genomics-plans-pricing.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/synthetic-genomics/refs/heads/main/rate-limits/synthetic-genomics-rate-limits.yml
+  href: https://artifacts.apis.io/synthetic-genomics/rate-limits/synthetic-genomics-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/synthetic-genomics-rate-limits.yml
@@ -105,7 +108,7 @@ plans:
 - name: Synthetic Genomics Plans Pricing
   plan_count: 0
   slug: synthetic-genomics-plans-pricing
-random_paper: 15
+random_paper: 13
 rate_limits:
 - limit_count: 0
   name: Synthetic Genomics Rate Limits
@@ -114,7 +117,7 @@ score:
   band: minimal
   composite: 0.0
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
@@ -142,14 +145,14 @@ score:
     regime: Health
     regime_id: health
     score: 4.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
-screenshot: https://raw.githubusercontent.com/api-evangelist/synthetic-genomics/refs/heads/main/screenshots/synthetic-genomics-2026-09-02T161635.png
+screenshot: https://apis.io/screenshots/synthetic-genomics/synthetic-genomics-2026-09-02T161635.png
 security:
 - kind: domain-security
   name: Synthetic Genomics Domain Security

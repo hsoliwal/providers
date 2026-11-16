@@ -1,12 +1,17 @@
 ---
 access_model:
   confidence: medium
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - scopes
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +31,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.0
-  scored_at: '2026-10-17'
+  score: 41.6
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 101
   human_in_the_loop: 1
@@ -182,44 +190,44 @@ apis:
   description: The Workflows API from Silverfin — 7 operation(s) for workflows.
   name: Silverfin Workflows API
   slug: silverfin-workflows-api
-artifact_total: 47
+artifact_total: 50
 asyncapis:
 - description: ''
   name: Silverfin Webhooks
   slug: silverfin-webhooks
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/agentic-access/silverfin-agentic-access.yml
+  href: https://artifacts.apis.io/silverfin/agentic-access/silverfin-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/silverfin-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/rules/silverfin-rules.yml
+  href: https://artifacts.apis.io/silverfin/rules/silverfin-rules.yml
   title: ''
   type: Spectral
   url: rules/silverfin-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/json-ld/silverfin-context.jsonld
+  href: https://artifacts.apis.io/silverfin/json-ld/silverfin-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/silverfin-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/vocabulary/silverfin-vocabulary.yml
+  href: https://artifacts.apis.io/silverfin/vocabulary/silverfin-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/silverfin-vocabulary.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/hosts/silverfin-hosts.yml
+  href: https://artifacts.apis.io/silverfin/hosts/silverfin-hosts.yml
   title: ''
   type: Hosts
   url: hosts/silverfin-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/vendors/silverfin-vendors.yml
+  href: https://artifacts.apis.io/silverfin/vendors/silverfin-vendors.yml
   title: ''
   type: Vendors
   url: vendors/silverfin-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/packages/silverfin-packages.yml
+  href: https://artifacts.apis.io/silverfin/packages/silverfin-packages.yml
   title: ''
   type: SDKs
   url: packages/silverfin-packages.yml
@@ -244,27 +252,27 @@ common:
   type: GettingStarted
   url: https://developer.silverfin.com/reference/get-started-1
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/authentication/silverfin-authentication.yml
+  href: https://artifacts.apis.io/silverfin/authentication/silverfin-authentication.yml
   title: ''
   type: Authentication
   url: authentication/silverfin-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/scopes/silverfin-scopes.yml
+  href: https://artifacts.apis.io/silverfin/scopes/silverfin-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/silverfin-scopes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/conventions/silverfin-conventions.yml
+  href: https://artifacts.apis.io/silverfin/conventions/silverfin-conventions.yml
   title: ''
   type: Conventions
   url: conventions/silverfin-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/errors/silverfin-problem-types.yml
+  href: https://artifacts.apis.io/silverfin/errors/silverfin-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/silverfin-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/lifecycle/silverfin-lifecycle.yml
+  href: https://artifacts.apis.io/silverfin/lifecycle/silverfin-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/silverfin-lifecycle.yml
@@ -277,47 +285,47 @@ common:
   type: Deprecation
   url: https://developer.silverfin.com/docs/changelog
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/changelog/silverfin-changelog.yml
+  href: https://artifacts.apis.io/silverfin/changelog/silverfin-changelog.yml
   title: ''
   type: ChangeLog
   url: changelog/silverfin-changelog.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/asyncapi/silverfin-webhooks.yml
+  href: https://artifacts.apis.io/silverfin/asyncapi/silverfin-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/silverfin-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/mcp/silverfin-mcp.yml
+  href: https://artifacts.apis.io/silverfin/mcp/silverfin-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/silverfin-mcp.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/cli/silverfin-cli.yml
+  href: https://artifacts.apis.io/silverfin/cli/silverfin-cli.yml
   title: ''
   type: CLI
   url: cli/silverfin-cli.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/packages/silverfin-packages.yml
+  href: https://artifacts.apis.io/silverfin/packages/silverfin-packages.yml
   title: ''
   type: Packages
   url: packages/silverfin-packages.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/data-model/silverfin-data-model.yml
+  href: https://artifacts.apis.io/silverfin/data-model/silverfin-data-model.yml
   title: ''
   type: DataModel
   url: data-model/silverfin-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/conformance/silverfin-conformance.yml
+  href: https://artifacts.apis.io/silverfin/conformance/silverfin-conformance.yml
   title: ''
   type: Conformance
   url: conformance/silverfin-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/llms/silverfin-llms.txt
+  href: https://artifacts.apis.io/silverfin/llms/silverfin-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/silverfin-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/silverfin/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -334,7 +342,7 @@ common:
   type: Support
   url: https://community.silverfin.com
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/security/silverfin-domain-security.yml
+  href: https://artifacts.apis.io/silverfin/security/silverfin-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/silverfin-domain-security.yml
@@ -343,7 +351,7 @@ description: Silverfin is a cloud connected-accounting platform for accountancy 
 image: https://github.com/silverfin.png
 json_schemas:
 - name: AccountWithTypePayload
-  property_count: 0
+  property_count: 45
   slug: silverfin-account-with-type-payload
 - name: ActionPayload
   property_count: 0
@@ -361,16 +369,16 @@ json_schemas:
   property_count: 0
   slug: silverfin-extra-field-labels-payload
 - name: InsightsSegmentResults
-  property_count: 0
+  property_count: 9
   slug: silverfin-insights-segment-results
 - name: InsightsSegmentRunPending
-  property_count: 0
+  property_count: 5
   slug: silverfin-insights-segment-run-pending
 - name: InsightsSegmentRunRecentlyFinished
-  property_count: 0
+  property_count: 6
   slug: silverfin-insights-segment-run-recently-finished
 - name: RetainedEarningsAccountPayload
-  property_count: 0
+  property_count: 45
   slug: silverfin-retained-earnings-account-payload
 - name: SyncPoint
   property_count: 0
@@ -395,7 +403,7 @@ overview: 'Silverfin publishes 28 API contracts indexed on the [APIs.io](https:/
 
 
   Silverfin''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, CLI, support, and 25 more developer resources.'
-random_paper: 10
+random_paper: 18
 rules:
 - authorship: generated
   effective_rule_count: 55
@@ -416,22 +424,22 @@ scopes:
   summary_line: 19 scopes · authorizationCode
 score:
   band: developing
-  composite: 45.7
+  composite: 49.4
   coverage:
-    artifact_dirs: 27
+    artifact_dirs: 28
     catalog_earned: 65.8
     catalog_earned_first_party: 0.0
     catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 12.1
+  delta: 3.7
   facets:
     access_clarity: 0.0
     contract_governance: 22.0
-    contract_quality: 69.0
-    developer_ergonomics: 54.2
+    contract_quality: 74.3
+    developer_ergonomics: 63.7
     discoverability: 78.6
-    operational_transparency: 38.2
+    operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -440,7 +448,7 @@ score:
     regions:
     - benelux
     - europe
-  previous_composite: 33.6
+  previous_composite: 45.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -457,13 +465,13 @@ score:
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
     score: 26.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 11.1
-screenshot: https://raw.githubusercontent.com/api-evangelist/silverfin/refs/heads/main/screenshots/silverfin-2026-09-02T155512.png
+screenshot: https://apis.io/screenshots/silverfin/silverfin-2026-09-02T155512.png
 security:
 - kind: authentication
   name: Silverfin Authentication
@@ -473,6 +481,14 @@ security:
   name: Silverfin Domain Security
   slug: silverfin-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+skill_count: 3
+skills:
+- name: Generate an export PDF from a period
+  slug: silverfin-generate-export-pdf
+- name: Manage company accounts
+  slug: silverfin-manage-company-accounts
+- name: Sync bookkeeping transactions into Silverfin
+  slug: silverfin-sync-bookkeeping-transactions
 slug: silverfin
 tags:
 - Company

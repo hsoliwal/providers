@@ -1,12 +1,13 @@
 ---
 access_model:
-  confidence: medium
-  label: Self-serve signup
-  onboarding: self-serve
+  confidence: low
+  label: Unknown
+  onboarding: unknown
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +26,18 @@ agent_readiness:
     event_surface_described: true
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: mostly
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.7
-  scored_at: '2026-10-17'
+  score: 30.0
+  scored_at: '2026-11-06'
 api_count: 17
 apis:
 - baseURL: https://api.toq.io/wallet/api
@@ -281,15 +285,12 @@ apis:
   description: The Webhook API from Toqio — 2 operation(s) for webhook.
   name: Toqio Webhook API
   slug: toqio-webhook-api
-artifact_total: 103
+artifact_total: 106
 asyncapis:
 - description: ''
   name: Toqio Webhooks
   slug: toqio-webhooks
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Accounts Account API
   slug: open-toqio-account-api
@@ -439,12 +440,12 @@ collections:
   slug: open-toqio-webhook-api
 common:
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/capabilities/toqio-capability-edges.yml
+  href: https://artifacts.apis.io/toqio/capabilities/toqio-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/toqio-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/overlays/toqio-accounts-overlay.yaml
+  href: https://artifacts.apis.io/toqio/overlays/toqio-accounts-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/toqio-accounts-overlay.yaml
@@ -497,82 +498,82 @@ common:
   type: Compliance
   url: https://integrate.toq.io/reference/third-party-risk-management-dora-compliance
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/security/toqio-domain-security.yml
+  href: https://artifacts.apis.io/toqio/security/toqio-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/toqio-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/scopes/toqio-scopes.yml
+  href: https://artifacts.apis.io/toqio/scopes/toqio-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/toqio-scopes.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/authentication/toqio-authentication.yml
+  href: https://artifacts.apis.io/toqio/authentication/toqio-authentication.yml
   title: ''
   type: Authentication
   url: authentication/toqio-authentication.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/packages/toqio-packages.yml
+  href: https://artifacts.apis.io/toqio/packages/toqio-packages.yml
   title: ''
   type: Packages
   url: packages/toqio-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/packages/toqio-packages.yml
+  href: https://artifacts.apis.io/toqio/packages/toqio-packages.yml
   title: ''
   type: SDKs
   url: packages/toqio-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/mcp/toqio-mcp.yml
+  href: https://artifacts.apis.io/toqio/mcp/toqio-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/toqio-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/llms/toqio-llms.txt
+  href: https://artifacts.apis.io/toqio/llms/toqio-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/toqio-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/conformance/toqio-conformance.yml
+  href: https://artifacts.apis.io/toqio/conformance/toqio-conformance.yml
   title: ''
   type: Conformance
   url: conformance/toqio-conformance.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/errors/toqio-problem-types.yml
+  href: https://artifacts.apis.io/toqio/errors/toqio-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/toqio-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/lifecycle/toqio-lifecycle.yml
+  href: https://artifacts.apis.io/toqio/lifecycle/toqio-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/toqio-lifecycle.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/sandbox/toqio-sandbox.yml
+  href: https://artifacts.apis.io/toqio/sandbox/toqio-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/toqio-sandbox.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/conventions/toqio-conventions.yml
+  href: https://artifacts.apis.io/toqio/conventions/toqio-conventions.yml
   title: ''
   type: Conventions
   url: conventions/toqio-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/components/toqio-components.yml
+  href: https://artifacts.apis.io/toqio/components/toqio-components.yml
   title: ''
   type: Components
   url: components/toqio-components.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/data-model/toqio-data-model.yml
+  href: https://artifacts.apis.io/toqio/data-model/toqio-data-model.yml
   title: ''
   type: DataModel
   url: data-model/toqio-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/asyncapi/toqio-webhooks.yml
+  href: https://artifacts.apis.io/toqio/asyncapi/toqio-webhooks.yml
   title: ''
   type: Webhooks
   url: asyncapi/toqio-webhooks.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/toqio/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
@@ -587,11 +588,24 @@ network: true
 overview: 'Toqio publishes 49 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Account information API, API Endpoints API, and 46 more. Tagged areas include Embedded Finance, Fintech, Banking as a Service, Payments, and Cards.
 
 
-  The Toqio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Toqio catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
   Toqio''s developer surface includes documentation, API reference, getting-started guide, engineering blog, authentication, sandbox, and 24 more developer resources.'
-random_paper: 6
+random_paper: 4
+rules:
+- authorship: generated
+  effective_rule_count: 95
+  extends:
+  - spectral:oas
+  name: Toqio API Rules
+  rule_count: 54
+  severity_counts:
+    error: 39
+    hint: 0
+    info: 2
+    warn: 13
+  slug: toqio-rules
 scopes:
 - name: Toqio Scopes
   scope_count: 3
@@ -599,23 +613,23 @@ scopes:
   summary_line: 3 scopes · clientCredentials/password
 score:
   band: developing
-  composite: 47.2
+  composite: 53.8
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 40.0
+    artifact_dirs: 27
+    catalog_earned: 44.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 70.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 4.9
   facets:
-    access_clarity: 25.0
-    contract_governance: 18.2
+    access_clarity: 28.9
+    contract_governance: 31.8
     contract_quality: 52.2
-    developer_ergonomics: 49.4
+    developer_ergonomics: 68.5
     discoverability: 78.6
     operational_transparency: 22.4
-  previous_composite: 47.2
+  previous_composite: 48.9
   provenance:
     conformance: first-party
     contracts:
@@ -634,14 +648,14 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 40.6
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 42.9
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 38.9
-screenshot: https://raw.githubusercontent.com/api-evangelist/toqio/refs/heads/main/screenshots/toqio-2026-08-17T082408.png
+screenshot: https://apis.io/screenshots/toqio/toqio-2026-08-17T082408.png
 security:
 - kind: authentication
   name: Toqio Authentication
@@ -651,6 +665,14 @@ security:
   name: Toqio Domain Security
   slug: toqio-domain-security
   summary_line: TLSv1.3 · DMARC
+skill_count: 3
+skills:
+- name: Issue and manage a card
+  slug: toqio-issue-and-manage-card
+- name: Make a payment to a beneficiary
+  slug: toqio-make-payment
+- name: Onboard a client and open their first account
+  slug: toqio-onboard-client-and-account
 slug: toqio
 tags:
 - Embedded Finance

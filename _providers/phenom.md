@@ -1,9 +1,9 @@
 ---
 access_model:
   confidence: low
-  label: Unknown
+  label: Enterprise
   onboarding: unknown
-  pricing: unknown
+  pricing: enterprise
   public: false
   source:
   - authentication
@@ -26,15 +26,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: false
+    operation_distinctiveness: na
+    pagination_ratio: paginated
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-10-17'
+  score: 22.0
+  scored_at: '2026-11-06'
 api_count: 1
 apis:
 - baseURL: https://api-qa.phenompro.com
@@ -82,11 +85,8 @@ apis:
   description: SCIM 2.0 user and group management.
   name: Phenom User Management API
   slug: phenom-user-management-api
-artifact_total: 23
+artifact_total: 27
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Phenom Talent Experience Platform Applicants API
   slug: open-phenom-applicants-api
@@ -116,17 +116,17 @@ collections:
   slug: open-phenom-user-management-api
 common:
 - group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/plans/phenom-plans-pricing.yml
+  href: https://artifacts.apis.io/phenom/plans/phenom-plans-pricing.yml
   title: ''
   type: Plans
   url: plans/phenom-plans-pricing.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/capabilities/phenom-capability-edges.yml
+  href: https://artifacts.apis.io/phenom/capabilities/phenom-capability-edges.yml
   title: ''
   type: CapabilityMap
   url: capabilities/phenom-capability-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/overlays/phenom-platform-overlay.yaml
+  href: https://artifacts.apis.io/phenom/overlays/phenom-platform-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/phenom-platform-overlay.yaml
@@ -183,77 +183,85 @@ common:
   type: Security
   url: https://www.phenom.com/vdp
 - group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/openapi/_original/phenom-platform-openapi.yml
+  href: https://artifacts.apis.io/phenom/openapi/_original/phenom-platform-openapi.yml
   title: ''
   type: OpenAPI
   url: openapi/_original/phenom-platform-openapi.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/authentication/phenom-authentication.yml
+  href: https://artifacts.apis.io/phenom/authentication/phenom-authentication.yml
   title: ''
   type: Authentication
   url: authentication/phenom-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/conventions/phenom-conventions.yml
+  href: https://artifacts.apis.io/phenom/conventions/phenom-conventions.yml
   title: ''
   type: Conventions
   url: conventions/phenom-conventions.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/errors/phenom-error-codes.yml
+  href: https://artifacts.apis.io/phenom/errors/phenom-error-codes.yml
   title: ''
   type: ErrorCatalog
   url: errors/phenom-error-codes.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/lifecycle/phenom-lifecycle.yml
+  href: https://artifacts.apis.io/phenom/lifecycle/phenom-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/phenom-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/conformance/phenom-conformance.yml
+  href: https://artifacts.apis.io/phenom/conformance/phenom-conformance.yml
   title: ''
   type: Conformance
   url: conformance/phenom-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/well-known/phenom-well-known.yml
+  href: https://artifacts.apis.io/phenom/well-known/phenom-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/phenom-well-known.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/well-known/phenom-security.txt
+  href: https://artifacts.apis.io/phenom/well-known/phenom-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/phenom-security.txt
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/security/phenom-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/phenom/security/phenom-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/phenom-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/security/phenom-domain-security.yml
+  href: https://artifacts.apis.io/phenom/security/phenom-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/phenom-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/mcp/phenom-mcp.yml
+  href: https://artifacts.apis.io/phenom/mcp/phenom-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/phenom-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/llms/phenom-llms.txt
+  href: https://artifacts.apis.io/phenom/llms/phenom-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/phenom-llms.txt
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/data-model/phenom-data-model.yml
+  href: https://artifacts.apis.io/phenom/data-model/phenom-data-model.yml
   title: ''
   type: DataModel
   url: data-model/phenom-data-model.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/phenom/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
 description: Phenom is an HR technology company whose Intelligent Talent Experience platform applies AI to every stage of the talent lifecycle — helping candidates find and apply to the right jobs, recruiters and hiring managers source and engage talent, employees grow, and HR teams operate more efficiently. The Phenom Developer Portal exposes REST APIs for job sync, candidate management, onboarding, applications and applicants, resume and job-description parsing, SCIM 2.0 user and group management, candidate tagging, and AI-driven skills prediction, letting partners and ATS/HRIS systems integrate with the Phenom platform. Phenom is headquartered in Ambler, Pennsylvania and backed by Sierra Ventures among others.
+finops:
+- has_sources: true
+  method: derived
+  name: Phenom Finops
+  primary_unit: ''
+  service_category: ''
+  slug: phenom-finops
+  template: true
 image: https://images.ctfassets.net/0d3i1kfsuaq3/7DvjJdtfMfhzvhrPvEwY2r/792d04789d00e1b6418b33be5c18762b/Phenom-Meta-Image.png
 layout: provider
 modified: '2026-07-20'
@@ -263,26 +271,42 @@ network: true
 overview: 'Phenom publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applicants API, Applications API, Candidates API, and 6 more. Tagged areas include Company, Human Resources, Talent Experience, Recruiting, and Applicant Tracking.
 
 
+  The Phenom catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
   Phenom''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, authentication, and 23 more developer resources.'
 plans:
 - name: Phenom Plans Pricing
   plan_count: 0
   slug: phenom-plans-pricing
-random_paper: 9
+random_paper: 23
+rules:
+- authorship: generated
+  effective_rule_count: 104
+  extends:
+  - spectral:oas
+  name: Phenom API Rules
+  rule_count: 63
+  severity_counts:
+    error: 61
+    hint: 0
+    info: 1
+    warn: 1
+  slug: phenom-rules
 score:
   band: developing
-  composite: 44.8
+  composite: 46.5
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
+    artifact_dirs: 25
+    catalog_earned: 41.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 73.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 39.5
-    contract_governance: 18.2
+    contract_governance: 31.8
     contract_quality: 50.2
     developer_ergonomics: 58.9
     discoverability: 73.2
@@ -294,7 +318,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 44.8
+  previous_composite: 46.5
   provenance:
     conformance: first-party
     contracts:
@@ -310,13 +334,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 32.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/screenshots/phenom-2026-08-17T081205.png
+screenshot: https://apis.io/screenshots/phenom/phenom-2026-08-17T081205.png
 security:
 - kind: authentication
   name: Phenom Authentication
@@ -330,6 +354,14 @@ security:
   name: Phenom Vulnerability Disclosure
   slug: phenom-vulnerability-disclosure
   summary_line: security.txt · contact published
+skill_count: 3
+skills:
+- name: Parse a resume and predict skills
+  slug: phenom-parse-resume-and-predict-skills
+- name: Search jobs and review applications
+  slug: phenom-search-jobs-and-applications
+- name: Source a candidate and tag them
+  slug: phenom-source-candidate-and-tag
 slug: phenom
 tags:
 - Company

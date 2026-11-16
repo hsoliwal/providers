@@ -1,4 +1,17 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - rate-limits
+  - security
+  - sandbox
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-ready
   dimensions:
@@ -15,15 +28,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: documented
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: documented
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.1
-  scored_at: '2026-10-17'
+  score: 32.3
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 1
@@ -111,65 +127,75 @@ apis:
   description: Get balances, Get transaction history
   name: Delta Exchange Wallet API
   slug: delta-exchange-wallet-api
-artifact_total: 23
+- baseURL: https://api.india.delta.exchange/
+  baseurl_source: declared
+  description: The OHLC Candles API from Delta Exchange — 1 operation(s) for ohlc candles.
+  name: Delta Exchange OHLC Candles API
+  slug: delta-exchange-ohlc-candles-api
+- baseURL: https://api.india.delta.exchange/
+  baseurl_source: declared
+  description: Get Orders History, Get Fill History
+  name: Delta Exchange Trade History API
+  slug: delta-exchange-trade-history-api
+artifact_total: 27
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/skills/_index.yml
+  href: https://artifacts.apis.io/delta-exchange/skills/_index.yml
   title: ''
   type: AgentSkill
   url: skills/_index.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/well-known/delta-exchange-status-security.txt
+  href: https://artifacts.apis.io/delta-exchange/well-known/delta-exchange-status-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/delta-exchange-status-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/agentic-access/delta-exchange-agentic-access.yml
+  href: https://artifacts.apis.io/delta-exchange/agentic-access/delta-exchange-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/delta-exchange-agentic-access.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/rate-limits/delta-exchange-rate-limits.yml
+  href: https://artifacts.apis.io/delta-exchange/rate-limits/delta-exchange-rate-limits.yml
   title: ''
   type: RateLimits
   url: rate-limits/delta-exchange-rate-limits.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/rules/delta-exchange-rules.yml
+  href: https://artifacts.apis.io/delta-exchange/rules/delta-exchange-rules.yml
   title: ''
   type: Spectral
   url: rules/delta-exchange-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/vocabulary/delta-exchange-vocabulary.yml
+  href: https://artifacts.apis.io/delta-exchange/vocabulary/delta-exchange-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/delta-exchange-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/data-model/delta-exchange-data-model.yml
+  href: https://artifacts.apis.io/delta-exchange/data-model/delta-exchange-data-model.yml
   title: ''
   type: DataModel
   url: data-model/delta-exchange-data-model.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/conventions/delta-exchange-conventions.yml
+  href: https://artifacts.apis.io/delta-exchange/conventions/delta-exchange-conventions.yml
   title: ''
   type: Conventions
   url: conventions/delta-exchange-conventions.yml
 - group: start
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/sandbox/delta-exchange-sandbox.yml
+  href: https://artifacts.apis.io/delta-exchange/sandbox/delta-exchange-sandbox.yml
   title: ''
   type: Sandbox
   url: sandbox/delta-exchange-sandbox.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/security/delta-exchange-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/delta-exchange/security/delta-exchange-vulnerability-disclosure.yml
   title: ''
   type: Security
   url: security/delta-exchange-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/security/delta-exchange-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/delta-exchange/security/delta-exchange-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/delta-exchange-vulnerability-disclosure.yml
 - group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/lifecycle/delta-exchange-lifecycle.yml
+  href: https://artifacts.apis.io/delta-exchange/lifecycle/delta-exchange-lifecycle.yml
   title: ''
   type: Deprecation
   url: lifecycle/delta-exchange-lifecycle.yml
@@ -178,72 +204,72 @@ common:
   type: StatusPage
   url: https://status.delta.exchange/
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/lifecycle/delta-exchange-lifecycle.yml
+  href: https://artifacts.apis.io/delta-exchange/lifecycle/delta-exchange-lifecycle.yml
   title: ''
   type: Lifecycle
   url: lifecycle/delta-exchange-lifecycle.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/errors/delta-exchange-problem-types.yml
+  href: https://artifacts.apis.io/delta-exchange/errors/delta-exchange-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/delta-exchange-problem-types.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/conformance/delta-exchange-conformance.yml
+  href: https://artifacts.apis.io/delta-exchange/conformance/delta-exchange-conformance.yml
   title: ''
   type: Conformance
   url: conformance/delta-exchange-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/llms/delta-exchange-llms.txt
+  href: https://artifacts.apis.io/delta-exchange/llms/delta-exchange-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/delta-exchange-llms.txt
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/mcp/delta-exchange-tool-crosswalk.yml
+  href: https://artifacts.apis.io/delta-exchange/mcp/delta-exchange-tool-crosswalk.yml
   title: ''
   type: ToolCrosswalk
   url: mcp/delta-exchange-tool-crosswalk.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/mcp/delta-exchange-mcp.yml
+  href: https://artifacts.apis.io/delta-exchange/mcp/delta-exchange-mcp.yml
   title: ''
   type: MCPServer
   url: mcp/delta-exchange-mcp.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/well-known/delta-exchange-well-known.yml
+  href: https://artifacts.apis.io/delta-exchange/well-known/delta-exchange-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/delta-exchange-well-known.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/hosts/delta-exchange-hosts.yml
+  href: https://artifacts.apis.io/delta-exchange/hosts/delta-exchange-hosts.yml
   title: ''
   type: Hosts
   url: hosts/delta-exchange-hosts.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/integrations/delta-exchange-integration-edges.yml
+  href: https://artifacts.apis.io/delta-exchange/integrations/delta-exchange-integration-edges.yml
   title: ''
   type: IntegrationEdges
   url: integrations/delta-exchange-integration-edges.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/vendors/delta-exchange-vendors.yml
+  href: https://artifacts.apis.io/delta-exchange/vendors/delta-exchange-vendors.yml
   title: ''
   type: Vendors
   url: vendors/delta-exchange-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/packages/delta-exchange-packages.yml
+  href: https://artifacts.apis.io/delta-exchange/packages/delta-exchange-packages.yml
   title: ''
   type: SDKs
   url: packages/delta-exchange-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/packages/delta-exchange-packages.yml
+  href: https://artifacts.apis.io/delta-exchange/packages/delta-exchange-packages.yml
   title: ''
   type: Packages
   url: packages/delta-exchange-packages.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/authentication/delta-exchange-authentication.yml
+  href: https://artifacts.apis.io/delta-exchange/authentication/delta-exchange-authentication.yml
   title: ''
   type: Authentication
   url: authentication/delta-exchange-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/delta-exchange/refs/heads/main/security/delta-exchange-domain-security.yml
+  href: https://artifacts.apis.io/delta-exchange/security/delta-exchange-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/delta-exchange-domain-security.yml
@@ -311,14 +337,14 @@ modified: '2026-10-13'
 name: Delta Exchange
 nav: Providers
 network: true
-overview: 'Delta Exchange publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Assets API, Heartbeat Management API, and 13 more. Tagged areas include Company, Cryptocurrency, Crypto Exchanges, Derivatives, and Trading.
+overview: 'Delta Exchange publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Assets API, Heartbeat Management API, and 15 more. Tagged areas include Company, Cryptocurrency, Crypto Exchanges, Derivatives, and Trading.
 
 
   The Delta Exchange catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
   Delta Exchange''s developer surface includes sandbox, authentication, documentation, engineering blog, support, pricing, and 34 more developer resources.'
-random_paper: 16
+random_paper: 10
 rate_limits:
 - limit_count: 4
   name: Delta Exchange Rate Limits
@@ -338,21 +364,23 @@ rules:
   slug: delta-exchange-rules
 score:
   band: developing
-  composite: 50.8
+  composite: 41.6
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 25
     catalog_earned: 54.8
     catalog_earned_first_party: 12.0
     catalog_gap: 60.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -9.4
   facets:
-    access_clarity: 44.7
+    access_clarity: 22.4
     contract_governance: 22.0
-    contract_quality: 45.3
-    developer_ergonomics: 54.2
-    discoverability: 73.3
-    operational_transparency: 71.1
+    contract_quality: 44.6
+    developer_ergonomics: 41.1
+    discoverability: 72.5
+    operational_transparency: 60.5
+  previous_composite: 51.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -360,7 +388,7 @@ score:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 15
+      total: 34
     mcp: first-party
     skills: derived
   regulatory:
@@ -368,12 +396,14 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 28.7
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 25.0
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/delta-exchange/delta-exchange-2026-11-03T130512.png
 security:
 - kind: authentication
   name: Delta Exchange Authentication
@@ -387,6 +417,12 @@ security:
   name: Delta Exchange Vulnerability Disclosure
   slug: delta-exchange-vulnerability-disclosure
   summary_line: no policy recorded
+skill_count: 2
+skills:
+- name: delta-exchange-place-and-manage-order
+  slug: delta-exchange-place-and-manage-order
+- name: delta-exchange-portfolio-check
+  slug: delta-exchange-portfolio-check
 slug: delta-exchange
 tags:
 - Company

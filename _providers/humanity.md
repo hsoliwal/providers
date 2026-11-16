@@ -1,13 +1,17 @@
 ---
 access_model:
   confidence: medium
-  label: Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Paid · Self-serve signup
   onboarding: self-serve
-  pricing: unknown
+  pricing: paid
   public: false
   source:
+  - plans
   - authentication
-  - '{''url'': ''https://www.humanity.com'', ''status'': 302, ''note'': ''declared website redirects to https://tcpsoftware.com/products/humanity/ — a different registrable domain (humanity.com -> tcpsoftware.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)''}'
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -26,15 +30,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: false
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.0
-  scored_at: '2026-10-17'
+  score: 23.8
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 120
   human_in_the_loop: 3
@@ -232,30 +239,35 @@ apis:
   description: The Trainings API from Humanity — 9 operation(s) for trainings.
   name: Humanity Trainings API
   slug: humanity-trainings-api
-artifact_total: 42
+artifact_total: 44
 common:
+- group: commercial
+  href: https://artifacts.apis.io/humanity/plans/humanity-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/humanity-plans-pricing.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/agentic-access/humanity-agentic-access.yml
+  href: https://artifacts.apis.io/humanity/agentic-access/humanity-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/humanity-agentic-access.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/rules/humanity-rules.yml
+  href: https://artifacts.apis.io/humanity/rules/humanity-rules.yml
   title: ''
   type: Spectral
   url: rules/humanity-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/errors/humanity-problem-types.yml
+  href: https://artifacts.apis.io/humanity/errors/humanity-problem-types.yml
   title: ''
   type: ErrorCatalog
   url: errors/humanity-problem-types.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/hosts/humanity-hosts.yml
+  href: https://artifacts.apis.io/humanity/hosts/humanity-hosts.yml
   title: ''
   type: Hosts
   url: hosts/humanity-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/vendors/humanity-vendors.yml
+  href: https://artifacts.apis.io/humanity/vendors/humanity-vendors.yml
   title: ''
   type: Vendors
   url: vendors/humanity-vendors.yml
@@ -284,32 +296,32 @@ common:
   type: GettingStarted
   url: https://platform.humanity.com/docs/getting-started-with-authentication
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/authentication/humanity-authentication.yml
+  href: https://artifacts.apis.io/humanity/authentication/humanity-authentication.yml
   title: ''
   type: Authentication
   url: authentication/humanity-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/security/humanity-domain-security.yml
+  href: https://artifacts.apis.io/humanity/security/humanity-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/humanity-domain-security.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/well-known/humanity-well-known.yml
+  href: https://artifacts.apis.io/humanity/well-known/humanity-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/humanity-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/llms/humanity-llms.txt
+  href: https://artifacts.apis.io/humanity/llms/humanity-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/humanity-llms.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/mcp/humanity-mcp.yml
+  href: https://artifacts.apis.io/humanity/mcp/humanity-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/humanity-mcp.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/conformance/humanity-conformance.yml
+  href: https://artifacts.apis.io/humanity/conformance/humanity-conformance.yml
   title: ''
   type: Conformance
   url: conformance/humanity-conformance.yml
@@ -343,6 +355,14 @@ common:
   url: https://tcpsoftware.com/privacy-policy/
 created: '2026-07-17'
 description: Humanity (Humanity Schedule) is an employee scheduling and workforce management platform owned by TCP Software (TimeClock Plus, LLC). It automates shift planning, closes coverage gaps, forecasts demand, and manages labor compliance across employees, positions, and locations, with time tracking, leave management, training, tasks, and payroll integration. Humanity exposes a public REST API (v1.0 and v2.0) documented on its ReadMe-hosted developer platform, using OAuth2 for authentication, so integrators can synchronize employees, shifts, timeclocks, leaves, reports, skills, and tasks with external HR, payroll, and workforce systems.
+finops:
+- has_sources: true
+  method: derived
+  name: Humanity Finops
+  primary_unit: employee
+  service_category: ''
+  slug: humanity-finops
+  template: false
 image: https://tcpsoftware.com/products/humanity/
 layout: provider
 modified: '2026-07-19'
@@ -355,8 +375,12 @@ overview: 'Humanity publishes 38 API contracts indexed on the [APIs.io](https://
   The Humanity catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Humanity''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, pricing, and 17 more developer resources.'
-random_paper: 21
+  Humanity''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, pricing, and 18 more developer resources.'
+plans:
+- name: Humanity Plans Pricing
+  plan_count: 3
+  slug: humanity-plans-pricing
+random_paper: 15
 rules:
 - authorship: generated
   effective_rule_count: 54
@@ -372,28 +396,28 @@ rules:
   slug: humanity-rules
 score:
   band: developing
-  composite: 43.7
+  composite: 53.6
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 44.5
-    catalog_earned_first_party: 0.0
-    catalog_gap: 70.5
+    artifact_dirs: 20
+    catalog_earned: 59.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 15.8
+  delta: 2.8
   facets:
-    access_clarity: 44.7
+    access_clarity: 84.2
     contract_governance: 31.8
-    contract_quality: 52.0
-    developer_ergonomics: 42.9
+    contract_quality: 54.0
+    developer_ergonomics: 53.6
     discoverability: 78.6
-    operational_transparency: 10.5
-  previous_composite: 27.9
+    operational_transparency: 5.3
+  previous_composite: 50.8
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 100.0
       total: 37
@@ -404,13 +428,13 @@ score:
     regime: Employment & Payroll
     regime_id: employment_payroll
     score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
-  trend: rising
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/humanity/refs/heads/main/screenshots/humanity-2026-07-25T221658.png
+screenshot: https://apis.io/screenshots/humanity/humanity-2026-07-25T221658.png
 security:
 - kind: authentication
   name: Humanity Authentication

@@ -1,12 +1,16 @@
 ---
 access_model:
-  confidence: medium
+  confidence: low
+  gated: none
+  gated_source:
+  - onboarding
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
   public: false
   source:
   - authentication
+  - security
   trial: false
   try_now: false
 agent_readiness:
@@ -25,15 +29,18 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: verified
+    operation_distinctiveness: distinct
+    pagination_ratio: partial
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.9
-  scored_at: '2026-10-17'
+  score: 33.0
+  scored_at: '2026-11-06'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -68,11 +75,8 @@ apis:
   description: Survey lifecycle management operations
   name: Allianz Engagement Survey Surveys API
   slug: allianz-engagement-survey-surveys-api
-artifact_total: 76
+artifact_total: 75
 collections:
-- collection_type: open
-  name: API Collection
-  slug: open-.refine-report
 - collection_type: open
   name: Allianz Engagement Survey Action Plans API
   slug: open-allianz-engagement-survey-action-plans-api
@@ -90,32 +94,32 @@ collections:
   slug: open-allianz-engagement-survey-surveys-api
 common:
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/mcp/allianz-engagement-survey-mcp.yml
+  href: https://artifacts.apis.io/allianz-engagement-survey/mcp/allianz-engagement-survey-mcp.yml
   title: ''
   type: X-MCPServerCandidate
   url: mcp/allianz-engagement-survey-mcp.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/overlays/allianz-engagement-survey-engagement-survey-api-overlay.yaml
+  href: https://artifacts.apis.io/allianz-engagement-survey/overlays/allianz-engagement-survey-engagement-survey-api-overlay.yaml
   title: ''
   type: Overlay
   url: overlays/allianz-engagement-survey-engagement-survey-api-overlay.yaml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/agentic-access/allianz-engagement-survey-agentic-access.yml
+  href: https://artifacts.apis.io/allianz-engagement-survey/agentic-access/allianz-engagement-survey-agentic-access.yml
   title: ''
   type: AgenticAccess
   url: agentic-access/allianz-engagement-survey-agentic-access.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/security/allianz-engagement-survey-domain-security.yml
+  href: https://artifacts.apis.io/allianz-engagement-survey/security/allianz-engagement-survey-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/allianz-engagement-survey-domain-security.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/authentication/allianz-engagement-survey-authentication.yml
+  href: https://artifacts.apis.io/allianz-engagement-survey/authentication/allianz-engagement-survey-authentication.yml
   title: ''
   type: Authentication
   url: authentication/allianz-engagement-survey-authentication.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/scopes/allianz-engagement-survey-scopes.yml
+  href: https://artifacts.apis.io/allianz-engagement-survey/scopes/allianz-engagement-survey-scopes.yml
   title: ''
   type: OAuthScopes
   url: scopes/allianz-engagement-survey-scopes.yml
@@ -128,12 +132,12 @@ common:
   type: GitHubOrganization
   url: https://github.com/allianz
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/rules/allianz-engagement-survey-spectral-rules.yml
+  href: https://artifacts.apis.io/allianz-engagement-survey/rules/allianz-engagement-survey-spectral-rules.yml
   title: ''
   type: SpectralRules
   url: rules/allianz-engagement-survey-spectral-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/vocabulary/allianz-engagement-survey-vocabulary.yaml
+  href: https://artifacts.apis.io/allianz-engagement-survey/vocabulary/allianz-engagement-survey-vocabulary.yaml
   title: ''
   type: Vocabulary
   url: vocabulary/allianz-engagement-survey-vocabulary.yaml
@@ -142,17 +146,17 @@ common:
   type: Blog
   url: https://www.allianz.com/en/press.html
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/packages/allianz-engagement-survey-packages.yml
+  href: https://artifacts.apis.io/allianz-engagement-survey/packages/allianz-engagement-survey-packages.yml
   title: ''
   type: Packages
   url: packages/allianz-engagement-survey-packages.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/well-known/allianz-engagement-survey-well-known.yml
+  href: https://artifacts.apis.io/allianz-engagement-survey/well-known/allianz-engagement-survey-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/allianz-engagement-survey-well-known.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/llms/allianz-engagement-survey-llms.txt
+  href: https://artifacts.apis.io/allianz-engagement-survey/llms/allianz-engagement-survey-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/allianz-engagement-survey-llms.txt
@@ -334,7 +338,7 @@ overview: 'Allianz Engagement Survey is listed with 5 APIs on the [APIs.io](http
 
 
   Allianz Engagement Survey''s developer surface includes authentication, engineering blog, and 12 more developer resources.'
-random_paper: 0
+random_paper: 6
 rules:
 - authorship: generated
   effective_rule_count: 5
@@ -368,7 +372,7 @@ score:
   band: emerging
   composite: 24.9
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 65.4
     catalog_earned_first_party: 0.0
     catalog_gap: 49.6
@@ -398,13 +402,13 @@ score:
     regime: Insurance
     regime_id: insurance
     score: 29.8
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
   trend: flat
   upsert:
     applies: true
     score: 0.0
-screenshot: https://raw.githubusercontent.com/api-evangelist/allianz-engagement-survey/refs/heads/main/screenshots/allianz-engagement-survey-2026-07-25T195701.png
+screenshot: https://apis.io/screenshots/allianz-engagement-survey/allianz-engagement-survey-2026-07-25T195701.png
 security:
 - kind: authentication
   name: Allianz Engagement Survey Authentication

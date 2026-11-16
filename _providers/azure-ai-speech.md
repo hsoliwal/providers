@@ -1,4 +1,15 @@
 ---
+access_model:
+  confidence: low
+  label: Unknown
+  onboarding: unknown
+  pricing: unknown
+  public: false
+  source:
+  - authentication
+  - security
+  trial: false
+  try_now: false
 agent_readiness:
   band: agent-aware
   dimensions:
@@ -15,20 +26,23 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: false
+    mcp_tool_quality: na
     openapi_examples: partial
+    operation_distinctiveness: false
+    pagination_ratio: na
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-10-17'
+  score: 17.6
+  scored_at: '2026-11-06'
 api_count: 6
 apis:
 - description: Speech service API providing speech-to-text, text-to-speech, translation, and custom voice models.
   name: Azure AI Speech API
-  slug: azure-ai-speech-api-2
+  slug: azure-ai-speech-api
 - description: The Azure AI Speech API API from Azure AI Speech — 1 operation(s) for azure ai speech api.
   name: Azure AI Speech Azure AI Speech API
   slug: azure-ai-speech-azure-ai-speech-api-api
@@ -47,32 +61,32 @@ apis:
 artifact_total: 17
 common:
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/well-known/azure-ai-speech-www-security.txt
+  href: https://artifacts.apis.io/azure-ai-speech/well-known/azure-ai-speech-www-security.txt
   title: ''
   type: SecurityTxt
   url: well-known/azure-ai-speech-www-security.txt
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/well-known/azure-ai-speech-well-known.yml
+  href: https://artifacts.apis.io/azure-ai-speech/well-known/azure-ai-speech-well-known.yml
   title: ''
   type: WellKnown
   url: well-known/azure-ai-speech-well-known.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/rules/azure-ai-speech-rules.yml
+  href: https://artifacts.apis.io/azure-ai-speech/rules/azure-ai-speech-rules.yml
   title: ''
   type: Spectral
   url: rules/azure-ai-speech-rules.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/json-ld/azure-ai-speech-context.jsonld
+  href: https://artifacts.apis.io/azure-ai-speech/json-ld/azure-ai-speech-context.jsonld
   title: ''
   type: JSONLD
   url: json-ld/azure-ai-speech-context.jsonld
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/vocabulary/azure-ai-speech-vocabulary.yml
+  href: https://artifacts.apis.io/azure-ai-speech/vocabulary/azure-ai-speech-vocabulary.yml
   title: ''
   type: Vocabulary
   url: vocabulary/azure-ai-speech-vocabulary.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/data-model/azure-ai-speech-data-model.yml
+  href: https://artifacts.apis.io/azure-ai-speech/data-model/azure-ai-speech-data-model.yml
   title: ''
   type: DataModel
   url: data-model/azure-ai-speech-data-model.yml
@@ -81,37 +95,37 @@ common:
   type: Security
   url: https://www.microsoft.com/en-us/msrc/bounty-safe-harbor
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/authentication/azure-ai-speech-authentication.yml
+  href: https://artifacts.apis.io/azure-ai-speech/authentication/azure-ai-speech-authentication.yml
   title: ''
   type: Authentication
   url: authentication/azure-ai-speech-authentication.yml
 - group: design
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/conformance/azure-ai-speech-conformance.yml
+  href: https://artifacts.apis.io/azure-ai-speech/conformance/azure-ai-speech-conformance.yml
   title: ''
   type: Conformance
   url: conformance/azure-ai-speech-conformance.yml
 - group: agent
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/llms/azure-ai-speech-llms.txt
+  href: https://artifacts.apis.io/azure-ai-speech/llms/azure-ai-speech-llms.txt
   title: ''
   type: LLMsTxt
   url: llms/azure-ai-speech-llms.txt
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/hosts/azure-ai-speech-hosts.yml
+  href: https://artifacts.apis.io/azure-ai-speech/hosts/azure-ai-speech-hosts.yml
   title: ''
   type: Hosts
   url: hosts/azure-ai-speech-hosts.yml
 - group: other
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/vendors/azure-ai-speech-vendors.yml
+  href: https://artifacts.apis.io/azure-ai-speech/vendors/azure-ai-speech-vendors.yml
   title: ''
   type: Vendors
   url: vendors/azure-ai-speech-vendors.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/packages/azure-ai-speech-packages.yml
+  href: https://artifacts.apis.io/azure-ai-speech/packages/azure-ai-speech-packages.yml
   title: ''
   type: SDKs
   url: packages/azure-ai-speech-packages.yml
 - group: build
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/packages/azure-ai-speech-packages.yml
+  href: https://artifacts.apis.io/azure-ai-speech/packages/azure-ai-speech-packages.yml
   title: ''
   type: Packages
   url: packages/azure-ai-speech-packages.yml
@@ -144,12 +158,12 @@ common:
   type: Blog
   url: https://azure.microsoft.com/en-us/blog/
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/security/azure-ai-speech-vulnerability-disclosure.yml
+  href: https://artifacts.apis.io/azure-ai-speech/security/azure-ai-speech-vulnerability-disclosure.yml
   title: ''
   type: VulnerabilityDisclosure
   url: security/azure-ai-speech-vulnerability-disclosure.yml
 - group: auth
-  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-speech/refs/heads/main/security/azure-ai-speech-domain-security.yml
+  href: https://artifacts.apis.io/azure-ai-speech/security/azure-ai-speech-domain-security.yml
   title: ''
   type: DomainSecurity
   url: security/azure-ai-speech-domain-security.yml
@@ -209,14 +223,14 @@ modified: '2026-10-13'
 name: Azure AI Speech
 nav: Providers
 network: true
-overview: 'Azure AI Speech is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Azure AI Speech API, Swagger API, Todoitems API, and 3 more. Tagged areas include Cloud, Artificial Intelligence, Speech, Microsoft, and Services.
+overview: 'Azure AI Speech is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Azure AI Speech API, Swagger API, and 4 more. Tagged areas include Cloud, Artificial Intelligence, Speech, Microsoft, and Services.
 
 
   The Azure AI Speech catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
   Azure AI Speech''s developer surface includes authentication, support, pricing, changelog, engineering blog, documentation, API reference, and 20 more developer resources.'
-random_paper: 1
+random_paper: 11
 rules:
 - authorship: generated
   effective_rule_count: 51
@@ -232,21 +246,23 @@ rules:
   slug: azure-ai-speech-rules
 score:
   band: thin
-  composite: 38.0
+  composite: 32.9
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 57.8
     catalog_earned_first_party: 0.0
     catalog_gap: 57.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: -5.1
   facets:
-    access_clarity: 21.1
+    access_clarity: 15.8
     contract_governance: 22.0
     contract_quality: 25.9
-    developer_ergonomics: 64.3
+    developer_ergonomics: 56.0
     discoverability: 69.6
-    operational_transparency: 31.6
+    operational_transparency: 15.8
+  previous_composite: 38.0
   provenance:
     conformance: derived
     contracts:
@@ -260,12 +276,14 @@ score:
     matched_via: fallback
     regime: Horizontal (data, software, accessibility, platform)
     regime_id: horizontal
-    score: 24.5
-  schema_version: 0.24.0
-  scored_at: '2026-10-17'
+    score: 22.7
+  schema_version: 0.27.0
+  scored_at: '2026-11-06'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
+screenshot: https://apis.io/screenshots/azure-ai-speech/azure-ai-speech-2026-11-03T121502.png
 security:
 - kind: authentication
   name: Azure Ai Speech Authentication
